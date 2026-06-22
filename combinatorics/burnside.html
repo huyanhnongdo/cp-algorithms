@@ -10,36 +10,38 @@
       
       
       
-        <link rel="canonical" href="https://cp-algorithms.com/index.html">
+        <link rel="canonical" href="https://cp-algorithms.com/combinatorics/burnside.html">
       
       
+        <link rel="prev" href="inclusion-exclusion.html">
       
-        <link rel="next" href="navigation.html">
+      
+        <link rel="next" href="stars_and_bars.html">
       
       
         
-          <link rel="alternate" href="index.html" hreflang="en">
+          <link rel="alternate" href="burnside.html" hreflang="en">
         
-          <link rel="alternate" href="vi/index.html" hreflang="vi">
+          <link rel="alternate" href="../vi/combinatorics/burnside.html" hreflang="vi">
         
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../feed_rss_updated.xml">
       
-      <link rel="icon" href="favicon.ico">
+      <link rel="icon" href="../favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Main Page - Algorithms for Competitive Programming</title>
+        <title>Burnside's lemma / Pólya enumeration theorem - Algorithms for Competitive Programming</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -58,9 +60,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -77,9 +79,9 @@
     
     
   
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 
-  <script src="assets/javascripts/toggle-sidebar.js"></script></head>
+  <script src="../assets/javascripts/toggle-sidebar.js"></script></head>
   
   
     
@@ -98,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#algorithms-for-competitive-programming" class="md-skip">
+        <a href="#burnsides-lemma-polya-enumeration-theorem" class="md-skip">
           Skip to content
         </a>
       
@@ -122,9 +124,9 @@
     }
   </script>
   <nav class="md-header__inner md-grid" aria-label="header.title">
-    <a href="index.html" title="Algorithms for Competitive Programming" class="md-header__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+    <a href="../index.html" title="Algorithms for Competitive Programming" class="md-header__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
       
-  <img src="favicon.ico" alt="logo">
+  <img src="../favicon.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -134,7 +136,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            <a href="index.html" title="Algorithms for Competitive Programming" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+            <a href="../index.html" title="Algorithms for Competitive Programming" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
               Algorithms for Competitive Programming
             </a>
           </span>
@@ -143,7 +145,7 @@
           <span class="md-ellipsis">
             <a href="#" onclick="scrollToTop()">
               
-                Main Page
+                Burnside's lemma / Pólya enumeration theorem
               
             </a>
           </span>
@@ -184,13 +186,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="index.html" hreflang="en" class="md-select__link">
+                  <a href="burnside.html" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="vi/index.html" hreflang="vi" class="md-select__link">
+                  <a href="../vi/combinatorics/burnside.html" hreflang="vi" class="md-select__link">
                     Tiếng Việt
                   </a>
                 </li>
@@ -296,9 +298,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Algorithms for Competitive Programming" class="md-nav__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+    <a href="../index.html" title="Algorithms for Competitive Programming" class="md-nav__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
       
-  <img src="favicon.ico" alt="logo">
+  <img src="../favicon.ico" alt="logo">
 
     </a>
     Algorithms for Competitive Programming
@@ -322,20 +324,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -356,7 +356,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -371,37 +371,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Main Page
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -417,76 +390,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#become-a-contributor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Become a Contributor
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sponsor-us" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sponsor Us
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changelog
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Changelog">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#new-articles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        New articles
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -499,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="navigation.html" class="md-nav__link">
+      <a href="../navigation.html" class="md-nav__link">
         
   
   
@@ -527,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tags.html" class="md-nav__link">
+      <a href="../tags.html" class="md-nav__link">
         
   
   
@@ -555,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contrib.html" class="md-nav__link">
+      <a href="../contrib.html" class="md-nav__link">
         
   
   
@@ -583,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="code_of_conduct.html" class="md-nav__link">
+      <a href="../code_of_conduct.html" class="md-nav__link">
         
   
   
@@ -611,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="preview.html" class="md-nav__link">
+      <a href="../preview.html" class="md-nav__link">
         
   
   
@@ -740,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/binary-exp.html" class="md-nav__link">
+      <a href="../algebra/binary-exp.html" class="md-nav__link">
         
   
   
@@ -768,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/euclid-algorithm.html" class="md-nav__link">
+      <a href="../algebra/euclid-algorithm.html" class="md-nav__link">
         
   
   
@@ -796,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/extended-euclid-algorithm.html" class="md-nav__link">
+      <a href="../algebra/extended-euclid-algorithm.html" class="md-nav__link">
         
   
   
@@ -824,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/linear-diophantine-equation.html" class="md-nav__link">
+      <a href="../algebra/linear-diophantine-equation.html" class="md-nav__link">
         
   
   
@@ -852,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/fibonacci-numbers.html" class="md-nav__link">
+      <a href="../algebra/fibonacci-numbers.html" class="md-nav__link">
         
   
   
@@ -935,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/sieve-of-eratosthenes.html" class="md-nav__link">
+      <a href="../algebra/sieve-of-eratosthenes.html" class="md-nav__link">
         
   
   
@@ -963,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/prime-sieve-linear.html" class="md-nav__link">
+      <a href="../algebra/prime-sieve-linear.html" class="md-nav__link">
         
   
   
@@ -991,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/primality_tests.html" class="md-nav__link">
+      <a href="../algebra/primality_tests.html" class="md-nav__link">
         
   
   
@@ -1019,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorization.html" class="md-nav__link">
+      <a href="../algebra/factorization.html" class="md-nav__link">
         
   
   
@@ -1102,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/phi-function.html" class="md-nav__link">
+      <a href="../algebra/phi-function.html" class="md-nav__link">
         
   
   
@@ -1130,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/divisors.html" class="md-nav__link">
+      <a href="../algebra/divisors.html" class="md-nav__link">
         
   
   
@@ -1213,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/module-inverse.html" class="md-nav__link">
+      <a href="../algebra/module-inverse.html" class="md-nav__link">
         
   
   
@@ -1241,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/linear_congruence_equation.html" class="md-nav__link">
+      <a href="../algebra/linear_congruence_equation.html" class="md-nav__link">
         
   
   
@@ -1269,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/chinese-remainder-theorem.html" class="md-nav__link">
+      <a href="../algebra/chinese-remainder-theorem.html" class="md-nav__link">
         
   
   
@@ -1297,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/garners-algorithm.html" class="md-nav__link">
+      <a href="../algebra/garners-algorithm.html" class="md-nav__link">
         
   
   
@@ -1325,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorial-modulo.html" class="md-nav__link">
+      <a href="../algebra/factorial-modulo.html" class="md-nav__link">
         
   
   
@@ -1353,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/discrete-log.html" class="md-nav__link">
+      <a href="../algebra/discrete-log.html" class="md-nav__link">
         
   
   
@@ -1381,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/primitive-root.html" class="md-nav__link">
+      <a href="../algebra/primitive-root.html" class="md-nav__link">
         
   
   
@@ -1409,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/discrete-root.html" class="md-nav__link">
+      <a href="../algebra/discrete-root.html" class="md-nav__link">
         
   
   
@@ -1437,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/montgomery_multiplication.html" class="md-nav__link">
+      <a href="../algebra/montgomery_multiplication.html" class="md-nav__link">
         
   
   
@@ -1520,7 +1423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/balanced-ternary.html" class="md-nav__link">
+      <a href="../algebra/balanced-ternary.html" class="md-nav__link">
         
   
   
@@ -1548,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/gray-code.html" class="md-nav__link">
+      <a href="../algebra/gray-code.html" class="md-nav__link">
         
   
   
@@ -1631,7 +1534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/bit-manipulation.html" class="md-nav__link">
+      <a href="../algebra/bit-manipulation.html" class="md-nav__link">
         
   
   
@@ -1659,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/all-submasks.html" class="md-nav__link">
+      <a href="../algebra/all-submasks.html" class="md-nav__link">
         
   
   
@@ -1687,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/big-integer.html" class="md-nav__link">
+      <a href="../algebra/big-integer.html" class="md-nav__link">
         
   
   
@@ -1715,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/fft.html" class="md-nav__link">
+      <a href="../algebra/fft.html" class="md-nav__link">
         
   
   
@@ -1743,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/polynomial.html" class="md-nav__link">
+      <a href="../algebra/polynomial.html" class="md-nav__link">
         
   
   
@@ -1771,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/continued-fractions.html" class="md-nav__link">
+      <a href="../algebra/continued-fractions.html" class="md-nav__link">
         
   
   
@@ -1799,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factoring-exp.html" class="md-nav__link">
+      <a href="../algebra/factoring-exp.html" class="md-nav__link">
         
   
   
@@ -1936,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/stack_queue_modification.html" class="md-nav__link">
+      <a href="../data_structures/stack_queue_modification.html" class="md-nav__link">
         
   
   
@@ -1964,7 +1867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sparse-table.html" class="md-nav__link">
+      <a href="../data_structures/sparse-table.html" class="md-nav__link">
         
   
   
@@ -2047,7 +1950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/disjoint_set_union.html" class="md-nav__link">
+      <a href="../data_structures/disjoint_set_union.html" class="md-nav__link">
         
   
   
@@ -2075,7 +1978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/fenwick.html" class="md-nav__link">
+      <a href="../data_structures/fenwick.html" class="md-nav__link">
         
   
   
@@ -2103,7 +2006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sqrt_decomposition.html" class="md-nav__link">
+      <a href="../data_structures/sqrt_decomposition.html" class="md-nav__link">
         
   
   
@@ -2131,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/segment_tree.html" class="md-nav__link">
+      <a href="../data_structures/segment_tree.html" class="md-nav__link">
         
   
   
@@ -2159,7 +2062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/treap.html" class="md-nav__link">
+      <a href="../data_structures/treap.html" class="md-nav__link">
         
   
   
@@ -2187,7 +2090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sqrt-tree.html" class="md-nav__link">
+      <a href="../data_structures/sqrt-tree.html" class="md-nav__link">
         
   
   
@@ -2215,7 +2118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/randomized_heap.html" class="md-nav__link">
+      <a href="../data_structures/randomized_heap.html" class="md-nav__link">
         
   
   
@@ -2298,7 +2201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/deleting_in_log_n.html" class="md-nav__link">
+      <a href="../data_structures/deleting_in_log_n.html" class="md-nav__link">
         
   
   
@@ -2388,7 +2291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/intro-to-dp.html" class="md-nav__link">
+      <a href="../dynamic_programming/intro-to-dp.html" class="md-nav__link">
         
   
   
@@ -2416,7 +2319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/knapsack.html" class="md-nav__link">
+      <a href="../dynamic_programming/knapsack.html" class="md-nav__link">
         
   
   
@@ -2444,7 +2347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/longest_increasing_subsequence.html" class="md-nav__link">
+      <a href="../dynamic_programming/longest_increasing_subsequence.html" class="md-nav__link">
         
   
   
@@ -2519,7 +2422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/divide-and-conquer-dp.html" class="md-nav__link">
+      <a href="../dynamic_programming/divide-and-conquer-dp.html" class="md-nav__link">
         
   
   
@@ -2547,7 +2450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/knuth-optimization.html" class="md-nav__link">
+      <a href="../dynamic_programming/knuth-optimization.html" class="md-nav__link">
         
   
   
@@ -2630,7 +2533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/profile-dynamics.html" class="md-nav__link">
+      <a href="../dynamic_programming/profile-dynamics.html" class="md-nav__link">
         
   
   
@@ -2658,7 +2561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/zero_matrix.html" class="md-nav__link">
+      <a href="../dynamic_programming/zero_matrix.html" class="md-nav__link">
         
   
   
@@ -2795,7 +2698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/string-hashing.html" class="md-nav__link">
+      <a href="../string/string-hashing.html" class="md-nav__link">
         
   
   
@@ -2823,7 +2726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/rabin-karp.html" class="md-nav__link">
+      <a href="../string/rabin-karp.html" class="md-nav__link">
         
   
   
@@ -2851,7 +2754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/prefix-function.html" class="md-nav__link">
+      <a href="../string/prefix-function.html" class="md-nav__link">
         
   
   
@@ -2879,7 +2782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/z-function.html" class="md-nav__link">
+      <a href="../string/z-function.html" class="md-nav__link">
         
   
   
@@ -2907,7 +2810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-array.html" class="md-nav__link">
+      <a href="../string/suffix-array.html" class="md-nav__link">
         
   
   
@@ -2935,7 +2838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/aho_corasick.html" class="md-nav__link">
+      <a href="../string/aho_corasick.html" class="md-nav__link">
         
   
   
@@ -3018,7 +2921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-tree-ukkonen.html" class="md-nav__link">
+      <a href="../string/suffix-tree-ukkonen.html" class="md-nav__link">
         
   
   
@@ -3046,7 +2949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-automaton.html" class="md-nav__link">
+      <a href="../string/suffix-automaton.html" class="md-nav__link">
         
   
   
@@ -3074,7 +2977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/lyndon_factorization.html" class="md-nav__link">
+      <a href="../string/lyndon_factorization.html" class="md-nav__link">
         
   
   
@@ -3157,7 +3060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/expression_parsing.html" class="md-nav__link">
+      <a href="../string/expression_parsing.html" class="md-nav__link">
         
   
   
@@ -3185,7 +3088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/manacher.html" class="md-nav__link">
+      <a href="../string/manacher.html" class="md-nav__link">
         
   
   
@@ -3213,7 +3116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/main_lorentz.html" class="md-nav__link">
+      <a href="../string/main_lorentz.html" class="md-nav__link">
         
   
   
@@ -3350,7 +3253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/linear-system-gauss.html" class="md-nav__link">
+      <a href="../linear_algebra/linear-system-gauss.html" class="md-nav__link">
         
   
   
@@ -3378,7 +3281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/determinant-gauss.html" class="md-nav__link">
+      <a href="../linear_algebra/determinant-gauss.html" class="md-nav__link">
         
   
   
@@ -3406,7 +3309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/determinant-kraut.html" class="md-nav__link">
+      <a href="../linear_algebra/determinant-kraut.html" class="md-nav__link">
         
   
   
@@ -3434,7 +3337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/rank-matrix.html" class="md-nav__link">
+      <a href="../linear_algebra/rank-matrix.html" class="md-nav__link">
         
   
   
@@ -3474,18 +3377,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -3506,7 +3411,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3571,7 +3476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorial-divisors.html" class="md-nav__link">
+      <a href="../algebra/factorial-divisors.html" class="md-nav__link">
         
   
   
@@ -3599,7 +3504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/binomial-coefficients.html" class="md-nav__link">
+      <a href="binomial-coefficients.html" class="md-nav__link">
         
   
   
@@ -3627,7 +3532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/catalan-numbers.html" class="md-nav__link">
+      <a href="catalan-numbers.html" class="md-nav__link">
         
   
   
@@ -3660,18 +3565,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
         
           
           <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
@@ -3692,7 +3599,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3710,7 +3617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/inclusion-exclusion.html" class="md-nav__link">
+      <a href="inclusion-exclusion.html" class="md-nav__link">
         
   
   
@@ -3735,10 +3642,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="combinatorics/burnside.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Burnside's lemma / Pólya enumeration theorem
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="burnside.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -3754,6 +3688,159 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#burnsides-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Burnside's lemma
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Burnside&#39;s lemma">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objects-and-representations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objects and representations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-coloring-of-binary-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: coloring of binary trees
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invariant-permutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invariant permutations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-statement-of-the-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The statement of the lemma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proof-of-burnsides-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proof of Burnside's lemma
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polya-enumeration-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pólya enumeration theorem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pólya enumeration theorem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-coloring-necklaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application: Coloring necklaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-coloring-a-torus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application: Coloring a torus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Problems
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3766,7 +3853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/stars_and_bars.html" class="md-nav__link">
+      <a href="stars_and_bars.html" class="md-nav__link">
         
   
   
@@ -3794,7 +3881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/generating_combinations.html" class="md-nav__link">
+      <a href="generating_combinations.html" class="md-nav__link">
         
   
   
@@ -3877,7 +3964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/bishops-on-chessboard.html" class="md-nav__link">
+      <a href="bishops-on-chessboard.html" class="md-nav__link">
         
   
   
@@ -3905,7 +3992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/bracket_sequences.html" class="md-nav__link">
+      <a href="bracket_sequences.html" class="md-nav__link">
         
   
   
@@ -3933,7 +4020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/counting_labeled_graphs.html" class="md-nav__link">
+      <a href="counting_labeled_graphs.html" class="md-nav__link">
         
   
   
@@ -4070,7 +4157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/binary_search.html" class="md-nav__link">
+      <a href="../num_methods/binary_search.html" class="md-nav__link">
         
   
   
@@ -4098,7 +4185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/ternary_search.html" class="md-nav__link">
+      <a href="../num_methods/ternary_search.html" class="md-nav__link">
         
   
   
@@ -4126,7 +4213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/roots_newton.html" class="md-nav__link">
+      <a href="../num_methods/roots_newton.html" class="md-nav__link">
         
   
   
@@ -4154,7 +4241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/simulated_annealing.html" class="md-nav__link">
+      <a href="../num_methods/simulated_annealing.html" class="md-nav__link">
         
   
   
@@ -4237,7 +4324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/simpson-integration.html" class="md-nav__link">
+      <a href="../num_methods/simpson-integration.html" class="md-nav__link">
         
   
   
@@ -4374,7 +4461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/basic-geometry.html" class="md-nav__link">
+      <a href="../geometry/basic-geometry.html" class="md-nav__link">
         
   
   
@@ -4402,7 +4489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/segment-to-line.html" class="md-nav__link">
+      <a href="../geometry/segment-to-line.html" class="md-nav__link">
         
   
   
@@ -4430,7 +4517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/lines-intersection.html" class="md-nav__link">
+      <a href="../geometry/lines-intersection.html" class="md-nav__link">
         
   
   
@@ -4458,7 +4545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/check-segments-intersection.html" class="md-nav__link">
+      <a href="../geometry/check-segments-intersection.html" class="md-nav__link">
         
   
   
@@ -4486,7 +4573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/segments-intersection.html" class="md-nav__link">
+      <a href="../geometry/segments-intersection.html" class="md-nav__link">
         
   
   
@@ -4514,7 +4601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/circle-line-intersection.html" class="md-nav__link">
+      <a href="../geometry/circle-line-intersection.html" class="md-nav__link">
         
   
   
@@ -4542,7 +4629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/circle-circle-intersection.html" class="md-nav__link">
+      <a href="../geometry/circle-circle-intersection.html" class="md-nav__link">
         
   
   
@@ -4570,7 +4657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/tangents-to-two-circles.html" class="md-nav__link">
+      <a href="../geometry/tangents-to-two-circles.html" class="md-nav__link">
         
   
   
@@ -4598,7 +4685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/length-of-segments-union.html" class="md-nav__link">
+      <a href="../geometry/length-of-segments-union.html" class="md-nav__link">
         
   
   
@@ -4681,7 +4768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/oriented-triangle-area.html" class="md-nav__link">
+      <a href="../geometry/oriented-triangle-area.html" class="md-nav__link">
         
   
   
@@ -4709,7 +4796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/area-of-simple-polygon.html" class="md-nav__link">
+      <a href="../geometry/area-of-simple-polygon.html" class="md-nav__link">
         
   
   
@@ -4737,7 +4824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/point-in-convex-polygon.html" class="md-nav__link">
+      <a href="../geometry/point-in-convex-polygon.html" class="md-nav__link">
         
   
   
@@ -4765,7 +4852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/minkowski.html" class="md-nav__link">
+      <a href="../geometry/minkowski.html" class="md-nav__link">
         
   
   
@@ -4793,7 +4880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/picks-theorem.html" class="md-nav__link">
+      <a href="../geometry/picks-theorem.html" class="md-nav__link">
         
   
   
@@ -4821,7 +4908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/lattice-points.html" class="md-nav__link">
+      <a href="../geometry/lattice-points.html" class="md-nav__link">
         
   
   
@@ -4904,7 +4991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/convex-hull.html" class="md-nav__link">
+      <a href="../geometry/convex-hull.html" class="md-nav__link">
         
   
   
@@ -4932,7 +5019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/convex_hull_trick.html" class="md-nav__link">
+      <a href="../geometry/convex_hull_trick.html" class="md-nav__link">
         
   
   
@@ -5015,7 +5102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/intersecting_segments.html" class="md-nav__link">
+      <a href="../geometry/intersecting_segments.html" class="md-nav__link">
         
   
   
@@ -5098,7 +5185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/planar.html" class="md-nav__link">
+      <a href="../geometry/planar.html" class="md-nav__link">
         
   
   
@@ -5126,7 +5213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/point-location.html" class="md-nav__link">
+      <a href="../geometry/point-location.html" class="md-nav__link">
         
   
   
@@ -5209,7 +5296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/nearest_points.html" class="md-nav__link">
+      <a href="../geometry/nearest_points.html" class="md-nav__link">
         
   
   
@@ -5237,7 +5324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/delaunay.html" class="md-nav__link">
+      <a href="../geometry/delaunay.html" class="md-nav__link">
         
   
   
@@ -5265,7 +5352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/vertical_decomposition.html" class="md-nav__link">
+      <a href="../geometry/vertical_decomposition.html" class="md-nav__link">
         
   
   
@@ -5293,7 +5380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/halfplane-intersection.html" class="md-nav__link">
+      <a href="../geometry/halfplane-intersection.html" class="md-nav__link">
         
   
   
@@ -5321,7 +5408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/manhattan-distance.html" class="md-nav__link">
+      <a href="../geometry/manhattan-distance.html" class="md-nav__link">
         
   
   
@@ -5349,7 +5436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/enclosing-circle.html" class="md-nav__link">
+      <a href="../geometry/enclosing-circle.html" class="md-nav__link">
         
   
   
@@ -5486,7 +5573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/breadth-first-search.html" class="md-nav__link">
+      <a href="../graph/breadth-first-search.html" class="md-nav__link">
         
   
   
@@ -5514,7 +5601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/depth-first-search.html" class="md-nav__link">
+      <a href="../graph/depth-first-search.html" class="md-nav__link">
         
   
   
@@ -5597,7 +5684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/search-for-connected-components.html" class="md-nav__link">
+      <a href="../graph/search-for-connected-components.html" class="md-nav__link">
         
   
   
@@ -5625,7 +5712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bridge-searching.html" class="md-nav__link">
+      <a href="../graph/bridge-searching.html" class="md-nav__link">
         
   
   
@@ -5653,7 +5740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bridge-searching-online.html" class="md-nav__link">
+      <a href="../graph/bridge-searching-online.html" class="md-nav__link">
         
   
   
@@ -5681,7 +5768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/cutpoints.html" class="md-nav__link">
+      <a href="../graph/cutpoints.html" class="md-nav__link">
         
   
   
@@ -5709,7 +5796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/strongly-connected-components.html" class="md-nav__link">
+      <a href="../graph/strongly-connected-components.html" class="md-nav__link">
         
   
   
@@ -5737,7 +5824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/strong-orientation.html" class="md-nav__link">
+      <a href="../graph/strong-orientation.html" class="md-nav__link">
         
   
   
@@ -5820,7 +5907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dijkstra.html" class="md-nav__link">
+      <a href="../graph/dijkstra.html" class="md-nav__link">
         
   
   
@@ -5848,7 +5935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dijkstra_sparse.html" class="md-nav__link">
+      <a href="../graph/dijkstra_sparse.html" class="md-nav__link">
         
   
   
@@ -5876,7 +5963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bellman_ford.html" class="md-nav__link">
+      <a href="../graph/bellman_ford.html" class="md-nav__link">
         
   
   
@@ -5904,7 +5991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/01_bfs.html" class="md-nav__link">
+      <a href="../graph/01_bfs.html" class="md-nav__link">
         
   
   
@@ -5932,7 +6019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/desopo_pape.html" class="md-nav__link">
+      <a href="../graph/desopo_pape.html" class="md-nav__link">
         
   
   
@@ -6015,7 +6102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/all-pair-shortest-path-floyd-warshall.html" class="md-nav__link">
+      <a href="../graph/all-pair-shortest-path-floyd-warshall.html" class="md-nav__link">
         
   
   
@@ -6043,7 +6130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/fixed_length_paths.html" class="md-nav__link">
+      <a href="../graph/fixed_length_paths.html" class="md-nav__link">
         
   
   
@@ -6126,7 +6213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_prim.html" class="md-nav__link">
+      <a href="../graph/mst_prim.html" class="md-nav__link">
         
   
   
@@ -6154,7 +6241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_kruskal.html" class="md-nav__link">
+      <a href="../graph/mst_kruskal.html" class="md-nav__link">
         
   
   
@@ -6182,7 +6269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_kruskal_with_dsu.html" class="md-nav__link">
+      <a href="../graph/mst_kruskal_with_dsu.html" class="md-nav__link">
         
   
   
@@ -6210,7 +6297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/second_best_mst.html" class="md-nav__link">
+      <a href="../graph/second_best_mst.html" class="md-nav__link">
         
   
   
@@ -6238,7 +6325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/kirchhoff-theorem.html" class="md-nav__link">
+      <a href="../graph/kirchhoff-theorem.html" class="md-nav__link">
         
   
   
@@ -6266,7 +6353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/pruefer_code.html" class="md-nav__link">
+      <a href="../graph/pruefer_code.html" class="md-nav__link">
         
   
   
@@ -6349,7 +6436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/finding-cycle.html" class="md-nav__link">
+      <a href="../graph/finding-cycle.html" class="md-nav__link">
         
   
   
@@ -6377,7 +6464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/finding-negative-cycle-in-graph.html" class="md-nav__link">
+      <a href="../graph/finding-negative-cycle-in-graph.html" class="md-nav__link">
         
   
   
@@ -6405,7 +6492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/euler_path.html" class="md-nav__link">
+      <a href="../graph/euler_path.html" class="md-nav__link">
         
   
   
@@ -6488,7 +6575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca.html" class="md-nav__link">
+      <a href="../graph/lca.html" class="md-nav__link">
         
   
   
@@ -6516,7 +6603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_binary_lifting.html" class="md-nav__link">
+      <a href="../graph/lca_binary_lifting.html" class="md-nav__link">
         
   
   
@@ -6544,7 +6631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_farachcoltonbender.html" class="md-nav__link">
+      <a href="../graph/lca_farachcoltonbender.html" class="md-nav__link">
         
   
   
@@ -6572,7 +6659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/rmq_linear.html" class="md-nav__link">
+      <a href="../graph/rmq_linear.html" class="md-nav__link">
         
   
   
@@ -6600,7 +6687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_tarjan.html" class="md-nav__link">
+      <a href="../graph/lca_tarjan.html" class="md-nav__link">
         
   
   
@@ -6683,7 +6770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/edmonds_karp.html" class="md-nav__link">
+      <a href="../graph/edmonds_karp.html" class="md-nav__link">
         
   
   
@@ -6711,7 +6798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/push-relabel.html" class="md-nav__link">
+      <a href="../graph/push-relabel.html" class="md-nav__link">
         
   
   
@@ -6739,7 +6826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/push-relabel-faster.html" class="md-nav__link">
+      <a href="../graph/push-relabel-faster.html" class="md-nav__link">
         
   
   
@@ -6767,7 +6854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dinic.html" class="md-nav__link">
+      <a href="../graph/dinic.html" class="md-nav__link">
         
   
   
@@ -6795,7 +6882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mpm.html" class="md-nav__link">
+      <a href="../graph/mpm.html" class="md-nav__link">
         
   
   
@@ -6823,7 +6910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/flow_with_demands.html" class="md-nav__link">
+      <a href="../graph/flow_with_demands.html" class="md-nav__link">
         
   
   
@@ -6851,7 +6938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/min_cost_flow.html" class="md-nav__link">
+      <a href="../graph/min_cost_flow.html" class="md-nav__link">
         
   
   
@@ -6879,7 +6966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/Assignment-problem-min-flow.html" class="md-nav__link">
+      <a href="../graph/Assignment-problem-min-flow.html" class="md-nav__link">
         
   
   
@@ -6907,7 +6994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/stoer_wagner_mincut.html" class="md-nav__link">
+      <a href="../graph/stoer_wagner_mincut.html" class="md-nav__link">
         
   
   
@@ -6990,7 +7077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bipartite-check.html" class="md-nav__link">
+      <a href="../graph/bipartite-check.html" class="md-nav__link">
         
   
   
@@ -7018,7 +7105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/kuhn_maximum_bipartite_matching.html" class="md-nav__link">
+      <a href="../graph/kuhn_maximum_bipartite_matching.html" class="md-nav__link">
         
   
   
@@ -7046,7 +7133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/hungarian-algorithm.html" class="md-nav__link">
+      <a href="../graph/hungarian-algorithm.html" class="md-nav__link">
         
   
   
@@ -7129,7 +7216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/topological-sort.html" class="md-nav__link">
+      <a href="../graph/topological-sort.html" class="md-nav__link">
         
   
   
@@ -7157,7 +7244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/edge_vertex_connectivity.html" class="md-nav__link">
+      <a href="../graph/edge_vertex_connectivity.html" class="md-nav__link">
         
   
   
@@ -7185,7 +7272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/tree_painting.html" class="md-nav__link">
+      <a href="../graph/tree_painting.html" class="md-nav__link">
         
   
   
@@ -7213,7 +7300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/2SAT.html" class="md-nav__link">
+      <a href="../graph/2SAT.html" class="md-nav__link">
         
   
   
@@ -7241,7 +7328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/hld.html" class="md-nav__link">
+      <a href="../graph/hld.html" class="md-nav__link">
         
   
   
@@ -7269,7 +7356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/centroid_decomposition.html" class="md-nav__link">
+      <a href="../graph/centroid_decomposition.html" class="md-nav__link">
         
   
   
@@ -7406,7 +7493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/rmq.html" class="md-nav__link">
+      <a href="../sequences/rmq.html" class="md-nav__link">
         
   
   
@@ -7434,7 +7521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/maximum_average_segment.html" class="md-nav__link">
+      <a href="../others/maximum_average_segment.html" class="md-nav__link">
         
   
   
@@ -7462,7 +7549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/k-th.html" class="md-nav__link">
+      <a href="../sequences/k-th.html" class="md-nav__link">
         
   
   
@@ -7490,7 +7577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/mex.html" class="md-nav__link">
+      <a href="../sequences/mex.html" class="md-nav__link">
         
   
   
@@ -7573,7 +7660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game_theory/games_on_graphs.html" class="md-nav__link">
+      <a href="../game_theory/games_on_graphs.html" class="md-nav__link">
         
   
   
@@ -7601,7 +7688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game_theory/sprague-grundy-nim.html" class="md-nav__link">
+      <a href="../game_theory/sprague-grundy-nim.html" class="md-nav__link">
         
   
   
@@ -7684,7 +7771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule_one_machine.html" class="md-nav__link">
+      <a href="../schedules/schedule_one_machine.html" class="md-nav__link">
         
   
   
@@ -7712,7 +7799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule_two_machines.html" class="md-nav__link">
+      <a href="../schedules/schedule_two_machines.html" class="md-nav__link">
         
   
   
@@ -7740,7 +7827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule-with-completion-duration.html" class="md-nav__link">
+      <a href="../schedules/schedule-with-completion-duration.html" class="md-nav__link">
         
   
   
@@ -7823,7 +7910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/tortoise_and_hare.html" class="md-nav__link">
+      <a href="../others/tortoise_and_hare.html" class="md-nav__link">
         
   
   
@@ -7851,7 +7938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/josephus_problem.html" class="md-nav__link">
+      <a href="../others/josephus_problem.html" class="md-nav__link">
         
   
   
@@ -7879,7 +7966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/15-puzzle.html" class="md-nav__link">
+      <a href="../others/15-puzzle.html" class="md-nav__link">
         
   
   
@@ -7907,7 +7994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/stern_brocot_tree_farey_sequences.html" class="md-nav__link">
+      <a href="../others/stern_brocot_tree_farey_sequences.html" class="md-nav__link">
         
   
   
@@ -7959,9 +8046,9 @@
                   <script type="text/javascript">
 window.onload = function() {
 	const newIssueURL = "https://github.com/cp-algorithms/cp-algorithms/issues/new";
-  const issueTitle = "Problem on article " + "Main Page";
+  const issueTitle = "Problem on article " + "Burnside\u0027s lemma / P\u00f3lya enumeration theorem";
 	const issueBody = `
- **Article:** [`+ "Main Page" + `](${window.location.href})
+ **Article:** [`+ "Burnside\u0027s lemma / P\u00f3lya enumeration theorem" + `](${window.location.href})
 
 **Problem:**
 <!--
@@ -7973,13 +8060,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/index.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/combinatorics/burnside.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/index.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/combinatorics/burnside.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8003,6 +8090,26 @@ Describe the issue of this article in detail.
   
   
 
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
 
 
 
@@ -8011,73 +8118,244 @@ Describe the issue of this article in detail.
 
 <!-- Tags -->
 
+  
+  
+  
+    
+  
+
+
+  
+    <a href="../tags.html#tag:translated" class="md-tag">
+      Translated
+    </a>
+  
+
+  
+    <a href="https://e-maxx.ru/algo/burnside_polya" class="md-tag">
+      From: e-maxx.ru
+    </a>
+  
 
 </ul>
 
 
-<h1 id="algorithms-for-competitive-programming">Algorithms for Competitive Programming<a class="headerlink" href="#algorithms-for-competitive-programming" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/cp-algorithms/cp-algorithms/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/pulls"><img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/pulls?q=is%3Apr+is%3Aclosed"><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/actions?query=branch%3Amain+workflow%3Atest"><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/cp-algorithms/cp-algorithms/test.yml" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/wiki/Translation-Progress"><img alt="Translation Progress" src="https://img.shields.io/badge/translation_progress-85.2%25-yellowgreen.svg" /></a></p>
-<p>The goal of this project is to translate the wonderful resource
-<a href="https://e-maxx.ru/algo">https://e-maxx.ru/algo</a> which provides descriptions of many algorithms
-and data structures especially popular in field of competitive programming.
-Moreover we want to improve the collected knowledge by extending the articles
-and adding new articles to the collection.</p>
-<p>We're an ad-free, volunteer-run website that's free for everyone. Users can contribute articles or help sponsor bounties on articles for greater algorithmic coverage. Your help is greatly appreciated.</p>
-<p>Compiled pages are published at <a href="https://cp-algorithms.com/">https://cp-algorithms.com/</a>.</p>
-<h2 id="become-a-contributor">Become a Contributor<a class="headerlink" href="#become-a-contributor" title="Permanent link">&para;</a></h2>
+<h1 id="burnsides-lemma-polya-enumeration-theorem">Burnside's lemma / Pólya enumeration theorem<a class="headerlink" href="#burnsides-lemma-polya-enumeration-theorem" title="Permanent link">&para;</a></h1>
+<h2 id="burnsides-lemma">Burnside's lemma<a class="headerlink" href="#burnsides-lemma" title="Permanent link">&para;</a></h2>
+<p><strong>Burnside's lemma</strong> was formulated and proven by <strong>Burnside</strong> in 1897, but historically it was already discovered in 1887 by <strong>Frobenius</strong>, and even earlier in 1845 by <strong>Cauchy</strong>.
+Therefore it is also sometimes named the <strong>Cauchy-Frobenius lemma</strong>.</p>
+<p>Burnside's lemma allows us to count the number of equivalence classes in sets, based on internal symmetry.</p>
+<h3 id="objects-and-representations">Objects and representations<a class="headerlink" href="#objects-and-representations" title="Permanent link">&para;</a></h3>
+<p>We have to clearly distinguish between the number of objects and the number of representations.</p>
+<p>Different representations can correspond to the same objects, but of course any representation corresponds to exactly one object.
+Consequently the set of all representations is divided into equivalence classes.
+Our task is to compute the number of objects, or equivalently, the number of equivalence classes.
+The following example will make the difference between object and representation clearer.</p>
+<h3 id="example-coloring-of-binary-trees">Example: coloring of binary trees<a class="headerlink" href="#example-coloring-of-binary-trees" title="Permanent link">&para;</a></h3>
+<p>Suppose we have the following problem.
+We have to count the number of ways to color a rooted binary tree with <span class="arithmatex">$n$</span> vertices with two colors, where at each vertex we do not distinguish between the left and the right children.</p>
+<p>Here the set of objects is the set of different colorings of the tree.</p>
+<p>We now define the set of representations.
+A representation of a coloring is a function <span class="arithmatex">$f(v)$</span>, which assigns each vertex a color (here we use the colors <span class="arithmatex">$0$</span> and <span class="arithmatex">$1$</span>).
+The set of representations is the set containing all possible functions of this kind, and its size is obviously equal to <span class="arithmatex">$2^n$</span>.</p>
+<p>At the same time we introduce a partition of this set into equivalence classes.</p>
+<p>For example, suppose <span class="arithmatex">$n = 3$</span>, and the tree consists of the root <span class="arithmatex">$1$</span> and its two children <span class="arithmatex">$2$</span> and <span class="arithmatex">$3$</span>.
+Then the following functions <span class="arithmatex">$f_1$</span> and <span class="arithmatex">$f_2$</span> are considered equivalent.</p>
+<div class="arithmatex">$$\begin{array}{ll}
+f_1(1) = 0 &amp; f_2(1) = 0\\
+f_1(2) = 1 &amp; f_2(2) = 0\\
+f_1(3) = 0 &amp; f_2(3) = 1
+\end{array}$$</div>
+<h3 id="invariant-permutations">Invariant permutations<a class="headerlink" href="#invariant-permutations" title="Permanent link">&para;</a></h3>
+<p>Why do these two function <span class="arithmatex">$f_1$</span> and <span class="arithmatex">$f_2$</span> belong to the same equivalence class?
+Intuitively this is understandable - we can rearrange the children of vertex <span class="arithmatex">$1$</span>, the vertices <span class="arithmatex">$2$</span> and <span class="arithmatex">$3$</span>, and after such a transformation of the function <span class="arithmatex">$f_1$</span> it will coincide with <span class="arithmatex">$f_2$</span>.</p>
+<p>But formally this means that there exists an <strong>invariant permutation</strong> <span class="arithmatex">$\pi$</span> (i.e. a permutation which does not change the object itself, but only its representation), such that:</p>
+<div class="arithmatex">$$f_2 \pi \equiv f_1$$</div>
+<p>So starting from the definition of objects, we can find all the invariant permutations, i.e. all permutations which do not change the object when applying the permutation to the representation.
+Then we can check whether two functions <span class="arithmatex">$f_1$</span> and <span class="arithmatex">$f_2$</span> are equivalent (i.e. if they correspond to the same object) by checking the condition <span class="arithmatex">$f_2 \pi \equiv f_1$</span> for each invariant permutation (or equivalently <span class="arithmatex">$f_1 \pi \equiv f_2$</span>).
+If at least one permutation is found for which the condition is satisfied, then <span class="arithmatex">$f_1$</span> and <span class="arithmatex">$f_2$</span> are equivalent, otherwise they are not equivalent.</p>
+<p>Finding all such invariant permutations with respect to the object definition is a key step for the application of both Burnside's lemma and the Pólya enumeration theorem.
+It is clear that these invariant permutations depend on the specific problem, and their finding is a purely heuristic process based on intuitive considerations.
+However in most cases it is sufficient to manually find several "basic" permutations, with which all other permutations can be generated (and this part of the work can be shifted to a computer).</p>
+<p>It is not difficult to understand that invariant permutations form a <strong>group</strong>, since the product (composition) of invariant permutations is again an invariant permutation.
+We denote the <strong>group of invariant permutations</strong> by <span class="arithmatex">$G$</span>.</p>
+<h3 id="the-statement-of-the-lemma">The statement of the lemma<a class="headerlink" href="#the-statement-of-the-lemma" title="Permanent link">&para;</a></h3>
+<p>For the formulation of the lemma we need one more definition from algebra.
+A <strong>fixed point</strong> <span class="arithmatex">$f$</span> for a permutation <span class="arithmatex">$\pi$</span> is an element that is invariant under this permutation: <span class="arithmatex">$f \equiv f \pi$</span>.
+For example in our example the fixed points are those functions <span class="arithmatex">$f$</span>, which correspond to colorings that do not change when the permutation <span class="arithmatex">$\pi$</span> is applied to them (i.e. they do not change in the formal sense of the equality of functions).
+We denote by <span class="arithmatex">$I(\pi)$</span> the <strong>number of fixed points</strong> for the permutation <span class="arithmatex">$\pi$</span>.</p>
+<p>Then <strong>Burnside's lemma</strong> goes as follows:
+the number of equivalence classes is equal to the sum of the numbers of fixed points with respect to all permutations from the group <span class="arithmatex">$G$</span>, divided by the size of this group:</p>
+<div class="arithmatex">$$|\text{Classes}| = \frac{1}{|G|} \sum_{\pi \in G} I(\pi)$$</div>
+<p>Although Burnside's lemma itself is not so convenient to use in practice (it is unclear how to quickly look for the value <span class="arithmatex">$I(\pi)$</span>, it most clearly reveals the mathematical essence on which the idea of calculating equivalence classes is based.</p>
+<h3 id="proof-of-burnsides-lemma">Proof of Burnside's lemma<a class="headerlink" href="#proof-of-burnsides-lemma" title="Permanent link">&para;</a></h3>
+<p>The proof of Burnside's lemma described here is not important for the practical applications, so it can be skipped on the first reading.</p>
+<p>The proof here is the simplest known, and does not use group theory.
+The proof was published by Kenneth P. Bogart in 1991.</p>
+<p>We need to prove the following statement:</p>
+<div class="arithmatex">$$|\text{Classes}| \cdot |G| = \sum_{\pi \in G} I(\pi)$$</div>
+<p>The value on the right side is nothing more than the number of "invariant pairs" <span class="arithmatex">$(f, \pi)$</span>, i.e. pairs such that <span class="arithmatex">$f \pi \equiv f$</span>.
+It is obvious that we can change the order of summation.
+We let the sum iterate over all elements <span class="arithmatex">$f$</span> and sum over the values <span class="arithmatex">$J(f)$</span> - the number of permutations for which <span class="arithmatex">$f$</span> is a fixed point.</p>
+<div class="arithmatex">$$|\text{Classes}| \cdot |G| = \sum_{f} J(f)$$</div>
+<p>To prove this formula we will compose a table with columns labeled with all functions <span class="arithmatex">$f_i$</span> and rows labeled with all permutations <span class="arithmatex">$\pi_j$</span>.
+And we fill the cells with <span class="arithmatex">$f_i \pi_j$</span>.
+If we look at the columns in this table as sets, then some of them will coincide, and this means that the corresponding functions <span class="arithmatex">$f$</span> for these columns are also equivalent.
+Thus the numbers of different (as sets) columns is equal to the number of classes.
+Incidentally, from the standpoint of group theory, the column labeled with <span class="arithmatex">$f_i$</span> is the orbit of this element.
+For equivalent elements the orbits coincides, and the number of orbits gives exactly the number of classes.</p>
+<p>Thus the columns of the table decompose into equivalence classes.
+Let us fix a class, and look at the columns in it.
+First, note that these columns can only contain elements <span class="arithmatex">$f_i$</span> of the equivalence class (otherwise some permutation <span class="arithmatex">$\pi_j$</span> moved one of the functions into a different equivalence class, which is impossible since we only look at invariant permutations).
+Secondly each element <span class="arithmatex">$f_i$</span> will occur the same number of times in each column (this also follows from the fact that the columns correspond to equivalent elements).
+From this we can conclude, that all the columns within the same equivalence class coincide with each other as multisets.</p>
+<p>Now fix an arbitrary element <span class="arithmatex">$f$</span>.
+On the one hand, it occurs in its column exactly <span class="arithmatex">$J(f)$</span> times (by definition).
+On the other hand, all columns within the same equivalence class are the same as multisets.
+Therefore within each column of a given equivalence class any element <span class="arithmatex">$g$</span> occurs exactly <span class="arithmatex">$J(g)$</span> times.</p>
+<p>Thus if we arbitrarily take one column from each equivalence class, and sum the number of elements in them, we obtain on one hand <span class="arithmatex">$|\text{Classes}| \cdot |G|$</span> (simply by multiplying the number of columns by the number of rows), and on the other hand the sum of the quantities <span class="arithmatex">$J(f)$</span> for all <span class="arithmatex">$f$</span> (this follows from all the previous arguments):</p>
+<div class="arithmatex">$$|\text{Classes}| \cdot |G| = \sum_{f} J(f)$$</div>
+<h2 id="polya-enumeration-theorem">Pólya enumeration theorem<a class="headerlink" href="#polya-enumeration-theorem" title="Permanent link">&para;</a></h2>
+<p>The Pólya enumeration theorem is a generalization of Burnside's lemma, and it also provides a more convenient tool for finding the number of equivalence classes.
+It should be noted that this theorem was already discovered before Pólya by Redfield in 1927, but his publication went unnoticed by mathematicians.
+Pólya independently came to the same results in 1937, and his publication was more successful.</p>
+<p>Here we discuss only a special case of the Pólya enumeration theorem, which will turn out very useful in practice.
+The general formula of the theorem will not be discussed.</p>
+<p>We denote by <span class="arithmatex">$C(\pi)$</span> the number of cycles in the permutation <span class="arithmatex">$\pi$</span>.
+Then the following formula (a <strong>special case of the Pólya enumeration theorem</strong>) holds:</p>
+<div class="arithmatex">$$|\text{Classes}| = \frac{1}{|G|} \sum_{\pi \in G} k^{C(\pi)}$$</div>
+<p><span class="arithmatex">$k$</span> is the number of values that each representation element can take, in the case of the coloring of a binary tree this would be <span class="arithmatex">$k = 2$</span>.</p>
+<h3 id="evidence">Evidence<a class="headerlink" href="#evidence" title="Permanent link">&para;</a></h3>
+<p>This formula is a direct consequence of Burnside's lemma.
+To get it, we just need to find an explicit expression for <span class="arithmatex">$I(\pi)$</span>, which appears in the lemma.
+Recall, that <span class="arithmatex">$I(\pi)$</span> is the number of fixed points in the permutation <span class="arithmatex">$\pi$</span>.</p>
+<p>Thus we consider a permutation <span class="arithmatex">$\pi$</span> and some element <span class="arithmatex">$f$</span>.
+During the application of <span class="arithmatex">$\pi$</span>, the elements in <span class="arithmatex">$f$</span> move via the cycles in the permutation.
+Since the result should obtain <span class="arithmatex">$f \equiv f \pi$</span>, the elements touched by one cycle must all be equal.
+At the same time different cycles are independent.
+Thus for each permutation cycle <span class="arithmatex">$\pi$</span> we can choose one value (among <span class="arithmatex">$k$</span> possible) and thus we get the number of fixed points:</p>
+<div class="arithmatex">$$I(\pi) = k^{C(\pi)}$$</div>
+<h2 id="application-coloring-necklaces">Application: Coloring necklaces<a class="headerlink" href="#application-coloring-necklaces" title="Permanent link">&para;</a></h2>
+<p>The problem "Necklace" is one of the classical combinatorial problems.
+The task is to count the number of different necklaces from <span class="arithmatex">$n$</span> beads, each of which can be painted in one of the <span class="arithmatex">$k$</span> colors.
+When comparing two necklaces, they can be rotated, but not reversed (i.e. a cyclic shift is permitted).</p>
+<p>In this problem we can immediately find the group of invariant permutations:</p>
+<div class="arithmatex">$$\begin{align}
+\pi_0 &amp;= 1 2 3 \dots n\\
+\pi_1 &amp;= 2 3 \dots n 1\\
+\pi_2 &amp;= 3 \dots n 12\\
+&amp;\dots\\
+\pi_{n-1} &amp;= n 1 2 3\dots\end{align}$$</div>
+<p>Let us find an explicit formula for calculating <span class="arithmatex">$C(\pi_i)$</span>.
+First we note, that the permutation <span class="arithmatex">$\pi_i$</span> has at the <span class="arithmatex">$j$</span>-th position the value <span class="arithmatex">$i + j$</span> (taken modulo <span class="arithmatex">$n$</span>).
+If we check the cycle structure for <span class="arithmatex">$\pi_i$</span>.
+We see that <span class="arithmatex">$1$</span> goes to <span class="arithmatex">$1 + i$</span>, <span class="arithmatex">$1 + i$</span> goes to <span class="arithmatex">$1 + 2i$</span>, which goes to <span class="arithmatex">$1 + 3i$</span>, etc., until we come to a number of the form <span class="arithmatex">$1 + k n$</span>.
+Similar statements can be made for the remaining elements.
+Hence we see that all cycles have the same length, namely <span class="arithmatex">$\frac{\text{lcm}(i, n)}{i} = \frac{n}{\gcd(i, n)}$</span>.
+Thus the number of cycles in <span class="arithmatex">$\pi_i$</span> will be equal to <span class="arithmatex">$\gcd(i, n)$</span>.</p>
+<p>Substituting these values into the Pólya enumeration theorem, we obtain the solution:</p>
+<div class="arithmatex">$$\frac{1}{n} \sum_{i=1}^n k^{\gcd(i, n)}$$</div>
+<p>You can leave this formula in this form, or you can simplify it even more.
+Let transfer the sum so that it iterates over all divisors of <span class="arithmatex">$n$</span>.
+In the original sum there will be many equivalent terms: if <span class="arithmatex">$i$</span> is not a divisor of <span class="arithmatex">$n$</span>, then such a divisor can be found after computing <span class="arithmatex">$\gcd(i, n)$</span>.
+Therefore for each divisor <span class="arithmatex">$d ~|~ n$</span> its term <span class="arithmatex">$k^{\gcd(d, n)} = k^d$</span> will appear in the sum multiple times, i.e. the answer to the problem can be rewritten as</p>
+<div class="arithmatex">$$\frac{1}{n} \sum_{d ~|~ n} C_d k^d,$$</div>
+<p>where <span class="arithmatex">$C_d$</span> is the number of such numbers <span class="arithmatex">$i$</span> with <span class="arithmatex">$\gcd(i, n) = d$</span>.
+We can find an explicit expression for this value.
+Any such number <span class="arithmatex">$i$</span> has the form <span class="arithmatex">$i = d j$</span> with <span class="arithmatex">$\gcd(j, n / d) = 1$</span> (otherwise <span class="arithmatex">$\gcd(i, n) &gt; d$</span>).
+So we can count the number of <span class="arithmatex">$j$</span> with this behavior.
+<a href="../algebra/phi-function.html">Euler's phi function</a> gives us the result <span class="arithmatex">$C_d = \phi(n / d)$</span>, and therefore we get the answer:</p>
+<div class="arithmatex">$$\frac{1}{n} \sum_{d ~|~ n} \phi\left(\frac{n}{d}\right) k^d$$</div>
+<h2 id="application-coloring-a-torus">Application: Coloring a torus<a class="headerlink" href="#application-coloring-a-torus" title="Permanent link">&para;</a></h2>
+<p>Quite often we cannot obtain an explicit formula for the number of equivalence classes.
+In many problems the number of permutations in a group can be too large for manual calculations and it is not possible to compute analytically the number of cycles in them.</p>
+<p>In that case we should manually find several "basic" permutations, so that they can generate the entire group <span class="arithmatex">$G$</span>.
+Next we can write a program that will generate all permutations of the group <span class="arithmatex">$G$</span>, count the number of cycles in them, and compute the answer with the formula.</p>
+<p>Consider the example of the problem for coloring a torus.
+There is a checkered sheet of paper <span class="arithmatex">$n \times m$</span> (<span class="arithmatex">$n &lt; m$</span>), some of the cells are black.
+Then a cylinder is obtained from this sheet by gluing together the two sides with lengths <span class="arithmatex">$m$</span>.
+Then a torus is obtained from the cylinder by gluing together the two circles (top and bottom) without twisting.
+The task is to compute the number of different colored tori, assuming that we cannot see the glued lines, and the torus can be turned and turned.</p>
+<p>We again start with a piece of <span class="arithmatex">$n \times m$</span> paper.
+It is easy to see that the following types of transformations preserve the equivalence class:
+a cyclic shift of the rows, a cyclic shift of the columns, and a rotation of the sheet by 180 degrees.
+It is also easy to see, that these transformations can generate the entire group of invariant transformations.
+If we somehow number the cells of the paper, then we can write three permutations <span class="arithmatex">$p_1$</span>, <span class="arithmatex">$p_2$</span>, <span class="arithmatex">$p_3$</span> corresponding to these types of transformation.</p>
+<p>Next it only remains to generate all permutations obtained as a product.
+It is obvious that all such permutations have the form <span class="arithmatex">$p_1^{i_1} p_2^{i_2} p_3^{i_3}$</span> where <span class="arithmatex">$i_1 = 0 \dots m-1$</span>, <span class="arithmatex">$i_2 = 0 \dots n-1$</span>, <span class="arithmatex">$i_3 = 0 \dots 1$</span>.</p>
+<p>Thus we can write the implementations to this problem.</p>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">Permutation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="k">operator</span><span class="o">*=</span><span class="p">(</span><span class="n">Permutation</span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">Permutation</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Permutation</span><span class="w"> </span><span class="n">copy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">copy</span><span class="p">[</span><span class="n">q</span><span class="p">[</span><span class="n">i</span><span class="p">]];</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">count_cycles</span><span class="p">(</span><span class="n">Permutation</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+<span class="w">                </span><span class="n">p</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">                </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">next</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">cnt</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">solve</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Permutation</span><span class="w"> </span><span class="nf">p</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">m</span><span class="p">),</span><span class="w"> </span><span class="n">p1</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">m</span><span class="p">),</span><span class="w"> </span><span class="n">p2</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">m</span><span class="p">),</span><span class="w"> </span><span class="n">p3</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">m</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="o">*</span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p3</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">set</span><span class="o">&lt;</span><span class="n">Permutation</span><span class="o">&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i1</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">i2</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i3</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i3</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+<span class="w">                </span><span class="n">p</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">p3</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">p</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">p2</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">p</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">p1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Permutation</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">count_cycles</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://cp-algorithms.com/contrib.html">How to Contribute</a></li>
-<li><a href="https://cp-algorithms.com/code_of_conduct.html">Code of Conduct</a></li>
-<li><a href="https://cp-algorithms.com/preview.html">Test-Your-Page Form</a></li>
+<li><a href="https://cses.fi/problemset/task/2209">CSES - Counting Necklaces</a></li>
+<li><a href="https://cses.fi/problemset/task/2210">CSES - Counting Grids</a></li>
+<li><a href="https://codeforces.com/gym/101873/problem/B">Codeforces - Buildings</a></li>
+<li><a href="https://csacademy.com/contest/beta-round-8/task/cube-coloring/">CS Academy - Cube Coloring</a></li>
+<li><a href="https://codeforces.com/contest/1065/problem/E">Codeforces - Side Transmutations</a></li>
+<li><a href="https://vjudge.net/problem/LightOJ-1419">LightOJ - Necklace</a></li>
+<li><a href="http://poj.org/problem?id=1286">POJ - Necklace of Beads</a></li>
+<li><a href="https://www.codechef.com/problems/DECORATE">CodeChef - Lucy and Flowers</a></li>
+<li><a href="https://www.hackerrank.com/contests/infinitum12/challenges/count-the-necklaces">HackerRank - Count the Necklaces</a></li>
+<li><a href="http://poj.org/problem?id=2888">POJ - Magic Bracelet</a></li>
+<li><a href="https://www.spoj.com/problems/SRTMACH/">SPOJ - Sorting Machine</a></li>
+<li><a href="https://projecteuler.net/problem=281">Project Euler - Pizza Toppings</a></li>
+<li><a href="https://basecamp.eolymp.com/tr/problems/3064">ICPC 2011 SERCP - Alphabet Soup</a></li>
+<li><a href="https://basecamp.eolymp.com/en/problems/11615">GCPC 2017 - Buildings</a></li>
 </ul>
-<h2 id="sponsor-us">Sponsor Us<a class="headerlink" href="#sponsor-us" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://github.com/sponsors/cp-algorithms">Become a Financial Supporter</a></li>
-</ul>
-<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
-<ul>
-<li>August, 2025: Overhaul of CP-Algorithms <a href="https://github.com/sponsors/cp-algorithms">donation system</a>. Please consider supporting us, so that we can grow!</li>
-<li>August, 2025: Launched a <a href="https://discord.gg/HZ5AecN3KX">Discord server</a>!</li>
-<li>October, 2024: Welcome new maintainers: <a href="https://github.com/jxu">jxu</a>, <a href="https://github.com/mhayter">mhayter</a> and <a href="https://github.com/kostero">kostero</a>!</li>
-<li>October, 15, 2024: GitHub pages based mirror is now served at <a href="https://gh.cp-algorithms.com/">https://gh.cp-algorithms.com/</a>, and an auxiliary competitive programming library is available at <a href="https://lib.cp-algorithms.com/">https://lib.cp-algorithms.com/</a>.</li>
-<li>July 16, 2024: Major overhaul of the <a href="https://cp-algorithms.com/graph/strongly-connected-components.html">Finding strongly connected components / Building condensation graph</a> article.</li>
-<li>June 26, 2023: Added automatic RSS feeds for <a href="https://cp-algorithms.com/feed_rss_created.xml">new articles</a> and <a href="https://cp-algorithms.com/feed_rss_updated.xml">updates in articles</a>.</li>
-<li>December 20, 2022: The repository name and the owning organizations were renamed! Now the repo is located at <a href="https://github.com/cp-algorithms/cp-algorithms">https://github.com/cp-algorithms/cp-algorithms</a>. It is recommended to update the upstream link in your local repositories, if you have any.</li>
-<li>October 31, 2022: It is now possible to select and copy <span class="arithmatex">$\LaTeX$</span> source code of formulas within the articles.</li>
-<li>June 8, 2022: Tags are enabled. Each article is now marked whether it is translated or original, overall tag info is present in the <a href="https://cp-algorithms.com/tags.html">tag index</a>. For translated articles, clicking on <code>From: X</code> tag would lead to the original article.</li>
-<li>June 7, 2022: Date of last commit and author list with contribution percentage is tracked for each page.</li>
-<li>June 5, 2022: Enabled content tabs and sidebar navigation. The navigation is moved to a <a href="https://cp-algorithms.com/navigation.html">separate page</a> and its structure should be adjusted in <a href="https://github.com/cp-algorithms/cp-algorithms/blob/main/src/navigation.md">navigation.md</a> whenever a new article is created or an old one is moved.</li>
-<li>January 16, 2022: Switched to the <a href="https://www.mkdocs.org/">MkDocs</a> site generator with the <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a> theme, which give the website a more modern look, brings a couple of new features (dark mode, better search, ...), makes the website more stable (in terms of rendering math formulas), and makes it easier to contribute.</li>
-</ul>
-<h3 id="new-articles">New articles<a class="headerlink" href="#new-articles" title="Permanent link">&para;</a></h3>
-<ul>
-<li>(9 June 2026) <a href="https://cp-algorithms.com/graph/stoer_wagner_mincut.html">Minimum cut - Stoer-Wagner algorithm</a></li>
-<li>(28 March 2026) <a href="https://cp-algorithms.com/graph/centroid_decomposition.html">Centroid decomposition</a></li>
-<li>(19 August 2025) <a href="https://cp-algorithms.com/geometry/enclosing-circle.html">Minimum Enclosing Circle</a></li>
-<li>(21 May 2025) <a href="https://cp-algorithms.com/num_methods/simulated_annealing.html">Simulated Annealing</a></li>
-<li>(12 July 2024) <a href="https://cp-algorithms.com/geometry/manhattan-distance.html">Manhattan distance</a></li>
-<li>(8 June 2024) <a href="https://cp-algorithms.com/dynamic_programming/knapsack.html">Knapsack Problem</a></li>
-<li>(28 January 2024) <a href="https://cp-algorithms.com/dynamic_programming/intro-to-dp.html">Introduction to Dynamic Programming</a></li>
-<li>(8 December 2023) <a href="https://cp-algorithms.com/graph/hungarian-algorithm.html">Hungarian Algorithm</a></li>
-<li>(10 September 2023) <a href="https://cp-algorithms.com/others/tortoise_and_hare.html">Tortoise and Hare Algorithm</a></li>
-<li>(12 July 2023) <a href="https://cp-algorithms.com/geometry/planar.html">Finding faces of a planar graph</a></li>
-<li>(18 April 2023) <a href="https://cp-algorithms.com/algebra/bit-manipulation.html">Bit manipulation</a></li>
-<li>(17 October 2022) <a href="https://cp-algorithms.com/num_methods/binary_search.html">Binary Search</a></li>
-<li>(17 October 2022) <a href="https://cp-algorithms.com/sequences/mex.html">MEX (Minimum Excluded element in an array)</a></li>
-<li>(12 May 2022) <a href="https://cp-algorithms.com/algebra/factoring-exp.html">Factoring Exponentiation</a></li>
-<li>(7 May 2022) <a href="https://cp-algorithms.com/dynamic_programming/knuth-optimization.html">Knuth's Optimization</a></li>
-<li>(31 March 2022) <a href="https://cp-algorithms.com/algebra/continued-fractions.html">Continued fractions</a></li>
-</ul>
-<p>Full list of updates: <a href="https://github.com/cp-algorithms/cp-algorithms/commits/main">Commit History</a></p>
-<p>Full list of articles: <a href="https://cp-algorithms.com/navigation.html">Navigation</a></p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (71.43%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (14.29%)</li><li><a href="#" title="Rodion Gorkovenko" data-bi-name="contributorprofile" target="_blank">Rodion Gorkovenko</a> (14.29%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (89.75%)</li><li><a href="#" title="AYUSH KUMAR TIWARI" data-bi-name="contributorprofile" target="_blank">AYUSH KUMAR TIWARI</a> (3.53%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (2.12%)</li><li><a href="#" title="Mirco Paul" data-bi-name="contributorprofile" target="_blank">Mirco Paul</a> (1.77%)</li><li><a href="#" title="eeegnu" data-bi-name="contributorprofile" target="_blank">eeegnu</a> (1.06%)</li><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (1.06%)</li><li><a href="#" title="Ashutosh Kumar Verma" data-bi-name="contributorprofile" target="_blank">Ashutosh Kumar Verma</a> (0.35%)</li><li><a href="#" title="NhatMinh0208" data-bi-name="contributorprofile" target="_blank">NhatMinh0208</a> (0.35%)</li></ul>
 </ul>
                 
               </article>
@@ -8157,14 +8435,14 @@ and adding new articles to the collection.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["toc.integrate", "search.suggest", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.integrate", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="javascript/config.js"></script>
+        <script src="../javascript/config.js"></script>
       
-        <script src="javascript/donation-banner.js"></script>
+        <script src="../javascript/donation-banner.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
       

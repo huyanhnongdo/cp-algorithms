@@ -10,36 +10,38 @@
       
       
       
-        <link rel="canonical" href="https://cp-algorithms.com/index.html">
+        <link rel="canonical" href="https://cp-algorithms.com/graph/strongly-connected-components.html">
       
       
+        <link rel="prev" href="cutpoints.html">
       
-        <link rel="next" href="navigation.html">
+      
+        <link rel="next" href="strong-orientation.html">
       
       
         
-          <link rel="alternate" href="index.html" hreflang="en">
+          <link rel="alternate" href="strongly-connected-components.html" hreflang="en">
         
-          <link rel="alternate" href="vi/index.html" hreflang="vi">
+          <link rel="alternate" href="../vi/graph/strongly-connected-components.html" hreflang="vi">
         
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../feed_rss_updated.xml">
       
-      <link rel="icon" href="favicon.ico">
+      <link rel="icon" href="../favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Main Page - Algorithms for Competitive Programming</title>
+        <title>Strongly Connected Components and Condensation Graph - Algorithms for Competitive Programming</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -58,9 +60,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -77,9 +79,9 @@
     
     
   
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 
-  <script src="assets/javascripts/toggle-sidebar.js"></script></head>
+  <script src="../assets/javascripts/toggle-sidebar.js"></script></head>
   
   
     
@@ -98,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#algorithms-for-competitive-programming" class="md-skip">
+        <a href="#strongly-connected-components-and-the-condensation-graph" class="md-skip">
           Skip to content
         </a>
       
@@ -122,9 +124,9 @@
     }
   </script>
   <nav class="md-header__inner md-grid" aria-label="header.title">
-    <a href="index.html" title="Algorithms for Competitive Programming" class="md-header__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+    <a href="../index.html" title="Algorithms for Competitive Programming" class="md-header__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
       
-  <img src="favicon.ico" alt="logo">
+  <img src="../favicon.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -134,7 +136,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            <a href="index.html" title="Algorithms for Competitive Programming" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+            <a href="../index.html" title="Algorithms for Competitive Programming" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
               Algorithms for Competitive Programming
             </a>
           </span>
@@ -143,7 +145,7 @@
           <span class="md-ellipsis">
             <a href="#" onclick="scrollToTop()">
               
-                Main Page
+                Strongly Connected Components and Condensation Graph
               
             </a>
           </span>
@@ -184,13 +186,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="index.html" hreflang="en" class="md-select__link">
+                  <a href="strongly-connected-components.html" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="vi/index.html" hreflang="vi" class="md-select__link">
+                  <a href="../vi/graph/strongly-connected-components.html" hreflang="vi" class="md-select__link">
                     Tiếng Việt
                   </a>
                 </li>
@@ -296,9 +298,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Algorithms for Competitive Programming" class="md-nav__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+    <a href="../index.html" title="Algorithms for Competitive Programming" class="md-nav__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
       
-  <img src="favicon.ico" alt="logo">
+  <img src="../favicon.ico" alt="logo">
 
     </a>
     Algorithms for Competitive Programming
@@ -322,20 +324,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -356,7 +356,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -371,37 +371,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Main Page
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -417,76 +390,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#become-a-contributor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Become a Contributor
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sponsor-us" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sponsor Us
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changelog
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Changelog">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#new-articles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        New articles
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -499,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="navigation.html" class="md-nav__link">
+      <a href="../navigation.html" class="md-nav__link">
         
   
   
@@ -527,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tags.html" class="md-nav__link">
+      <a href="../tags.html" class="md-nav__link">
         
   
   
@@ -555,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contrib.html" class="md-nav__link">
+      <a href="../contrib.html" class="md-nav__link">
         
   
   
@@ -583,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="code_of_conduct.html" class="md-nav__link">
+      <a href="../code_of_conduct.html" class="md-nav__link">
         
   
   
@@ -611,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="preview.html" class="md-nav__link">
+      <a href="../preview.html" class="md-nav__link">
         
   
   
@@ -740,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/binary-exp.html" class="md-nav__link">
+      <a href="../algebra/binary-exp.html" class="md-nav__link">
         
   
   
@@ -768,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/euclid-algorithm.html" class="md-nav__link">
+      <a href="../algebra/euclid-algorithm.html" class="md-nav__link">
         
   
   
@@ -796,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/extended-euclid-algorithm.html" class="md-nav__link">
+      <a href="../algebra/extended-euclid-algorithm.html" class="md-nav__link">
         
   
   
@@ -824,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/linear-diophantine-equation.html" class="md-nav__link">
+      <a href="../algebra/linear-diophantine-equation.html" class="md-nav__link">
         
   
   
@@ -852,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/fibonacci-numbers.html" class="md-nav__link">
+      <a href="../algebra/fibonacci-numbers.html" class="md-nav__link">
         
   
   
@@ -935,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/sieve-of-eratosthenes.html" class="md-nav__link">
+      <a href="../algebra/sieve-of-eratosthenes.html" class="md-nav__link">
         
   
   
@@ -963,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/prime-sieve-linear.html" class="md-nav__link">
+      <a href="../algebra/prime-sieve-linear.html" class="md-nav__link">
         
   
   
@@ -991,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/primality_tests.html" class="md-nav__link">
+      <a href="../algebra/primality_tests.html" class="md-nav__link">
         
   
   
@@ -1019,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorization.html" class="md-nav__link">
+      <a href="../algebra/factorization.html" class="md-nav__link">
         
   
   
@@ -1102,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/phi-function.html" class="md-nav__link">
+      <a href="../algebra/phi-function.html" class="md-nav__link">
         
   
   
@@ -1130,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/divisors.html" class="md-nav__link">
+      <a href="../algebra/divisors.html" class="md-nav__link">
         
   
   
@@ -1213,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/module-inverse.html" class="md-nav__link">
+      <a href="../algebra/module-inverse.html" class="md-nav__link">
         
   
   
@@ -1241,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/linear_congruence_equation.html" class="md-nav__link">
+      <a href="../algebra/linear_congruence_equation.html" class="md-nav__link">
         
   
   
@@ -1269,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/chinese-remainder-theorem.html" class="md-nav__link">
+      <a href="../algebra/chinese-remainder-theorem.html" class="md-nav__link">
         
   
   
@@ -1297,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/garners-algorithm.html" class="md-nav__link">
+      <a href="../algebra/garners-algorithm.html" class="md-nav__link">
         
   
   
@@ -1325,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorial-modulo.html" class="md-nav__link">
+      <a href="../algebra/factorial-modulo.html" class="md-nav__link">
         
   
   
@@ -1353,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/discrete-log.html" class="md-nav__link">
+      <a href="../algebra/discrete-log.html" class="md-nav__link">
         
   
   
@@ -1381,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/primitive-root.html" class="md-nav__link">
+      <a href="../algebra/primitive-root.html" class="md-nav__link">
         
   
   
@@ -1409,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/discrete-root.html" class="md-nav__link">
+      <a href="../algebra/discrete-root.html" class="md-nav__link">
         
   
   
@@ -1437,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/montgomery_multiplication.html" class="md-nav__link">
+      <a href="../algebra/montgomery_multiplication.html" class="md-nav__link">
         
   
   
@@ -1520,7 +1423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/balanced-ternary.html" class="md-nav__link">
+      <a href="../algebra/balanced-ternary.html" class="md-nav__link">
         
   
   
@@ -1548,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/gray-code.html" class="md-nav__link">
+      <a href="../algebra/gray-code.html" class="md-nav__link">
         
   
   
@@ -1631,7 +1534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/bit-manipulation.html" class="md-nav__link">
+      <a href="../algebra/bit-manipulation.html" class="md-nav__link">
         
   
   
@@ -1659,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/all-submasks.html" class="md-nav__link">
+      <a href="../algebra/all-submasks.html" class="md-nav__link">
         
   
   
@@ -1687,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/big-integer.html" class="md-nav__link">
+      <a href="../algebra/big-integer.html" class="md-nav__link">
         
   
   
@@ -1715,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/fft.html" class="md-nav__link">
+      <a href="../algebra/fft.html" class="md-nav__link">
         
   
   
@@ -1743,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/polynomial.html" class="md-nav__link">
+      <a href="../algebra/polynomial.html" class="md-nav__link">
         
   
   
@@ -1771,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/continued-fractions.html" class="md-nav__link">
+      <a href="../algebra/continued-fractions.html" class="md-nav__link">
         
   
   
@@ -1799,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factoring-exp.html" class="md-nav__link">
+      <a href="../algebra/factoring-exp.html" class="md-nav__link">
         
   
   
@@ -1936,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/stack_queue_modification.html" class="md-nav__link">
+      <a href="../data_structures/stack_queue_modification.html" class="md-nav__link">
         
   
   
@@ -1964,7 +1867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sparse-table.html" class="md-nav__link">
+      <a href="../data_structures/sparse-table.html" class="md-nav__link">
         
   
   
@@ -2047,7 +1950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/disjoint_set_union.html" class="md-nav__link">
+      <a href="../data_structures/disjoint_set_union.html" class="md-nav__link">
         
   
   
@@ -2075,7 +1978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/fenwick.html" class="md-nav__link">
+      <a href="../data_structures/fenwick.html" class="md-nav__link">
         
   
   
@@ -2103,7 +2006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sqrt_decomposition.html" class="md-nav__link">
+      <a href="../data_structures/sqrt_decomposition.html" class="md-nav__link">
         
   
   
@@ -2131,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/segment_tree.html" class="md-nav__link">
+      <a href="../data_structures/segment_tree.html" class="md-nav__link">
         
   
   
@@ -2159,7 +2062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/treap.html" class="md-nav__link">
+      <a href="../data_structures/treap.html" class="md-nav__link">
         
   
   
@@ -2187,7 +2090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sqrt-tree.html" class="md-nav__link">
+      <a href="../data_structures/sqrt-tree.html" class="md-nav__link">
         
   
   
@@ -2215,7 +2118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/randomized_heap.html" class="md-nav__link">
+      <a href="../data_structures/randomized_heap.html" class="md-nav__link">
         
   
   
@@ -2298,7 +2201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/deleting_in_log_n.html" class="md-nav__link">
+      <a href="../data_structures/deleting_in_log_n.html" class="md-nav__link">
         
   
   
@@ -2388,7 +2291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/intro-to-dp.html" class="md-nav__link">
+      <a href="../dynamic_programming/intro-to-dp.html" class="md-nav__link">
         
   
   
@@ -2416,7 +2319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/knapsack.html" class="md-nav__link">
+      <a href="../dynamic_programming/knapsack.html" class="md-nav__link">
         
   
   
@@ -2444,7 +2347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/longest_increasing_subsequence.html" class="md-nav__link">
+      <a href="../dynamic_programming/longest_increasing_subsequence.html" class="md-nav__link">
         
   
   
@@ -2519,7 +2422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/divide-and-conquer-dp.html" class="md-nav__link">
+      <a href="../dynamic_programming/divide-and-conquer-dp.html" class="md-nav__link">
         
   
   
@@ -2547,7 +2450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/knuth-optimization.html" class="md-nav__link">
+      <a href="../dynamic_programming/knuth-optimization.html" class="md-nav__link">
         
   
   
@@ -2630,7 +2533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/profile-dynamics.html" class="md-nav__link">
+      <a href="../dynamic_programming/profile-dynamics.html" class="md-nav__link">
         
   
   
@@ -2658,7 +2561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/zero_matrix.html" class="md-nav__link">
+      <a href="../dynamic_programming/zero_matrix.html" class="md-nav__link">
         
   
   
@@ -2795,7 +2698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/string-hashing.html" class="md-nav__link">
+      <a href="../string/string-hashing.html" class="md-nav__link">
         
   
   
@@ -2823,7 +2726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/rabin-karp.html" class="md-nav__link">
+      <a href="../string/rabin-karp.html" class="md-nav__link">
         
   
   
@@ -2851,7 +2754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/prefix-function.html" class="md-nav__link">
+      <a href="../string/prefix-function.html" class="md-nav__link">
         
   
   
@@ -2879,7 +2782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/z-function.html" class="md-nav__link">
+      <a href="../string/z-function.html" class="md-nav__link">
         
   
   
@@ -2907,7 +2810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-array.html" class="md-nav__link">
+      <a href="../string/suffix-array.html" class="md-nav__link">
         
   
   
@@ -2935,7 +2838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/aho_corasick.html" class="md-nav__link">
+      <a href="../string/aho_corasick.html" class="md-nav__link">
         
   
   
@@ -3018,7 +2921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-tree-ukkonen.html" class="md-nav__link">
+      <a href="../string/suffix-tree-ukkonen.html" class="md-nav__link">
         
   
   
@@ -3046,7 +2949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-automaton.html" class="md-nav__link">
+      <a href="../string/suffix-automaton.html" class="md-nav__link">
         
   
   
@@ -3074,7 +2977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/lyndon_factorization.html" class="md-nav__link">
+      <a href="../string/lyndon_factorization.html" class="md-nav__link">
         
   
   
@@ -3157,7 +3060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/expression_parsing.html" class="md-nav__link">
+      <a href="../string/expression_parsing.html" class="md-nav__link">
         
   
   
@@ -3185,7 +3088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/manacher.html" class="md-nav__link">
+      <a href="../string/manacher.html" class="md-nav__link">
         
   
   
@@ -3213,7 +3116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/main_lorentz.html" class="md-nav__link">
+      <a href="../string/main_lorentz.html" class="md-nav__link">
         
   
   
@@ -3350,7 +3253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/linear-system-gauss.html" class="md-nav__link">
+      <a href="../linear_algebra/linear-system-gauss.html" class="md-nav__link">
         
   
   
@@ -3378,7 +3281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/determinant-gauss.html" class="md-nav__link">
+      <a href="../linear_algebra/determinant-gauss.html" class="md-nav__link">
         
   
   
@@ -3406,7 +3309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/determinant-kraut.html" class="md-nav__link">
+      <a href="../linear_algebra/determinant-kraut.html" class="md-nav__link">
         
   
   
@@ -3434,7 +3337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/rank-matrix.html" class="md-nav__link">
+      <a href="../linear_algebra/rank-matrix.html" class="md-nav__link">
         
   
   
@@ -3571,7 +3474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorial-divisors.html" class="md-nav__link">
+      <a href="../algebra/factorial-divisors.html" class="md-nav__link">
         
   
   
@@ -3599,7 +3502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/binomial-coefficients.html" class="md-nav__link">
+      <a href="../combinatorics/binomial-coefficients.html" class="md-nav__link">
         
   
   
@@ -3627,7 +3530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/catalan-numbers.html" class="md-nav__link">
+      <a href="../combinatorics/catalan-numbers.html" class="md-nav__link">
         
   
   
@@ -3710,7 +3613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/inclusion-exclusion.html" class="md-nav__link">
+      <a href="../combinatorics/inclusion-exclusion.html" class="md-nav__link">
         
   
   
@@ -3738,7 +3641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/burnside.html" class="md-nav__link">
+      <a href="../combinatorics/burnside.html" class="md-nav__link">
         
   
   
@@ -3766,7 +3669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/stars_and_bars.html" class="md-nav__link">
+      <a href="../combinatorics/stars_and_bars.html" class="md-nav__link">
         
   
   
@@ -3794,7 +3697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/generating_combinations.html" class="md-nav__link">
+      <a href="../combinatorics/generating_combinations.html" class="md-nav__link">
         
   
   
@@ -3877,7 +3780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/bishops-on-chessboard.html" class="md-nav__link">
+      <a href="../combinatorics/bishops-on-chessboard.html" class="md-nav__link">
         
   
   
@@ -3905,7 +3808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/bracket_sequences.html" class="md-nav__link">
+      <a href="../combinatorics/bracket_sequences.html" class="md-nav__link">
         
   
   
@@ -3933,7 +3836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/counting_labeled_graphs.html" class="md-nav__link">
+      <a href="../combinatorics/counting_labeled_graphs.html" class="md-nav__link">
         
   
   
@@ -4070,7 +3973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/binary_search.html" class="md-nav__link">
+      <a href="../num_methods/binary_search.html" class="md-nav__link">
         
   
   
@@ -4098,7 +4001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/ternary_search.html" class="md-nav__link">
+      <a href="../num_methods/ternary_search.html" class="md-nav__link">
         
   
   
@@ -4126,7 +4029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/roots_newton.html" class="md-nav__link">
+      <a href="../num_methods/roots_newton.html" class="md-nav__link">
         
   
   
@@ -4154,7 +4057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/simulated_annealing.html" class="md-nav__link">
+      <a href="../num_methods/simulated_annealing.html" class="md-nav__link">
         
   
   
@@ -4237,7 +4140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/simpson-integration.html" class="md-nav__link">
+      <a href="../num_methods/simpson-integration.html" class="md-nav__link">
         
   
   
@@ -4374,7 +4277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/basic-geometry.html" class="md-nav__link">
+      <a href="../geometry/basic-geometry.html" class="md-nav__link">
         
   
   
@@ -4402,7 +4305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/segment-to-line.html" class="md-nav__link">
+      <a href="../geometry/segment-to-line.html" class="md-nav__link">
         
   
   
@@ -4430,7 +4333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/lines-intersection.html" class="md-nav__link">
+      <a href="../geometry/lines-intersection.html" class="md-nav__link">
         
   
   
@@ -4458,7 +4361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/check-segments-intersection.html" class="md-nav__link">
+      <a href="../geometry/check-segments-intersection.html" class="md-nav__link">
         
   
   
@@ -4486,7 +4389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/segments-intersection.html" class="md-nav__link">
+      <a href="../geometry/segments-intersection.html" class="md-nav__link">
         
   
   
@@ -4514,7 +4417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/circle-line-intersection.html" class="md-nav__link">
+      <a href="../geometry/circle-line-intersection.html" class="md-nav__link">
         
   
   
@@ -4542,7 +4445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/circle-circle-intersection.html" class="md-nav__link">
+      <a href="../geometry/circle-circle-intersection.html" class="md-nav__link">
         
   
   
@@ -4570,7 +4473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/tangents-to-two-circles.html" class="md-nav__link">
+      <a href="../geometry/tangents-to-two-circles.html" class="md-nav__link">
         
   
   
@@ -4598,7 +4501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/length-of-segments-union.html" class="md-nav__link">
+      <a href="../geometry/length-of-segments-union.html" class="md-nav__link">
         
   
   
@@ -4681,7 +4584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/oriented-triangle-area.html" class="md-nav__link">
+      <a href="../geometry/oriented-triangle-area.html" class="md-nav__link">
         
   
   
@@ -4709,7 +4612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/area-of-simple-polygon.html" class="md-nav__link">
+      <a href="../geometry/area-of-simple-polygon.html" class="md-nav__link">
         
   
   
@@ -4737,7 +4640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/point-in-convex-polygon.html" class="md-nav__link">
+      <a href="../geometry/point-in-convex-polygon.html" class="md-nav__link">
         
   
   
@@ -4765,7 +4668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/minkowski.html" class="md-nav__link">
+      <a href="../geometry/minkowski.html" class="md-nav__link">
         
   
   
@@ -4793,7 +4696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/picks-theorem.html" class="md-nav__link">
+      <a href="../geometry/picks-theorem.html" class="md-nav__link">
         
   
   
@@ -4821,7 +4724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/lattice-points.html" class="md-nav__link">
+      <a href="../geometry/lattice-points.html" class="md-nav__link">
         
   
   
@@ -4904,7 +4807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/convex-hull.html" class="md-nav__link">
+      <a href="../geometry/convex-hull.html" class="md-nav__link">
         
   
   
@@ -4932,7 +4835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/convex_hull_trick.html" class="md-nav__link">
+      <a href="../geometry/convex_hull_trick.html" class="md-nav__link">
         
   
   
@@ -5015,7 +4918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/intersecting_segments.html" class="md-nav__link">
+      <a href="../geometry/intersecting_segments.html" class="md-nav__link">
         
   
   
@@ -5098,7 +5001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/planar.html" class="md-nav__link">
+      <a href="../geometry/planar.html" class="md-nav__link">
         
   
   
@@ -5126,7 +5029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/point-location.html" class="md-nav__link">
+      <a href="../geometry/point-location.html" class="md-nav__link">
         
   
   
@@ -5209,7 +5112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/nearest_points.html" class="md-nav__link">
+      <a href="../geometry/nearest_points.html" class="md-nav__link">
         
   
   
@@ -5237,7 +5140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/delaunay.html" class="md-nav__link">
+      <a href="../geometry/delaunay.html" class="md-nav__link">
         
   
   
@@ -5265,7 +5168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/vertical_decomposition.html" class="md-nav__link">
+      <a href="../geometry/vertical_decomposition.html" class="md-nav__link">
         
   
   
@@ -5293,7 +5196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/halfplane-intersection.html" class="md-nav__link">
+      <a href="../geometry/halfplane-intersection.html" class="md-nav__link">
         
   
   
@@ -5321,7 +5224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/manhattan-distance.html" class="md-nav__link">
+      <a href="../geometry/manhattan-distance.html" class="md-nav__link">
         
   
   
@@ -5349,7 +5252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/enclosing-circle.html" class="md-nav__link">
+      <a href="../geometry/enclosing-circle.html" class="md-nav__link">
         
   
   
@@ -5389,18 +5292,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
           <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -5421,7 +5326,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -5486,7 +5391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/breadth-first-search.html" class="md-nav__link">
+      <a href="breadth-first-search.html" class="md-nav__link">
         
   
   
@@ -5514,7 +5419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/depth-first-search.html" class="md-nav__link">
+      <a href="depth-first-search.html" class="md-nav__link">
         
   
   
@@ -5547,18 +5452,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" checked>
         
           
           <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
@@ -5579,7 +5486,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -5597,7 +5504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/search-for-connected-components.html" class="md-nav__link">
+      <a href="search-for-connected-components.html" class="md-nav__link">
         
   
   
@@ -5625,7 +5532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bridge-searching.html" class="md-nav__link">
+      <a href="bridge-searching.html" class="md-nav__link">
         
   
   
@@ -5653,7 +5560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bridge-searching-online.html" class="md-nav__link">
+      <a href="bridge-searching-online.html" class="md-nav__link">
         
   
   
@@ -5681,7 +5588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/cutpoints.html" class="md-nav__link">
+      <a href="cutpoints.html" class="md-nav__link">
         
   
   
@@ -5706,10 +5613,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="graph/strongly-connected-components.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strongly Connected Components and Condensation Graph
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="strongly-connected-components.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -5725,6 +5659,148 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definitions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kosarajus-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kosaraju's algorithm
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kosaraju&#39;s algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-of-the-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description of the algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarjans-strongly-connected-components-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tarjan's strongly connected components algorithm
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tarjan&#39;s strongly connected components algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-of-the-algorithm_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description of the algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-the-condensation-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building the Condensation Graph
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#literature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Literature
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Problems
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5737,7 +5813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/strong-orientation.html" class="md-nav__link">
+      <a href="strong-orientation.html" class="md-nav__link">
         
   
   
@@ -5820,7 +5896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dijkstra.html" class="md-nav__link">
+      <a href="dijkstra.html" class="md-nav__link">
         
   
   
@@ -5848,7 +5924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dijkstra_sparse.html" class="md-nav__link">
+      <a href="dijkstra_sparse.html" class="md-nav__link">
         
   
   
@@ -5876,7 +5952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bellman_ford.html" class="md-nav__link">
+      <a href="bellman_ford.html" class="md-nav__link">
         
   
   
@@ -5904,7 +5980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/01_bfs.html" class="md-nav__link">
+      <a href="01_bfs.html" class="md-nav__link">
         
   
   
@@ -5932,7 +6008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/desopo_pape.html" class="md-nav__link">
+      <a href="desopo_pape.html" class="md-nav__link">
         
   
   
@@ -6015,7 +6091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/all-pair-shortest-path-floyd-warshall.html" class="md-nav__link">
+      <a href="all-pair-shortest-path-floyd-warshall.html" class="md-nav__link">
         
   
   
@@ -6043,7 +6119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/fixed_length_paths.html" class="md-nav__link">
+      <a href="fixed_length_paths.html" class="md-nav__link">
         
   
   
@@ -6126,7 +6202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_prim.html" class="md-nav__link">
+      <a href="mst_prim.html" class="md-nav__link">
         
   
   
@@ -6154,7 +6230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_kruskal.html" class="md-nav__link">
+      <a href="mst_kruskal.html" class="md-nav__link">
         
   
   
@@ -6182,7 +6258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_kruskal_with_dsu.html" class="md-nav__link">
+      <a href="mst_kruskal_with_dsu.html" class="md-nav__link">
         
   
   
@@ -6210,7 +6286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/second_best_mst.html" class="md-nav__link">
+      <a href="second_best_mst.html" class="md-nav__link">
         
   
   
@@ -6238,7 +6314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/kirchhoff-theorem.html" class="md-nav__link">
+      <a href="kirchhoff-theorem.html" class="md-nav__link">
         
   
   
@@ -6266,7 +6342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/pruefer_code.html" class="md-nav__link">
+      <a href="pruefer_code.html" class="md-nav__link">
         
   
   
@@ -6349,7 +6425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/finding-cycle.html" class="md-nav__link">
+      <a href="finding-cycle.html" class="md-nav__link">
         
   
   
@@ -6377,7 +6453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/finding-negative-cycle-in-graph.html" class="md-nav__link">
+      <a href="finding-negative-cycle-in-graph.html" class="md-nav__link">
         
   
   
@@ -6405,7 +6481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/euler_path.html" class="md-nav__link">
+      <a href="euler_path.html" class="md-nav__link">
         
   
   
@@ -6488,7 +6564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca.html" class="md-nav__link">
+      <a href="lca.html" class="md-nav__link">
         
   
   
@@ -6516,7 +6592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_binary_lifting.html" class="md-nav__link">
+      <a href="lca_binary_lifting.html" class="md-nav__link">
         
   
   
@@ -6544,7 +6620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_farachcoltonbender.html" class="md-nav__link">
+      <a href="lca_farachcoltonbender.html" class="md-nav__link">
         
   
   
@@ -6572,7 +6648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/rmq_linear.html" class="md-nav__link">
+      <a href="rmq_linear.html" class="md-nav__link">
         
   
   
@@ -6600,7 +6676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_tarjan.html" class="md-nav__link">
+      <a href="lca_tarjan.html" class="md-nav__link">
         
   
   
@@ -6683,7 +6759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/edmonds_karp.html" class="md-nav__link">
+      <a href="edmonds_karp.html" class="md-nav__link">
         
   
   
@@ -6711,7 +6787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/push-relabel.html" class="md-nav__link">
+      <a href="push-relabel.html" class="md-nav__link">
         
   
   
@@ -6739,7 +6815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/push-relabel-faster.html" class="md-nav__link">
+      <a href="push-relabel-faster.html" class="md-nav__link">
         
   
   
@@ -6767,7 +6843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dinic.html" class="md-nav__link">
+      <a href="dinic.html" class="md-nav__link">
         
   
   
@@ -6795,7 +6871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mpm.html" class="md-nav__link">
+      <a href="mpm.html" class="md-nav__link">
         
   
   
@@ -6823,7 +6899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/flow_with_demands.html" class="md-nav__link">
+      <a href="flow_with_demands.html" class="md-nav__link">
         
   
   
@@ -6851,7 +6927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/min_cost_flow.html" class="md-nav__link">
+      <a href="min_cost_flow.html" class="md-nav__link">
         
   
   
@@ -6879,7 +6955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/Assignment-problem-min-flow.html" class="md-nav__link">
+      <a href="Assignment-problem-min-flow.html" class="md-nav__link">
         
   
   
@@ -6907,7 +6983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/stoer_wagner_mincut.html" class="md-nav__link">
+      <a href="stoer_wagner_mincut.html" class="md-nav__link">
         
   
   
@@ -6990,7 +7066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bipartite-check.html" class="md-nav__link">
+      <a href="bipartite-check.html" class="md-nav__link">
         
   
   
@@ -7018,7 +7094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/kuhn_maximum_bipartite_matching.html" class="md-nav__link">
+      <a href="kuhn_maximum_bipartite_matching.html" class="md-nav__link">
         
   
   
@@ -7046,7 +7122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/hungarian-algorithm.html" class="md-nav__link">
+      <a href="hungarian-algorithm.html" class="md-nav__link">
         
   
   
@@ -7129,7 +7205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/topological-sort.html" class="md-nav__link">
+      <a href="topological-sort.html" class="md-nav__link">
         
   
   
@@ -7157,7 +7233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/edge_vertex_connectivity.html" class="md-nav__link">
+      <a href="edge_vertex_connectivity.html" class="md-nav__link">
         
   
   
@@ -7185,7 +7261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/tree_painting.html" class="md-nav__link">
+      <a href="tree_painting.html" class="md-nav__link">
         
   
   
@@ -7213,7 +7289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/2SAT.html" class="md-nav__link">
+      <a href="2SAT.html" class="md-nav__link">
         
   
   
@@ -7241,7 +7317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/hld.html" class="md-nav__link">
+      <a href="hld.html" class="md-nav__link">
         
   
   
@@ -7269,7 +7345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/centroid_decomposition.html" class="md-nav__link">
+      <a href="centroid_decomposition.html" class="md-nav__link">
         
   
   
@@ -7406,7 +7482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/rmq.html" class="md-nav__link">
+      <a href="../sequences/rmq.html" class="md-nav__link">
         
   
   
@@ -7434,7 +7510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/maximum_average_segment.html" class="md-nav__link">
+      <a href="../others/maximum_average_segment.html" class="md-nav__link">
         
   
   
@@ -7462,7 +7538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/k-th.html" class="md-nav__link">
+      <a href="../sequences/k-th.html" class="md-nav__link">
         
   
   
@@ -7490,7 +7566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/mex.html" class="md-nav__link">
+      <a href="../sequences/mex.html" class="md-nav__link">
         
   
   
@@ -7573,7 +7649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game_theory/games_on_graphs.html" class="md-nav__link">
+      <a href="../game_theory/games_on_graphs.html" class="md-nav__link">
         
   
   
@@ -7601,7 +7677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game_theory/sprague-grundy-nim.html" class="md-nav__link">
+      <a href="../game_theory/sprague-grundy-nim.html" class="md-nav__link">
         
   
   
@@ -7684,7 +7760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule_one_machine.html" class="md-nav__link">
+      <a href="../schedules/schedule_one_machine.html" class="md-nav__link">
         
   
   
@@ -7712,7 +7788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule_two_machines.html" class="md-nav__link">
+      <a href="../schedules/schedule_two_machines.html" class="md-nav__link">
         
   
   
@@ -7740,7 +7816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule-with-completion-duration.html" class="md-nav__link">
+      <a href="../schedules/schedule-with-completion-duration.html" class="md-nav__link">
         
   
   
@@ -7823,7 +7899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/tortoise_and_hare.html" class="md-nav__link">
+      <a href="../others/tortoise_and_hare.html" class="md-nav__link">
         
   
   
@@ -7851,7 +7927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/josephus_problem.html" class="md-nav__link">
+      <a href="../others/josephus_problem.html" class="md-nav__link">
         
   
   
@@ -7879,7 +7955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/15-puzzle.html" class="md-nav__link">
+      <a href="../others/15-puzzle.html" class="md-nav__link">
         
   
   
@@ -7907,7 +7983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/stern_brocot_tree_farey_sequences.html" class="md-nav__link">
+      <a href="../others/stern_brocot_tree_farey_sequences.html" class="md-nav__link">
         
   
   
@@ -7959,9 +8035,9 @@
                   <script type="text/javascript">
 window.onload = function() {
 	const newIssueURL = "https://github.com/cp-algorithms/cp-algorithms/issues/new";
-  const issueTitle = "Problem on article " + "Main Page";
+  const issueTitle = "Problem on article " + "Strongly Connected Components and Condensation Graph";
 	const issueBody = `
- **Article:** [`+ "Main Page" + `](${window.location.href})
+ **Article:** [`+ "Strongly Connected Components and Condensation Graph" + `](${window.location.href})
 
 **Problem:**
 <!--
@@ -7973,13 +8049,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/index.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/strongly-connected-components.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/index.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/strongly-connected-components.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8003,6 +8079,54 @@ Describe the issue of this article in detail.
   
   
 
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
 
 
 
@@ -8011,73 +8135,430 @@ Describe the issue of this article in detail.
 
 <!-- Tags -->
 
+  
+  
+  
+    
+  
+
+
+  
+    <a href="../tags.html#tag:translated" class="md-tag">
+      Translated
+    </a>
+  
+
+  
+    <a href="https://e-maxx.ru/algo/strong_connected_components" class="md-tag">
+      From: e-maxx.ru
+    </a>
+  
 
 </ul>
 
 
-<h1 id="algorithms-for-competitive-programming">Algorithms for Competitive Programming<a class="headerlink" href="#algorithms-for-competitive-programming" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/cp-algorithms/cp-algorithms/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/pulls"><img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/pulls?q=is%3Apr+is%3Aclosed"><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/actions?query=branch%3Amain+workflow%3Atest"><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/cp-algorithms/cp-algorithms/test.yml" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/wiki/Translation-Progress"><img alt="Translation Progress" src="https://img.shields.io/badge/translation_progress-85.2%25-yellowgreen.svg" /></a></p>
-<p>The goal of this project is to translate the wonderful resource
-<a href="https://e-maxx.ru/algo">https://e-maxx.ru/algo</a> which provides descriptions of many algorithms
-and data structures especially popular in field of competitive programming.
-Moreover we want to improve the collected knowledge by extending the articles
-and adding new articles to the collection.</p>
-<p>We're an ad-free, volunteer-run website that's free for everyone. Users can contribute articles or help sponsor bounties on articles for greater algorithmic coverage. Your help is greatly appreciated.</p>
-<p>Compiled pages are published at <a href="https://cp-algorithms.com/">https://cp-algorithms.com/</a>.</p>
-<h2 id="become-a-contributor">Become a Contributor<a class="headerlink" href="#become-a-contributor" title="Permanent link">&para;</a></h2>
+<h1 id="strongly-connected-components-and-the-condensation-graph">Strongly connected components and the condensation graph<a class="headerlink" href="#strongly-connected-components-and-the-condensation-graph" title="Permanent link">&para;</a></h1>
+<h2 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">$G=(V,E)$</span> be a directed graph with vertices <span class="arithmatex">$V$</span> and edges <span class="arithmatex">$E \subseteq V \times V$</span>. We denote with <span class="arithmatex">$n=|V|$</span> the number of vertices and with <span class="arithmatex">$m=|E|$</span> the number of edges in <span class="arithmatex">$G$</span>. It is easy to extend all definitions in this article to multigraphs, but we will not focus on that.</p>
+<p>A subset of vertices <span class="arithmatex">$C \subseteq V$</span> is called a <strong>strongly connected component</strong> if the following conditions hold:</p>
 <ul>
-<li><a href="https://cp-algorithms.com/contrib.html">How to Contribute</a></li>
-<li><a href="https://cp-algorithms.com/code_of_conduct.html">Code of Conduct</a></li>
-<li><a href="https://cp-algorithms.com/preview.html">Test-Your-Page Form</a></li>
+<li>for all <span class="arithmatex">$u,v\in C$</span>, if <span class="arithmatex">$u \neq v$</span> there exists a path from <span class="arithmatex">$u$</span> to <span class="arithmatex">$v$</span> and a path from <span class="arithmatex">$v$</span> to <span class="arithmatex">$u$</span>, and</li>
+<li><span class="arithmatex">$C$</span> is maximal, in the sense that no vertex can be added without violating the above condition.</li>
 </ul>
-<h2 id="sponsor-us">Sponsor Us<a class="headerlink" href="#sponsor-us" title="Permanent link">&para;</a></h2>
+<p>We denote with <span class="arithmatex">$\text{SCC}(G)$</span> the set of strongly connected components of <span class="arithmatex">$G$</span>. These strongly connected components do not intersect with each other, and cover all vertices in the graph. Thus, the set <span class="arithmatex">$\text{SCC}(G)$</span> is a partition of <span class="arithmatex">$V$</span>. </p>
+<p>Consider this graph <span class="arithmatex">$G_\text{example}$</span>, in which the strongly connected components are highlighted:</p>
+<center><img src="strongly-connected-components-tikzpicture/graph.svg" alt="drawing" style="width:700px;"/></center>
+
+<p>Here we have <span class="arithmatex">$\text{SCC}(G_\text{example})=\{\{0,7\},\{1,2,3,5,6\},\{4,9\},\{8\}\}.$</span> We can confirm that within each strongly connected component, all vertices are reachable from each other.</p>
+<p>We define the <strong>condensation graph</strong> <span class="arithmatex">$G^{\text{SCC}}=(V^{\text{SCC}}, E^{\text{SCC}})$</span> as follows:</p>
 <ul>
-<li><a href="https://github.com/sponsors/cp-algorithms">Become a Financial Supporter</a></li>
+<li>the vertices of <span class="arithmatex">$G^{\text{SCC}}$</span> are the strongly connected components of <span class="arithmatex">$G$</span>; i.e., <span class="arithmatex">$V^{\text{SCC}} = \text{SCC}(G)$</span>, and</li>
+<li>for all vertices <span class="arithmatex">$C_i,C_j$</span> of the condensation graph, there is an edge from <span class="arithmatex">$C_i$</span> to <span class="arithmatex">$C_j$</span> if and only if <span class="arithmatex">$C_i \neq C_j$</span> and there exist <span class="arithmatex">$a\in C_i$</span> and <span class="arithmatex">$b\in C_j$</span> such that there is an edge from <span class="arithmatex">$a$</span> to <span class="arithmatex">$b$</span> in <span class="arithmatex">$G$</span>.</li>
 </ul>
-<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
+<p>The condensation graph of <span class="arithmatex">$G_\text{example}$</span> looks as follows:</p>
+<center><img src="strongly-connected-components-tikzpicture/cond_graph.svg" alt="drawing" style="width:600px;"/></center>
+
+<p>The most important property of the condensation graph is that it is <strong>acyclic</strong>. Indeed, there are no 'self-loops' in the condensation graph by definition, and if there were a cycle going through two or more vertices (strongly connected components) in the condensation graph, then due to reachability, the union of these strongly connected components would have to be one strongly connected component itself: contradiction.</p>
+<p>The algorithm described in the next section finds all strongly connected components in a given graph. After that, the condensation graph can be constructed.</p>
+<h2 id="kosarajus-algorithm">Kosaraju's algorithm<a class="headerlink" href="#kosarajus-algorithm" title="Permanent link">&para;</a></h2>
+<h3 id="description-of-the-algorithm">Description of the algorithm<a class="headerlink" href="#description-of-the-algorithm" title="Permanent link">&para;</a></h3>
+<p>The described algorithm was independently suggested by Kosaraju and Sharir around 1980. It is based on two series of <a href="depth-first-search.html">depth first search</a>, with a runtime of <span class="arithmatex">$O(n + m)$</span>.</p>
+<p>In the first step of the algorithm, we perform a sequence of depth first searches (<code>dfs</code>), visiting the entire graph. That is, as long as there are still unvisited vertices, we take one of them, and initiate a depth first search from that vertex. For each vertex, we keep track of the <em>exit time</em> <span class="arithmatex">$t_\text{out}[v]$</span>. This is the 'timestamp' at which the execution of <code>dfs</code> on vertex <span class="arithmatex">$v$</span> finishes, i.e., the moment at which all vertices reachable from <span class="arithmatex">$v$</span> have been visited and the algorithm is back at <span class="arithmatex">$v$</span>. The timestamp counter should <em>not</em> be reset between consecutive calls to <code>dfs</code>. The exit times play a key role in the algorithm, which will become clear when we discuss the following theorem.</p>
+<p>First, we define the exit time <span class="arithmatex">$t_\text{out}[C]$</span> of a strongly connected component <span class="arithmatex">$C$</span> as the maximum of the values <span class="arithmatex">$t_\text{out}[v]$</span> for all <span class="arithmatex">$v \in C.$</span> Furthermore, in the proof of the theorem, we will mention the <em>entry time</em> <span class="arithmatex">$t_{\text{in}}[v]$</span> for each vertex <span class="arithmatex">$v\in G$</span>. The number <span class="arithmatex">$t_{\text{in}}[v]$</span> represents the 'timestamp' at which the recursive function <code>dfs</code> is called on vertex <span class="arithmatex">$v$</span> in the first step of the algorithm. For a strongly connected component <span class="arithmatex">$C$</span>, we define <span class="arithmatex">$t_{\text{in}}[C]$</span> to be the minimum of the values <span class="arithmatex">$t_{\text{in}}[v]$</span> for all <span class="arithmatex">$v \in C$</span>.</p>
+<div class="admonition info">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">$C$</span> and <span class="arithmatex">$C'$</span> be two different strongly connected components, and let there be an edge from <span class="arithmatex">$C$</span> to <span class="arithmatex">$C'$</span> in the condensation graph. Then, <span class="arithmatex">$t_\text{out}[C] &gt; t_\text{out}[C']$</span>.</p>
+</div>
+<details class="note">
+<summary>Proof</summary>
+<p>There are two different cases, depending on which component will first be reached by depth first search:</p>
 <ul>
-<li>August, 2025: Overhaul of CP-Algorithms <a href="https://github.com/sponsors/cp-algorithms">donation system</a>. Please consider supporting us, so that we can grow!</li>
-<li>August, 2025: Launched a <a href="https://discord.gg/HZ5AecN3KX">Discord server</a>!</li>
-<li>October, 2024: Welcome new maintainers: <a href="https://github.com/jxu">jxu</a>, <a href="https://github.com/mhayter">mhayter</a> and <a href="https://github.com/kostero">kostero</a>!</li>
-<li>October, 15, 2024: GitHub pages based mirror is now served at <a href="https://gh.cp-algorithms.com/">https://gh.cp-algorithms.com/</a>, and an auxiliary competitive programming library is available at <a href="https://lib.cp-algorithms.com/">https://lib.cp-algorithms.com/</a>.</li>
-<li>July 16, 2024: Major overhaul of the <a href="https://cp-algorithms.com/graph/strongly-connected-components.html">Finding strongly connected components / Building condensation graph</a> article.</li>
-<li>June 26, 2023: Added automatic RSS feeds for <a href="https://cp-algorithms.com/feed_rss_created.xml">new articles</a> and <a href="https://cp-algorithms.com/feed_rss_updated.xml">updates in articles</a>.</li>
-<li>December 20, 2022: The repository name and the owning organizations were renamed! Now the repo is located at <a href="https://github.com/cp-algorithms/cp-algorithms">https://github.com/cp-algorithms/cp-algorithms</a>. It is recommended to update the upstream link in your local repositories, if you have any.</li>
-<li>October 31, 2022: It is now possible to select and copy <span class="arithmatex">$\LaTeX$</span> source code of formulas within the articles.</li>
-<li>June 8, 2022: Tags are enabled. Each article is now marked whether it is translated or original, overall tag info is present in the <a href="https://cp-algorithms.com/tags.html">tag index</a>. For translated articles, clicking on <code>From: X</code> tag would lead to the original article.</li>
-<li>June 7, 2022: Date of last commit and author list with contribution percentage is tracked for each page.</li>
-<li>June 5, 2022: Enabled content tabs and sidebar navigation. The navigation is moved to a <a href="https://cp-algorithms.com/navigation.html">separate page</a> and its structure should be adjusted in <a href="https://github.com/cp-algorithms/cp-algorithms/blob/main/src/navigation.md">navigation.md</a> whenever a new article is created or an old one is moved.</li>
-<li>January 16, 2022: Switched to the <a href="https://www.mkdocs.org/">MkDocs</a> site generator with the <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a> theme, which give the website a more modern look, brings a couple of new features (dark mode, better search, ...), makes the website more stable (in terms of rendering math formulas), and makes it easier to contribute.</li>
+<li>
+<p>Case 1: the component <span class="arithmatex">$C$</span> was reached first (i.e., <span class="arithmatex">$t_{\text{in}}[C] &lt; t_{\text{in}}[C']$</span>). In this case, depth first search visits some vertex <span class="arithmatex">$v \in C$</span> at some moment at which all other vertices of the components <span class="arithmatex">$C$</span> and <span class="arithmatex">$C'$</span> are not visited yet. Since there is an edge from <span class="arithmatex">$C$</span> to <span class="arithmatex">$C'$</span> in the condensation graph, not only are all other vertices in <span class="arithmatex">$C$</span> reachable from <span class="arithmatex">$v$</span> in <span class="arithmatex">$G$</span>, but all vertices in <span class="arithmatex">$C'$</span> are reachable as well. This means that this <code>dfs</code> execution, which is running from vertex <span class="arithmatex">$v$</span>, will also visit all other vertices of the components <span class="arithmatex">$C$</span> and <span class="arithmatex">$C'$</span> in the future, so these vertices will be descendants of <span class="arithmatex">$v$</span> in the depth first search tree. This implies that for each vertex <span class="arithmatex">$u \in (C \cup C')\setminus \{v\},$</span> we have that <span class="arithmatex">$t_\text{out}[v] &gt; t_\text{out}[u]$</span>. Therefore, <span class="arithmatex">$t_\text{out}[C] &gt; t_\text{out}[C']$</span>, which completes this case of the proof.</p>
+</li>
+<li>
+<p>Case 2: the component <span class="arithmatex">$C'$</span> was reached first (i.e., <span class="arithmatex">$t_{\text{in}}[C] &gt; t_{\text{in}}[C']$</span>). In this case, depth first search visits some vertex <span class="arithmatex">$v \in C'$</span> at some moment at which all other vertices of the components <span class="arithmatex">$C$</span> and <span class="arithmatex">$C'$</span> are not visited yet. Since there is an edge from <span class="arithmatex">$C$</span> to <span class="arithmatex">$C'$</span> in the condensation graph, <span class="arithmatex">$C$</span> is not reachable from <span class="arithmatex">$C'$</span>, by the acyclicity property. Hence, the <code>dfs</code> execution that is running from vertex <span class="arithmatex">$v$</span> will not reach any vertices of <span class="arithmatex">$C$</span>, but it will visit all vertices of <span class="arithmatex">$C'$</span>. The vertices of <span class="arithmatex">$C$</span> will be visited by some <code>dfs</code> execution later during this step of the algorithm, so indeed we have <span class="arithmatex">$t_\text{out}[C] &gt; t_\text{out}[C']$</span>. This completes the proof.</p>
+</li>
 </ul>
-<h3 id="new-articles">New articles<a class="headerlink" href="#new-articles" title="Permanent link">&para;</a></h3>
+</details>
+<p>The proved theorem is very important for finding strongly connected components. It means that any edge in the condensation graph goes from a component with a larger value of <span class="arithmatex">$t_\text{out}$</span> to a component with a smaller value.</p>
+<p>If we sort all vertices <span class="arithmatex">$v \in V$</span> in decreasing order of their exit time <span class="arithmatex">$t_\text{out}[v]$</span>, then the first vertex <span class="arithmatex">$u$</span> will belong to the "root" strongly connected component, which has no incoming edges in the condensation graph. Now we want to run some type of search from this vertex <span class="arithmatex">$u$</span> so that it will visit all vertices in its strongly connected component, but not other vertices. By repeatedly doing so, we can gradually find all strongly connected components: we remove all vertices belonging to the first found component, then we find the next remaining vertex with the largest value of <span class="arithmatex">$t_\text{out}$</span>, and run this search from it, and so on. In the end, we will have found all strongly connected components. In order to find a search method that behaves like we want, we consider the following theorem:</p>
+<div class="admonition info">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">$G^T$</span> denote the <em>transpose graph</em> of <span class="arithmatex">$G$</span>, obtained by reversing the edge directions in <span class="arithmatex">$G$</span>. Then, <span class="arithmatex">$\text{SCC}(G)=\text{SCC}(G^T)$</span>. Furthermore, the condensation graph of <span class="arithmatex">$G^T$</span> is the transpose of the condensation graph of <span class="arithmatex">$G$</span>.</p>
+</div>
+<p>The proof is omitted (but straightforward). As a consequence of this theorem, there will be no edges from the "root" component to the other components in the condensation graph of <span class="arithmatex">$G^T$</span>. Thus, in order to visit the whole "root" strongly connected component, containing vertex <span class="arithmatex">$v$</span>, we can just run a depth first search from vertex <span class="arithmatex">$v$</span> in the transpose graph <span class="arithmatex">$G^T$</span>! This will visit precisely all vertices of this strongly connected component. As was mentioned before, we can then remove these vertices from the graph. Then, we find the next vertex with a maximal value of <span class="arithmatex">$t_\text{out}[v]$</span>, and run the search in the transpose graph starting from that vertex to find the next strongly connected component. Repeating this, we find all strongly connected components.</p>
+<p>Thus, in summary, we discussed the following algorithm to find strongly connected components:</p>
 <ul>
-<li>(9 June 2026) <a href="https://cp-algorithms.com/graph/stoer_wagner_mincut.html">Minimum cut - Stoer-Wagner algorithm</a></li>
-<li>(28 March 2026) <a href="https://cp-algorithms.com/graph/centroid_decomposition.html">Centroid decomposition</a></li>
-<li>(19 August 2025) <a href="https://cp-algorithms.com/geometry/enclosing-circle.html">Minimum Enclosing Circle</a></li>
-<li>(21 May 2025) <a href="https://cp-algorithms.com/num_methods/simulated_annealing.html">Simulated Annealing</a></li>
-<li>(12 July 2024) <a href="https://cp-algorithms.com/geometry/manhattan-distance.html">Manhattan distance</a></li>
-<li>(8 June 2024) <a href="https://cp-algorithms.com/dynamic_programming/knapsack.html">Knapsack Problem</a></li>
-<li>(28 January 2024) <a href="https://cp-algorithms.com/dynamic_programming/intro-to-dp.html">Introduction to Dynamic Programming</a></li>
-<li>(8 December 2023) <a href="https://cp-algorithms.com/graph/hungarian-algorithm.html">Hungarian Algorithm</a></li>
-<li>(10 September 2023) <a href="https://cp-algorithms.com/others/tortoise_and_hare.html">Tortoise and Hare Algorithm</a></li>
-<li>(12 July 2023) <a href="https://cp-algorithms.com/geometry/planar.html">Finding faces of a planar graph</a></li>
-<li>(18 April 2023) <a href="https://cp-algorithms.com/algebra/bit-manipulation.html">Bit manipulation</a></li>
-<li>(17 October 2022) <a href="https://cp-algorithms.com/num_methods/binary_search.html">Binary Search</a></li>
-<li>(17 October 2022) <a href="https://cp-algorithms.com/sequences/mex.html">MEX (Minimum Excluded element in an array)</a></li>
-<li>(12 May 2022) <a href="https://cp-algorithms.com/algebra/factoring-exp.html">Factoring Exponentiation</a></li>
-<li>(7 May 2022) <a href="https://cp-algorithms.com/dynamic_programming/knuth-optimization.html">Knuth's Optimization</a></li>
-<li>(31 March 2022) <a href="https://cp-algorithms.com/algebra/continued-fractions.html">Continued fractions</a></li>
+<li>
+<p>Step 1. Run a sequence of depth first searches on <span class="arithmatex">$G$</span>, which will yield some list (e.g. <code>order</code>) of vertices, sorted on increasing exit time <span class="arithmatex">$t_\text{out}$</span>.</p>
+</li>
+<li>
+<p>Step 2. Build the transpose graph <span class="arithmatex">$G^T$</span>, and run a series of depth first searches on the vertices in reverse order (i.e., in decreasing order of exit times). Each depth first search will yield one strongly connected component.</p>
+</li>
+<li>
+<p>Step 3 (optional). Build the condensation graph.</p>
+</li>
 </ul>
-<p>Full list of updates: <a href="https://github.com/cp-algorithms/cp-algorithms/commits/main">Commit History</a></p>
-<p>Full list of articles: <a href="https://cp-algorithms.com/navigation.html">Navigation</a></p>
+<p>The runtime complexity of the algorithm is <span class="arithmatex">$O(n + m)$</span>, because depth first search is performed twice. Building the condensation graph is also <span class="arithmatex">$O(n+m).$</span></p>
+<p>Finally, it is appropriate to mention <a href="topological-sort.html">topological sort</a> here. In step 1, we find the vertices in the order of increasing exit time. If <span class="arithmatex">$G$</span> is acyclic, this corresponds to a (reversed) topological sort of <span class="arithmatex">$G$</span>. In step 2, the algorithm finds strongly connected components in decreasing order of their exit times. Thus, it finds components - vertices of the condensation graph - in an order corresponding to a topological sort of the condensation graph.</p>
+<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">visited</span><span class="p">;</span><span class="w"> </span><span class="c1">// keeps track of which vertices are already visited</span>
+
+<span class="c1">// runs depth first search starting at vertex v.</span>
+<span class="c1">// each visited vertex is appended to the output vector when dfs leaves it.</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">adj</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">output</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">visited</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">adj</span><span class="p">[</span><span class="n">v</span><span class="p">])</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="n">u</span><span class="p">])</span>
+<span class="w">            </span><span class="n">dfs</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">adj</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="p">);</span>
+<span class="w">    </span><span class="n">output</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// input: adj -- adjacency list of G</span>
+<span class="c1">// output: components -- the strongy connected components in G</span>
+<span class="c1">// output: adj_cond -- adjacency list of G^SCC (by root vertices)</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">strongly_connected_components</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">adj</span><span class="p">,</span>
+<span class="w">                                  </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">components</span><span class="p">,</span>
+<span class="w">                                  </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">adj_cond</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adj</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<span class="w">    </span><span class="n">components</span><span class="p">.</span><span class="n">clear</span><span class="p">(),</span><span class="w"> </span><span class="n">adj_cond</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">order</span><span class="p">;</span><span class="w"> </span><span class="c1">// will be a sorted list of G&#39;s vertices by exit time</span>
+
+<span class="w">    </span><span class="n">visited</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// first series of depth first searches</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="w">            </span><span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">adj</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// create adjacency list of G^T</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj_rev</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">adj</span><span class="p">[</span><span class="n">v</span><span class="p">])</span>
+<span class="w">            </span><span class="n">adj_rev</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">visited</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">    </span><span class="n">reverse</span><span class="p">(</span><span class="n">order</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">order</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">roots</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// gives the root vertex of a vertex&#39;s SCC</span>
+
+<span class="w">    </span><span class="c1">// second series of depth first searches</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">order</span><span class="p">)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">visited</span><span class="p">[</span><span class="n">v</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">component</span><span class="p">;</span>
+<span class="w">            </span><span class="n">dfs</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">adj_rev</span><span class="p">,</span><span class="w"> </span><span class="n">component</span><span class="p">);</span>
+<span class="w">            </span><span class="n">components</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">component</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">component</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">component</span><span class="p">)</span>
+<span class="w">                </span><span class="n">roots</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// add edges to condensation graph</span>
+<span class="w">    </span><span class="n">adj_cond</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="p">{});</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">adj</span><span class="p">[</span><span class="n">v</span><span class="p">])</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">roots</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">roots</span><span class="p">[</span><span class="n">u</span><span class="p">])</span>
+<span class="w">                </span><span class="n">adj_cond</span><span class="p">[</span><span class="n">roots</span><span class="p">[</span><span class="n">v</span><span class="p">]].</span><span class="n">push_back</span><span class="p">(</span><span class="n">roots</span><span class="p">[</span><span class="n">u</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The function <code>dfs</code> implements depth first search. It takes as input an adjacency list and a starting vertex. It also takes a reference to the vector <code>output</code>: each visited vertex will be appended to <code>output</code> when <code>dfs</code> leaves that vertex.</p>
+<p>Note that we use the function <code>dfs</code> both in the first and second step of the algorithm. In the first step, we pass in the adjacency list of <span class="arithmatex">$G$</span>, and during consecutive calls to <code>dfs</code>, we keep passing in the same 'output vector' <code>order</code>, so that eventually we obtain a list of vertices in increasing order of exit times. In the second step, we pass in the adjacency list of <span class="arithmatex">$G^T$</span>, and in each call, we pass in an empty 'output vector' <code>component</code>, which will give us one strongly connected component at a time.</p>
+<h2 id="tarjans-strongly-connected-components-algorithm">Tarjan's strongly connected components algorithm<a class="headerlink" href="#tarjans-strongly-connected-components-algorithm" title="Permanent link">&para;</a></h2>
+<h3 id="description-of-the-algorithm_1">Description of the algorithm<a class="headerlink" href="#description-of-the-algorithm_1" title="Permanent link">&para;</a></h3>
+<p>The described algorithm was first suggested by Tarjan in 1972.
+It is based on performing a sequence of DFS calls, using information inherent to its structure to determine the strongly connected components (SCC), with a runtime of <span class="arithmatex">$O(n+m)$</span>.</p>
+<p>When applying the DFS on a vertex, we will traverse its adjacency list, and in case we find a vertex that hasn't been visited, we recursively apply the DFS to it.</p>
+<p>Let's consider the tree induced by the sequence of DFS calls, which we will call <strong>DFS tree</strong>.
+Once we first call a DFS on a vertex from an SCC, all the vertices of its SCC will be visited before this call ends, since they are all reachable from each other.
+In the DFS tree, this first vertex will be a common ancestor to all other vertices of the SCC; we define this vertex to be the <strong>root of the SCC</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Theorem</p>
+<p>All vertices of an SCC induce a connected subgraph of the DFS tree.</p>
+</div>
+<details class="note">
+<summary>Proof</summary>
+<p>We have determined that all vertices of an SCC have a common ancestor, the first vertex to be visited by a DFS call.
+Let's consider a vertex <span class="arithmatex">$v$</span> and its root, vertex <span class="arithmatex">$r$</span>.
+All the vertices in the path from <span class="arithmatex">$r$</span> to <span class="arithmatex">$v$</span> belong to the same SCC. All these vertices are reachable from <span class="arithmatex">$r$</span>, and all of them reach <span class="arithmatex">$v$</span>, and since by definition <span class="arithmatex">$v$</span> reaches <span class="arithmatex">$r$</span>, all these vertices reach each other.
+Since all paths from a root to every other vertex of the SCC belong to the same SCC, the subgraph formed is connected.</p>
+</details>
+<p>Note that the SCCs perfectly split the DFS tree in connected subgraphs.</p>
+<p>The idea of the algorithm is then the following:</p>
+<ul>
+<li>
+<p>We perform a sequence of DFS calls, recursively applying them to vertices of the adjacency lists.</p>
+</li>
+<li>
+<p>Once we finish traversing the adjacency list of a vertex, we somehow are able to determine whether it is a root or not.
+This method will be explained later.</p>
+</li>
+<li>
+<p>In case the vertex is a root, we will then immediately find and claim all the vertices of its SCC.</p>
+</li>
+</ul>
+<p>When all calls finish, all roots will have been detected and all vertices will have been claimed as part of some SCC.</p>
+<p>Let's now analyze the properties of the DFS when this claiming process is introduced.</p>
+<div class="admonition info">
+<p class="admonition-title">Theorem</p>
+<p>Let's consider vertex <span class="arithmatex">$v$</span> and let's consider we just finished traversing its adjacency list.
+All unclaimed vertices in its subtree belong to the same SCC.</p>
+</div>
+<details class="note">
+<summary>Proof</summary>
+<p>The algorithm will claim the vertices of an SCC when its root is found.
+Since the adjacency list of <span class="arithmatex">$v$</span> has been traversed, all DFS calls on its subtree have finished, the roots have been detected and the vertices belonging to their SCCs have been claimed.
+The root of the remaining unclaimed vertices will be an ancestor whose claiming process has not yet executed, so it's either <span class="arithmatex">$v$</span> or an ancestor of <span class="arithmatex">$v$</span>.
+Since <span class="arithmatex">$v$</span> is in the path from all vertices to their root and SCCs must induce a connected subgraph of the tree, both <span class="arithmatex">$v$</span> and all the remaining vertices belong to the same SCC.</p>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Theorem</p>
+<p>Let's consider vertex <span class="arithmatex">$v$</span> and let's consider we are traversing it's adjacency list, currently processing edge <span class="arithmatex">$(v, u)$</span>.
+If <span class="arithmatex">$u$</span> was already visited by some DFS call and remains unclaimed, <span class="arithmatex">$v$</span> and <span class="arithmatex">$u$</span> belong to the same SCC.</p>
+</div>
+<details class="note">
+<summary>Proof</summary>
+<p>There are different cases depending on the kind of edge:</p>
+<ul>
+<li>
+<p>Tree-edge: if this is a tree-edge, this is the first time we are finding vertex <span class="arithmatex">$u$</span>. This means we must first recursively apply the DFS call on <span class="arithmatex">$u$</span> and consider it after its DFS call has finished. If vertex <span class="arithmatex">$u$</span> remains unclaimed, its root is either <span class="arithmatex">$v$</span> or an ancestor of <span class="arithmatex">$v$</span>, so they must belong to the same SCC.</p>
+</li>
+<li>
+<p>Back-edge: this is the simpler case, if <span class="arithmatex">$u$</span> is an ancestor of <span class="arithmatex">$v$</span>, they are reachable from each other and by definition belong to the same SCC.</p>
+</li>
+<li>
+<p>Forward-edge: before this edge was processed, there was a sequence of DFS calls that finished without finding the root of <span class="arithmatex">$u$</span>, having returned to <span class="arithmatex">$v$</span> whose DFS call proceeded.
+The root of <span class="arithmatex">$u$</span> will then be an ancestor whose claiming process has not yet executed, so it's either <span class="arithmatex">$v$</span> or an ancestor of <span class="arithmatex">$v$</span>, so they must belong to the same SCC.</p>
+</li>
+<li>
+<p>Cross-edge: similarly, before this edge was processed, there was a sequence of DFS calls that finished without finding the root of <span class="arithmatex">$u$</span>, having returned to a common ancestor of <span class="arithmatex">$u$</span> and <span class="arithmatex">$v$</span> whose DFS call proceeded and initiated a new sequence of DFS calls that lead to a call on <span class="arithmatex">$v$</span>.
+The root of <span class="arithmatex">$u$</span> will then be an ancestor whose claiming process has not yet executed, and all of the possible candidates are common ancestors with <span class="arithmatex">$v$</span>.
+Since the root of <span class="arithmatex">$u$</span> is an ancestor of <span class="arithmatex">$v$</span>, it reaches <span class="arithmatex">$v$</span>, and since <span class="arithmatex">$v$</span> now reaches <span class="arithmatex">$u$</span>, they must belong to the same SCC.</p>
+</li>
+</ul>
+</details>
+<p>Note, when two vertices belong to the same component, their root must be a common ancestor of both vertices.</p>
+<div class="admonition info">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">$v$</span> be a vertex. The following statements are equivalent:</p>
+<ol>
+<li>Some vertex in the subtree of <span class="arithmatex">$v$</span> reaches an unclaimed vertex outside of the subtree.</li>
+<li><span class="arithmatex">$v$</span> is not the root of an SCC.</li>
+</ol>
+</div>
+<details class="note">
+<summary>Proof</summary>
+<ul>
+<li>
+<p><span class="arithmatex">$1. \implies 2.$</span>:
+Let's assume some vertex <span class="arithmatex">$u$</span> in the subtree of <span class="arithmatex">$v$</span> reaches an unclaimed vertex <span class="arithmatex">$w$</span> outside of the subtree.
+We have established that <span class="arithmatex">$u$</span> and <span class="arithmatex">$w$</span> belong to the same SCC and that their root must be a common ancestor to both of them.
+This common ancestor is necessarily outside of the subtree, and it will also be an ancestor of <span class="arithmatex">$v$</span>.
+Since <span class="arithmatex">$v$</span> is in the path from the root to <span class="arithmatex">$u$</span>, it must belong to the same SCC, the root of which is not <span class="arithmatex">$v$</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">$\neg 1. \implies \neg 2.$</span>:
+Let's assume no vertex in the subtree of <span class="arithmatex">$v$</span> reaches an unclaimed vertex outside of the subtree.
+This must mean that no vertex in the subtree of <span class="arithmatex">$v$</span> reaches an ancestor of <span class="arithmatex">$v$</span>.
+The only possible edges to vertices outside of the subtree are cross-edges to vertices that have already been claimed;
+these vertices cannot reach an ancestor of <span class="arithmatex">$v$</span>, since if they did, they would belong to the same SCC as <span class="arithmatex">$v$</span>, which is impossible since their SCC has already been determined.
+Since no ancestor of <span class="arithmatex">$v$</span> is reachable from its subtree, the root of <span class="arithmatex">$v$</span> must be <span class="arithmatex">$v$</span> itself.</p>
+</li>
+</ul>
+</details>
+<p>Now, we must find the method that lets us determine if a vertex is a root or not, and the claiming process properties are necessary for its correctness.
+To this end, we define the entry time <span class="arithmatex">$t_{in}[v]$</span> for each vertex <span class="arithmatex">$v \in G$</span> which corresponds to the 'timestamp' at which the DFS was called on <span class="arithmatex">$v$</span>.
+By definition, the root is the first vertex of an SCC to be visited by the DFS so it will have the minimal value of <span class="arithmatex">$t_{in}$</span> of its SCC.</p>
+<p>Let <span class="arithmatex">$v$</span> be a vertex and let's consider its subtree.
+At the moment we finish traversing its adjacency list, any vertex already visited by a DFS outside of the subtree will have a smaller value of <span class="arithmatex">$t_{in}$</span>, since the DFS was first called on them before it started on <span class="arithmatex">$v$</span>.</p>
+<p>When considering the claiming process, the value of <span class="arithmatex">$t_{in}$</span> of all unclaimed vertices outside of the subtree of <span class="arithmatex">$v$</span> is smaller than <span class="arithmatex">$t_{in}[v]$</span>.
+Now we can see how to use <span class="arithmatex">$t_{in}$</span> to determine the roots.
+We consider the minimal value of <span class="arithmatex">$t_{in}$</span> of the unclaimed vertices we can reach and we propagate this information to the ancestors through tree-edges.
+We will call the propagated value <span class="arithmatex">$t_{low}$</span>.</p>
+<p>More formally, we define <span class="arithmatex">$t_{low}[v]$</span> to be the lowest value of <span class="arithmatex">$t_{in}$</span> a vertex in the subtree of <span class="arithmatex">$v$</span> can reach through a direct edge.
+We therefore can detect whether a vertex <span class="arithmatex">$v$</span> is a root or not by checking if <span class="arithmatex">$t_{low}[v] &lt; t_{in}[v]$</span>.</p>
+<p>Lastly, to claim the vertices, there are many ways to do it, such as another graph traversal algorithm, but it's also possible to use a simple data structure to keep track of the unclaimed vertices.
+To determine the data structure from first principles, let's go through the methods it must implement, which are only two:</p>
+<ul>
+<li>
+<p>When we first visit a vertex, we must simply insert it in the data structure, since this vertex is unclaimed.</p>
+</li>
+<li>
+<p>When we find a root, we must find all the remaining unclaimed vertices in its subtree and remove them from the data structure.</p>
+</li>
+</ul>
+<p>We can find an alternative way to describe the removal operation by noticing that immediately after traversing the adjacency list of a vertex <span class="arithmatex">$v$</span>, all the vertices placed in the data structure after <span class="arithmatex">$v$</span> all belong to its subtree.
+If <span class="arithmatex">$v$</span> is a root, all the vertices remaining that were inserted after <span class="arithmatex">$v$</span> must be removed.
+So the removal operation can instead be described as:</p>
+<ul>
+<li>When we find a root, we must find and remove all the remaining vertices that were inserted after it.</li>
+</ul>
+<p>We can now see that this can be implemented with a stack:</p>
+<ul>
+<li>
+<p>When we first visit a vertex, we push it onto the stack.</p>
+</li>
+<li>
+<p>When we find a root, we pop all the elements until we pop the root itself.</p>
+</li>
+</ul>
+<p>This finally lets us implement the algorithm.</p>
+<p>The runtime complexity of the sequence of DFS calls is <span class="arithmatex">$O(n + m)$</span>.
+Considering the stack, its complexity amortizes to <span class="arithmatex">$O(n)$</span> since each node is only pushed and popped once.
+The total runtime complexity is therefore <span class="arithmatex">$O(n + m)$</span>.</p>
+<p>As an additional remark, the roots are found in reversed topological order.
+In the algorithm, the vertex is a root if there are no edges to unclaimed vertices outside of its subtree, meaning all other reachable components are either in its subtree (and therefore their roots were already found) or they connect to already claimed vertices outside of the subtree (whose roots were also already found).
+So all reachable components were already found, meaning they are introduced in a valid reversed topological ordering of the condensation graph.</p>
+<h3 id="implementation_1">Implementation<a class="headerlink" href="#implementation_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">st</span><span class="p">;</span><span class="w">    </span><span class="c1">// - stack holding the unclaimed vertices</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">roots</span><span class="p">;</span><span class="w"> </span><span class="c1">// - keeps track of the SCC roots of the vertices</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">timer</span><span class="p">;</span><span class="w">         </span><span class="c1">// - dfs timestamp counter</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">t_in</span><span class="p">;</span><span class="w">  </span><span class="c1">// - keeps track of the dfs timestamp of the vertices</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">t_low</span><span class="p">;</span><span class="w"> </span><span class="c1">// - keeps track of the lowest t_in of unclaimed vertices</span>
+<span class="w">                   </span><span class="c1">// reachable in the subtree</span>
+
+<span class="c1">// implements the tarjan algorithm for strongly connected components</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">adj</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">components</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="n">t_low</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_in</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">timer</span><span class="o">++</span><span class="p">;</span>
+<span class="w">  </span><span class="n">st</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">adj</span><span class="p">[</span><span class="n">v</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t_in</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// tree-edge</span>
+<span class="w">      </span><span class="n">dfs</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">adj</span><span class="p">,</span><span class="w"> </span><span class="n">components</span><span class="p">);</span>
+<span class="w">      </span><span class="n">t_low</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">t_low</span><span class="p">[</span><span class="n">v</span><span class="p">],</span><span class="w"> </span><span class="n">t_low</span><span class="p">[</span><span class="n">u</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">roots</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// back-edge, cross-edge or forward-edge to an unclaimed vertex</span>
+<span class="w">      </span><span class="n">t_low</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">t_low</span><span class="p">[</span><span class="n">v</span><span class="p">],</span><span class="w"> </span><span class="n">t_in</span><span class="p">[</span><span class="n">u</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t_low</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">t_in</span><span class="p">[</span><span class="n">v</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// vertex is a root</span>
+<span class="w">    </span><span class="n">components</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">v</span><span class="p">});</span><span class="w"> </span><span class="c1">// initializes a new component with root v</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">.</span><span class="n">back</span><span class="p">();</span>
+<span class="w">      </span><span class="n">st</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+<span class="w">      </span><span class="n">roots</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="p">;</span><span class="w"> </span><span class="c1">// claims the vertex</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">v</span><span class="p">)</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">      </span><span class="n">components</span><span class="p">.</span><span class="n">back</span><span class="p">().</span><span class="n">push_back</span><span class="p">(</span><span class="n">u</span><span class="p">);</span><span class="w"> </span><span class="c1">// adds vertex u to the component of v</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// input: adj -- adjacency list of G</span>
+<span class="c1">// output: components -- the strongy connected components in G</span>
+<span class="c1">// output: adj_cond -- adjacency list of G^SCC (by root vertices)</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">strongly_connected_components</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">adj</span><span class="p">,</span>
+<span class="w">                                   </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">components</span><span class="p">,</span>
+<span class="w">                                   </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">adj_cond</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">components</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="w">  </span><span class="n">adj_cond</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adj</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">st</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="w">  </span><span class="n">roots</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">timer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="n">t_in</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">t_low</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// applies the tarjan algorithm to all the vertices</span>
+<span class="w">  </span><span class="c1">// adds vertices to the components in reverse topological order</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t_in</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">dfs</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">adj</span><span class="p">,</span><span class="w"> </span><span class="n">components</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// adds edges to the condensation graph</span>
+<span class="w">  </span><span class="n">adj_cond</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="p">{});</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">v</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">adj</span><span class="p">[</span><span class="n">v</span><span class="p">])</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">roots</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">roots</span><span class="p">[</span><span class="n">u</span><span class="p">])</span>
+<span class="w">        </span><span class="n">adj_cond</span><span class="p">[</span><span class="n">roots</span><span class="p">[</span><span class="n">v</span><span class="p">]].</span><span class="n">push_back</span><span class="p">(</span><span class="n">roots</span><span class="p">[</span><span class="n">u</span><span class="p">]);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>We have an <a href="https://judge.yosupo.jp/submission/334251">accepted submission</a> with this code in Library Checker.</p>
+<p>As a last remark, there's an alternative way to iterate through the adjacency list.
+Currently, we are doing the following:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">adj</span><span class="p">[</span><span class="n">v</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t_in</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// tree-edge</span>
+<span class="w">    </span><span class="n">dfs</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">adj</span><span class="p">);</span>
+<span class="w">    </span><span class="n">t_low</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">t_low</span><span class="p">[</span><span class="n">v</span><span class="p">],</span><span class="w"> </span><span class="n">t_low</span><span class="p">[</span><span class="n">u</span><span class="p">]);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">roots</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// back-edge, cross-edge or forward-edge to an unclaimed vertex</span>
+<span class="w">    </span><span class="n">t_low</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">t_low</span><span class="p">[</span><span class="n">v</span><span class="p">],</span><span class="w"> </span><span class="n">t_in</span><span class="p">[</span><span class="n">u</span><span class="p">]);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Alternatively, we could do:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">adj</span><span class="p">[</span><span class="n">v</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t_in</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="c1">// vertex is not visited</span>
+<span class="w">    </span><span class="n">dfs</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">adj</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">roots</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="c1">// vertex has not been claimed</span>
+<span class="w">    </span><span class="n">t_low</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">t_low</span><span class="p">[</span><span class="n">v</span><span class="p">],</span><span class="w"> </span><span class="n">t_low</span><span class="p">[</span><span class="n">u</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><span class="arithmatex">$t_{low}$</span> is used to propagate the information to the root, and when we perform <code>t_low[v] = min(t_low[v], t_in[u])</code>, we know that <span class="arithmatex">$u$</span> and <span class="arithmatex">$v$</span> belong to the same SCC.
+If <span class="arithmatex">$t_{low}[u]$</span> is propagated until the root of <span class="arithmatex">$u$</span>, it can also be propagated through <span class="arithmatex">$v$</span> since the root is the same.
+Since <span class="arithmatex">$t_{low}[u] \leq t_{in}[u]$</span>, this does not introduce any conflicts, instead only improving the bound on the root of <span class="arithmatex">$v$</span>.</p>
+<h2 id="building-the-condensation-graph">Building the Condensation Graph<a class="headerlink" href="#building-the-condensation-graph" title="Permanent link">&para;</a></h2>
+<p>When building the adjacency list of the condensation graph, we select the <em>root</em> of each component as the first vertex in its list of vertices (this is an arbitrary choice). This root vertex represents its entire SCC. For each vertex <code>v</code>, the value <code>roots[v]</code> indicates the root vertex of the SCC which <code>v</code> belongs to.</p>
+<p>Our condensation graph is now given by the vertices <code>components</code> (one strongly connected component corresponds to one vertex in the condensation graph), and the adjacency list is given by <code>adj_cond</code>, using only the root vertices of the strongly connected components. Notice that we generate one edge from <span class="arithmatex">$C$</span> to <span class="arithmatex">$C'$</span> in <span class="arithmatex">$G^\text{SCC}$</span> for each edge from some <span class="arithmatex">$a\in C$</span> to some <span class="arithmatex">$b\in C'$</span> in <span class="arithmatex">$G$</span> (if <span class="arithmatex">$C\neq C'$</span>). This implies that in our implementation, we can have multiple edges between two components in the condensation graph.</p>
+<h2 id="literature">Literature<a class="headerlink" href="#literature" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Thomas Cormen, Charles Leiserson, Ronald Rivest, Clifford Stein. Introduction to Algorithms [2005].</li>
+<li>M. Sharir. A strong-connectivity algorithm and its applications in data-flow analysis [1979].</li>
+<li>Robert Tarjan. Depth-first search and linear graph algorithms [1972].</li>
+</ul>
+<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://www.spoj.com/problems/GOODA/">SPOJ - Good Travels</a></li>
+<li><a href="http://www.spoj.com/problems/LEGO/">SPOJ - Lego</a></li>
+<li><a href="https://www.codechef.com/AUG16/problems/CHEFRRUN">Codechef - Chef and Round Run</a></li>
+<li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=2938">UVA - 11838 - Come and Go</a></li>
+<li><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=183">UVA 247 - Calling Circles</a></li>
+<li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=4955">UVA 13057 - Prove Them All</a></li>
+<li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=4393">UVA 12645 - Water Supply</a></li>
+<li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=2870">UVA 11770 - Lighting Away</a></li>
+<li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=862&amp;page=show_problem&amp;problem=4805">UVA 12926 - Trouble in Terrorist Town</a></li>
+<li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=2299">UVA 11324 - The Largest Clique</a></li>
+<li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=2756">UVA 11709 - Trust groups</a></li>
+<li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=4598">UVA 12745 - Wishmaster</a></li>
+<li><a href="http://www.spoj.com/problems/TFRIENDS/">SPOJ - True Friends</a></li>
+<li><a href="http://www.spoj.com/problems/CAPCITY/">SPOJ - Capital City</a></li>
+<li><a href="http://codeforces.com/contest/22/problem/E">Codeforces - Scheme</a></li>
+<li><a href="http://www.spoj.com/problems/ADAPANEL/">SPOJ - Ada and Panels</a></li>
+<li><a href="https://cses.fi/problemset/task/1682">CSES - Flight Routes Check</a></li>
+<li><a href="https://cses.fi/problemset/task/1683">CSES - Planets and Kingdoms</a></li>
+<li><a href="https://cses.fi/problemset/task/1686">CSES - Coin Collector</a></li>
+<li><a href="https://codeforces.com/problemset/problem/427/C">Codeforces - Checkposts</a></li>
+</ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (71.43%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (14.29%)</li><li><a href="#" title="Rodion Gorkovenko" data-bi-name="contributorprofile" target="_blank">Rodion Gorkovenko</a> (14.29%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="de-sousa" data-bi-name="contributorprofile" target="_blank">de-sousa</a> (61.18%)</li><li><a href="#" title="el-sambal" data-bi-name="contributorprofile" target="_blank">el-sambal</a> (20.24%)</li><li><a href="#" title="Dmitry Dobrynin" data-bi-name="contributorprofile" target="_blank">Dmitry Dobrynin</a> (5.88%)</li><li><a href="#" title="Gaurang Tandon" data-bi-name="contributorprofile" target="_blank">Gaurang Tandon</a> (3.53%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (3.06%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (2.12%)</li><li><a href="#" title="Aryaman" data-bi-name="contributorprofile" target="_blank">Aryaman</a> (0.71%)</li><li><a href="#" title="Rodion Gorkovenko" data-bi-name="contributorprofile" target="_blank">Rodion Gorkovenko</a> (0.71%)</li><li><a href="#" title="Shadab Zafar" data-bi-name="contributorprofile" target="_blank">Shadab Zafar</a> (0.71%)</li><li><a href="#" title="Chirag Agarwal" data-bi-name="contributorprofile" target="_blank">Chirag Agarwal</a> (0.47%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (0.47%)</li><li><a href="#" title="Mikael Mello" data-bi-name="contributorprofile" target="_blank">Mikael Mello</a> (0.47%)</li><li><a href="#" title="Tanmay Sinha" data-bi-name="contributorprofile" target="_blank">Tanmay Sinha</a> (0.24%)</li><li><a href="#" title="chubakueno" data-bi-name="contributorprofile" target="_blank">chubakueno</a> (0.24%)</li></ul>
 </ul>
                 
               </article>
@@ -8157,14 +8638,14 @@ and adding new articles to the collection.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["toc.integrate", "search.suggest", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.integrate", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="javascript/config.js"></script>
+        <script src="../javascript/config.js"></script>
       
-        <script src="javascript/donation-banner.js"></script>
+        <script src="../javascript/donation-banner.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
       

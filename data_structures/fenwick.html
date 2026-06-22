@@ -10,36 +10,38 @@
       
       
       
-        <link rel="canonical" href="https://cp-algorithms.com/index.html">
+        <link rel="canonical" href="https://cp-algorithms.com/data_structures/fenwick.html">
       
       
+        <link rel="prev" href="disjoint_set_union.html">
       
-        <link rel="next" href="navigation.html">
+      
+        <link rel="next" href="sqrt_decomposition.html">
       
       
         
-          <link rel="alternate" href="index.html" hreflang="en">
+          <link rel="alternate" href="fenwick.html" hreflang="en">
         
-          <link rel="alternate" href="vi/index.html" hreflang="vi">
+          <link rel="alternate" href="../vi/data_structures/fenwick.html" hreflang="vi">
         
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../feed_rss_updated.xml">
       
-      <link rel="icon" href="favicon.ico">
+      <link rel="icon" href="../favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Main Page - Algorithms for Competitive Programming</title>
+        <title>Fenwick Tree - Algorithms for Competitive Programming</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -58,9 +60,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -77,9 +79,9 @@
     
     
   
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 
-  <script src="assets/javascripts/toggle-sidebar.js"></script></head>
+  <script src="../assets/javascripts/toggle-sidebar.js"></script></head>
   
   
     
@@ -98,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#algorithms-for-competitive-programming" class="md-skip">
+        <a href="#fenwick-tree" class="md-skip">
           Skip to content
         </a>
       
@@ -122,9 +124,9 @@
     }
   </script>
   <nav class="md-header__inner md-grid" aria-label="header.title">
-    <a href="index.html" title="Algorithms for Competitive Programming" class="md-header__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+    <a href="../index.html" title="Algorithms for Competitive Programming" class="md-header__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
       
-  <img src="favicon.ico" alt="logo">
+  <img src="../favicon.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -134,7 +136,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            <a href="index.html" title="Algorithms for Competitive Programming" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+            <a href="../index.html" title="Algorithms for Competitive Programming" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
               Algorithms for Competitive Programming
             </a>
           </span>
@@ -143,7 +145,7 @@
           <span class="md-ellipsis">
             <a href="#" onclick="scrollToTop()">
               
-                Main Page
+                Fenwick Tree
               
             </a>
           </span>
@@ -184,13 +186,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="index.html" hreflang="en" class="md-select__link">
+                  <a href="fenwick.html" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="vi/index.html" hreflang="vi" class="md-select__link">
+                  <a href="../vi/data_structures/fenwick.html" hreflang="vi" class="md-select__link">
                     Tiếng Việt
                   </a>
                 </li>
@@ -296,9 +298,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Algorithms for Competitive Programming" class="md-nav__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+    <a href="../index.html" title="Algorithms for Competitive Programming" class="md-nav__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
       
-  <img src="favicon.ico" alt="logo">
+  <img src="../favicon.ico" alt="logo">
 
     </a>
     Algorithms for Competitive Programming
@@ -322,20 +324,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -356,7 +356,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -371,37 +371,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Main Page
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -417,76 +390,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#become-a-contributor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Become a Contributor
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sponsor-us" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sponsor Us
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changelog
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Changelog">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#new-articles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        New articles
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -499,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="navigation.html" class="md-nav__link">
+      <a href="../navigation.html" class="md-nav__link">
         
   
   
@@ -527,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tags.html" class="md-nav__link">
+      <a href="../tags.html" class="md-nav__link">
         
   
   
@@ -555,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contrib.html" class="md-nav__link">
+      <a href="../contrib.html" class="md-nav__link">
         
   
   
@@ -583,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="code_of_conduct.html" class="md-nav__link">
+      <a href="../code_of_conduct.html" class="md-nav__link">
         
   
   
@@ -611,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="preview.html" class="md-nav__link">
+      <a href="../preview.html" class="md-nav__link">
         
   
   
@@ -740,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/binary-exp.html" class="md-nav__link">
+      <a href="../algebra/binary-exp.html" class="md-nav__link">
         
   
   
@@ -768,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/euclid-algorithm.html" class="md-nav__link">
+      <a href="../algebra/euclid-algorithm.html" class="md-nav__link">
         
   
   
@@ -796,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/extended-euclid-algorithm.html" class="md-nav__link">
+      <a href="../algebra/extended-euclid-algorithm.html" class="md-nav__link">
         
   
   
@@ -824,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/linear-diophantine-equation.html" class="md-nav__link">
+      <a href="../algebra/linear-diophantine-equation.html" class="md-nav__link">
         
   
   
@@ -852,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/fibonacci-numbers.html" class="md-nav__link">
+      <a href="../algebra/fibonacci-numbers.html" class="md-nav__link">
         
   
   
@@ -935,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/sieve-of-eratosthenes.html" class="md-nav__link">
+      <a href="../algebra/sieve-of-eratosthenes.html" class="md-nav__link">
         
   
   
@@ -963,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/prime-sieve-linear.html" class="md-nav__link">
+      <a href="../algebra/prime-sieve-linear.html" class="md-nav__link">
         
   
   
@@ -991,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/primality_tests.html" class="md-nav__link">
+      <a href="../algebra/primality_tests.html" class="md-nav__link">
         
   
   
@@ -1019,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorization.html" class="md-nav__link">
+      <a href="../algebra/factorization.html" class="md-nav__link">
         
   
   
@@ -1102,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/phi-function.html" class="md-nav__link">
+      <a href="../algebra/phi-function.html" class="md-nav__link">
         
   
   
@@ -1130,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/divisors.html" class="md-nav__link">
+      <a href="../algebra/divisors.html" class="md-nav__link">
         
   
   
@@ -1213,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/module-inverse.html" class="md-nav__link">
+      <a href="../algebra/module-inverse.html" class="md-nav__link">
         
   
   
@@ -1241,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/linear_congruence_equation.html" class="md-nav__link">
+      <a href="../algebra/linear_congruence_equation.html" class="md-nav__link">
         
   
   
@@ -1269,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/chinese-remainder-theorem.html" class="md-nav__link">
+      <a href="../algebra/chinese-remainder-theorem.html" class="md-nav__link">
         
   
   
@@ -1297,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/garners-algorithm.html" class="md-nav__link">
+      <a href="../algebra/garners-algorithm.html" class="md-nav__link">
         
   
   
@@ -1325,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorial-modulo.html" class="md-nav__link">
+      <a href="../algebra/factorial-modulo.html" class="md-nav__link">
         
   
   
@@ -1353,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/discrete-log.html" class="md-nav__link">
+      <a href="../algebra/discrete-log.html" class="md-nav__link">
         
   
   
@@ -1381,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/primitive-root.html" class="md-nav__link">
+      <a href="../algebra/primitive-root.html" class="md-nav__link">
         
   
   
@@ -1409,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/discrete-root.html" class="md-nav__link">
+      <a href="../algebra/discrete-root.html" class="md-nav__link">
         
   
   
@@ -1437,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/montgomery_multiplication.html" class="md-nav__link">
+      <a href="../algebra/montgomery_multiplication.html" class="md-nav__link">
         
   
   
@@ -1520,7 +1423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/balanced-ternary.html" class="md-nav__link">
+      <a href="../algebra/balanced-ternary.html" class="md-nav__link">
         
   
   
@@ -1548,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/gray-code.html" class="md-nav__link">
+      <a href="../algebra/gray-code.html" class="md-nav__link">
         
   
   
@@ -1631,7 +1534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/bit-manipulation.html" class="md-nav__link">
+      <a href="../algebra/bit-manipulation.html" class="md-nav__link">
         
   
   
@@ -1659,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/all-submasks.html" class="md-nav__link">
+      <a href="../algebra/all-submasks.html" class="md-nav__link">
         
   
   
@@ -1687,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/big-integer.html" class="md-nav__link">
+      <a href="../algebra/big-integer.html" class="md-nav__link">
         
   
   
@@ -1715,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/fft.html" class="md-nav__link">
+      <a href="../algebra/fft.html" class="md-nav__link">
         
   
   
@@ -1743,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/polynomial.html" class="md-nav__link">
+      <a href="../algebra/polynomial.html" class="md-nav__link">
         
   
   
@@ -1771,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/continued-fractions.html" class="md-nav__link">
+      <a href="../algebra/continued-fractions.html" class="md-nav__link">
         
   
   
@@ -1799,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factoring-exp.html" class="md-nav__link">
+      <a href="../algebra/factoring-exp.html" class="md-nav__link">
         
   
   
@@ -1839,18 +1742,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1871,7 +1776,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1936,7 +1841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/stack_queue_modification.html" class="md-nav__link">
+      <a href="stack_queue_modification.html" class="md-nav__link">
         
   
   
@@ -1964,7 +1869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sparse-table.html" class="md-nav__link">
+      <a href="sparse-table.html" class="md-nav__link">
         
   
   
@@ -1997,18 +1902,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -2029,7 +1936,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2047,7 +1954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/disjoint_set_union.html" class="md-nav__link">
+      <a href="disjoint_set_union.html" class="md-nav__link">
         
   
   
@@ -2072,10 +1979,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="data_structures/fenwick.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fenwick Tree
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="fenwick.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2091,6 +2025,209 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-of-gi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition of g(i)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-sum-in-one-dimensional-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding sum in one-dimensional array
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linear construction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-minimum-of-0-r-in-one-dimensional-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding minimum of [0, r] in one-dimensional array
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-sum-in-two-dimensional-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding sum in two-dimensional array
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-based-indexing-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-based indexing approach
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#range-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Range operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Range operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-point-update-and-range-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Point Update and Range Query
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-range-update-and-point-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Range Update and Point Query
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-range-update-and-range-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Range Update and Range Query
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Problems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2103,7 +2240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sqrt_decomposition.html" class="md-nav__link">
+      <a href="sqrt_decomposition.html" class="md-nav__link">
         
   
   
@@ -2131,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/segment_tree.html" class="md-nav__link">
+      <a href="segment_tree.html" class="md-nav__link">
         
   
   
@@ -2159,7 +2296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/treap.html" class="md-nav__link">
+      <a href="treap.html" class="md-nav__link">
         
   
   
@@ -2187,7 +2324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sqrt-tree.html" class="md-nav__link">
+      <a href="sqrt-tree.html" class="md-nav__link">
         
   
   
@@ -2215,7 +2352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/randomized_heap.html" class="md-nav__link">
+      <a href="randomized_heap.html" class="md-nav__link">
         
   
   
@@ -2298,7 +2435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/deleting_in_log_n.html" class="md-nav__link">
+      <a href="deleting_in_log_n.html" class="md-nav__link">
         
   
   
@@ -2388,7 +2525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/intro-to-dp.html" class="md-nav__link">
+      <a href="../dynamic_programming/intro-to-dp.html" class="md-nav__link">
         
   
   
@@ -2416,7 +2553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/knapsack.html" class="md-nav__link">
+      <a href="../dynamic_programming/knapsack.html" class="md-nav__link">
         
   
   
@@ -2444,7 +2581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/longest_increasing_subsequence.html" class="md-nav__link">
+      <a href="../dynamic_programming/longest_increasing_subsequence.html" class="md-nav__link">
         
   
   
@@ -2519,7 +2656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/divide-and-conquer-dp.html" class="md-nav__link">
+      <a href="../dynamic_programming/divide-and-conquer-dp.html" class="md-nav__link">
         
   
   
@@ -2547,7 +2684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/knuth-optimization.html" class="md-nav__link">
+      <a href="../dynamic_programming/knuth-optimization.html" class="md-nav__link">
         
   
   
@@ -2630,7 +2767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/profile-dynamics.html" class="md-nav__link">
+      <a href="../dynamic_programming/profile-dynamics.html" class="md-nav__link">
         
   
   
@@ -2658,7 +2795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/zero_matrix.html" class="md-nav__link">
+      <a href="../dynamic_programming/zero_matrix.html" class="md-nav__link">
         
   
   
@@ -2795,7 +2932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/string-hashing.html" class="md-nav__link">
+      <a href="../string/string-hashing.html" class="md-nav__link">
         
   
   
@@ -2823,7 +2960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/rabin-karp.html" class="md-nav__link">
+      <a href="../string/rabin-karp.html" class="md-nav__link">
         
   
   
@@ -2851,7 +2988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/prefix-function.html" class="md-nav__link">
+      <a href="../string/prefix-function.html" class="md-nav__link">
         
   
   
@@ -2879,7 +3016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/z-function.html" class="md-nav__link">
+      <a href="../string/z-function.html" class="md-nav__link">
         
   
   
@@ -2907,7 +3044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-array.html" class="md-nav__link">
+      <a href="../string/suffix-array.html" class="md-nav__link">
         
   
   
@@ -2935,7 +3072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/aho_corasick.html" class="md-nav__link">
+      <a href="../string/aho_corasick.html" class="md-nav__link">
         
   
   
@@ -3018,7 +3155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-tree-ukkonen.html" class="md-nav__link">
+      <a href="../string/suffix-tree-ukkonen.html" class="md-nav__link">
         
   
   
@@ -3046,7 +3183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-automaton.html" class="md-nav__link">
+      <a href="../string/suffix-automaton.html" class="md-nav__link">
         
   
   
@@ -3074,7 +3211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/lyndon_factorization.html" class="md-nav__link">
+      <a href="../string/lyndon_factorization.html" class="md-nav__link">
         
   
   
@@ -3157,7 +3294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/expression_parsing.html" class="md-nav__link">
+      <a href="../string/expression_parsing.html" class="md-nav__link">
         
   
   
@@ -3185,7 +3322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/manacher.html" class="md-nav__link">
+      <a href="../string/manacher.html" class="md-nav__link">
         
   
   
@@ -3213,7 +3350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/main_lorentz.html" class="md-nav__link">
+      <a href="../string/main_lorentz.html" class="md-nav__link">
         
   
   
@@ -3350,7 +3487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/linear-system-gauss.html" class="md-nav__link">
+      <a href="../linear_algebra/linear-system-gauss.html" class="md-nav__link">
         
   
   
@@ -3378,7 +3515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/determinant-gauss.html" class="md-nav__link">
+      <a href="../linear_algebra/determinant-gauss.html" class="md-nav__link">
         
   
   
@@ -3406,7 +3543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/determinant-kraut.html" class="md-nav__link">
+      <a href="../linear_algebra/determinant-kraut.html" class="md-nav__link">
         
   
   
@@ -3434,7 +3571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/rank-matrix.html" class="md-nav__link">
+      <a href="../linear_algebra/rank-matrix.html" class="md-nav__link">
         
   
   
@@ -3571,7 +3708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorial-divisors.html" class="md-nav__link">
+      <a href="../algebra/factorial-divisors.html" class="md-nav__link">
         
   
   
@@ -3599,7 +3736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/binomial-coefficients.html" class="md-nav__link">
+      <a href="../combinatorics/binomial-coefficients.html" class="md-nav__link">
         
   
   
@@ -3627,7 +3764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/catalan-numbers.html" class="md-nav__link">
+      <a href="../combinatorics/catalan-numbers.html" class="md-nav__link">
         
   
   
@@ -3710,7 +3847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/inclusion-exclusion.html" class="md-nav__link">
+      <a href="../combinatorics/inclusion-exclusion.html" class="md-nav__link">
         
   
   
@@ -3738,7 +3875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/burnside.html" class="md-nav__link">
+      <a href="../combinatorics/burnside.html" class="md-nav__link">
         
   
   
@@ -3766,7 +3903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/stars_and_bars.html" class="md-nav__link">
+      <a href="../combinatorics/stars_and_bars.html" class="md-nav__link">
         
   
   
@@ -3794,7 +3931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/generating_combinations.html" class="md-nav__link">
+      <a href="../combinatorics/generating_combinations.html" class="md-nav__link">
         
   
   
@@ -3877,7 +4014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/bishops-on-chessboard.html" class="md-nav__link">
+      <a href="../combinatorics/bishops-on-chessboard.html" class="md-nav__link">
         
   
   
@@ -3905,7 +4042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/bracket_sequences.html" class="md-nav__link">
+      <a href="../combinatorics/bracket_sequences.html" class="md-nav__link">
         
   
   
@@ -3933,7 +4070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/counting_labeled_graphs.html" class="md-nav__link">
+      <a href="../combinatorics/counting_labeled_graphs.html" class="md-nav__link">
         
   
   
@@ -4070,7 +4207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/binary_search.html" class="md-nav__link">
+      <a href="../num_methods/binary_search.html" class="md-nav__link">
         
   
   
@@ -4098,7 +4235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/ternary_search.html" class="md-nav__link">
+      <a href="../num_methods/ternary_search.html" class="md-nav__link">
         
   
   
@@ -4126,7 +4263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/roots_newton.html" class="md-nav__link">
+      <a href="../num_methods/roots_newton.html" class="md-nav__link">
         
   
   
@@ -4154,7 +4291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/simulated_annealing.html" class="md-nav__link">
+      <a href="../num_methods/simulated_annealing.html" class="md-nav__link">
         
   
   
@@ -4237,7 +4374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/simpson-integration.html" class="md-nav__link">
+      <a href="../num_methods/simpson-integration.html" class="md-nav__link">
         
   
   
@@ -4374,7 +4511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/basic-geometry.html" class="md-nav__link">
+      <a href="../geometry/basic-geometry.html" class="md-nav__link">
         
   
   
@@ -4402,7 +4539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/segment-to-line.html" class="md-nav__link">
+      <a href="../geometry/segment-to-line.html" class="md-nav__link">
         
   
   
@@ -4430,7 +4567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/lines-intersection.html" class="md-nav__link">
+      <a href="../geometry/lines-intersection.html" class="md-nav__link">
         
   
   
@@ -4458,7 +4595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/check-segments-intersection.html" class="md-nav__link">
+      <a href="../geometry/check-segments-intersection.html" class="md-nav__link">
         
   
   
@@ -4486,7 +4623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/segments-intersection.html" class="md-nav__link">
+      <a href="../geometry/segments-intersection.html" class="md-nav__link">
         
   
   
@@ -4514,7 +4651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/circle-line-intersection.html" class="md-nav__link">
+      <a href="../geometry/circle-line-intersection.html" class="md-nav__link">
         
   
   
@@ -4542,7 +4679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/circle-circle-intersection.html" class="md-nav__link">
+      <a href="../geometry/circle-circle-intersection.html" class="md-nav__link">
         
   
   
@@ -4570,7 +4707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/tangents-to-two-circles.html" class="md-nav__link">
+      <a href="../geometry/tangents-to-two-circles.html" class="md-nav__link">
         
   
   
@@ -4598,7 +4735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/length-of-segments-union.html" class="md-nav__link">
+      <a href="../geometry/length-of-segments-union.html" class="md-nav__link">
         
   
   
@@ -4681,7 +4818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/oriented-triangle-area.html" class="md-nav__link">
+      <a href="../geometry/oriented-triangle-area.html" class="md-nav__link">
         
   
   
@@ -4709,7 +4846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/area-of-simple-polygon.html" class="md-nav__link">
+      <a href="../geometry/area-of-simple-polygon.html" class="md-nav__link">
         
   
   
@@ -4737,7 +4874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/point-in-convex-polygon.html" class="md-nav__link">
+      <a href="../geometry/point-in-convex-polygon.html" class="md-nav__link">
         
   
   
@@ -4765,7 +4902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/minkowski.html" class="md-nav__link">
+      <a href="../geometry/minkowski.html" class="md-nav__link">
         
   
   
@@ -4793,7 +4930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/picks-theorem.html" class="md-nav__link">
+      <a href="../geometry/picks-theorem.html" class="md-nav__link">
         
   
   
@@ -4821,7 +4958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/lattice-points.html" class="md-nav__link">
+      <a href="../geometry/lattice-points.html" class="md-nav__link">
         
   
   
@@ -4904,7 +5041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/convex-hull.html" class="md-nav__link">
+      <a href="../geometry/convex-hull.html" class="md-nav__link">
         
   
   
@@ -4932,7 +5069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/convex_hull_trick.html" class="md-nav__link">
+      <a href="../geometry/convex_hull_trick.html" class="md-nav__link">
         
   
   
@@ -5015,7 +5152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/intersecting_segments.html" class="md-nav__link">
+      <a href="../geometry/intersecting_segments.html" class="md-nav__link">
         
   
   
@@ -5098,7 +5235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/planar.html" class="md-nav__link">
+      <a href="../geometry/planar.html" class="md-nav__link">
         
   
   
@@ -5126,7 +5263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/point-location.html" class="md-nav__link">
+      <a href="../geometry/point-location.html" class="md-nav__link">
         
   
   
@@ -5209,7 +5346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/nearest_points.html" class="md-nav__link">
+      <a href="../geometry/nearest_points.html" class="md-nav__link">
         
   
   
@@ -5237,7 +5374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/delaunay.html" class="md-nav__link">
+      <a href="../geometry/delaunay.html" class="md-nav__link">
         
   
   
@@ -5265,7 +5402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/vertical_decomposition.html" class="md-nav__link">
+      <a href="../geometry/vertical_decomposition.html" class="md-nav__link">
         
   
   
@@ -5293,7 +5430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/halfplane-intersection.html" class="md-nav__link">
+      <a href="../geometry/halfplane-intersection.html" class="md-nav__link">
         
   
   
@@ -5321,7 +5458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/manhattan-distance.html" class="md-nav__link">
+      <a href="../geometry/manhattan-distance.html" class="md-nav__link">
         
   
   
@@ -5349,7 +5486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/enclosing-circle.html" class="md-nav__link">
+      <a href="../geometry/enclosing-circle.html" class="md-nav__link">
         
   
   
@@ -5486,7 +5623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/breadth-first-search.html" class="md-nav__link">
+      <a href="../graph/breadth-first-search.html" class="md-nav__link">
         
   
   
@@ -5514,7 +5651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/depth-first-search.html" class="md-nav__link">
+      <a href="../graph/depth-first-search.html" class="md-nav__link">
         
   
   
@@ -5597,7 +5734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/search-for-connected-components.html" class="md-nav__link">
+      <a href="../graph/search-for-connected-components.html" class="md-nav__link">
         
   
   
@@ -5625,7 +5762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bridge-searching.html" class="md-nav__link">
+      <a href="../graph/bridge-searching.html" class="md-nav__link">
         
   
   
@@ -5653,7 +5790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bridge-searching-online.html" class="md-nav__link">
+      <a href="../graph/bridge-searching-online.html" class="md-nav__link">
         
   
   
@@ -5681,7 +5818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/cutpoints.html" class="md-nav__link">
+      <a href="../graph/cutpoints.html" class="md-nav__link">
         
   
   
@@ -5709,7 +5846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/strongly-connected-components.html" class="md-nav__link">
+      <a href="../graph/strongly-connected-components.html" class="md-nav__link">
         
   
   
@@ -5737,7 +5874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/strong-orientation.html" class="md-nav__link">
+      <a href="../graph/strong-orientation.html" class="md-nav__link">
         
   
   
@@ -5820,7 +5957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dijkstra.html" class="md-nav__link">
+      <a href="../graph/dijkstra.html" class="md-nav__link">
         
   
   
@@ -5848,7 +5985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dijkstra_sparse.html" class="md-nav__link">
+      <a href="../graph/dijkstra_sparse.html" class="md-nav__link">
         
   
   
@@ -5876,7 +6013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bellman_ford.html" class="md-nav__link">
+      <a href="../graph/bellman_ford.html" class="md-nav__link">
         
   
   
@@ -5904,7 +6041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/01_bfs.html" class="md-nav__link">
+      <a href="../graph/01_bfs.html" class="md-nav__link">
         
   
   
@@ -5932,7 +6069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/desopo_pape.html" class="md-nav__link">
+      <a href="../graph/desopo_pape.html" class="md-nav__link">
         
   
   
@@ -6015,7 +6152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/all-pair-shortest-path-floyd-warshall.html" class="md-nav__link">
+      <a href="../graph/all-pair-shortest-path-floyd-warshall.html" class="md-nav__link">
         
   
   
@@ -6043,7 +6180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/fixed_length_paths.html" class="md-nav__link">
+      <a href="../graph/fixed_length_paths.html" class="md-nav__link">
         
   
   
@@ -6126,7 +6263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_prim.html" class="md-nav__link">
+      <a href="../graph/mst_prim.html" class="md-nav__link">
         
   
   
@@ -6154,7 +6291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_kruskal.html" class="md-nav__link">
+      <a href="../graph/mst_kruskal.html" class="md-nav__link">
         
   
   
@@ -6182,7 +6319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_kruskal_with_dsu.html" class="md-nav__link">
+      <a href="../graph/mst_kruskal_with_dsu.html" class="md-nav__link">
         
   
   
@@ -6210,7 +6347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/second_best_mst.html" class="md-nav__link">
+      <a href="../graph/second_best_mst.html" class="md-nav__link">
         
   
   
@@ -6238,7 +6375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/kirchhoff-theorem.html" class="md-nav__link">
+      <a href="../graph/kirchhoff-theorem.html" class="md-nav__link">
         
   
   
@@ -6266,7 +6403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/pruefer_code.html" class="md-nav__link">
+      <a href="../graph/pruefer_code.html" class="md-nav__link">
         
   
   
@@ -6349,7 +6486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/finding-cycle.html" class="md-nav__link">
+      <a href="../graph/finding-cycle.html" class="md-nav__link">
         
   
   
@@ -6377,7 +6514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/finding-negative-cycle-in-graph.html" class="md-nav__link">
+      <a href="../graph/finding-negative-cycle-in-graph.html" class="md-nav__link">
         
   
   
@@ -6405,7 +6542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/euler_path.html" class="md-nav__link">
+      <a href="../graph/euler_path.html" class="md-nav__link">
         
   
   
@@ -6488,7 +6625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca.html" class="md-nav__link">
+      <a href="../graph/lca.html" class="md-nav__link">
         
   
   
@@ -6516,7 +6653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_binary_lifting.html" class="md-nav__link">
+      <a href="../graph/lca_binary_lifting.html" class="md-nav__link">
         
   
   
@@ -6544,7 +6681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_farachcoltonbender.html" class="md-nav__link">
+      <a href="../graph/lca_farachcoltonbender.html" class="md-nav__link">
         
   
   
@@ -6572,7 +6709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/rmq_linear.html" class="md-nav__link">
+      <a href="../graph/rmq_linear.html" class="md-nav__link">
         
   
   
@@ -6600,7 +6737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_tarjan.html" class="md-nav__link">
+      <a href="../graph/lca_tarjan.html" class="md-nav__link">
         
   
   
@@ -6683,7 +6820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/edmonds_karp.html" class="md-nav__link">
+      <a href="../graph/edmonds_karp.html" class="md-nav__link">
         
   
   
@@ -6711,7 +6848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/push-relabel.html" class="md-nav__link">
+      <a href="../graph/push-relabel.html" class="md-nav__link">
         
   
   
@@ -6739,7 +6876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/push-relabel-faster.html" class="md-nav__link">
+      <a href="../graph/push-relabel-faster.html" class="md-nav__link">
         
   
   
@@ -6767,7 +6904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dinic.html" class="md-nav__link">
+      <a href="../graph/dinic.html" class="md-nav__link">
         
   
   
@@ -6795,7 +6932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mpm.html" class="md-nav__link">
+      <a href="../graph/mpm.html" class="md-nav__link">
         
   
   
@@ -6823,7 +6960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/flow_with_demands.html" class="md-nav__link">
+      <a href="../graph/flow_with_demands.html" class="md-nav__link">
         
   
   
@@ -6851,7 +6988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/min_cost_flow.html" class="md-nav__link">
+      <a href="../graph/min_cost_flow.html" class="md-nav__link">
         
   
   
@@ -6879,7 +7016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/Assignment-problem-min-flow.html" class="md-nav__link">
+      <a href="../graph/Assignment-problem-min-flow.html" class="md-nav__link">
         
   
   
@@ -6907,7 +7044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/stoer_wagner_mincut.html" class="md-nav__link">
+      <a href="../graph/stoer_wagner_mincut.html" class="md-nav__link">
         
   
   
@@ -6990,7 +7127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bipartite-check.html" class="md-nav__link">
+      <a href="../graph/bipartite-check.html" class="md-nav__link">
         
   
   
@@ -7018,7 +7155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/kuhn_maximum_bipartite_matching.html" class="md-nav__link">
+      <a href="../graph/kuhn_maximum_bipartite_matching.html" class="md-nav__link">
         
   
   
@@ -7046,7 +7183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/hungarian-algorithm.html" class="md-nav__link">
+      <a href="../graph/hungarian-algorithm.html" class="md-nav__link">
         
   
   
@@ -7129,7 +7266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/topological-sort.html" class="md-nav__link">
+      <a href="../graph/topological-sort.html" class="md-nav__link">
         
   
   
@@ -7157,7 +7294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/edge_vertex_connectivity.html" class="md-nav__link">
+      <a href="../graph/edge_vertex_connectivity.html" class="md-nav__link">
         
   
   
@@ -7185,7 +7322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/tree_painting.html" class="md-nav__link">
+      <a href="../graph/tree_painting.html" class="md-nav__link">
         
   
   
@@ -7213,7 +7350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/2SAT.html" class="md-nav__link">
+      <a href="../graph/2SAT.html" class="md-nav__link">
         
   
   
@@ -7241,7 +7378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/hld.html" class="md-nav__link">
+      <a href="../graph/hld.html" class="md-nav__link">
         
   
   
@@ -7269,7 +7406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/centroid_decomposition.html" class="md-nav__link">
+      <a href="../graph/centroid_decomposition.html" class="md-nav__link">
         
   
   
@@ -7406,7 +7543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/rmq.html" class="md-nav__link">
+      <a href="../sequences/rmq.html" class="md-nav__link">
         
   
   
@@ -7434,7 +7571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/maximum_average_segment.html" class="md-nav__link">
+      <a href="../others/maximum_average_segment.html" class="md-nav__link">
         
   
   
@@ -7462,7 +7599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/k-th.html" class="md-nav__link">
+      <a href="../sequences/k-th.html" class="md-nav__link">
         
   
   
@@ -7490,7 +7627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/mex.html" class="md-nav__link">
+      <a href="../sequences/mex.html" class="md-nav__link">
         
   
   
@@ -7573,7 +7710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game_theory/games_on_graphs.html" class="md-nav__link">
+      <a href="../game_theory/games_on_graphs.html" class="md-nav__link">
         
   
   
@@ -7601,7 +7738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game_theory/sprague-grundy-nim.html" class="md-nav__link">
+      <a href="../game_theory/sprague-grundy-nim.html" class="md-nav__link">
         
   
   
@@ -7684,7 +7821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule_one_machine.html" class="md-nav__link">
+      <a href="../schedules/schedule_one_machine.html" class="md-nav__link">
         
   
   
@@ -7712,7 +7849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule_two_machines.html" class="md-nav__link">
+      <a href="../schedules/schedule_two_machines.html" class="md-nav__link">
         
   
   
@@ -7740,7 +7877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule-with-completion-duration.html" class="md-nav__link">
+      <a href="../schedules/schedule-with-completion-duration.html" class="md-nav__link">
         
   
   
@@ -7823,7 +7960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/tortoise_and_hare.html" class="md-nav__link">
+      <a href="../others/tortoise_and_hare.html" class="md-nav__link">
         
   
   
@@ -7851,7 +7988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/josephus_problem.html" class="md-nav__link">
+      <a href="../others/josephus_problem.html" class="md-nav__link">
         
   
   
@@ -7879,7 +8016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/15-puzzle.html" class="md-nav__link">
+      <a href="../others/15-puzzle.html" class="md-nav__link">
         
   
   
@@ -7907,7 +8044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/stern_brocot_tree_farey_sequences.html" class="md-nav__link">
+      <a href="../others/stern_brocot_tree_farey_sequences.html" class="md-nav__link">
         
   
   
@@ -7959,9 +8096,9 @@
                   <script type="text/javascript">
 window.onload = function() {
 	const newIssueURL = "https://github.com/cp-algorithms/cp-algorithms/issues/new";
-  const issueTitle = "Problem on article " + "Main Page";
+  const issueTitle = "Problem on article " + "Fenwick Tree";
 	const issueBody = `
- **Article:** [`+ "Main Page" + `](${window.location.href})
+ **Article:** [`+ "Fenwick Tree" + `](${window.location.href})
 
 **Problem:**
 <!--
@@ -7973,13 +8110,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/index.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/data_structures/fenwick.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/index.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/data_structures/fenwick.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8003,6 +8140,62 @@ Describe the issue of this article in detail.
   
   
 
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
 
 
 
@@ -8011,73 +8204,440 @@ Describe the issue of this article in detail.
 
 <!-- Tags -->
 
+  
+  
+  
+    
+  
+
+
+  
+    <a href="../tags.html#tag:translated" class="md-tag">
+      Translated
+    </a>
+  
+
+  
+    <a href="https://e-maxx.ru/algo/fenwick_tree" class="md-tag">
+      From: e-maxx.ru
+    </a>
+  
 
 </ul>
 
 
-<h1 id="algorithms-for-competitive-programming">Algorithms for Competitive Programming<a class="headerlink" href="#algorithms-for-competitive-programming" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/cp-algorithms/cp-algorithms/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/pulls"><img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/pulls?q=is%3Apr+is%3Aclosed"><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/actions?query=branch%3Amain+workflow%3Atest"><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/cp-algorithms/cp-algorithms/test.yml" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/wiki/Translation-Progress"><img alt="Translation Progress" src="https://img.shields.io/badge/translation_progress-85.2%25-yellowgreen.svg" /></a></p>
-<p>The goal of this project is to translate the wonderful resource
-<a href="https://e-maxx.ru/algo">https://e-maxx.ru/algo</a> which provides descriptions of many algorithms
-and data structures especially popular in field of competitive programming.
-Moreover we want to improve the collected knowledge by extending the articles
-and adding new articles to the collection.</p>
-<p>We're an ad-free, volunteer-run website that's free for everyone. Users can contribute articles or help sponsor bounties on articles for greater algorithmic coverage. Your help is greatly appreciated.</p>
-<p>Compiled pages are published at <a href="https://cp-algorithms.com/">https://cp-algorithms.com/</a>.</p>
-<h2 id="become-a-contributor">Become a Contributor<a class="headerlink" href="#become-a-contributor" title="Permanent link">&para;</a></h2>
+<h1 id="fenwick-tree">Fenwick Tree<a class="headerlink" href="#fenwick-tree" title="Permanent link">&para;</a></h1>
+<p>Let <span class="arithmatex">$f$</span> be some group operation (a binary associative function over a set with an identity element and inverse elements) and <span class="arithmatex">$A$</span> be an array of integers of length <span class="arithmatex">$N$</span>.
+Denote <span class="arithmatex">$f$</span>'s infix notation as <span class="arithmatex">$*$</span>; that is, <span class="arithmatex">$f(x,y) = x*y$</span> for arbitrary integers <span class="arithmatex">$x,y$</span>.
+(Since this is associative, we will omit parentheses for order of application of <span class="arithmatex">$f$</span> when using infix notation.)</p>
+<p>The Fenwick tree is a data structure which:</p>
 <ul>
-<li><a href="https://cp-algorithms.com/contrib.html">How to Contribute</a></li>
-<li><a href="https://cp-algorithms.com/code_of_conduct.html">Code of Conduct</a></li>
-<li><a href="https://cp-algorithms.com/preview.html">Test-Your-Page Form</a></li>
+<li>calculates the value of function <span class="arithmatex">$f$</span> in the given range <span class="arithmatex">$[l, r]$</span> (i.e. <span class="arithmatex">$A_l * A_{l+1} * \dots * A_r$</span>) in <span class="arithmatex">$O(\log N)$</span> time</li>
+<li>updates the value of an element of <span class="arithmatex">$A$</span> in <span class="arithmatex">$O(\log N)$</span> time</li>
+<li>requires <span class="arithmatex">$O(N)$</span> memory (the same amount required for <span class="arithmatex">$A$</span>)</li>
+<li>is easy to use and code, especially in the case of multidimensional arrays</li>
 </ul>
-<h2 id="sponsor-us">Sponsor Us<a class="headerlink" href="#sponsor-us" title="Permanent link">&para;</a></h2>
+<p>The most common application of a Fenwick tree is <em>calculating the sum of a range</em>.
+For example, using addition over the set of integers as the group operation, i.e. <span class="arithmatex">$f(x,y) = x + y$</span>: the binary operation, <span class="arithmatex">$*$</span>, is <span class="arithmatex">$+$</span> in this case, so <span class="arithmatex">$A_l * A_{l+1} * \dots * A_r = A_l + A_{l+1} + \dots + A_{r}$</span>.</p>
+<p>The Fenwick tree is also called a <strong>Binary Indexed Tree</strong> (BIT).
+It was first described in a paper titled "A new data structure for cumulative frequency tables" (Peter M. Fenwick, 1994).</p>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h3>
+<p>For the sake of simplicity, we will assume that function <span class="arithmatex">$f$</span> is defined as <span class="arithmatex">$f(x,y) = x + y$</span> over the integers.</p>
+<p>Suppose we are given an array of integers, <span class="arithmatex">$A[0 \dots N-1]$</span>.
+(Note that we are using zero-based indexing.)
+A Fenwick tree is just an array, <span class="arithmatex">$T[0 \dots N-1]$</span>, where each element is equal to the sum of elements of <span class="arithmatex">$A$</span> in some range, <span class="arithmatex">$[g(i), i]$</span>:</p>
+<div class="arithmatex">$$T_i = \sum_{j = g(i)}^{i}{A_j}$$</div>
+<p>where <span class="arithmatex">$g$</span> is some function that satisfies <span class="arithmatex">$0 \le g(i) \le i$</span>.
+We will define <span class="arithmatex">$g$</span> in the next few paragraphs.</p>
+<p>The data structure is called a tree because there is a nice representation of it in the form of a tree, although we don't need to model an actual tree with nodes and edges.
+We only need to maintain the array <span class="arithmatex">$T$</span> to handle all queries.</p>
+<p><strong>Note:</strong> The Fenwick tree presented here uses zero-based indexing.
+Many people use a version of the Fenwick tree that uses one-based indexing.
+As such, you will also find an alternative implementation which uses one-based indexing in the implementation section.
+Both versions are equivalent in terms of time and memory complexity.</p>
+<p>Now we can write some pseudo-code for the two operations mentioned above.
+Below, we get the sum of elements of <span class="arithmatex">$A$</span> in the range <span class="arithmatex">$[0, r]$</span> and update (increase) some element <span class="arithmatex">$A_i$</span>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="nb">int</span> <span class="n">r</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">r</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">+=</span> <span class="n">t</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">res</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">increase</span><span class="p">(</span><span class="nb">int</span> <span class="n">i</span><span class="p">,</span> <span class="nb">int</span> <span class="n">delta</span><span class="p">):</span>
+    <span class="k">for</span> <span class="nb">all</span> <span class="n">j</span> <span class="k">with</span> <span class="n">g</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">j</span><span class="p">:</span>
+        <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">delta</span>
+</code></pre></div>
+<p>The function <code>sum</code> works as follows:</p>
+<ol>
+<li>First, it adds the sum of the range <span class="arithmatex">$[g(r), r]$</span> (i.e. <span class="arithmatex">$T[r]$</span>) to the <code>result</code>.</li>
+<li>Then, it "jumps" to the range <span class="arithmatex">$[g(g(r)-1), g(r)-1]$</span> and adds this range's sum to the <code>result</code>.</li>
+<li>This continues until it "jumps" from <span class="arithmatex">$[0, g(g( \dots g(r)-1 \dots -1)-1)]$</span> to <span class="arithmatex">$[g(-1), -1]$</span>; this is where the <code>sum</code> function stops jumping.</li>
+</ol>
+<p>The function <code>increase</code> works with the same analogy, but it "jumps" in the direction of increasing indices:</p>
+<ol>
+<li>The sum for each range of the form <span class="arithmatex">$[g(j), j]$</span> which satisfies the condition <span class="arithmatex">$g(j) \le i \le j$</span> is increased by <code>delta</code>; that is, <code>t[j] += delta</code>.
+Therefore, it updates all elements in <span class="arithmatex">$T$</span> that correspond to ranges in which <span class="arithmatex">$A_i$</span> lies.</li>
+</ol>
+<p>The complexity of both <code>sum</code> and <code>increase</code> depend on the function <span class="arithmatex">$g$</span>.
+There are many ways to choose the function <span class="arithmatex">$g$</span> such that <span class="arithmatex">$0 \le g(i) \le i$</span> for all <span class="arithmatex">$i$</span>.
+For instance, the function <span class="arithmatex">$g(i) = i$</span> works, which yields <span class="arithmatex">$T = A$</span> (in which case, the summation queries are slow).
+We could also take the function <span class="arithmatex">$g(i) = 0$</span>.
+This would correspond to prefix sum arrays (in which case, finding the sum of the range <span class="arithmatex">$[0, i]$</span> will only take constant time; however, updates are slow).
+The clever part of the algorithm for Fenwick trees is how it uses a special definition of the function <span class="arithmatex">$g$</span> which can handle both operations in <span class="arithmatex">$O(\log N)$</span> time.</p>
+<h3 id="definition-of-gi">Definition of <span class="arithmatex">$g(i)$</span><a class="headerlink" href="#definition-of-gi" title="Permanent link">&para;</a></h3>
+<p>The computation of <span class="arithmatex">$g(i)$</span> is defined using the following simple operation:
+we replace all trailing <span class="arithmatex">$1$</span> bits in the binary representation of <span class="arithmatex">$i$</span> with <span class="arithmatex">$0$</span> bits.</p>
+<p>In other words, if the least significant digit of <span class="arithmatex">$i$</span> in binary is <span class="arithmatex">$0$</span>, then <span class="arithmatex">$g(i) = i$</span>.
+And otherwise the least significant digit is a <span class="arithmatex">$1$</span>, and we take this <span class="arithmatex">$1$</span> and all other trailing <span class="arithmatex">$1$</span>s and flip them.</p>
+<p>For instance we get</p>
+<div class="arithmatex">$$\begin{align}
+g(11) = g(1011_2) = 1000_2 &amp;= 8 \\\\
+g(12) = g(1100_2) = 1100_2 &amp;= 12 \\\\
+g(13) = g(1101_2) = 1100_2 &amp;= 12 \\\\
+g(14) = g(1110_2) = 1110_2 &amp;= 14 \\\\
+g(15) = g(1111_2) = 0000_2 &amp;= 0 \\\\
+\end{align}$$</div>
+<p>There exists a simple implementation using bitwise operations for the non-trivial operation described above:</p>
+<div class="arithmatex">$$g(i) = i ~\&amp;~ (i+1),$$</div>
+<p>where <span class="arithmatex">$\&amp;$</span> is the bitwise AND operator. It is not hard to convince yourself that this solution does the same thing as the operation described above.</p>
+<p>Now, we just need to find a way to iterate over all <span class="arithmatex">$j$</span>'s, such that <span class="arithmatex">$g(j) \le i \le j$</span>.</p>
+<p>It is easy to see that we can find all such <span class="arithmatex">$j$</span>'s by starting with <span class="arithmatex">$i$</span> and flipping the last unset bit.
+We will call this operation <span class="arithmatex">$h(j)$</span>.
+For example, for <span class="arithmatex">$i = 10$</span> we have:</p>
+<div class="arithmatex">$$\begin{align}
+10 &amp;= 0001010_2 \\\\
+h(10) = 11 &amp;= 0001011_2 \\\\
+h(11) = 15 &amp;= 0001111_2 \\\\
+h(15) = 31 &amp;= 0011111_2 \\\\
+h(31) = 63 &amp;= 0111111_2 \\\\
+\vdots &amp;
+\end{align}$$</div>
+<p>Unsurprisingly, there also exists a simple way to perform <span class="arithmatex">$h$</span> using bitwise operations:</p>
+<div class="arithmatex">$$h(j) = j ~|~ (j+1),$$</div>
+<p>where <span class="arithmatex">$|$</span> is the bitwise OR operator.</p>
+<p>The following image shows a possible interpretation of the Fenwick tree as tree.
+The nodes of the tree show the ranges they cover.</p>
+<div style="text-align: center;">
+  <img src="binary_indexed_tree.png" alt="Binary Indexed Tree">
+</div>
+
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<h3 id="finding-sum-in-one-dimensional-array">Finding sum in one-dimensional array<a class="headerlink" href="#finding-sum-in-one-dimensional-array" title="Permanent link">&para;</a></h3>
+<p>Here we present an implementation of the Fenwick tree for sum queries and single updates.</p>
+<p>The normal Fenwick tree can only answer sum queries of the type <span class="arithmatex">$[0, r]$</span> using <code>sum(int r)</code>, however we can also answer other queries of the type <span class="arithmatex">$[l, r]$</span> by computing two sums <span class="arithmatex">$[0, r]$</span> and <span class="arithmatex">$[0, l-1]$</span> and subtract them.
+This is handled in the <code>sum(int l, int r)</code> method.</p>
+<p>Also this implementation supports two constructors.
+You can create a Fenwick tree initialized with zeros, or you can convert an existing array into the Fenwick form.</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">FenwickTree</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bit</span><span class="p">;</span><span class="w">  </span><span class="c1">// binary indexed tree</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">FenwickTree</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">        </span><span class="n">bit</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">FenwickTree</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">FenwickTree</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="n">add</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">            </span><span class="n">ret</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">bit</span><span class="p">[</span><span class="n">r</span><span class="p">];</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">idx</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">delta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">idx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span>
+<span class="w">            </span><span class="n">bit</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">delta</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<h3 id="linear-construction">Linear construction<a class="headerlink" href="#linear-construction" title="Permanent link">&para;</a></h3>
+<p>The above implementation requires <span class="arithmatex">$O(N \log N)$</span> time.
+It's possible to improve that to <span class="arithmatex">$O(N)$</span> time.</p>
+<p>The idea is, that the number <span class="arithmatex">$a[i]$</span> at index <span class="arithmatex">$i$</span> will contribute to the range stored in <span class="arithmatex">$bit[i]$</span>, and to all ranges that the index <span class="arithmatex">$i | (i + 1)$</span> contributes to.
+So by adding the numbers in order, you only have to push the current sum further to the next range, where it will then get pushed further to the next range, and so on.</p>
+<div class="highlight"><pre><span></span><code><span class="n">FenwickTree</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">FenwickTree</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">bit</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="n">bit</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">bit</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="finding-minimum-of-0-r-in-one-dimensional-array">Finding minimum of <span class="arithmatex">$[0, r]$</span> in one-dimensional array<a class="headerlink" href="#finding-minimum-of-0-r-in-one-dimensional-array" title="Permanent link">&para;</a></h3>
+<p>It is obvious that there is no easy way of finding minimum of range <span class="arithmatex">$[l, r]$</span> using Fenwick tree, as Fenwick tree can only answer queries of type <span class="arithmatex">$[0, r]$</span>.
+Additionally, each time a value is <code>update</code>'d, the new value has to be smaller than the current value.
+Both significant limitations are because the <span class="arithmatex">$min$</span> operation together with the set of integers doesn't form a group, as there are no inverse elements.</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">FenwickTreeMin</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bit</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="mf">1e9</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">FenwickTreeMin</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">        </span><span class="n">bit</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">INF</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">FenwickTreeMin</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">FenwickTreeMin</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="n">update</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">getmin</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">INF</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">            </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span><span class="w"> </span><span class="n">bit</span><span class="p">[</span><span class="n">r</span><span class="p">]);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">update</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">idx</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">idx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span>
+<span class="w">            </span><span class="n">bit</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">bit</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span><span class="w"> </span><span class="n">val</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>Note: it is possible to implement a Fenwick tree that can handle arbitrary minimum range queries and arbitrary updates.
+The paper <a href="http://ioinformatics.org/oi/pdf/v9_2015_39_44.pdf">Efficient Range Minimum Queries using Binary Indexed Trees</a> describes such an approach.
+However with that approach you need to maintain a second binary indexed tree over the data, with a slightly different structure, since one tree is not enough to store the values of all elements in the array.
+The implementation is also a lot harder compared to the normal implementation for sums.</p>
+<h3 id="finding-sum-in-two-dimensional-array">Finding sum in two-dimensional array<a class="headerlink" href="#finding-sum-in-two-dimensional-array" title="Permanent link">&para;</a></h3>
+<p>As claimed before, it is very easy to implement Fenwick Tree for multidimensional array.</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">FenwickTree2D</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">bit</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// init(...) { ... }</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">                </span><span class="n">ret</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">bit</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">delta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">))</span>
+<span class="w">                </span><span class="n">bit</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">delta</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<h3 id="one-based-indexing-approach">One-based indexing approach<a class="headerlink" href="#one-based-indexing-approach" title="Permanent link">&para;</a></h3>
+<p>For this approach we change the requirements and definition for <span class="arithmatex">$T[]$</span> and <span class="arithmatex">$g()$</span> a little bit.
+We want <span class="arithmatex">$T[i]$</span> to store the sum of <span class="arithmatex">$[g(i)+1; i]$</span>.
+This changes the implementation a little bit, and allows for a similar nice definition for <span class="arithmatex">$g(i)$</span>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="nb">int</span> <span class="n">r</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">r</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">+=</span> <span class="n">t</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">res</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">increase</span><span class="p">(</span><span class="nb">int</span> <span class="n">i</span><span class="p">,</span> <span class="nb">int</span> <span class="n">delta</span><span class="p">):</span>
+    <span class="k">for</span> <span class="nb">all</span> <span class="n">j</span> <span class="k">with</span> <span class="n">g</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">j</span><span class="p">:</span>
+        <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">delta</span>
+</code></pre></div>
+<p>The computation of <span class="arithmatex">$g(i)$</span> is defined as:
+toggling of the last set <span class="arithmatex">$1$</span> bit in the binary representation of <span class="arithmatex">$i$</span>.</p>
+<div class="arithmatex">$$\begin{align}
+g(7) = g(111_2) = 110_2 &amp;= 6 \\\\
+g(6) = g(110_2) = 100_2 &amp;= 4 \\\\
+g(4) = g(100_2) = 000_2 &amp;= 0 \\\\
+\end{align}$$</div>
+<p>The last set bit can be extracted using <span class="arithmatex">$i ~\&amp;~ (-i)$</span>, so the operation can be expressed as:</p>
+<div class="arithmatex">$$g(i) = i - (i ~\&amp;~ (-i)).$$</div>
+<p>And it's not hard to see, that you need to change all values <span class="arithmatex">$T[j]$</span> in the sequence <span class="arithmatex">$i,~ h(i),~ h(h(i)),~ \dots$</span> when you want to update <span class="arithmatex">$A[j]$</span>, where <span class="arithmatex">$h(i)$</span> is defined as:</p>
+<div class="arithmatex">$$h(i) = i + (i ~\&amp;~ (-i)).$$</div>
+<p>As you can see, the main benefit of this approach is that the binary operations complement each other very nicely.</p>
+<p>The following implementation can be used like the other implementations, however it uses one-based indexing internally.</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">FenwickTreeOneBasedIndexing</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bit</span><span class="p">;</span><span class="w">  </span><span class="c1">// binary indexed tree</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">FenwickTreeOneBasedIndexing</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">bit</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">FenwickTreeOneBasedIndexing</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">)</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">FenwickTreeOneBasedIndexing</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="n">add</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="o">++</span><span class="n">idx</span><span class="p">;</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">-</span><span class="n">idx</span><span class="p">)</span>
+<span class="w">            </span><span class="n">ret</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">bit</span><span class="p">[</span><span class="n">idx</span><span class="p">];</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">idx</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">delta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="o">++</span><span class="n">idx</span><span class="p">;</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">-</span><span class="n">idx</span><span class="p">)</span>
+<span class="w">            </span><span class="n">bit</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">delta</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+<h2 id="range-operations">Range operations<a class="headerlink" href="#range-operations" title="Permanent link">&para;</a></h2>
+<p>A Fenwick tree can support the following range operations:</p>
+<ol>
+<li>Point Update and Range Query</li>
+<li>Range Update and Point Query</li>
+<li>Range Update and Range Query</li>
+</ol>
+<h3 id="1-point-update-and-range-query">1. Point Update and Range Query<a class="headerlink" href="#1-point-update-and-range-query" title="Permanent link">&para;</a></h3>
+<p>This is just the ordinary Fenwick tree as explained above.</p>
+<h3 id="2-range-update-and-point-query">2. Range Update and Point Query<a class="headerlink" href="#2-range-update-and-point-query" title="Permanent link">&para;</a></h3>
+<p>Using simple tricks we can also do the reverse operations: increasing ranges and querying for single values.</p>
+<p>Let the Fenwick tree be initialized with zeros.
+Suppose that we want to increment the interval <span class="arithmatex">$[l, r]$</span> by <span class="arithmatex">$x$</span>.
+We make two point update operations on Fenwick tree which are <code>add(l, x)</code> and <code>add(r+1, -x)</code>.</p>
+<p>If we want to get the value of <span class="arithmatex">$A[i]$</span>, we just need to take the prefix sum using the ordinary range sum method.
+To see why this is true, we can just focus on the previous increment operation again.
+If <span class="arithmatex">$i &lt; l$</span>, then the two update operations have no effect on the query and we get the sum <span class="arithmatex">$0$</span>.
+If <span class="arithmatex">$i \in [l, r]$</span>, then we get the answer <span class="arithmatex">$x$</span> because of the first update operation.
+And if <span class="arithmatex">$i &gt; r$</span>, then the second update operation will cancel the effect of first one.</p>
+<p>The following implementation uses one-based indexing.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">idx</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="o">++</span><span class="n">idx</span><span class="p">;</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">-</span><span class="n">idx</span><span class="p">)</span>
+<span class="w">        </span><span class="n">bit</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">val</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">range_add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">add</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">);</span>
+<span class="w">    </span><span class="n">add</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">val</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">point_query</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="o">++</span><span class="n">idx</span><span class="p">;</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">-</span><span class="n">idx</span><span class="p">)</span>
+<span class="w">        </span><span class="n">ret</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">bit</span><span class="p">[</span><span class="n">idx</span><span class="p">];</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Note: of course it is also possible to increase a single point <span class="arithmatex">$A[i]$</span> with <code>range_add(i, i, val)</code>.</p>
+<h3 id="3-range-update-and-range-query">3. Range Update and Range Query<a class="headerlink" href="#3-range-update-and-range-query" title="Permanent link">&para;</a></h3>
+<p>To support both range updates and range queries we will use two BITs namely <span class="arithmatex">$B_1[]$</span> and <span class="arithmatex">$B_2[]$</span>, initialized with zeros.</p>
+<p>Suppose that we want to increment the interval <span class="arithmatex">$[l, r]$</span> by the value <span class="arithmatex">$x$</span>.
+Similarly as in the previous method, we perform two point updates on <span class="arithmatex">$B_1$</span>: <code>add(B1, l, x)</code> and <code>add(B1, r+1, -x)</code>.
+And we also update <span class="arithmatex">$B_2$</span>. The details will be explained later.</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">range_add</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="n">add</span><span class="p">(</span><span class="n">B1</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">add</span><span class="p">(</span><span class="n">B1</span><span class="p">,</span> <span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">add</span><span class="p">(</span><span class="n">B2</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="n">l</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">add</span><span class="p">(</span><span class="n">B2</span><span class="p">,</span> <span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="n">x</span><span class="o">*</span><span class="n">r</span><span class="p">))</span>
+</code></pre></div>
+After the range update <span class="arithmatex">$(l, r, x)$</span> the range sum query should return the following values:</p>
+<div class="arithmatex">$$
+sum[0, i]=
+\begin{cases}
+0 &amp; i &lt; l \\\\
+x \cdot (i-(l-1)) &amp; l \le i \le r \\\\
+x \cdot (r-l+1) &amp; i &gt; r \\\\
+\end{cases}
+$$</div>
+<p>We can write the range sum as difference of two terms, where we use <span class="arithmatex">$B_1$</span> for first term and <span class="arithmatex">$B_2$</span> for second term.
+The difference of the queries will give us prefix sum over <span class="arithmatex">$[0, i]$</span>.</p>
+<div class="arithmatex">$$\begin{align}
+sum[0, i] &amp;= sum(B_1, i) \cdot i - sum(B_2, i) \\\\
+&amp;= \begin{cases}
+0 \cdot i - 0 &amp; i &lt; l\\\\
+x \cdot i - x \cdot (l-1) &amp; l \le i \le r \\\\
+0 \cdot i - (x \cdot (l-1) - x \cdot r) &amp; i &gt; r \\\\
+\end{cases}
+\end{align}
+$$</div>
+<p>The last expression is exactly equal to the required terms.
+Thus we can use <span class="arithmatex">$B_2$</span> for shaving off extra terms when we multiply <span class="arithmatex">$B_1[i]\times i$</span>.</p>
+<p>We can find arbitrary range sums by computing the prefix sums for <span class="arithmatex">$l-1$</span> and <span class="arithmatex">$r$</span> and taking the difference of them again.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">while</span> <span class="n">idx</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">:</span>
+        <span class="n">b</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">+=</span> <span class="n">x</span>
+        <span class="n">idx</span> <span class="o">+=</span> <span class="n">idx</span> <span class="o">&amp;</span> <span class="o">-</span><span class="n">idx</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">range_add</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">add</span><span class="p">(</span><span class="n">B1</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">add</span><span class="p">(</span><span class="n">B1</span><span class="p">,</span> <span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">add</span><span class="p">(</span><span class="n">B2</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="n">l</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">add</span><span class="p">(</span><span class="n">B2</span><span class="p">,</span> <span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="n">x</span><span class="o">*</span><span class="n">r</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">idx</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">b</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+        <span class="n">idx</span> <span class="o">-=</span> <span class="n">idx</span> <span class="o">&amp;</span> <span class="o">-</span><span class="n">idx</span>
+    <span class="k">return</span> <span class="n">total</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">prefix_sum</span><span class="p">(</span><span class="n">idx</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">B1</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span><span class="o">*</span><span class="n">idx</span> <span class="o">-</span>  <span class="nb">sum</span><span class="p">(</span><span class="n">B2</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">range_sum</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">prefix_sum</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">-</span> <span class="n">prefix_sum</span><span class="p">(</span><span class="n">l</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/sponsors/cp-algorithms">Become a Financial Supporter</a></li>
+<li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=24&amp;page=show_problem&amp;problem=3238">UVA 12086 - Potentiometers</a></li>
+<li><a href="http://www.lightoj.com/volume_showproblem.php?problem=1112">LOJ 1112 - Curious Robin Hood</a></li>
+<li><a href="http://www.lightoj.com/volume_showproblem.php?problem=1266" title="2D Fenwick Tree">LOJ 1266 - Points in Rectangle</a></li>
+<li><a href="http://www.codechef.com/problems/SPREAD">Codechef - SPREAD</a></li>
+<li><a href="http://www.spoj.com/problems/CTRICK/">SPOJ - CTRICK</a></li>
+<li><a href="http://www.spoj.com/problems/MATSUM/">SPOJ - MATSUM</a></li>
+<li><a href="http://www.spoj.com/problems/DQUERY/">SPOJ - DQUERY</a></li>
+<li><a href="http://www.spoj.com/problems/NKTEAM/">SPOJ - NKTEAM</a></li>
+<li><a href="http://www.spoj.com/problems/YODANESS/">SPOJ - YODANESS</a></li>
+<li><a href="https://community.topcoder.com/stat?c=problem_statement&amp;pm=6551&amp;rd=9990">SRM 310 - FloatingMedian</a></li>
+<li><a href="http://www.spoj.com/problems/ADABEHIVE/">SPOJ - Ada and Behives</a></li>
+<li><a href="https://www.hackerearth.com/practice/data-structures/advanced-data-structures/fenwick-binary-indexed-trees/practice-problems/algorithm/counting-in-byteland/">Hackerearth - Counting in Byteland</a></li>
+<li><a href="http://web.archive.org/web/20210322010617/https://devskill.com/CodingProblems/ViewProblem/300">DevSkill - Shan and String (archived)</a></li>
+<li><a href="http://codeforces.com/contest/669/problem/E">Codeforces - Little Artem and Time Machine</a></li>
+<li><a href="http://codeforces.com/contest/777/problem/E">Codeforces - Hanoi Factory</a></li>
+<li><a href="http://www.spoj.com/problems/TULIPNUM/">SPOJ - Tulip and Numbers</a></li>
+<li><a href="http://www.spoj.com/problems/SUMSUM/">SPOJ - SUMSUM</a></li>
+<li><a href="http://www.spoj.com/problems/SGIFT/">SPOJ - Sabir and Gifts</a></li>
+<li><a href="http://www.spoj.com/problems/TPGA/">SPOJ - The Permutation Game Again</a></li>
+<li><a href="http://www.spoj.com/problems/ZIGZAG2/">SPOJ - Zig when you Zag</a></li>
+<li><a href="http://www.spoj.com/problems/CRAYON/">SPOJ - Cryon</a></li>
+<li><a href="http://www.spoj.com/problems/DCEPC705/">SPOJ - Weird Points</a></li>
+<li><a href="http://www.spoj.com/problems/DCEPC206/">SPOJ - Its a Murder</a></li>
+<li><a href="http://www.spoj.com/problems/KOPC12G/">SPOJ - Bored of Suffixes and Prefixes</a></li>
+<li><a href="http://www.spoj.com/problems/TRIPINV/">SPOJ - Mega Inversions</a></li>
+<li><a href="http://codeforces.com/contest/597/problem/C">Codeforces - Subsequences</a></li>
+<li><a href="http://codeforces.com/contest/12/problem/D">Codeforces - Ball</a></li>
+<li><a href="http://codeforces.com/gym/101047/problem/J">GYM - The Kamphaeng Phet's Chedis</a></li>
+<li><a href="http://codeforces.com/contest/707/problem/E">Codeforces - Garlands</a></li>
+<li><a href="http://codeforces.com/contest/749/problem/E">Codeforces - Inversions after Shuffle</a></li>
+<li><a href="http://codeforces.com/problemset/gymProblem/101055/D">GYM - Cairo Market</a></li>
+<li><a href="http://codeforces.com/contest/849/problem/E">Codeforces - Goodbye Souvenir</a></li>
+<li><a href="http://www.spoj.com/problems/ADACABAA/">SPOJ - Ada and Species</a></li>
+<li><a href="https://codeforces.com/problemset/problem/704/A">Codeforces - Thor</a></li>
+<li><a href="https://cses.fi/problemset/task/1739/">CSES - Forest Queries II</a></li>
+<li><a href="http://matcomgrader.com/problem/9346/fundraising/">Latin American Regionals 2017 - Fundraising</a></li>
 </ul>
-<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
+<h2 id="other-sources">Other sources<a class="headerlink" href="#other-sources" title="Permanent link">&para;</a></h2>
 <ul>
-<li>August, 2025: Overhaul of CP-Algorithms <a href="https://github.com/sponsors/cp-algorithms">donation system</a>. Please consider supporting us, so that we can grow!</li>
-<li>August, 2025: Launched a <a href="https://discord.gg/HZ5AecN3KX">Discord server</a>!</li>
-<li>October, 2024: Welcome new maintainers: <a href="https://github.com/jxu">jxu</a>, <a href="https://github.com/mhayter">mhayter</a> and <a href="https://github.com/kostero">kostero</a>!</li>
-<li>October, 15, 2024: GitHub pages based mirror is now served at <a href="https://gh.cp-algorithms.com/">https://gh.cp-algorithms.com/</a>, and an auxiliary competitive programming library is available at <a href="https://lib.cp-algorithms.com/">https://lib.cp-algorithms.com/</a>.</li>
-<li>July 16, 2024: Major overhaul of the <a href="https://cp-algorithms.com/graph/strongly-connected-components.html">Finding strongly connected components / Building condensation graph</a> article.</li>
-<li>June 26, 2023: Added automatic RSS feeds for <a href="https://cp-algorithms.com/feed_rss_created.xml">new articles</a> and <a href="https://cp-algorithms.com/feed_rss_updated.xml">updates in articles</a>.</li>
-<li>December 20, 2022: The repository name and the owning organizations were renamed! Now the repo is located at <a href="https://github.com/cp-algorithms/cp-algorithms">https://github.com/cp-algorithms/cp-algorithms</a>. It is recommended to update the upstream link in your local repositories, if you have any.</li>
-<li>October 31, 2022: It is now possible to select and copy <span class="arithmatex">$\LaTeX$</span> source code of formulas within the articles.</li>
-<li>June 8, 2022: Tags are enabled. Each article is now marked whether it is translated or original, overall tag info is present in the <a href="https://cp-algorithms.com/tags.html">tag index</a>. For translated articles, clicking on <code>From: X</code> tag would lead to the original article.</li>
-<li>June 7, 2022: Date of last commit and author list with contribution percentage is tracked for each page.</li>
-<li>June 5, 2022: Enabled content tabs and sidebar navigation. The navigation is moved to a <a href="https://cp-algorithms.com/navigation.html">separate page</a> and its structure should be adjusted in <a href="https://github.com/cp-algorithms/cp-algorithms/blob/main/src/navigation.md">navigation.md</a> whenever a new article is created or an old one is moved.</li>
-<li>January 16, 2022: Switched to the <a href="https://www.mkdocs.org/">MkDocs</a> site generator with the <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a> theme, which give the website a more modern look, brings a couple of new features (dark mode, better search, ...), makes the website more stable (in terms of rendering math formulas), and makes it easier to contribute.</li>
+<li><a href="http://en.wikipedia.org/wiki/Fenwick_tree">Fenwick tree on Wikipedia</a></li>
+<li><a href="https://www.topcoder.com/community/data-science/data-science-tutorials/binary-indexed-trees/">Binary indexed trees tutorial on TopCoder</a></li>
+<li><a href="https://programmingcontests.quora.com/Tutorial-Range-Updates-in-Fenwick-Tree">Range updates and queries </a></li>
 </ul>
-<h3 id="new-articles">New articles<a class="headerlink" href="#new-articles" title="Permanent link">&para;</a></h3>
-<ul>
-<li>(9 June 2026) <a href="https://cp-algorithms.com/graph/stoer_wagner_mincut.html">Minimum cut - Stoer-Wagner algorithm</a></li>
-<li>(28 March 2026) <a href="https://cp-algorithms.com/graph/centroid_decomposition.html">Centroid decomposition</a></li>
-<li>(19 August 2025) <a href="https://cp-algorithms.com/geometry/enclosing-circle.html">Minimum Enclosing Circle</a></li>
-<li>(21 May 2025) <a href="https://cp-algorithms.com/num_methods/simulated_annealing.html">Simulated Annealing</a></li>
-<li>(12 July 2024) <a href="https://cp-algorithms.com/geometry/manhattan-distance.html">Manhattan distance</a></li>
-<li>(8 June 2024) <a href="https://cp-algorithms.com/dynamic_programming/knapsack.html">Knapsack Problem</a></li>
-<li>(28 January 2024) <a href="https://cp-algorithms.com/dynamic_programming/intro-to-dp.html">Introduction to Dynamic Programming</a></li>
-<li>(8 December 2023) <a href="https://cp-algorithms.com/graph/hungarian-algorithm.html">Hungarian Algorithm</a></li>
-<li>(10 September 2023) <a href="https://cp-algorithms.com/others/tortoise_and_hare.html">Tortoise and Hare Algorithm</a></li>
-<li>(12 July 2023) <a href="https://cp-algorithms.com/geometry/planar.html">Finding faces of a planar graph</a></li>
-<li>(18 April 2023) <a href="https://cp-algorithms.com/algebra/bit-manipulation.html">Bit manipulation</a></li>
-<li>(17 October 2022) <a href="https://cp-algorithms.com/num_methods/binary_search.html">Binary Search</a></li>
-<li>(17 October 2022) <a href="https://cp-algorithms.com/sequences/mex.html">MEX (Minimum Excluded element in an array)</a></li>
-<li>(12 May 2022) <a href="https://cp-algorithms.com/algebra/factoring-exp.html">Factoring Exponentiation</a></li>
-<li>(7 May 2022) <a href="https://cp-algorithms.com/dynamic_programming/knuth-optimization.html">Knuth's Optimization</a></li>
-<li>(31 March 2022) <a href="https://cp-algorithms.com/algebra/continued-fractions.html">Continued fractions</a></li>
-</ul>
-<p>Full list of updates: <a href="https://github.com/cp-algorithms/cp-algorithms/commits/main">Commit History</a></p>
-<p>Full list of articles: <a href="https://cp-algorithms.com/navigation.html">Navigation</a></p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (71.43%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (14.29%)</li><li><a href="#" title="Rodion Gorkovenko" data-bi-name="contributorprofile" target="_blank">Rodion Gorkovenko</a> (14.29%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (36.98%)</li><li><a href="#" title="Madhur Chauhan" data-bi-name="contributorprofile" target="_blank">Madhur Chauhan</a> (22.66%)</li><li><a href="#" title="Trung, Nguyen Thanh" data-bi-name="contributorprofile" target="_blank">Trung, Nguyen Thanh</a> (20.87%)</li><li><a href="#" title="JJCUBER" data-bi-name="contributorprofile" target="_blank">JJCUBER</a> (7.36%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (4.37%)</li><li><a href="#" title="Tanmay Sinha" data-bi-name="contributorprofile" target="_blank">Tanmay Sinha</a> (1.59%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (1.19%)</li><li><a href="#" title="Vatsal Sharma" data-bi-name="contributorprofile" target="_blank">Vatsal Sharma</a> (1.19%)</li><li><a href="#" title="Araf Al-Jami" data-bi-name="contributorprofile" target="_blank">Araf Al-Jami</a> (0.99%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (0.6%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (0.6%)</li><li><a href="#" title="Joaquin Garmendia Cabrera" data-bi-name="contributorprofile" target="_blank">Joaquin Garmendia Cabrera</a> (0.4%)</li><li><a href="#" title="Zyad M. Ayad" data-bi-name="contributorprofile" target="_blank">Zyad M. Ayad</a> (0.4%)</li><li><a href="#" title="Anurag Srivastava" data-bi-name="contributorprofile" target="_blank">Anurag Srivastava</a> (0.2%)</li><li><a href="#" title="Harshit Jain" data-bi-name="contributorprofile" target="_blank">Harshit Jain</a> (0.2%)</li><li><a href="#" title="Michael Zegar" data-bi-name="contributorprofile" target="_blank">Michael Zegar</a> (0.2%)</li><li><a href="#" title="Turfa Auliarachman" data-bi-name="contributorprofile" target="_blank">Turfa Auliarachman</a> (0.2%)</li></ul>
 </ul>
                 
               </article>
@@ -8157,14 +8717,14 @@ and adding new articles to the collection.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["toc.integrate", "search.suggest", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.integrate", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="javascript/config.js"></script>
+        <script src="../javascript/config.js"></script>
       
-        <script src="javascript/donation-banner.js"></script>
+        <script src="../javascript/donation-banner.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
       

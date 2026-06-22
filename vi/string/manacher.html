@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="vi" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -10,36 +10,38 @@
       
       
       
-        <link rel="canonical" href="https://cp-algorithms.com/index.html">
+        <link rel="canonical" href="https://cp-algorithms.com/vi/string/manacher.html">
       
       
+        <link rel="prev" href="expression_parsing.html">
       
-        <link rel="next" href="navigation.html">
+      
+        <link rel="next" href="main_lorentz.html">
       
       
         
-          <link rel="alternate" href="index.html" hreflang="en">
+          <link rel="alternate" href="../../string/manacher.html" hreflang="en">
         
-          <link rel="alternate" href="vi/index.html" hreflang="vi">
+          <link rel="alternate" href="manacher.html" hreflang="vi">
         
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
       
-      <link rel="icon" href="favicon.ico">
+      <link rel="icon" href="../../favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Main Page - Algorithms for Competitive Programming</title>
+        <title>Manacher's Algorithm - Finding all sub-palindromes in O(N) - Algorithms for Competitive Programming</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -58,9 +60,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -77,9 +79,9 @@
     
     
   
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
 
-  <script src="assets/javascripts/toggle-sidebar.js"></script></head>
+  <script src="../../assets/javascripts/toggle-sidebar.js"></script></head>
   
   
     
@@ -98,8 +100,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#algorithms-for-competitive-programming" class="md-skip">
-          Skip to content
+        <a href="#manachers-algorithm-finding-all-sub-palindromes-in-on" class="md-skip">
+          Bỏ qua
         </a>
       
     </div>
@@ -122,9 +124,9 @@
     }
   </script>
   <nav class="md-header__inner md-grid" aria-label="header.title">
-    <a href="index.html" title="Algorithms for Competitive Programming" class="md-header__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+    <a href="../index.html" title="Algorithms for Competitive Programming" class="md-header__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
       
-  <img src="favicon.ico" alt="logo">
+  <img src="../../favicon.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -134,7 +136,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            <a href="index.html" title="Algorithms for Competitive Programming" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+            <a href="../index.html" title="Algorithms for Competitive Programming" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
               Algorithms for Competitive Programming
             </a>
           </span>
@@ -143,7 +145,7 @@
           <span class="md-ellipsis">
             <a href="#" onclick="scrollToTop()">
               
-                Main Page
+                Manacher's Algorithm - Finding all sub-palindromes in O(N)
               
             </a>
           </span>
@@ -184,13 +186,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="index.html" hreflang="en" class="md-select__link">
+                  <a href="../../string/manacher.html" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="vi/index.html" hreflang="vi" class="md-select__link">
+                  <a href="manacher.html" hreflang="vi" class="md-select__link">
                     Tiếng Việt
                   </a>
                 </li>
@@ -208,16 +210,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Tìm kiếm" placeholder="Tìm kiếm" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Tìm kiếm">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Xoá" aria-label="Xoá" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -241,7 +243,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/cp-algorithms/cp-algorithms" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/cp-algorithms/cp-algorithms" title="Xem mã nguồn" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -294,18 +296,18 @@
 
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Thanh điều hướng" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Algorithms for Competitive Programming" class="md-nav__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+    <a href="../index.html" title="Algorithms for Competitive Programming" class="md-nav__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
       
-  <img src="favicon.ico" alt="logo">
+  <img src="../../favicon.ico" alt="logo">
 
     </a>
     Algorithms for Competitive Programming
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/cp-algorithms/cp-algorithms" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/cp-algorithms/cp-algorithms" title="Xem mã nguồn" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -322,20 +324,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -345,7 +345,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    Trang Chủ
   
 
     
@@ -356,12 +356,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Home
+    Trang Chủ
   
 
           </label>
@@ -371,142 +371,17 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Main Page
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Main Page
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#become-a-contributor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Become a Contributor
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sponsor-us" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sponsor Us
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changelog
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Changelog">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#new-articles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        New articles
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="navigation.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Navigation
+    Trang chủ
   
 
     
@@ -527,14 +402,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tags.html" class="md-nav__link">
+      <a href="../navigation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Tag index
+    Điều hướng
   
 
     
@@ -555,14 +430,14 @@
   
   
     <li class="md-nav__item">
-      <a href="contrib.html" class="md-nav__link">
+      <a href="../tags.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    How to Contribute
+    Thẻ chỉ mục
   
 
     
@@ -583,14 +458,14 @@
   
   
     <li class="md-nav__item">
-      <a href="code_of_conduct.html" class="md-nav__link">
+      <a href="../contrib.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Code of conduct
+    Hướng dẫn đóng góp
   
 
     
@@ -611,14 +486,42 @@
   
   
     <li class="md-nav__item">
-      <a href="preview.html" class="md-nav__link">
+      <a href="../code_of_conduct.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Preview
+    Quy tắc ứng xử
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preview.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Xem trước
   
 
     
@@ -664,7 +567,7 @@
   <span class="md-ellipsis">
     
   
-    Algebra
+    Đại số
   
 
     
@@ -680,7 +583,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Algebra
+    Đại số
   
 
           </label>
@@ -711,7 +614,7 @@
   <span class="md-ellipsis">
     
   
-    Fundamentals
+    Cơ bản
   
 
     
@@ -727,7 +630,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Fundamentals
+    Cơ bản
   
 
           </label>
@@ -740,14 +643,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/binary-exp.html" class="md-nav__link">
+      <a href="../algebra/binary-exp.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Binary Exponentiation
+    Lũy thừa nhị phân
   
 
     
@@ -768,14 +671,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/euclid-algorithm.html" class="md-nav__link">
+      <a href="../algebra/euclid-algorithm.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Euclidean algorithm for computing the greatest common divisor
+    Thuật toán Euclid tìm ước chung lớn nhất
   
 
     
@@ -796,14 +699,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/extended-euclid-algorithm.html" class="md-nav__link">
+      <a href="../algebra/extended-euclid-algorithm.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Extended Euclidean Algorithm
+    Thuật toán Euclid mở rộng
   
 
     
@@ -824,14 +727,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/linear-diophantine-equation.html" class="md-nav__link">
+      <a href="../algebra/linear-diophantine-equation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Linear Diophantine Equations
+    Phương trình Diophantine tuyến tính
   
 
     
@@ -852,14 +755,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/fibonacci-numbers.html" class="md-nav__link">
+      <a href="../algebra/fibonacci-numbers.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Fibonacci Numbers
+    Số Fibonacci
   
 
     
@@ -906,7 +809,7 @@
   <span class="md-ellipsis">
     
   
-    Prime numbers
+    Số nguyên tố
   
 
     
@@ -922,7 +825,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Prime numbers
+    Số nguyên tố
   
 
           </label>
@@ -935,14 +838,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/sieve-of-eratosthenes.html" class="md-nav__link">
+      <a href="../algebra/sieve-of-eratosthenes.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sieve of Eratosthenes
+    Sàng Eratosthenes
   
 
     
@@ -963,14 +866,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/prime-sieve-linear.html" class="md-nav__link">
+      <a href="../algebra/prime-sieve-linear.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Linear Sieve
+    Sàng tuyến tính
   
 
     
@@ -991,14 +894,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/primality_tests.html" class="md-nav__link">
+      <a href="../algebra/primality_tests.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Primality tests
+    Kiểm tra số nguyên tố
   
 
     
@@ -1019,14 +922,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorization.html" class="md-nav__link">
+      <a href="../algebra/factorization.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Integer factorization
+    Phân tích thừa số nguyên tố
   
 
     
@@ -1073,7 +976,7 @@
   <span class="md-ellipsis">
     
   
-    Number-theoretic functions
+    Các hàm số học
   
 
     
@@ -1089,7 +992,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Number-theoretic functions
+    Các hàm số học
   
 
           </label>
@@ -1102,14 +1005,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/phi-function.html" class="md-nav__link">
+      <a href="../algebra/phi-function.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Euler's totient function
+    Phi hàm Euler
   
 
     
@@ -1130,14 +1033,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/divisors.html" class="md-nav__link">
+      <a href="../algebra/divisors.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Number of divisors / sum of divisors
+    Số lượng ước số / Tổng các ước số
   
 
     
@@ -1184,7 +1087,7 @@
   <span class="md-ellipsis">
     
   
-    Modular arithmetic
+    Số học mô-đun
   
 
     
@@ -1200,7 +1103,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Modular arithmetic
+    Số học mô-đun
   
 
           </label>
@@ -1213,14 +1116,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/module-inverse.html" class="md-nav__link">
+      <a href="../algebra/module-inverse.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Modular Inverse
+    Nghịch đảo mô-đun
   
 
     
@@ -1241,14 +1144,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/linear_congruence_equation.html" class="md-nav__link">
+      <a href="../algebra/linear_congruence_equation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Linear Congruence Equation
+    Phương trình đồng dư tuyến tính
   
 
     
@@ -1269,14 +1172,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/chinese-remainder-theorem.html" class="md-nav__link">
+      <a href="../algebra/chinese-remainder-theorem.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Chinese Remainder Theorem
+    Định lý thặng dư Trung Hoa
   
 
     
@@ -1297,14 +1200,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/garners-algorithm.html" class="md-nav__link">
+      <a href="../algebra/garners-algorithm.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Garner's Algorithm
+    Thuật toán Garner
   
 
     
@@ -1325,14 +1228,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorial-modulo.html" class="md-nav__link">
+      <a href="../algebra/factorial-modulo.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Factorial modulo p
+    Giai thừa mô-đun p
   
 
     
@@ -1353,14 +1256,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/discrete-log.html" class="md-nav__link">
+      <a href="../algebra/discrete-log.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Discrete Log
+    Logarit rời rạc
   
 
     
@@ -1381,14 +1284,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/primitive-root.html" class="md-nav__link">
+      <a href="../algebra/primitive-root.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Primitive Root
+    Căn nguyên thủy
   
 
     
@@ -1409,14 +1312,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/discrete-root.html" class="md-nav__link">
+      <a href="../algebra/discrete-root.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Discrete Root
+    Căn rời rạc
   
 
     
@@ -1437,14 +1340,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/montgomery_multiplication.html" class="md-nav__link">
+      <a href="../algebra/montgomery_multiplication.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Montgomery Multiplication
+    Phép nhân Montgomery
   
 
     
@@ -1491,7 +1394,7 @@
   <span class="md-ellipsis">
     
   
-    Number systems
+    Hệ cơ số
   
 
     
@@ -1507,7 +1410,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Number systems
+    Hệ cơ số
   
 
           </label>
@@ -1520,14 +1423,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/balanced-ternary.html" class="md-nav__link">
+      <a href="../algebra/balanced-ternary.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Balanced Ternary
+    Hệ tam phân cân bằng
   
 
     
@@ -1548,14 +1451,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/gray-code.html" class="md-nav__link">
+      <a href="../algebra/gray-code.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Gray code
+    Mã Gray
   
 
     
@@ -1602,7 +1505,7 @@
   <span class="md-ellipsis">
     
   
-    Miscellaneous
+    Các thuật toán khác
   
 
     
@@ -1618,7 +1521,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Miscellaneous
+    Các thuật toán khác
   
 
           </label>
@@ -1631,14 +1534,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/bit-manipulation.html" class="md-nav__link">
+      <a href="../algebra/bit-manipulation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Bit manipulation
+    Thao tác bit
   
 
     
@@ -1659,14 +1562,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/all-submasks.html" class="md-nav__link">
+      <a href="../algebra/all-submasks.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Enumerating submasks of a bitmask
+    Duyệt qua các mặt nạ con của một mặt nạ
   
 
     
@@ -1687,14 +1590,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/big-integer.html" class="md-nav__link">
+      <a href="../algebra/big-integer.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Arbitrary-Precision Arithmetic
+    Số học độ chính xác tùy ý (Số lớn)
   
 
     
@@ -1715,14 +1618,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/fft.html" class="md-nav__link">
+      <a href="../algebra/fft.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Fast Fourier transform
+    Biến đổi Fourier nhanh (FFT)
   
 
     
@@ -1743,14 +1646,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/polynomial.html" class="md-nav__link">
+      <a href="../algebra/polynomial.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Operations on polynomials and series
+    Phép toán trên đa thức và chuỗi
   
 
     
@@ -1771,14 +1674,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/continued-fractions.html" class="md-nav__link">
+      <a href="../algebra/continued-fractions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Continued fractions
+    Liên phân số
   
 
     
@@ -1799,14 +1702,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factoring-exp.html" class="md-nav__link">
+      <a href="../algebra/factoring-exp.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Factoring Exponentiation
+    Phân tích giai thừa lũy thừa
   
 
     
@@ -1860,7 +1763,7 @@
   <span class="md-ellipsis">
     
   
-    Data Structures
+    Cấu trúc dữ liệu
   
 
     
@@ -1876,7 +1779,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Data Structures
+    Cấu trúc dữ liệu
   
 
           </label>
@@ -1907,7 +1810,7 @@
   <span class="md-ellipsis">
     
   
-    Fundamentals
+    Cơ bản
   
 
     
@@ -1923,7 +1826,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Fundamentals
+    Cơ bản
   
 
           </label>
@@ -1936,14 +1839,14 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/stack_queue_modification.html" class="md-nav__link">
+      <a href="../data_structures/stack_queue_modification.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Minimum Stack / Minimum Queue
+    Stack nhỏ nhất / Queue nhỏ nhất
   
 
     
@@ -1964,14 +1867,14 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sparse-table.html" class="md-nav__link">
+      <a href="../data_structures/sparse-table.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sparse Table
+    Bảng thưa (Sparse Table)
   
 
     
@@ -2018,7 +1921,7 @@
   <span class="md-ellipsis">
     
   
-    Trees
+    Cây
   
 
     
@@ -2034,7 +1937,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Trees
+    Cây
   
 
           </label>
@@ -2047,14 +1950,14 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/disjoint_set_union.html" class="md-nav__link">
+      <a href="../data_structures/disjoint_set_union.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Disjoint Set Union
+    Các tập hợp rời nhau (DSU)
   
 
     
@@ -2075,14 +1978,14 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/fenwick.html" class="md-nav__link">
+      <a href="../data_structures/fenwick.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Fenwick Tree
+    Cây Fenwick (BIT)
   
 
     
@@ -2103,14 +2006,14 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sqrt_decomposition.html" class="md-nav__link">
+      <a href="../data_structures/sqrt_decomposition.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sqrt Decomposition
+    Phân rã căn bậc hai (Sqrt Decomposition)
   
 
     
@@ -2131,14 +2034,14 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/segment_tree.html" class="md-nav__link">
+      <a href="../data_structures/segment_tree.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Segment Tree
+    Cây phân đoạn (Segment Tree)
   
 
     
@@ -2159,14 +2062,14 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/treap.html" class="md-nav__link">
+      <a href="../data_structures/treap.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Treap
+    Cây Treap
   
 
     
@@ -2187,14 +2090,14 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sqrt-tree.html" class="md-nav__link">
+      <a href="../data_structures/sqrt-tree.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sqrt Tree
+    Cây Sqrt (Sqrt Tree)
   
 
     
@@ -2215,14 +2118,14 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/randomized_heap.html" class="md-nav__link">
+      <a href="../data_structures/randomized_heap.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Randomized Heap
+    Heap ngẫu nhiên hóa (Randomized Heap)
   
 
     
@@ -2269,7 +2172,7 @@
   <span class="md-ellipsis">
     
   
-    Advanced
+    Nâng cao
   
 
     
@@ -2285,7 +2188,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Advanced
+    Nâng cao
   
 
           </label>
@@ -2298,14 +2201,14 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/deleting_in_log_n.html" class="md-nav__link">
+      <a href="../data_structures/deleting_in_log_n.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Deleting from a data structure in O(T(n) log n)
+    Xóa khỏi cấu trúc dữ liệu trong O(T(n) log n)
   
 
     
@@ -2359,7 +2262,7 @@
   <span class="md-ellipsis">
     
   
-    Dynamic Programming
+    Quy hoạch động
   
 
     
@@ -2375,7 +2278,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Dynamic Programming
+    Quy hoạch động
   
 
           </label>
@@ -2388,14 +2291,14 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/intro-to-dp.html" class="md-nav__link">
+      <a href="../dynamic_programming/intro-to-dp.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Introduction to Dynamic Programming
+    Giới thiệu về Quy hoạch động
   
 
     
@@ -2416,14 +2319,14 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/knapsack.html" class="md-nav__link">
+      <a href="../dynamic_programming/knapsack.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Knapsack Problem
+    Bài toán Balo
   
 
     
@@ -2444,14 +2347,14 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/longest_increasing_subsequence.html" class="md-nav__link">
+      <a href="../dynamic_programming/longest_increasing_subsequence.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Longest increasing subsequence
+    Dãy con tăng dài nhất (LIS)
   
 
     
@@ -2490,7 +2393,7 @@
   <span class="md-ellipsis">
     
   
-    DP optimizations
+    Tối ưu hóa Quy hoạch động
   
 
     
@@ -2506,7 +2409,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    DP optimizations
+    Tối ưu hóa Quy hoạch động
   
 
           </label>
@@ -2519,14 +2422,14 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/divide-and-conquer-dp.html" class="md-nav__link">
+      <a href="../dynamic_programming/divide-and-conquer-dp.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Divide and Conquer DP
+    Quy hoạch động chia để trị
   
 
     
@@ -2547,14 +2450,14 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/knuth-optimization.html" class="md-nav__link">
+      <a href="../dynamic_programming/knuth-optimization.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Knuth's Optimization
+    Tối ưu hóa Knuth
   
 
     
@@ -2601,7 +2504,7 @@
   <span class="md-ellipsis">
     
   
-    Tasks
+    Bài tập
   
 
     
@@ -2617,7 +2520,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Tasks
+    Bài tập
   
 
           </label>
@@ -2630,14 +2533,14 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/profile-dynamics.html" class="md-nav__link">
+      <a href="../dynamic_programming/profile-dynamics.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dynamic Programming on Broken Profile. Problem "Parquet"
+    Quy hoạch động cấu hình (Broken Profile DP). Bài toán "Parquet"
   
 
     
@@ -2658,14 +2561,14 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/zero_matrix.html" class="md-nav__link">
+      <a href="../dynamic_programming/zero_matrix.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Finding the largest zero submatrix
+    Tìm ma trận con toàn số 0 lớn nhất
   
 
     
@@ -2698,18 +2601,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -2719,7 +2624,7 @@
   <span class="md-ellipsis">
     
   
-    String Processing
+    Xử lý chuỗi
   
 
     
@@ -2730,12 +2635,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    String Processing
+    Xử lý chuỗi
   
 
           </label>
@@ -2766,7 +2671,7 @@
   <span class="md-ellipsis">
     
   
-    Fundamentals
+    Cơ bản
   
 
     
@@ -2782,7 +2687,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Fundamentals
+    Cơ bản
   
 
           </label>
@@ -2795,14 +2700,14 @@
   
   
     <li class="md-nav__item">
-      <a href="string/string-hashing.html" class="md-nav__link">
+      <a href="string-hashing.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    String Hashing
+    Băm chuỗi (String Hashing)
   
 
     
@@ -2823,14 +2728,14 @@
   
   
     <li class="md-nav__item">
-      <a href="string/rabin-karp.html" class="md-nav__link">
+      <a href="rabin-karp.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Rabin-Karp for String Matching
+    Thuật toán Rabin-Karp tìm kiếm chuỗi
   
 
     
@@ -2851,14 +2756,14 @@
   
   
     <li class="md-nav__item">
-      <a href="string/prefix-function.html" class="md-nav__link">
+      <a href="prefix-function.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Prefix function - Knuth-Morris-Pratt
+    Hàm tiền tố - Thuật toán KMP
   
 
     
@@ -2879,14 +2784,14 @@
   
   
     <li class="md-nav__item">
-      <a href="string/z-function.html" class="md-nav__link">
+      <a href="z-function.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Z-function
+    Hàm Z (Z-function)
   
 
     
@@ -2907,14 +2812,14 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-array.html" class="md-nav__link">
+      <a href="suffix-array.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Suffix Array
+    Mảng hậu tố (Suffix Array)
   
 
     
@@ -2935,14 +2840,14 @@
   
   
     <li class="md-nav__item">
-      <a href="string/aho_corasick.html" class="md-nav__link">
+      <a href="aho_corasick.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Aho-Corasick algorithm
+    Thuật toán Aho-Corasick
   
 
     
@@ -2989,7 +2894,7 @@
   <span class="md-ellipsis">
     
   
-    Advanced
+    Nâng cao
   
 
     
@@ -3005,7 +2910,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Advanced
+    Nâng cao
   
 
           </label>
@@ -3018,14 +2923,14 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-tree-ukkonen.html" class="md-nav__link">
+      <a href="suffix-tree-ukkonen.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Suffix Tree
+    Cây hậu tố (Suffix Tree Ukkonen)
   
 
     
@@ -3046,14 +2951,14 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-automaton.html" class="md-nav__link">
+      <a href="suffix-automaton.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Suffix Automaton
+    Tự động động hậu tố (Suffix Automaton)
   
 
     
@@ -3074,14 +2979,14 @@
   
   
     <li class="md-nav__item">
-      <a href="string/lyndon_factorization.html" class="md-nav__link">
+      <a href="lyndon_factorization.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lyndon factorization
+    Phân rã Lyndon
   
 
     
@@ -3107,18 +3012,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -3128,7 +3035,7 @@
   <span class="md-ellipsis">
     
   
-    Tasks
+    Bài tập
   
 
     
@@ -3139,12 +3046,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Tasks
+    Bài tập
   
 
           </label>
@@ -3157,14 +3064,14 @@
   
   
     <li class="md-nav__item">
-      <a href="string/expression_parsing.html" class="md-nav__link">
+      <a href="expression_parsing.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Expression parsing
+    Phân tích cú pháp biểu thức
   
 
     
@@ -3182,17 +3089,44 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="string/manacher.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Thuật toán Manacher - Tìm tất cả chuỗi đối xứng con trong O(N)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="manacher.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Manacher's Algorithm - Finding all sub-palindromes in O(N)
+    Thuật toán Manacher - Tìm tất cả chuỗi đối xứng con trong O(N)
   
 
     
@@ -3201,6 +3135,125 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-precise-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More precise statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trivial-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trivial algorithm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manachers-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manacher's algorithm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complexity-of-manachers-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complexity of Manacher's algorithm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-of-manachers-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation of Manacher's algorithm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-parities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working with parities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problems
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3213,14 +3266,14 @@
   
   
     <li class="md-nav__item">
-      <a href="string/main_lorentz.html" class="md-nav__link">
+      <a href="main_lorentz.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Finding repetitions
+    Tìm lặp chuỗi
   
 
     
@@ -3274,7 +3327,7 @@
   <span class="md-ellipsis">
     
   
-    Linear Algebra
+    Đại số tuyến tính
   
 
     
@@ -3290,7 +3343,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Linear Algebra
+    Đại số tuyến tính
   
 
           </label>
@@ -3321,7 +3374,7 @@
   <span class="md-ellipsis">
     
   
-    Matrices
+    Ma trận
   
 
     
@@ -3337,7 +3390,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Matrices
+    Ma trận
   
 
           </label>
@@ -3350,14 +3403,14 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/linear-system-gauss.html" class="md-nav__link">
+      <a href="../linear_algebra/linear-system-gauss.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Gauss & System of Linear Equations
+    Khử Gauss và Hệ phương trình tuyến tính
   
 
     
@@ -3378,14 +3431,14 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/determinant-gauss.html" class="md-nav__link">
+      <a href="../linear_algebra/determinant-gauss.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Gauss & Determinant
+    Khử Gauss và Định thức
   
 
     
@@ -3406,14 +3459,14 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/determinant-kraut.html" class="md-nav__link">
+      <a href="../linear_algebra/determinant-kraut.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Kraut & Determinant
+    Thuật toán Kraut và Định thức
   
 
     
@@ -3434,14 +3487,14 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/rank-matrix.html" class="md-nav__link">
+      <a href="../linear_algebra/rank-matrix.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Rank of a matrix
+    Hạng của ma trận
   
 
     
@@ -3495,7 +3548,7 @@
   <span class="md-ellipsis">
     
   
-    Combinatorics
+    Tổ hợp
   
 
     
@@ -3511,7 +3564,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Combinatorics
+    Tổ hợp
   
 
           </label>
@@ -3542,7 +3595,7 @@
   <span class="md-ellipsis">
     
   
-    Fundamentals
+    Cơ bản
   
 
     
@@ -3558,7 +3611,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Fundamentals
+    Cơ bản
   
 
           </label>
@@ -3571,14 +3624,14 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorial-divisors.html" class="md-nav__link">
+      <a href="../algebra/factorial-divisors.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Finding Power of Factorial Divisor
+    Tìm số mũ của ước giai thừa
   
 
     
@@ -3599,14 +3652,14 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/binomial-coefficients.html" class="md-nav__link">
+      <a href="../combinatorics/binomial-coefficients.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Binomial Coefficients
+    Hệ số nhị thức
   
 
     
@@ -3627,14 +3680,14 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/catalan-numbers.html" class="md-nav__link">
+      <a href="../combinatorics/catalan-numbers.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Catalan Numbers
+    Số Catalan
   
 
     
@@ -3681,7 +3734,7 @@
   <span class="md-ellipsis">
     
   
-    Techniques
+    Kỹ thuật
   
 
     
@@ -3697,7 +3750,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Techniques
+    Kỹ thuật
   
 
           </label>
@@ -3710,14 +3763,14 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/inclusion-exclusion.html" class="md-nav__link">
+      <a href="../combinatorics/inclusion-exclusion.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    The Inclusion-Exclusion Principle
+    Nguyên lý bù trừ (Inclusion-Exclusion)
   
 
     
@@ -3738,14 +3791,14 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/burnside.html" class="md-nav__link">
+      <a href="../combinatorics/burnside.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Burnside's lemma / Pólya enumeration theorem
+    Bổ đề Burnside / Định lý đếm Pólya
   
 
     
@@ -3766,14 +3819,14 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/stars_and_bars.html" class="md-nav__link">
+      <a href="../combinatorics/stars_and_bars.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Stars and bars
+    Bài toán chia kẹo (Stars and Bars)
   
 
     
@@ -3794,14 +3847,14 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/generating_combinations.html" class="md-nav__link">
+      <a href="../combinatorics/generating_combinations.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Generating all K-combinations
+    Sinh tất cả các tổ hợp chập K
   
 
     
@@ -3848,7 +3901,7 @@
   <span class="md-ellipsis">
     
   
-    Tasks
+    Bài tập
   
 
     
@@ -3864,7 +3917,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Tasks
+    Bài tập
   
 
           </label>
@@ -3877,14 +3930,14 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/bishops-on-chessboard.html" class="md-nav__link">
+      <a href="../combinatorics/bishops-on-chessboard.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Placing Bishops on a Chessboard
+    Đặt Tượng trên bàn cờ
   
 
     
@@ -3905,14 +3958,14 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/bracket_sequences.html" class="md-nav__link">
+      <a href="../combinatorics/bracket_sequences.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Balanced bracket sequences
+    Dãy ngoặc đúng
   
 
     
@@ -3933,14 +3986,14 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/counting_labeled_graphs.html" class="md-nav__link">
+      <a href="../combinatorics/counting_labeled_graphs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Counting labeled graphs
+    Đếm đồ thị được gắn nhãn
   
 
     
@@ -3994,7 +4047,7 @@
   <span class="md-ellipsis">
     
   
-    Numerical Methods
+    Phương pháp số
   
 
     
@@ -4010,7 +4063,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Numerical Methods
+    Phương pháp số
   
 
           </label>
@@ -4041,7 +4094,7 @@
   <span class="md-ellipsis">
     
   
-    Search
+    Tìm kiếm
   
 
     
@@ -4057,7 +4110,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Search
+    Tìm kiếm
   
 
           </label>
@@ -4070,14 +4123,14 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/binary_search.html" class="md-nav__link">
+      <a href="../num_methods/binary_search.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Binary Search
+    Tìm kiếm nhị phân
   
 
     
@@ -4098,14 +4151,14 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/ternary_search.html" class="md-nav__link">
+      <a href="../num_methods/ternary_search.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Ternary Search
+    Tìm kiếm tam phân
   
 
     
@@ -4126,14 +4179,14 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/roots_newton.html" class="md-nav__link">
+      <a href="../num_methods/roots_newton.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Newton's method for finding roots
+    Phương pháp Newton tìm nghiệm
   
 
     
@@ -4154,14 +4207,14 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/simulated_annealing.html" class="md-nav__link">
+      <a href="../num_methods/simulated_annealing.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Simulated Annealing
+    Thuật toán luyện kim (Simulated Annealing)
   
 
     
@@ -4208,7 +4261,7 @@
   <span class="md-ellipsis">
     
   
-    Integration
+    Tích phân
   
 
     
@@ -4224,7 +4277,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Integration
+    Tích phân
   
 
           </label>
@@ -4237,14 +4290,14 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/simpson-integration.html" class="md-nav__link">
+      <a href="../num_methods/simpson-integration.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Integration by Simpson's formula
+    Tính tích phân bằng công thức Simpson
   
 
     
@@ -4298,7 +4351,7 @@
   <span class="md-ellipsis">
     
   
-    Geometry
+    Hình học
   
 
     
@@ -4314,7 +4367,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Geometry
+    Hình học
   
 
           </label>
@@ -4345,7 +4398,7 @@
   <span class="md-ellipsis">
     
   
-    Elementary operations
+    Phép toán cơ bản
   
 
     
@@ -4361,7 +4414,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Elementary operations
+    Phép toán cơ bản
   
 
           </label>
@@ -4374,14 +4427,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/basic-geometry.html" class="md-nav__link">
+      <a href="../geometry/basic-geometry.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Basic Geometry
+    Hình học cơ bản
   
 
     
@@ -4402,14 +4455,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/segment-to-line.html" class="md-nav__link">
+      <a href="../geometry/segment-to-line.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Finding the equation of a line for a segment
+    Tìm phương trình đường thẳng chứa đoạn thẳng
   
 
     
@@ -4430,14 +4483,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/lines-intersection.html" class="md-nav__link">
+      <a href="../geometry/lines-intersection.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Intersection Point of Lines
+    Giao điểm của các đường thẳng
   
 
     
@@ -4458,14 +4511,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/check-segments-intersection.html" class="md-nav__link">
+      <a href="../geometry/check-segments-intersection.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Check if two segments intersect
+    Kiểm tra hai đoạn thẳng có giao nhau không
   
 
     
@@ -4486,14 +4539,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/segments-intersection.html" class="md-nav__link">
+      <a href="../geometry/segments-intersection.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Intersection of Segments
+    Giao điểm của các đoạn thẳng
   
 
     
@@ -4514,14 +4567,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/circle-line-intersection.html" class="md-nav__link">
+      <a href="../geometry/circle-line-intersection.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Circle-Line Intersection
+    Giao điểm của đường thẳng và đường tròn
   
 
     
@@ -4542,14 +4595,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/circle-circle-intersection.html" class="md-nav__link">
+      <a href="../geometry/circle-circle-intersection.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Circle-Circle Intersection
+    Giao điểm của hai đường tròn
   
 
     
@@ -4570,14 +4623,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/tangents-to-two-circles.html" class="md-nav__link">
+      <a href="../geometry/tangents-to-two-circles.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Common tangents to two circles
+    Tiếp tuyến chung của hai đường tròn
   
 
     
@@ -4598,14 +4651,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/length-of-segments-union.html" class="md-nav__link">
+      <a href="../geometry/length-of-segments-union.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Length of the union of segments
+    Độ dài hợp các đoạn thẳng
   
 
     
@@ -4652,7 +4705,7 @@
   <span class="md-ellipsis">
     
   
-    Polygons
+    Đa giác
   
 
     
@@ -4668,7 +4721,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Polygons
+    Đa giác
   
 
           </label>
@@ -4681,14 +4734,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/oriented-triangle-area.html" class="md-nav__link">
+      <a href="../geometry/oriented-triangle-area.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Oriented area of a triangle
+    Diện tích có hướng của tam giác
   
 
     
@@ -4709,14 +4762,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/area-of-simple-polygon.html" class="md-nav__link">
+      <a href="../geometry/area-of-simple-polygon.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Area of simple polygon
+    Diện tích đa giác đơn
   
 
     
@@ -4737,14 +4790,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/point-in-convex-polygon.html" class="md-nav__link">
+      <a href="../geometry/point-in-convex-polygon.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Check if points belong to the convex polygon in O(log N)
+    Kiểm tra điểm thuộc đa giác lồi trong O(log N)
   
 
     
@@ -4765,14 +4818,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/minkowski.html" class="md-nav__link">
+      <a href="../geometry/minkowski.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Minkowski sum of convex polygons
+    Tổng Minkowski của các đa giác lồi
   
 
     
@@ -4793,14 +4846,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/picks-theorem.html" class="md-nav__link">
+      <a href="../geometry/picks-theorem.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Pick's Theorem - area of lattice polygons
+    Định lý Pick - Diện tích đa giác lưới
   
 
     
@@ -4821,14 +4874,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/lattice-points.html" class="md-nav__link">
+      <a href="../geometry/lattice-points.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lattice points of non-lattice polygon
+    Điểm lưới của đa giác không phải đa giác lưới
   
 
     
@@ -4875,7 +4928,7 @@
   <span class="md-ellipsis">
     
   
-    Convex hull
+    Bao lồi
   
 
     
@@ -4891,7 +4944,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Convex hull
+    Bao lồi
   
 
           </label>
@@ -4904,14 +4957,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/convex-hull.html" class="md-nav__link">
+      <a href="../geometry/convex-hull.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Convex hull construction
+    Dựng bao lồi
   
 
     
@@ -4932,14 +4985,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/convex_hull_trick.html" class="md-nav__link">
+      <a href="../geometry/convex_hull_trick.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Convex hull trick and Li Chao tree
+    Kỹ thuật bao lồi và Cây Li Chao
   
 
     
@@ -4986,7 +5039,7 @@
   <span class="md-ellipsis">
     
   
-    Sweep-line
+    Đường quét
   
 
     
@@ -5002,7 +5055,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Sweep-line
+    Đường quét
   
 
           </label>
@@ -5015,14 +5068,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/intersecting_segments.html" class="md-nav__link">
+      <a href="../geometry/intersecting_segments.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Search for a pair of intersecting segments
+    Tìm cặp đoạn thẳng giao nhau
   
 
     
@@ -5069,7 +5122,7 @@
   <span class="md-ellipsis">
     
   
-    Planar graphs
+    Đồ thị phẳng
   
 
     
@@ -5085,7 +5138,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Planar graphs
+    Đồ thị phẳng
   
 
           </label>
@@ -5098,14 +5151,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/planar.html" class="md-nav__link">
+      <a href="../geometry/planar.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Finding faces of a planar graph
+    Tìm các mặt của đồ thị phẳng
   
 
     
@@ -5126,14 +5179,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/point-location.html" class="md-nav__link">
+      <a href="../geometry/point-location.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Point location in O(log N)
+    Xác định vị trí điểm trong O(log N)
   
 
     
@@ -5180,7 +5233,7 @@
   <span class="md-ellipsis">
     
   
-    Miscellaneous
+    Các thuật toán khác
   
 
     
@@ -5196,7 +5249,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Miscellaneous
+    Các thuật toán khác
   
 
           </label>
@@ -5209,14 +5262,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/nearest_points.html" class="md-nav__link">
+      <a href="../geometry/nearest_points.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Finding the nearest pair of points
+    Tìm cặp điểm gần nhất
   
 
     
@@ -5237,14 +5290,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/delaunay.html" class="md-nav__link">
+      <a href="../geometry/delaunay.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Delaunay triangulation and Voronoi diagram
+    Tam giác hóa Delaunay và Sơ đồ Voronoi
   
 
     
@@ -5265,14 +5318,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/vertical_decomposition.html" class="md-nav__link">
+      <a href="../geometry/vertical_decomposition.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Vertical decomposition
+    Phân rã thẳng đứng
   
 
     
@@ -5293,14 +5346,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/halfplane-intersection.html" class="md-nav__link">
+      <a href="../geometry/halfplane-intersection.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Half-plane intersection - S&I Algorithm in O(N log N)
+    Giao các nửa mặt phẳng - Thuật toán S&I trong O(N log N)
   
 
     
@@ -5321,14 +5374,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/manhattan-distance.html" class="md-nav__link">
+      <a href="../geometry/manhattan-distance.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Manhattan Distance
+    Khoảng cách Manhattan
   
 
     
@@ -5349,14 +5402,14 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/enclosing-circle.html" class="md-nav__link">
+      <a href="../geometry/enclosing-circle.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Minimum Enclosing Circle
+    Đường tròn bao nhỏ nhất
   
 
     
@@ -5410,7 +5463,7 @@
   <span class="md-ellipsis">
     
   
-    Graphs
+    Đồ thị
   
 
     
@@ -5426,7 +5479,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Graphs
+    Đồ thị
   
 
           </label>
@@ -5457,7 +5510,7 @@
   <span class="md-ellipsis">
     
   
-    Graph traversal
+    Duyệt đồ thị
   
 
     
@@ -5473,7 +5526,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Graph traversal
+    Duyệt đồ thị
   
 
           </label>
@@ -5486,14 +5539,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/breadth-first-search.html" class="md-nav__link">
+      <a href="../graph/breadth-first-search.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Breadth First Search
+    Tìm kiếm theo chiều rộng (BFS)
   
 
     
@@ -5514,14 +5567,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/depth-first-search.html" class="md-nav__link">
+      <a href="../graph/depth-first-search.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Depth First Search
+    Tìm kiếm theo chiều sâu (DFS)
   
 
     
@@ -5568,7 +5621,7 @@
   <span class="md-ellipsis">
     
   
-    Connected components, bridges, articulations points
+    Thành phần liên thông, cầu, khớp
   
 
     
@@ -5584,7 +5637,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Connected components, bridges, articulations points
+    Thành phần liên thông, cầu, khớp
   
 
           </label>
@@ -5597,14 +5650,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/search-for-connected-components.html" class="md-nav__link">
+      <a href="../graph/search-for-connected-components.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Finding Connected Components
+    Tìm các thành phần liên thông
   
 
     
@@ -5625,14 +5678,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bridge-searching.html" class="md-nav__link">
+      <a href="../graph/bridge-searching.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Finding Bridges in O(N+M)
+    Tìm cầu trong O(N+M)
   
 
     
@@ -5653,14 +5706,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bridge-searching-online.html" class="md-nav__link">
+      <a href="../graph/bridge-searching-online.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Finding Bridges Online
+    Tìm cầu trực tuyến (Online)
   
 
     
@@ -5681,14 +5734,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/cutpoints.html" class="md-nav__link">
+      <a href="../graph/cutpoints.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Finding Articulation Points in O(N+M)
+    Tìm khớp (đỉnh cắt) trong O(N+M)
   
 
     
@@ -5709,14 +5762,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/strongly-connected-components.html" class="md-nav__link">
+      <a href="../graph/strongly-connected-components.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Strongly Connected Components and Condensation Graph
+    Thành phần liên thông mạnh và Đồ thị ngưng tụ
   
 
     
@@ -5737,14 +5790,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/strong-orientation.html" class="md-nav__link">
+      <a href="../graph/strong-orientation.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Strong Orientation
+    Định hướng mạnh
   
 
     
@@ -5791,7 +5844,7 @@
   <span class="md-ellipsis">
     
   
-    Single-source shortest paths
+    Đường đi ngắn nhất từ một nguồn
   
 
     
@@ -5807,7 +5860,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Single-source shortest paths
+    Đường đi ngắn nhất từ một nguồn
   
 
           </label>
@@ -5820,14 +5873,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dijkstra.html" class="md-nav__link">
+      <a href="../graph/dijkstra.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dijkstra - finding shortest paths from given vertex
+    Thuật toán Dijkstra tìm đường đi ngắn nhất
   
 
     
@@ -5848,14 +5901,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dijkstra_sparse.html" class="md-nav__link">
+      <a href="../graph/dijkstra_sparse.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dijkstra on sparse graphs
+    Thuật toán Dijkstra trên đồ thị thưa
   
 
     
@@ -5876,14 +5929,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bellman_ford.html" class="md-nav__link">
+      <a href="../graph/bellman_ford.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Bellman-Ford - finding shortest paths with negative weights
+    Thuật toán Bellman-Ford tìm đường đi ngắn nhất có trọng số âm
   
 
     
@@ -5904,14 +5957,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/01_bfs.html" class="md-nav__link">
+      <a href="../graph/01_bfs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    0-1 BFS
+    BFS 0-1
   
 
     
@@ -5932,14 +5985,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/desopo_pape.html" class="md-nav__link">
+      <a href="../graph/desopo_pape.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    D´Esopo-Pape algorithm
+    Thuật toán D´Esopo-Pape
   
 
     
@@ -5986,7 +6039,7 @@
   <span class="md-ellipsis">
     
   
-    All-pairs shortest paths
+    Đường đi ngắn nhất giữa mọi cặp đỉnh
   
 
     
@@ -6002,7 +6055,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    All-pairs shortest paths
+    Đường đi ngắn nhất giữa mọi cặp đỉnh
   
 
           </label>
@@ -6015,14 +6068,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/all-pair-shortest-path-floyd-warshall.html" class="md-nav__link">
+      <a href="../graph/all-pair-shortest-path-floyd-warshall.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Floyd-Warshall - finding all shortest paths
+    Thuật toán Floyd-Warshall tìm đường đi ngắn nhất
   
 
     
@@ -6043,14 +6096,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/fixed_length_paths.html" class="md-nav__link">
+      <a href="../graph/fixed_length_paths.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Number of paths of fixed length / Shortest paths of fixed length
+    Số lượng đường đi độ dài cố định / Đường đi ngắn nhất độ dài cố định
   
 
     
@@ -6097,7 +6150,7 @@
   <span class="md-ellipsis">
     
   
-    Spanning trees
+    Cây khung
   
 
     
@@ -6113,7 +6166,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Spanning trees
+    Cây khung
   
 
           </label>
@@ -6126,14 +6179,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_prim.html" class="md-nav__link">
+      <a href="../graph/mst_prim.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Minimum Spanning Tree - Prim's Algorithm
+    Cây khung nhỏ nhất - Thuật toán Prim
   
 
     
@@ -6154,14 +6207,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_kruskal.html" class="md-nav__link">
+      <a href="../graph/mst_kruskal.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Minimum Spanning Tree - Kruskal
+    Cây khung nhỏ nhất - Thuật toán Kruskal
   
 
     
@@ -6182,14 +6235,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_kruskal_with_dsu.html" class="md-nav__link">
+      <a href="../graph/mst_kruskal_with_dsu.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Minimum Spanning Tree - Kruskal with Disjoint Set Union
+    Cây khung nhỏ nhất - Kruskal dùng DSU
   
 
     
@@ -6210,14 +6263,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/second_best_mst.html" class="md-nav__link">
+      <a href="../graph/second_best_mst.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Second best Minimum Spanning Tree - Using Kruskal and Lowest Common Ancestor
+    Cây khung nhỏ nhất thứ hai
   
 
     
@@ -6238,14 +6291,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/kirchhoff-theorem.html" class="md-nav__link">
+      <a href="../graph/kirchhoff-theorem.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Kirchhoff Theorem
+    Định lý Kirchhoff (Đếm số lượng cây khung)
   
 
     
@@ -6266,14 +6319,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/pruefer_code.html" class="md-nav__link">
+      <a href="../graph/pruefer_code.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Prüfer code
+    Mã Prüfer
   
 
     
@@ -6320,7 +6373,7 @@
   <span class="md-ellipsis">
     
   
-    Cycles
+    Chu trình
   
 
     
@@ -6336,7 +6389,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Cycles
+    Chu trình
   
 
           </label>
@@ -6349,14 +6402,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/finding-cycle.html" class="md-nav__link">
+      <a href="../graph/finding-cycle.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Checking a graph for acyclicity and finding a cycle in O(M)
+    Kiểm tra đồ thị không chu trình và tìm chu trình trong O(M)
   
 
     
@@ -6377,14 +6430,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/finding-negative-cycle-in-graph.html" class="md-nav__link">
+      <a href="../graph/finding-negative-cycle-in-graph.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Finding a Negative Cycle in the Graph
+    Tìm chu trình âm trong đồ thị
   
 
     
@@ -6405,14 +6458,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/euler_path.html" class="md-nav__link">
+      <a href="../graph/euler_path.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Eulerian Path
+    Đường đi Euler / Chu trình Euler
   
 
     
@@ -6459,7 +6512,7 @@
   <span class="md-ellipsis">
     
   
-    Lowest common ancestor
+    Tổ tiên chung gần nhất
   
 
     
@@ -6475,7 +6528,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Lowest common ancestor
+    Tổ tiên chung gần nhất
   
 
           </label>
@@ -6488,14 +6541,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca.html" class="md-nav__link">
+      <a href="../graph/lca.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lowest Common Ancestor
+    Tổ tiên chung gần nhất (LCA)
   
 
     
@@ -6516,14 +6569,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_binary_lifting.html" class="md-nav__link">
+      <a href="../graph/lca_binary_lifting.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lowest Common Ancestor - Binary Lifting
+    LCA - Nâng nhị phân (Binary Lifting)
   
 
     
@@ -6544,14 +6597,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_farachcoltonbender.html" class="md-nav__link">
+      <a href="../graph/lca_farachcoltonbender.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lowest Common Ancestor - Farach-Colton and Bender algorithm
+    LCA - Thuật toán Farach-Colton và Bender
   
 
     
@@ -6572,14 +6625,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/rmq_linear.html" class="md-nav__link">
+      <a href="../graph/rmq_linear.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Solve RMQ by finding LCA
+    Giải RMQ bằng cách tìm LCA
   
 
     
@@ -6600,14 +6653,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_tarjan.html" class="md-nav__link">
+      <a href="../graph/lca_tarjan.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Lowest Common Ancestor - Tarjan's off-line algorithm
+    LCA - Thuật toán ngoại tuyến Tarjan
   
 
     
@@ -6654,7 +6707,7 @@
   <span class="md-ellipsis">
     
   
-    Flows and related problems
+    Luồng và các bài toán liên quan
   
 
     
@@ -6670,7 +6723,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Flows and related problems
+    Luồng và các bài toán liên quan
   
 
           </label>
@@ -6683,14 +6736,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/edmonds_karp.html" class="md-nav__link">
+      <a href="../graph/edmonds_karp.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Maximum flow - Ford-Fulkerson and Edmonds-Karp
+    Luồng cực đại - Ford-Fulkerson và Edmonds-Karp
   
 
     
@@ -6711,14 +6764,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/push-relabel.html" class="md-nav__link">
+      <a href="../graph/push-relabel.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Maximum flow - Push-relabel algorithm
+    Luồng cực đại - Thuật toán nhãn đẩy (Push-relabel)
   
 
     
@@ -6739,14 +6792,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/push-relabel-faster.html" class="md-nav__link">
+      <a href="../graph/push-relabel-faster.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Maximum flow - Push-relabel algorithm improved
+    Luồng cực đại - Cải tiến thuật toán nhãn đẩy
   
 
     
@@ -6767,14 +6820,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dinic.html" class="md-nav__link">
+      <a href="../graph/dinic.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Maximum flow - Dinic's algorithm
+    Luồng cực đại - Thuật toán Dinic
   
 
     
@@ -6795,14 +6848,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mpm.html" class="md-nav__link">
+      <a href="../graph/mpm.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Maximum flow - MPM algorithm
+    Luồng cực đại - Thuật toán MPM
   
 
     
@@ -6823,14 +6876,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/flow_with_demands.html" class="md-nav__link">
+      <a href="../graph/flow_with_demands.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Flows with demands
+    Luồng có yêu cầu (Flows with demands)
   
 
     
@@ -6851,14 +6904,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/min_cost_flow.html" class="md-nav__link">
+      <a href="../graph/min_cost_flow.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Minimum-cost flow
+    Luồng chi phí tối thiểu
   
 
     
@@ -6879,14 +6932,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/Assignment-problem-min-flow.html" class="md-nav__link">
+      <a href="../graph/Assignment-problem-min-flow.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Assignment problem
+    Bài toán phân công (Assignment Problem)
   
 
     
@@ -6907,14 +6960,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/stoer_wagner_mincut.html" class="md-nav__link">
+      <a href="../graph/stoer_wagner_mincut.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Minimum cut - Stoer-Wagner algorithm
+    Lát cắt cực tiểu - Thuật toán Stoer-Wagner
   
 
     
@@ -6961,7 +7014,7 @@
   <span class="md-ellipsis">
     
   
-    Matchings and related problems
+    Cặp ghép và các bài toán liên quan
   
 
     
@@ -6977,7 +7030,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Matchings and related problems
+    Cặp ghép và các bài toán liên quan
   
 
           </label>
@@ -6990,14 +7043,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bipartite-check.html" class="md-nav__link">
+      <a href="../graph/bipartite-check.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Bipartite Graph Check
+    Kiểm tra đồ thị hai phía
   
 
     
@@ -7018,14 +7071,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/kuhn_maximum_bipartite_matching.html" class="md-nav__link">
+      <a href="../graph/kuhn_maximum_bipartite_matching.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Kuhn's Algorithm - Maximum Bipartite Matching
+    Thuật toán Kuhn - Cặp ghép cực đại trên đồ thị hai phía
   
 
     
@@ -7046,14 +7099,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/hungarian-algorithm.html" class="md-nav__link">
+      <a href="../graph/hungarian-algorithm.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Hungarian Algorithm
+    Thuật toán Hungari
   
 
     
@@ -7100,7 +7153,7 @@
   <span class="md-ellipsis">
     
   
-    Miscellaneous
+    Các thuật toán khác
   
 
     
@@ -7116,7 +7169,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Miscellaneous
+    Các thuật toán khác
   
 
           </label>
@@ -7129,14 +7182,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/topological-sort.html" class="md-nav__link">
+      <a href="../graph/topological-sort.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Topological Sorting
+    Sắp xếp topo (Topological Sorting)
   
 
     
@@ -7157,14 +7210,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/edge_vertex_connectivity.html" class="md-nav__link">
+      <a href="../graph/edge_vertex_connectivity.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Edge connectivity / Vertex connectivity
+    Độ liên thông cạnh / Độ liên thông đỉnh
   
 
     
@@ -7185,14 +7238,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/tree_painting.html" class="md-nav__link">
+      <a href="../graph/tree_painting.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Tree painting
+    Tô màu cây (Tree painting)
   
 
     
@@ -7213,14 +7266,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/2SAT.html" class="md-nav__link">
+      <a href="../graph/2SAT.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2-SAT
+    Bài toán 2-SAT
   
 
     
@@ -7241,14 +7294,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/hld.html" class="md-nav__link">
+      <a href="../graph/hld.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Heavy-light decomposition
+    Phân rã Heavy-Light (HLD)
   
 
     
@@ -7269,14 +7322,14 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/centroid_decomposition.html" class="md-nav__link">
+      <a href="../graph/centroid_decomposition.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Centroid decomposition
+    Phân rã Centroid
   
 
     
@@ -7330,7 +7383,7 @@
   <span class="md-ellipsis">
     
   
-    Miscellaneous
+    Các chủ đề khác
   
 
     
@@ -7346,7 +7399,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Miscellaneous
+    Các chủ đề khác
   
 
           </label>
@@ -7377,7 +7430,7 @@
   <span class="md-ellipsis">
     
   
-    Sequences
+    Dãy số
   
 
     
@@ -7393,7 +7446,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Sequences
+    Dãy số
   
 
           </label>
@@ -7406,14 +7459,14 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/rmq.html" class="md-nav__link">
+      <a href="../sequences/rmq.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    RMQ task (Range Minimum Query - the smallest element in an interval)
+    Bài toán RMQ (Range Minimum Query)
   
 
     
@@ -7434,14 +7487,14 @@
   
   
     <li class="md-nav__item">
-      <a href="others/maximum_average_segment.html" class="md-nav__link">
+      <a href="../others/maximum_average_segment.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Search the subsegment with the maximum/minimum sum
+    Tìm đoạn con có tổng lớn nhất/nhỏ nhất
   
 
     
@@ -7462,14 +7515,14 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/k-th.html" class="md-nav__link">
+      <a href="../sequences/k-th.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    K-th order statistic in O(N)
+    Thống kê thứ tự thứ K trong O(N)
   
 
     
@@ -7490,14 +7543,14 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/mex.html" class="md-nav__link">
+      <a href="../sequences/mex.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    MEX task (Minimal Excluded element in an array)
+    Bài toán MEX (Minimal Excluded Element)
   
 
     
@@ -7544,7 +7597,7 @@
   <span class="md-ellipsis">
     
   
-    Game Theory
+    Lý thuyết trò chơi
   
 
     
@@ -7560,7 +7613,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Game Theory
+    Lý thuyết trò chơi
   
 
           </label>
@@ -7573,14 +7626,14 @@
   
   
     <li class="md-nav__item">
-      <a href="game_theory/games_on_graphs.html" class="md-nav__link">
+      <a href="../game_theory/games_on_graphs.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Games on arbitrary graphs
+    Trò chơi trên đồ thị bất kỳ
   
 
     
@@ -7601,14 +7654,14 @@
   
   
     <li class="md-nav__item">
-      <a href="game_theory/sprague-grundy-nim.html" class="md-nav__link">
+      <a href="../game_theory/sprague-grundy-nim.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Sprague-Grundy theorem. Nim
+    Định lý Sprague-Grundy. Trò chơi Nim
   
 
     
@@ -7655,7 +7708,7 @@
   <span class="md-ellipsis">
     
   
-    Schedules
+    Lập lịch
   
 
     
@@ -7671,7 +7724,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Schedules
+    Lập lịch
   
 
           </label>
@@ -7684,14 +7737,14 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule_one_machine.html" class="md-nav__link">
+      <a href="../schedules/schedule_one_machine.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Scheduling jobs on one machine
+    Lập lịch công việc trên một máy
   
 
     
@@ -7712,14 +7765,14 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule_two_machines.html" class="md-nav__link">
+      <a href="../schedules/schedule_two_machines.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Scheduling jobs on two machines
+    Lập lịch công việc trên hai máy
   
 
     
@@ -7740,14 +7793,14 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule-with-completion-duration.html" class="md-nav__link">
+      <a href="../schedules/schedule-with-completion-duration.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Optimal schedule of jobs given their deadlines and durations
+    Lập lịch tối ưu khi biết hạn chót và thời gian thực hiện
   
 
     
@@ -7794,7 +7847,7 @@
   <span class="md-ellipsis">
     
   
-    Miscellaneous
+    Hỗn hợp
   
 
     
@@ -7810,7 +7863,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Miscellaneous
+    Hỗn hợp
   
 
           </label>
@@ -7823,14 +7876,14 @@
   
   
     <li class="md-nav__item">
-      <a href="others/tortoise_and_hare.html" class="md-nav__link">
+      <a href="../others/tortoise_and_hare.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Tortoise and Hare Algorithm (Linked List cycle detection)
+    Thuật toán Rùa và Thỏ (Phát hiện chu trình trong danh sách liên kết)
   
 
     
@@ -7851,14 +7904,14 @@
   
   
     <li class="md-nav__item">
-      <a href="others/josephus_problem.html" class="md-nav__link">
+      <a href="../others/josephus_problem.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Josephus problem
+    Bài toán Josephus
   
 
     
@@ -7879,14 +7932,14 @@
   
   
     <li class="md-nav__item">
-      <a href="others/15-puzzle.html" class="md-nav__link">
+      <a href="../others/15-puzzle.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15 Puzzle Game: Existence Of The Solution
+    Trò chơi 15 ô số: Sự tồn tại của lời giải
   
 
     
@@ -7907,14 +7960,14 @@
   
   
     <li class="md-nav__item">
-      <a href="others/stern_brocot_tree_farey_sequences.html" class="md-nav__link">
+      <a href="../others/stern_brocot_tree_farey_sequences.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    The Stern-Brocot Tree and Farey Sequences
+    Cây Stern-Brocot và Dãy Farey
   
 
     
@@ -7959,9 +8012,9 @@
                   <script type="text/javascript">
 window.onload = function() {
 	const newIssueURL = "https://github.com/cp-algorithms/cp-algorithms/issues/new";
-  const issueTitle = "Problem on article " + "Main Page";
+  const issueTitle = "Problem on article " + "Thu\u1eadt to\u00e1n Manacher - T\u00ecm t\u1ea5t c\u1ea3 chu\u1ed7i \u0111\u1ed1i x\u1ee9ng con trong O(N)";
 	const issueBody = `
- **Article:** [`+ "Main Page" + `](${window.location.href})
+ **Article:** [`+ "Thu\u1eadt to\u00e1n Manacher - T\u00ecm t\u1ea5t c\u1ea3 chu\u1ed7i \u0111\u1ed1i x\u1ee9ng con trong O(N)" + `](${window.location.href})
 
 **Problem:**
 <!--
@@ -7973,13 +8026,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/index.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/string/manacher.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/index.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/string/manacher.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8003,6 +8056,54 @@ Describe the issue of this article in detail.
   
   
 
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
 
 
 
@@ -8011,73 +8112,177 @@ Describe the issue of this article in detail.
 
 <!-- Tags -->
 
+  
+  
+  
+    
+  
+
+
+  
+    <a href="../tags.html#tag:translated" class="md-tag">
+      Translated
+    </a>
+  
+
+  
+    <a href="https://e-maxx.ru/algo/palindromes_count" class="md-tag">
+      From: e-maxx.ru
+    </a>
+  
 
 </ul>
 
 
-<h1 id="algorithms-for-competitive-programming">Algorithms for Competitive Programming<a class="headerlink" href="#algorithms-for-competitive-programming" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/cp-algorithms/cp-algorithms/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/pulls"><img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/pulls?q=is%3Apr+is%3Aclosed"><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/actions?query=branch%3Amain+workflow%3Atest"><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/cp-algorithms/cp-algorithms/test.yml" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/wiki/Translation-Progress"><img alt="Translation Progress" src="https://img.shields.io/badge/translation_progress-85.2%25-yellowgreen.svg" /></a></p>
-<p>The goal of this project is to translate the wonderful resource
-<a href="https://e-maxx.ru/algo">https://e-maxx.ru/algo</a> which provides descriptions of many algorithms
-and data structures especially popular in field of competitive programming.
-Moreover we want to improve the collected knowledge by extending the articles
-and adding new articles to the collection.</p>
-<p>We're an ad-free, volunteer-run website that's free for everyone. Users can contribute articles or help sponsor bounties on articles for greater algorithmic coverage. Your help is greatly appreciated.</p>
-<p>Compiled pages are published at <a href="https://cp-algorithms.com/">https://cp-algorithms.com/</a>.</p>
-<h2 id="become-a-contributor">Become a Contributor<a class="headerlink" href="#become-a-contributor" title="Permanent link">&para;</a></h2>
+<h1 id="manachers-algorithm-finding-all-sub-palindromes-in-on">Manacher's Algorithm - Finding all sub-palindromes in <span class="arithmatex">$O(N)$</span><a class="headerlink" href="#manachers-algorithm-finding-all-sub-palindromes-in-on" title="Permanent link">&para;</a></h1>
+<h2 id="statement">Statement<a class="headerlink" href="#statement" title="Permanent link">&para;</a></h2>
+<p>Given string <span class="arithmatex">$s$</span> with length <span class="arithmatex">$n$</span>. Find all the pairs <span class="arithmatex">$(i, j)$</span> such that substring <span class="arithmatex">$s[i\dots j]$</span> is a palindrome. String <span class="arithmatex">$t$</span> is a palindrome when <span class="arithmatex">$t = t_{rev}$</span> (<span class="arithmatex">$t_{rev}$</span> is a reversed string for <span class="arithmatex">$t$</span>).</p>
+<h2 id="more-precise-statement">More precise statement<a class="headerlink" href="#more-precise-statement" title="Permanent link">&para;</a></h2>
+<p>In the worst case string might have up to <span class="arithmatex">$O(n^2)$</span> palindromic substrings, and at the first glance it seems that there is no linear algorithm for this problem.</p>
+<p>But the information about the palindromes can be kept <strong>in a compact way</strong>: for each position <span class="arithmatex">$i$</span> we will find the number of non-empty palindromes centered at this position.</p>
+<p>Palindromes with a common center form a contiguous chain, that is if we have a palindrome of length <span class="arithmatex">$l$</span> centered in <span class="arithmatex">$i$</span>, we also have palindromes of lengths <span class="arithmatex">$l-2$</span>, <span class="arithmatex">$l-4$</span> and so on also centered in <span class="arithmatex">$i$</span>. Therefore, we will collect the information about all palindromic substrings in this way.</p>
+<p>Palindromes of odd and even lengths are accounted for separately as <span class="arithmatex">$d_{odd}[i]$</span> and <span class="arithmatex">$d_{even}[i]$</span>. For the palindromes of even length we assume that they're centered in the position <span class="arithmatex">$i$</span> if their two central characters are <span class="arithmatex">$s[i]$</span> and <span class="arithmatex">$s[i-1]$</span>.</p>
+<p>For instance, string <span class="arithmatex">$s = abababc$</span> has three palindromes with odd length with centers in the position <span class="arithmatex">$s[3] = b$</span>, i. e. <span class="arithmatex">$d_{odd}[3] = 3$</span>:</p>
+<div class="arithmatex">$$a\ \overbrace{b\ a\ \underbrace{b}_{s_3}\ a\ b}^{d_{odd}[3]=3} c$$</div>
+<p>And string <span class="arithmatex">$s = cbaabd$</span> has two palindromes with even length with centers in the position <span class="arithmatex">$s[3] = a$</span>, i. e. <span class="arithmatex">$d_{even}[3] = 2$</span>:</p>
+<div class="arithmatex">$$c\ \overbrace{b\ a\ \underbrace{a}_{s_3}\ b}^{d_{even}[3]=2} d$$</div>
+<p>It's a surprising fact that there is an algorithm, which is simple enough, that calculates these "palindromity arrays" <span class="arithmatex">$d_{odd}[]$</span> and <span class="arithmatex">$d_{even}[]$</span> in linear time. The algorithm is described in this article.</p>
+<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
+<p>In general, this problem has many solutions: with <a href="string-hashing.html">String Hashing</a> it can be solved in <span class="arithmatex">$O(n\cdot \log n)$</span>, and with <a href="suffix-tree-ukkonen.html">Suffix Trees</a> and fast LCA this problem can be solved in <span class="arithmatex">$O(n)$</span>.</p>
+<p>But the method described here is <strong>sufficiently</strong> simpler and has less hidden constant in time and memory complexity. This algorithm was discovered by <strong>Glenn K. Manacher</strong> in 1975.</p>
+<p>Another modern way to solve this problem and to deal with palindromes in general is through the so-called palindromic tree, or eertree.</p>
+<h2 id="trivial-algorithm">Trivial algorithm<a class="headerlink" href="#trivial-algorithm" title="Permanent link">&para;</a></h2>
+<p>To avoid ambiguities in the further description we denote what "trivial algorithm" is.</p>
+<p>It's the algorithm that does the following. For each center position <span class="arithmatex">$i$</span> it tries to increase the answer by one as long as it's possible, comparing a pair of corresponding characters each time.</p>
+<p>Such an algorithm is slow, it can calculate the answer only in <span class="arithmatex">$O(n^2)$</span>.</p>
+<p>The implementation of the trivial algorithm is:</p>
+<div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">manacher_odd_trivial</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;$&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;^&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">begin</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Terminal characters <code>$</code> and <code>^</code> were used to avoid dealing with ends of the string separately.</p>
+<h2 id="manachers-algorithm">Manacher's algorithm<a class="headerlink" href="#manachers-algorithm" title="Permanent link">&para;</a></h2>
+<p>We describe the algorithm to find all the sub-palindromes with odd length, i. e. to calculate <span class="arithmatex">$d_{odd}[]$</span>.</p>
+<p>For fast calculation we'll maintain the <strong>exclusive borders <span class="arithmatex">$(l, r)$</span></strong> of the rightmost found (sub-)palindrome (i. e. the current rightmost (sub-)palindrome is <span class="arithmatex">$s[l+1] s[l+2] \dots s[r-1]$</span>). Initially we set <span class="arithmatex">$l = 0, r = 1$</span>, which corresponds to the empty string.</p>
+<p>So, we want to calculate <span class="arithmatex">$d_{odd}[i]$</span> for the next <span class="arithmatex">$i$</span>, and all the previous values in <span class="arithmatex">$d_{odd}[]$</span> have been already calculated. We do the following:</p>
 <ul>
-<li><a href="https://cp-algorithms.com/contrib.html">How to Contribute</a></li>
-<li><a href="https://cp-algorithms.com/code_of_conduct.html">Code of Conduct</a></li>
-<li><a href="https://cp-algorithms.com/preview.html">Test-Your-Page Form</a></li>
+<li>
+<p>If <span class="arithmatex">$i$</span> is outside the current sub-palindrome, i. e. <span class="arithmatex">$i \geq r$</span>, we'll just launch the trivial algorithm.</p>
+<p>So we'll increase <span class="arithmatex">$d_{odd}[i]$</span> consecutively and check each time if the current rightmost substring <span class="arithmatex">$[i - d_{odd}[i]\dots i + d_{odd}[i]]$</span> is a palindrome. When we find the first mismatch or meet the boundaries of <span class="arithmatex">$s$</span>, we'll stop. In this case we've finally calculated <span class="arithmatex">$d_{odd}[i]$</span>. After this, we must not forget to update <span class="arithmatex">$(l, r)$</span>. <span class="arithmatex">$r$</span> should be updated in such a way that it represents the last index of the current rightmost sub-palindrome.</p>
+</li>
+<li>
+<p>Now consider the case when <span class="arithmatex">$i \le r$</span>. We'll try to extract some information from the already calculated values in <span class="arithmatex">$d_{odd}[]$</span>. So, let's find the "mirror" position of <span class="arithmatex">$i$</span> in the sub-palindrome <span class="arithmatex">$(l, r)$</span>, i.e. we'll get the position <span class="arithmatex">$j = l + (r - i)$</span>, and we check the value of <span class="arithmatex">$d_{odd}[j]$</span>. Because <span class="arithmatex">$j$</span> is the position symmetrical to <span class="arithmatex">$i$</span> with respect to <span class="arithmatex">$(l+r)/2$</span>, we can <strong>almost always</strong> assign <span class="arithmatex">$d_{odd}[i] = d_{odd}[j]$</span>. Illustration of this (palindrome around <span class="arithmatex">$j$</span> is actually "copied" into the palindrome around <span class="arithmatex">$i$</span>):</p>
+<div class="arithmatex">$$
+\ldots\ 
+\overbrace{
+    s_{l+1}\ \ldots\ 
+    \underbrace{
+        s_{j-d_{odd}[j]+1}\ \ldots\ s_j\ \ldots\ s_{j+d_{odd}[j]-1}\ 
+    }_\text{palindrome}\ 
+    \ldots\ 
+    \underbrace{
+        s_{i-d_{odd}[j]+1}\ \ldots\ s_i\ \ldots\ s_{i+d_{odd}[j]-1}\ 
+    }_\text{palindrome}\ 
+    \ldots\ s_{r-1}\ 
+}^\text{palindrome}\ 
+\ldots
+$$</div>
+<p>But there is a <strong>tricky case</strong> to be handled correctly: when the "inner" palindrome reaches the borders of the "outer" one, i. e. <span class="arithmatex">$j - d_{odd}[j] \le l$</span> (or, which is the same, <span class="arithmatex">$i + d_{odd}[j] \ge r$</span>). Because the symmetry outside the "outer" palindrome is not guaranteed, just assigning <span class="arithmatex">$d_{odd}[i] = d_{odd}[j]$</span> will be incorrect: we do not have enough data to state that the palindrome in the position <span class="arithmatex">$i$</span> has the same length.</p>
+<p>Actually, we should restrict the length of our palindrome for now, i. e. assign <span class="arithmatex">$d_{odd}[i] = r - i$</span>, to handle such situations correctly. After this we'll run the trivial algorithm which will try to increase <span class="arithmatex">$d_{odd}[i]$</span> while it's possible.</p>
+<p>Illustration of this case (the palindrome with center <span class="arithmatex">$j$</span> is restricted to fit the "outer" palindrome):</p>
+<div class="arithmatex">$$
+\ldots\ 
+\overbrace{
+    \underbrace{
+        s_{l+1}\ \ldots\ s_j\ \ldots\ s_{j+(j-l)-1}\ 
+    }_\text{palindrome}\ 
+    \ldots\ 
+    \underbrace{
+        s_{i-(r-i)+1}\ \ldots\ s_i\ \ldots\ s_{r-1}
+    }_\text{palindrome}\ 
+}^\text{palindrome}\ 
+\underbrace{
+    \ldots \ldots \ldots \ldots \ldots
+}_\text{try moving here}
+$$</div>
+<p>It is shown in the illustration that the palindrome with center <span class="arithmatex">$j$</span> could be larger and go outside the "outer" palindrome, but, with <span class="arithmatex">$i$</span> as the center, we can only use the part that entirely fits into the "outer" palindrome. But the answer for the position <span class="arithmatex">$i$</span> (<span class="arithmatex">$d_{odd}[i]$</span>) can be much bigger than this part, so next we'll run our trivial algorithm that will try to grow it outside our "outer" palindrome, i. e. to the region "try moving here".</p>
+</li>
 </ul>
-<h2 id="sponsor-us">Sponsor Us<a class="headerlink" href="#sponsor-us" title="Permanent link">&para;</a></h2>
+<p>Again, we should not forget to update the values <span class="arithmatex">$(l, r)$</span> after calculating each <span class="arithmatex">$d_{odd}[i]$</span>.</p>
+<h2 id="complexity-of-manachers-algorithm">Complexity of Manacher's algorithm<a class="headerlink" href="#complexity-of-manachers-algorithm" title="Permanent link">&para;</a></h2>
+<p>At the first glance it's not obvious that this algorithm has linear time complexity, because we often run the naive algorithm while searching the answer for a particular position.</p>
+<p>However, a more careful analysis shows that the algorithm is linear. In fact, <a href="z-function.html">Z-function building algorithm</a>, which looks similar to this algorithm, also works in linear time.</p>
+<p>We can notice that every iteration of trivial algorithm increases <span class="arithmatex">$r$</span> by one. Also <span class="arithmatex">$r$</span> cannot be decreased during the algorithm. So, trivial algorithm will make <span class="arithmatex">$O(n)$</span> iterations in total.</p>
+<p>Other parts of Manacher's algorithm work obviously in linear time. Thus, we get <span class="arithmatex">$O(n)$</span> time complexity.</p>
+<h2 id="implementation-of-manachers-algorithm">Implementation of Manacher's algorithm<a class="headerlink" href="#implementation-of-manachers-algorithm" title="Permanent link">&para;</a></h2>
+<p>For calculating <span class="arithmatex">$d_{odd}[]$</span>, we get the following code. Things to note:</p>
 <ul>
-<li><a href="https://github.com/sponsors/cp-algorithms">Become a Financial Supporter</a></li>
+<li><span class="arithmatex">$i$</span> is the index of the center letter of the current palindrome.</li>
+<li>If <span class="arithmatex">$i$</span> exceeds <span class="arithmatex">$r$</span>, <span class="arithmatex">$d_{odd}[i]$</span> is initialized to 0.</li>
+<li>If <span class="arithmatex">$i$</span> does not exceed <span class="arithmatex">$r$</span>, <span class="arithmatex">$d_{odd}[i]$</span> is either initialized to the <span class="arithmatex">$d_{odd}[j]$</span>, where <span class="arithmatex">$j$</span> is the mirror position of <span class="arithmatex">$i$</span> in <span class="arithmatex">$(l,r)$</span>, or <span class="arithmatex">$d_{odd}[i]$</span> is restricted to the size of the "outer" palindrome.</li>
+<li>The while loop denotes the trivial algorithm. We launch it irrespective of the value of <span class="arithmatex">$k$</span>.</li>
+<li>If the size of palindrome centered at <span class="arithmatex">$i$</span> is <span class="arithmatex">$x$</span>, then <span class="arithmatex">$d_{odd}[i]$</span> stores <span class="arithmatex">$\frac{x+1}{2}$</span>.</li>
 </ul>
-<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">manacher_odd</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;$&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;^&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">p</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">)]);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">begin</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="working-with-parities">Working with parities<a class="headerlink" href="#working-with-parities" title="Permanent link">&para;</a></h2>
+<p>Although it is possible to implement Manacher's algorithm for odd and even lengths separately, the implementation of the version for even lengths is often deemed more difficult, as it is less natural and easily leads to off-by-one errors.</p>
+<p>To mitigate this, it is possible to reduce the whole problem to the case when we only deal with the palindromes of odd length. To do this, we can put an additional <code>#</code> character between each letter in the string and also in the beginning and the end of the string:</p>
+<div class="arithmatex">$$abcbcba \to \#a\#b\#c\#b\#c\#b\#a\#,$$</div>
+<div class="arithmatex">$$d = [1,2,1,2,1,4,1,8,1,4,1,2,1,2,1].$$</div>
+<p>As you can see, <span class="arithmatex">$d[2i]=2 d_{even}[i]+1$</span> and <span class="arithmatex">$d[2i+1]=2 d_{odd}[i]$</span> where <span class="arithmatex">$d$</span> denotes the Manacher array for odd-length palindromes in <code>#</code>-joined string, while <span class="arithmatex">$d_{odd}$</span> and <span class="arithmatex">$d_{even}$</span> correspond to the arrays defined above in the initial string.</p>
+<p>Indeed, <code>#</code> characters do not affect the odd-length palindromes, which are still centered in the initial string's characters, but now even-length palindromes of the initial string are odd-length palindromes of the new string centered in <code>#</code> characters.</p>
+<p>Note that <span class="arithmatex">$d[2i]$</span> and <span class="arithmatex">$d[2i+1]$</span> are essentially the increased by <span class="arithmatex">$1$</span> lengths of the largest odd- and even-length palindromes centered in <span class="arithmatex">$i$</span> correspondingly.</p>
+<p>The reduction is implemented in the following way:</p>
+<div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">manacher</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">string</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">c</span><span class="o">:</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">t</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">string</span><span class="p">(</span><span class="s">&quot;#&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">manacher_odd</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;#&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">begin</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>For simplicity, splitting the array into <span class="arithmatex">$d_{odd}$</span> and <span class="arithmatex">$d_{even}$</span> as well as their explicit calculation is omitted.</p>
+<h2 id="problems">Problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h2>
 <ul>
-<li>August, 2025: Overhaul of CP-Algorithms <a href="https://github.com/sponsors/cp-algorithms">donation system</a>. Please consider supporting us, so that we can grow!</li>
-<li>August, 2025: Launched a <a href="https://discord.gg/HZ5AecN3KX">Discord server</a>!</li>
-<li>October, 2024: Welcome new maintainers: <a href="https://github.com/jxu">jxu</a>, <a href="https://github.com/mhayter">mhayter</a> and <a href="https://github.com/kostero">kostero</a>!</li>
-<li>October, 15, 2024: GitHub pages based mirror is now served at <a href="https://gh.cp-algorithms.com/">https://gh.cp-algorithms.com/</a>, and an auxiliary competitive programming library is available at <a href="https://lib.cp-algorithms.com/">https://lib.cp-algorithms.com/</a>.</li>
-<li>July 16, 2024: Major overhaul of the <a href="https://cp-algorithms.com/graph/strongly-connected-components.html">Finding strongly connected components / Building condensation graph</a> article.</li>
-<li>June 26, 2023: Added automatic RSS feeds for <a href="https://cp-algorithms.com/feed_rss_created.xml">new articles</a> and <a href="https://cp-algorithms.com/feed_rss_updated.xml">updates in articles</a>.</li>
-<li>December 20, 2022: The repository name and the owning organizations were renamed! Now the repo is located at <a href="https://github.com/cp-algorithms/cp-algorithms">https://github.com/cp-algorithms/cp-algorithms</a>. It is recommended to update the upstream link in your local repositories, if you have any.</li>
-<li>October 31, 2022: It is now possible to select and copy <span class="arithmatex">$\LaTeX$</span> source code of formulas within the articles.</li>
-<li>June 8, 2022: Tags are enabled. Each article is now marked whether it is translated or original, overall tag info is present in the <a href="https://cp-algorithms.com/tags.html">tag index</a>. For translated articles, clicking on <code>From: X</code> tag would lead to the original article.</li>
-<li>June 7, 2022: Date of last commit and author list with contribution percentage is tracked for each page.</li>
-<li>June 5, 2022: Enabled content tabs and sidebar navigation. The navigation is moved to a <a href="https://cp-algorithms.com/navigation.html">separate page</a> and its structure should be adjusted in <a href="https://github.com/cp-algorithms/cp-algorithms/blob/main/src/navigation.md">navigation.md</a> whenever a new article is created or an old one is moved.</li>
-<li>January 16, 2022: Switched to the <a href="https://www.mkdocs.org/">MkDocs</a> site generator with the <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a> theme, which give the website a more modern look, brings a couple of new features (dark mode, better search, ...), makes the website more stable (in terms of rendering math formulas), and makes it easier to contribute.</li>
+<li><a href="https://judge.yosupo.jp/problem/enumerate_palindromes">Library Checker - Enumerate Palindromes</a></li>
+<li><a href="https://cses.fi/problemset/task/1111">Longest Palindrome</a></li>
+<li><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=26&amp;page=show_problem&amp;problem=2470">UVA 11475 - Extend to Palindrome</a></li>
+<li><a href="https://codeforces.com/gym/101806/problem/Q">GYM - (Q) QueryreuQ</a></li>
+<li><a href="https://codeforces.com/contest/1326/problem/D2">CF - Prefix-Suffix Palindrome</a></li>
+<li><a href="https://www.spoj.com/problems/NUMOFPAL/">SPOJ - Number of Palindromes</a></li>
+<li><a href="https://open.kattis.com/problems/palindromes">Kattis - Palindromes</a></li>
 </ul>
-<h3 id="new-articles">New articles<a class="headerlink" href="#new-articles" title="Permanent link">&para;</a></h3>
-<ul>
-<li>(9 June 2026) <a href="https://cp-algorithms.com/graph/stoer_wagner_mincut.html">Minimum cut - Stoer-Wagner algorithm</a></li>
-<li>(28 March 2026) <a href="https://cp-algorithms.com/graph/centroid_decomposition.html">Centroid decomposition</a></li>
-<li>(19 August 2025) <a href="https://cp-algorithms.com/geometry/enclosing-circle.html">Minimum Enclosing Circle</a></li>
-<li>(21 May 2025) <a href="https://cp-algorithms.com/num_methods/simulated_annealing.html">Simulated Annealing</a></li>
-<li>(12 July 2024) <a href="https://cp-algorithms.com/geometry/manhattan-distance.html">Manhattan distance</a></li>
-<li>(8 June 2024) <a href="https://cp-algorithms.com/dynamic_programming/knapsack.html">Knapsack Problem</a></li>
-<li>(28 January 2024) <a href="https://cp-algorithms.com/dynamic_programming/intro-to-dp.html">Introduction to Dynamic Programming</a></li>
-<li>(8 December 2023) <a href="https://cp-algorithms.com/graph/hungarian-algorithm.html">Hungarian Algorithm</a></li>
-<li>(10 September 2023) <a href="https://cp-algorithms.com/others/tortoise_and_hare.html">Tortoise and Hare Algorithm</a></li>
-<li>(12 July 2023) <a href="https://cp-algorithms.com/geometry/planar.html">Finding faces of a planar graph</a></li>
-<li>(18 April 2023) <a href="https://cp-algorithms.com/algebra/bit-manipulation.html">Bit manipulation</a></li>
-<li>(17 October 2022) <a href="https://cp-algorithms.com/num_methods/binary_search.html">Binary Search</a></li>
-<li>(17 October 2022) <a href="https://cp-algorithms.com/sequences/mex.html">MEX (Minimum Excluded element in an array)</a></li>
-<li>(12 May 2022) <a href="https://cp-algorithms.com/algebra/factoring-exp.html">Factoring Exponentiation</a></li>
-<li>(7 May 2022) <a href="https://cp-algorithms.com/dynamic_programming/knuth-optimization.html">Knuth's Optimization</a></li>
-<li>(31 March 2022) <a href="https://cp-algorithms.com/algebra/continued-fractions.html">Continued fractions</a></li>
-</ul>
-<p>Full list of updates: <a href="https://github.com/cp-algorithms/cp-algorithms/commits/main">Commit History</a></p>
-<p>Full list of articles: <a href="https://cp-algorithms.com/navigation.html">Navigation</a></p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (71.43%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (14.29%)</li><li><a href="#" title="Rodion Gorkovenko" data-bi-name="contributorprofile" target="_blank">Rodion Gorkovenko</a> (14.29%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Alexander Kernozhitsky" data-bi-name="contributorprofile" target="_blank">Alexander Kernozhitsky</a> (44.61%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (27.45%)</li><li><a href="#" title="bruised_samurai" data-bi-name="contributorprofile" target="_blank">bruised_samurai</a> (10.78%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (5.39%)</li><li><a href="#" title="Sunit Gautam" data-bi-name="contributorprofile" target="_blank">Sunit Gautam</a> (3.43%)</li><li><a href="#" title="Yurii A." data-bi-name="contributorprofile" target="_blank">Yurii A.</a> (1.96%)</li><li><a href="#" title="HJ Ji" data-bi-name="contributorprofile" target="_blank">HJ Ji</a> (1.47%)</li><li><a href="#" title="Dip Turkar" data-bi-name="contributorprofile" target="_blank">Dip Turkar</a> (0.98%)</li><li><a href="#" title="Felipe Noronha" data-bi-name="contributorprofile" target="_blank">Felipe Noronha</a> (0.98%)</li><li><a href="#" title="sanct" data-bi-name="contributorprofile" target="_blank">sanct</a> (0.98%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (0.49%)</li><li><a href="#" title="Tarun Khullar" data-bi-name="contributorprofile" target="_blank">Tarun Khullar</a> (0.49%)</li><li><a href="#" title="Yan Huang" data-bi-name="contributorprofile" target="_blank">Yan Huang</a> (0.49%)</li><li><a href="#" title="navneet-iitbhu" data-bi-name="contributorprofile" target="_blank">navneet-iitbhu</a> (0.49%)</li></ul>
 </ul>
                 
               </article>
@@ -8157,14 +8362,14 @@ and adding new articles to the collection.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["toc.integrate", "search.suggest", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0110\u00e3 sao ch\u00e9p", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m", "search.result.more.one": "1 t\u1eeb kh\u00e1c trong trang", "search.result.more.other": "# t\u1eeb kh\u00e1c trong trang", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Kh\u00f4ng", "select.version": "Ch\u1ecdn phi\u00ean b\u1ea3n"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="javascript/config.js"></script>
+        <script src="../../javascript/config.js"></script>
       
-        <script src="javascript/donation-banner.js"></script>
+        <script src="../../javascript/donation-banner.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
       

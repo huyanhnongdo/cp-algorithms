@@ -10,36 +10,38 @@
       
       
       
-        <link rel="canonical" href="https://cp-algorithms.com/index.html">
+        <link rel="canonical" href="https://cp-algorithms.com/graph/hungarian-algorithm.html">
       
       
+        <link rel="prev" href="kuhn_maximum_bipartite_matching.html">
       
-        <link rel="next" href="navigation.html">
+      
+        <link rel="next" href="topological-sort.html">
       
       
         
-          <link rel="alternate" href="index.html" hreflang="en">
+          <link rel="alternate" href="hungarian-algorithm.html" hreflang="en">
         
-          <link rel="alternate" href="vi/index.html" hreflang="vi">
+          <link rel="alternate" href="../vi/graph/hungarian-algorithm.html" hreflang="vi">
         
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../feed_rss_updated.xml">
       
-      <link rel="icon" href="favicon.ico">
+      <link rel="icon" href="../favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Main Page - Algorithms for Competitive Programming</title>
+        <title>Hungarian Algorithm - Algorithms for Competitive Programming</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -58,9 +60,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -77,9 +79,9 @@
     
     
   
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 
-  <script src="assets/javascripts/toggle-sidebar.js"></script></head>
+  <script src="../assets/javascripts/toggle-sidebar.js"></script></head>
   
   
     
@@ -98,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#algorithms-for-competitive-programming" class="md-skip">
+        <a href="#hungarian-algorithm-for-solving-the-assignment-problem" class="md-skip">
           Skip to content
         </a>
       
@@ -122,9 +124,9 @@
     }
   </script>
   <nav class="md-header__inner md-grid" aria-label="header.title">
-    <a href="index.html" title="Algorithms for Competitive Programming" class="md-header__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+    <a href="../index.html" title="Algorithms for Competitive Programming" class="md-header__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
       
-  <img src="favicon.ico" alt="logo">
+  <img src="../favicon.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -134,7 +136,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            <a href="index.html" title="Algorithms for Competitive Programming" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+            <a href="../index.html" title="Algorithms for Competitive Programming" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
               Algorithms for Competitive Programming
             </a>
           </span>
@@ -143,7 +145,7 @@
           <span class="md-ellipsis">
             <a href="#" onclick="scrollToTop()">
               
-                Main Page
+                Hungarian Algorithm
               
             </a>
           </span>
@@ -184,13 +186,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="index.html" hreflang="en" class="md-select__link">
+                  <a href="hungarian-algorithm.html" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="vi/index.html" hreflang="vi" class="md-select__link">
+                  <a href="../vi/graph/hungarian-algorithm.html" hreflang="vi" class="md-select__link">
                     Tiếng Việt
                   </a>
                 </li>
@@ -296,9 +298,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Algorithms for Competitive Programming" class="md-nav__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
+    <a href="../index.html" title="Algorithms for Competitive Programming" class="md-nav__button md-logo" aria-label="Algorithms for Competitive Programming" data-md-component="logo">
       
-  <img src="favicon.ico" alt="logo">
+  <img src="../favicon.ico" alt="logo">
 
     </a>
     Algorithms for Competitive Programming
@@ -322,20 +324,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -356,7 +356,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -371,37 +371,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Main Page
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -417,76 +390,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#become-a-contributor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Become a Contributor
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sponsor-us" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sponsor Us
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changelog" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changelog
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Changelog">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#new-articles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        New articles
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -499,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="navigation.html" class="md-nav__link">
+      <a href="../navigation.html" class="md-nav__link">
         
   
   
@@ -527,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tags.html" class="md-nav__link">
+      <a href="../tags.html" class="md-nav__link">
         
   
   
@@ -555,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="contrib.html" class="md-nav__link">
+      <a href="../contrib.html" class="md-nav__link">
         
   
   
@@ -583,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="code_of_conduct.html" class="md-nav__link">
+      <a href="../code_of_conduct.html" class="md-nav__link">
         
   
   
@@ -611,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="preview.html" class="md-nav__link">
+      <a href="../preview.html" class="md-nav__link">
         
   
   
@@ -740,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/binary-exp.html" class="md-nav__link">
+      <a href="../algebra/binary-exp.html" class="md-nav__link">
         
   
   
@@ -768,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/euclid-algorithm.html" class="md-nav__link">
+      <a href="../algebra/euclid-algorithm.html" class="md-nav__link">
         
   
   
@@ -796,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/extended-euclid-algorithm.html" class="md-nav__link">
+      <a href="../algebra/extended-euclid-algorithm.html" class="md-nav__link">
         
   
   
@@ -824,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/linear-diophantine-equation.html" class="md-nav__link">
+      <a href="../algebra/linear-diophantine-equation.html" class="md-nav__link">
         
   
   
@@ -852,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/fibonacci-numbers.html" class="md-nav__link">
+      <a href="../algebra/fibonacci-numbers.html" class="md-nav__link">
         
   
   
@@ -935,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/sieve-of-eratosthenes.html" class="md-nav__link">
+      <a href="../algebra/sieve-of-eratosthenes.html" class="md-nav__link">
         
   
   
@@ -963,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/prime-sieve-linear.html" class="md-nav__link">
+      <a href="../algebra/prime-sieve-linear.html" class="md-nav__link">
         
   
   
@@ -991,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/primality_tests.html" class="md-nav__link">
+      <a href="../algebra/primality_tests.html" class="md-nav__link">
         
   
   
@@ -1019,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorization.html" class="md-nav__link">
+      <a href="../algebra/factorization.html" class="md-nav__link">
         
   
   
@@ -1102,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/phi-function.html" class="md-nav__link">
+      <a href="../algebra/phi-function.html" class="md-nav__link">
         
   
   
@@ -1130,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/divisors.html" class="md-nav__link">
+      <a href="../algebra/divisors.html" class="md-nav__link">
         
   
   
@@ -1213,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/module-inverse.html" class="md-nav__link">
+      <a href="../algebra/module-inverse.html" class="md-nav__link">
         
   
   
@@ -1241,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/linear_congruence_equation.html" class="md-nav__link">
+      <a href="../algebra/linear_congruence_equation.html" class="md-nav__link">
         
   
   
@@ -1269,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/chinese-remainder-theorem.html" class="md-nav__link">
+      <a href="../algebra/chinese-remainder-theorem.html" class="md-nav__link">
         
   
   
@@ -1297,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/garners-algorithm.html" class="md-nav__link">
+      <a href="../algebra/garners-algorithm.html" class="md-nav__link">
         
   
   
@@ -1325,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorial-modulo.html" class="md-nav__link">
+      <a href="../algebra/factorial-modulo.html" class="md-nav__link">
         
   
   
@@ -1353,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/discrete-log.html" class="md-nav__link">
+      <a href="../algebra/discrete-log.html" class="md-nav__link">
         
   
   
@@ -1381,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/primitive-root.html" class="md-nav__link">
+      <a href="../algebra/primitive-root.html" class="md-nav__link">
         
   
   
@@ -1409,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/discrete-root.html" class="md-nav__link">
+      <a href="../algebra/discrete-root.html" class="md-nav__link">
         
   
   
@@ -1437,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/montgomery_multiplication.html" class="md-nav__link">
+      <a href="../algebra/montgomery_multiplication.html" class="md-nav__link">
         
   
   
@@ -1520,7 +1423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/balanced-ternary.html" class="md-nav__link">
+      <a href="../algebra/balanced-ternary.html" class="md-nav__link">
         
   
   
@@ -1548,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/gray-code.html" class="md-nav__link">
+      <a href="../algebra/gray-code.html" class="md-nav__link">
         
   
   
@@ -1631,7 +1534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/bit-manipulation.html" class="md-nav__link">
+      <a href="../algebra/bit-manipulation.html" class="md-nav__link">
         
   
   
@@ -1659,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/all-submasks.html" class="md-nav__link">
+      <a href="../algebra/all-submasks.html" class="md-nav__link">
         
   
   
@@ -1687,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/big-integer.html" class="md-nav__link">
+      <a href="../algebra/big-integer.html" class="md-nav__link">
         
   
   
@@ -1715,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/fft.html" class="md-nav__link">
+      <a href="../algebra/fft.html" class="md-nav__link">
         
   
   
@@ -1743,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/polynomial.html" class="md-nav__link">
+      <a href="../algebra/polynomial.html" class="md-nav__link">
         
   
   
@@ -1771,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/continued-fractions.html" class="md-nav__link">
+      <a href="../algebra/continued-fractions.html" class="md-nav__link">
         
   
   
@@ -1799,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factoring-exp.html" class="md-nav__link">
+      <a href="../algebra/factoring-exp.html" class="md-nav__link">
         
   
   
@@ -1936,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/stack_queue_modification.html" class="md-nav__link">
+      <a href="../data_structures/stack_queue_modification.html" class="md-nav__link">
         
   
   
@@ -1964,7 +1867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sparse-table.html" class="md-nav__link">
+      <a href="../data_structures/sparse-table.html" class="md-nav__link">
         
   
   
@@ -2047,7 +1950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/disjoint_set_union.html" class="md-nav__link">
+      <a href="../data_structures/disjoint_set_union.html" class="md-nav__link">
         
   
   
@@ -2075,7 +1978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/fenwick.html" class="md-nav__link">
+      <a href="../data_structures/fenwick.html" class="md-nav__link">
         
   
   
@@ -2103,7 +2006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sqrt_decomposition.html" class="md-nav__link">
+      <a href="../data_structures/sqrt_decomposition.html" class="md-nav__link">
         
   
   
@@ -2131,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/segment_tree.html" class="md-nav__link">
+      <a href="../data_structures/segment_tree.html" class="md-nav__link">
         
   
   
@@ -2159,7 +2062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/treap.html" class="md-nav__link">
+      <a href="../data_structures/treap.html" class="md-nav__link">
         
   
   
@@ -2187,7 +2090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/sqrt-tree.html" class="md-nav__link">
+      <a href="../data_structures/sqrt-tree.html" class="md-nav__link">
         
   
   
@@ -2215,7 +2118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/randomized_heap.html" class="md-nav__link">
+      <a href="../data_structures/randomized_heap.html" class="md-nav__link">
         
   
   
@@ -2298,7 +2201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_structures/deleting_in_log_n.html" class="md-nav__link">
+      <a href="../data_structures/deleting_in_log_n.html" class="md-nav__link">
         
   
   
@@ -2388,7 +2291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/intro-to-dp.html" class="md-nav__link">
+      <a href="../dynamic_programming/intro-to-dp.html" class="md-nav__link">
         
   
   
@@ -2416,7 +2319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/knapsack.html" class="md-nav__link">
+      <a href="../dynamic_programming/knapsack.html" class="md-nav__link">
         
   
   
@@ -2444,7 +2347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/longest_increasing_subsequence.html" class="md-nav__link">
+      <a href="../dynamic_programming/longest_increasing_subsequence.html" class="md-nav__link">
         
   
   
@@ -2519,7 +2422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/divide-and-conquer-dp.html" class="md-nav__link">
+      <a href="../dynamic_programming/divide-and-conquer-dp.html" class="md-nav__link">
         
   
   
@@ -2547,7 +2450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/knuth-optimization.html" class="md-nav__link">
+      <a href="../dynamic_programming/knuth-optimization.html" class="md-nav__link">
         
   
   
@@ -2630,7 +2533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/profile-dynamics.html" class="md-nav__link">
+      <a href="../dynamic_programming/profile-dynamics.html" class="md-nav__link">
         
   
   
@@ -2658,7 +2561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dynamic_programming/zero_matrix.html" class="md-nav__link">
+      <a href="../dynamic_programming/zero_matrix.html" class="md-nav__link">
         
   
   
@@ -2795,7 +2698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/string-hashing.html" class="md-nav__link">
+      <a href="../string/string-hashing.html" class="md-nav__link">
         
   
   
@@ -2823,7 +2726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/rabin-karp.html" class="md-nav__link">
+      <a href="../string/rabin-karp.html" class="md-nav__link">
         
   
   
@@ -2851,7 +2754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/prefix-function.html" class="md-nav__link">
+      <a href="../string/prefix-function.html" class="md-nav__link">
         
   
   
@@ -2879,7 +2782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/z-function.html" class="md-nav__link">
+      <a href="../string/z-function.html" class="md-nav__link">
         
   
   
@@ -2907,7 +2810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-array.html" class="md-nav__link">
+      <a href="../string/suffix-array.html" class="md-nav__link">
         
   
   
@@ -2935,7 +2838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/aho_corasick.html" class="md-nav__link">
+      <a href="../string/aho_corasick.html" class="md-nav__link">
         
   
   
@@ -3018,7 +2921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-tree-ukkonen.html" class="md-nav__link">
+      <a href="../string/suffix-tree-ukkonen.html" class="md-nav__link">
         
   
   
@@ -3046,7 +2949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/suffix-automaton.html" class="md-nav__link">
+      <a href="../string/suffix-automaton.html" class="md-nav__link">
         
   
   
@@ -3074,7 +2977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/lyndon_factorization.html" class="md-nav__link">
+      <a href="../string/lyndon_factorization.html" class="md-nav__link">
         
   
   
@@ -3157,7 +3060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/expression_parsing.html" class="md-nav__link">
+      <a href="../string/expression_parsing.html" class="md-nav__link">
         
   
   
@@ -3185,7 +3088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/manacher.html" class="md-nav__link">
+      <a href="../string/manacher.html" class="md-nav__link">
         
   
   
@@ -3213,7 +3116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="string/main_lorentz.html" class="md-nav__link">
+      <a href="../string/main_lorentz.html" class="md-nav__link">
         
   
   
@@ -3350,7 +3253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/linear-system-gauss.html" class="md-nav__link">
+      <a href="../linear_algebra/linear-system-gauss.html" class="md-nav__link">
         
   
   
@@ -3378,7 +3281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/determinant-gauss.html" class="md-nav__link">
+      <a href="../linear_algebra/determinant-gauss.html" class="md-nav__link">
         
   
   
@@ -3406,7 +3309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/determinant-kraut.html" class="md-nav__link">
+      <a href="../linear_algebra/determinant-kraut.html" class="md-nav__link">
         
   
   
@@ -3434,7 +3337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linear_algebra/rank-matrix.html" class="md-nav__link">
+      <a href="../linear_algebra/rank-matrix.html" class="md-nav__link">
         
   
   
@@ -3571,7 +3474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="algebra/factorial-divisors.html" class="md-nav__link">
+      <a href="../algebra/factorial-divisors.html" class="md-nav__link">
         
   
   
@@ -3599,7 +3502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/binomial-coefficients.html" class="md-nav__link">
+      <a href="../combinatorics/binomial-coefficients.html" class="md-nav__link">
         
   
   
@@ -3627,7 +3530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/catalan-numbers.html" class="md-nav__link">
+      <a href="../combinatorics/catalan-numbers.html" class="md-nav__link">
         
   
   
@@ -3710,7 +3613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/inclusion-exclusion.html" class="md-nav__link">
+      <a href="../combinatorics/inclusion-exclusion.html" class="md-nav__link">
         
   
   
@@ -3738,7 +3641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/burnside.html" class="md-nav__link">
+      <a href="../combinatorics/burnside.html" class="md-nav__link">
         
   
   
@@ -3766,7 +3669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/stars_and_bars.html" class="md-nav__link">
+      <a href="../combinatorics/stars_and_bars.html" class="md-nav__link">
         
   
   
@@ -3794,7 +3697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/generating_combinations.html" class="md-nav__link">
+      <a href="../combinatorics/generating_combinations.html" class="md-nav__link">
         
   
   
@@ -3877,7 +3780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/bishops-on-chessboard.html" class="md-nav__link">
+      <a href="../combinatorics/bishops-on-chessboard.html" class="md-nav__link">
         
   
   
@@ -3905,7 +3808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/bracket_sequences.html" class="md-nav__link">
+      <a href="../combinatorics/bracket_sequences.html" class="md-nav__link">
         
   
   
@@ -3933,7 +3836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="combinatorics/counting_labeled_graphs.html" class="md-nav__link">
+      <a href="../combinatorics/counting_labeled_graphs.html" class="md-nav__link">
         
   
   
@@ -4070,7 +3973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/binary_search.html" class="md-nav__link">
+      <a href="../num_methods/binary_search.html" class="md-nav__link">
         
   
   
@@ -4098,7 +4001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/ternary_search.html" class="md-nav__link">
+      <a href="../num_methods/ternary_search.html" class="md-nav__link">
         
   
   
@@ -4126,7 +4029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/roots_newton.html" class="md-nav__link">
+      <a href="../num_methods/roots_newton.html" class="md-nav__link">
         
   
   
@@ -4154,7 +4057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/simulated_annealing.html" class="md-nav__link">
+      <a href="../num_methods/simulated_annealing.html" class="md-nav__link">
         
   
   
@@ -4237,7 +4140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="num_methods/simpson-integration.html" class="md-nav__link">
+      <a href="../num_methods/simpson-integration.html" class="md-nav__link">
         
   
   
@@ -4374,7 +4277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/basic-geometry.html" class="md-nav__link">
+      <a href="../geometry/basic-geometry.html" class="md-nav__link">
         
   
   
@@ -4402,7 +4305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/segment-to-line.html" class="md-nav__link">
+      <a href="../geometry/segment-to-line.html" class="md-nav__link">
         
   
   
@@ -4430,7 +4333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/lines-intersection.html" class="md-nav__link">
+      <a href="../geometry/lines-intersection.html" class="md-nav__link">
         
   
   
@@ -4458,7 +4361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/check-segments-intersection.html" class="md-nav__link">
+      <a href="../geometry/check-segments-intersection.html" class="md-nav__link">
         
   
   
@@ -4486,7 +4389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/segments-intersection.html" class="md-nav__link">
+      <a href="../geometry/segments-intersection.html" class="md-nav__link">
         
   
   
@@ -4514,7 +4417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/circle-line-intersection.html" class="md-nav__link">
+      <a href="../geometry/circle-line-intersection.html" class="md-nav__link">
         
   
   
@@ -4542,7 +4445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/circle-circle-intersection.html" class="md-nav__link">
+      <a href="../geometry/circle-circle-intersection.html" class="md-nav__link">
         
   
   
@@ -4570,7 +4473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/tangents-to-two-circles.html" class="md-nav__link">
+      <a href="../geometry/tangents-to-two-circles.html" class="md-nav__link">
         
   
   
@@ -4598,7 +4501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/length-of-segments-union.html" class="md-nav__link">
+      <a href="../geometry/length-of-segments-union.html" class="md-nav__link">
         
   
   
@@ -4681,7 +4584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/oriented-triangle-area.html" class="md-nav__link">
+      <a href="../geometry/oriented-triangle-area.html" class="md-nav__link">
         
   
   
@@ -4709,7 +4612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/area-of-simple-polygon.html" class="md-nav__link">
+      <a href="../geometry/area-of-simple-polygon.html" class="md-nav__link">
         
   
   
@@ -4737,7 +4640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/point-in-convex-polygon.html" class="md-nav__link">
+      <a href="../geometry/point-in-convex-polygon.html" class="md-nav__link">
         
   
   
@@ -4765,7 +4668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/minkowski.html" class="md-nav__link">
+      <a href="../geometry/minkowski.html" class="md-nav__link">
         
   
   
@@ -4793,7 +4696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/picks-theorem.html" class="md-nav__link">
+      <a href="../geometry/picks-theorem.html" class="md-nav__link">
         
   
   
@@ -4821,7 +4724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/lattice-points.html" class="md-nav__link">
+      <a href="../geometry/lattice-points.html" class="md-nav__link">
         
   
   
@@ -4904,7 +4807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/convex-hull.html" class="md-nav__link">
+      <a href="../geometry/convex-hull.html" class="md-nav__link">
         
   
   
@@ -4932,7 +4835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/convex_hull_trick.html" class="md-nav__link">
+      <a href="../geometry/convex_hull_trick.html" class="md-nav__link">
         
   
   
@@ -5015,7 +4918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/intersecting_segments.html" class="md-nav__link">
+      <a href="../geometry/intersecting_segments.html" class="md-nav__link">
         
   
   
@@ -5098,7 +5001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/planar.html" class="md-nav__link">
+      <a href="../geometry/planar.html" class="md-nav__link">
         
   
   
@@ -5126,7 +5029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/point-location.html" class="md-nav__link">
+      <a href="../geometry/point-location.html" class="md-nav__link">
         
   
   
@@ -5209,7 +5112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/nearest_points.html" class="md-nav__link">
+      <a href="../geometry/nearest_points.html" class="md-nav__link">
         
   
   
@@ -5237,7 +5140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/delaunay.html" class="md-nav__link">
+      <a href="../geometry/delaunay.html" class="md-nav__link">
         
   
   
@@ -5265,7 +5168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/vertical_decomposition.html" class="md-nav__link">
+      <a href="../geometry/vertical_decomposition.html" class="md-nav__link">
         
   
   
@@ -5293,7 +5196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/halfplane-intersection.html" class="md-nav__link">
+      <a href="../geometry/halfplane-intersection.html" class="md-nav__link">
         
   
   
@@ -5321,7 +5224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/manhattan-distance.html" class="md-nav__link">
+      <a href="../geometry/manhattan-distance.html" class="md-nav__link">
         
   
   
@@ -5349,7 +5252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="geometry/enclosing-circle.html" class="md-nav__link">
+      <a href="../geometry/enclosing-circle.html" class="md-nav__link">
         
   
   
@@ -5389,18 +5292,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
           <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -5421,7 +5326,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -5486,7 +5391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/breadth-first-search.html" class="md-nav__link">
+      <a href="breadth-first-search.html" class="md-nav__link">
         
   
   
@@ -5514,7 +5419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/depth-first-search.html" class="md-nav__link">
+      <a href="depth-first-search.html" class="md-nav__link">
         
   
   
@@ -5597,7 +5502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/search-for-connected-components.html" class="md-nav__link">
+      <a href="search-for-connected-components.html" class="md-nav__link">
         
   
   
@@ -5625,7 +5530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bridge-searching.html" class="md-nav__link">
+      <a href="bridge-searching.html" class="md-nav__link">
         
   
   
@@ -5653,7 +5558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bridge-searching-online.html" class="md-nav__link">
+      <a href="bridge-searching-online.html" class="md-nav__link">
         
   
   
@@ -5681,7 +5586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/cutpoints.html" class="md-nav__link">
+      <a href="cutpoints.html" class="md-nav__link">
         
   
   
@@ -5709,7 +5614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/strongly-connected-components.html" class="md-nav__link">
+      <a href="strongly-connected-components.html" class="md-nav__link">
         
   
   
@@ -5737,7 +5642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/strong-orientation.html" class="md-nav__link">
+      <a href="strong-orientation.html" class="md-nav__link">
         
   
   
@@ -5820,7 +5725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dijkstra.html" class="md-nav__link">
+      <a href="dijkstra.html" class="md-nav__link">
         
   
   
@@ -5848,7 +5753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dijkstra_sparse.html" class="md-nav__link">
+      <a href="dijkstra_sparse.html" class="md-nav__link">
         
   
   
@@ -5876,7 +5781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bellman_ford.html" class="md-nav__link">
+      <a href="bellman_ford.html" class="md-nav__link">
         
   
   
@@ -5904,7 +5809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/01_bfs.html" class="md-nav__link">
+      <a href="01_bfs.html" class="md-nav__link">
         
   
   
@@ -5932,7 +5837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/desopo_pape.html" class="md-nav__link">
+      <a href="desopo_pape.html" class="md-nav__link">
         
   
   
@@ -6015,7 +5920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/all-pair-shortest-path-floyd-warshall.html" class="md-nav__link">
+      <a href="all-pair-shortest-path-floyd-warshall.html" class="md-nav__link">
         
   
   
@@ -6043,7 +5948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/fixed_length_paths.html" class="md-nav__link">
+      <a href="fixed_length_paths.html" class="md-nav__link">
         
   
   
@@ -6126,7 +6031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_prim.html" class="md-nav__link">
+      <a href="mst_prim.html" class="md-nav__link">
         
   
   
@@ -6154,7 +6059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_kruskal.html" class="md-nav__link">
+      <a href="mst_kruskal.html" class="md-nav__link">
         
   
   
@@ -6182,7 +6087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mst_kruskal_with_dsu.html" class="md-nav__link">
+      <a href="mst_kruskal_with_dsu.html" class="md-nav__link">
         
   
   
@@ -6210,7 +6115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/second_best_mst.html" class="md-nav__link">
+      <a href="second_best_mst.html" class="md-nav__link">
         
   
   
@@ -6238,7 +6143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/kirchhoff-theorem.html" class="md-nav__link">
+      <a href="kirchhoff-theorem.html" class="md-nav__link">
         
   
   
@@ -6266,7 +6171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/pruefer_code.html" class="md-nav__link">
+      <a href="pruefer_code.html" class="md-nav__link">
         
   
   
@@ -6349,7 +6254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/finding-cycle.html" class="md-nav__link">
+      <a href="finding-cycle.html" class="md-nav__link">
         
   
   
@@ -6377,7 +6282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/finding-negative-cycle-in-graph.html" class="md-nav__link">
+      <a href="finding-negative-cycle-in-graph.html" class="md-nav__link">
         
   
   
@@ -6405,7 +6310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/euler_path.html" class="md-nav__link">
+      <a href="euler_path.html" class="md-nav__link">
         
   
   
@@ -6488,7 +6393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca.html" class="md-nav__link">
+      <a href="lca.html" class="md-nav__link">
         
   
   
@@ -6516,7 +6421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_binary_lifting.html" class="md-nav__link">
+      <a href="lca_binary_lifting.html" class="md-nav__link">
         
   
   
@@ -6544,7 +6449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_farachcoltonbender.html" class="md-nav__link">
+      <a href="lca_farachcoltonbender.html" class="md-nav__link">
         
   
   
@@ -6572,7 +6477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/rmq_linear.html" class="md-nav__link">
+      <a href="rmq_linear.html" class="md-nav__link">
         
   
   
@@ -6600,7 +6505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/lca_tarjan.html" class="md-nav__link">
+      <a href="lca_tarjan.html" class="md-nav__link">
         
   
   
@@ -6683,7 +6588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/edmonds_karp.html" class="md-nav__link">
+      <a href="edmonds_karp.html" class="md-nav__link">
         
   
   
@@ -6711,7 +6616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/push-relabel.html" class="md-nav__link">
+      <a href="push-relabel.html" class="md-nav__link">
         
   
   
@@ -6739,7 +6644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/push-relabel-faster.html" class="md-nav__link">
+      <a href="push-relabel-faster.html" class="md-nav__link">
         
   
   
@@ -6767,7 +6672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/dinic.html" class="md-nav__link">
+      <a href="dinic.html" class="md-nav__link">
         
   
   
@@ -6795,7 +6700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/mpm.html" class="md-nav__link">
+      <a href="mpm.html" class="md-nav__link">
         
   
   
@@ -6823,7 +6728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/flow_with_demands.html" class="md-nav__link">
+      <a href="flow_with_demands.html" class="md-nav__link">
         
   
   
@@ -6851,7 +6756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/min_cost_flow.html" class="md-nav__link">
+      <a href="min_cost_flow.html" class="md-nav__link">
         
   
   
@@ -6879,7 +6784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/Assignment-problem-min-flow.html" class="md-nav__link">
+      <a href="Assignment-problem-min-flow.html" class="md-nav__link">
         
   
   
@@ -6907,7 +6812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/stoer_wagner_mincut.html" class="md-nav__link">
+      <a href="stoer_wagner_mincut.html" class="md-nav__link">
         
   
   
@@ -6940,18 +6845,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_9" checked>
         
           
           <label class="md-nav__link" for="__nav_10_9" id="__nav_10_9_label" tabindex="0">
@@ -6972,7 +6879,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -6990,7 +6897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/bipartite-check.html" class="md-nav__link">
+      <a href="bipartite-check.html" class="md-nav__link">
         
   
   
@@ -7018,7 +6925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/kuhn_maximum_bipartite_matching.html" class="md-nav__link">
+      <a href="kuhn_maximum_bipartite_matching.html" class="md-nav__link">
         
   
   
@@ -7043,10 +6950,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="graph/hungarian-algorithm.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hungarian Algorithm
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="hungarian-algorithm.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -7062,6 +6996,142 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#statement-of-the-assignment-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statement of the assignment problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hungarian-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hungarian algorithm
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hungarian algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#historical-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Historical reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-mathcalon4-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The $\mathcal{O}(n^4)$ algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-mathcalon3-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The $\mathcal{O}(n^3)$ algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-of-the-hungarian-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation of the Hungarian algorithm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-to-the-successive-shortest-path-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection to the Successive Shortest Path Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#literature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Literature
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practice Problems
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -7129,7 +7199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/topological-sort.html" class="md-nav__link">
+      <a href="topological-sort.html" class="md-nav__link">
         
   
   
@@ -7157,7 +7227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/edge_vertex_connectivity.html" class="md-nav__link">
+      <a href="edge_vertex_connectivity.html" class="md-nav__link">
         
   
   
@@ -7185,7 +7255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/tree_painting.html" class="md-nav__link">
+      <a href="tree_painting.html" class="md-nav__link">
         
   
   
@@ -7213,7 +7283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/2SAT.html" class="md-nav__link">
+      <a href="2SAT.html" class="md-nav__link">
         
   
   
@@ -7241,7 +7311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/hld.html" class="md-nav__link">
+      <a href="hld.html" class="md-nav__link">
         
   
   
@@ -7269,7 +7339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="graph/centroid_decomposition.html" class="md-nav__link">
+      <a href="centroid_decomposition.html" class="md-nav__link">
         
   
   
@@ -7406,7 +7476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/rmq.html" class="md-nav__link">
+      <a href="../sequences/rmq.html" class="md-nav__link">
         
   
   
@@ -7434,7 +7504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/maximum_average_segment.html" class="md-nav__link">
+      <a href="../others/maximum_average_segment.html" class="md-nav__link">
         
   
   
@@ -7462,7 +7532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/k-th.html" class="md-nav__link">
+      <a href="../sequences/k-th.html" class="md-nav__link">
         
   
   
@@ -7490,7 +7560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sequences/mex.html" class="md-nav__link">
+      <a href="../sequences/mex.html" class="md-nav__link">
         
   
   
@@ -7573,7 +7643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game_theory/games_on_graphs.html" class="md-nav__link">
+      <a href="../game_theory/games_on_graphs.html" class="md-nav__link">
         
   
   
@@ -7601,7 +7671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="game_theory/sprague-grundy-nim.html" class="md-nav__link">
+      <a href="../game_theory/sprague-grundy-nim.html" class="md-nav__link">
         
   
   
@@ -7684,7 +7754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule_one_machine.html" class="md-nav__link">
+      <a href="../schedules/schedule_one_machine.html" class="md-nav__link">
         
   
   
@@ -7712,7 +7782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule_two_machines.html" class="md-nav__link">
+      <a href="../schedules/schedule_two_machines.html" class="md-nav__link">
         
   
   
@@ -7740,7 +7810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schedules/schedule-with-completion-duration.html" class="md-nav__link">
+      <a href="../schedules/schedule-with-completion-duration.html" class="md-nav__link">
         
   
   
@@ -7823,7 +7893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/tortoise_and_hare.html" class="md-nav__link">
+      <a href="../others/tortoise_and_hare.html" class="md-nav__link">
         
   
   
@@ -7851,7 +7921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/josephus_problem.html" class="md-nav__link">
+      <a href="../others/josephus_problem.html" class="md-nav__link">
         
   
   
@@ -7879,7 +7949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/15-puzzle.html" class="md-nav__link">
+      <a href="../others/15-puzzle.html" class="md-nav__link">
         
   
   
@@ -7907,7 +7977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="others/stern_brocot_tree_farey_sequences.html" class="md-nav__link">
+      <a href="../others/stern_brocot_tree_farey_sequences.html" class="md-nav__link">
         
   
   
@@ -7959,9 +8029,9 @@
                   <script type="text/javascript">
 window.onload = function() {
 	const newIssueURL = "https://github.com/cp-algorithms/cp-algorithms/issues/new";
-  const issueTitle = "Problem on article " + "Main Page";
+  const issueTitle = "Problem on article " + "Hungarian Algorithm";
 	const issueBody = `
- **Article:** [`+ "Main Page" + `](${window.location.href})
+ **Article:** [`+ "Hungarian Algorithm" + `](${window.location.href})
 
 **Problem:**
 <!--
@@ -7973,13 +8043,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/index.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/hungarian-algorithm.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/index.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/hungarian-algorithm.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7999,10 +8069,6 @@ Describe the issue of this article in detail.
   
   
 
-  
-  
-  
-
 
 
 
@@ -8011,73 +8077,310 @@ Describe the issue of this article in detail.
 
 <!-- Tags -->
 
+  
+  
+  
+    
+  
+
+
+  
+    <a href="../tags.html#tag:translated" class="md-tag">
+      Translated
+    </a>
+  
+
+  
+    <a href="https://e-maxx.ru/algo/assignment_hungary" class="md-tag">
+      From: e-maxx.ru
+    </a>
+  
 
 </ul>
 
 
-<h1 id="algorithms-for-competitive-programming">Algorithms for Competitive Programming<a class="headerlink" href="#algorithms-for-competitive-programming" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/cp-algorithms/cp-algorithms/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/pulls"><img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/pulls?q=is%3Apr+is%3Aclosed"><img alt="Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/cp-algorithms/cp-algorithms.svg" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/actions?query=branch%3Amain+workflow%3Atest"><img alt="Build" src="https://img.shields.io/github/actions/workflow/status/cp-algorithms/cp-algorithms/test.yml" /></a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/wiki/Translation-Progress"><img alt="Translation Progress" src="https://img.shields.io/badge/translation_progress-85.2%25-yellowgreen.svg" /></a></p>
-<p>The goal of this project is to translate the wonderful resource
-<a href="https://e-maxx.ru/algo">https://e-maxx.ru/algo</a> which provides descriptions of many algorithms
-and data structures especially popular in field of competitive programming.
-Moreover we want to improve the collected knowledge by extending the articles
-and adding new articles to the collection.</p>
-<p>We're an ad-free, volunteer-run website that's free for everyone. Users can contribute articles or help sponsor bounties on articles for greater algorithmic coverage. Your help is greatly appreciated.</p>
-<p>Compiled pages are published at <a href="https://cp-algorithms.com/">https://cp-algorithms.com/</a>.</p>
-<h2 id="become-a-contributor">Become a Contributor<a class="headerlink" href="#become-a-contributor" title="Permanent link">&para;</a></h2>
+<h1 id="hungarian-algorithm-for-solving-the-assignment-problem">Hungarian algorithm for solving the assignment problem<a class="headerlink" href="#hungarian-algorithm-for-solving-the-assignment-problem" title="Permanent link">&para;</a></h1>
+<h2 id="statement-of-the-assignment-problem">Statement of the assignment problem<a class="headerlink" href="#statement-of-the-assignment-problem" title="Permanent link">&para;</a></h2>
+<p>There are several standard formulations of the assignment problem (all of which are essentially equivalent). Here are some of them:</p>
 <ul>
-<li><a href="https://cp-algorithms.com/contrib.html">How to Contribute</a></li>
-<li><a href="https://cp-algorithms.com/code_of_conduct.html">Code of Conduct</a></li>
-<li><a href="https://cp-algorithms.com/preview.html">Test-Your-Page Form</a></li>
+<li>
+<p>There are <span class="arithmatex">$n$</span> jobs and <span class="arithmatex">$n$</span> workers. Each worker specifies the amount of money they expect for a particular job. Each worker can be assigned to only one job. The objective is to assign jobs to workers in a way that minimizes the total cost.</p>
+</li>
+<li>
+<p>Given an <span class="arithmatex">$n \times n$</span> matrix <span class="arithmatex">$A$</span>, the task is to select one number from each row such that exactly one number is chosen from each column, and the sum of the selected numbers is minimized.</p>
+</li>
+<li>
+<p>Given an <span class="arithmatex">$n \times n$</span> matrix <span class="arithmatex">$A$</span>, the task is to find a permutation <span class="arithmatex">$p$</span> of length <span class="arithmatex">$n$</span> such that the value <span class="arithmatex">$\sum A[i]\left[p[i]\right]$</span> is minimized.</p>
+</li>
+<li>
+<p>Consider a complete bipartite graph with <span class="arithmatex">$n$</span> vertices per part, where each edge is assigned a weight. The objective is to find a perfect matching with the minimum total weight.</p>
+</li>
 </ul>
-<h2 id="sponsor-us">Sponsor Us<a class="headerlink" href="#sponsor-us" title="Permanent link">&para;</a></h2>
+<p>It is important to note that all the above scenarios are "<strong>square</strong>" problems, meaning both dimensions are always equal to <span class="arithmatex">$n$</span>. In practice, similar "<strong>rectangular</strong>" formulations are often encountered, where <span class="arithmatex">$n$</span> is not equal to <span class="arithmatex">$m$</span>, and the task is to select <span class="arithmatex">$\min(n,m)$</span> elements. However, it can be observed that a "rectangular" problem can always be transformed into a "square" problem by adding rows or columns with zero or infinite values, respectively.</p>
+<p>We also note that by analogy with the search for a <strong>minimum</strong> solution, one can also pose the problem of finding a <strong>maximum</strong> solution. However, these two problems are equivalent to each other: it is enough to multiply all the weights by <span class="arithmatex">$-1$</span>.</p>
+<h2 id="hungarian-algorithm">Hungarian algorithm<a class="headerlink" href="#hungarian-algorithm" title="Permanent link">&para;</a></h2>
+<h3 id="historical-reference">Historical reference<a class="headerlink" href="#historical-reference" title="Permanent link">&para;</a></h3>
+<p>The algorithm was developed and published by Harold <strong>Kuhn</strong> in 1955. Kuhn himself gave it the name "Hungarian" because it was based on the earlier work by Hungarian mathematicians Dénes Kőnig and Jenő Egerváry.<br>
+In 1957, James <strong>Munkres</strong> showed that this algorithm runs in (strictly) polynomial time, independently from the cost.<br>
+Therefore, in literature, this algorithm is known not only as the "Hungarian", but also as the "Kuhn-Mankres algorithm" or "Mankres algorithm".<br>
+However, it was recently discovered in 2006 that the same algorithm was invented <strong>a century before Kuhn</strong> by the German mathematician Carl Gustav <strong>Jacobi</strong>. His work, <em>About the research of the order of a system of arbitrary ordinary differential equations</em>, which was published posthumously in 1890, contained, among other findings, a polynomial algorithm for solving the assignment problem. Unfortunately, since the publication was in Latin, it went unnoticed among mathematicians.</p>
+<p>It is also worth noting that Kuhn's original algorithm had an asymptotic complexity of <span class="arithmatex">$\mathcal{O}(n^4)$</span>, and only later Jack <strong>Edmonds</strong> and Richard <strong>Karp</strong> (and independently <strong>Tomizawa</strong>) showed how to improve it to an asymptotic complexity of <span class="arithmatex">$\mathcal{O}(n^3)$</span>.</p>
+<h3 id="the-mathcalon4-algorithm">The <span class="arithmatex">$\mathcal{O}(n^4)$</span> algorithm<a class="headerlink" href="#the-mathcalon4-algorithm" title="Permanent link">&para;</a></h3>
+<p>To avoid ambiguity, we note right away that we are mainly concerned with the assignment problem in a matrix formulation (i.e., given a matrix <span class="arithmatex">$A$</span>, you need to select <span class="arithmatex">$n$</span> cells from it that are in different rows and columns). We index arrays starting with <span class="arithmatex">$1$</span>, i.e., for example, a matrix <span class="arithmatex">$A$</span> has indices <span class="arithmatex">$A[1 \dots n][1 \dots n]$</span>.</p>
+<p>We will also assume that all numbers in matrix A are <strong>non-negative</strong> (if this is not the case, you can always make the matrix non-negative by adding some constant to all numbers).</p>
+<p>Let's call a <strong>potential</strong> two arbitrary arrays of numbers <span class="arithmatex">$u[1 \ldots n]$</span> and <span class="arithmatex">$v[1 \ldots n]$</span>, such that the following condition is satisfied:</p>
+<div class="arithmatex">$$u[i]+v[j]\leq A[i][j],\quad i=1\dots n,\ j=1\dots n$$</div>
+<p>(As you can see, <span class="arithmatex">$u[i]$</span> corresponds to the <span class="arithmatex">$i$</span>-th row, and <span class="arithmatex">$v[j]$</span> corresponds to the <span class="arithmatex">$j$</span>-th column of the matrix).</p>
+<p>Let's call <strong>the value <span class="arithmatex">$f$</span> of the potential</strong> the sum of its elements:</p>
+<div class="arithmatex">$$f=\sum_{i=1}^{n} u[i] + \sum_{j=1}^{n} v[j].$$</div>
+<p>On one hand, it is easy to see that the cost of the desired solution <span class="arithmatex">$sol$</span> <strong>is not less than</strong> the value of any potential.</p>
+<div class="admonition info">
+<p><strong>Lemma.</strong> <span class="arithmatex">$sol\geq f.$</span></p>
+</div>
+<details class="info">
+<summary>Proof</summary>
+<p>The desired solution of the problem consists of <span class="arithmatex">$n$</span> cells of the matrix <span class="arithmatex">$A$</span>, so <span class="arithmatex">$u[i]+v[j]\leq A[i][j]$</span> for each of them. Since all the elements in <span class="arithmatex">$sol$</span> are in different rows and columns, summing these inequalities over all the selected <span class="arithmatex">$A[i][j]$</span>, you get <span class="arithmatex">$f$</span> on the left side of the inequality, and <span class="arithmatex">$sol$</span> on the right side.</p>
+</details>
+<p>On the other hand, it turns out that there is always a solution and a potential that turns this inequality into <strong>equality</strong>. The Hungarian algorithm described below will be a constructive proof of this fact. For now, let's just pay attention to the fact that if any solution has a cost equal to any potential, then this solution is <strong>optimal</strong>.</p>
+<p>Let's fix some potential. Let's call an edge <span class="arithmatex">$(i,j)$</span> <strong>rigid</strong> if <span class="arithmatex">$u[i]+v[j]=A[i][j].$</span></p>
+<p>Recall an alternative formulation of the assignment problem, using a bipartite graph. Denote with <span class="arithmatex">$H$</span> a bipartite graph composed only of rigid edges. The Hungarian algorithm will maintain, for the current potential, <strong>the maximum-number-of-edges matching</strong> <span class="arithmatex">$M$</span> of the graph <span class="arithmatex">$H$</span>. As soon as <span class="arithmatex">$M$</span> contains <span class="arithmatex">$n$</span> edges, then the solution to the problem will be just <span class="arithmatex">$M$</span> (after all, it will be a solution whose cost coincides with the value of a potential).</p>
+<p>Let's proceed directly to <strong>the description of the algorithm</strong>.</p>
+<p><strong>Step 1.</strong> At the beginning, the potential is assumed to be zero (<span class="arithmatex">$u[i]=v[i]=0$</span> for all <span class="arithmatex">$i$</span>), and the matching <span class="arithmatex">$M$</span> is assumed to be empty.</p>
+<p><strong>Step 2.</strong> Further, at each step of the algorithm, we try, without changing the potential, to increase the cardinality of the current matching <span class="arithmatex">$M$</span> by one (recall that the matching is searched in the graph of rigid edges <span class="arithmatex">$H$</span>). To do this, the usual <a href="kuhn_maximum_bipartite_matching.html">Kuhn Algorithm for finding the maximum matching in bipartite graphs</a> is used. Let us recall the algorithm here.
+All edges of the matching <span class="arithmatex">$M$</span> are oriented in the direction from the right part to the left one, and all other edges of the graph <span class="arithmatex">$H$</span> are oriented in the opposite direction.</p>
+<p>Recall (from the terminology of searching for matchings) that a vertex is called saturated if an edge of the current matching is adjacent to it. A vertex that is not adjacent to any edge of the current matching is called unsaturated. A path of odd length, in which the first edge does not belong to the matching, and for all subsequent edges there is an alternating belonging to the matching (belongs/does not belong) - is called an augmenting path.
+From all unsaturated vertices in the left part, a <a href="depth-first-search.html">depth-first</a> or <a href="breadth-first-search.html">breadth-first</a> traversal is started. If, as a result of the search, it was possible to reach an unsaturated vertex of the right part, we have found an augmenting path from the left part to the right one. If we include odd edges of the path and remove the even ones in the matching (i.e. include the first edge in the matching, exclude the second, include the third, etc.), then we will increase the matching cardinality by one.</p>
+<p>If there was no augmenting path, then the current matching <span class="arithmatex">$M$</span> is maximal in the graph <span class="arithmatex">$H$</span>.</p>
+<p><strong>Step 3.</strong> If at the current step, it is not possible to increase the cardinality of the current matching, then a recalculation of the potential is performed in such a way that, at the next steps, there will be more opportunities to increase the matching.</p>
+<p>Denote by <span class="arithmatex">$Z_1$</span> the set of vertices of the left part that were visited during the last traversal of Kuhn's algorithm, and through <span class="arithmatex">$Z_2$</span> the set of visited vertices of the right part.</p>
+<p>Let's calculate the value <span class="arithmatex">$\Delta$</span>:</p>
+<div class="arithmatex">$$\Delta = \min_{i\in Z_1,\ j\notin Z_2} A[i][j]-u[i]-v[j].$$</div>
+<div class="admonition info">
+<p><strong>Lemma.</strong> <span class="arithmatex">$\Delta &gt; 0.$</span></p>
+</div>
+<details class="info">
+<summary>Proof</summary>
+<p>Suppose <span class="arithmatex">$\Delta=0$</span>. Then there exists a rigid edge <span class="arithmatex">$(i,j)$</span> with <span class="arithmatex">$i\in Z_1$</span> and <span class="arithmatex">$j\notin Z_2$</span>. It follows that the edge <span class="arithmatex">$(i,j)$</span> must be oriented from the right part to the left one, i.e. <span class="arithmatex">$(i,j)$</span> must be included in the matching <span class="arithmatex">$M$</span>. However, this is impossible, because we could not get to the saturated vertex <span class="arithmatex">$i$</span> except by going along the edge from j to i. So <span class="arithmatex">$\Delta &gt; 0$</span>.</p>
+</details>
+<p>Now let's <strong>recalculate the potential</strong> in this way:</p>
 <ul>
-<li><a href="https://github.com/sponsors/cp-algorithms">Become a Financial Supporter</a></li>
+<li>
+<p>for all vertices <span class="arithmatex">$i\in Z_1$</span>, do <span class="arithmatex">$u[i] \gets u[i]+\Delta$</span>,</p>
+</li>
+<li>
+<p>for all vertices <span class="arithmatex">$j\in Z_2$</span>, do <span class="arithmatex">$v[j] \gets v[j]-\Delta$</span>.</p>
+</li>
 </ul>
-<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p><strong>Lemma.</strong> The resulting potential is still a correct potential.</p>
+</div>
+<details class="info">
+<summary>Proof</summary>
+<p>We will show that, after recalculation, <span class="arithmatex">$u[i]+v[j]\leq A[i][j]$</span> for all <span class="arithmatex">$i,j$</span>. For all the elements of <span class="arithmatex">$A$</span> with <span class="arithmatex">$i\in Z_1$</span> and <span class="arithmatex">$j\in Z_2$</span>, the sum <span class="arithmatex">$u[i]+v[j]$</span> does not change, so the inequality remains true. For all the elements with <span class="arithmatex">$i\notin Z_1$</span> and <span class="arithmatex">$j\in Z_2$</span>, the sum <span class="arithmatex">$u[i]+v[j]$</span> decreases by <span class="arithmatex">$\Delta$</span>, so the inequality is still true. For the other elements whose <span class="arithmatex">$i\in Z_1$</span> and <span class="arithmatex">$j\notin Z_2$</span>, the sum increases, but the inequality is still preserved, since the value <span class="arithmatex">$\Delta$</span> is, by definition, the maximum increase that does not change the inequality.</p>
+</details>
+<div class="admonition info">
+<p><strong>Lemma.</strong> The old matching <span class="arithmatex">$M$</span> of rigid edges is valid, i.e. all edges of the matching will remain rigid.</p>
+</div>
+<details class="info">
+<summary>Proof</summary>
+<p>For some rigid edge <span class="arithmatex">$(i,j)$</span> to stop being rigid as a result of a change in potential, it is necessary that equality <span class="arithmatex">$u[i] + v[j] = A[i][j]$</span> turns into inequality <span class="arithmatex">$u[i] + v[j] &lt; A[i][j]$</span>. However, this can happen only when <span class="arithmatex">$i \notin Z_1$</span> and <span class="arithmatex">$j \in Z_2$</span>. But <span class="arithmatex">$i \notin Z_1$</span> implies that the edge <span class="arithmatex">$(i,j)$</span> could not be a matching edge.</p>
+</details>
+<div class="admonition info">
+<p><strong>Lemma.</strong> After each recalculation of the potential, the number of vertices reachable by the traversal, i.e. <span class="arithmatex">$|Z_1|+|Z_2|$</span>, strictly increases.</p>
+</div>
+<details class="info">
+<summary>Proof</summary>
+<p>First, note that any vertex that was reachable before recalculation, is still reachable. Indeed, if some vertex is reachable, then there is some path from reachable vertices to it, starting from the unsaturated vertex of the left part; since for edges of the form <span class="arithmatex">$(i,j),\ i\in Z_1,\ j\in Z_2$</span> the sum <span class="arithmatex">$u[i]+v[j]$</span> does not change, this entire path will be preserved after changing the potential.
+Secondly, we show that after a recalculation, at least one new vertex will be reachable. This follows from the definition of <span class="arithmatex">$\Delta$</span>: the edge <span class="arithmatex">$(i,j)$</span> which <span class="arithmatex">$\Delta$</span> refers to will become rigid, so vertex <span class="arithmatex">$j$</span> will be reachable from vertex <span class="arithmatex">$i$</span>.</p>
+</details>
+<p>Due to the last lemma, <strong>no more than <span class="arithmatex">$n$</span> potential recalculations can occur</strong> before an augmenting path is found and the matching cardinality of <span class="arithmatex">$M$</span> is increased.
+Thus, sooner or later, a potential that corresponds to a perfect matching <span class="arithmatex">$M^*$</span> will be found, and <span class="arithmatex">$M^*$</span> will be the answer to the problem.
+If we talk about the complexity of the algorithm, then it is <span class="arithmatex">$\mathcal{O}(n^4)$</span>: in total there should be at most <span class="arithmatex">$n$</span> increases in matching, before each of which there are no more than <span class="arithmatex">$n$</span> potential recalculations, each of which is performed in time <span class="arithmatex">$\mathcal{O}(n^2)$</span>.</p>
+<p>We will not give the implementation for the <span class="arithmatex">$\mathcal{O}(n^4)$</span> algorithm here, since it will turn out to be no shorter than the implementation for the <span class="arithmatex">$\mathcal{O}(n^3)$</span> one, described below.</p>
+<h3 id="the-mathcalon3-algorithm">The <span class="arithmatex">$\mathcal{O}(n^3)$</span> algorithm<a class="headerlink" href="#the-mathcalon3-algorithm" title="Permanent link">&para;</a></h3>
+<p>Now let's learn how to implement the same algorithm in <span class="arithmatex">$\mathcal{O}(n^3)$</span> (for rectangular problems <span class="arithmatex">$n \times m$</span>, <span class="arithmatex">$\mathcal{O}(n^2m)$</span>).</p>
+<p>The key idea is to <strong>consider matrix rows one by one</strong>, and not all at once. Thus, the algorithm described above will take the following form:</p>
+<ol>
+<li>
+<p>Consider the next row of the matrix <span class="arithmatex">$A$</span>.</p>
+</li>
+<li>
+<p>While there is no increasing path starting in this row, recalculate the potential.</p>
+</li>
+<li>
+<p>As soon as an augmenting path is found, propagate the matching along it (thus including the last edge in the matching), and restart from step 1 (to consider the next line).</p>
+</li>
+</ol>
+<p>To achieve the required complexity, it is necessary to implement steps 2-3, which are performed for each row of the matrix, in time <span class="arithmatex">$\mathcal{O}(n^2)$</span> (for rectangular problems in <span class="arithmatex">$\mathcal{O}(nm)$</span>).</p>
+<p>To do this, recall two facts proved above:</p>
 <ul>
-<li>August, 2025: Overhaul of CP-Algorithms <a href="https://github.com/sponsors/cp-algorithms">donation system</a>. Please consider supporting us, so that we can grow!</li>
-<li>August, 2025: Launched a <a href="https://discord.gg/HZ5AecN3KX">Discord server</a>!</li>
-<li>October, 2024: Welcome new maintainers: <a href="https://github.com/jxu">jxu</a>, <a href="https://github.com/mhayter">mhayter</a> and <a href="https://github.com/kostero">kostero</a>!</li>
-<li>October, 15, 2024: GitHub pages based mirror is now served at <a href="https://gh.cp-algorithms.com/">https://gh.cp-algorithms.com/</a>, and an auxiliary competitive programming library is available at <a href="https://lib.cp-algorithms.com/">https://lib.cp-algorithms.com/</a>.</li>
-<li>July 16, 2024: Major overhaul of the <a href="https://cp-algorithms.com/graph/strongly-connected-components.html">Finding strongly connected components / Building condensation graph</a> article.</li>
-<li>June 26, 2023: Added automatic RSS feeds for <a href="https://cp-algorithms.com/feed_rss_created.xml">new articles</a> and <a href="https://cp-algorithms.com/feed_rss_updated.xml">updates in articles</a>.</li>
-<li>December 20, 2022: The repository name and the owning organizations were renamed! Now the repo is located at <a href="https://github.com/cp-algorithms/cp-algorithms">https://github.com/cp-algorithms/cp-algorithms</a>. It is recommended to update the upstream link in your local repositories, if you have any.</li>
-<li>October 31, 2022: It is now possible to select and copy <span class="arithmatex">$\LaTeX$</span> source code of formulas within the articles.</li>
-<li>June 8, 2022: Tags are enabled. Each article is now marked whether it is translated or original, overall tag info is present in the <a href="https://cp-algorithms.com/tags.html">tag index</a>. For translated articles, clicking on <code>From: X</code> tag would lead to the original article.</li>
-<li>June 7, 2022: Date of last commit and author list with contribution percentage is tracked for each page.</li>
-<li>June 5, 2022: Enabled content tabs and sidebar navigation. The navigation is moved to a <a href="https://cp-algorithms.com/navigation.html">separate page</a> and its structure should be adjusted in <a href="https://github.com/cp-algorithms/cp-algorithms/blob/main/src/navigation.md">navigation.md</a> whenever a new article is created or an old one is moved.</li>
-<li>January 16, 2022: Switched to the <a href="https://www.mkdocs.org/">MkDocs</a> site generator with the <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a> theme, which give the website a more modern look, brings a couple of new features (dark mode, better search, ...), makes the website more stable (in terms of rendering math formulas), and makes it easier to contribute.</li>
+<li>
+<p>With a change in the potential, the vertices that were reachable by Kuhn's traversal will remain reachable.</p>
+</li>
+<li>
+<p>In total, only <span class="arithmatex">$\mathcal{O}(n)$</span> recalculations of the potential could occur before an augmenting path was found.</p>
+</li>
 </ul>
-<h3 id="new-articles">New articles<a class="headerlink" href="#new-articles" title="Permanent link">&para;</a></h3>
+<p>From this follow these <strong>key ideas</strong> that allow us to achieve the required complexity:</p>
 <ul>
-<li>(9 June 2026) <a href="https://cp-algorithms.com/graph/stoer_wagner_mincut.html">Minimum cut - Stoer-Wagner algorithm</a></li>
-<li>(28 March 2026) <a href="https://cp-algorithms.com/graph/centroid_decomposition.html">Centroid decomposition</a></li>
-<li>(19 August 2025) <a href="https://cp-algorithms.com/geometry/enclosing-circle.html">Minimum Enclosing Circle</a></li>
-<li>(21 May 2025) <a href="https://cp-algorithms.com/num_methods/simulated_annealing.html">Simulated Annealing</a></li>
-<li>(12 July 2024) <a href="https://cp-algorithms.com/geometry/manhattan-distance.html">Manhattan distance</a></li>
-<li>(8 June 2024) <a href="https://cp-algorithms.com/dynamic_programming/knapsack.html">Knapsack Problem</a></li>
-<li>(28 January 2024) <a href="https://cp-algorithms.com/dynamic_programming/intro-to-dp.html">Introduction to Dynamic Programming</a></li>
-<li>(8 December 2023) <a href="https://cp-algorithms.com/graph/hungarian-algorithm.html">Hungarian Algorithm</a></li>
-<li>(10 September 2023) <a href="https://cp-algorithms.com/others/tortoise_and_hare.html">Tortoise and Hare Algorithm</a></li>
-<li>(12 July 2023) <a href="https://cp-algorithms.com/geometry/planar.html">Finding faces of a planar graph</a></li>
-<li>(18 April 2023) <a href="https://cp-algorithms.com/algebra/bit-manipulation.html">Bit manipulation</a></li>
-<li>(17 October 2022) <a href="https://cp-algorithms.com/num_methods/binary_search.html">Binary Search</a></li>
-<li>(17 October 2022) <a href="https://cp-algorithms.com/sequences/mex.html">MEX (Minimum Excluded element in an array)</a></li>
-<li>(12 May 2022) <a href="https://cp-algorithms.com/algebra/factoring-exp.html">Factoring Exponentiation</a></li>
-<li>(7 May 2022) <a href="https://cp-algorithms.com/dynamic_programming/knuth-optimization.html">Knuth's Optimization</a></li>
-<li>(31 March 2022) <a href="https://cp-algorithms.com/algebra/continued-fractions.html">Continued fractions</a></li>
+<li>
+<p>To check for the presence of an augmenting path, there is no need to start the Kuhn traversal again after each potential recalculation. Instead, you can make the Kuhn traversal in an <strong>iterative form</strong>: after each recalculation of the potential, look at the added rigid edges and, if their left ends were reachable, mark their right ends reachable as well and continue the traversal from them.</p>
+</li>
+<li>
+<p>Developing this idea further, we can present the algorithm as follows: at each step of the loop, the potential is recalculated. Subsequently, a column that has become reachable is identified (which will always exist as new reachable vertices emerge after every potential recalculation). If the column is unsaturated, an augmenting chain is discovered. Conversely, if the column is saturated, the matching row also becomes reachable.</p>
+</li>
+<li>
+<p>To quickly recalculate the potential (faster than the <span class="arithmatex">$\mathcal{O}(n^2)$</span> naive version), you need to maintain auxiliary minima for each of the columns:</p>
+<p><br><div style="text-align:center"><span class="arithmatex">$minv[j]=\min_{i\in Z_1} A[i][j]-u[i]-v[j].$</span></div><br></p>
+<p>It's easy to see that the desired value <span class="arithmatex">$\Delta$</span> is expressed in terms of them as follows:</p>
+<p><br><div style="text-align:center"><span class="arithmatex">$\Delta=\min_{j\notin Z_2} minv[j].$</span></div><br></p>
+<p>Thus, finding <span class="arithmatex">$\Delta$</span> can now be done in <span class="arithmatex">$\mathcal{O}(n)$</span>.</p>
+<p>It is necessary to update the array <span class="arithmatex">$minv$</span> when new visited rows appear. This can be done in <span class="arithmatex">$\mathcal{O}(n)$</span> for the added row (which adds up over all rows to <span class="arithmatex">$\mathcal{O}(n^2)$</span>). It is also necessary to update the array <span class="arithmatex">$minv$</span> when recalculating the potential, which is also done in time <span class="arithmatex">$\mathcal{O}(n)$</span> (<span class="arithmatex">$minv$</span> changes only for columns that have not yet been reached: namely, it decreases by <span class="arithmatex">$\Delta$</span>).</p>
+</li>
 </ul>
-<p>Full list of updates: <a href="https://github.com/cp-algorithms/cp-algorithms/commits/main">Commit History</a></p>
-<p>Full list of articles: <a href="https://cp-algorithms.com/navigation.html">Navigation</a></p>
+<p>Thus, the algorithm takes the following form: in the outer loop, we consider matrix rows one by one. Each row is processed in time <span class="arithmatex">$\mathcal{O}(n^2)$</span>, since only <span class="arithmatex">$\mathcal{O}(n)$</span> potential recalculations could occur (each in time <span class="arithmatex">$\mathcal{O}(n)$</span>), and the array <span class="arithmatex">$minv$</span> is maintained in time <span class="arithmatex">$\mathcal{O}(n^2)$</span>; Kuhn's algorithm will work in time <span class="arithmatex">$\mathcal{O}(n^2)$</span> (since it is presented in the form of <span class="arithmatex">$\mathcal{O}(n)$</span> iterations, each of which visits a new column).</p>
+<p>The resulting complexity is <span class="arithmatex">$\mathcal{O}(n^3)$</span> or, if the problem is rectangular, <span class="arithmatex">$\mathcal{O}(n^2m)$</span>.</p>
+<h2 id="implementation-of-the-hungarian-algorithm">Implementation of the Hungarian algorithm<a class="headerlink" href="#implementation-of-the-hungarian-algorithm" title="Permanent link">&para;</a></h2>
+<p>The implementation below was developed by <strong>Andrey Lopatin</strong> several years ago. It is distinguished by amazing conciseness: the entire algorithm consists of <strong>30 lines of code</strong>.</p>
+<p>The implementation finds a solution for the rectangular matrix <span class="arithmatex">$A[1\dots n][1\dots m]$</span>, where <span class="arithmatex">$n\leq m$</span>. The matrix is ​1-based for convenience and code brevity: this implementation introduces a dummy zero row and zero column, which allows us to write many cycles in a general form, without additional checks.</p>
+<p>Arrays <span class="arithmatex">$u[0 \ldots n]$</span> and <span class="arithmatex">$v[0 \ldots m]$</span> store potential. Initially, they are set to zero, which is consistent with a matrix of zero rows (Note that it is unimportant for this implementation whether or not the matrix <span class="arithmatex">$A$</span> contains negative numbers).</p>
+<p>The array <span class="arithmatex">$p[0 \ldots m]$</span> contains a matching: for each column <span class="arithmatex">$j = 1 \ldots m$</span>, it stores the number <span class="arithmatex">$p[j]$</span> of the selected row (or <span class="arithmatex">$0$</span> if nothing has been selected yet). For the convenience of implementation, <span class="arithmatex">$p[0]$</span> is assumed to be equal to the number of the current row.</p>
+<p>The array <span class="arithmatex">$minv[1 \ldots m]$</span> contains, for each column <span class="arithmatex">$j$</span>, the auxiliary minima necessary for a quick recalculation of the potential, as described above.</p>
+<p>The array <span class="arithmatex">$way[1 \ldots m]$</span> contains information about where these minimums are reached so that we can later reconstruct the augmenting path. Note that, to reconstruct the path, it is sufficient to store only column values, since the row numbers can be taken from the matching (i.e., from the array <span class="arithmatex">$p$</span>). Thus, <span class="arithmatex">$way[j]$</span>, for each column <span class="arithmatex">$j$</span>, contains the number of the previous column in the path (or <span class="arithmatex">$0$</span> if there is none).</p>
+<p>The algorithm itself is an outer <strong>loop through the rows of the matrix</strong>, inside which the <span class="arithmatex">$i$</span>-th row of the matrix is ​​considered. The first <em>do-while</em> loop runs until a free column <span class="arithmatex">$j0$</span> is found. Each iteration of the loop marks visited a new column with the number <span class="arithmatex">$j0$</span> (calculated at the last iteration; and initially equal to zero - i.e. we start from a dummy column), as well as a new row <span class="arithmatex">$i0$</span> - adjacent to it in the matching (i.e. <span class="arithmatex">$p[j0]$</span>; and initially when <span class="arithmatex">$j0=0$</span> the <span class="arithmatex">$i$</span>-th row is taken). Due to the appearance of a new visited row <span class="arithmatex">$i0$</span>, you need to recalculate the array <span class="arithmatex">$minv$</span> and <span class="arithmatex">$\Delta$</span> accordingly. If <span class="arithmatex">$\Delta$</span> is updated, then the column <span class="arithmatex">$j1$</span> becomes the minimum that has been reached (note that with such an implementation <span class="arithmatex">$\Delta$</span> could turn out to be equal to zero, which means that the potential cannot be changed at the current step: there is already a new reachable column). After that, the potential and the <span class="arithmatex">$minv$</span> array are recalculated. At the end of the "do-while" loop, we found an augmenting path ending in a column <span class="arithmatex">$j0$</span> that can be "unrolled" using the ancestor array <span class="arithmatex">$way$</span>.</p>
+<p>The constant <tt>INF</tt> is "infinity", i.e. some number, obviously greater than all possible numbers in the input matrix <span class="arithmatex">$A$</span>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">way</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">minv</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">INF</span><span class="p">);</span>
+<span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">used</span><span class="p">[</span><span class="n">j0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">j0</span><span class="p">],</span><span class="w">  </span><span class="n">delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">INF</span><span class="p">,</span><span class="w">  </span><span class="n">j1</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">used</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">int</span><span class="w"> </span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="n">i0</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">-</span><span class="n">u</span><span class="p">[</span><span class="n">i0</span><span class="p">]</span><span class="o">-</span><span class="n">v</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cur</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">minv</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+<span class="w">                    </span><span class="n">minv</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cur</span><span class="p">,</span><span class="w">  </span><span class="n">way</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j0</span><span class="p">;</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">minv</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">delta</span><span class="p">)</span>
+<span class="w">                    </span><span class="n">delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">minv</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="w">  </span><span class="n">j1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">used</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+<span class="w">                </span><span class="n">u</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">delta</span><span class="p">,</span><span class="w">  </span><span class="n">v</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">delta</span><span class="p">;</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">                </span><span class="n">minv</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">delta</span><span class="p">;</span>
+<span class="w">        </span><span class="n">j0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">j0</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">j1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">way</span><span class="p">[</span><span class="n">j0</span><span class="p">];</span>
+<span class="w">        </span><span class="n">p</span><span class="p">[</span><span class="n">j0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">j1</span><span class="p">];</span>
+<span class="w">        </span><span class="n">j0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">j0</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>To restore the answer in a more familiar form, i.e. finding for each row <span class="arithmatex">$i = 1 \ldots n$</span> the number <span class="arithmatex">$ans[i]$</span> of the column selected in it, can be done as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">&lt;=</span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span>
+<span class="w">    </span><span class="n">ans</span><span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+</code></pre></div>
+<p>The cost of the matching can simply be taken as the potential of the zero column (taken with the opposite sign). Indeed, as you can see from the code, <span class="arithmatex">$-v[0]$</span> contains the sum of all the values of <span class="arithmatex">$\Delta$</span>​​, i.e. total change in potential. Although several values ​​​​of <span class="arithmatex">$u[i]$</span> and <span class="arithmatex">$v[j]$</span> could change at once, the total change in the potential is exactly equal to <span class="arithmatex">$\Delta$</span>, since until there is an augmenting path, the number of reachable rows is exactly one more than the number of the reachable columns (only the current row <span class="arithmatex">$i$</span> does not have a "pair" in the form of a visited column):</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">cost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</code></pre></div>
+<h2 id="connection-to-the-successive-shortest-path-algorithm">Connection to the Successive Shortest Path Algorithm<a class="headerlink" href="#connection-to-the-successive-shortest-path-algorithm" title="Permanent link">&para;</a></h2>
+<p>The Hungarian algorithm can be seen as the <a href="min_cost_flow.html">Successive Shortest Path Algorithm</a>, adapted for the assignment problem. Without going into the details, let's provide an intuition regarding the connection between them.</p>
+<p>The Successive Path algorithm uses a modified version of Johnson's algorithm as reweighting technique. This one is divided into four steps:</p>
+<ul>
+<li>Use the <a href="bellman_ford.html">Bellman-Ford</a> algorithm, starting from the sink <span class="arithmatex">$s$</span> and, for each node, find the minimum weight <span class="arithmatex">$h(v)$</span> of a path from <span class="arithmatex">$s$</span> to <span class="arithmatex">$v$</span>.</li>
+</ul>
+<p>For every step of the main algorithm:</p>
+<ul>
+<li>Reweight the edges of the original graph in this way: <span class="arithmatex">$w(u,v) \gets w(u,v)+h(u)-h(v)$</span>.</li>
+<li>Use <a href="dijkstra.html">Dijkstra</a>'s algorithm to find the shortest-paths subgraph of the original network.</li>
+<li>Update potentials for the next iteration.</li>
+</ul>
+<p>Given this description, we can observe that there is a strong analogy between <span class="arithmatex">$h(v)$</span> and potentials: it can be checked that they are equal up to a constant offset. In addition, it can be shown that, after reweighting, the set of all zero-weight edges represents the shortest-path subgraph where the main algorithm tries to increase the flow. This also happens in the Hungarian algorithm: we create a subgraph made of rigid edges (the ones for which the quantity <span class="arithmatex">$A[i][j]-u[i]-v[j]$</span> is zero), and we try to increase the size of the matching.</p>
+<p>In step 4, all the <span class="arithmatex">$h(v)$</span> are updated: every time we modify the flow network, we should guarantee that the distances from the source are correct (otherwise, in the next iteration, Dijkstra's algorithm might fail). This sounds like the update performed on the potentials, but in this case, they are not equally incremented.</p>
+<p>To deepen the understanding of potentials, refer to this <a href="https://codeforces.com/blog/entry/105658">article</a>.</p>
+<h2 id="task-examples">Task examples<a class="headerlink" href="#task-examples" title="Permanent link">&para;</a></h2>
+<p>Here are a few examples related to the assignment problem, from very trivial to less obvious tasks:</p>
+<ul>
+<li>
+<p>Given a bipartite graph, it is required to find in it <strong>the maximum matching with the minimum weight</strong> (i.e., first of all, the size of the matching is maximized, and secondly, its cost is minimized).<br>
+  To solve it, we simply build an assignment problem, putting the number "infinity" in place of the missing edges. After that, we solve the problem with the Hungarian algorithm, and remove edges of infinite weight from the answer (they could enter the answer if the problem does not have a solution in the form of a perfect matching).</p>
+</li>
+<li>
+<p>Given a bipartite graph, it is required to find in it <strong>the maximum matching with the maximum weight</strong>.<br>
+  The solution is again obvious, all weights must be multiplied by minus one.</p>
+</li>
+<li>
+<p>The task of <strong>detecting moving objects in images</strong>: two images were taken, as a result of which two sets of coordinates were obtained. It is required to correlate the objects in the first and second images, i.e. determine for each point of the second image, which point of the first image it corresponded to. In this case, it is required to minimize the sum of distances between the compared points (i.e., we are looking for a solution in which the objects have taken the shortest path in total).<br>
+  To solve, we simply build and solve an assignment problem, where the weights of the edges are the Euclidean distances between points.</p>
+</li>
+<li>
+<p>The task of <strong>detecting moving objects by locators</strong>: there are two locators that can't determine the position of an object in space, but only its direction. Both locators (located at different points) received information in the form of <span class="arithmatex">$n$</span> such directions. It is required to determine the position of objects, i.e. determine the expected positions of objects and their corresponding pairs of directions in such a way that the sum of distances from objects to direction rays is minimized.<br>
+  Solution: again, we simply build and solve the assignment problem, where the vertices of the left part are the <span class="arithmatex">$n$</span> directions from the first locator, the vertices of the right part are the <span class="arithmatex">$n$</span> directions from the second locator, and the weights of the edges are the distances between the corresponding rays.</p>
+</li>
+<li>
+<p>Covering a <strong>directed acyclic graph with paths</strong>: given a directed acyclic graph, it is required to find the smallest number of paths (if equal, with the smallest total weight) so that each vertex of the graph lies in exactly one path.<br>
+  The solution is to build the corresponding bipartite graph from the given graph and find the maximum matching of the minimum weight in it. See separate article for more details.</p>
+</li>
+<li>
+<p><strong>Tree coloring book</strong>. Given a tree in which each vertex, except for leaves, has exactly <span class="arithmatex">$k-1$</span> children. It is required to choose for each vertex one of the <span class="arithmatex">$k$</span> colors available so that no two adjacent vertices have the same color. In addition, for each vertex and each color, the cost of painting this vertex with this color is known, and it is required to minimize the total cost.<br>
+  To solve this problem, we use dynamic programming. Namely, let's learn how to calculate the value <span class="arithmatex">$d[v][c]$</span>, where <span class="arithmatex">$v$</span> is the vertex number, <span class="arithmatex">$c$</span> is the color number, and the value <span class="arithmatex">$d[v][c]$</span> itself is the minimum cost needed to color all the vertices in the subtree rooted at <span class="arithmatex">$v$</span>, and the vertex <span class="arithmatex">$v$</span> itself with color <span class="arithmatex">$c$</span>. To calculate such a value <span class="arithmatex">$d[v][c]$</span>, it is necessary to distribute the remaining <span class="arithmatex">$k-1$</span> colors among the children of the vertex <span class="arithmatex">$v$</span>, and for this, it is necessary to build and solve the assignment problem (in which the vertices of the left part are colors, the vertices of the right part are children, and the weights of the edges are the corresponding values of <span class="arithmatex">$d$</span>).<br>
+  Thus, each value <span class="arithmatex">$d[v][c]$</span> is calculated using the solution of the assignment problem, which ultimately gives the asymptotic <span class="arithmatex">$\mathcal{O}(nk^4)$</span>.</p>
+</li>
+<li>
+<p>If, in the assignment problem, the weights are not on the edges, but on the vertices, and only <strong>on the vertices of the same part</strong>, then it's not necessary to use the Hungarian algorithm: just sort the vertices by weight and run the usual <a href="kuhn_maximum_bipartite_matching.html">Kuhn algorithm</a> (for more details, see a <a href="http://e-maxx.ru/algo/vertex_weighted_matching">separate article</a>).</p>
+</li>
+<li>
+<p>Consider the following <strong>special case</strong>. Let each vertex of the left part be assigned some number <span class="arithmatex">$\alpha[i]$</span>, and each vertex of the right part <span class="arithmatex">$\beta[j]$</span>. Let the weight of any edge <span class="arithmatex">$(i,j)$</span> be equal to <span class="arithmatex">$\alpha[i]\cdot \beta[j]$</span> (the numbers <span class="arithmatex">$\alpha[i]$</span> and <span class="arithmatex">$\beta[j]$</span> are known). Solve the assignment problem.<br>
+  To solve it without the Hungarian algorithm, we first consider the case when both parts have two vertices. In this case, as you can easily see, it is better to connect the vertices in the reverse order: connect the vertex with the smaller <span class="arithmatex">$\alpha[i]$</span> to the vertex with the larger <span class="arithmatex">$\beta[j]$</span>. This rule can be easily generalized to an arbitrary number of vertices: you need to sort the vertices of the first part in increasing order of <span class="arithmatex">$\alpha[i]$</span> values, the second part in decreasing order of <span class="arithmatex">$\beta[j]$</span> values, and connect the vertices in pairs in that order. Thus, we obtain a solution with complexity of <span class="arithmatex">$\mathcal{O}(n\log n)$</span>.</p>
+</li>
+<li>
+<p><strong>The Problem of Potentials</strong>. Given a matrix <span class="arithmatex">$A[1 \ldots n][1 \ldots m]$</span>, it is required to find two arrays <span class="arithmatex">$u[1 \ldots n]$</span> and <span class="arithmatex">$v[1 \ldots m]$</span> such that, for any <span class="arithmatex">$i$</span> and <span class="arithmatex">$j$</span>, <span class="arithmatex">$u[i] + v[j] \leq a[i][j]$</span> and the sum of elements of arrays <span class="arithmatex">$u$</span> and <span class="arithmatex">$v$</span> is maximum.<br>
+  Knowing the Hungarian algorithm, the solution to this problem will not be difficult: the Hungarian algorithm just finds such a potential <span class="arithmatex">$u, v$</span> that satisfies the condition of the problem. On the other hand, without knowledge of the Hungarian algorithm, it seems almost impossible to solve such a problem.</p>
+<div class="admonition info">
+<p class="admonition-title">Remark</p>
+<p>This task is also called the <strong>dual problem</strong> of the assignment problem: minimizing the total cost of the assignment is equivalent to maximizing the sum of the potentials.</p>
+</div>
+</li>
+</ul>
+<h2 id="literature">Literature<a class="headerlink" href="#literature" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><a href="https://books.google.it/books/about/Network_Flows.html?id=rFuLngEACAAJ&amp;redir_esc=y">Ravindra Ahuja, Thomas Magnanti, James Orlin. Network Flows [1993]</a></p>
+</li>
+<li>
+<p><a href="https://link.springer.com/chapter/10.1007/978-3-540-68279-0_2">Harold Kuhn. The Hungarian Method for the Assignment Problem [1955]</a></p>
+</li>
+<li>
+<p><a href="https://www.jstor.org/stable/2098689">James Munkres. Algorithms for Assignment and Transportation Problems [1957]</a></p>
+</li>
+</ul>
+<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><a href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1687">UVA - Crime Wave - The Sequel</a></p>
+</li>
+<li>
+<p><a href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1829">UVA - Warehouse</a></p>
+</li>
+<li>
+<p><a href="http://acm.sgu.ru/problem.php?contest=0&amp;problem=210">SGU - Beloved Sons</a></p>
+</li>
+<li>
+<p><a href="http://livearchive.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1277">UVA - The Great Wall Game</a></p>
+</li>
+<li>
+<p><a href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1237">UVA - Jogging Trails</a></p>
+</li>
+</ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (71.43%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (14.29%)</li><li><a href="#" title="Rodion Gorkovenko" data-bi-name="contributorprofile" target="_blank">Rodion Gorkovenko</a> (14.29%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Alessandro Minisini" data-bi-name="contributorprofile" target="_blank">Alessandro Minisini</a> (93.29%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (6.71%)</li></ul>
 </ul>
                 
               </article>
@@ -8157,14 +8460,14 @@ and adding new articles to the collection.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["toc.integrate", "search.suggest", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.integrate", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="javascript/config.js"></script>
+        <script src="../javascript/config.js"></script>
       
-        <script src="javascript/donation-banner.js"></script>
+        <script src="../javascript/donation-banner.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
       
