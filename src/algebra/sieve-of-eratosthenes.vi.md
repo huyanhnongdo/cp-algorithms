@@ -140,7 +140,7 @@ Nó cũng là một cách hiệu quả để lưu trữ các bit, tương tự n
 Trong thử nghiệm hiệu năng ở trên, `bitset` hoạt động kém hơn một chút so với `vector<bool>`.
 Một nhược điểm khác của `bitset` là bạn cần phải biết kích thước của nó tại thời điểm biên dịch.
 
-### Sàng phân đoạn (Segmented Sieve)
+### Sàng phân đoạn (Segmented Sieve) {: #segmented-sieve}
 
 Từ tối ưu hóa "sàng đến căn", ta thấy rằng không cần thiết phải giữ toàn bộ mảng `is_prime[1...n]` tại mọi thời điểm.
 Để sàng lọc, chỉ cần giữ các số nguyên tố cho đến căn bậc hai của $n$, tức là `prime[1... sqrt(n)]`, chia toàn bộ phạm vi thành các khối (blocks), và sàng lọc từng khối riêng biệt.

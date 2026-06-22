@@ -95,9 +95,9 @@ void phi_1_to_n(int n) {
 }
 ```
 
-### Tìm hàm phi từ $L$ đến $R$ sử dụng [sàng phân đoạn](sieve-of-eratosthenes.md#sang-phan-oan-segmented-sieve) { data-toc-label="Finding the totient from L to R using the segmented sieve" }
+### Tìm hàm phi từ $L$ đến $R$ sử dụng [sàng phân đoạn](sieve-of-eratosthenes.md#segmented-sieve) { data-toc-label="Finding the totient from L to R using the segmented sieve" }
 
-Nếu chúng ta cần tính hàm phi cho tất cả các số từ $L$ đến $R$, chúng ta có thể sử dụng cách tiếp cận [sàng phân đoạn (segmented sieve)](sieve-of-eratosthenes.md#sang-phan-oan-segmented-sieve).
+Nếu chúng ta cần tính hàm phi cho tất cả các số từ $L$ đến $R$, chúng ta có thể sử dụng cách tiếp cận [sàng phân đoạn (segmented sieve)](sieve-of-eratosthenes.md#segmented-sieve).
 
 Thuật toán đầu tiên sẽ tính trước tất cả các số nguyên tố lên tới $\sqrt{R}$ bằng một [sàng tuyến tính](prime-sieve-linear.md) trong thời gian và không gian bộ nhớ $O(\sqrt{R})$. Đối với mỗi số trong phạm vi $[L, R]$, thuật toán sau đó áp dụng công thức tính $\phi$ dựa trên phân tích thừa số bằng cách duyệt qua các số nguyên tố này. Chúng ta duy trì một mảng phần dư để theo dõi phần chưa được phân tích của mỗi số. Nếu phần dư vẫn lớn hơn 1 sau khi xử lý tất cả các số nguyên tố nhỏ, điều đó cho thấy có một ước nguyên tố lớn lớn hơn $\sqrt{R}$, phần này sẽ được xử lý ở lượt duyệt cuối cùng. Độ phức tạp tổng thể cho tính toán trên đoạn là $O((R - L + 1) \log \log R) + \sqrt{R}$.
 

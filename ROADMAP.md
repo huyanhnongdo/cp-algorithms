@@ -67,11 +67,11 @@ Dịch 40 bài viết nền tảng — bao phủ các chủ đề cốt lõi tro
 | # | Task | Số bài | Thời gian | Trạng thái |
 |---|---|---|---|---|
 | 2.1 | **Data Structures** | 10 bài | 8h | ⏳ |
-| | ├── `stack_queue_modification.vi.md` | | | ⬜ |
-| | ├── `sparse-table.vi.md` | | | ⬜ |
+| | ├── `stack_queue_modification.vi.md` | | | ✅ |
+| | ├── `sparse-table.vi.md` | | | ✅ |
 | | ├── `disjoint_set_union.vi.md` | | | ✅ |
-| | ├── `fenwick.vi.md` | | | ⬜ |
-| | ├── `sqrt_decomposition.vi.md` | | | ⬜ |
+| | ├── `fenwick.vi.md` | | | ✅ |
+| | ├── `sqrt_decomposition.vi.md` | | | ✅ |
 | | ├── `segment_tree.vi.md` ⭐ | | | ⬜ |
 | | ├── `treap.vi.md` | | | ⬜ |
 | | ├── `sqrt-tree.vi.md` | | | ⬜ |
@@ -88,14 +88,14 @@ Dịch 40 bài viết nền tảng — bao phủ các chủ đề cốt lõi tro
 | | ├── `all-pair-shortest-path-floyd-warshall.vi.md` | | | ⬜ |
 | | ├── `mst_kruskal.vi.md` | | | ⬜ |
 | | └── `topological-sort.vi.md` | | | ⬜ |
-| 2.3 | **Algebra Fundamentals** | 7 bài | 4h | ⏳ |
+| 2.3 | **Algebra Fundamentals** | 7 bài | 4h | ✅ |
 | | ├── `binary-exp.vi.md` | | | ✅ |
 | | ├── `euclid-algorithm.vi.md` | | | ✅ |
-| | ├── `extended-euclid-algorithm.vi.md` | | | ⬜ |
-| | ├── `sieve-of-eratosthenes.vi.md` | | | ⬜ |
-| | ├── `phi-function.vi.md` | | | ⬜ |
-| | ├── `module-inverse.vi.md` | | | ⬜ |
-| | └── `fibonacci-numbers.vi.md` | | | ⬜ |
+| | ├── `extended-euclid-algorithm.vi.md` | | | ✅ |
+| | ├── `sieve-of-eratosthenes.vi.md` | | | ✅ |
+| | ├── `phi-function.vi.md` | | | ✅ |
+| | ├── `module-inverse.vi.md` | | | ✅ |
+| | └── `fibonacci-numbers.vi.md` | | | ✅ |
 | 2.4 | **Dynamic Programming** | 4 bài | 3h | ⏳ |
 | | ├── `intro-to-dp.vi.md` | | | ✅ |
 | | ├── `knapsack.vi.md` | | | ⬜ |
@@ -103,13 +103,13 @@ Dịch 40 bài viết nền tảng — bao phủ các chủ đề cốt lõi tro
 | | └── `divide-and-conquer-dp.vi.md` | | | ⬜ |
 | 2.5 | **String Fundamentals** | 4 bài | 3h | ⏳ |
 | | ├── `string-hashing.vi.md` | | | ✅ |
-| | ├── `prefix-function.vi.md` | | | ⬜ |
+| | ├── `prefix-function.vi.md` | | | ✅ |
 | | ├── `z-function.vi.md` | | | ⬜ |
 | | └── `suffix-array.vi.md` | | | ⬜ |
-| 2.6 | **Numerical Methods** | 3 bài | 2h | ⏳ |
+| 2.6 | **Numerical Methods** | 3 bài | 2h | ✅ |
 | | ├── `binary_search.vi.md` | | | ✅ |
-| | ├── `ternary_search.vi.md` | | | ⬜ |
-| | └── `roots_newton.vi.md` | | | ⬜ |
+| | ├── `ternary_search.vi.md` | | | ✅ |
+| | └── `roots_newton.vi.md` | | | ✅ |
 | 2.7 | **Combinatorics** | 2 bài | 1h | ⬜ |
 | | ├── `binomial-coefficients.vi.md` | | | ⬜ |
 | | └── `catalan-numbers.vi.md` | | | ⬜ |

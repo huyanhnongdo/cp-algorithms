@@ -28,7 +28,7 @@ Lưu ý rằng số $a$ vẫn là số lớn hơn cho đến khi ta trừ $b$ kh
 
 $$\gcd(a, b) = \begin{cases}a,&\text{if }b = 0 \\ \gcd(b, a \bmod b),&\text{otherwise.}\end{cases}$$
 
-## Cài đặt
+## Cài đặt {: #implementation}
 
 ```cpp
 int gcd (int a, int b) {

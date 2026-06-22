@@ -93,7 +93,7 @@ int gcd(int a, int b, int& x, int& y) {
 }
 ```
 
-Nếu quan sát kỹ các biến `a1` và `b1`, bạn sẽ nhận thấy chúng nhận các giá trị hoàn toàn giống như trong phiên bản vòng lặp của [Thuật toán Euclid](euclid-algorithm.md#cai-at) thông thường. Vì vậy, thuật toán chắc chắn sẽ tính ra GCD chính xác.
+Nếu quan sát kỹ các biến `a1` và `b1`, bạn sẽ nhận thấy chúng nhận các giá trị hoàn toàn giống như trong phiên bản vòng lặp của [Thuật toán Euclid](euclid-algorithm.md#implementation) thông thường. Vì vậy, thuật toán chắc chắn sẽ tính ra GCD chính xác.
 
 Để hiểu tại sao thuật toán tính ra các hệ số chính xác, hãy xem xét các bất biến (invariants) sau đây luôn được duy trì tại mọi thời điểm (trước khi bắt đầu vòng lặp while và tại cuối mỗi vòng lặp):
 
