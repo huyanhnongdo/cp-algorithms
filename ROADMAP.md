@@ -77,8 +77,8 @@ Dịch 40 bài viết nền tảng — bao phủ các chủ đề cốt lõi tro
 | | ├── `sqrt-tree.vi.md` | | | ⬜ |
 | | ├── `randomized_heap.vi.md` | | | ⬜ |
 | | └── `deleting_in_log_n.vi.md` | | | ⬜ |
-| 2.2 | **Graph Traversal & Shortest Paths** | 10 bài | 6h | ⬜ |
-| | ├── `breadth-first-search.vi.md` | | | ⬜ |
+| 2.2 | **Graph Traversal & Shortest Paths** | 10 bài | 6h | ⏳ |
+| | ├── `breadth-first-search.vi.md` | | | ✅ |
 | | ├── `depth-first-search.vi.md` | | | ⬜ |
 | | ├── `search-for-connected-components.vi.md` | | | ⬜ |
 | | ├── `dijkstra.vi.md` | | | ⬜ |
@@ -90,19 +90,19 @@ Dịch 40 bài viết nền tảng — bao phủ các chủ đề cốt lõi tro
 | | └── `topological-sort.vi.md` | | | ⬜ |
 | 2.3 | **Algebra Fundamentals** | 7 bài | 4h | ⏳ |
 | | ├── `binary-exp.vi.md` | | | ✅ |
-| | ├── `euclid-algorithm.vi.md` | | | ⬜ |
+| | ├── `euclid-algorithm.vi.md` | | | ✅ |
 | | ├── `extended-euclid-algorithm.vi.md` | | | ⬜ |
 | | ├── `sieve-of-eratosthenes.vi.md` | | | ⬜ |
 | | ├── `phi-function.vi.md` | | | ⬜ |
 | | ├── `module-inverse.vi.md` | | | ⬜ |
 | | └── `fibonacci-numbers.vi.md` | | | ⬜ |
-| 2.4 | **Dynamic Programming** | 4 bài | 3h | ⬜ |
-| | ├── `intro-to-dp.vi.md` | | | ⬜ |
+| 2.4 | **Dynamic Programming** | 4 bài | 3h | ⏳ |
+| | ├── `intro-to-dp.vi.md` | | | ✅ |
 | | ├── `knapsack.vi.md` | | | ⬜ |
 | | ├── `longest_increasing_subsequence.vi.md` | | | ⬜ |
 | | └── `divide-and-conquer-dp.vi.md` | | | ⬜ |
-| 2.5 | **String Fundamentals** | 4 bài | 3h | ⬜ |
-| | ├── `string-hashing.vi.md` | | | ⬜ |
+| 2.5 | **String Fundamentals** | 4 bài | 3h | ⏳ |
+| | ├── `string-hashing.vi.md` | | | ✅ |
 | | ├── `prefix-function.vi.md` | | | ⬜ |
 | | ├── `z-function.vi.md` | | | ⬜ |
 | | └── `suffix-array.vi.md` | | | ⬜ |
