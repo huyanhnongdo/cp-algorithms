@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#euclidean-algorithm-for-computing-the-greatest-common-divisor" class="md-skip">
+        <a href="#thuat-toan-euclid-tim-uoc-chung-lon-nhat-greatest-common-divisor" class="md-skip">
           Bỏ qua
         </a>
       
@@ -735,10 +735,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -746,10 +746,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -757,10 +757,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#time-complexity" class="md-nav__link">
+  <a href="#o-phuc-tap-thoi-gian" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Time Complexity
+        Độ phức tạp thời gian
       
     </span>
   </a>
@@ -768,10 +768,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#least-common-multiple" class="md-nav__link">
+  <a href="#boi-chung-nho-nhat-least-common-multiple" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Least common multiple
+        Bội chung nhỏ nhất (least common multiple)
       
     </span>
   </a>
@@ -779,10 +779,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#binary-gcd" class="md-nav__link">
+  <a href="#thuat-toan-gcd-nhi-phan-binary-gcd" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Binary GCD
+        Thuật toán GCD nhị phân (Binary GCD)
       
     </span>
   </a>
@@ -790,10 +790,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-thuc-hanh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập thực hành
       
     </span>
   </a>
@@ -7993,13 +7993,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/euclid-algorithm.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/euclid-algorithm.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/euclid-algorithm.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/euclid-algorithm.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8010,34 +8010,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8073,19 +8045,19 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="euclidean-algorithm-for-computing-the-greatest-common-divisor">Euclidean algorithm for computing the greatest common divisor<a class="headerlink" href="#euclidean-algorithm-for-computing-the-greatest-common-divisor" title="Permanent link">&para;</a></h1>
-<p>Given two non-negative integers <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>, we have to find their <strong>GCD</strong> (greatest common divisor), i.e. the largest number which is a divisor of both <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>.
-It's commonly denoted by <span class="arithmatex">$\gcd(a, b)$</span>. Mathematically it is defined as:</p>
+<h1 id="thuat-toan-euclid-tim-uoc-chung-lon-nhat-greatest-common-divisor">Thuật toán Euclid tìm ước chung lớn nhất (greatest common divisor)<a class="headerlink" href="#thuat-toan-euclid-tim-uoc-chung-lon-nhat-greatest-common-divisor" title="Permanent link">&para;</a></h1>
+<p>Cho hai số nguyên không âm <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span>, chúng ta cần tìm <strong>ước chung lớn nhất (greatest common divisor - GCD)</strong> của chúng, tức là số lớn nhất là ước của cả <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span>.
+Thông thường nó được ký hiệu là <span class="arithmatex">$\gcd(a, b)$</span>. Về mặt toán học, nó được định nghĩa như sau:</p>
 <div class="arithmatex">$$\gcd(a, b) = \max \{k &gt; 0 : (k \mid a) \text{ and } (k \mid b) \}$$</div>
-<p>(here the symbol "<span class="arithmatex">$\mid$</span>" denotes divisibility, i.e. "<span class="arithmatex">$k \mid a$</span>" means "<span class="arithmatex">$k$</span> divides <span class="arithmatex">$a$</span>")</p>
-<p>When one of the numbers is zero, while the other is non-zero, their greatest common divisor, by definition, is the second number. When both numbers are zero, their greatest common divisor is undefined (it can be any arbitrarily large number), but it is convenient to define it as zero as well to preserve the associativity of <span class="arithmatex">$\gcd$</span>. Which gives us a simple rule: if one of the numbers is zero, the greatest common divisor is the other number.</p>
-<p>The Euclidean algorithm, discussed below, allows to find the greatest common divisor of two numbers <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span> in <span class="arithmatex">$O(\log \min(a, b))$</span>. Since the function is <strong>associative</strong>, to find the GCD of <strong>more than two numbers</strong>, we can do <span class="arithmatex">$\gcd(a, b, c) = \gcd(a, \gcd(b, c))$</span> and so forth.</p>
-<p>The algorithm was first described in Euclid's "Elements" (circa 300 BC), but it is possible that the algorithm has even earlier origins.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>Originally, the Euclidean algorithm was formulated as follows: subtract the smaller number from the larger one until one of the numbers is zero. Indeed, if <span class="arithmatex">$g$</span> divides <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>, it also divides <span class="arithmatex">$a-b$</span>. On the other hand, if <span class="arithmatex">$g$</span> divides <span class="arithmatex">$a-b$</span> and <span class="arithmatex">$b$</span>, then it also divides <span class="arithmatex">$a = b + (a-b)$</span>, which means that the sets of the common divisors of <span class="arithmatex">$\{a, b\}$</span> and <span class="arithmatex">$\{b,a-b\}$</span> coincide.</p>
-<p>Note that <span class="arithmatex">$a$</span> remains the larger number until <span class="arithmatex">$b$</span> is subtracted from it at least <span class="arithmatex">$\left\lfloor\frac{a}{b}\right\rfloor$</span> times. Therefore, to speed things up, <span class="arithmatex">$a-b$</span> is substituted with <span class="arithmatex">$a-\left\lfloor\frac{a}{b}\right\rfloor b = a \bmod b$</span>. Then the algorithm is formulated in an extremely simple way:</p>
+<p>(ở đây ký hiệu "<span class="arithmatex">$\mid$</span>" biểu thị tính chia hết, tức là "<span class="arithmatex">$k \mid a$</span>" nghĩa là "<span class="arithmatex">$a$</span> chia hết cho <span class="arithmatex">$k$</span>")</p>
+<p>Khi một trong hai số bằng không và số còn lại khác không, ước chung lớn nhất của chúng, theo định nghĩa, là số thứ hai. Khi cả hai số đều bằng không, ước chung lớn nhất của chúng không được xác định (nó có thể là bất kỳ số lớn tùy ý nào), nhưng để thuận tiện, chúng ta cũng định nghĩa nó bằng không để bảo toàn tính kết hợp của phép toán <span class="arithmatex">$\gcd$</span>. Quy tắc đơn giản là: nếu một trong hai số bằng 0, ước chung lớn nhất là số còn lại.</p>
+<p>Thuật toán Euclid, được thảo luận dưới đây, cho phép tìm ước chung lớn nhất của hai số <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span> trong thời gian <span class="arithmatex">$O(\log \min(a, b))$</span>. Vì hàm này có tính <strong>kết hợp</strong>, để tìm GCD của <strong>nhiều hơn hai số</strong>, chúng ta có thể thực hiện <span class="arithmatex">$\gcd(a, b, c) = \gcd(a, \gcd(b, c))$</span> và tương tự như vậy cho nhiều số hơn.</p>
+<p>Thuật toán này lần đầu tiên được mô tả trong cuốn sách "Elements" của Euclid (khoảng năm 300 trước Công nguyên), nhưng có khả năng thuật toán này còn có nguồn gốc sớm hơn thế.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Ban đầu, thuật toán Euclid được phát biểu như sau: trừ số nhỏ hơn từ số lớn hơn cho đến khi một trong hai số bằng không. Thực vậy, nếu <span class="arithmatex">$g$</span> chia hết cả <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span>, thì nó cũng chia hết <span class="arithmatex">$a-b$</span>. Ngược lại, nếu <span class="arithmatex">$g$</span> chia hết <span class="arithmatex">$a-b$</span> và <span class="arithmatex">$b$</span>, thì nó cũng chia hết <span class="arithmatex">$a = b + (a-b)$</span>, điều này có nghĩa là tập hợp các ước chung của <span class="arithmatex">$\{a, b\}$</span> và <span class="arithmatex">$\{b, a-b\}$</span> là trùng nhau.</p>
+<p>Lưu ý rằng số <span class="arithmatex">$a$</span> vẫn là số lớn hơn cho đến khi ta trừ <span class="arithmatex">$b$</span> khỏi nó ít nhất <span class="arithmatex">$\left\lfloor\frac{a}{b}\right\rfloor$</span> lần. Do đó, để tăng tốc thuật toán, ta thay thế phép trừ liên tiếp <span class="arithmatex">$a-b$</span> bằng phép chia lấy dư <span class="arithmatex">$a-\left\lfloor\frac{a}{b}\right\rfloor b = a \bmod b$</span>. Khi đó, thuật toán được phát biểu một cách cực kỳ đơn giản:</p>
 <div class="arithmatex">$$\gcd(a, b) = \begin{cases}a,&amp;\text{if }b = 0 \\ \gcd(b, a \bmod b),&amp;\text{otherwise.}\end{cases}$$</div>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
@@ -8093,12 +8065,12 @@ It's commonly denoted by <span class="arithmatex">$\gcd(a, b)$</span>. Mathemati
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">gcd</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Using the ternary operator in C++, we can write it as a one-liner.</p>
+<p>Sử dụng toán tử ba ngôi trong C++, chúng ta có thể viết mã nguồn ngắn gọn trên một dòng:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">gcd</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>And finally, here is a non-recursive implementation:</p>
+<p>Và cuối cùng, đây là phiên bản cài đặt không sử dụng đệ quy (vòng lặp):</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
@@ -8107,34 +8079,32 @@ It's commonly denoted by <span class="arithmatex">$\gcd(a, b)$</span>. Mathemati
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Note that since C++17, <code>gcd</code> is implemented as a <a href="https://en.cppreference.com/w/cpp/numeric/gcd">standard function</a> in C++.</p>
-<h2 id="time-complexity">Time Complexity<a class="headerlink" href="#time-complexity" title="Permanent link">&para;</a></h2>
-<p>The running time of the algorithm is estimated by Lamé's theorem, which establishes a surprising connection between the Euclidean algorithm and the Fibonacci sequence:</p>
-<p>If <span class="arithmatex">$a &gt; b \geq 1$</span> and <span class="arithmatex">$b &lt; F_n$</span> for some <span class="arithmatex">$n$</span>, the Euclidean algorithm performs at most <span class="arithmatex">$n-2$</span> recursive calls.</p>
-<p>Moreover, it is possible to show that the upper bound of this theorem is optimal. When <span class="arithmatex">$a = F_n$</span> and <span class="arithmatex">$b = F_{n-1}$</span>, <span class="arithmatex">$gcd(a, b)$</span> will perform exactly <span class="arithmatex">$n-2$</span> recursive calls. In other words, consecutive Fibonacci numbers are the worst case input for Euclid's algorithm.</p>
-<p>Given that Fibonacci numbers grow exponentially, we get that the Euclidean algorithm works in <span class="arithmatex">$O(\log \min(a, b))$</span>.</p>
-<p>Another way to estimate the complexity is to notice that <span class="arithmatex">$a \bmod b$</span> for the case <span class="arithmatex">$a \geq b$</span> is at least <span class="arithmatex">$2$</span> times smaller than <span class="arithmatex">$a$</span>, so the larger number is reduced at least in half on each iteration of the algorithm. Applying this reasoning to the case when we compute the GCD of the set of numbers <span class="arithmatex">$a_1,\dots,a_n \leq C$</span>, this also allows us to estimate the total runtime as <span class="arithmatex">$O(n + \log C)$</span>, rather than <span class="arithmatex">$O(n \log C)$</span>, since every non-trivial iteration of the algorithm reduces the current GCD candidate by at least a factor of <span class="arithmatex">$2$</span>.</p>
-<h2 id="least-common-multiple">Least common multiple<a class="headerlink" href="#least-common-multiple" title="Permanent link">&para;</a></h2>
-<p>Calculating the least common multiple (commonly denoted <strong>LCM</strong>) can be reduced to calculating the GCD with the following simple formula:</p>
+<p>Lưu ý rằng kể từ phiên bản C++17, hàm <code>gcd</code> đã được cài đặt như một <a href="https://en.cppreference.com/w/cpp/numeric/gcd">hàm chuẩn</a> của ngôn ngữ C++ trong thư viện <code>&lt;numeric&gt;</code>.</p>
+<h2 id="o-phuc-tap-thoi-gian">Độ phức tạp thời gian<a class="headerlink" href="#o-phuc-tap-thoi-gian" title="Permanent link">&para;</a></h2>
+<p>Thời gian chạy của thuật toán được ước lượng thông qua định lý Lamé, định lý này thiết lập một mối liên hệ đáng ngạc nhiên giữa thuật toán Euclid và dãy số Fibonacci:</p>
+<p>Nếu <span class="arithmatex">$a &gt; b \geq 1$</span> và <span class="arithmatex">$b &lt; F_n$</span> với một số nguyên <span class="arithmatex">$n$</span> nào đó, thuật toán Euclid sẽ thực hiện tối đa <span class="arithmatex">$n-2$</span> lời gọi đệ quy.</p>
+<p>Hơn nữa, người ta cũng chỉ ra rằng cận trên của định lý này là tối ưu. Khi <span class="arithmatex">$a = F_n$</span> và <span class="arithmatex">$b = F_{n-1}$</span>, hàm <span class="arithmatex">$gcd(a, b)$</span> sẽ thực hiện chính xác <span class="arithmatex">$n-2$</span> lời gọi đệ quy. Nói cách khác, hai số Fibonacci liên tiếp chính là bộ dữ liệu đầu vào xấu nhất cho thuật toán Euclid.</p>
+<p>Do các số Fibonacci tăng trưởng theo hàm mũ, chúng ta có độ phức tạp thời gian của thuật toán Euclid là <span class="arithmatex">$O(\log \min(a, b))$</span>.</p>
+<p>Một cách khác để ước lượng độ phức tạp là nhận xét rằng phép toán <span class="arithmatex">$a \bmod b$</span> cho trường hợp <span class="arithmatex">$a \geq b$</span> sẽ cho kết quả nhỏ hơn ít nhất <span class="arithmatex">$2$</span> lần so với <span class="arithmatex">$a$</span>, vì thế số lớn hơn sẽ giảm đi ít nhất một nửa sau mỗi vòng lặp của thuật toán. Áp dụng lập luận này cho trường hợp tìm GCD của một tập hợp các số <span class="arithmatex">$a_1,\dots,a_n \leq C$</span>, ta cũng có thể ước lượng tổng thời gian chạy là <span class="arithmatex">$O(n + \log C)$</span> thay vì <span class="arithmatex">$O(n \log C)$</span>, vì mỗi bước lặp không suy biến của thuật toán sẽ làm giảm ứng viên GCD hiện tại đi ít nhất <span class="arithmatex">$2$</span> lần.</p>
+<h2 id="boi-chung-nho-nhat-least-common-multiple">Bội chung nhỏ nhất (least common multiple)<a class="headerlink" href="#boi-chung-nho-nhat-least-common-multiple" title="Permanent link">&para;</a></h2>
+<p>Tính bội chung nhỏ nhất (thường được ký hiệu là <strong>LCM</strong>) có thể được quy về việc tính GCD thông qua công thức đơn giản sau:</p>
 <div class="arithmatex">$$\text{lcm}(a, b) = \frac{a \cdot b}{\gcd(a, b)}$$</div>
-<p>Thus, LCM can be calculated using the Euclidean algorithm with the same time complexity:</p>
-<p>A possible implementation, that cleverly avoids integer overflows by first dividing <span class="arithmatex">$a$</span> with the GCD, is given here:</p>
+<p>Vì vậy, LCM có thể được tính toán bằng cách sử dụng thuật toán Euclid với cùng độ phức tạp thời gian.</p>
+<p>Dưới đây là một cách cài đặt thông minh giúp tránh tràn số (integer overflow) bằng cách chia <span class="arithmatex">$a$</span> cho ước chung lớn nhất trước khi thực hiện phép nhân với <span class="arithmatex">$b$</span>:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">lcm</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="binary-gcd">Binary GCD<a class="headerlink" href="#binary-gcd" title="Permanent link">&para;</a></h2>
-<p>The Binary GCD algorithm is an optimization to the normal Euclidean algorithm.</p>
-<p>The slow part of the normal algorithm are the modulo operations. Modulo operations, although we see them as <span class="arithmatex">$O(1)$</span>, are a lot slower than simpler operations like addition, subtraction or bitwise operations.
-So it would be better to avoid those.</p>
-<p>It turns out, that you can design a fast GCD algorithm that avoids modulo operations.
-It's based on a few properties:</p>
+<h2 id="thuat-toan-gcd-nhi-phan-binary-gcd">Thuật toán GCD nhị phân (Binary GCD)<a class="headerlink" href="#thuat-toan-gcd-nhi-phan-binary-gcd" title="Permanent link">&para;</a></h2>
+<p>Thuật toán GCD nhị phân (Binary GCD) là một cải tiến tối ưu cho thuật toán Euclid thông thường.</p>
+<p>Phần chạy chậm nhất trong thuật toán thông thường là phép chia lấy dư (phép toán modulo). Phép toán modulo mặc dù có độ phức tạp lý thuyết là <span class="arithmatex">$O(1)$</span> nhưng chạy chậm hơn rất nhiều so với các phép toán cơ bản như cộng, trừ hay các phép toán bitwise. Do đó, việc tránh sử dụng phép toán modulo là rất hữu ích.</p>
+<p>Hóa ra, chúng ta có thể thiết kế một thuật toán tìm GCD nhanh mà không cần sử dụng phép chia lấy dư, dựa trên một số tính chất sau:</p>
 <ul>
-<li>If both numbers are even, then we can factor out a two of both and compute the GCD of the remaining numbers: <span class="arithmatex">$\gcd(2a, 2b) = 2 \gcd(a, b)$</span>.</li>
-<li>If one of the numbers is even and the other one is odd, then we can remove the factor 2 from the even one: <span class="arithmatex">$\gcd(2a, b) = \gcd(a, b)$</span> if <span class="arithmatex">$b$</span> is odd.</li>
-<li>If both numbers are odd, then subtracting one number of the other one will not change the GCD: <span class="arithmatex">$\gcd(a, b) = \gcd(b, a-b)$</span></li>
+<li>Nếu cả hai số đều chẵn, ta có thể đưa thừa số 2 ra ngoài và tính GCD của hai số còn lại: <span class="arithmatex">$\gcd(2a, 2b) = 2 \gcd(a, b)$</span>.</li>
+<li>Nếu một số chẵn và số kia lẻ, ta có thể bỏ đi thừa số 2 của số chẵn: <span class="arithmatex">$\gcd(2a, b) = \gcd(a, b)$</span> nếu <span class="arithmatex">$b$</span> lẻ.</li>
+<li>Nếu cả hai số đều lẻ, hiệu của hai số sẽ có ước chung lớn nhất không đổi: <span class="arithmatex">$\gcd(a, b) = \gcd(b, a-b)$</span>.</li>
 </ul>
-<p>Using only these properties, and some fast bitwise functions from GCC, we can implement a fast version:</p>
+<p>Chỉ sử dụng các tính chất này và một số hàm xử lý bit nhanh từ trình biên dịch GCC, chúng ta có thể cài đặt phiên bản tối ưu như sau:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">a</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">b</span><span class="p">)</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
@@ -8149,9 +8119,9 @@ It's based on a few properties:</p>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">shift</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Notice, that such an optimization is usually not necessary, and most programming languages already have a GCD function in their standard libraries.
-E.g. C++17 has such a function <code>std::gcd</code> in the <code>numeric</code> header.</p>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<p>Cần lưu ý rằng tối ưu hóa này thường không thực sự cần thiết, và hầu hết các ngôn ngữ lập trình hiện đại đều đã tích hợp sẵn hàm tính GCD tối ưu trong thư viện chuẩn của chúng.
+Ví dụ: C++17 cung cấp hàm <code>std::gcd</code> trong thư viện <code>&lt;numeric&gt;</code>.</p>
+<h2 id="bai-tap-thuc-hanh">Bài tập thực hành<a class="headerlink" href="#bai-tap-thuc-hanh" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://csacademy.com/contest/archive/task/gcd/">CSAcademy - Greatest Common Divisor</a></li>
 <li><a href="https://codeforces.com/contest/1916/problem/B">Codeforces 1916B - Two Divisors</a></li>
@@ -8159,7 +8129,7 @@ E.g. C++17 has such a function <code>std::gcd</code> in the <code>numeric</code>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Nalin Bhardwaj" data-bi-name="contributorprofile" target="_blank">Nalin Bhardwaj</a> (42.64%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (38.76%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (10.85%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (3.88%)</li><li><a href="#" title="Pedro" data-bi-name="contributorprofile" target="_blank">Pedro</a> (1.55%)</li><li><a href="#" title="Anikett" data-bi-name="contributorprofile" target="_blank">Anikett</a> (0.78%)</li><li><a href="#" title="Sachin Kumar" data-bi-name="contributorprofile" target="_blank">Sachin Kumar</a> (0.78%)</li><li><a href="#" title="jinlk" data-bi-name="contributorprofile" target="_blank">jinlk</a> (0.78%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#breadth-first-search" class="md-skip">
+        <a href="#tim-kiem-theo-chieu-rong-breadth-first-search-bfs" class="md-skip">
           Bỏ qua
         </a>
       
@@ -5453,10 +5453,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description-of-the-algorithm" class="md-nav__link">
+  <a href="#mo-ta-thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description of the algorithm
+        Mô tả thuật toán
       
     </span>
   </a>
@@ -5464,10 +5464,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -5475,10 +5475,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#applications-of-bfs" class="md-nav__link">
+  <a href="#ung-dung-cua-bfs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Applications of BFS
+        Ứng dụng của BFS
       
     </span>
   </a>
@@ -5486,10 +5486,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-thuc-hanh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập thực hành
       
     </span>
   </a>
@@ -7971,13 +7971,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/breadth-first-search.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/breadth-first-search.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/breadth-first-search.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/breadth-first-search.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7988,54 +7988,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8071,24 +8023,20 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="breadth-first-search">Breadth-first search<a class="headerlink" href="#breadth-first-search" title="Permanent link">&para;</a></h1>
-<p>Breadth first search is one of the basic and essential searching algorithms on graphs.</p>
-<p>As a result of how the algorithm works, the path found by breadth first search to any node is the shortest path to that node, i.e the path that contains the smallest number of edges in unweighted graphs.</p>
-<p>The algorithm works in <span class="arithmatex">$O(n + m)$</span> time, where <span class="arithmatex">$n$</span> is number of vertices and <span class="arithmatex">$m$</span> is the number of edges.</p>
-<h2 id="description-of-the-algorithm">Description of the algorithm<a class="headerlink" href="#description-of-the-algorithm" title="Permanent link">&para;</a></h2>
-<p>The algorithm takes as input an unweighted graph and the id of the source vertex <span class="arithmatex">$s$</span>. The input graph can be directed or undirected,
-it does not matter to the algorithm.</p>
-<p>The algorithm can be understood as a fire spreading on the graph: at the zeroth step only the source <span class="arithmatex">$s$</span> is on fire. At each step, the fire burning at each vertex spreads to all of its neighbors. In one iteration of the algorithm, the "ring of
-fire" is expanded in width by one unit (hence the name of the algorithm).</p>
-<p>More precisely, the algorithm can be stated as follows: Create a queue <span class="arithmatex">$q$</span> which will contain the vertices to be processed and a
-Boolean array <span class="arithmatex">$used[]$</span> which indicates for each vertex, if it has been lit (or visited) or not.</p>
-<p>Initially, push the source <span class="arithmatex">$s$</span> to the queue and set <span class="arithmatex">$used[s] = true$</span>, and for all other vertices <span class="arithmatex">$v$</span> set <span class="arithmatex">$used[v] = false$</span>.
-Then, loop until the queue is empty and in each iteration, pop a vertex from the front of the queue. Iterate through all the edges going out
-of this vertex and if some of these edges go to vertices that are not already lit, set them on fire and place them in the queue.</p>
-<p>As a result, when the queue is empty, the "ring of fire" contains all vertices reachable from the source <span class="arithmatex">$s$</span>, with each vertex reached in the shortest possible way.
-You can also calculate the lengths of the shortest paths (which just requires maintaining an array of path lengths <span class="arithmatex">$d[]$</span>) as well as save information to restore all of these shortest paths (for this, it is necessary to maintain an array of "parents" <span class="arithmatex">$p[]$</span>, which stores for each vertex the vertex from which we reached it).</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>We write code for the described algorithm in C++ and Java.</p>
+<h1 id="tim-kiem-theo-chieu-rong-breadth-first-search-bfs">Tìm kiếm theo chiều rộng (Breadth-first search - BFS)<a class="headerlink" href="#tim-kiem-theo-chieu-rong-breadth-first-search-bfs" title="Permanent link">&para;</a></h1>
+<p><strong>Tìm kiếm theo chiều rộng (Breadth-first search - BFS)</strong> là một trong những thuật toán duyệt và tìm kiếm cơ bản và thiết yếu trên đồ thị.</p>
+<p>Kết quả của thuật toán này là đường đi tìm được bằng BFS tới bất kỳ đỉnh nào đều là đường đi ngắn nhất tới đỉnh đó, tức là đường đi chứa ít cạnh nhất trong đồ thị không trọng số.</p>
+<p>Thuật toán hoạt động trong thời gian <span class="arithmatex">$O(n + m)$</span>, với <span class="arithmatex">$n$</span> là số đỉnh và <span class="arithmatex">$m$</span> là số cạnh của đồ thị.</p>
+<h2 id="mo-ta-thuat-toan">Mô tả thuật toán<a class="headerlink" href="#mo-ta-thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Thuật toán nhận đầu vào là một đồ thị không trọng số và đỉnh xuất phát <span class="arithmatex">$s$</span>. Đồ thị đầu vào có thể là đồ thị có hướng hoặc vô hướng, điều này không ảnh hưởng đến hoạt động của thuật toán.</p>
+<p>Thuật toán có thể được hình dung như một đám cháy lan truyền trên đồ thị: ở bước thứ 0, chỉ có đỉnh xuất phát <span class="arithmatex">$s$</span> bị cháy. Tại mỗi bước tiếp theo, ngọn lửa từ các đỉnh đang cháy sẽ lan truyền sang tất cả các đỉnh kề với chúng. Sau mỗi vòng lặp của thuật toán, "vòng lửa" sẽ mở rộng ra xa thêm một đơn vị khoảng cách (đó là lý do thuật toán có tên gọi duyệt theo chiều rộng).</p>
+<p>Chính xác hơn, thuật toán hoạt động như sau: Khởi tạo một hàng đợi <span class="arithmatex">$q$</span> chứa các đỉnh sẽ được xử lý và một mảng boolean <span class="arithmatex">$used[]$</span> đánh dấu trạng thái một đỉnh đã bị cháy (được ghé thăm) hay chưa.</p>
+<p>Ban đầu, đẩy đỉnh xuất phát <span class="arithmatex">$s$</span> vào hàng đợi, gán <span class="arithmatex">$used[s] = true$</span>, và với tất cả các đỉnh <span class="arithmatex">$v$</span> còn lại, gán <span class="arithmatex">$used[v] = false$</span>.
+Sau đó lặp cho đến khi hàng đợi rỗng. Tại mỗi bước lặp, lấy một đỉnh ở đầu hàng đợi ra. Duyệt qua tất cả các cạnh đi ra từ đỉnh này. Nếu cạnh nối tới một đỉnh chưa bị cháy, ta đánh dấu đỉnh đó đã cháy (<span class="arithmatex">$used = true$</span>) và đẩy nó vào hàng đợi.</p>
+<p>Kết quả là khi hàng đợi rỗng, tất cả các đỉnh có thể đi tới được từ đỉnh xuất phát <span class="arithmatex">$s$</span> đều đã được duyệt qua, và mỗi đỉnh được tiếp cận theo con đường ngắn nhất có thể.
+Chúng ta cũng có thể tính toán độ dài đường đi ngắn nhất (chỉ cần duy trì một mảng khoảng cách <span class="arithmatex">$d[]$</span>) cũng như lưu thông tin để truy vết lại toàn bộ đường đi ngắn nhất (bằng cách duy trì mảng cha <span class="arithmatex">$p[]$</span>, lưu đỉnh trực tiếp dẫn tới đỉnh hiện tại).</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Dưới đây là mã nguồn thuật toán bằng C++ và Java.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Java</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -8147,7 +8095,7 @@ You can also calculate the lengths of the shortest paths (which just requires ma
 </div>
 </div>
 </div>
-<p>If we have to restore and display the shortest path from the source to some vertex <span class="arithmatex">$u$</span>, it can be done in the following manner:</p>
+<p>Để truy vết và hiển thị đường đi ngắn nhất từ đỉnh nguồn <span class="arithmatex">$s$</span> tới đỉnh <span class="arithmatex">$u$</span>, ta có thể thực hiện như sau:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Java</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -8179,54 +8127,52 @@ You can also calculate the lengths of the shortest paths (which just requires ma
 </div>
 </div>
 </div>
-<h2 id="applications-of-bfs">Applications of BFS<a class="headerlink" href="#applications-of-bfs" title="Permanent link">&para;</a></h2>
+<h2 id="ung-dung-cua-bfs">Ứng dụng của BFS<a class="headerlink" href="#ung-dung-cua-bfs" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Find the shortest path from a source to other vertices in an unweighted graph.</p>
+<p>Tìm đường đi ngắn nhất từ đỉnh nguồn tới các đỉnh khác trong đồ thị không trọng số.</p>
 </li>
 <li>
-<p>Find all connected components in an undirected graph in <span class="arithmatex">$O(n + m)$</span> time:
-To do this, we just run BFS starting from each vertex, except for vertices which have already been visited from previous runs.
-Thus, we perform normal BFS from each of the vertices, but do not reset the array <span class="arithmatex">$used[]$</span> each and every time we get a new connected component, and the total running time will still be <span class="arithmatex">$O(n + m)$</span> (performing multiple BFS on the graph without zeroing the array <span class="arithmatex">$used []$</span> is called a series of breadth first searches).</p>
+<p>Tìm tất cả các thành phần liên thông trong đồ thị vô hướng trong thời gian <span class="arithmatex">$O(n + m)$</span>:
+Để làm việc này, ta thực hiện BFS bắt đầu từ mỗi đỉnh chưa được ghé thăm từ các lượt duyệt trước.
+Nghĩa là chúng ta chạy BFS thông thường từ mỗi đỉnh, nhưng không reset mảng <span class="arithmatex">$used[]$</span> mỗi khi chuyển sang thành phần liên thông mới. Tổng thời gian chạy vẫn là <span class="arithmatex">$O(n + m)$</span> (việc chạy nhiều lần BFS mà không reset mảng <span class="arithmatex">$used[]$</span> gọi là chuỗi các phép tìm kiếm theo chiều rộng).</p>
 </li>
 <li>
-<p>Finding a solution to a problem or a game with the least number of moves, if each state of the game can be represented by a vertex of the graph, and the transitions from one state to the other are the edges of the graph.</p>
+<p>Tìm lời giải cho một bài toán hoặc một trò chơi với số bước di chuyển ít nhất, nếu mỗi trạng thái của trò chơi có thể biểu diễn bằng một đỉnh của đồ thị và phép chuyển trạng thái đóng vai trò là các cạnh.</p>
 </li>
 <li>
-<p>Finding the shortest path in a graph with weights 0 or 1:
-This requires just a little modification to normal breadth-first search: Instead of maintaining array <span class="arithmatex">$used[]$</span>, we will now check if the distance to vertex is shorter than current found distance, then if the current edge is of zero weight, we add it to the front of the queue else we add it to the back of the queue.This modification is explained in more detail in the article <a href="01_bfs.html">0-1 BFS</a>.</p>
+<p>Tìm đường đi ngắn nhất trên đồ thị có trọng số 0 hoặc 1:
+Cách này chỉ cần sửa đổi nhẹ thuật toán BFS thông thường: thay vì dùng mảng <span class="arithmatex">$used[]$</span>, ta sẽ kiểm tra xem khoảng cách mới tới đỉnh có ngắn hơn khoảng cách đã biết hay không. Nếu cạnh hiện tại có trọng số bằng 0, ta đẩy đỉnh mới vào đầu hàng đợi; ngược lại (trọng số bằng 1), ta đẩy vào cuối hàng đợi. Chi tiết về sửa đổi này được trình bày cụ thể trong bài viết <a href="01_bfs.html">BFS 0-1 (0-1 BFS)</a>.</p>
 </li>
 <li>
-<p>Finding the shortest cycle in a directed unweighted graph:
-Start a breadth-first search from each vertex.
-As soon as we try to go from the current vertex back to the source vertex, we have found the shortest cycle containing the source vertex.
-At this point we can stop the BFS, and start a new BFS from the next vertex.
-From all such cycles (at most one from each BFS) choose the shortest.</p>
+<p>Tìm chu trình ngắn nhất trong đồ thị có hướng không trọng số:
+Chạy BFS từ mỗi đỉnh trên đồ thị.
+Ngay khi chúng ta cố gắng đi từ đỉnh hiện tại quay trở lại đỉnh xuất phát ban đầu, ta đã tìm được chu trình ngắn nhất chứa đỉnh xuất phát đó.
+Tại thời điểm này, ta có thể dừng lượt chạy BFS hiện tại và bắt đầu lượt chạy BFS mới từ đỉnh tiếp theo.
+Trong tất cả các chu trình tìm được (tối đa một chu trình từ mỗi đỉnh), chọn chu trình ngắn nhất.</p>
 </li>
 <li>
-<p>Find all the edges that lie on any shortest path between a given pair of vertices <span class="arithmatex">$(a, b)$</span>.
-To do this, run two breadth first searches:
-one from <span class="arithmatex">$a$</span> and one from <span class="arithmatex">$b$</span>.
-Let <span class="arithmatex">$d_a []$</span> be the array containing shortest distances obtained from the first BFS (from <span class="arithmatex">$a$</span>) and <span class="arithmatex">$d_b []$</span> be the array containing shortest distances obtained from the second BFS from <span class="arithmatex">$b$</span>.
-Now for every edge <span class="arithmatex">$(u, v)$</span> it is easy to check whether that edge lies on any shortest path between <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>:
-the criterion is the condition <span class="arithmatex">$d_a [u] + 1 + d_b [v] = d_a [b]$</span>.</p>
+<p>Tìm tất cả các cạnh nằm trên bất kỳ đường đi ngắn nhất nào giữa cặp đỉnh <span class="arithmatex">$(a, b)$</span> cho trước.
+Để làm việc này, ta thực hiện hai phép duyệt BFS:
+một từ <span class="arithmatex">$a$</span> và một từ <span class="arithmatex">$b$</span>.
+Gọi <span class="arithmatex">$d_a[]$</span> là mảng chứa khoảng cách ngắn nhất nhận được từ BFS xuất phát từ <span class="arithmatex">$a$</span>, và <span class="arithmatex">$d_b[]$</span> là mảng khoảng cách ngắn nhất nhận được từ BFS xuất phát từ <span class="arithmatex">$b$</span>.
+Bây giờ, với mỗi cạnh <span class="arithmatex">$(u, v)$</span>, dễ dàng kiểm tra xem cạnh đó có nằm trên đường đi ngắn nhất nào giữa <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span> không bằng cách kiểm tra điều kiện: <span class="arithmatex">$d_a[u] + 1 + d_b[v] = d_a[b]$</span>.</p>
 </li>
 <li>
-<p>Find all the vertices on any shortest path between a given pair of vertices <span class="arithmatex">$(a, b)$</span>.
-To accomplish that, run two breadth first searches:
-one from <span class="arithmatex">$a$</span> and one from <span class="arithmatex">$b$</span>.
-Let <span class="arithmatex">$d_a []$</span> be the array containing shortest distances obtained from the first BFS (from <span class="arithmatex">$a$</span>) and <span class="arithmatex">$d_b []$</span> be the array containing shortest distances obtained from the second BFS (from <span class="arithmatex">$b$</span>).
-Now for each vertex it is easy to check whether it lies on any shortest path between <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>:
-the criterion is the condition <span class="arithmatex">$d_a [v] + d_b [v] = d_a [b]$</span>.</p>
+<p>Tìm tất cả các đỉnh nằm trên bất kỳ đường đi ngắn nhất nào giữa cặp đỉnh <span class="arithmatex">$(a, b)$</span> cho trước.
+Tương tự như trên, thực hiện hai phép duyệt BFS từ <span class="arithmatex">$a$</span> và từ <span class="arithmatex">$b$</span>.
+Gọi <span class="arithmatex">$d_a[]$</span> là mảng khoảng cách từ <span class="arithmatex">$a$</span> và <span class="arithmatex">$d_b[]$</span> là mảng khoảng cách từ <span class="arithmatex">$b$</span>.
+Với mỗi đỉnh <span class="arithmatex">$v$</span>, điều kiện để nó thuộc một đường đi ngắn nhất giữa <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span> là: <span class="arithmatex">$d_a[v] + d_b[v] = d_a[b]$</span>.</p>
 </li>
 <li>
-<p>Find the shortest walk of even length from a source vertex <span class="arithmatex">$s$</span> to a target vertex <span class="arithmatex">$t$</span> in an unweighted graph:
-For this, we must construct an auxiliary graph, whose vertices are the state <span class="arithmatex">$(v, c)$</span>, where <span class="arithmatex">$v$</span> - the current node, <span class="arithmatex">$c = 0$</span> or <span class="arithmatex">$c = 1$</span> - the current parity.
-Any edge <span class="arithmatex">$(u, v)$</span> of the original graph in this new column will turn into two edges <span class="arithmatex">$((u, 0), (v, 1))$</span> and <span class="arithmatex">$((u, 1), (v, 0))$</span>.
-After that we run a BFS to find the shortest walk from the starting vertex <span class="arithmatex">$(s, 0)$</span> to the end vertex <span class="arithmatex">$(t, 0)$</span>.<br><strong>Note</strong>: This item uses the term "<em>walk</em>" rather than a "<em>path</em>" for a reason, as the vertices may potentially repeat in the found walk in order to make its length even. The problem of finding the shortest <em>path</em> of even length is NP-Complete in directed graphs, and <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/net.3230140403">solvable in linear time</a> in undirected graphs, but with a much more involved approach.</p>
+<p>Tìm hành trình (walk) ngắn nhất có độ dài chẵn từ đỉnh xuất phát <span class="arithmatex">$s$</span> tới đỉnh đích <span class="arithmatex">$t$</span> trên đồ thị không trọng số:
+Để giải bài toán này, ta xây dựng đồ thị phụ có các đỉnh đại diện cho trạng thái <span class="arithmatex">$(v, c)$</span>, trong đó <span class="arithmatex">$v$</span> là đỉnh hiện tại và <span class="arithmatex">$c \in \{0, 1\}$</span> đại diện cho tính chẵn lẻ của độ dài đường đi hiện tại.
+Mỗi cạnh <span class="arithmatex">$(u, v)$</span> của đồ thị gốc sẽ được chuyển thành hai cạnh trên đồ thị phụ: nối giữa <span class="arithmatex">$((u, 0), (v, 1))$</span> và giữa <span class="arithmatex">$((u, 1), (v, 0))$</span>.
+Sau đó, ta chạy BFS để tìm đường đi ngắn nhất từ đỉnh bắt đầu <span class="arithmatex">$(s, 0)$</span> tới đỉnh kết thúc <span class="arithmatex">$(t, 0)$</span>.
+<strong>Lưu ý</strong>: Mục này sử dụng thuật ngữ "<em>hành trình (walk)</em>" thay vì "<em>đường đi (path)</em>" vì các đỉnh có thể bị lặp lại trong hành trình tìm được để đảm bảo tổng độ dài của nó là một số chẵn. Bài toán tìm <em>đường đi (path)</em> ngắn nhất có độ dài chẵn là bài toán NP-Khó (NP-Complete) trên đồ thị có hướng, nhưng <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/net.3230140403">có thể giải được trong thời gian tuyến tính</a> trên đồ thị vô hướng với phương pháp phức tạp hơn rất nhiều.</p>
 </li>
 </ul>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap-thuc-hanh">Bài tập thực hành<a class="headerlink" href="#bai-tap-thuc-hanh" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="http://spoj.com/problems/AKBAR">SPOJ: AKBAR</a></li>
 <li><a href="http://www.spoj.com/problems/NAKANJ/">SPOJ: NAKANJ</a></li>
@@ -8256,7 +8202,7 @@ After that we run a BFS to find the shortest walk from the starting vertex <span
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Param Singh" data-bi-name="contributorprofile" target="_blank">Param Singh</a> (29.73%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (28.65%)</li><li><a href="#" title="David Zhang" data-bi-name="contributorprofile" target="_blank">David Zhang</a> (23.78%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (7.57%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (3.78%)</li><li><a href="#" title="Bhuvnesh Jain" data-bi-name="contributorprofile" target="_blank">Bhuvnesh Jain</a> (2.16%)</li><li><a href="#" title="Aryaman" data-bi-name="contributorprofile" target="_blank">Aryaman</a> (1.08%)</li><li><a href="#" title="PAVAN BANSAL" data-bi-name="contributorprofile" target="_blank">PAVAN BANSAL</a> (1.08%)</li><li><a href="#" title="Animesh Kumar" data-bi-name="contributorprofile" target="_blank">Animesh Kumar</a> (0.54%)</li><li><a href="#" title="Bemwa Malak" data-bi-name="contributorprofile" target="_blank">Bemwa Malak</a> (0.54%)</li><li><a href="#" title="Danilo Pereira da Silva" data-bi-name="contributorprofile" target="_blank">Danilo Pereira da Silva</a> (0.54%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (0.54%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>
