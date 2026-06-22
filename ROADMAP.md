@@ -30,25 +30,25 @@ Thiết lập toàn bộ hạ tầng kỹ thuật để hỗ trợ phiên bản 
 
 | # | Task | Chi tiết | Thời gian | Trạng thái |
 |---|---|---|---|---|
-| 1.1 | **Cài đặt plugin i18n** | `pip install mkdocs-static-i18n` | 1h | ⬜ |
-| 1.2 | **Cấu hình mkdocs.yml** | Thêm plugin i18n, language switcher, alternate links | 1h | ⬜ |
-| 1.3 | **Tạo trang chủ VI** | `src/index.vi.md` — trang chủ tiếng Việt | 1h | ⬜ |
-| 1.4 | **Tạo navigation VI** | `src/navigation.vi.md` — menu điều hướng tiếng Việt | 3h | ⬜ |
-| 1.5 | **Test build local** | Chạy `mkdocs serve`, kiểm tra language switcher, fallback | 1h | ⬜ |
-| 1.6 | **Xây dựng pipeline dịch** | Script Python: đọc → tách → dịch → ghép → validate | 4h | ⬜ |
-| 1.7 | **Xây dựng script QA** | Script kiểm tra: code blocks, LaTeX, links, frontmatter | 2h | ⬜ |
-| 1.8 | **Hoàn thiện GLOSSARY.md** | Bảng thuật ngữ chuẩn hóa (đã tạo sơ bộ) | 1h | ⬜ |
-| 1.9 | **Setup upstream remote** | `git remote add upstream ...`, test merge | 0.5h | ⬜ |
-| 1.10 | **Dịch 1 bài thử nghiệm** | Dịch `binary_search.md` để test toàn bộ pipeline | 1h | ⬜ |
+| 1.1 | **Cài đặt plugin i18n** | `pip install mkdocs-static-i18n` | 1h | ✅ |
+| 1.2 | **Cấu hình mkdocs.yml** | Thêm plugin i18n, language switcher, alternate links | 1h | ✅ |
+| 1.3 | **Tạo trang chủ VI** | `src/index.vi.md` — trang chủ tiếng Việt | 1h | ✅ |
+| 1.4 | **Tạo navigation VI** | `src/navigation.vi.md` — menu điều hướng tiếng Việt | 3h | ✅ |
+| 1.5 | **Test build local** | Chạy `mkdocs serve`, kiểm tra language switcher, fallback | 1h | ✅ |
+| 1.6 | **Xây dựng pipeline dịch** | Script Python: đọc → tách → dịch → ghép → validate | 4h | ✅ |
+| 1.7 | **Xây dựng script QA** | Script kiểm tra: code blocks, LaTeX, links, frontmatter | 2h | ✅ |
+| 1.8 | **Hoàn thiện GLOSSARY.md** | Bảng thuật ngữ chuẩn hóa (đã tạo sơ bộ) | 1h | ✅ |
+| 1.9 | **Setup upstream remote** | `git remote add upstream ...`, test merge | 0.5h | ✅ |
+| 1.10 | **Dịch 1 bài thử nghiệm** | Dịch `binary_search.md` để test toàn bộ pipeline | 1h | ✅ |
 
 ### Deliverables Phase 1
 - [x] `MIGRATION_PLAN.md` ✅
 - [x] `TRANSLATION_STRATEGY.md` ✅
 - [x] `GLOSSARY.md` ✅
 - [x] `ROADMAP.md` ✅
-- [ ] Plugin i18n hoạt động
-- [ ] Pipeline dịch tự động sẵn sàng
-- [ ] 1 bài mẫu được dịch thành công
+- [x] Plugin i18n hoạt động ✅
+- [x] Pipeline dịch tự động sẵn sàng ✅
+- [x] 1 bài mẫu được dịch thành công ✅
 
 ### Criteria hoàn thành
 - `mkdocs build` thành công với cả EN và VI
@@ -66,10 +66,10 @@ Dịch 40 bài viết nền tảng — bao phủ các chủ đề cốt lõi tro
 
 | # | Task | Số bài | Thời gian | Trạng thái |
 |---|---|---|---|---|
-| 2.1 | **Data Structures** | 10 bài | 8h | ⬜ |
+| 2.1 | **Data Structures** | 10 bài | 8h | ⏳ |
 | | ├── `stack_queue_modification.vi.md` | | | ⬜ |
 | | ├── `sparse-table.vi.md` | | | ⬜ |
-| | ├── `disjoint_set_union.vi.md` | | | ⬜ |
+| | ├── `disjoint_set_union.vi.md` | | | ✅ |
 | | ├── `fenwick.vi.md` | | | ⬜ |
 | | ├── `sqrt_decomposition.vi.md` | | | ⬜ |
 | | ├── `segment_tree.vi.md` ⭐ | | | ⬜ |
@@ -88,8 +88,8 @@ Dịch 40 bài viết nền tảng — bao phủ các chủ đề cốt lõi tro
 | | ├── `all-pair-shortest-path-floyd-warshall.vi.md` | | | ⬜ |
 | | ├── `mst_kruskal.vi.md` | | | ⬜ |
 | | └── `topological-sort.vi.md` | | | ⬜ |
-| 2.3 | **Algebra Fundamentals** | 7 bài | 4h | ⬜ |
-| | ├── `binary-exp.vi.md` | | | ⬜ |
+| 2.3 | **Algebra Fundamentals** | 7 bài | 4h | ⏳ |
+| | ├── `binary-exp.vi.md` | | | ✅ |
 | | ├── `euclid-algorithm.vi.md` | | | ⬜ |
 | | ├── `extended-euclid-algorithm.vi.md` | | | ⬜ |
 | | ├── `sieve-of-eratosthenes.vi.md` | | | ⬜ |
@@ -106,8 +106,8 @@ Dịch 40 bài viết nền tảng — bao phủ các chủ đề cốt lõi tro
 | | ├── `prefix-function.vi.md` | | | ⬜ |
 | | ├── `z-function.vi.md` | | | ⬜ |
 | | └── `suffix-array.vi.md` | | | ⬜ |
-| 2.6 | **Numerical Methods** | 3 bài | 2h | ⬜ |
-| | ├── `binary_search.vi.md` | | | ⬜ |
+| 2.6 | **Numerical Methods** | 3 bài | 2h | ⏳ |
+| | ├── `binary_search.vi.md` | | | ✅ |
 | | ├── `ternary_search.vi.md` | | | ⬜ |
 | | └── `roots_newton.vi.md` | | | ⬜ |
 | 2.7 | **Combinatorics** | 2 bài | 1h | ⬜ |
