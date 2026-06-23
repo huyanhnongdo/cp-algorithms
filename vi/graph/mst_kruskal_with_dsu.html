@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#minimum-spanning-tree-kruskal-with-disjoint-set-union" class="md-skip">
+        <a href="#cay-khung-nho-nhat-kruskal-su-dung-cau-truc-cac-tap-hop-khong-giao-nhau-dsu" class="md-skip">
           Bỏ qua
         </a>
       
@@ -6149,10 +6149,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
+  <a href="#mo-ta" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description
+        Mô tả
       
     </span>
   </a>
@@ -6160,10 +6160,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -6171,10 +6171,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-luyen-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập luyện tập
       
     </span>
   </a>
@@ -7960,13 +7960,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/mst_kruskal_with_dsu.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/mst_kruskal_with_dsu.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/mst_kruskal_with_dsu.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/mst_kruskal_with_dsu.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7977,34 +7977,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8040,17 +8012,17 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="minimum-spanning-tree-kruskal-with-disjoint-set-union">Minimum spanning tree - Kruskal with Disjoint Set Union<a class="headerlink" href="#minimum-spanning-tree-kruskal-with-disjoint-set-union" title="Permanent link">&para;</a></h1>
-<p>For an explanation of the MST problem and the Kruskal algorithm, first see the <a href="mst_kruskal.html">main article on Kruskal's algorithm</a>.</p>
-<p>In this article we will consider the data structure <a href="../data_structures/disjoint_set_union.html">"Disjoint Set Union"</a> for implementing Kruskal's algorithm, which will allow the algorithm to achieve the time complexity of <span class="arithmatex">$O(M \log N)$</span>.</p>
-<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p>Just as in the simple version of the Kruskal algorithm, we sort all the edges of the graph in non-decreasing order of weights.
-Then put each vertex in its own tree (i.e. its set) via calls to the <code>make_set</code> function - it will take a total of <span class="arithmatex">$O(N)$</span>.
-We iterate through all the edges (in sorted order) and for each edge determine whether the ends belong to different trees (with two <code>find_set</code> calls in <span class="arithmatex">$O(1)$</span> each).
-Finally, we need to perform the union of the two trees (sets), for which the DSU <code>union_sets</code> function will be called - also in <span class="arithmatex">$O(1)$</span>.
-So we get the total time complexity of <span class="arithmatex">$O(M \log N + N + M)$</span> = <span class="arithmatex">$O(M \log N)$</span>.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>Here is an implementation of Kruskal's algorithm with Union by Rank.</p>
+<h1 id="cay-khung-nho-nhat-kruskal-su-dung-cau-truc-cac-tap-hop-khong-giao-nhau-dsu">Cây khung nhỏ nhất - Kruskal sử dụng Cấu trúc các tập hợp không giao nhau (DSU)<a class="headerlink" href="#cay-khung-nho-nhat-kruskal-su-dung-cau-truc-cac-tap-hop-khong-giao-nhau-dsu" title="Permanent link">&para;</a></h1>
+<p>Để tìm hiểu chi tiết về bài toán MST và thuật toán Kruskal, trước tiên hãy xem <a href="mst_kruskal.html">bài viết chính về thuật toán Kruskal</a>.</p>
+<p>Trong bài viết này, chúng ta sẽ xem xét cấu trúc dữ liệu <a href="../data_structures/disjoint_set_union.html">"Cấu trúc các tập hợp không giao nhau (Disjoint Set Union)"</a> để cài đặt thuật toán Kruskal, giúp thuật toán đạt được độ phức tạp thời gian là <span class="arithmatex">$O(M \log N)$</span>.</p>
+<h2 id="mo-ta">Mô tả<a class="headerlink" href="#mo-ta" title="Permanent link">&para;</a></h2>
+<p>Tương tự như phiên bản đơn giản của thuật toán Kruskal, chúng ta sắp xếp tất cả các cạnh của đồ thị theo thứ tự trọng số không giảm.
+Sau đó, đưa mỗi đỉnh vào một cây riêng biệt (tức là tập hợp của chính nó) thông qua các cuộc gọi đến hàm <code>make_set</code> - bước này sẽ mất tổng cộng <span class="arithmatex">$O(N)$</span> thời gian.
+Chúng ta duyệt qua tất cả các cạnh (theo thứ tự đã sắp xếp) và với mỗi cạnh, xác định xem hai đầu của nó có thuộc về hai cây khác nhau hay không (bằng cách thực hiện hai cuộc gọi hàm <code>find_set</code> với độ phức tạp <span class="arithmatex">$O(1)$</span> mỗi cuộc gọi).
+Cuối cùng, chúng ta cần thực hiện phép hợp nhất (union) hai cây (tập hợp), thao tác này được thực hiện qua cuộc gọi hàm <code>union_sets</code> của DSU - cũng với độ phức tạp <span class="arithmatex">$O(1)$</span>.
+Nhờ đó, chúng ta thu được tổng độ phức tạp thời gian là <span class="arithmatex">$O(M \log N + N + M)$</span> = <span class="arithmatex">$O(M \log N)$</span>.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Dưới đây là bản cài đặt của thuật toán Kruskal sử dụng Kỹ thuật gộp theo hạng (Union by Rank).</p>
 <div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parent</span><span class="p">,</span><span class="w"> </span><span class="n">rank</span><span class="p">;</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">make_set</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8103,13 +8075,13 @@ So we get the total time complexity of <span class="arithmatex">$O(M \log N + N 
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Notice: since the MST will contain exactly <span class="arithmatex">$N-1$</span> edges, we can stop the for loop once we found that many.</p>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
-<p>See <a href="mst_kruskal.html">main article on Kruskal's algorithm</a> for the list of practice problems on this topic.</p>
+<p>Lưu ý: do cây khung nhỏ nhất (MST) sẽ chứa chính xác <span class="arithmatex">$N-1$</span> cạnh, chúng ta có thể dừng vòng lặp <code>for</code> ngay khi đã tìm đủ số lượng cạnh đó.</p>
+<h2 id="bai-tap-luyen-tap">Bài tập luyện tập<a class="headerlink" href="#bai-tap-luyen-tap" title="Permanent link">&para;</a></h2>
+<p>Xem <a href="mst_kruskal.html">bài viết chính về thuật toán Kruskal</a> để biết danh sách các bài tập luyện tập về chủ đề này.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (57.83%)</li><li><a href="#" title="code_master5" data-bi-name="contributorprofile" target="_blank">code_master5</a> (22.89%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (7.23%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (3.61%)</li><li><a href="#" title="Amandeep Singh" data-bi-name="contributorprofile" target="_blank">Amandeep Singh</a> (2.41%)</li><li><a href="#" title="Bhuvnesh Jain" data-bi-name="contributorprofile" target="_blank">Bhuvnesh Jain</a> (2.41%)</li><li><a href="#" title="Rodion Gorkovenko" data-bi-name="contributorprofile" target="_blank">Rodion Gorkovenko</a> (2.41%)</li><li><a href="#" title="Chaman Agrawal" data-bi-name="contributorprofile" target="_blank">Chaman Agrawal</a> (1.2%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

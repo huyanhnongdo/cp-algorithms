@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#second-best-minimum-spanning-tree" class="md-skip">
+        <a href="#cay-khung-nho-nhat-thu-hai" class="md-skip">
           Bỏ qua
         </a>
       
@@ -6177,10 +6177,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#observation" class="md-nav__link">
+  <a href="#nhan-xet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Observation
+        Nhận xét
       
     </span>
   </a>
@@ -6188,10 +6188,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-kruskals-algorithm" class="md-nav__link">
+  <a href="#su-dung-thuat-toan-kruskal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using Kruskal's Algorithm
+        Sử dụng thuật toán Kruskal
       
     </span>
   </a>
@@ -6199,10 +6199,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#modeling-into-a-lowest-common-ancestor-lca-problem" class="md-nav__link">
+  <a href="#quy-ve-bai-toan-tim-to-tien-chung-gan-nhat-lca" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Modeling into a Lowest Common Ancestor (LCA) problem
+        Quy về bài toán Tìm tổ tiên chung gần nhất (LCA)
       
     </span>
   </a>
@@ -6210,10 +6210,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -6221,10 +6221,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#tai-lieu-tham-khao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        References
+        Tài liệu tham khảo
       
     </span>
   </a>
@@ -6232,10 +6232,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#problems" class="md-nav__link">
+  <a href="#bai-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problems
+        Bài tập
       
     </span>
   </a>
@@ -7993,13 +7993,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/second_best_mst.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/second_best_mst.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/second_best_mst.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/second_best_mst.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8015,30 +8015,6 @@ Describe the issue of this article in detail.
   
   
 
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
 
 
 
@@ -8049,68 +8025,66 @@ Describe the issue of this article in detail.
 
 
   
-    <a href="../tags.html#tag:original" class="md-tag">
-      Original
+    <a href="../tags.html#tag:translated" class="md-tag">
+      Translated
     </a>
   
 
 </ul>
 
 
-<h1 id="second-best-minimum-spanning-tree">Second Best Minimum Spanning Tree<a class="headerlink" href="#second-best-minimum-spanning-tree" title="Permanent link">&para;</a></h1>
-<p>A Minimum Spanning Tree <span class="arithmatex">$T$</span> is a tree for the given graph <span class="arithmatex">$G$</span> which spans over all vertices of the given graph and has the minimum weight sum of all the edges, from all the possible spanning trees.
-A second best MST <span class="arithmatex">$T'$</span> is a spanning tree, that has the second minimum weight sum of all the edges, from all the possible spanning trees of the graph <span class="arithmatex">$G$</span>.</p>
-<h2 id="observation">Observation<a class="headerlink" href="#observation" title="Permanent link">&para;</a></h2>
-<p>Let <span class="arithmatex">$T$</span> be the Minimum Spanning Tree of a graph <span class="arithmatex">$G$</span>.
-It can be observed, that the second best Minimum Spanning Tree differs from <span class="arithmatex">$T$</span> by only one edge replacement. (For a proof of this statement refer to problem 23-1 <a href="http://www-bcf.usc.edu/~shanghua/teaching/Spring2010/public_html/files/HW2_Solutions_A.pdf">here</a>).</p>
-<p>So we need to find an edge <span class="arithmatex">$e_{new}$</span> which is in not in <span class="arithmatex">$T$</span>, and replace it with an edge in <span class="arithmatex">$T$</span> (let it be <span class="arithmatex">$e_{old}$</span>) such that the new graph <span class="arithmatex">$T' = (T \cup \{e_{new}\}) \setminus \{e_{old}\}$</span> is a spanning tree and the weight difference (<span class="arithmatex">$e_{new} - e_{old}$</span>) is minimum.</p>
-<h2 id="using-kruskals-algorithm">Using Kruskal's Algorithm<a class="headerlink" href="#using-kruskals-algorithm" title="Permanent link">&para;</a></h2>
-<p>We can use Kruskal's algorithm to find the MST first, and then just try to remove a single edge from it and replace it with another.</p>
+<h1 id="cay-khung-nho-nhat-thu-hai">Cây khung nhỏ nhất thứ hai<a class="headerlink" href="#cay-khung-nho-nhat-thu-hai" title="Permanent link">&para;</a></h1>
+<p>Một Cây khung nhỏ nhất <span class="arithmatex">$T$</span> là một cây của đồ thị <span class="arithmatex">$G$</span> cho trước sao cho nó bao phủ tất cả các đỉnh và có tổng trọng số các cạnh nhỏ nhất trong số tất cả các cây khung có thể có của đồ thị.
+Một cây khung nhỏ nhất thứ hai <span class="arithmatex">$T'$</span> là một cây khung có tổng trọng số các cạnh nhỏ thứ hai trong số tất cả các cây khung có thể có của đồ thị <span class="arithmatex">$G$</span>.</p>
+<h2 id="nhan-xet">Nhận xét<a class="headerlink" href="#nhan-xet" title="Permanent link">&para;</a></h2>
+<p>Gọi <span class="arithmatex">$T$</span> là Cây khung nhỏ nhất của đồ thị <span class="arithmatex">$G$</span>.
+Ta có nhận xét rằng cây khung nhỏ nhất thứ hai chỉ khác <span class="arithmatex">$T$</span> đúng một cặp cạnh thay thế. (Để xem chứng minh cho phát biểu này, bạn có thể tham khảo bài toán 23-1 <a href="http://www-bcf.usc.edu/~shanghua/teaching/Spring2010/public_html/files/HW2_Solutions_A.pdf">tại đây</a>).</p>
+<p>Do đó, chúng ta cần tìm một cạnh mới <span class="arithmatex">$e_{new}$</span> không thuộc <span class="arithmatex">$T$</span> và thay thế nó bằng một cạnh thuộc <span class="arithmatex">$T$</span> (gọi là <span class="arithmatex">$e_{old}$</span>) sao cho đồ thị mới <span class="arithmatex">$T' = (T \cup \{e_{new}\}) \setminus \{e_{old}\}$</span> là một cây khung và chênh lệch trọng số (<span class="arithmatex">$e_{new} - e_{old}$</span>) là nhỏ nhất.</p>
+<h2 id="su-dung-thuat-toan-kruskal">Sử dụng thuật toán Kruskal<a class="headerlink" href="#su-dung-thuat-toan-kruskal" title="Permanent link">&para;</a></h2>
+<p>Chúng ta có thể sử dụng thuật toán Kruskal để tìm MST trước, sau đó thử loại bỏ từng cạnh trong MST và thay thế bằng một cạnh khác.</p>
 <ol>
-<li>Sort the edges in <span class="arithmatex">$O(E \log E)$</span>, then find a MST using Kruskal in <span class="arithmatex">$O(E)$</span>.</li>
-<li>For each edge in the MST (we will have <span class="arithmatex">$V-1$</span> edges in it) temporarily exclude it from the edge list so that it cannot be chosen.</li>
-<li>Then, again try to find a MST in <span class="arithmatex">$O(E)$</span> using the remaining edges.</li>
-<li>Do this for all the edges in MST, and take the best of all.</li>
+<li>Sắp xếp các cạnh trong <span class="arithmatex">$O(E \log E)$</span>, sau đó tìm MST bằng thuật toán Kruskal trong <span class="arithmatex">$O(E)$</span>.</li>
+<li>Với mỗi cạnh trong MST (chúng ta sẽ có <span class="arithmatex">$V-1$</span> cạnh), tạm thời loại bỏ nó khỏi danh sách cạnh để không thể chọn cạnh này nữa.</li>
+<li>Sau đó, tiếp tục tìm MST trong <span class="arithmatex">$O(E)$</span> bằng các cạnh còn lại.</li>
+<li>Thực hiện việc này cho tất cả các cạnh trong MST, và lấy kết quả tốt nhất.</li>
 </ol>
-<p>Note: we don’t need to sort the edges again in for Step 3.</p>
-<p>So, the overall time complexity will be <span class="arithmatex">$O(E \log V + E + V E)$</span> = <span class="arithmatex">$O(V E)$</span>.</p>
-<h2 id="modeling-into-a-lowest-common-ancestor-lca-problem">Modeling into a Lowest Common Ancestor (LCA) problem<a class="headerlink" href="#modeling-into-a-lowest-common-ancestor-lca-problem" title="Permanent link">&para;</a></h2>
-<p>In the previous approach we tried all possibilities of removing one edge of the MST.
-Here we will do the exact opposite.
-We try to add every edge that is not already in the MST.</p>
+<p>Lưu ý: chúng ta không cần phải sắp xếp lại các cạnh ở Bước 3.</p>
+<p>Do đó, tổng độ phức tạp thời gian sẽ là <span class="arithmatex">$O(E \log V + E + V E)$</span> = <span class="arithmatex">$O(V E)$</span>.</p>
+<h2 id="quy-ve-bai-toan-tim-to-tien-chung-gan-nhat-lca">Quy về bài toán Tìm tổ tiên chung gần nhất (LCA)<a class="headerlink" href="#quy-ve-bai-toan-tim-to-tien-chung-gan-nhat-lca" title="Permanent link">&para;</a></h2>
+<p>Trong cách tiếp cận trước, chúng ta đã thử tất cả các khả năng loại bỏ một cạnh của MST.
+Ở đây chúng ta sẽ làm điều ngược lại:
+thử thêm từng cạnh chưa thuộc MST vào MST.</p>
 <ol>
-<li>Sort the edges in <span class="arithmatex">$O(E \log E)$</span>, then find a MST using Kruskal in <span class="arithmatex">$O(E)$</span>.</li>
-<li>For each edge <span class="arithmatex">$e$</span> not already in the MST, temporarily add it to the MST, creating a cycle. The cycle will pass through the LCA.</li>
-<li>Find the edge <span class="arithmatex">$k$</span> with maximal weight in the cycle that is not equal to <span class="arithmatex">$e$</span>, by following the parents of the nodes of edge <span class="arithmatex">$e$</span>, up to the LCA.</li>
-<li>Remove <span class="arithmatex">$k$</span> temporarily, creating a new spanning tree.</li>
-<li>Compute the weight difference <span class="arithmatex">$\delta = weight(e) - weight(k)$</span>, and remember it together with the changed edge.</li>
-<li>Repeat step 2 for all other edges, and return the spanning tree with the smallest weight difference to the MST.</li>
+<li>Sắp xếp các cạnh trong <span class="arithmatex">$O(E \log E)$</span>, sau đó tìm MST bằng thuật toán Kruskal trong <span class="arithmatex">$O(E)$</span>.</li>
+<li>Với mỗi cạnh <span class="arithmatex">$e$</span> chưa thuộc MST, tạm thời thêm nó vào MST để tạo thành một chu trình. Chu trình này sẽ đi qua đỉnh LCA.</li>
+<li>Tìm cạnh <span class="arithmatex">$k$</span> có trọng số lớn nhất trong chu trình đó mà khác <span class="arithmatex">$e$</span>, bằng cách đi dọc các đỉnh cha của hai đầu cạnh <span class="arithmatex">$e$</span> lên đến đỉnh LCA.</li>
+<li>Loại bỏ cạnh <span class="arithmatex">$k$</span> này để tạo thành một cây khung mới.</li>
+<li>Tính chênh lệch trọng số <span class="arithmatex">$\delta = weight(e) - weight(k)$</span>, và ghi nhớ giá trị này cùng với cạnh bị thay đổi.</li>
+<li>Lặp lại bước 2 cho tất cả các cạnh khác, và trả về cây khung có chênh lệch trọng số nhỏ nhất so với MST.</li>
 </ol>
-<p>The time complexity of the algorithm depends on how we compute the <span class="arithmatex">$k$</span>s, which are the maximum weight edges in step 2 of this algorithm.
-One way to compute them efficiently in <span class="arithmatex">$O(E \log V)$</span> is to transform the problem into a Lowest Common Ancestor (LCA) problem.</p>
-<p>We will preprocess the LCA by rooting the MST and will also compute the maximum edge weights for each node on the paths to their ancestors. 
-This can be done using <a href="lca_binary_lifting.html">Binary Lifting</a> for LCA.</p>
-<p>The final time complexity of this approach is <span class="arithmatex">$O(E \log V)$</span>.</p>
-<p>For example:</p>
+<p>Độ phức tạp thời gian của thuật toán phụ thuộc vào cách chúng ta tính toán các cạnh <span class="arithmatex">$k$</span> có trọng số lớn nhất ở bước 2.
+Một cách để tính toán chúng hiệu quả trong <span class="arithmatex">$O(E \log V)$</span> là chuyển đổi bài toán này thành bài toán Tìm tổ tiên chung gần nhất (LCA).</p>
+<p>Chúng ta sẽ tiền xử lý LCA bằng cách chọn gốc cho MST và tính trọng số cạnh lớn nhất cho mỗi nút trên đường đi tới các tổ tiên của chúng.
+Việc này có thể thực hiện bằng phương pháp <a href="lca_binary_lifting.html">Nhảy nhị phân</a> cho LCA.</p>
+<p>Tổng độ phức tạp thời gian của phương pháp này là <span class="arithmatex">$O(E \log V)$</span>.</p>
+<p>Ví dụ:</p>
 <div style="text-align: center;">
-  <img src="second_best_mst_1.png" alt="MST">
-  <img src="second_best_mst_2.png" alt="Second best MST">
-  <br />
-
-*In the image left is the MST and right is the second best MST.*
+<p><img alt="MST" src="../../graph/second_best_mst_1.png" />
+<img alt="Second best MST" src="../../graph/second_best_mst_2.png" />
+  <br /></p>
+<p><em>Trong hình, bên trái là MST và bên phải là cây khung nhỏ nhất thứ hai.</em></p>
 </div>
-
-<p>In the given graph suppose we root the MST at the blue vertex on the top, and then run our algorithm by start picking the edges not in MST.
-Let the edge picked first be the edge <span class="arithmatex">$(u, v)$</span> with weight 36.
-Adding this edge to the tree forms a cycle 36 - 7 - 2 - 34.</p>
-<p>Now we will find the maximum weight edge in this cycle by finding the <span class="arithmatex">$\text{LCA}(u, v) = p$</span>.
-We compute the maximum weight edge on the paths from <span class="arithmatex">$u$</span> to <span class="arithmatex">$p$</span> and from <span class="arithmatex">$v$</span> to <span class="arithmatex">$p$</span>.
-Note: the <span class="arithmatex">$\text{LCA}(u, v)$</span> can also be equal to <span class="arithmatex">$u$</span> or <span class="arithmatex">$v$</span> in some case.
-In this example we will get the edge with weight 34 as maximum edge weight in the cycle.
-By removing the edge we get a new spanning tree, that has a weight difference of only 2.</p>
-<p>After doing this also with all other edges that are not part of the initial MST, we can see that this spanning tree was also the second best spanning tree overall.
-Choosing the edge with weight 14 will increase the weight of the tree by 7, choosing the edge with weight 27 increases it by 14, choosing the edge with weight 28 increases it by 21, and choosing the edge with weight 39 will increase the tree by 5.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<p>Trong đồ thị đã cho, giả sử chúng ta đặt gốc của MST tại đỉnh màu xanh dương ở phía trên cùng, sau đó chạy thuật toán bằng cách bắt đầu chọn các cạnh không thuộc MST.
+Giả sử cạnh được chọn đầu tiên là cạnh <span class="arithmatex">$(u, v)$</span> có trọng số 36.
+Thêm cạnh này vào cây sẽ tạo ra một chu trình 36 - 7 - 2 - 34.</p>
+<p>Bây giờ chúng ta sẽ tìm cạnh có trọng số lớn nhất trong chu trình này bằng cách tìm <span class="arithmatex">$\text{LCA}(u, v) = p$</span>.
+Chúng ta tính trọng số cạnh lớn nhất trên các đường đi từ <span class="arithmatex">$u$</span> đến <span class="arithmatex">$p$</span> và từ <span class="arithmatex">$v$</span> đến <span class="arithmatex">$p$</span>.
+Lưu ý: <span class="arithmatex">$\text{LCA}(u, v)$</span> cũng có thể trùng với <span class="arithmatex">$u$</span> hoặc <span class="arithmatex">$v$</span> trong một số trường hợp.
+Trong ví dụ này, chúng ta sẽ tìm được cạnh có trọng số 34 là cạnh có trọng số lớn nhất trong chu trình.
+Bằng cách loại bỏ cạnh này, chúng ta thu được một cây khung mới có chênh lệch trọng số chỉ là 2.</p>
+<p>Sau khi thực hiện việc này cho toàn bộ các cạnh không thuộc MST ban đầu, chúng ta có thể thấy rằng đây cũng chính là cây khung nhỏ nhất thứ hai của toàn đồ thị.
+Chọn cạnh có trọng số 14 sẽ làm tăng trọng số của cây thêm 7, chọn cạnh có trọng số 27 làm tăng thêm 14, chọn cạnh có trọng số 28 làm tăng thêm 21, và chọn cạnh có trọng số 39 sẽ làm tăng trọng số cây thêm 5.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">edge</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">edge</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">w</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
@@ -8228,19 +8202,19 @@ Choosing the edge with weight 14 will increase the weight of the tree by 7, choo
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h2 id="tai-lieu-tham-khao">Tài liệu tham khảo<a class="headerlink" href="#tai-lieu-tham-khao" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Competitive Programming-3, by Steven Halim</li>
+<li>Competitive Programming-3, tác giả Steven Halim</li>
 <li><a href="http://web.mit.edu/6.263/www/quiz1-f05-sol.pdf">web.mit.edu</a></li>
 </ol>
-<h2 id="problems">Problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap">Bài tập<a class="headerlink" href="#bai-tap" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://codeforces.com/problemset/problem/609/E">Codeforces - Minimum spanning tree for each edge</a></li>
 </ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="gampu" data-bi-name="contributorprofile" target="_blank">gampu</a> (62.25%)</li><li><a href="#" title="Amandeep Singh" data-bi-name="contributorprofile" target="_blank">Amandeep Singh</a> (30.39%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (2.45%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (2.45%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (0.98%)</li><li><a href="#" title="erikoui" data-bi-name="contributorprofile" target="_blank">erikoui</a> (0.98%)</li><li><a href="#" title="Bergur Snorrason" data-bi-name="contributorprofile" target="_blank">Bergur Snorrason</a> (0.49%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

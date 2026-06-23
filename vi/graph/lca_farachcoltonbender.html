@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lowest-common-ancestor-farach-colton-and-bender-algorithm" class="md-skip">
+        <a href="#to-tien-chung-gan-nhat-thuat-toan-farach-colton-va-bender" class="md-skip">
           Bỏ qua
         </a>
       
@@ -6511,10 +6511,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -6522,10 +6522,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -7949,13 +7949,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/lca_farachcoltonbender.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/lca_farachcoltonbender.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/lca_farachcoltonbender.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/lca_farachcoltonbender.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7966,22 +7966,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8017,69 +8001,68 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="lowest-common-ancestor-farach-colton-and-bender-algorithm">Lowest Common Ancestor - Farach-Colton and Bender Algorithm<a class="headerlink" href="#lowest-common-ancestor-farach-colton-and-bender-algorithm" title="Permanent link">&para;</a></h1>
-<p>Let <span class="arithmatex">$G$</span> be a tree.
-For every query of the form <span class="arithmatex">$(u, v)$</span> we want to find the lowest common ancestor of the nodes <span class="arithmatex">$u$</span> and <span class="arithmatex">$v$</span>, i.e. we want to find a node <span class="arithmatex">$w$</span> that lies on the path from <span class="arithmatex">$u$</span> to the root node, that lies on the path from <span class="arithmatex">$v$</span> to the root node, and if there are multiple nodes we pick the one that is farthest away from the root node.
-In other words the desired node <span class="arithmatex">$w$</span> is the lowest ancestor of <span class="arithmatex">$u$</span> and <span class="arithmatex">$v$</span>.
-In particular if <span class="arithmatex">$u$</span> is an ancestor of <span class="arithmatex">$v$</span>, then <span class="arithmatex">$u$</span> is their lowest common ancestor.</p>
-<p>The algorithm which will be described in this article was developed by Farach-Colton and Bender.
-It is asymptotically optimal.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>We use the classical reduction of the LCA problem to the RMQ problem.
-We traverse all nodes of the tree with <a href="depth-first-search.html">DFS</a> and keep an array with all visited nodes and the heights of these nodes. 
-The LCA of two nodes <span class="arithmatex">$u$</span> and <span class="arithmatex">$v$</span> is the node between the occurrences of <span class="arithmatex">$u$</span> and <span class="arithmatex">$v$</span> in the tour, that has the smallest height.</p>
-<p>In the following picture you can see a possible Euler-Tour of a graph and in the list below you can see the visited nodes and their heights.</p>
+<h1 id="to-tien-chung-gan-nhat-thuat-toan-farach-colton-va-bender">Tổ tiên chung gần nhất - Thuật toán Farach-Colton và Bender<a class="headerlink" href="#to-tien-chung-gan-nhat-thuat-toan-farach-colton-va-bender" title="Permanent link">&para;</a></h1>
+<p>Cho <span class="arithmatex">$G$</span> là một cây.
+Với mỗi truy vấn có dạng <span class="arithmatex">$(u, v)$</span>, chúng ta muốn tìm tổ tiên chung gần nhất (Lowest Common Ancestor - LCA) của các nút <span class="arithmatex">$u$</span> và <span class="arithmatex">$v$</span>, tức là chúng ta muốn tìm một nút <span class="arithmatex">$w$</span> vừa nằm trên đường đi từ <span class="arithmatex">$u$</span> về nút gốc, vừa nằm trên đường đi từ <span class="arithmatex">$v$</span> về nút gốc, và nếu có nhiều nút như vậy thì chúng ta chọn nút ở xa gốc nhất.
+Nói cách khác, nút <span class="arithmatex">$w$</span> cần tìm là tổ tiên thấp nhất của <span class="arithmatex">$u$</span> và <span class="arithmatex">$v$</span>.
+Đặc biệt, nếu <span class="arithmatex">$u$</span> là tổ tiên của <span class="arithmatex">$v$</span>, thì <span class="arithmatex">$u$</span> chính là tổ tiên chung gần nhất của chúng.</p>
+<p>Thuật toán sẽ được mô tả trong bài viết này được phát triển bởi Farach-Colton và Bender.
+Đây là một thuật toán tối ưu tiệm cận (asymptotically optimal).</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Chúng ta sử dụng phép quy giản kinh điển từ bài toán LCA về bài toán RMQ.
+Chúng ta duyệt qua toàn bộ các nút của cây bằng <a href="depth-first-search.html">DFS</a> và duy trì một mảng chứa tất cả các nút đã duyệt cùng với chiều cao của chúng.
+LCA của hai nút <span class="arithmatex">$u$</span> và <span class="arithmatex">$v$</span> chính là nút có chiều cao nhỏ nhất nằm giữa các lần xuất hiện của <span class="arithmatex">$u$</span> và <span class="arithmatex">$v$</span> trên đường đi này.</p>
+<p>Trong hình dưới đây, bạn có thể thấy một đường đi Euler (Euler-Tour) khả dĩ của đồ thị và danh sách các nút được ghé thăm cùng chiều cao tương ứng bên dưới.</p>
 <div style="text-align: center;">
-  <img src="LCA_Euler.png" alt="LCA_Euler_Tour">
+<p><img alt="LCA_Euler_Tour" src="../../graph/LCA_Euler.png" /></p>
 </div>
-
 <div class="arithmatex">$$\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 \text{Nodes:}   &amp; 1 &amp; 2 &amp; 5 &amp; 2 &amp; 6 &amp; 2 &amp; 1 &amp; 3 &amp; 1 &amp; 4 &amp; 7 &amp; 4 &amp; 1 \\ \hline
 \text{Heights:} &amp; 1 &amp; 2 &amp; 3 &amp; 2 &amp; 3 &amp; 2 &amp; 1 &amp; 2 &amp; 1 &amp; 2 &amp; 3 &amp; 2 &amp; 1 \\ \hline
 \end{array}$$</div>
-<p>You can read more about this reduction in the article <a href="lca.html">Lowest Common Ancestor</a>.
-In that article the minimum of a range was either found by sqrt-decomposition in <span class="arithmatex">$O(\sqrt{N})$</span> or in <span class="arithmatex">$O(\log N)$</span> using a Segment tree.
-In this article we look at how we can solve the given range minimum queries in <span class="arithmatex">$O(1)$</span> time, while still only taking <span class="arithmatex">$O(N)$</span> time for preprocessing.</p>
-<p>Note that the reduced RMQ problem is very specific:
-any two adjacent elements in the array differ exactly by one (since the elements of the array are nothing more than the heights of the nodes visited in order of traversal, and we either go to a descendant, in which case the next element is one bigger, or go back to the ancestor, in which case the next element is one lower).
-The Farach-Colton and Bender algorithm describes a solution for exactly this specialized RMQ problem.</p>
-<p>Let's denote with <span class="arithmatex">$A$</span> the array on which we want to perform the range minimum queries.
-And <span class="arithmatex">$N$</span> will be the size of <span class="arithmatex">$A$</span>.</p>
-<p>There is an easy data structure that we can use for solving the RMQ problem with <span class="arithmatex">$O(N \log N)$</span> preprocessing and <span class="arithmatex">$O(1)$</span> for each query: the <a href="../data_structures/sparse-table.html">Sparse Table</a>.
-We create a table <span class="arithmatex">$T$</span> where each element <span class="arithmatex">$T[i][j]$</span> is equal to the minimum of <span class="arithmatex">$A$</span> in the interval <span class="arithmatex">$[i, i + 2^j - 1]$</span>.
-Obviously <span class="arithmatex">$0 \leq j \leq \lceil \log N \rceil$</span>, and therefore the size of the Sparse Table will be <span class="arithmatex">$O(N \log N)$</span>.
-You can build the table easily in <span class="arithmatex">$O(N \log N)$</span> by noting that <span class="arithmatex">$T[i][j] = \min(T[i][j-1], T[i+2^{j-1}][j-1])$</span>.</p>
-<p>How can we answer a query RMQ in <span class="arithmatex">$O(1)$</span> using this data structure?
-Let the received query be <span class="arithmatex">$[l, r]$</span>, then the answer is <span class="arithmatex">$\min(T[l][\text{sz}], T[r-2^{\text{sz}}+1][\text{sz}])$</span>, where <span class="arithmatex">$\text{sz}$</span> is the biggest exponent such that <span class="arithmatex">$2^{\text{sz}}$</span> is not bigger than the range length <span class="arithmatex">$r-l+1$</span>. 
-Indeed we can take the range <span class="arithmatex">$[l, r]$</span> and cover it two segments of length <span class="arithmatex">$2^{\text{sz}}$</span> - one starting in <span class="arithmatex">$l$</span> and the other ending in <span class="arithmatex">$r$</span>.
-These segments overlap, but this doesn't interfere with our computation.
-To really achieve the time complexity of <span class="arithmatex">$O(1)$</span> per query, we need to know the values of <span class="arithmatex">$\text{sz}$</span> for all possible lengths from <span class="arithmatex">$1$</span> to <span class="arithmatex">$N$</span>.
-But this can be easily precomputed.</p>
-<p>Now we want to improve the complexity of the preprocessing down to <span class="arithmatex">$O(N)$</span>.</p>
-<p>We divide the array <span class="arithmatex">$A$</span> into blocks of size <span class="arithmatex">$K = 0.5 \log N$</span> with <span class="arithmatex">$\log$</span> being the logarithm to base 2.
-For each block we calculate the minimum element and store them in an array <span class="arithmatex">$B$</span>.
-<span class="arithmatex">$B$</span> has the size <span class="arithmatex">$\frac{N}{K}$</span>.
-We construct a sparse table from the array <span class="arithmatex">$B$</span>.
-The size and the time complexity of it will be:</p>
+<p>Bạn có thể đọc thêm về phép quy giản này trong bài viết <a href="lca.html">Tổ tiên chung gần nhất (LCA)</a>.
+Trong bài viết đó, giá trị nhỏ nhất của một đoạn được tìm bằng phương pháp chia căn trong <span class="arithmatex">$O(\sqrt{N})$</span> hoặc bằng Cây phân đoạn (Segment tree) trong <span class="arithmatex">$O(\log N)$</span>.
+Trong bài viết này, chúng ta sẽ xem xét cách giải bài toán truy vấn giá trị nhỏ nhất trên đoạn (RMQ) trong thời gian <span class="arithmatex">$O(1)$</span>, trong khi vẫn chỉ mất <span class="arithmatex">$O(N)$</span> thời gian tiền xử lý.</p>
+<p>Lưu ý rằng bài toán RMQ sau khi quy giản có một đặc điểm rất đặc biệt:
+hai phần tử kề nhau bất kỳ trong mảng luôn chênh lệch nhau đúng một đơn vị (vì các phần tử trong mảng chính là chiều cao của các nút được duyệt theo thứ tự, và chúng ta chỉ có thể đi xuống nút con, khiến phần tử tiếp theo tăng thêm 1, hoặc đi ngược lên nút cha, khiến phần tử tiếp theo giảm đi 1).
+Thuật toán Farach-Colton và Bender mô tả một lời giải cho chính bài toán RMQ đặc biệt này.</p>
+<p>Ký hiệu <span class="arithmatex">$A$</span> là mảng mà chúng ta muốn thực hiện các truy vấn RMQ.
+Và <span class="arithmatex">$N$</span> là kích thước của <span class="arithmatex">$A$</span>.</p>
+<p>Có một cấu trúc dữ liệu đơn giản mà chúng ta có thể sử dụng để giải quyết bài toán RMQ với thời gian tiền xử lý <span class="arithmatex">$O(N \log N)$</span> và <span class="arithmatex">$O(1)$</span> cho mỗi truy vấn: <a href="../data_structures/sparse-table.html">Bảng thưa (Sparse Table)</a>.
+Chúng ta tạo một bảng <span class="arithmatex">$T$</span> trong đó mỗi phần tử <span class="arithmatex">$T[i][j]$</span> bằng giá trị nhỏ nhất của <span class="arithmatex">$A$</span> trong khoảng <span class="arithmatex">$[i, i + 2^j - 1]$</span>.
+Rõ ràng <span class="arithmatex">$0 \leq j \leq \lceil \log N \rceil$</span>, và do đó kích thước của Bảng thưa sẽ là <span class="arithmatex">$O(N \log N)$</span>.
+Bạn có thể xây dựng bảng này một cách dễ dàng trong <span class="arithmatex">$O(N \log N)$</span> bằng cách nhận xét rằng <span class="arithmatex">$T[i][j] = \min(T[i][j-1], T[i+2^{j-1}][j-1])$</span>.</p>
+<p>Làm thế nào để trả lời một truy vấn RMQ trong <span class="arithmatex">$O(1)$</span> sử dụng cấu trúc dữ liệu này?
+Giả sử truy vấn nhận được là <span class="arithmatex">$[l, r]$</span>, thì kết quả sẽ là <span class="arithmatex">$\min(T[l][\text{sz}], T[r-2^{\text{sz}}+1][\text{sz}])$</span>, trong đó <span class="arithmatex">$\text{sz}$</span> là số mũ lớn nhất sao cho <span class="arithmatex">$2^{\text{sz}}$</span> không lớn hơn độ dài đoạn <span class="arithmatex">$r-l+1$</span>.
+Thật vậy, chúng ta có thể lấy đoạn <span class="arithmatex">$[l, r]$</span> và phủ nó bằng hai đoạn độ dài <span class="arithmatex">$2^{\text{sz}}$</span> - một đoạn bắt đầu tại <span class="arithmatex">$l$</span> và đoạn kia kết thúc tại <span class="arithmatex">$r$</span>.
+Hai đoạn này chồng lấp lên nhau, nhưng điều đó không ảnh hưởng đến tính đúng đắn của phép toán tối thiểu (<span class="arithmatex">$\min$</span>).
+Để thực sự đạt được độ phức tạp thời gian <span class="arithmatex">$O(1)$</span> cho mỗi truy vấn, chúng ta cần biết giá trị của <span class="arithmatex">$\text{sz}$</span> cho tất cả các độ dài có thể từ <span class="arithmatex">$1$</span> đến <span class="arithmatex">$N$</span>.
+Tuy nhiên, điều này có thể dễ dàng được tính trước.</p>
+<p>Bây giờ chúng ta muốn cải thiện độ phức tạp của việc tiền xử lý xuống còn <span class="arithmatex">$O(N)$</span>.</p>
+<p>Chúng ta chia mảng <span class="arithmatex">$A$</span> thành các khối (block) kích thước <span class="arithmatex">$K = 0.5 \log N$</span> với <span class="arithmatex">$\log$</span> là logarit cơ số 2.
+Với mỗi khối, chúng ta tính phần tử nhỏ nhất và lưu chúng vào mảng <span class="arithmatex">$B$</span>.
+<span class="arithmatex">$B$</span> có kích thước là <span class="arithmatex">$\frac{N}{K}$</span>.
+Chúng ta xây dựng một Bảng thưa (Sparse Table) trên mảng <span class="arithmatex">$B$</span>.
+Kích thước và độ phức tạp thời gian của nó sẽ là:</p>
 <div class="arithmatex">$$\frac{N}{K}\log\left(\frac{N}{K}\right) = \frac{2N}{\log(N)} \log\left(\frac{2N}{\log(N)}\right) =$$</div>
 <div class="arithmatex">$$= \frac{2N}{\log(N)} \left(1 + \log\left(\frac{N}{\log(N)}\right)\right) \leq \frac{2N}{\log(N)} + 2N = O(N)$$</div>
-<p>Now we only have to learn how to quickly answer range minimum queries within each block.
-In fact if the received range minimum query is <span class="arithmatex">$[l, r]$</span> and <span class="arithmatex">$l$</span> and <span class="arithmatex">$r$</span> are in different blocks then the answer is the minimum of the following three values:
-the minimum of the suffix of block of <span class="arithmatex">$l$</span> starting at <span class="arithmatex">$l$</span>, the minimum of the prefix of block of <span class="arithmatex">$r$</span> ending at <span class="arithmatex">$r$</span>, and the minimum of the blocks between those.
-The minimum of the blocks in between can be answered in <span class="arithmatex">$O(1)$</span> using the Sparse Table.
-So this leaves us only the range minimum queries inside blocks.</p>
-<p>Here we will exploit the property of the array.
-Remember that the values in the array - which are just height values in the tree - will always differ by one.
-If we remove the first element of a block, and subtract it from every other item in the block, every block can be identified by a sequence of length <span class="arithmatex">$K - 1$</span> consisting of the number <span class="arithmatex">$+1$</span> and <span class="arithmatex">$-1$</span>.
-Because these blocks are so small, there are only a few different sequences that can occur.
-The number of possible sequences is:</p>
+<p>Bây giờ chúng ta chỉ cần học cách trả lời nhanh các truy vấn RMQ trong phạm vi mỗi khối.
+Thực tế, nếu truy vấn RMQ nhận được là <span class="arithmatex">$[l, r]$</span> và <span class="arithmatex">$l, r$</span> thuộc hai khối khác nhau thì câu trả lời là giá trị nhỏ nhất trong ba giá trị sau:
+giá trị nhỏ nhất của hậu tố khối chứa <span class="arithmatex">$l$</span> bắt đầu từ <span class="arithmatex">$l$</span>, giá trị nhỏ nhất của tiền tố khối chứa <span class="arithmatex">$r$</span> kết thúc tại <span class="arithmatex">$r$</span>, và giá trị nhỏ nhất của các khối nằm giữa chúng.
+Giá trị nhỏ nhất của các khối nằm giữa có thể được trả lời trong <span class="arithmatex">$O(1)$</span> bằng Bảng thưa.
+Vì vậy, chúng ta chỉ còn lại các truy vấn RMQ nằm hoàn toàn bên trong một khối.</p>
+<p>Ở đây chúng ta sẽ khai thác tính chất của mảng.
+Hãy nhớ rằng các giá trị trong mảng - vốn chỉ là giá trị chiều cao trong cây - sẽ luôn chênh lệch nhau đúng 1 đơn vị.
+Nếu chúng ta loại bỏ phần tử đầu tiên của một khối và trừ nó khỏi mọi phần tử khác trong khối, mỗi khối có thể được xác định bằng một dãy độ dài <span class="arithmatex">$K - 1$</span> gồm các số <span class="arithmatex">$+1$</span> và <span class="arithmatex">$-1$</span>.
+Bởi vì các khối này rất nhỏ, chỉ có một số ít dãy khác nhau có thể xảy ra.
+Số lượng dãy có thể xảy ra là:</p>
 <div class="arithmatex">$$2^{K-1} = 2^{0.5 \log(N) - 1} = 0.5 \left(2^{\log(N)}\right)^{0.5} = 0.5 \sqrt{N}$$</div>
-<p>Thus the number of different blocks is <span class="arithmatex">$O(\sqrt{N})$</span>, and therefore we can precompute the results of range minimum queries inside all different blocks in <span class="arithmatex">$O(\sqrt{N} K^2) = O(\sqrt{N} \log^2(N)) = O(N)$</span> time.
-For the implementation we can characterize a block by a bitmask of length <span class="arithmatex">$K-1$</span> (which will fit in a standard int) and store the index of the minimum in an array <span class="arithmatex">$\text{block}[\text{mask}][l][r]$</span> of size <span class="arithmatex">$O(\sqrt{N} \log^2(N))$</span>.</p>
-<p>So we learned how to precompute range minimum queries within each block, as well as range minimum queries over a range of blocks, all in <span class="arithmatex">$O(N)$</span>.
-With these precomputations we can answer each query in <span class="arithmatex">$O(1)$</span>, by using at most four precomputed values: the minimum of the block containing <code>l</code>, the minimum of the block containing <code>r</code>, and the two minima of the overlapping segments of the blocks between them.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<p>Do đó, số lượng khối khác nhau là <span class="arithmatex">$O(\sqrt{N})$</span>, và vì vậy chúng ta có thể tính trước kết quả của các truy vấn RMQ bên trong tất cả các khối khác nhau này trong thời gian <span class="arithmatex">$O(\sqrt{N} K^2) = O(\sqrt{N} \log^2(N)) = O(N)$</span>.
+Để cài đặt, chúng ta có thể biểu diễn một khối bằng một mặt nạ bit (bitmask) độ dài <span class="arithmatex">$K-1$</span> (vừa vặn trong một kiểu int tiêu chuẩn) và lưu chỉ số của giá trị nhỏ nhất trong một mảng <span class="arithmatex">$\text{block}[\text{mask}][l][r]$</span> có kích thước <span class="arithmatex">$O(\sqrt{N} \log^2(N))$</span>.</p>
+<p>Như vậy, chúng ta đã biết cách tính trước các truy vấn RMQ trong mỗi khối, cũng như các truy vấn RMQ trên một khoảng gồm các khối, tất cả đều trong <span class="arithmatex">$O(N)$</span>.
+Với các tiền xử lý này, chúng ta có thể trả lời mỗi truy vấn trong <span class="arithmatex">$O(1)$</span> bằng cách sử dụng tối đa bốn giá trị được tính trước: giá trị nhỏ nhất của khối chứa <code>l</code>, giá trị nhỏ nhất của khối chứa <code>r</code>, và hai giá trị nhỏ nhất của các đoạn chồng lấp của các khối nằm giữa chúng.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="p">;</span>
 
@@ -8201,7 +8184,7 @@ With these precomputations we can answer each query in <span class="arithmatex">
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (93.81%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (2.86%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (1.43%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (1.43%)</li><li><a href="#" title="Le Bao Hiep" data-bi-name="contributorprofile" target="_blank">Le Bao Hiep</a> (0.48%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

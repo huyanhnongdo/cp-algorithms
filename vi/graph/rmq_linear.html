@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#solve-rmq-range-minimum-query-by-finding-lca-lowest-common-ancestor" class="md-skip">
+        <a href="#giai-quyet-rmq-range-minimum-query-bang-cach-tim-lca-lowest-common-ancestor" class="md-skip">
           Bỏ qua
         </a>
       
@@ -6539,10 +6539,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -6550,10 +6550,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#construction-of-a-cartesian-tree" class="md-nav__link">
+  <a href="#xay-dung-cay-cartesian" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Construction of a Cartesian tree
+        Xây dựng cây Cartesian
       
     </span>
   </a>
@@ -7949,13 +7949,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/rmq_linear.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/rmq_linear.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/rmq_linear.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/rmq_linear.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7966,18 +7966,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8013,41 +8001,39 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="solve-rmq-range-minimum-query-by-finding-lca-lowest-common-ancestor">Solve RMQ (Range Minimum Query) by finding LCA (Lowest Common Ancestor)<a class="headerlink" href="#solve-rmq-range-minimum-query-by-finding-lca-lowest-common-ancestor" title="Permanent link">&para;</a></h1>
-<p>Given an array <code>A[0..N-1]</code>.
-For each query of the form <code>[L, R]</code> we want to find the minimum in the array <code>A</code> starting from position <code>L</code> and ending with position <code>R</code>.
-We will assume that the array <code>A</code> doesn't change in the process, i.e. this article describes a solution to the static RMQ problem</p>
-<p>Here is a description of an asymptotically optimal solution.
-It stands apart from other solutions for the RMQ problem, since it is very different from them:
-it reduces the RMQ problem to the LCA problem, and then uses the <a href="lca_farachcoltonbender.html">Farach-Colton and Bender algorithm</a>, which reduces the LCA problem back to a specialized RMQ problem and solves that.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>We construct a <strong>Cartesian tree</strong> from the array <code>A</code>.
-A Cartesian tree of an array <code>A</code> is a binary tree with the min-heap property (the value of parent node has to be smaller or equal than the value of its children) such that the in-order traversal of the tree visits the nodes in the same order as they are in the array <code>A</code>.</p>
-<p>In other words, a Cartesian tree is a recursive data structure.
-The array <code>A</code> will be partitioned into 3 parts: the prefix of the array up to the minimum, the minimum, and the remaining suffix.
-The root of the tree will be a node corresponding to the minimum element of the array <code>A</code>, the left subtree will be the Cartesian tree of the prefix, and the right subtree will be a Cartesian tree of the suffix.</p>
-<p>In the following image you can see one array of length 10 and the corresponding Cartesian tree.</p>
+<h1 id="giai-quyet-rmq-range-minimum-query-bang-cach-tim-lca-lowest-common-ancestor">Giải quyết RMQ (Range Minimum Query) bằng cách tìm LCA (Lowest Common Ancestor)<a class="headerlink" href="#giai-quyet-rmq-range-minimum-query-bang-cach-tim-lca-lowest-common-ancestor" title="Permanent link">&para;</a></h1>
+<p>Cho một mảng <code>A[0..N-1]</code>.
+Với mỗi truy vấn có dạng <code>[L, R]</code>, chúng ta muốn tìm giá trị nhỏ nhất trong mảng <code>A</code> từ vị trí <code>L</code> đến vị trí <code>R</code>.
+Chúng ta giả định rằng mảng <code>A</code> không thay đổi trong suốt quá trình thực hiện, nghĩa là bài viết này mô tả giải pháp cho bài toán RMQ tĩnh.</p>
+<p>Dưới đây mô tả một giải pháp tối ưu tiệm cận.
+Giải pháp này nổi bật so với các cách giải RMQ khác bởi vì nó rất khác biệt:
+nó quy giản bài toán RMQ về bài toán LCA, rồi sử dụng <a href="lca_farachcoltonbender.html">Thuật toán Farach-Colton và Bender</a> - thuật toán lại quy giản ngược bài toán LCA về một bài toán RMQ đặc biệt và giải quyết nó.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Chúng ta xây dựng một <strong>cây Cartesian</strong> (Cartesian tree) từ mảng <code>A</code>.
+Cây Cartesian của mảng <code>A</code> là một cây nhị phân có tính chất của min-heap (giá trị của nút cha phải nhỏ hơn hoặc bằng giá trị của các nút con) sao cho phép duyệt trung thứ tự (in-order traversal) sẽ ghé thăm các nút theo đúng thứ tự xuất hiện của chúng trong mảng <code>A</code>.</p>
+<p>Nói cách khác, cây Cartesian là một cấu trúc dữ liệu đệ quy.
+Mảng <code>A</code> được chia làm 3 phần: phần tiền tố của mảng nằm trước phần tử nhỏ nhất, bản thân phần tử nhỏ nhất, và phần hậu tố còn lại.
+Nút gốc của cây sẽ là nút tương ứng với phần tử nhỏ nhất của mảng <code>A</code>, cây con bên trái sẽ là cây Cartesian của phần tiền tố, và cây con bên phải sẽ là cây Cartesian của phần hậu tố.</p>
+<p>Trong hình dưới đây, bạn có thể thấy một mảng độ dài 10 và cây Cartesian tương ứng.</p>
 <div style="text-align: center;">
-  <img src="CartesianTree.png" alt="Image of Cartesian Tree">
+<p><img alt="Image of Cartesian Tree" src="../../graph/CartesianTree.png" /></p>
 </div>
-
-<p>The range minimum query <code>[l, r]</code> is equivalent to the lowest common ancestor query <code>[l', r']</code>, where <code>l'</code> is the node corresponding to the element <code>A[l]</code> and <code>r'</code> the node corresponding to the element <code>A[r]</code>.
-Indeed the node corresponding to the smallest element in the range has to be an ancestor of all nodes in the range, therefore also from <code>l'</code> and <code>r'</code>.
-This automatically follows from the min-heap property.
-And is also has to be the lowest ancestor, because otherwise <code>l'</code> and <code>r'</code> would be both in the left or in the right subtree, which generates a contradiction since in such a case the minimum wouldn't even be in the range.</p>
-<p>In the following image you can see the LCA queries for the RMQ queries <code>[1, 3]</code> and <code>[5, 9]</code>.
-In the first query the LCA of the nodes <code>A[1]</code> and <code>A[3]</code> is the node corresponding to <code>A[2]</code> which has the value 2, and in the second query the LCA of <code>A[5]</code> and <code>A[9]</code> is the node corresponding to <code>A[8]</code> which has the value 3.</p>
+<p>Truy vấn giá trị nhỏ nhất trên đoạn <code>[l, r]</code> tương đương với truy vấn tổ tiên chung gần nhất (LCA) của <code>[l', r']</code>, trong đó <code>l'</code> là nút tương ứng với phần tử <code>A[l]</code> và <code>r'</code> là nút tương ứng với phần tử <code>A[r]</code>.
+Thật vậy, nút tương ứng với phần tử nhỏ nhất trong đoạn phải là tổ tiên của tất cả các nút trong đoạn đó, do đó cũng là tổ tiên của cả <code>l'</code> và <code>r'</code>.
+Điều này tự động suy ra từ tính chất của min-heap.
+Và nó cũng phải là tổ tiên chung gần nhất (thấp nhất), vì nếu ngược lại thì cả <code>l'</code> và <code>r'</code> sẽ đều nằm cùng một phía cây con bên trái hoặc cây con bên phải, điều này tạo ra mâu thuẫn vì khi đó giá trị nhỏ nhất thực tế lại không nằm trong đoạn truy vấn.</p>
+<p>Trong hình dưới đây, bạn có thể thấy các truy vấn LCA tương ứng với các truy vấn RMQ <code>[1, 3]</code> và <code>[5, 9]</code>.
+Trong truy vấn đầu tiên, LCA của các nút <code>A[1]</code> và <code>A[3]</code> là nút tương ứng với <code>A[2]</code> có giá trị là 2, và trong truy vấn thứ hai, LCA của <code>A[5]</code> và <code>A[9]</code> là nút tương ứng với <code>A[8]</code> có giá trị là 3.</p>
 <div style="text-align: center;">
-  <img src="CartesianTreeLCA.png" alt="LCA queries in the Cartesian Tree">
+<p><img alt="LCA queries in the Cartesian Tree" src="../../graph/CartesianTreeLCA.png" /></p>
 </div>
-
-<p>Such a tree can be built in <span class="arithmatex">$O(N)$</span> time and the Farach-Colton and Benders algorithm can preprocess the tree in <span class="arithmatex">$O(N)$</span> and find the LCA in <span class="arithmatex">$O(1)$</span>.</p>
-<h2 id="construction-of-a-cartesian-tree">Construction of a Cartesian tree<a class="headerlink" href="#construction-of-a-cartesian-tree" title="Permanent link">&para;</a></h2>
-<p>We will build the Cartesian tree by adding the elements one after another.
-In each step we maintain a valid Cartesian tree of all the processed elements.
-It is easy to see, that adding an element <code>s[i]</code> can only change the nodes in the most right path - starting at the root and repeatedly taking the right child - of the tree.
-The subtree of the node with the smallest, but greater or equal than <code>s[i]</code>, value becomes the left subtree of <code>s[i]</code>, and the tree with root <code>s[i]</code> will become the new right subtree of the node with the biggest, but smaller than <code>s[i]</code> value.</p>
-<p>This can be implemented by using a stack to store the indices of the most right nodes.</p>
+<p>Cây này có thể được xây dựng trong thời gian <span class="arithmatex">$O(N)$</span> và thuật toán Farach-Colton và Bender có thể tiền xử lý cây trong <span class="arithmatex">$O(N)$</span> để trả lời truy vấn LCA trong <span class="arithmatex">$O(1)$</span>.</p>
+<h2 id="xay-dung-cay-cartesian">Xây dựng cây Cartesian<a class="headerlink" href="#xay-dung-cay-cartesian" title="Permanent link">&para;</a></h2>
+<p>Chúng ta sẽ xây dựng cây Cartesian bằng cách thêm lần lượt từng phần tử một.
+Tại mỗi bước, chúng ta luôn duy trì một cây Cartesian hợp lệ cho tất cả các phần tử đã được xử lý.
+Dễ thấy rằng, khi thêm một phần tử <code>s[i]</code>, nó chỉ có thể làm thay đổi các nút nằm trên đường đi ngoài cùng bên phải (đường đi bắt đầu từ gốc cây và liên tục đi xuống nút con bên phải) của cây.
+Cây con của nút có giá trị nhỏ nhất nhưng vẫn lớn hơn hoặc bằng <code>s[i]</code> sẽ trở thành cây con bên trái của <code>s[i]</code>, và cây có gốc là <code>s[i]</code> sẽ trở thành cây con bên phải mới của nút có giá trị lớn nhất nhưng vẫn nhỏ hơn <code>s[i]</code>.</p>
+<p>Điều này có thể được cài đặt bằng cách sử dụng một ngăn xếp (stack) để lưu trữ chỉ số của các nút trên đường đi ngoài cùng bên phải.</p>
 <div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parent</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">);</span>
 <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8066,7 +8052,7 @@ The subtree of the node with the smallest, but greater or equal than <code>s[i]<
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (80.88%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (8.82%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (8.82%)</li><li><a href="#" title="Vineet Kumar" data-bi-name="contributorprofile" target="_blank">Vineet Kumar</a> (1.47%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

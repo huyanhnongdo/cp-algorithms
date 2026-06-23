@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lowest-common-ancestor-binary-lifting" class="md-skip">
+        <a href="#to-tien-chung-gan-nhat-nhay-nhi-phan" class="md-skip">
           Bỏ qua
         </a>
       
@@ -6483,10 +6483,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -6494,10 +6494,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -6505,10 +6505,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-thuc-hanh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập thực hành
       
     </span>
   </a>
@@ -7960,13 +7960,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/lca_binary_lifting.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/lca_binary_lifting.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/lca_binary_lifting.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/lca_binary_lifting.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7977,26 +7977,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8032,34 +8012,34 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="lowest-common-ancestor-binary-lifting">Lowest Common Ancestor - Binary Lifting<a class="headerlink" href="#lowest-common-ancestor-binary-lifting" title="Permanent link">&para;</a></h1>
-<p>Let <span class="arithmatex">$G$</span> be a tree.
-For every query of the form <code>(u, v)</code> we want to find the lowest common ancestor of the nodes <code>u</code> and <code>v</code>, i.e. we want to find a node <code>w</code> that lies on the path from <code>u</code> to the root node, that lies on the path from <code>v</code> to the root node, and if there are multiple nodes we pick the one that is farthest away from the root node.
-In other words the desired node <code>w</code> is the lowest ancestor of <code>u</code> and <code>v</code>.
-In particular if <code>u</code> is an ancestor of <code>v</code>, then <code>u</code> is their lowest common ancestor.</p>
-<p>The algorithm described in this article will need <span class="arithmatex">$O(N \log N)$</span> for preprocessing the tree, and then <span class="arithmatex">$O(\log N)$</span> for each LCA query.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>For each node we will precompute its ancestor above it, its ancestor two nodes above, its ancestor four above, etc.
-Let's store them in the array <code>up</code>, i.e. <code>up[i][j]</code> is the <code>2^j</code>-th ancestor above the node <code>i</code> with <code>i=1...N</code>, <code>j=0...ceil(log(N))</code>.
-These information allow us to jump from any node to any ancestor above it in <span class="arithmatex">$O(\log N)$</span> time.
-We can compute this array using a <a href="depth-first-search.html">DFS</a> traversal of the tree.</p>
-<p>For each node we will also remember the time of the first visit of this node (i.e. the time when the DFS discovers the node), and the time when we left it (i.e. after we visited all children and exit the DFS function).
-We can use this information to determine in constant time if a node is an ancestor of another node.</p>
-<p>Suppose now we received a query <code>(u, v)</code>.
-We can immediately check whether one node is the ancestor of the other.
-In this case this node is already the LCA.
-If <code>u</code> is not the ancestor of <code>v</code>, and <code>v</code> not the ancestor of <code>u</code>, we climb the ancestors of <code>u</code> until we find the highest (i.e. closest to the root) node, which is not an ancestor of <code>v</code> (i.e. a node <code>x</code>, such that <code>x</code> is not an ancestor of <code>v</code>, but <code>up[x][0]</code> is).
-We can find this node <code>x</code> in <span class="arithmatex">$O(\log N)$</span> time using the array <code>up</code>.</p>
-<p>We will describe this process in more detail.
-Let <code>L = ceil(log(N))</code>.
-Suppose first that <code>i = L</code>.
-If <code>up[u][i]</code> is not an ancestor of <code>v</code>, then we can assign <code>u = up[u][i]</code> and decrement <code>i</code>.
-If <code>up[u][i]</code> is an ancestor, then we just decrement <code>i</code>.
-Clearly after doing this for all non-negative <code>i</code> the node <code>u</code> will be the desired node - i.e. <code>u</code> is still not an ancestor of <code>v</code>, but <code>up[u][0]</code> is.</p>
-<p>Now, obviously, the answer to LCA will be <code>up[u][0]</code> - i.e., the smallest node among the ancestors of the node <code>u</code>, which is also an ancestor of <code>v</code>.</p>
-<p>So answering a LCA query will iterate <code>i</code> from <code>ceil(log(N))</code> to <code>0</code> and checks in each iteration if one node is the ancestor of the other.
-Consequently each query can be answered in <span class="arithmatex">$O(\log N)$</span>.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<h1 id="to-tien-chung-gan-nhat-nhay-nhi-phan">Tổ tiên chung gần nhất - Nhảy nhị phân<a class="headerlink" href="#to-tien-chung-gan-nhat-nhay-nhi-phan" title="Permanent link">&para;</a></h1>
+<p>Cho <span class="arithmatex">$G$</span> là một cây.
+Với mỗi truy vấn có dạng <code>(u, v)</code>, chúng ta muốn tìm tổ tiên chung gần nhất (Lowest Common Ancestor - LCA) của các nút <code>u</code> và <code>v</code>, tức là chúng ta muốn tìm một nút <code>w</code> vừa nằm trên đường đi từ <code>u</code> về nút gốc, vừa nằm trên đường đi từ <code>v</code> về nút gốc, và nếu có nhiều nút như vậy thì chúng ta chọn nút ở xa gốc nhất.
+Nói cách khác, nút <code>w</code> cần tìm là tổ tiên thấp nhất của <code>u</code> và <code>v</code>.
+Đặc biệt, nếu <code>u</code> là tổ tiên của <code>v</code>, thì <code>u</code> chính là tổ tiên chung gần nhất của chúng.</p>
+<p>Thuật toán được mô tả trong bài viết này cần <span class="arithmatex">$O(N \log N)$</span> cho việc tiền xử lý cây, và sau đó mất <span class="arithmatex">$O(\log N)$</span> cho mỗi truy vấn LCA.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Với mỗi nút, chúng ta sẽ tính trước tổ tiên thứ 1 phía trên nó, tổ tiên thứ 2 phía trên nó, tổ tiên thứ 4 phía trên nó, v.v.
+Hãy lưu chúng trong mảng <code>up</code>, nghĩa là <code>up[i][j]</code> là tổ tiên thứ <code>2^j</code> phía trên nút <code>i</code> với <code>i=1...N</code>, <code>j=0...ceil(log(N))</code>.
+Thông tin này cho phép chúng ta nhảy từ bất kỳ nút nào đến bất kỳ tổ tiên nào phía trên nó trong thời gian <span class="arithmatex">$O(\log N)$</span>.
+Chúng ta có thể tính toán mảng này bằng cách duyệt <a href="depth-first-search.html">DFS</a> trên cây.</p>
+<p>Với mỗi nút, chúng ta cũng lưu lại thời điểm ghé thăm nó lần đầu tiên (tức là thời điểm DFS phát hiện ra nút), và thời điểm rời khỏi nó (tức là sau khi đã duyệt qua toàn bộ các nút con và thoát khỏi hàm DFS).
+Chúng ta có thể sử dụng thông tin này để xác định xem một nút có phải là tổ tiên của một nút khác hay không trong thời gian hằng số.</p>
+<p>Bây giờ giả sử chúng ta nhận được một truy vấn <code>(u, v)</code>.
+Chúng ta có thể ngay lập tức kiểm tra xem nút này có phải là tổ tiên của nút kia hay không.
+Nếu có, thì nút đó chính là LCA luôn.
+Nếu <code>u</code> không phải là tổ tiên của <code>v</code> và <code>v</code> cũng không phải là tổ tiên của <code>u</code>, chúng ta sẽ đi lên các tổ tiên của <code>u</code> cho đến khi tìm thấy nút cao nhất (tức là gần gốc nhất) mà không phải là tổ tiên của <code>v</code> (nghĩa là một nút <code>x</code> sao cho <code>x</code> không phải là tổ tiên của <code>v</code>, nhưng <code>up[x][0]</code> thì có).
+Chúng ta có thể tìm nút <code>x</code> này trong thời gian <span class="arithmatex">$O(\log N)$</span> bằng cách sử dụng mảng <code>up</code>.</p>
+<p>Chúng ta sẽ mô tả chi tiết hơn quá trình này.
+Đặt <code>L = ceil(log(N))</code>.
+Ban đầu giả sử <code>i = L</code>.
+Nếu <code>up[u][i]</code> không phải là tổ tiên của <code>v</code>, thì ta có thể gán <code>u = up[u][i]</code> và giảm <code>i</code>.
+Nếu <code>up[u][i]</code> là tổ tiên của <code>v</code>, thì chúng ta chỉ cần giảm <code>i</code>.
+Rõ ràng, sau khi thực hiện việc này cho tất cả các <code>i</code> không âm, nút <code>u</code> sẽ là nút cần tìm - nghĩa là <code>u</code> vẫn không phải là tổ tiên của <code>v</code>, nhưng <code>up[u][0]</code> thì có.</p>
+<p>Bây giờ, câu trả lời cho LCA chắc chắn sẽ là <code>up[u][0]</code> - tức là nút nhỏ nhất trong số các tổ tiên của nút <code>u</code> mà cũng là tổ tiên của <code>v</code>.</p>
+<p>Vì vậy, việc trả lời một truy vấn LCA sẽ duyệt <code>i</code> từ <code>ceil(log(N))</code> về <code>0</code> và kiểm tra ở mỗi bước lặp xem nút này có phải là tổ tiên của nút kia hay không.
+Do đó, mỗi truy vấn có thể được trả lời trong <span class="arithmatex">$O(\log N)$</span>.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="p">;</span>
 
@@ -8109,7 +8089,7 @@ Consequently each query can be answered in <span class="arithmatex">$O(\log N)$<
 <span class="w">    </span><span class="n">dfs</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">root</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap-thuc-hanh">Bài tập thực hành<a class="headerlink" href="#bai-tap-thuc-hanh" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://leetcode.com/problems/kth-ancestor-of-a-tree-node">LeetCode -  Kth Ancestor of a Tree Node</a></li>
 <li><a href="https://www.codechef.com/problems/LGSEG">Codechef - Longest Good Segment</a></li>
@@ -8118,7 +8098,7 @@ Consequently each query can be answered in <span class="arithmatex">$O(\log N)$<
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (85.0%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (6.0%)</li><li><a href="#" title="Hossein Yousefi" data-bi-name="contributorprofile" target="_blank">Hossein Yousefi</a> (4.0%)</li><li><a href="#" title="Santhosh Anguluri" data-bi-name="contributorprofile" target="_blank">Santhosh Anguluri</a> (3.0%)</li><li><a href="#" title="Ashish Kumar" data-bi-name="contributorprofile" target="_blank">Ashish Kumar</a> (1.0%)</li><li><a href="#" title="Noah" data-bi-name="contributorprofile" target="_blank">Noah</a> (1.0%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

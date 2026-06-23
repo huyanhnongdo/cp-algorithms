@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#maximum-flow-push-relabel-algorithm" class="md-skip">
+        <a href="#luong-cuc-ai-thuat-toan-push-relabel" class="md-skip">
           Bỏ qua
         </a>
       
@@ -6678,10 +6678,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#definitions" class="md-nav__link">
+  <a href="#inh-nghia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Definitions
+        Định nghĩa
       
     </span>
   </a>
@@ -6689,10 +6689,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -6700,10 +6700,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#complexity" class="md-nav__link">
+  <a href="#o-phuc-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Complexity
+        Độ phức tạp
       
     </span>
   </a>
@@ -6711,10 +6711,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -7971,13 +7971,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/push-relabel.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/push-relabel.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/push-relabel.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/push-relabel.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7988,22 +7988,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8039,67 +8023,66 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="maximum-flow-push-relabel-algorithm">Maximum flow - Push-relabel algorithm<a class="headerlink" href="#maximum-flow-push-relabel-algorithm" title="Permanent link">&para;</a></h1>
-<p>The push-relabel algorithm (or also known as preflow-push algorithm) is an algorithm for computing the maximum flow of a flow network.
-The exact definition of the problem that we want to solve can be found in the article <a href="edmonds_karp.html">Maximum flow - Ford-Fulkerson and Edmonds-Karp</a>.</p>
-<p>In this article we will consider solving the problem by pushing a preflow through the network, which will run in <span class="arithmatex">$O(V^4)$</span>, or more precisely in <span class="arithmatex">$O(V^2 E)$</span>, time.
-The algorithm was designed by Andrew Goldberg and Robert Tarjan in 1985.</p>
-<h2 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">&para;</a></h2>
-<p>During the algorithm we will have to handle a <strong>preflow</strong> - i.e. a function <span class="arithmatex">$f$</span> that is similar to the flow function, but does not necessarily satisfies the flow conservation constraint.
-For it only the constraints</p>
+<h1 id="luong-cuc-ai-thuat-toan-push-relabel">Luồng cực đại - Thuật toán Push-relabel<a class="headerlink" href="#luong-cuc-ai-thuat-toan-push-relabel" title="Permanent link">&para;</a></h1>
+<p>Thuật toán push-relabel (còn được gọi là thuật toán đẩy-nhãn - preflow-push) là một thuật toán dùng để tính toán luồng cực đại trên một mạng luồng.
+Định nghĩa chính xác của bài toán cần giải có thể được tìm thấy trong bài viết <a href="edmonds_karp.html">Luồng cực đại - Ford-Fulkerson và Edmonds-Karp</a>.</p>
+<p>Trong bài viết này chúng ta sẽ xem xét giải quyết bài toán bằng cách đẩy luồng tiền phong (preflow) qua mạng, thuật toán này sẽ chạy trong thời gian <span class="arithmatex">$O(V^4)$</span>, hay chính xác hơn là <span class="arithmatex">$O(V^2 E)$</span>.
+Thuật toán được thiết kế bởi Andrew Goldberg và Robert Tarjan vào năm 1985.</p>
+<h2 id="inh-nghia">Định nghĩa<a class="headerlink" href="#inh-nghia" title="Permanent link">&para;</a></h2>
+<p>Trong suốt quá trình thực hiện thuật toán, chúng ta phải xử lý một <strong>luồng tiền phong</strong> (preflow) - tức là một hàm <span class="arithmatex">$f$</span> tương tự như hàm luồng, nhưng không nhất thiết phải thỏa mãn ràng buộc bảo toàn luồng.
+Với luồng tiền phong, chỉ cần các ràng buộc sau được thỏa mãn:</p>
 <div class="arithmatex">$$0 \le f(e) \le c(e)$$</div>
-<p>and</p>
+<p>và</p>
 <div class="arithmatex">$$\sum_{(v, u) \in E} f((v, u)) \ge \sum_{(u, v) \in E} f((u, v))$$</div>
-<p>have to hold.</p>
-<p>So it is possible for some vertex to receive more flow than it distributes.
-We say that this vertex has some excess flow, and define the amount of it with the <strong>excess</strong> function <span class="arithmatex">$x(u) =\sum_{(v, u) \in E} f((v, u)) - \sum_{(u, v) \in E} f((u, v))$</span>.</p>
-<p>In the same way as with the flow function, we can define the residual capacities and the residual graph with the preflow function.</p>
-<p>The algorithm will start off with an initial preflow (some vertices having excess), and during the execution the preflow will be handled and modified.
-Giving away some details already, the algorithm will pick a vertex with excess, and push the excess to neighboring vertices.
-It will repeat this until all vertices, except the source and the sink, are free from excess.
-It is easy to see, that a preflow without excess is a valid flow.
-This makes the algorithm terminate with an actual flow.</p>
-<p>There are still two problem, we have to deal with.
-First, how do we guarantee that this actually terminates?
-And secondly, how do we guarantee that this will actually give us a maximum flow, and not just any random flow?</p>
-<p>To solve these problems we need the help of another function, namely the <strong>labeling</strong> functions <span class="arithmatex">$h$</span>, often also called <strong>height</strong> function, which assigns each vertex an integer.
-We call a labeling is valid, if <span class="arithmatex">$h(s) = |V|$</span>, <span class="arithmatex">$h(t) = 0$</span>, and <span class="arithmatex">$h(u) \le h(v) + 1$</span> if there is an edge <span class="arithmatex">$(u, v)$</span> in the residual graph - i.e. the edge <span class="arithmatex">$(u, v)$</span> has a positive capacity in the residual graph.
-In other words, if it is possible to increase the flow from <span class="arithmatex">$u$</span> to <span class="arithmatex">$v$</span>, then the height of <span class="arithmatex">$v$</span> can be at most one smaller than the height of <span class="arithmatex">$u$</span>, but it can be equal or even higher.</p>
-<p>It is important to note, that if there exists a valid labeling function, then there doesn't exist an augmenting path from <span class="arithmatex">$s$</span> to <span class="arithmatex">$t$</span> in the residual graph.
-Because such a path will have a length of at most <span class="arithmatex">$|V| - 1$</span> edges, and each edge can decrease the height only by at most by one, which is impossible if the first height is <span class="arithmatex">$h(s) = |V|$</span> and the last height is <span class="arithmatex">$h(t) = 0$</span>.</p>
-<p>Using this labeling function we can state the strategy of the push-relabel algorithm:
-We start with a valid preflow and a valid labeling function.
-In each step we push some excess between vertices, and update the labels of vertices.
-We have to make sure, that after each step the preflow and the labeling are still valid.
-If then the algorithm determines, the preflow is a valid flow.
-And because we also have a valid labeling, there doesn't exists a path between <span class="arithmatex">$s$</span> and <span class="arithmatex">$t$</span> in the residual graph, which means that the flow is actually a maximum flow.</p>
-<p>If we compare the Ford-Fulkerson algorithm with the push-relabel algorithm it seems like the algorithms are the duals of each other.
-The Ford-Fulkerson algorithm keeps a valid flow at all time and improves it until there doesn't exists an augmenting path any more, while in the push-relabel algorithm there doesn't exists an augmenting path at any time, and we will improve the preflow until it is a valid flow.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>First we have to initialize the graph with a valid preflow and labeling function.</p>
-<p>Using the empty preflow - like it is done in the Ford-Fulkerson algorithm - is not possible, because then there will be an augmenting path and this implies that there doesn't exists a valid labeling.
-Therefore we will initialize each edges outgoing from <span class="arithmatex">$s$</span> with its maximal capacity: <span class="arithmatex">$f((s, u)) = c((s, u))$</span>.
-And all other edges with zero.
-In this case there exists a valid labeling, namely <span class="arithmatex">$h(s) = |V|$</span> for the source vertex and <span class="arithmatex">$h(u) = 0$</span> for all other.</p>
-<p>Now let's describe the two operations in more detail.</p>
-<p>With the <code>push</code> operation we try to push as much excess flow from one vertex <span class="arithmatex">$u$</span> to a neighboring vertex <span class="arithmatex">$v$</span>.
-We have one rule: we are only allowed to push flow from <span class="arithmatex">$u$</span> to <span class="arithmatex">$v$</span> if <span class="arithmatex">$h(u) = h(v) + 1$</span>.
-In layman's terms, the excess flow has to flow downwards, but not too steeply.
-Of course we only can push <span class="arithmatex">$\min(x(u), c((u, v)) - f((u, v)))$</span> flow.</p>
-<p>If a vertex has excess, but it is not possible to push the excess to any adjacent vertex, then we need to increase the height of this vertex.
-We call this operation <code>relabel</code>.
-We will increase it by as much as it is possible, while still maintaining validity of the labeling.</p>
-<p>To recap, the algorithm in a nutshell is:
-We initialize a valid preflow and a valid labeling.
-While we can perform push or relabel operations, we perform them.
-Afterwards the preflow is actually a flow and we return it.</p>
-<h2 id="complexity">Complexity<a class="headerlink" href="#complexity" title="Permanent link">&para;</a></h2>
-<p>It is easy to show, that the maximal label of a vertex is <span class="arithmatex">$2|V| - 1$</span>.
-At this point all remaining excess can and will be pushed back to the source.
-This gives at most <span class="arithmatex">$O(V^2)$</span> relabel operations.</p>
-<p>It can also be showed, that there will be at most <span class="arithmatex">$O(V E)$</span> saturating pushes (a push where the total capacity of the edge is used) and at most <span class="arithmatex">$O(V^2 E)$</span> non-saturating pushes (a push where the capacity of an edge is not fully used) performed.
-If we pick a data structure that allows us to find the next vertex with excess in <span class="arithmatex">$O(1)$</span> time, then the total complexity of the algorithm is <span class="arithmatex">$O(V^2 E)$</span>.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<p>Do đó, một đỉnh hoàn toàn có thể nhận được nhiều luồng hơn lượng luồng mà nó phân phối.
+Chúng ta nói rằng đỉnh này có một lượng luồng dư, và định nghĩa lượng dư này bằng hàm <strong>dư</strong> (excess): <span class="arithmatex">$x(u) =\sum_{(v, u) \in E} f((v, u)) - \sum_{(u, v) \in E} f((u, v))$</span>.</p>
+<p>Tương tự như với hàm luồng, chúng ta có thể định nghĩa sức chứa thặng dư và đồ thị thặng dư đối với hàm luồng tiền phong.</p>
+<p>Thuật toán sẽ bắt đầu với một luồng tiền phong ban đầu (một số đỉnh có phần dư), và trong quá trình thực hiện, luồng tiền phong này sẽ được xử lý và sửa đổi.
+Nói qua một chút về chi tiết, thuật toán sẽ chọn một đỉnh có lượng dư và đẩy lượng dư đó sang các đỉnh lân cận.
+Nó sẽ lặp lại việc này cho đến khi tất cả các đỉnh, ngoại trừ nguồn và đích, không còn lượng dư.
+Dễ thấy rằng, một luồng tiền phong không có đỉnh nào dư chính là một luồng hợp lệ.
+Điều này giúp thuật toán kết thúc với một luồng thực sự.</p>
+<p>Tuy nhiên vẫn còn hai vấn đề chúng ta cần giải quyết:
+Thứ nhất, làm thế nào để đảm bảo thuật toán chắc chắn kết thúc?
+Và thứ hai, làm thế nào để đảm bảo luồng thu được thực sự là luồng cực đại, chứ không phải là một luồng ngẫu nhiên bất kỳ?</p>
+<p>Để giải quyết những vấn đề này, chúng ta cần sự trợ giúp của một hàm khác, đó là hàm <strong>nhãn</strong> (labeling) <span class="arithmatex">$h$</span>, thường được gọi là hàm <strong>chiều cao</strong> (height), gán cho mỗi đỉnh một số nguyên.
+Chúng ta gọi một nhãn là hợp lệ nếu <span class="arithmatex">$h(s) = |V|$</span>, <span class="arithmatex">$h(t) = 0$</span>, và <span class="arithmatex">$h(u) \le h(v) + 1$</span> nếu có cạnh <span class="arithmatex">$(u, v)$</span> trong đồ thị thặng dư - tức là cạnh <span class="arithmatex">$(u, v)$</span> có sức chứa thặng dư dương.
+Nói cách khác, nếu có thể tăng luồng từ <span class="arithmatex">$u$</span> sang <span class="arithmatex">$v$</span>, thì chiều cao của <span class="arithmatex">$v$</span> chỉ có thể nhỏ hơn chiều cao của <span class="arithmatex">$u$</span> tối đa là 1, hoặc có thể bằng hoặc thậm chí cao hơn.</p>
+<p>Một điểm quan trọng cần lưu ý là nếu tồn tại một hàm nhãn hợp lệ, thì sẽ không tồn tại đường tăng luồng từ <span class="arithmatex">$s$</span> đến <span class="arithmatex">$t$</span> trong đồ thị thặng dư.
+Bởi vì một đường đi như vậy sẽ có độ dài tối đa là <span class="arithmatex">$|V| - 1$</span> cạnh, và mỗi cạnh chỉ có thể làm giảm chiều cao đi tối đa là 1, điều này là bất khả thi nếu chiều cao đầu tiên là <span class="arithmatex">$h(s) = |V|$</span> và chiều cao cuối cùng là <span class="arithmatex">$h(t) = 0$</span>.</p>
+<p>Sử dụng hàm nhãn này, chúng ta có thể phát biểu chiến lược của thuật toán push-relabel như sau:
+Chúng ta bắt đầu với một luồng tiền phong hợp lệ và một hàm nhãn hợp lệ.
+Tại mỗi bước, chúng ta đẩy một lượng dư giữa các đỉnh và cập nhật nhãn của các đỉnh.
+Chúng ta phải đảm bảo rằng sau mỗi bước, luồng tiền phong và nhãn vẫn hợp lệ.
+Khi thuật toán kết thúc, luồng tiền phong sẽ trở thành một luồng hợp lệ.
+Và vì chúng ta luôn duy trì một nhãn hợp lệ, nên không tồn tại đường đi giữa <span class="arithmatex">$s$</span> và <span class="arithmatex">$t$</span> trong đồ thị thặng dư, điều này có nghĩa là luồng thu được chính là luồng cực đại.</p>
+<p>Nếu so sánh thuật toán Ford-Fulkerson với thuật toán push-relabel, có vẻ như hai thuật toán này là đối ngẫu của nhau.
+Thuật toán Ford-Fulkerson luôn duy trì một luồng hợp lệ tại mọi thời điểm và cải thiện nó cho đến khi không còn đường tăng luồng nào, trong khi thuật toán push-relabel luôn đảm bảo không có đường tăng luồng tại mọi thời điểm, và chúng ta cải thiện luồng tiền phong cho đến khi nó trở thành một luồng hợp lệ.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Trước tiên chúng ta phải khởi tạo đồ thị với một luồng tiền phong và hàm nhãn hợp lệ.</p>
+<p>Sử dụng luồng rỗng - như cách làm trong thuật toán Ford-Fulkerson - là không thể, vì khi đó sẽ tồn tại một đường tăng luồng và điều này ngụ ý rằng không tồn tại nhãn hợp lệ.
+Do đó, chúng ta sẽ khởi tạo mỗi cạnh đi ra từ <span class="arithmatex">$s$</span> bằng sức chứa tối đa của nó: <span class="arithmatex">$f((s, u)) = c((s, u))$</span>.
+Và tất cả các cạnh khác bằng 0.
+Trong trường hợp này, tồn tại một nhãn hợp lệ, cụ thể là <span class="arithmatex">$h(s) = |V|$</span> cho đỉnh nguồn và <span class="arithmatex">$h(u) = 0$</span> cho tất cả các đỉnh khác.</p>
+<p>Bây giờ hãy mô tả hai thao tác chi tiết hơn.</p>
+<p>Với thao tác đẩy luồng (<code>push</code>), chúng ta cố gắng đẩy nhiều nhất có thể lượng luồng dư từ một đỉnh <span class="arithmatex">$u$</span> sang đỉnh lân cận <span class="arithmatex">$v$</span>.
+Chúng ta có một quy tắc: chỉ được phép đẩy luồng từ <span class="arithmatex">$u$</span> sang <span class="arithmatex">$v$</span> nếu <span class="arithmatex">$h(u) = h(v) + 1$</span>.
+Nói một cách nôm na, luồng dư phải chảy xuống phía dưới, nhưng không được quá dốc.
+Tất nhiên, chúng ta chỉ có thể đẩy tối đa một lượng luồng là <span class="arithmatex">$\min(x(u), c((u, v)) - f((u, v)))$</span>.</p>
+<p>Nếu một đỉnh có lượng dư nhưng không thể đẩy lượng dư này sang bất kỳ đỉnh kề nào, thì chúng ta cần phải tăng chiều cao của đỉnh này.
+Chúng ta gọi thao tác này là áp nhãn (<code>relabel</code>).
+Chúng ta sẽ tăng chiều cao của nó nhiều nhất có thể, miễn là vẫn duy trì tính hợp lệ của nhãn.</p>
+<p>Tóm lại, thuật toán có thể được tóm tắt như sau:
+Chúng ta khởi tạo luồng tiền phong và hàm nhãn hợp lệ.
+Chừng nào còn có thể thực hiện thao tác đẩy luồng (<code>push</code>) hoặc áp nhãn (<code>relabel</code>), chúng ta thực hiện chúng.
+Sau đó, luồng tiền phong thực sự trở thành một luồng hợp lệ và chúng ta trả về nó.</p>
+<h2 id="o-phuc-tap">Độ phức tạp<a class="headerlink" href="#o-phuc-tap" title="Permanent link">&para;</a></h2>
+<p>Dễ dàng chứng minh được rằng nhãn lớn nhất của một đỉnh là <span class="arithmatex">$2|V| - 1$</span>.
+Tại thời điểm này, tất cả lượng dư còn lại có thể và sẽ được đẩy ngược trở lại nguồn.
+Điều này dẫn đến tối đa <span class="arithmatex">$O(V^2)$</span> thao tác áp nhãn.</p>
+<p>Người ta cũng chứng minh được rằng sẽ có tối đa <span class="arithmatex">$O(V E)$</span> lần đẩy bão hòa (lần đẩy sử dụng hết sức chứa thặng dư của cạnh) và tối đa <span class="arithmatex">$O(V^2 E)$</span> lần đẩy không bão hòa (lần đẩy không sử dụng hết sức chứa thặng dư của cạnh).
+Nếu chọn một cấu trúc dữ liệu cho phép tìm đỉnh tiếp theo có lượng dư trong <span class="arithmatex">$O(1)$</span>, tổng độ phức tạp của thuật toán sẽ là <span class="arithmatex">$O(V^2 E)$</span>.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">inf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000000000</span><span class="p">;</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
@@ -8167,16 +8150,16 @@ If we pick a data structure that allows us to find the next vertex with excess i
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">max_flow</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Here we use the queue <code>excess_vertices</code> to store all vertices that currently have excess.
-In that way we can pick the next vertex for a push or a relabel operation in constant time.</p>
-<p>And to make sure that we don't spend too much time finding the adjacent vertex to whom we can push, we use a data structure called <strong>current-arc</strong>.
-Basically we will iterate over the edges in a circular order and always store the last edge that we used.
-This way, for a certain labeling value, we will switch the current edge only <span class="arithmatex">$O(n)$</span> time.
-And since the relabeling already takes <span class="arithmatex">$O(n)$</span> time, we don't make the complexity worse.</p>
+<p>Ở đây chúng ta sử dụng hàng đợi <code>excess_vertices</code> để lưu trữ tất cả các đỉnh hiện đang có lượng dư.
+Bằng cách đó, chúng ta có thể chọn đỉnh tiếp theo để thực hiện thao tác đẩy luồng hoặc áp nhãn trong thời gian hằng số.</p>
+<p>Và để đảm bảo không mất quá nhiều thời gian tìm đỉnh kề có thể đẩy luồng sang, chúng ta sử dụng cấu trúc dữ liệu gọi là <strong>cung hiện tại</strong> (current-arc).
+Về cơ bản, chúng ta sẽ duyệt qua các cạnh theo vòng tròn và luôn lưu lại cạnh cuối cùng được sử dụng.
+Bằng cách này, ứng với một giá trị nhãn cụ thể, chúng ta chỉ thay đổi cạnh hiện tại <span class="arithmatex">$O(n)$</span> lần.
+Và vì thao tác áp nhãn đã mất <span class="arithmatex">$O(n)$</span> thời gian, điều này không làm độ phức tạp thuật toán tệ hơn.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (88.3%)</li><li><a href="#" title="arjan-bal" data-bi-name="contributorprofile" target="_blank">arjan-bal</a> (4.68%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (3.51%)</li><li><a href="#" title="Mark Moretto" data-bi-name="contributorprofile" target="_blank">Mark Moretto</a> (2.34%)</li><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (1.17%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

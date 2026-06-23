@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lowest-common-ancestor-tarjans-off-line-algorithm" class="md-skip">
+        <a href="#to-tien-chung-gan-nhat-thuat-toan-ngoai-tuyen-cua-tarjan" class="md-skip">
           Bỏ qua
         </a>
       
@@ -6567,10 +6567,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -6578,10 +6578,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -7949,13 +7949,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/lca_tarjan.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/lca_tarjan.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/lca_tarjan.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/lca_tarjan.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7966,14 +7966,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8009,44 +8001,44 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="lowest-common-ancestor-tarjans-off-line-algorithm">Lowest Common Ancestor - Tarjan's off-line algorithm<a class="headerlink" href="#lowest-common-ancestor-tarjans-off-line-algorithm" title="Permanent link">&para;</a></h1>
-<p>We have a tree <span class="arithmatex">$G$</span> with <span class="arithmatex">$n$</span> nodes and we have <span class="arithmatex">$m$</span> queries of the form <span class="arithmatex">$(u, v)$</span>.
-For each query <span class="arithmatex">$(u, v)$</span> we want to find the lowest common ancestor of the vertices <span class="arithmatex">$u$</span> and <span class="arithmatex">$v$</span>, i.e. the node that is an ancestor of both <span class="arithmatex">$u$</span> and <span class="arithmatex">$v$</span> and has the greatest depth in the tree.
-The node <span class="arithmatex">$v$</span> is also an ancestor of <span class="arithmatex">$v$</span>, so the LCA can also be one of the two nodes.</p>
-<p>In this article we will solve the problem off-line, i.e. we assume that all queries are known in advance, and we therefore answer the queries in any order we like.
-The following algorithm allows to answer all <span class="arithmatex">$m$</span> queries in <span class="arithmatex">$O(n + m)$</span> total time, i.e. for sufficiently large <span class="arithmatex">$m$</span> in <span class="arithmatex">$O(1)$</span> for each query.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>The algorithm is named after Robert Tarjan, who discovered it in 1979 and also made many other contributions to the <a href="../data_structures/disjoint_set_union.html">Disjoint Set Union</a> data structure, which will be heavily used in this algorithm.</p>
-<p>The algorithm answers all queries with one <a href="depth-first-search.html">DFS</a> traversal of the tree.
-Namely a query <span class="arithmatex">$(u, v)$</span> is answered at node <span class="arithmatex">$u$</span>, if node <span class="arithmatex">$v$</span> has already been visited previously, or vice versa.</p>
-<p>So let's assume we are currently at node <span class="arithmatex">$v$</span>, we have already made recursive DFS calls, and also already visited the second node <span class="arithmatex">$u$</span> from the query <span class="arithmatex">$(u, v)$</span>.
-Let's learn how to find the LCA of these two nodes.</p>
-<p>Note that <span class="arithmatex">$\text{LCA}(u, v)$</span> is either the node <span class="arithmatex">$v$</span> or one of its ancestors.
-So we need to find the lowest node among the ancestors of <span class="arithmatex">$v$</span> (including <span class="arithmatex">$v$</span>), for which the node <span class="arithmatex">$u$</span> is a descendant. 
-Also note that for a fixed <span class="arithmatex">$v$</span> the visited nodes of the tree split into a set of disjoint sets. 
-Each ancestor <span class="arithmatex">$p$</span> of node <span class="arithmatex">$v$</span> has his own set containing this node and all subtrees with roots in those of its children who are not part of the path from <span class="arithmatex">$v$</span> to the root of the tree.
-The set which contains the node <span class="arithmatex">$u$</span> determines the <span class="arithmatex">$\text{LCA}(u, v)$</span>:
-the LCA is the representative of the set, namely the node on lies on the path between <span class="arithmatex">$v$</span> and the root of the tree.</p>
-<p>We only need to learn to efficiently maintain all these sets.
-For this purpose we apply the data structure DSU.
-To be able to apply Union by rank, we store the real representative (the value on the path between <span class="arithmatex">$v$</span> and the root of the tree) of each set in the array <code>ancestor</code>.</p>
-<p>Let's discuss the implementation of the DFS.
-Let's assume we are currently visiting the node <span class="arithmatex">$v$</span>.
-We place the node in a new set in the DSU, <code>ancestor[v] = v</code>.
-As usual we process all children of <span class="arithmatex">$v$</span>.
-For this we must first recursively call DFS from that node, and then add this node with all its subtree to the set of <span class="arithmatex">$v$</span>.
-This can be done with the function <code>union_sets</code> and the following assignment <code>ancestor[find_set(v)] = v</code> (this is necessary, because <code>union_sets</code> might change the representative of the set).</p>
-<p>Finally after processing all children we can answer all queries of the form <span class="arithmatex">$(u, v)$</span> for which <span class="arithmatex">$u$</span> has been already visited.
-The answer to the query, i.e. the LCA of <span class="arithmatex">$u$</span> and <span class="arithmatex">$v$</span>, will be the node <code>ancestor[find_set(u)]</code>.
-It is easy to see that a query will only be answered once.</p>
-<p>Let's us determine the time complexity of this algorithm. 
-Firstly we have <span class="arithmatex">$O(n)$</span> because of the DFS.
-Secondly  we have the function calls of <code>union_sets</code> which happen <span class="arithmatex">$n$</span> times, resulting also in <span class="arithmatex">$O(n)$</span>.
-And thirdly we have the calls of <code>find_set</code> for every query, which gives <span class="arithmatex">$O(m)$</span>.
-So in total the time complexity is <span class="arithmatex">$O(n + m)$</span>, which means that for sufficiently large <span class="arithmatex">$m$</span> this corresponds to <span class="arithmatex">$O(1)$</span> for answering one query.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>Here is an implementation of this algorithm.
-The implementation of DSU has been not included, as it can be used without any modifications.</p>
+<h1 id="to-tien-chung-gan-nhat-thuat-toan-ngoai-tuyen-cua-tarjan">Tổ tiên chung gần nhất - Thuật toán ngoại tuyến của Tarjan<a class="headerlink" href="#to-tien-chung-gan-nhat-thuat-toan-ngoai-tuyen-cua-tarjan" title="Permanent link">&para;</a></h1>
+<p>Chúng ta có một cây <span class="arithmatex">$G$</span> với <span class="arithmatex">$n$</span> nút và <span class="arithmatex">$m$</span> truy vấn có dạng <span class="arithmatex">$(u, v)$</span>.
+Với mỗi truy vấn <span class="arithmatex">$(u, v)$</span>, chúng ta muốn tìm tổ tiên chung gần nhất (Lowest Common Ancestor - LCA) của hai đỉnh <span class="arithmatex">$u$</span> và <span class="arithmatex">$v$</span>, tức là nút vừa là tổ tiên của cả <span class="arithmatex">$u$</span> và <span class="arithmatex">$v$</span> vừa có độ sâu lớn nhất trong cây.
+Bản thân nút <span class="arithmatex">$v$</span> cũng được coi là tổ tiên của <span class="arithmatex">$v$</span>, do đó LCA cũng có thể chính là một trong hai nút này.</p>
+<p>Trong bài viết này, chúng ta sẽ giải quyết bài toán dưới dạng ngoại tuyến (off-line), tức là chúng ta giả định rằng tất cả các truy vấn đều đã được biết trước, và do đó chúng ta có thể trả lời chúng theo bất kỳ thứ tự nào mong muốn.
+Thuật toán dưới đây cho phép trả lời toàn bộ <span class="arithmatex">$m$</span> truy vấn trong tổng thời gian <span class="arithmatex">$O(n + m)$</span>, nghĩa là với <span class="arithmatex">$m$</span> đủ lớn, thời gian cho mỗi truy vấn sẽ là <span class="arithmatex">$O(1)$</span>.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Thuật toán này được đặt tên theo Robert Tarjan, người đã phát hiện ra nó vào năm 1979 và cũng đóng góp rất nhiều vào cấu trúc dữ liệu <a href="../data_structures/disjoint_set_union.html">Hợp nhất tập rời rạc (DSU)</a> - cấu trúc dữ liệu được sử dụng chính trong thuật toán này.</p>
+<p>Thuật toán trả lời tất cả các truy vấn thông qua đúng một lần duyệt <a href="depth-first-search.html">DFS</a> trên cây.
+Cụ thể, truy vấn <span class="arithmatex">$(u, v)$</span> được trả lời tại nút <span class="arithmatex">$u$</span> nếu nút <span class="arithmatex">$v$</span> đã được ghé thăm trước đó, hoặc ngược lại.</p>
+<p>Vì vậy, giả sử chúng ta hiện đang ở nút <span class="arithmatex">$v$</span>, chúng ta đã thực hiện các lệnh gọi đệ quy DFS, và cũng đã ghé thăm nút thứ hai <span class="arithmatex">$u$</span> từ truy vấn <span class="arithmatex">$(u, v)$</span>.
+Chúng ta hãy xem cách tìm LCA của hai nút này.</p>
+<p>Lưu ý rằng <span class="arithmatex">$\text{LCA}(u, v)$</span> có thể là nút <span class="arithmatex">$v$</span> hoặc một trong các tổ tiên của nó.
+Do đó, chúng ta cần tìm nút thấp nhất trong số các tổ tiên của <span class="arithmatex">$v$</span> (tính cả <span class="arithmatex">$v$</span>) sao cho nút <span class="arithmatex">$u$</span> là hậu duệ của nó.
+Đồng thời, với một nút <span class="arithmatex">$v$</span> cố định, các nút đã ghé thăm của cây sẽ chia thành một họ các tập hợp rời rạc.
+Mỗi tổ tiên <span class="arithmatex">$p$</span> của nút <span class="arithmatex">$v$</span> có một tập hợp riêng chứa chính nó và toàn bộ các cây con có gốc tại các nút con của nó không nằm trên đường đi từ <span class="arithmatex">$v$</span> đến gốc cây.
+Tập hợp chứa nút <span class="arithmatex">$u$</span> sẽ xác định <span class="arithmatex">$\text{LCA}(u, v)$</span>:
+LCA chính là đại diện của tập hợp đó, cụ thể là nút nằm trên đường đi giữa <span class="arithmatex">$v$</span> và gốc cây.</p>
+<p>Chúng ta chỉ cần học cách duy trì hiệu quả tất cả các tập hợp này.
+Để làm được điều này, chúng ta áp dụng cấu trúc dữ liệu DSU.
+Để có thể áp dụng kỹ thuật Hợp nhất theo hạng (Union by rank), chúng ta lưu trữ đại diện thực tế (nút nằm trên đường đi từ <span class="arithmatex">$v$</span> đến gốc cây) của mỗi tập hợp trong mảng <code>ancestor</code>.</p>
+<p>Hãy thảo luận về việc cài đặt hàm DFS.
+Giả sử chúng ta đang ghé thăm nút <span class="arithmatex">$v$</span>.
+Chúng ta đưa nút này vào một tập hợp mới trong DSU, <code>ancestor[v] = v</code>.
+Như thường lệ, chúng ta duyệt qua tất cả các nút con của <span class="arithmatex">$v$</span>.
+Với mỗi nút con, trước tiên chúng ta phải gọi đệ quy DFS cho nó, rồi sau đó thêm nút này cùng toàn bộ cây con của nó vào tập hợp của <span class="arithmatex">$v$</span>.
+Điều này có thể được thực hiện bằng hàm <code>union_sets</code> và gán tiếp theo <code>ancestor[find_set(v)] = v</code> (điều này là cần thiết vì <code>union_sets</code> có thể thay đổi phần tử đại diện của tập hợp).</p>
+<p>Cuối cùng, sau khi đã xử lý tất cả các nút con, chúng ta có thể trả lời mọi truy vấn dạng <span class="arithmatex">$(u, v)$</span> mà <span class="arithmatex">$u$</span> đã được ghé thăm.
+Kết quả của truy vấn, tức là LCA của <span class="arithmatex">$u$</span> và <span class="arithmatex">$v$</span>, sẽ là nút <code>ancestor[find_set(u)]</code>.
+Dễ thấy rằng mỗi truy vấn sẽ chỉ được trả lời đúng một lần.</p>
+<p>Hãy xác định độ phức tạp thời gian của thuật toán này.
+Đầu tiên, chúng ta mất <span class="arithmatex">$O(n)$</span> do lượt duyệt DFS.
+Thứ hai, chúng ta gọi hàm <code>union_sets</code> tổng cộng <span class="arithmatex">$n$</span> lần, tương ứng với <span class="arithmatex">$O(n)$</span>.
+Thứ ba, chúng ta gọi <code>find_set</code> cho mỗi truy vấn, tương ứng với <span class="arithmatex">$O(m)$</span>.
+Do đó, tổng độ phức tạp thời gian là <span class="arithmatex">$O(n + m)$</span>, có nghĩa là với <span class="arithmatex">$m$</span> đủ lớn, độ phức tạp trung bình cho mỗi truy vấn là <span class="arithmatex">$O(1)$</span>.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Dưới đây là cài đặt của thuật toán này.
+Phần cài đặt DSU không được bao gồm ở đây, vì nó có thể được sử dụng trực tiếp mà không cần sửa đổi nào.</p>
 <div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">queries</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ancestor</span><span class="p">;</span>
@@ -8085,7 +8077,7 @@ The implementation of DSU has been not included, as it can be used without any m
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (92.55%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (6.38%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (1.06%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

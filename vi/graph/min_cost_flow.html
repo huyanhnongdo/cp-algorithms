@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#minimum-cost-flow-successive-shortest-path-algorithm" class="md-skip">
+        <a href="#luong-chi-phi-toi-thieu-thuat-toan-uong-i-ngan-nhat-tang-dan" class="md-skip">
           Bỏ qua
         </a>
       
@@ -6818,22 +6818,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Algorithm">
+    <nav class="md-nav" aria-label="Thuật toán">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#simplest-case" class="md-nav__link">
+  <a href="#truong-hop-on-gian-nhat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simplest case
+        Trường hợp đơn giản nhất
       
     </span>
   </a>
@@ -6841,10 +6841,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#undirected-graphs-multigraphs" class="md-nav__link">
+  <a href="#o-thi-vo-huong-a-o-thi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Undirected graphs / multigraphs
+        Đồ thị vô hướng / Đa đồ thị
       
     </span>
   </a>
@@ -6852,10 +6852,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#complexity" class="md-nav__link">
+  <a href="#o-phuc-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Complexity
+        Độ phức tạp
       
     </span>
   </a>
@@ -6868,10 +6868,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -6879,10 +6879,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-thuc-hanh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập thực hành
       
     </span>
   </a>
@@ -7999,13 +7999,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/min_cost_flow.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/min_cost_flow.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/min_cost_flow.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/min_cost_flow.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8016,30 +8016,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8075,57 +8051,57 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="minimum-cost-flow-successive-shortest-path-algorithm">Minimum-cost flow - Successive shortest path algorithm<a class="headerlink" href="#minimum-cost-flow-successive-shortest-path-algorithm" title="Permanent link">&para;</a></h1>
-<p>Given a network <span class="arithmatex">$G$</span> consisting of <span class="arithmatex">$n$</span> vertices and <span class="arithmatex">$m$</span> edges.
-For each edge (generally speaking, oriented edges, but see below), the capacity (a non-negative integer) and the cost per unit of flow along this edge (some integer) are given.
-Also the source <span class="arithmatex">$s$</span> and the sink <span class="arithmatex">$t$</span> are marked.</p>
-<p>For a given value <span class="arithmatex">$K$</span>, we have to find a flow of this quantity, and among all flows of this quantity we have to choose the flow with the lowest cost.
-This task is called <strong>minimum-cost flow problem</strong>.</p>
-<p>Sometimes the task is given a little differently:
-you want to find the maximum flow, and among all maximal flows we want to find the one with the least cost.
-This is called the <strong>minimum-cost maximum-flow problem</strong>.</p>
-<p>Both these problems can be solved effectively with the algorithm of successive shortest paths.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>This algorithm is very similar to the <a href="edmonds_karp.html">Edmonds-Karp</a> for computing the maximum flow.</p>
-<h3 id="simplest-case">Simplest case<a class="headerlink" href="#simplest-case" title="Permanent link">&para;</a></h3>
-<p>First we only consider the simplest case, where the graph is oriented, and there is at most one edge between any pair of vertices (e.g. if <span class="arithmatex">$(i, j)$</span> is an edge in the graph, then <span class="arithmatex">$(j, i)$</span> cannot be part in it as well).</p>
-<p>Let <span class="arithmatex">$U_{i j}$</span> be the capacity of an edge <span class="arithmatex">$(i, j)$</span> if this edge exists.
-And let <span class="arithmatex">$C_{i j}$</span> be the cost per unit of flow along this edge <span class="arithmatex">$(i, j)$</span>.
-And finally let <span class="arithmatex">$F_{i, j}$</span> be the flow along the edge <span class="arithmatex">$(i, j)$</span>.
-Initially all flow values are zero.</p>
-<p>We <strong>modify</strong> the network as follows:
-for each edge <span class="arithmatex">$(i, j)$</span> we add the <strong>reverse edge</strong> <span class="arithmatex">$(j, i)$</span> to the network with the capacity <span class="arithmatex">$U_{j i} = 0$</span> and the cost <span class="arithmatex">$C_{j i} = -C_{i j}$</span>.
-Since, according to our restrictions, the edge <span class="arithmatex">$(j, i)$</span> was not in the network before, we still have a network that is not a multigraph (graph with multiple edges).
-In addition we will always keep the condition <span class="arithmatex">$F_{j i} = -F_{i j}$</span> true during the steps of the algorithm.</p>
-<p>We define the <strong>residual network</strong> for some fixed flow <span class="arithmatex">$F$</span> as follow (just like in the Ford-Fulkerson algorithm):
-the residual network contains only unsaturated edges (i.e. edges in which <span class="arithmatex">$F_{i j} &lt; U_{i j}$</span>), and the residual capacity of each such edge is <span class="arithmatex">$R_{i j} = U_{i j} - F_{i j}$</span>.</p>
-<p>Now we can talk about the <strong>algorithms</strong> to compute the minimum-cost flow.
-At each iteration of the algorithm we find the shortest path in the residual graph from <span class="arithmatex">$s$</span> to <span class="arithmatex">$t$</span>.
-In contrast to Edmonds-Karp, we look for the shortest path in terms of the cost of the path instead of the number of edges.
-If there doesn't exists a path anymore, then the algorithm terminates, and the stream <span class="arithmatex">$F$</span> is the desired one.
-If a path was found, we increase the flow along it as much as possible (i.e. we find the minimal residual capacity <span class="arithmatex">$R$</span> of the path, and increase the flow by it, and reduce the back edges by the same amount).
-If at some point the flow reaches the value <span class="arithmatex">$K$</span>, then we stop the algorithm (note that in the last iteration of the algorithm it is necessary to increase the flow by only such an amount so that the final flow value doesn't surpass <span class="arithmatex">$K$</span>).</p>
-<p>It is not difficult to see, that if we set <span class="arithmatex">$K$</span> to infinity, then the algorithm will find the minimum-cost maximum-flow.
-So both variations of the problem can be solved by the same algorithm.</p>
-<h3 id="undirected-graphs-multigraphs">Undirected graphs / multigraphs<a class="headerlink" href="#undirected-graphs-multigraphs" title="Permanent link">&para;</a></h3>
-<p>The case of an undirected graph or a multigraph doesn't differ conceptually from the algorithm above.
-The algorithm will also work on these graphs.
-However it becomes a little more difficult to implement it.</p>
-<p>An <strong>undirected edge</strong> <span class="arithmatex">$(i, j)$</span> is actually the same as two oriented edges <span class="arithmatex">$(i, j)$</span> and <span class="arithmatex">$(j, i)$</span> with the same capacity and values.
-Since the above-described minimum-cost flow algorithm generates a back edge for each directed edge, so it splits the undirected edge into <span class="arithmatex">$4$</span> directed edges, and we actually get a <strong>multigraph</strong>.</p>
-<p>How do we deal with <strong>multiple edges</strong>?
-First the flow for each of the multiple edges must be kept separately.
-Secondly, when searching for the shortest path, it is necessary to take into account that it is important which of the multiple edges is used in the path.
-Thus instead of the usual ancestor array we additionally must store the edge number from which we came from along with the ancestor.
-Thirdly, as the flow increases along a certain edge, it is necessary to reduce the flow along the back edge.
-Since we have multiple edges, we have to store the edge number for the reversed edge for each edge.</p>
-<p>There are no other obstructions with undirected graphs or multigraphs.</p>
-<h3 id="complexity">Complexity<a class="headerlink" href="#complexity" title="Permanent link">&para;</a></h3>
-<p>The algorithm here is generally exponential in the size of the input. To be more specific, in the worst case it may push only as much as <span class="arithmatex">$1$</span> unit of flow on each iteration, taking <span class="arithmatex">$O(F)$</span> iterations to find a minimum-cost flow of size <span class="arithmatex">$F$</span>, making a total runtime to be <span class="arithmatex">$O(F \cdot T)$</span>, where <span class="arithmatex">$T$</span> is the time required to find the shortest path from source to sink.</p>
-<p>If <a href="bellman_ford.html">Bellman-Ford</a> algorithm is used for this, it makes the running time <span class="arithmatex">$O(F mn)$</span>. It is also possible to modify <a href="dijkstra.html">Dijkstra's algorithm</a>, so that it needs <span class="arithmatex">$O(nm)$</span> pre-processing as an initial step and then works in <span class="arithmatex">$O(m \log n)$</span> per iteration, making the overall running time to be <span class="arithmatex">$O(mn + F m \log n)$</span>. <a href="http://web.archive.org/web/20211009144446/https://min-25.hatenablog.com/entry/2018/03/19/235802">Here</a> is a generator of a graph, on which such algorithm would require <span class="arithmatex">$O(2^{n/2} n^2 \log n)$</span> time.</p>
-<p>The modified Dijkstra's algorithm uses so-called potentials from <a href="https://en.wikipedia.org/wiki/Johnson%27s_algorithm">Johnson's algorithm</a>. It is possible to combine the ideas of this algorithm and Dinic's algorithm to reduce the number of iterations from <span class="arithmatex">$F$</span> to <span class="arithmatex">$\min(F, nC)$</span>, where <span class="arithmatex">$C$</span> is the maximum cost found among edges. You may read further about potentials and their combination with Dinic algorithm <a href="https://codeforces.com/blog/entry/105658">here</a>.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>Here is an implementation using the <a href="bellman_ford.html">SPFA algorithm</a> for the simplest case.</p>
+<h1 id="luong-chi-phi-toi-thieu-thuat-toan-uong-i-ngan-nhat-tang-dan">Luồng chi phí tối thiểu - Thuật toán đường đi ngắn nhất tăng dần<a class="headerlink" href="#luong-chi-phi-toi-thieu-thuat-toan-uong-i-ngan-nhat-tang-dan" title="Permanent link">&para;</a></h1>
+<p>Cho mạng <span class="arithmatex">$G$</span> gồm <span class="arithmatex">$n$</span> đỉnh và <span class="arithmatex">$m$</span> cạnh.
+Với mỗi cạnh (nói chung là các cạnh có hướng, xem thêm bên dưới), chúng ta được biết sức chứa (một số nguyên không âm) và chi phí trên một đơn vị luồng dọc theo cạnh này (một số nguyên nào đó).
+Đỉnh nguồn <span class="arithmatex">$s$</span> và đỉnh đích <span class="arithmatex">$t$</span> cũng được xác định trước.</p>
+<p>Với một giá trị <span class="arithmatex">$K$</span> cho trước, chúng ta phải tìm một luồng có giá trị bằng lượng này, và trong tất cả các luồng có cùng lượng như vậy, chúng ta phải chọn luồng có tổng chi phí thấp nhất.
+Bài toán này được gọi là <strong>bài toán luồng chi phí tối thiểu</strong> (minimum-cost flow problem).</p>
+<p>Đôi khi bài toán được phát biểu hơi khác một chút:
+bạn muốn tìm luồng cực đại, và trong số các luồng cực đại đó, tìm luồng có chi phí nhỏ nhất.
+Bài toán này được gọi là <strong>bài toán luồng cực đại chi phí tối thiểu</strong> (minimum-cost maximum-flow problem).</p>
+<p>Cả hai bài toán này đều có thể được giải quyết hiệu quả bằng thuật toán tìm các đường đi ngắn nhất tăng dần (successive shortest paths).</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Thuật toán này rất giống với thuật toán <a href="edmonds_karp.html">Edmonds-Karp</a> dùng để tính luồng cực đại.</p>
+<h3 id="truong-hop-on-gian-nhat">Trường hợp đơn giản nhất<a class="headerlink" href="#truong-hop-on-gian-nhat" title="Permanent link">&para;</a></h3>
+<p>Trước tiên, chúng ta chỉ xem xét trường hợp đơn giản nhất, trong đó đồ thị là có hướng và có tối đa một cạnh giữa bất kỳ cặp đỉnh nào (ví dụ: nếu <span class="arithmatex">$(i, j)$</span> là một cạnh trong đồ thị, thì <span class="arithmatex">$(j, i)$</span> không thể là một cạnh thuộc đồ thị đó).</p>
+<p>Gọi <span class="arithmatex">$U_{i j}$</span> là sức chứa của cạnh <span class="arithmatex">$(i, j)$</span> nếu cạnh này tồn tại.
+Gọi <span class="arithmatex">$C_{i j}$</span> là chi phí trên một đơn vị luồng dọc theo cạnh <span class="arithmatex">$(i, j)$</span>.
+Và cuối cùng gọi <span class="arithmatex">$F_{i, j}$</span> là luồng hiện tại trên cạnh <span class="arithmatex">$(i, j)$</span>.
+Ban đầu, tất cả các giá trị luồng đều bằng 0.</p>
+<p>Chúng ta <strong>sửa đổi</strong> mạng như sau:
+với mỗi cạnh <span class="arithmatex">$(i, j)$</span>, chúng ta thêm <strong>cạnh ngược</strong> <span class="arithmatex">$(j, i)$</span> vào mạng với sức chứa <span class="arithmatex">$U_{j i} = 0$</span> và chi phí <span class="arithmatex">$C_{j i} = -C_{i j}$</span>.
+Theo hạn chế của chúng ta, vì cạnh <span class="arithmatex">$(j, i)$</span> ban đầu không có trong mạng, mạng thu được vẫn không phải là một đa đồ thị (multigraph - đồ thị có nhiều cạnh giữa hai đỉnh).
+Ngoài ra, chúng ta sẽ luôn duy trì điều kiện <span class="arithmatex">$F_{j i} = -F_{i j}$</span> trong suốt các bước của thuật toán.</p>
+<p>Chúng ta định nghĩa <strong>mạng thặng dư</strong> đối với một luồng cố định <span class="arithmatex">$F$</span> như sau (giống như trong thuật toán Ford-Fulkerson):
+mạng thặng dư chỉ chứa các cạnh chưa bão hòa (tức là các cạnh thỏa mãn <span class="arithmatex">$F_{i j} &lt; U_{i j}$</span>), và sức chứa thặng dư của mỗi cạnh như vậy là <span class="arithmatex">$R_{i j} = U_{i j} - F_{i j}$</span>.</p>
+<p>Bây giờ chúng ta thảo luận về <strong>thuật toán</strong> tính luồng chi phí tối thiểu.
+Tại mỗi bước lặp của thuật toán, chúng ta tìm đường đi ngắn nhất trên đồ thị thặng dư từ <span class="arithmatex">$s$</span> đến <span class="arithmatex">$t$</span>.
+Khác với thuật toán Edmonds-Karp, chúng ta tìm đường đi ngắn nhất theo nghĩa tổng chi phí của đường đi, thay vì theo số lượng cạnh.
+Nếu không còn tìm thấy đường đi nào nữa, thuật toán kết thúc và luồng <span class="arithmatex">$F$</span> thu được chính là luồng cần tìm.
+Nếu tìm thấy đường đi, chúng ta tăng luồng dọc theo nó nhiều nhất có thể (tức là tìm sức chứa thặng dư nhỏ nhất <span class="arithmatex">$R$</span> của các cạnh trên đường đi, tăng luồng trên các cạnh xuôi thêm <span class="arithmatex">$R$</span>, và giảm luồng trên các cạnh ngược một lượng tương ứng <span class="arithmatex">$R$</span>).
+Nếu tại một thời điểm nào đó, tổng lượng luồng đạt đến giá trị <span class="arithmatex">$K$</span>, chúng ta dừng thuật toán (lưu ý rằng ở bước lặp cuối cùng, ta chỉ cần tăng luồng một lượng vừa đủ để tổng luồng không vượt quá <span class="arithmatex">$K$</span>).</p>
+<p>Không khó để nhận thấy rằng nếu đặt <span class="arithmatex">$K$</span> bằng vô cùng, thuật toán sẽ tìm được luồng cực đại chi phí tối thiểu.
+Do đó, cả hai biến thể của bài toán đều có thể được giải quyết bằng cùng một thuật toán.</p>
+<h3 id="o-thi-vo-huong-a-o-thi">Đồ thị vô hướng / Đa đồ thị<a class="headerlink" href="#o-thi-vo-huong-a-o-thi" title="Permanent link">&para;</a></h3>
+<p>Trường hợp đồ thị vô hướng hoặc đa đồ thị không có khác biệt về mặt ý tưởng so với thuật toán trên.
+Thuật toán vẫn hoạt động bình thường trên các đồ thị này.
+Tuy nhiên, việc cài đặt sẽ phức tạp hơn một chút.</p>
+<p>Một <strong>cạnh vô hướng</strong> <span class="arithmatex">$(i, j)$</span> thực chất tương đương với hai cạnh có hướng <span class="arithmatex">$(i, j)$</span> và <span class="arithmatex">$(j, i)$</span> có cùng sức chứa và chi phí.
+Vì thuật toán luồng chi phí tối thiểu mô tả ở trên tạo ra một cạnh ngược cho mỗi cạnh có hướng, nó sẽ chia cạnh vô hướng thành <span class="arithmatex">$4$</span> cạnh có hướng, và chúng ta thực sự thu được một <strong>đa đồ thị</strong> (multigraph).</p>
+<p>Làm thế nào để xử lý <strong>đa cạnh</strong> (multiple edges)?
+Thứ nhất, luồng của mỗi đa cạnh phải được lưu trữ riêng biệt.
+Thứ hai, khi tìm đường đi ngắn nhất, cần phải lưu ý xem đa cạnh nào đang được sử dụng trong đường đi.
+Vì vậy, thay vì chỉ lưu mảng đỉnh cha (ancestor) như thông thường, chúng ta phải lưu thêm chỉ số của cạnh đã đi qua để đến đỉnh đó cùng với đỉnh cha.
+Thứ ba, khi luồng tăng trên một cạnh nào đó, ta phải giảm luồng trên cạnh ngược tương ứng.
+Vì đồ thị có đa cạnh, chúng ta phải lưu trữ thêm chỉ số cạnh ngược cho mỗi cạnh.</p>
+<p>Không có trở ngại nào khác đối với đồ thị vô hướng hay đa đồ thị.</p>
+<h3 id="o-phuc-tap">Độ phức tạp<a class="headerlink" href="#o-phuc-tap" title="Permanent link">&para;</a></h3>
+<p>Thuật toán này nói chung có độ phức tạp thời gian mũ theo kích thước đầu vào. Cụ thể, trong trường hợp xấu nhất, nó có thể chỉ đẩy được đúng <span class="arithmatex">$1$</span> đơn vị luồng ở mỗi bước lặp, mất <span class="arithmatex">$O(F)$</span> bước lặp để tìm luồng chi phí tối thiểu có giá trị <span class="arithmatex">$F$</span>, dẫn tới tổng thời gian chạy là <span class="arithmatex">$O(F \cdot T)$</span>, với <span class="arithmatex">$T$</span> là thời gian cần thiết để tìm đường đi ngắn nhất từ nguồn đến đích.</p>
+<p>Nếu sử dụng thuật toán <a href="bellman_ford.html">Bellman-Ford</a> cho việc này, thời gian chạy sẽ là <span class="arithmatex">$O(F mn)$</span>. Chúng ta cũng có thể sửa đổi <a href="dijkstra.html">Thuật toán Dijkstra</a> để nó chỉ mất <span class="arithmatex">$O(nm)$</span> thời gian tiền xử lý ở bước ban đầu và sau đó chạy trong <span class="arithmatex">$O(m \log n)$</span> cho mỗi bước lặp, giúp tổng thời gian chạy là <span class="arithmatex">$O(mn + F m \log n)$</span>. <a href="http://web.archive.org/web/20211009144446/https://min-25.hatenablog.com/entry/2018/03/19/235802">Tại đây</a> là một bộ sinh đồ thị mà trên đó thuật toán như vậy sẽ mất thời gian <span class="arithmatex">$O(2^{n/2} n^2 \log n)$</span>.</p>
+<p>Thuật toán Dijkstra cải tiến sử dụng khái niệm gọi là thế (potentials) từ <a href="https://en.wikipedia.org/wiki/Johnson%27s_algorithm">Thuật toán Johnson</a>. Ta có thể kết hợp ý tưởng của thuật toán này với thuật toán Dinic để giảm số lượng bước lặp từ <span class="arithmatex">$F$</span> xuống còn <span class="arithmatex">$\min(F, nC)$</span>, với <span class="arithmatex">$C$</span> là chi phí lớn nhất của các cạnh trên đồ thị. Bạn có thể đọc thêm về thế và cách kết hợp với thuật toán Dinic <a href="https://codeforces.com/blog/entry/105658">tại đây</a>.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Dưới đây là một cài đặt sử dụng <a href="bellman_ford.html">Thuật toán SPFA</a> cho trường hợp đơn giản nhất.</p>
 <div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">Edge</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">from</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="p">,</span><span class="w"> </span><span class="n">capacity</span><span class="p">,</span><span class="w"> </span><span class="n">cost</span><span class="p">;</span>
@@ -8205,7 +8181,7 @@ Since we have multiple edges, we have to store the edge number for the reversed 
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">cost</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap-thuc-hanh">Bài tập thực hành<a class="headerlink" href="#bai-tap-thuc-hanh" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://cses.fi/problemset/task/2129">CSES - Task Assignment</a></li>
 <li><a href="https://cses.fi/problemset/task/2131">CSES - Grid Puzzle II</a></li>
@@ -8214,7 +8190,7 @@ Since we have multiple edges, we have to store the edge number for the reversed 
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (85.12%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (5.96%)</li><li><a href="#" title="prpr" data-bi-name="contributorprofile" target="_blank">prpr</a> (4.76%)</li><li><a href="#" title="fffelix-huang" data-bi-name="contributorprofile" target="_blank">fffelix-huang</a> (2.98%)</li><li><a href="#" title="Le Bao Hiep" data-bi-name="contributorprofile" target="_blank">Le Bao Hiep</a> (0.6%)</li><li><a href="#" title="Quang Mai" data-bi-name="contributorprofile" target="_blank">Quang Mai</a> (0.6%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

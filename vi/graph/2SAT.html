@@ -7180,10 +7180,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm:
+        Thuật toán:
       
     </span>
   </a>
@@ -7191,10 +7191,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation:
+        Cài đặt:
       
     </span>
   </a>
@@ -7202,10 +7202,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-thuc-hanh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập thực hành
       
     </span>
   </a>
@@ -7960,13 +7960,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/2SAT.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/2SAT.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/2SAT.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/2SAT.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7977,66 +7977,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8073,78 +8013,76 @@ Describe the issue of this article in detail.
 
 
 <h1 id="2-sat">2-SAT<a class="headerlink" href="#2-sat" title="Permanent link">&para;</a></h1>
-<p>SAT (Boolean satisfiability problem) is the problem of assigning Boolean values to variables to satisfy a given Boolean formula.
-The Boolean formula will usually be given in CNF (conjunctive normal form), which is a conjunction of multiple clauses, where each clause is a disjunction of literals (variables or negation of variables).
-2-SAT (2-satisfiability) is a restriction of the SAT problem, in 2-SAT every clause has exactly two literals.
-Here is an example of such a 2-SAT problem.
-Find an assignment of <span class="arithmatex">$a, b, c$</span> such that the following formula is true:</p>
+<p>SAT (Bài toán thỏa mãn công thức Boolean - Boolean satisfiability problem) là bài toán gán các giá trị Boolean cho các biến để thỏa mãn một công thức Boolean cho trước.
+Công thức Boolean thường được cho dưới dạng CNF (dạng chuẩn hội - conjunctive normal form), là hội của nhiều mệnh đề, trong đó mỗi mệnh đề là tuyển của các biến hoặc phủ định của biến (literal).
+2-SAT (2-satisfiability) là một trường hợp hạn chế của bài toán SAT, trong đó mỗi mệnh đề có chính xác hai literal.
+Dưới đây là một ví dụ về bài toán 2-SAT như vậy.
+Tìm một cách gán trị cho <span class="arithmatex">$a, b, c$</span> sao cho công thức sau nhận giá trị đúng (true):</p>
 <div class="arithmatex">$$(a \lor \lnot b) \land (\lnot a \lor b) \land (\lnot a \lor \lnot b) \land (a \lor \lnot c)$$</div>
-<p>SAT is NP-complete, there is no known efficient solution for it.
-However 2SAT can be solved efficiently in <span class="arithmatex">$O(n + m)$</span> where <span class="arithmatex">$n$</span> is the number of variables and <span class="arithmatex">$m$</span> is the number of clauses.</p>
-<h2 id="algorithm">Algorithm:<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>First we need to convert the problem to a different form, the so-called implicative normal form.
-Note that the expression <span class="arithmatex">$a \lor b$</span> is equivalent to <span class="arithmatex">$\lnot a \Rightarrow b \land \lnot b \Rightarrow a$</span> (if one of the two variables is false, then the other one must be true).</p>
-<p>We now construct a directed graph of these implications:
-for each variable <span class="arithmatex">$x$</span> there will be two vertices <span class="arithmatex">$v_x$</span> and <span class="arithmatex">$v_{\lnot x}$</span>.
-The edges will correspond to the implications.</p>
-<p>Let's look at the example in 2-CNF form:</p>
+<p>SAT là một bài toán NP-đầy đủ, hiện chưa có giải pháp hiệu quả nào được biết đến cho nó.
+Tuy nhiên, bài toán 2-SAT có thể được giải quyết hiệu quả trong thời gian <span class="arithmatex">$O(n + m)$</span>, với <span class="arithmatex">$n$</span> là số lượng biến và <span class="arithmatex">$m$</span> là số lượng mệnh đề.</p>
+<h2 id="thuat-toan">Thuật toán:<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Trước tiên chúng ta cần chuyển đổi bài toán sang một dạng khác, gọi là dạng chuẩn kéo theo (implicative normal form).
+Lưu ý rằng biểu thức <span class="arithmatex">$a \lor b$</span> tương đương với <span class="arithmatex">$\lnot a \Rightarrow b \land \lnot b \Rightarrow a$</span> (nếu một trong hai biến là sai, thì biến còn lại bắt buộc phải đúng).</p>
+<p>Bây giờ chúng ta xây dựng một đồ thị có hướng đại diện cho các phép kéo theo này:
+với mỗi biến <span class="arithmatex">$x$</span> sẽ có hai đỉnh <span class="arithmatex">$v_x$</span> và <span class="arithmatex">$v_{\lnot x}$</span>.
+Các cạnh sẽ tương ứng với các phép kéo theo.</p>
+<p>Hãy xem xét ví dụ ở dạng 2-CNF:</p>
 <div class="arithmatex">$$(a \lor \lnot b) \land (\lnot a \lor b) \land (\lnot a \lor \lnot b) \land (a \lor \lnot c)$$</div>
-<p>The oriented graph will contain the following vertices and edges:</p>
+<p>Đồ thị có hướng sẽ chứa các đỉnh và cạnh sau:</p>
 <div class="arithmatex">$$\begin{array}{cccc}
 \lnot a \Rightarrow \lnot b &amp; a \Rightarrow b &amp; a \Rightarrow \lnot b &amp; \lnot a \Rightarrow \lnot c\\
 b \Rightarrow a &amp; \lnot b \Rightarrow \lnot a &amp; b \Rightarrow \lnot a &amp; c \Rightarrow a
 \end{array}$$</div>
-<p>You can see the implication graph in the following image:</p>
+<p>Bạn có thể quan sát đồ thị kéo theo trong hình dưới đây:</p>
 <div style="text-align: center;">
-  <img src="2SAT.png" alt=""Implication Graph of 2-SAT example"">
+<p><img alt="Implication Graph of 2-SAT example" src="../../graph/2SAT.png" /></p>
 </div>
-
-<p>It is worth paying attention to the property of the implication graph:
-if there is an edge <span class="arithmatex">$a \Rightarrow b$</span>, then there also is an edge <span class="arithmatex">$\lnot b \Rightarrow \lnot a$</span>. </p>
-<p>Also note, that if <span class="arithmatex">$x$</span> is reachable from <span class="arithmatex">$\lnot x$</span>, and <span class="arithmatex">$\lnot x$</span> is reachable from <span class="arithmatex">$x$</span>, then the problem has no solution.
-Whatever value we choose for the variable <span class="arithmatex">$x$</span>, it will always end in a contradiction - if <span class="arithmatex">$x$</span> will be assigned <span class="arithmatex">$\text{true}$</span> then the implication tells us that <span class="arithmatex">$\lnot x$</span> should also be <span class="arithmatex">$\text{true}$</span> and visa versa.
-It turns out, that this condition is not only necessary, but also sufficient.
-We will prove this in a few paragraphs below.
-First recall, if a vertex is reachable from a second one, and the second one is reachable from the first one, then these two vertices are in the same strongly connected component.
-Therefore we can formulate the criterion for the existence of a solution as follows:</p>
-<p>In order for this 2-SAT problem to have a solution, it is necessary and sufficient that for any variable <span class="arithmatex">$x$</span> the vertices <span class="arithmatex">$x$</span> and <span class="arithmatex">$\lnot x$</span> are in different strongly connected components of the strong connection of the implication graph.</p>
-<p>This criterion can be verified in <span class="arithmatex">$O(n + m)$</span> time by finding all strongly connected components.</p>
-<p>The following image shows all strongly connected components for the example.
-As we can check easily, neither of the four components contain a vertex <span class="arithmatex">$x$</span> and its negation <span class="arithmatex">$\lnot x$</span>, therefore the example has a solution.
-We will learn in the next paragraphs how to compute a valid assignment, but just for demonstration purposes the solution <span class="arithmatex">$a = \text{false}$</span>, <span class="arithmatex">$b = \text{false}$</span>, <span class="arithmatex">$c = \text{false}$</span> is given.</p>
+<p>Một tính chất quan trọng của đồ thị kéo theo đáng để chúng ta chú ý là:
+nếu tồn tại cạnh <span class="arithmatex">$a \Rightarrow b$</span>, thì chắc chắn cũng tồn tại cạnh <span class="arithmatex">$\lnot b \Rightarrow \lnot a$</span>.</p>
+<p>Cũng cần lưu ý rằng, nếu từ <span class="arithmatex">$\lnot x$</span> có thể đi tới <span class="arithmatex">$x$</span>, và từ <span class="arithmatex">$x$</span> cũng có thể đi tới <span class="arithmatex">$\lnot x$</span>, thì bài toán vô nghiệm.
+Dù chúng ta chọn giá trị nào cho biến <span class="arithmatex">$x$</span>, nó luôn dẫn đến mâu thuẫn - nếu gán <span class="arithmatex">$x = \text{true}$</span> thì phép kéo theo chỉ ra rằng <span class="arithmatex">$\lnot x$</span> cũng phải bằng <span class="arithmatex">$\text{true}$</span> và ngược lại.
+Hóa ra điều kiện này không chỉ là cần thiết, mà còn là đủ.
+Chúng ta sẽ chứng minh điều này ở các đoạn dưới đây.
+Đầu tiên, hãy nhắc lại rằng nếu một đỉnh có thể đi tới đỉnh thứ hai, và đỉnh thứ hai cũng có thể đi tới đỉnh thứ nhất, thì hai đỉnh này nằm trong cùng một thành phần liên thông mạnh.
+Do đó, chúng ta có thể phát biểu tiêu chí tồn tại nghiệm như sau:</p>
+<p>Để bài toán 2-SAT có nghiệm, điều kiện cần và đủ là với mọi biến <span class="arithmatex">$x$</span>, hai đỉnh <span class="arithmatex">$x$</span> và <span class="arithmatex">$\lnot x$</span> phải thuộc các thành phần liên thông mạnh khác nhau trên đồ thị kéo theo.</p>
+<p>Tiêu chí này có thể được kiểm tra trong thời gian <span class="arithmatex">$O(n + m)$</span> bằng cách tìm tất cả các thành phần liên thông mạnh.</p>
+<p>Hình dưới đây cho thấy tất cả các thành phần liên thông mạnh của ví dụ nêu trên.
+Như chúng ta có thể kiểm tra dễ dàng, không có thành phần nào trong số bốn thành phần liên thông mạnh chứa cả đỉnh <span class="arithmatex">$x$</span> và phủ định của nó <span class="arithmatex">$\lnot x$</span>, do đó ví dụ này có nghiệm.
+Chúng ta sẽ học cách tính toán bộ giá trị hợp lệ trong các đoạn tiếp theo, nhưng chỉ để minh họa, lời giải ở đây là <span class="arithmatex">$a = \text{false}$</span>, <span class="arithmatex">$b = \text{false}$</span>, <span class="arithmatex">$c = \text{false}$</span>.</p>
 <div style="text-align: center;">
-  <img src="2SAT_SCC.png" alt=""Strongly Connected Components of the 2-SAT example"">
+<p><img alt="Strongly Connected Components of the 2-SAT example" src="../../graph/2SAT_SCC.png" /></p>
 </div>
-
-<p>Now we construct the algorithm for finding the solution of the 2-SAT problem on the assumption that the solution exists.</p>
-<p>Note that, in spite of the fact that the solution exists, it can happen that <span class="arithmatex">$\lnot x$</span> is reachable from <span class="arithmatex">$x$</span> in the implication graph, or that (but not simultaneously) <span class="arithmatex">$x$</span> is reachable from <span class="arithmatex">$\lnot x$</span>.
-In that case the choice of either <span class="arithmatex">$\text{true}$</span> or <span class="arithmatex">$\text{false}$</span> for <span class="arithmatex">$x$</span> will lead to a contradiction, while the choice of the other one will not.
-Let's learn how to choose a value, such that we don't generate a contradiction.</p>
-<p>Let us sort the strongly connected components in topological order (i.e. <span class="arithmatex">$\text{comp}[v] \le \text{comp}[u]$</span> if there is a path from <span class="arithmatex">$v$</span> to <span class="arithmatex">$u$</span>) and let <span class="arithmatex">$\text{comp}[v]$</span> denote the index of strongly connected component to which the vertex <span class="arithmatex">$v$</span> belongs.
-Then, if <span class="arithmatex">$\text{comp}[x] &lt; \text{comp}[\lnot x]$</span> we assign <span class="arithmatex">$x$</span> with <span class="arithmatex">$\text{false}$</span> and <span class="arithmatex">$\text{true}$</span> otherwise.</p>
-<p>Let us prove that with this assignment of the variables we do not arrive at a contradiction.
-Suppose <span class="arithmatex">$x$</span> is assigned with <span class="arithmatex">$\text{true}$</span>.
-The other case can be proven in a similar way.</p>
-<p>First we prove that the vertex <span class="arithmatex">$x$</span> cannot reach the vertex <span class="arithmatex">$\lnot x$</span>.
-Because we assigned <span class="arithmatex">$\text{true}$</span> it has to hold that the index of strongly connected component of <span class="arithmatex">$x$</span> is greater than the index of the component of <span class="arithmatex">$\lnot x$</span>.
-This means that <span class="arithmatex">$\lnot x$</span> is located on the left of the component containing <span class="arithmatex">$x$</span>, and the later vertex cannot reach the first.</p>
-<p>Secondly we prove that there doesn't exist a variable <span class="arithmatex">$y$</span>, such that the vertices <span class="arithmatex">$y$</span> and <span class="arithmatex">$\lnot y$</span> are both reachable from <span class="arithmatex">$x$</span> in the implication graph.
-This would cause a contradiction, because <span class="arithmatex">$x = \text{true}$</span> implies that <span class="arithmatex">$y = \text{true}$</span> and <span class="arithmatex">$\lnot y = \text{true}$</span>.
-Let us prove this by contradiction.
-Suppose that <span class="arithmatex">$y$</span> and <span class="arithmatex">$\lnot y$</span> are both reachable from <span class="arithmatex">$x$</span>, then by the property of the implication graph <span class="arithmatex">$\lnot x$</span> is reachable from both <span class="arithmatex">$y$</span> and <span class="arithmatex">$\lnot y$</span>.
-By transitivity this results that <span class="arithmatex">$\lnot x$</span> is reachable by <span class="arithmatex">$x$</span>, which contradicts the assumption.</p>
-<p>So we have constructed an algorithm that finds the required values of variables under the assumption that for any variable <span class="arithmatex">$x$</span> the vertices <span class="arithmatex">$x$</span> and <span class="arithmatex">$\lnot x$</span> are in different strongly connected components.
-Above showed the correctness of this algorithm.
-Consequently we simultaneously proved the above criterion for the existence of a solution.</p>
-<h2 id="implementation">Implementation:<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>Now we can implement the entire algorithm.
-First we construct the graph of implications and find all strongly connected components.
-This can be accomplished with Kosaraju's algorithm in <span class="arithmatex">$O(n + m)$</span> time.
-In the second traversal of the graph Kosaraju's algorithm visits the strongly connected components in topological order, therefore it is easy to compute <span class="arithmatex">$\text{comp}[v]$</span> for each vertex <span class="arithmatex">$v$</span>.</p>
-<p>Afterwards we can choose the assignment of <span class="arithmatex">$x$</span> by comparing <span class="arithmatex">$\text{comp}[x]$</span> and <span class="arithmatex">$\text{comp}[\lnot x]$</span>. 
-If <span class="arithmatex">$\text{comp}[x] = \text{comp}[\lnot x]$</span> we return <span class="arithmatex">$\text{false}$</span> to indicate that there doesn't exist a valid assignment that satisfies the 2-SAT problem.</p>
-<p>Below is the implementation of the solution of the 2-SAT problem for the already constructed graph of implication <span class="arithmatex">$adj$</span> and the transpose graph <span class="arithmatex">$adj^{\intercal}$</span> (in which the direction of each edge is reversed).
-In the graph the vertices with indices <span class="arithmatex">$2k$</span> and <span class="arithmatex">$2k+1$</span> are the two vertices corresponding to variable <span class="arithmatex">$k$</span> with <span class="arithmatex">$2k+1$</span> corresponding to the negated variable.</p>
+<p>Bây giờ chúng ta xây dựng thuật toán tìm nghiệm của bài toán 2-SAT với giả định rằng nghiệm tồn tại.</p>
+<p>Lưu ý rằng, mặc dù nghiệm tồn tại, việc <span class="arithmatex">$\lnot x$</span> có thể đi tới được từ <span class="arithmatex">$x$</span> trên đồ thị kéo theo vẫn có thể xảy ra, hoặc ngược lại (nhưng không xảy ra đồng thời) <span class="arithmatex">$x$</span> có thể đi tới được từ <span class="arithmatex">$\lnot x$</span>.
+Trong trường hợp đó, việc chọn <span class="arithmatex">$\text{true}$</span> hay <span class="arithmatex">$\text{false}$</span> cho <span class="arithmatex">$x$</span> sẽ dẫn đến mâu thuẫn, trong khi lựa chọn còn lại thì không.
+Hãy tìm hiểu cách chọn giá trị để không tạo ra mâu thuẫn.</p>
+<p>Hãy sắp xếp các thành phần liên thông mạnh theo thứ tự topo (tức là <span class="arithmatex">$\text{comp}[v] \le \text{comp}[u]$</span> nếu có đường đi từ <span class="arithmatex">$v$</span> đến <span class="arithmatex">$u$</span>) và gọi <span class="arithmatex">$\text{comp}[v]$</span> là chỉ số của thành phần liên thông mạnh chứa đỉnh <span class="arithmatex">$v$</span>.
+Khi đó, nếu <span class="arithmatex">$\text{comp}[x] &lt; \text{comp}[\lnot x]$</span>, chúng ta gán <span class="arithmatex">$x$</span> bằng <span class="arithmatex">$\text{false}$</span>, và ngược lại gán bằng <span class="arithmatex">$\text{true}$</span>.</p>
+<p>Hãy chứng minh rằng việc gán giá trị như thế này không dẫn đến mâu thuẫn.
+Giả sử <span class="arithmatex">$x$</span> được gán bằng <span class="arithmatex">$\text{true}$</span>.
+Trường hợp còn lại có thể chứng minh hoàn toàn tương tự.</p>
+<p>Đầu tiên chúng ta chứng minh rằng từ đỉnh <span class="arithmatex">$x$</span> không thể đi tới đỉnh <span class="arithmatex">$\lnot x$</span>.
+Vì chúng ta đã gán giá trị <span class="arithmatex">$\text{true}$</span>, nên chỉ số thành phần liên thông mạnh của <span class="arithmatex">$x$</span> phải lớn hơn chỉ số của thành phần chứa <span class="arithmatex">$\lnot x$</span>.
+Điều này có nghĩa là thành phần chứa <span class="arithmatex">$\lnot x$</span> nằm bên trái của thành phần chứa <span class="arithmatex">$x$</span> (theo thứ tự topo), do đó từ đỉnh sau không thể đi tới đỉnh trước.</p>
+<p>Thứ hai, chúng ta chứng minh rằng không tồn tại biến <span class="arithmatex">$y$</span> nào sao cho cả hai đỉnh <span class="arithmatex">$y$</span> và <span class="arithmatex">$\lnot y$</span> đều có thể đi tới được từ <span class="arithmatex">$x$</span> trên đồ thị kéo theo.
+Điều này nếu xảy ra sẽ tạo ra mâu thuẫn, vì <span class="arithmatex">$x = \text{true}$</span> sẽ kéo theo <span class="arithmatex">$y = \text{true}$</span> và <span class="arithmatex">$\lnot y = \text{true}$</span>.
+Hãy chứng minh điều này bằng phản chứng.
+Giả sử cả <span class="arithmatex">$y$</span> và <span class="arithmatex">$\lnot y$</span> đều đi tới được từ <span class="arithmatex">$x$</span>, khi đó theo tính chất của đồ thị kéo theo, <span class="arithmatex">$\lnot x$</span> sẽ đi tới được từ cả <span class="arithmatex">$y$</span> và <span class="arithmatex">$\lnot y$</span>.
+Theo tính chất bắc cầu, ta suy ra <span class="arithmatex">$\lnot x$</span> đi tới được từ <span class="arithmatex">$x$</span>, mâu thuẫn với giả định ban đầu.</p>
+<p>Như vậy, chúng ta đã xây dựng một thuật toán tìm các giá trị biến thỏa mãn với giả định rằng với mọi biến <span class="arithmatex">$x$</span>, hai đỉnh <span class="arithmatex">$x$</span> và <span class="arithmatex">$\lnot x$</span> nằm ở các thành phần liên thông mạnh khác nhau.
+Phần trên đã chỉ ra tính đúng đắn của thuật toán này.
+Đồng thời, chúng ta cũng đã chứng minh tiêu chí tồn tại nghiệm nêu ở trên.</p>
+<h2 id="cai-at">Cài đặt:<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Bây giờ chúng ta có thể cài đặt toàn bộ thuật toán.
+Đầu tiên, chúng ta xây dựng đồ thị kéo theo và tìm tất cả các thành phần liên thông mạnh.
+Điều này có thể thực hiện bằng thuật toán Kosaraju trong thời gian <span class="arithmatex">$O(n + m)$</span>.
+Trong lượt duyệt đồ thị thứ hai, thuật toán Kosaraju duyệt qua các thành phần liên thông mạnh theo thứ tự topo, do đó việc tính toán <span class="arithmatex">$\text{comp}[v]$</span> cho mỗi đỉnh <span class="arithmatex">$v$</span> là rất dễ dàng.</p>
+<p>Sau đó, chúng ta có thể chọn giá trị gán cho <span class="arithmatex">$x$</span> bằng cách so sánh <span class="arithmatex">$\text{comp}[x]$</span> và <span class="arithmatex">$\text{comp}[\lnot x]$</span>.
+Nếu <span class="arithmatex">$\text{comp}[x] = \text{comp}[\lnot x]$</span>, chúng ta trả về <code>false</code> để chỉ ra rằng không tồn tại bộ giá trị hợp lệ nào thỏa mãn bài toán 2-SAT.</p>
+<p>Dưới đây là cài đặt giải bài toán 2-SAT cho đồ thị kéo theo <span class="arithmatex">$adj$</span> đã được xây dựng sẵn và đồ thị chuyển vị <span class="arithmatex">$adj^{\intercal}$</span> (trong đó hướng của mỗi cạnh được đảo ngược).
+Trong đồ thị, các đỉnh có chỉ số <span class="arithmatex">$2k$</span> và <span class="arithmatex">$2k+1$</span> là hai đỉnh tương ứng với biến <span class="arithmatex">$k$</span>, với <span class="arithmatex">$2k+1$</span> tương ứng với biến phủ định.</p>
 <div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">TwoSatSolver</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n_vars</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n_vertices</span><span class="p">;</span>
@@ -8221,7 +8159,7 @@ In the graph the vertices with indices <span class="arithmatex">$2k$</span> and 
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap-thuc-hanh">Bài tập thực hành<a class="headerlink" href="#bai-tap-thuc-hanh" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="http://codeforces.com/contest/776/problem/D">Codeforces: The Door Problem</a></li>
 <li><a href="https://open.kattis.com/problems/illumination">Kattis: Illumination</a></li>
@@ -8235,7 +8173,7 @@ In the graph the vertices with indices <span class="arithmatex">$2k$</span> and 
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (71.13%)</li><li><a href="#" title="Daniel Paleka" data-bi-name="contributorprofile" target="_blank">Daniel Paleka</a> (12.89%)</li><li><a href="#" title="Jatin Sharma" data-bi-name="contributorprofile" target="_blank">Jatin Sharma</a> (3.09%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (3.09%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (3.09%)</li><li><a href="#" title="Hostek" data-bi-name="contributorprofile" target="_blank">Hostek</a> (1.03%)</li><li><a href="#" title="Vatsal Sharma" data-bi-name="contributorprofile" target="_blank">Vatsal Sharma</a> (1.03%)</li><li><a href="#" title="matbensch" data-bi-name="contributorprofile" target="_blank">matbensch</a> (1.03%)</li><li><a href="#" title="Aleksandr Mishukhin" data-bi-name="contributorprofile" target="_blank">Aleksandr Mishukhin</a> (0.52%)</li><li><a href="#" title="Aryaman" data-bi-name="contributorprofile" target="_blank">Aryaman</a> (0.52%)</li><li><a href="#" title="Benjamin Shi" data-bi-name="contributorprofile" target="_blank">Benjamin Shi</a> (0.52%)</li><li><a href="#" title="Sarthak Vishwakarma" data-bi-name="contributorprofile" target="_blank">Sarthak Vishwakarma</a> (0.52%)</li><li><a href="#" title="Tarun Khullar" data-bi-name="contributorprofile" target="_blank">Tarun Khullar</a> (0.52%)</li><li><a href="#" title="sumitrawat10" data-bi-name="contributorprofile" target="_blank">sumitrawat10</a> (0.52%)</li><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (0.52%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

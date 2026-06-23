@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#maximum-flow-mpm-algorithm" class="md-skip">
+        <a href="#luong-cuc-ai-thuat-toan-mpm" class="md-skip">
           Bỏ qua
         </a>
       
@@ -6762,10 +6762,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -6773,10 +6773,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -7949,13 +7949,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/mpm.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/mpm.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/mpm.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/mpm.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7966,22 +7966,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8005,33 +7989,33 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="maximum-flow-mpm-algorithm">Maximum flow - MPM algorithm<a class="headerlink" href="#maximum-flow-mpm-algorithm" title="Permanent link">&para;</a></h1>
-<p>MPM (Malhotra, Pramodh-Kumar and Maheshwari) algorithm solves the maximum flow problem in <span class="arithmatex">$O(V^3)$</span>. This algorithm is similar to <a href="dinic.html">Dinic's algorithm</a>.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>Like Dinic's algorithm, MPM runs in phases, during each phase we find the blocking flow in the layered network of the residual network of <span class="arithmatex">$G$</span>.
-The main difference from Dinic's is how we find the blocking flow.
-Consider the layered network <span class="arithmatex">$L$</span>.
-For each node we define its' <em>inner potential</em> and <em>outer potential</em> as:</p>
+<h1 id="luong-cuc-ai-thuat-toan-mpm">Luồng cực đại - Thuật toán MPM<a class="headerlink" href="#luong-cuc-ai-thuat-toan-mpm" title="Permanent link">&para;</a></h1>
+<p>Thuật toán MPM (Malhotra, Pramodh-Kumar và Maheshwari) giải quyết bài toán luồng cực đại trong thời gian <span class="arithmatex">$O(V^3)$</span>. Thuật toán này tương tự như <a href="dinic.html">Thuật toán Dinic</a>.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Giống như thuật toán Dinic, MPM hoạt động theo từng pha. Trong mỗi pha, chúng ta tìm luồng cản (blocking flow) trên mạng phân tầng (layered network) của mạng thặng dư của <span class="arithmatex">$G$</span>.
+Điểm khác biệt chính so với thuật toán Dinic nằm ở cách chúng ta tìm luồng cản.
+Xét mạng phân tầng <span class="arithmatex">$L$</span>.
+Với mỗi nút, chúng ta định nghĩa <em>thế trong</em> (inner potential) và <em>thế ngoài</em> (outer potential) của nó như sau:</p>
 <div class="arithmatex">$$\begin{align}
 p_{in}(v) &amp;= \sum\limits_{(u, v)\in L}(c(u, v) - f(u, v)) \\\\
 p_{out}(v) &amp;= \sum\limits_{(v, u)\in L}(c(v, u) - f(v, u))
 \end{align}$$</div>
-<p>Also we set <span class="arithmatex">$p_{in}(s) = p_{out}(t) = \infty$</span>.
-Given <span class="arithmatex">$p_{in}$</span> and <span class="arithmatex">$p_{out}$</span> we define the <em>potential</em> as <span class="arithmatex">$p(v) = min(p_{in}(v), p_{out}(v))$</span>.
-We call a node <span class="arithmatex">$r$</span> a <em>reference node</em> if <span class="arithmatex">$p(r) = min\{p(v)\}$</span>.
-Consider a reference node <span class="arithmatex">$r$</span>.
-We claim that the flow can be increased by <span class="arithmatex">$p(r)$</span> in such a way that <span class="arithmatex">$p(r)$</span> becomes <span class="arithmatex">$0$</span>.
-It is true because <span class="arithmatex">$L$</span> is acyclic, so we can push the flow out of <span class="arithmatex">$r$</span> by outgoing edges and it will reach <span class="arithmatex">$t$</span> because each node has enough outer potential to push the flow out when it reaches it.
-Similarly, we can pull the flow from <span class="arithmatex">$s$</span>.
-The construction of the blocked flow is based on this fact.
-On each iteration we find a reference node and push the flow from <span class="arithmatex">$s$</span> to <span class="arithmatex">$t$</span> through <span class="arithmatex">$r$</span>.
-This process can be simulated by BFS.
-All completely saturated arcs can be deleted from <span class="arithmatex">$L$</span> as they won't be used later in this phase anyway.
-Likewise, all the nodes different from <span class="arithmatex">$s$</span> and <span class="arithmatex">$t$</span> without outgoing or incoming arcs can be deleted.</p>
-<p>Each phase works in <span class="arithmatex">$O(V^2)$</span> because there are at most <span class="arithmatex">$V$</span> iterations (because at least the chosen reference node is deleted), and on each iteration we delete all the edges we passed through except at most <span class="arithmatex">$V$</span>.
-Summing, we get <span class="arithmatex">$O(V^2 + E) = O(V^2)$</span>.
-Since there are less than <span class="arithmatex">$V$</span> phases (see the proof <a href="dinic.html">here</a>), MPM works in <span class="arithmatex">$O(V^3)$</span> total.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<p>Chúng ta cũng đặt <span class="arithmatex">$p_{in}(s) = p_{out}(t) = \infty$</span>.
+Từ <span class="arithmatex">$p_{in}$</span> và <span class="arithmatex">$p_{out}$</span>, chúng ta định nghĩa <em>thế</em> (potential) của nút là <span class="arithmatex">$p(v) = \min(p_{in}(v), p_{out}(v))$</span>.
+Chúng ta gọi một nút <span class="arithmatex">$r$</span> là <em>nút tham chiếu</em> (reference node) nếu <span class="arithmatex">$p(r) = \min\{p(v)\}$</span>.
+Xét một nút tham chiếu <span class="arithmatex">$r$</span>.
+Chúng ta khẳng định rằng luồng có thể được tăng thêm một lượng bằng <span class="arithmatex">$p(r)$</span> sao cho <span class="arithmatex">$p(r)$</span> trở thành <span class="arithmatex">$0$</span>.
+Điều này đúng vì <span class="arithmatex">$L$</span> không có chu trình, do đó chúng ta có thể đẩy luồng ra khỏi <span class="arithmatex">$r$</span> bằng các cạnh đi ra và nó chắc chắn sẽ tới được <span class="arithmatex">$t$</span> vì mọi nút trung gian đều có đủ thế ngoài để đẩy tiếp lượng luồng này đi khi luồng tới nó.
+Tương tự, chúng ta có thể kéo luồng ngược lại từ <span class="arithmatex">$s$</span>.
+Việc xây dựng luồng cản được dựa trên thực tế này.
+Trong mỗi bước lặp, chúng ta tìm một nút tham chiếu và đẩy luồng từ <span class="arithmatex">$s$</span> đến <span class="arithmatex">$t$</span> đi qua <span class="arithmatex">$r$</span>.
+Quá trình này có thể được mô phỏng bằng thuật toán BFS.
+Tất cả các cạnh đã bão hòa hoàn toàn có thể được xóa khỏi <span class="arithmatex">$L$</span> vì chúng sẽ không được sử dụng lại trong pha này nữa.
+Tương tự, tất cả các nút khác <span class="arithmatex">$s$</span> và <span class="arithmatex">$t$</span> mà không có cạnh đi vào hoặc cạnh đi ra cũng có thể được xóa bỏ.</p>
+<p>Mỗi pha hoạt động trong thời gian <span class="arithmatex">$O(V^2)$</span> vì có tối đa <span class="arithmatex">$V$</span> bước lặp (do ít nhất nút tham chiếu được chọn sẽ bị xóa), và trong mỗi bước lặp chúng ta xóa tất cả các cạnh đã đi qua ngoại trừ tối đa <span class="arithmatex">$V$</span> cạnh.
+Tổng hợp lại, ta được <span class="arithmatex">$O(V^2 + E) = O(V^2)$</span>.
+Vì có ít hơn <span class="arithmatex">$V$</span> pha (xem chứng minh <a href="dinic.html">tại đây</a>), tổng thời gian hoạt động của MPM là <span class="arithmatex">$O(V^3)$</span>.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">MPM</span><span class="p">{</span>
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">FlowEdge</span><span class="p">{</span>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">;</span>
@@ -8207,7 +8191,7 @@ Since there are less than <span class="arithmatex">$V$</span> phases (see the pr
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Yury Semenov" data-bi-name="contributorprofile" target="_blank">Yury Semenov</a> (94.84%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (2.35%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (1.41%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (0.94%)</li><li><a href="#" title="Bergur Snorrason" data-bi-name="contributorprofile" target="_blank">Bergur Snorrason</a> (0.47%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

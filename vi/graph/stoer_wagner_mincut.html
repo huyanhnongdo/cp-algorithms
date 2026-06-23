@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#minimum-cut-stoer-wagner-algorithm" class="md-skip">
+        <a href="#lat-cat-toi-thieu-thuat-toan-stoer-wagner" class="md-skip">
           Bỏ qua
         </a>
       
@@ -6874,10 +6874,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#problem-statement" class="md-nav__link">
+  <a href="#phat-bieu-bai-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problem statement
+        Phát biểu bài toán
       
     </span>
   </a>
@@ -6885,10 +6885,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#description-of-the-algorithm" class="md-nav__link">
+  <a href="#mo-ta-thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description of the algorithm
+        Mô tả thuật toán
       
     </span>
   </a>
@@ -6896,10 +6896,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proof-of-the-stoer-wagner-theorem" class="md-nav__link">
+  <a href="#chung-minh-inh-ly-stoer-wagner" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Proof of the Stoer-Wagner theorem
+        Chứng minh định lý Stoer-Wagner
       
     </span>
   </a>
@@ -6907,10 +6907,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -6918,10 +6918,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#literature" class="md-nav__link">
+  <a href="#tai-lieu-tham-khao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Literature
+        Tài liệu tham khảo
       
     </span>
   </a>
@@ -7982,13 +7982,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/stoer_wagner_mincut.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/stoer_wagner_mincut.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/stoer_wagner_mincut.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/stoer_wagner_mincut.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8034,52 +8034,52 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="minimum-cut-stoer-wagner-algorithm">Minimum cut - Stoer-Wagner algorithm<a class="headerlink" href="#minimum-cut-stoer-wagner-algorithm" title="Permanent link">&para;</a></h1>
-<h2 id="problem-statement">Problem statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
-<p>Given an undirected weighted graph <span class="arithmatex">$G$</span> with <span class="arithmatex">$n$</span> vertices and <span class="arithmatex">$m$</span> edges. A cut <span class="arithmatex">$C$</span> is a non-empty proper subset of the vertices (effectively, a cut is a partition of the vertices into two non-empty sets: the ones belonging to <span class="arithmatex">$C$</span> and all the others). The weight of a cut is the sum of the weights of the edges crossing the cut, i.e. the edges that have exactly one endpoint in <span class="arithmatex">$C$</span>:</p>
+<h1 id="lat-cat-toi-thieu-thuat-toan-stoer-wagner">Lát cắt tối thiểu - Thuật toán Stoer-Wagner<a class="headerlink" href="#lat-cat-toi-thieu-thuat-toan-stoer-wagner" title="Permanent link">&para;</a></h1>
+<h2 id="phat-bieu-bai-toan">Phát biểu bài toán<a class="headerlink" href="#phat-bieu-bai-toan" title="Permanent link">&para;</a></h2>
+<p>Cho một đồ thị vô hướng có trọng số <span class="arithmatex">$G$</span> gồm <span class="arithmatex">$n$</span> đỉnh và <span class="arithmatex">$m$</span> cạnh. Một lát cắt <span class="arithmatex">$C$</span> là một tập con thực sự, khác rỗng của tập đỉnh (nói một cách dễ hiểu, một lát cắt phân hoạch các đỉnh thành hai tập hợp khác rỗng: tập chứa các đỉnh thuộc <span class="arithmatex">$C$</span> và tập chứa các đỉnh còn lại). Trọng số của lát cắt là tổng trọng số của các cạnh đi qua lát cắt, tức là các cạnh có đúng một đầu mút thuộc <span class="arithmatex">$C$</span>:</p>
 <div class="arithmatex">$$ w(C) = \sum_{\substack{(v,u) \in E \\ u \in C,\ v \not\in C}} c(v,u), $$</div>
-<p>where <span class="arithmatex">$E$</span> denotes the set of all edges of the graph <span class="arithmatex">$G$</span>, and <span class="arithmatex">$c(v,u)$</span> is the weight of the edge <span class="arithmatex">$(v,u)$</span>.</p>
-<p>The task is to find a <strong>cut of minimum weight</strong>.</p>
-<p>Sometimes this problem is called the "global minimum cut" — in contrast to the problem where a source vertex and a sink vertex are given, and we have to find a minimum cut <span class="arithmatex">$C$</span> containing the sink but not the source. The global minimum cut equals the minimum among the minimum-cost cuts over all possible source-sink pairs.</p>
-<p>Although this problem can be solved with a maximum flow algorithm (by running it <span class="arithmatex">$O(n^2)$</span> times for all possible pairs of source and sink), below we describe a much simpler and faster algorithm, proposed by Mechthild Stoer and Frank Wagner in 1994.</p>
-<p>In general, loops and multiple edges are allowed, although loops obviously do not influence the result in any way, and multiple edges can always be replaced by a single edge with their combined weight. Therefore, for simplicity, we will assume that the input graph contains no loops or multiple edges.</p>
-<h2 id="description-of-the-algorithm">Description of the algorithm<a class="headerlink" href="#description-of-the-algorithm" title="Permanent link">&para;</a></h2>
-<p>The <strong>basic idea</strong> of the algorithm is very simple. We iteratively repeat the following process: find the minimum cut between some pair of vertices <span class="arithmatex">$s$</span> and <span class="arithmatex">$t$</span>, and then merge these two vertices into one (connecting their adjacency lists). Eventually, after <span class="arithmatex">$n-1$</span> iterations, the graph will be compressed into a single vertex and the process stops. After that, the answer is the minimum among all <span class="arithmatex">$n-1$</span> cuts found. Indeed, at every <span class="arithmatex">$i$</span>-th stage, the found minimum cut <span class="arithmatex">$C_i$</span> between the vertices <span class="arithmatex">$s_i$</span> and <span class="arithmatex">$t_i$</span> either turns out to be the desired global minimum cut, or, on the contrary, it is disadvantageous to put <span class="arithmatex">$s_i$</span> and <span class="arithmatex">$t_i$</span> into different sets, so we do not worsen anything by merging these two vertices into one.</p>
-<p>Thus we reduced the problem to the following one: for a given graph, find the <strong>minimum cut between some, arbitrary, pair of vertices</strong> <span class="arithmatex">$s$</span> and <span class="arithmatex">$t$</span>. To solve this problem, the following, also iterative, process was proposed. We introduce a set of vertices <span class="arithmatex">$A$</span>, which initially contains a single arbitrary vertex. At every step, we find the vertex <strong>most strongly connected</strong> to the set <span class="arithmatex">$A$</span>, i.e. the vertex <span class="arithmatex">$v \not\in A$</span> for which the following quantity is maximal:</p>
+<p>trong đó <span class="arithmatex">$E$</span> là tập hợp tất cả các cạnh của đồ thị <span class="arithmatex">$G$</span>, và <span class="arithmatex">$c(v,u)$</span> là trọng số của cạnh <span class="arithmatex">$(v,u)$</span>.</p>
+<p>Nhiệm vụ của chúng ta là tìm một <strong>lát cắt có trọng số nhỏ nhất</strong> (lát cắt tối thiểu).</p>
+<p>Đôi khi bài toán này được gọi là "lát cắt tối thiểu toàn cục" (global minimum cut) — để phân biệt với bài toán tìm lát cắt tối thiểu <span class="arithmatex">$C$</span> có đỉnh nguồn <span class="arithmatex">$s$</span> và đỉnh đích <span class="arithmatex">$t$</span> cho trước, sao cho lát cắt chứa <span class="arithmatex">$t$</span> nhưng không chứa <span class="arithmatex">$s$</span>. Lát cắt tối thiểu toàn cục bằng giá trị nhỏ nhất trong số các lát cắt tối thiểu <span class="arithmatex">$s$</span>-<span class="arithmatex">$t$</span> trên mọi cặp nguồn-đích <span class="arithmatex">$(s, t)$</span> khả dĩ.</p>
+<p>Mặc dù bài toán này có thể được giải quyết bằng thuật toán luồng cực đại (bằng cách chạy nó <span class="arithmatex">$O(n^2)$</span> lần cho tất cả các cặp nguồn và đích), dưới đây chúng ta sẽ mô tả một thuật toán đơn giản và nhanh hơn nhiều, được đề xuất bởi Mechthild Stoer và Frank Wagner in 1994.</p>
+<p>Nói chung, đồ thị có thể có khuyên (loop) và đa cạnh (multiple edges), mặc dù các khuyên rõ ràng không ảnh hưởng đến kết quả theo bất kỳ cách nào, và các đa cạnh luôn có thể được thay thế bằng một cạnh duy nhất có trọng số bằng tổng trọng số của chúng. Do đó, để đơn giản, chúng ta giả định đồ thị đầu vào không chứa khuyên hay đa cạnh.</p>
+<h2 id="mo-ta-thuat-toan">Mô tả thuật toán<a class="headerlink" href="#mo-ta-thuat-toan" title="Permanent link">&para;</a></h2>
+<p><strong>Ý tưởng cơ bản</strong> của thuật toán vô cùng đơn giản. Chúng ta lặp đi lặp lại quy trình sau: tìm lát cắt tối thiểu giữa một cặp đỉnh <span class="arithmatex">$s$</span> và <span class="arithmatex">$t$</span> nào đó, rồi gộp hai đỉnh này thành một (nối các danh sách kề của chúng lại). Cuối cùng, sau <span class="arithmatex">$n-1$</span> bước lặp, đồ thị sẽ được nén lại chỉ còn đúng một đỉnh duy nhất và quy trình dừng lại. Sau đó, kết quả của bài toán chính là giá trị nhỏ nhất trong số tất cả <span class="arithmatex">$n-1$</span> lát cắt tìm được ở mỗi bước. Thật vậy, ở mỗi giai đoạn thứ <span class="arithmatex">$i$</span>, lát cắt tối thiểu <span class="arithmatex">$C_i$</span> tìm được giữa hai đỉnh <span class="arithmatex">$s_i$</span> và <span class="arithmatex">$t_i$</span> hoặc chính là lát cắt tối thiểu toàn cục cần tìm, hoặc ngược lại, việc đặt <span class="arithmatex">$s_i$</span> và <span class="arithmatex">$t_i$</span> vào hai phần khác nhau của lát cắt tối thiểu toàn cục là không tối ưu, do đó chúng ta không làm mất mát nghiệm tối ưu khi gộp hai đỉnh này lại làm một.</p>
+<p>Do đó, chúng ta đưa bài toán về bài toán con sau: với một đồ thị cho trước, tìm <strong>lát cắt tối thiểu giữa một cặp đỉnh</strong> s and t <strong>tùy ý</strong>. Để giải quyết bài toán này, quy trình lặp sau đây được đề xuất. Chúng ta khởi tạo một tập hợp đỉnh <span class="arithmatex">$A$</span>, ban đầu chỉ chứa duy nhất một đỉnh tùy ý. Tại mỗi bước, chúng ta tìm đỉnh <strong>kết nối mạnh nhất</strong> với tập hợp <span class="arithmatex">$A$</span>, tức là đỉnh <span class="arithmatex">$v \not\in A$</span> sao cho lượng dưới đây đạt cực đại:</p>
 <div class="arithmatex">$$ w(v,A) = \sum_{\substack{(v,u) \in E \\ u \in A}} c(v,u) $$</div>
-<p>(i.e. the sum of the weights of the edges with one endpoint at <span class="arithmatex">$v$</span> and the other in <span class="arithmatex">$A$</span> is maximal).</p>
-<p>Again, this process terminates after <span class="arithmatex">$n-1$</span> iterations, when all vertices have moved into the set <span class="arithmatex">$A$</span> (incidentally, this process strongly resembles <a href="mst_prim.html">Prim's algorithm</a>). Then, as the <strong>Stoer-Wagner theorem</strong> states, if we denote by <span class="arithmatex">$s$</span> and <span class="arithmatex">$t$</span> the last two vertices added to <span class="arithmatex">$A$</span>, the minimum cut between the vertices <span class="arithmatex">$s$</span> and <span class="arithmatex">$t$</span> consists of a single vertex — <span class="arithmatex">$t$</span>. The proof of this theorem will be given in the next section (as is often the case, by itself it does not contribute to the understanding of the algorithm in any way).</p>
-<p>Thus the overall <strong>scheme of the Stoer-Wagner algorithm</strong> is as follows. The algorithm consists of <span class="arithmatex">$n-1$</span> phases. In every phase, the set <span class="arithmatex">$A$</span> is initially set to contain some vertex, and the starting weights <span class="arithmatex">$w(v,A)$</span> of the vertices are computed. Then <span class="arithmatex">$n-1$</span> iterations follow, in each of which the vertex <span class="arithmatex">$u$</span> with the largest value <span class="arithmatex">$w(v,A)$</span> is chosen and added to the set <span class="arithmatex">$A$</span>, after which the values of <span class="arithmatex">$w$</span> for the remaining vertices are recalculated (for which, obviously, we have to go through all the edges in the adjacency list of the selected vertex <span class="arithmatex">$u$</span>). After performing all the iterations, we record in <span class="arithmatex">$s$</span> and <span class="arithmatex">$t$</span> the last two added vertices, and the value <span class="arithmatex">$w(t,A \setminus t)$</span> can be taken as the cost of the found minimum cut between <span class="arithmatex">$s$</span> and <span class="arithmatex">$t$</span>. Then we compare the found minimum cut with the current answer, and if it is smaller, we update the answer, and proceed to the next phase.</p>
-<p>If we do not use any sophisticated data structures, the most critical part is finding the vertex with the largest value of <span class="arithmatex">$w$</span>. If we do this in <span class="arithmatex">$O(n)$</span>, then, given that there are <span class="arithmatex">$n-1$</span> phases with <span class="arithmatex">$n-1$</span> iterations each, the resulting <strong>complexity of the algorithm</strong> is <span class="arithmatex">$O(n^3)$</span>.</p>
-<p>If we use <strong>Fibonacci heaps</strong> for finding the vertex with the largest value of <span class="arithmatex">$w$</span> (which allow increasing the value of a key in <span class="arithmatex">$O(1)$</span> amortized and extracting the maximum in <span class="arithmatex">$O(\log n)$</span> amortized), then all operations related to the set <span class="arithmatex">$A$</span> in one phase are performed in <span class="arithmatex">$O(m + n \log n)$</span>. The resulting complexity of the algorithm in this case is <span class="arithmatex">$O(n m + n^2 \log n)$</span>.</p>
-<h2 id="proof-of-the-stoer-wagner-theorem">Proof of the Stoer-Wagner theorem<a class="headerlink" href="#proof-of-the-stoer-wagner-theorem" title="Permanent link">&para;</a></h2>
-<p>Let us recall the statement of this theorem. If we add all the vertices to the set <span class="arithmatex">$A$</span> one by one, every time adding the vertex most strongly connected to this set, then denote the second-to-last added vertex by <span class="arithmatex">$s$</span> and the last one by <span class="arithmatex">$t$</span>. Then the minimum <span class="arithmatex">$s$</span>-<span class="arithmatex">$t$</span> cut consists of a single vertex — <span class="arithmatex">$t$</span>.</p>
-<p>To prove it, consider an arbitrary <span class="arithmatex">$s$</span>-<span class="arithmatex">$t$</span> cut <span class="arithmatex">$C$</span> and show that its weight cannot be less than the weight of the cut consisting of the single vertex <span class="arithmatex">$t$</span>:</p>
+<p>(tức là tổng trọng số các cạnh có một đầu mút là <span class="arithmatex">$v$</span> và đầu mút kia thuộc <span class="arithmatex">$A$</span> là lớn nhất).</p>
+<p>Quy trình này cũng kết thúc sau <span class="arithmatex">$n-1$</span> bước lặp, khi tất cả các đỉnh đều đã được đưa vào tập hợp <span class="arithmatex">$A$</span> (quy trình này cực kỳ giống với <a href="mst_prim.html">Thuật toán Prim</a>). Khi đó, theo <strong>định lý Stoer-Wagner</strong> phát biểu, nếu ký hiệu s and t là hai đỉnh cuối cùng được thêm vào <span class="arithmatex">$A$</span>, thì lát cắt tối thiểu giữa các đỉnh s and t chính là lát cắt phân tách đỉnh đơn <span class="arithmatex">$t$</span> ra khỏi phần còn lại của đồ thị. Chứng minh của định lý này sẽ được trình bày ở phần tiếp theo (tuy nhiên, việc chứng minh này không đóng góp nhiều vào việc hiểu thuật toán).</p>
+<p>Do đó, <strong>lược đồ tổng thể của thuật toán Stoer-Wagner</strong> như sau: Thuật toán gồm <span class="arithmatex">$n-1$</span> pha. Ở mỗi pha, tập hợp <span class="arithmatex">$A$</span> ban đầu được đặt chứa một đỉnh nào đó, và tính toán các trọng số bắt đầu <span class="arithmatex">$w(v,A)$</span> của các đỉnh. Sau đó là <span class="arithmatex">$n-1$</span> bước lặp, trong mỗi bước đỉnh u với giá trị <span class="arithmatex">$w(v,A)$</span> lớn nhất được chọn và đưa vào tập hợp <span class="arithmatex">$A$</span>, rồi cập nhật lại các giá trị <span class="arithmatex">$w$</span> của các đỉnh còn lại (để làm việc này, ta chỉ cần duyệt qua tất cả các cạnh trong danh sách kề của đỉnh u vừa chọn). Sau khi thực hiện xong tất cả các bước lặp, ta ghi nhận ở s and t hai đỉnh được thêm vào cuối cùng, và giá trị <span class="arithmatex">$w(t,A \setminus t)$</span> chính là chi phí của lát cắt tối thiểu s and t tìm được. Chúng ta so sánh lát cắt tối thiểu này với kết quả hiện tại, nếu nó nhỏ hơn thì cập nhật lại kết quả, và chuyển sang pha tiếp theo.</p>
+<p>Nếu không sử dụng bất kỳ cấu trúc dữ liệu phức tạp nào, phần quan trọng nhất là tìm đỉnh có giá trị <span class="arithmatex">$w$</span> lớn nhất. Nếu chúng ta tìm kiếm mất <span class="arithmatex">$O(n)$</span>, thì vì có <span class="arithmatex">$n-1$</span> pha, mỗi pha có <span class="arithmatex">$n-1$</span> bước lặp, <strong>độ phức tạp thời gian</strong> tổng thể của thuật toán là <span class="arithmatex">$O(n^3)$</span>.</p>
+<p>Nếu sử dụng <strong>Heap Fibonacci</strong> để tìm đỉnh có giá trị <span class="arithmatex">$w$</span> lớn nhất (cho phép tăng giá trị khóa trong thời gian phân bổ <span class="arithmatex">$O(1)$</span> và lấy ra phần tử lớn nhất trong thời gian phân bổ <span class="arithmatex">$O(\log n)$</span>), thì tất cả các thao tác liên quan đến tập hợp <span class="arithmatex">$A$</span> trong một pha được thực hiện trong thời gian <span class="arithmatex">$O(m + n \log n)$</span>. Độ phức tạp của thuật toán trong trường hợp này là <span class="arithmatex">$O(n m + n^2 \log n)$</span>.</p>
+<h2 id="chung-minh-inh-ly-stoer-wagner">Chứng minh định lý Stoer-Wagner<a class="headerlink" href="#chung-minh-inh-ly-stoer-wagner" title="Permanent link">&para;</a></h2>
+<p>Hãy nhắc lại phát biểu của định lý: Nếu chúng ta thêm lần lượt từng đỉnh vào tập <span class="arithmatex">$A$</span>, mỗi lần chọn đỉnh kết nối mạnh nhất với tập này, và gọi đỉnh kề cuối được thêm vào là <span class="arithmatex">$s$</span> và đỉnh cuối cùng là <span class="arithmatex">$t$</span>. Khi đó lát cắt tối thiểu <span class="arithmatex">$s$</span>-<span class="arithmatex">$t$</span> chính là lát cắt phân tách đỉnh đơn <span class="arithmatex">$t$</span> ra khỏi phần còn lại của đồ thị.</p>
+<p>Để chứng minh, xét một lát cắt <span class="arithmatex">$s$</span>-<span class="arithmatex">$t$</span> bất kỳ <span class="arithmatex">$C$</span> và chỉ ra rằng trọng số của nó không thể nhỏ hơn trọng số của lát cắt phân tách duy nhất đỉnh <span class="arithmatex">$t$</span>:</p>
 <div class="arithmatex">$$ w(\{t\}) \le w(C). $$</div>
-<p>To do this, we prove the following fact. Let <span class="arithmatex">$A_v$</span> be the state of the set <span class="arithmatex">$A$</span> immediately before adding the vertex <span class="arithmatex">$v$</span>. Let <span class="arithmatex">$C_v$</span> be the cut of the set <span class="arithmatex">$A_v \cup \{v\}$</span> induced by the cut <span class="arithmatex">$C$</span> (simply put, <span class="arithmatex">$C_v$</span> equals the intersection of these two sets of vertices). Further, a vertex <span class="arithmatex">$v$</span> is called active (with respect to the cut <span class="arithmatex">$C$</span>) if the vertex <span class="arithmatex">$v$</span> and the previously added vertex belong to different parts of the cut <span class="arithmatex">$C$</span>. Then, we claim, for any active vertex <span class="arithmatex">$v$</span> the following inequality holds:</p>
+<p>Để làm việc này, chúng ta chứng minh bổ đề sau. Gọi <span class="arithmatex">$A_v$</span> là trạng thái của tập hợp <span class="arithmatex">$A$</span> ngay trước khi thêm đỉnh <span class="arithmatex">$v$</span>. Gọi <span class="arithmatex">$C_v$</span> là lát cắt của tập hợp <span class="arithmatex">$A_v \cup \{v\}$</span> được cảm sinh bởi lát cắt <span class="arithmatex">$C$</span> (nói một cách đơn giản, <span class="arithmatex">$C_v$</span> bằng giao của hai tập hợp đỉnh này). Tiếp theo, một đỉnh <span class="arithmatex">$v$</span> được gọi là hoạt động (active - đối với lát cắt <span class="arithmatex">$C$</span>) nếu đỉnh <span class="arithmatex">$v$</span> và đỉnh được thêm ngay trước nó thuộc hai phần khác nhau của lát cắt <span class="arithmatex">$C$</span>. Khi đó, ta khẳng định rằng với mọi đỉnh hoạt động <span class="arithmatex">$v$</span>, bất đẳng thức sau luôn được thỏa mãn:</p>
 <div class="arithmatex">$$ w(v,A_v) \le w(C_v). $$</div>
-<p>In particular, <span class="arithmatex">$t$</span> is an active vertex (since the vertex added before it was <span class="arithmatex">$s$</span>), and for <span class="arithmatex">$v = t$</span> this inequality turns into the statement of the theorem:</p>
+<p>Đặc biệt, <span class="arithmatex">$t$</span> chắc chắn là một đỉnh hoạt động (vì đỉnh được thêm ngay trước nó là <span class="arithmatex">$s$</span> nằm ở phía bên kia lát cắt <span class="arithmatex">$C$</span> so với <span class="arithmatex">$t$</span>), và với <span class="arithmatex">$v = t$</span>, bất đẳng thức này trở thành phát biểu của định lý:</p>
 <div class="arithmatex">$$ w(t,A_t) = w(\{t\}) \le w(C_t) = w(C). $$</div>
-<p>So, we will prove this inequality using mathematical induction.</p>
-<p>For the first active vertex <span class="arithmatex">$v$</span> the inequality holds (moreover, it turns into an equality) — since all vertices of <span class="arithmatex">$A_v$</span> belong to one part of the cut, and <span class="arithmatex">$v$</span> belongs to the other.</p>
-<p>Now suppose this inequality holds for all active vertices up to some vertex <span class="arithmatex">$v$</span>; let us prove it for the next active vertex <span class="arithmatex">$u$</span>. To do this, transform the left-hand side:</p>
+<p>Chúng ta sẽ chứng minh bất đẳng thức này bằng phương pháp quy nạp toán học.</p>
+<p>Với đỉnh hoạt động đầu tiên <span class="arithmatex">$v$</span>, bất đẳng thức hiển nhiên đúng (thậm chí trở thành đẳng thức) — vì tất cả các đỉnh thuộc <span class="arithmatex">$A_v$</span> đều thuộc cùng một phần của lát cắt, và <span class="arithmatex">$v$</span> thuộc phần còn lại.</p>
+<p>Giả sử bất đẳng thức đã đúng cho tất cả các đỉnh hoạt động trước <span class="arithmatex">$u$</span>. Ta chứng minh bất đẳng thức cũng đúng cho đỉnh hoạt động tiếp theo <span class="arithmatex">$u$</span>. Biến đổi vế trái:</p>
 <div class="arithmatex">$$ w(u,A_u) \equiv w(u,A_v) + w(u,A_u \setminus A_v). $$</div>
-<p>First, note that:</p>
+<p>Trước tiên, lưu ý rằng:</p>
 <div class="arithmatex">$$ w(u,A_v) \le w(v,A_v), $$</div>
-<p>which follows from the fact that when the set <span class="arithmatex">$A$</span> was equal to <span class="arithmatex">$A_v$</span>, the vertex added to it was precisely <span class="arithmatex">$v$</span> and not <span class="arithmatex">$u$</span>, which means it had the largest value of <span class="arithmatex">$w$</span>.</p>
-<p>Further, since <span class="arithmatex">$w(v,A_v) \le w(C_v)$</span> by the induction hypothesis, we obtain:</p>
+<p>điều này suy ra từ việc khi tập hợp <span class="arithmatex">$A$</span> bằng <span class="arithmatex">$A_v$</span>, đỉnh được chọn thêm vào tập hợp là <span class="arithmatex">$v$</span> chứ không phải <span class="arithmatex">$u$</span>, nghĩa là <span class="arithmatex">$v$</span> có giá trị <span class="arithmatex">$w$</span> lớn hơn.</p>
+<p>Tiếp theo, vì <span class="arithmatex">$w(v,A_v) \le w(C_v)$</span> theo giả thiết quy nạp, ta có:</p>
 <div class="arithmatex">$$ w(u,A_v) \le w(C_v), $$</div>
-<p>from which we have:</p>
+<p>suy ra:</p>
 <div class="arithmatex">$$ w(u,A_u) \le w(C_v) + w(u,A_u \setminus A_v). $$</div>
-<p>Now note that the vertex <span class="arithmatex">$u$</span> and all vertices of <span class="arithmatex">$A_u \setminus A_v$</span> are in different parts of the cut <span class="arithmatex">$C$</span>, so the quantity <span class="arithmatex">$w(u,A_u \setminus A_v)$</span> denotes the sum of the weights of the edges that are counted in <span class="arithmatex">$w(C_u)$</span> but were not yet counted in <span class="arithmatex">$w(C_v)$</span>, from which we get:</p>
+<p>Lưu ý rằng đỉnh <span class="arithmatex">$u$</span> và tất cả các đỉnh thuộc <span class="arithmatex">$A_u \setminus A_v$</span> nằm ở hai phần khác nhau của lát cắt <span class="arithmatex">$C$</span>, do đó lượng <span class="arithmatex">$w(u,A_u \setminus A_v)$</span> đại diện cho tổng trọng số các cạnh được tính trong <span class="arithmatex">$w(C_u)$</span> nhưng chưa được tính trong <span class="arithmatex">$w(C_v)$</span>. Từ đó ta có:</p>
 <div class="arithmatex">$$ w(u,A_u) \le w(C_v) + w(u,A_u \setminus A_v) \le w(C_u), $$</div>
-<p>as required.</p>
-<p>We have proven the relation <span class="arithmatex">$w(v,A_v) \le w(C_v)$</span>, and, as mentioned above, the whole theorem follows from it.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>For the simplest and clearest implementation (with <span class="arithmatex">$O(n^3)$</span> complexity), the graph is represented as an adjacency matrix. The answer is stored in the variables <code>best_cost</code> and <code>best_cut</code> (the cost of the minimum cut and the vertices contained in it).</p>
-<p>For every vertex, the array <code>exist</code> stores whether it still exists, or whether it has been merged with some other vertex. The list <code>v[i]</code> for every compressed vertex <span class="arithmatex">$i$</span> stores the numbers of the original vertices that were compressed into this vertex <span class="arithmatex">$i$</span>.</p>
-<p>The algorithm consists of <span class="arithmatex">$n-1$</span> phases (the loop over the variable <code>ph</code>). In every phase, all vertices are initially outside the set <span class="arithmatex">$A$</span>, so the array <code>in_a</code> is filled with zeros, and the connectivities <span class="arithmatex">$w$</span> of all vertices are zero. In each of the <span class="arithmatex">$n-\mathrm{ph}$</span> iterations, the vertex <code>sel</code> with the largest value of <span class="arithmatex">$w$</span> is found. If this is the last iteration, the answer is updated if necessary, and the second-to-last <code>prev</code> and the last <code>sel</code> selected vertices are merged into one. If the iteration is not the last one, then <code>sel</code> is added to the set <span class="arithmatex">$A$</span>, after which the weights of all the remaining vertices are recalculated.</p>
-<p>Note that the algorithm "spoils" the graph <code>g</code> during its work, so if you still need it later, you have to save a copy of it before calling the function.</p>
+<p>đây chính là điều phải chứng minh.</p>
+<p>Chúng ta đã chứng minh được hệ thức <span class="arithmatex">$w(v,A_v) \le w(C_v)$</span>, và định lý được chứng minh hoàn toàn.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Với cài đặt đơn giản nhất (độ phức tạp <span class="arithmatex">$O(n^3)$</span>), đồ thị được biểu diễn bằng ma trận kề. Kết quả được lưu trong các biến <code>best_cost</code> và <code>best_cut</code> (trọng số của lát cắt tối thiểu và các đỉnh thuộc lát cắt đó).</p>
+<p>Với mỗi đỉnh, mảng <code>exist</code> lưu thông tin xem nó có còn tồn tại trên đồ thị hay không, hay nó đã được gộp vào đỉnh khác. Danh sách <code>v[i]</code> với mỗi đỉnh đã gộp <span class="arithmatex">$i$</span> lưu chỉ số của các đỉnh ban đầu đã được gộp vào đỉnh <span class="arithmatex">$i$</span> này.</p>
+<p>Thuật toán gồm <span class="arithmatex">$n-1$</span> pha (vòng lặp theo biến <code>ph</code>). Ở mỗi pha, tất cả các đỉnh ban đầu nằm ngoài tập hợp <span class="arithmatex">$A$</span>, mảng <code>in_a</code> được điền các giá trị <code>false</code>, và kết nối <span class="arithmatex">$w$</span> của tất cả các đỉnh bằng 0. Trong mỗi bước lặp thứ <span class="arithmatex">$n-\mathrm{ph}$</span>, đỉnh <code>sel</code> có giá trị <span class="arithmatex">$w$</span> lớn nhất được tìm ra. Nếu đây là bước lặp cuối cùng, kết quả được cập nhật nếu cần thiết, và gộp hai đỉnh được chọn cuối cùng <code>sel</code> và kề cuối <code>prev</code> lại làm một. Nếu không phải bước lặp cuối, đỉnh <code>sel</code> được thêm vào tập hợp <span class="arithmatex">$A$</span>, sau đó cập nhật lại trọng số của các đỉnh còn lại.</p>
+<p>Lưu ý rằng thuật toán sẽ làm thay đổi ma trận kề <code>g</code> trong quá trình chạy, nên nếu bạn cần sử dụng lại đồ thị sau đó, hãy sao lưu một bản trước khi gọi hàm.</p>
 <div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAXN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">g</span><span class="p">[</span><span class="n">MAXN</span><span class="p">][</span><span class="n">MAXN</span><span class="p">];</span>
@@ -8120,7 +8120,7 @@ Describe the issue of this article in detail.
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="literature">Literature<a class="headerlink" href="#literature" title="Permanent link">&para;</a></h2>
+<h2 id="tai-lieu-tham-khao">Tài liệu tham khảo<a class="headerlink" href="#tai-lieu-tham-khao" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://dl.acm.org/doi/10.1145/263867.263872">Mechthild Stoer, Frank Wagner. A Simple Min-Cut Algorithm. Journal of the ACM, 44(4):585-591, 1997</a></li>
 <li><a href="https://www.researchgate.net/publication/2483703_The_minimum_cut_algorithm_of_Stoer_and_Wagner">Kurt Mehlhorn, Christian Uhrig. The minimum cut algorithm of Stoer and Wagner [1995]</a></li>
@@ -8128,7 +8128,7 @@ Describe the issue of this article in detail.
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (100.0%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>
