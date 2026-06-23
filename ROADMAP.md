@@ -143,7 +143,7 @@ Dịch 124 bài viết còn lại, bao phủ 100% nội dung.
 | | Bridges/Articulations (5), Spanning trees (6), Cycles (3), LCA (5), Flows (9), Matching (3), Misc (6) + bài còn lại | | | |
 | 3.3 | **Geometry** | 26 bài | 12h | ✅ (26/26) |
 | | Elementary (9), Polygons (6), Convex hull (2), Sweep-line (1), Planar (2), Misc (6) | | | |
-| 3.4 | **Combinatorics** | 7 bài còn lại | 4h | ⬜ |
+| 3.4 | **Combinatorics** | 7 bài còn lại | 4h | ✅ (7/7) |
 | | Inclusion-Exclusion, Burnside, Stars&Bars, Brackets, Bishops, Labeled graphs, Combinations | | | |
 | 3.5 | **String nâng cao** | 8 bài còn lại | 5h | ⬜ |
 | | Suffix Tree, Suffix Automaton, Aho-Corasick, Manacher, Lyndon, Rabin-Karp, Expression parsing, Repetitions | | | |
