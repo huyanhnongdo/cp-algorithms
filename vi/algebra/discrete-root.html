@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#discrete-root" class="md-skip">
+        <a href="#can-roi-rac" class="md-skip">
           Bỏ qua
         </a>
       
@@ -1376,10 +1376,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -1387,10 +1387,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#finding-all-solutions-from-one-known-solution" class="md-nav__link">
+  <a href="#tim-tat-ca-cac-nghiem-tu-mot-nghiem-a-biet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Finding all solutions from one known solution
+        Tìm tất cả các nghiệm từ một nghiệm đã biết
       
     </span>
   </a>
@@ -1398,10 +1398,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -1409,10 +1409,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-luyen-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice problems
+        Bài tập luyện tập
       
     </span>
   </a>
@@ -7971,13 +7971,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/discrete-root.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/discrete-root.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/discrete-root.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/discrete-root.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7988,26 +7988,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8043,32 +8023,32 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="discrete-root">Discrete Root<a class="headerlink" href="#discrete-root" title="Permanent link">&para;</a></h1>
-<p>The problem of finding a discrete root is defined as follows. Given a prime <span class="arithmatex">$n$</span> and two integers <span class="arithmatex">$a$</span> and <span class="arithmatex">$k$</span>, find all <span class="arithmatex">$x$</span> for which:</p>
+<h1 id="can-roi-rac">Căn rời rạc<a class="headerlink" href="#can-roi-rac" title="Permanent link">&para;</a></h1>
+<p>Bài toán tìm căn rời rạc được phát biểu như sau. Cho số nguyên tố <span class="arithmatex">$n$</span> và hai số nguyên <span class="arithmatex">$a$</span> và <span class="arithmatex">$k$</span>, tìm tất cả các số <span class="arithmatex">$x$</span> sao cho:</p>
 <p><span class="arithmatex">$x^k \equiv a \pmod n$</span></p>
-<h2 id="the-algorithm">The algorithm<a class="headerlink" href="#the-algorithm" title="Permanent link">&para;</a></h2>
-<p>We will solve this problem by reducing it to the <a href="discrete-log.html">discrete logarithm problem</a>.</p>
-<p>Let's apply the concept of a <a href="primitive-root.html">primitive root</a> modulo <span class="arithmatex">$n$</span>. Let <span class="arithmatex">$g$</span> be a primitive root modulo <span class="arithmatex">$n$</span>. Note that since <span class="arithmatex">$n$</span> is prime, it must exist, and it can be found in <span class="arithmatex">$O(Ans \cdot \log \phi (n) \cdot \log n) = O(Ans \cdot \log^2 n)$</span> plus time of factoring <span class="arithmatex">$\phi (n)$</span>.</p>
-<p>We can easily discard the case where <span class="arithmatex">$a = 0$</span>. In this case, obviously there is only one answer: <span class="arithmatex">$x = 0$</span>.</p>
-<p>Since we know that <span class="arithmatex">$n$</span> is a prime and any number between 1 and <span class="arithmatex">$n-1$</span> can be represented as a power of the primitive root, we can represent the discrete root problem as follows:</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Chúng ta sẽ giải bài toán này bằng cách đưa nó về <a href="discrete-log.html">bài toán logarit rời rạc</a>.</p>
+<p>Hãy áp dụng khái niệm <a href="primitive-root.html">căn nguyên thủy</a> mô-đun <span class="arithmatex">$n$</span>. Gọi <span class="arithmatex">$g$</span> là một căn nguyên thủy mô-đun <span class="arithmatex">$n$</span>. Lưu ý rằng vì <span class="arithmatex">$n$</span> là số nguyên tố, căn nguyên thủy này chắc chắn tồn tại và có thể được tìm thấy trong thời gian <span class="arithmatex">$O(Ans \cdot \log \phi (n) \cdot \log n) = O(Ans \cdot \log^2 n)$</span> cộng với thời gian phân tích thừa số nguyên tố <span class="arithmatex">$\phi (n)$</span>.</p>
+<p>Chúng ta có thể dễ dàng loại bỏ trường hợp <span class="arithmatex">$a = 0$</span>. Trong trường hợp này, rõ ràng chỉ có một nghiệm duy nhất: <span class="arithmatex">$x = 0$</span>.</p>
+<p>Vì biết <span class="arithmatex">$n$</span> là số nguyên tố nên bất kỳ số nào từ 1 đến <span class="arithmatex">$n-1$</span> đều có thể biểu diễn dưới dạng lũy thừa của căn nguyên thủy, ta có thể biểu diễn bài toán căn rời rạc như sau:</p>
 <p><span class="arithmatex">$(g^y)^k \equiv a \pmod n$</span></p>
-<p>where</p>
+<p>trong đó</p>
 <p><span class="arithmatex">$x \equiv g^y \pmod n$</span></p>
-<p>This, in turn, can be rewritten as</p>
+<p>Phương trình trên có thể được viết lại thành</p>
 <p><span class="arithmatex">$(g^k)^y \equiv a \pmod n$</span></p>
-<p>Now we have one unknown <span class="arithmatex">$y$</span>, which is a discrete logarithm problem. The solution can be found using Shanks' baby-step giant-step algorithm in <span class="arithmatex">$O(\sqrt {n} \log n)$</span> (or we can verify that there are no solutions).</p>
-<p>Having found one solution <span class="arithmatex">$y_0$</span>, one of solutions of discrete root problem will be <span class="arithmatex">$x_0 = g^{y_0} \pmod n$</span>.</p>
-<h2 id="finding-all-solutions-from-one-known-solution">Finding all solutions from one known solution<a class="headerlink" href="#finding-all-solutions-from-one-known-solution" title="Permanent link">&para;</a></h2>
-<p>To solve the given problem in full, we need to find all solutions knowing one of them: <span class="arithmatex">$x_0 = g^{y_0} \pmod n$</span>.</p>
-<p>Let's recall the fact that a primitive root always has order of <span class="arithmatex">$\phi (n)$</span>, i.e. the smallest power of <span class="arithmatex">$g$</span> which gives 1 is <span class="arithmatex">$\phi (n)$</span>. Therefore, if we add the term <span class="arithmatex">$\phi (n)$</span> to the exponential, we still get the same value:</p>
+<p>Bây giờ chúng ta chỉ còn một ẩn chưa biết là <span class="arithmatex">$y$</span>, đây chính là bài toán logarit rời rạc. Nghiệm có thể được tìm thấy bằng cách sử dụng thuật toán baby-step giant-step của Shanks trong thời gian <span class="arithmatex">$O(\sqrt {n} \log n)$</span> (hoặc ta có thể xác định được rằng phương trình vô nghiệm).</p>
+<p>Sau khi tìm thấy một nghiệm <span class="arithmatex">$y_0$</span>, một nghiệm của bài toán căn rời rạc sẽ là <span class="arithmatex">$x_0 = g^{y_0} \pmod n$</span>.</p>
+<h2 id="tim-tat-ca-cac-nghiem-tu-mot-nghiem-a-biet">Tìm tất cả các nghiệm từ một nghiệm đã biết<a class="headerlink" href="#tim-tat-ca-cac-nghiem-tu-mot-nghiem-a-biet" title="Permanent link">&para;</a></h2>
+<p>Để giải quyết trọn vẹn bài toán đã cho, chúng ta cần tìm tất cả các nghiệm khi biết một nghiệm của chúng: <span class="arithmatex">$x_0 = g^{y_0} \pmod n$</span>.</p>
+<p>Hãy nhớ lại tính chất rằng căn nguyên thủy luôn có bậc (order) là <span class="arithmatex">$\phi (n)$</span>, tức là số mũ nhỏ nhất <span class="arithmatex">$g$</span> để cho kết quả đồng dư với 1 là <span class="arithmatex">$\phi (n)$</span>. Do đó, nếu ta cộng thêm số hạng <span class="arithmatex">$\phi (n)$</span> vào số mũ, giá trị nhận được vẫn không đổi:</p>
 <p><span class="arithmatex">$x^k \equiv g^{ y_0 \cdot k + l \cdot \phi (n)} \equiv a \pmod n \forall l \in Z$</span></p>
-<p>Hence, all the solutions are of the form:</p>
+<p>Vì vậy, tất cả các nghiệm đều có dạng:</p>
 <p><span class="arithmatex">$x = g^{y_0 + \frac {l \cdot \phi (n)}{k}} \pmod n \forall l \in Z$</span>.</p>
-<p>where <span class="arithmatex">$l$</span> is chosen such that the fraction must be an integer. For this to be true, the numerator has to be divisible by the least common multiple of  <span class="arithmatex">$\phi (n)$</span> and <span class="arithmatex">$k$</span>. Remember that least common multiple of two numbers <span class="arithmatex">$lcm(a, b) = \frac{a \cdot b}{gcd(a, b)}$</span>; we'll get</p>
+<p>trong đó <span class="arithmatex">$l$</span> được chọn sao cho phân số phải là một số nguyên. Để điều này xảy ra, tử số phải chia hết cho bội chung nhỏ nhất (LCM) của <span class="arithmatex">$\phi (n)$</span> và <span class="arithmatex">$k$</span>. Nhớ lại rằng bội chung nhỏ nhất của hai số <span class="arithmatex">$lcm(a, b) = \frac{a \cdot b}{gcd(a, b)}$</span>; ta thu được:</p>
 <p><span class="arithmatex">$x = g^{y_0 + i \frac {\phi (n)}{gcd(k, \phi (n))}} \pmod n \forall i \in Z$</span>.</p>
-<p>This is the final formula for all solutions of the discrete root problem.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>Here is a full implementation, including procedures for finding the primitive root, discrete log and finding and printing all solutions.</p>
+<p>Đây là công thức cuối cùng cho tất cả các nghiệm của bài toán căn rời rạc.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Dưới đây là cài đặt đầy đủ, bao gồm các thủ tục tìm căn nguyên thủy, logarit rời rạc cũng như tìm và in ra tất cả các nghiệm.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="p">}</span>
@@ -8154,14 +8134,14 @@ Describe the issue of this article in detail.
 <span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">answer</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="practice-problems">Practice problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap-luyen-tap">Bài tập luyện tập<a class="headerlink" href="#bai-tap-luyen-tap" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://codeforces.com/contest/1106/problem/F">Codeforces - Lunar New Year and a Recursive Sequence</a></li>
 </ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="thanhtnguyen" data-bi-name="contributorprofile" target="_blank">thanhtnguyen</a> (60.14%)</li><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (21.62%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (12.16%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (4.05%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (1.35%)</li><li><a href="#" title="WalidGhallab" data-bi-name="contributorprofile" target="_blank">WalidGhallab</a> (0.68%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#depth-first-search" class="md-skip">
+        <a href="#tim-kiem-theo-chieu-sau-depth-first-search" class="md-skip">
           Bỏ qua
         </a>
       
@@ -5481,10 +5481,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description-of-the-algorithm" class="md-nav__link">
+  <a href="#mo-ta-thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description of the algorithm
+        Mô tả thuật toán
       
     </span>
   </a>
@@ -5492,10 +5492,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#applications-of-depth-first-search" class="md-nav__link">
+  <a href="#ung-dung-cua-dfs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Applications of Depth First Search
+        Ứng dụng của DFS
       
     </span>
   </a>
@@ -5503,10 +5503,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#classification-of-edges-of-a-graph" class="md-nav__link">
+  <a href="#phan-loai-cac-canh-trong-o-thi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Classification of edges of a graph
+        Phân loại các cạnh trong đồ thị
       
     </span>
   </a>
@@ -5514,10 +5514,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -5525,10 +5525,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-ap-dung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập áp dụng
       
     </span>
   </a>
@@ -7982,13 +7982,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/depth-first-search.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/depth-first-search.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/depth-first-search.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/depth-first-search.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7999,46 +7999,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8074,84 +8034,84 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="depth-first-search">Depth First Search<a class="headerlink" href="#depth-first-search" title="Permanent link">&para;</a></h1>
-<p>Depth First Search is one of the main graph algorithms.</p>
-<p>Depth First Search finds the lexicographical first path in the graph from a source vertex <span class="arithmatex">$u$</span> to each vertex.
-Depth First Search will also find the shortest paths in a tree (because there only exists one simple path), but on general graphs this is not the case.</p>
-<p>The algorithm works in <span class="arithmatex">$O(m + n)$</span> time where <span class="arithmatex">$n$</span> is the number of vertices and <span class="arithmatex">$m$</span> is the number of edges.</p>
-<h2 id="description-of-the-algorithm">Description of the algorithm<a class="headerlink" href="#description-of-the-algorithm" title="Permanent link">&para;</a></h2>
-<p>The idea behind DFS is to go as deep into the graph as possible, and backtrack once you are at a vertex without any unvisited adjacent vertices.</p>
-<p>It is very easy to describe / implement the algorithm recursively:
-We start the search at one vertex.
-After visiting a vertex, we further perform a DFS for each adjacent vertex that we haven't visited before.
-This way we visit all vertices that are reachable from the starting vertex.</p>
-<p>For more details check out the implementation.</p>
-<h2 id="applications-of-depth-first-search">Applications of Depth First Search<a class="headerlink" href="#applications-of-depth-first-search" title="Permanent link">&para;</a></h2>
+<h1 id="tim-kiem-theo-chieu-sau-depth-first-search">Tìm kiếm theo chiều sâu (Depth First Search)<a class="headerlink" href="#tim-kiem-theo-chieu-sau-depth-first-search" title="Permanent link">&para;</a></h1>
+<p>Tìm kiếm theo chiều sâu (Depth First Search - DFS) là một trong những thuật toán cơ bản trên đồ thị.</p>
+<p>DFS tìm kiếm đường đi đầu tiên theo thứ tự từ điển trong đồ thị từ đỉnh nguồn <span class="arithmatex">$u$</span> đến mỗi đỉnh khác.
+DFS cũng có thể tìm đường đi ngắn nhất trên cây (vì trên cây chỉ tồn tại duy nhất một đường đi đơn giữa hai đỉnh bất kỳ), nhưng điều này không còn đúng trên đồ thị tổng quát.</p>
+<p>Thuật toán hoạt động trong thời gian <span class="arithmatex">$O(n + m)$</span>, trong đó <span class="arithmatex">$n$</span> là số đỉnh và <span class="arithmatex">$m$</span> là số cạnh của đồ thị.</p>
+<h2 id="mo-ta-thuat-toan">Mô tả thuật toán<a class="headerlink" href="#mo-ta-thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Ý tưởng chính của DFS là đi càng sâu vào đồ thị càng tốt, và chỉ quay lui (backtrack) khi bạn đang ở một đỉnh mà tất cả các đỉnh kề của nó đều đã được duyệt.</p>
+<p>Thuật toán rất dễ mô tả và cài đặt bằng đệ quy:
+Chúng ta bắt đầu quá trình tìm kiếm tại một đỉnh.
+Sau khi truy cập đỉnh này, chúng ta tiếp tục thực hiện DFS cho từng đỉnh kề chưa được duyệt trước đó.
+Bằng cách này, chúng ta sẽ truy cập tất cả các đỉnh có thể đi tới từ đỉnh xuất phát.</p>
+<p>Xem phần cài đặt để biết thêm chi tiết.</p>
+<h2 id="ung-dung-cua-dfs">Ứng dụng của DFS<a class="headerlink" href="#ung-dung-cua-dfs" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Find any path in the graph from source vertex <span class="arithmatex">$u$</span> to all vertices.</p>
+<p>Tìm đường đi bất kỳ trong đồ thị từ đỉnh nguồn <span class="arithmatex">$u$</span> đến mọi đỉnh khác.</p>
 </li>
 <li>
-<p>Find lexicographical first path in the graph from source <span class="arithmatex">$u$</span> to all vertices.</p>
+<p>Tìm đường đi đầu tiên theo thứ tự từ điển trong đồ thị từ đỉnh nguồn <span class="arithmatex">$u$</span> đến mọi đỉnh khác.</p>
 </li>
 <li>
-<p>Check if a vertex in a tree is an ancestor of some other vertex:</p>
-<p>At the beginning and end of each search call we remember the entry and exit "time" of each vertex.
-Now you can find the answer for any pair of vertices <span class="arithmatex">$(i, j)$</span> in <span class="arithmatex">$O(1)$</span>:
-vertex <span class="arithmatex">$i$</span> is an ancestor of vertex <span class="arithmatex">$j$</span> if and only if <span class="arithmatex">$\text{entry}[i] &lt; \text{entry}[j]$</span> and <span class="arithmatex">$\text{exit}[i] &gt; \text{exit}[j]$</span>.</p>
+<p>Kiểm tra xem một đỉnh trong cây có phải là tổ tiên của một đỉnh khác hay không:</p>
+<p>Tại thời điểm bắt đầu và kết thúc của mỗi lời gọi hàm tìm kiếm, chúng ta lưu lại "thời gian" đi vào (entry) và đi ra (exit) của mỗi đỉnh.
+Bây giờ bạn có thể trả lời câu hỏi cho bất kỳ cặp đỉnh <span class="arithmatex">$(i, j)$</span> nào trong thời gian <span class="arithmatex">$O(1)$</span>:
+đỉnh <span class="arithmatex">$i$</span> là tổ tiên của đỉnh <span class="arithmatex">$j$</span> khi và chỉ khi <span class="arithmatex">$\text{entry}[i] &lt; \text{entry}[j]$</span> và <span class="arithmatex">$\text{exit}[i] &gt; \text{exit}[j]$</span>.</p>
 </li>
 <li>
-<p>Find the lowest common ancestor (LCA) of two vertices.</p>
+<p>Tìm tổ tiên chung gần nhất (LCA) của hai đỉnh.</p>
 </li>
 <li>
-<p>Topological sorting:</p>
-<p>Run a series of depth first searches so as to visit each vertex exactly once in <span class="arithmatex">$O(n + m)$</span> time.
-The required topological ordering will be the vertices sorted in descending order of exit time.</p>
+<p>Sắp xếp topo (Topological sorting):</p>
+<p>Chạy một loạt các lượt duyệt DFS để truy cập mỗi đỉnh đúng một lần trong thời gian <span class="arithmatex">$O(n + m)$</span>.
+Thứ tự topo cần tìm chính là thứ tự các đỉnh được sắp xếp theo chiều giảm dần của thời điểm hoàn thành (exit time).</p>
 </li>
 <li>
-<p>Check whether a given graph is acyclic and find cycles in a graph. (As mentioned below by counting back edges in every connected components).</p>
+<p>Kiểm tra xem một đồ thị cho trước có chu trình hay không và tìm các chu trình trong đồ thị (bằng cách đếm các cạnh ngược trong mỗi thành phần liên thông).</p>
 </li>
 <li>
-<p>Find strongly connected components in a directed graph:</p>
-<p>First do a topological sorting of the graph.
-Then transpose the graph and run another series of depth first searches in the order defined by the topological sort. For each DFS call the component created by it is a strongly connected component.</p>
+<p>Tìm các thành phần liên thông mạnh trong đồ thị có hướng:</p>
+<p>Đầu tiên thực hiện sắp xếp topo cho đồ thị.
+Sau đó chuyển vị đồ thị (transpose graph - đảo ngược chiều tất cả các cạnh) và chạy một loạt các lượt duyệt DFS khác theo thứ tự định ra bởi phép sắp xếp topo. Mỗi lượt duyệt DFS sẽ tạo ra một thành phần liên thông mạnh.</p>
 </li>
 <li>
-<p>Find bridges in an undirected graph:</p>
-<p>First convert the given graph into a directed graph by running a series of depth first searches and making each edge directed as we go through it, in the direction we went. Second, find the strongly connected components in this directed graph. Bridges are the edges whose ends belong to different strongly connected components.</p>
+<p>Tìm cầu trong đồ thị vô hướng:</p>
+<p>Đầu tiên chuyển đồ thị vô hướng đã cho thành đồ thị có hướng bằng cách chạy DFS và định hướng mỗi cạnh theo chiều đi của DFS. Thứ hai, tìm các thành phần liên thông mạnh của đồ thị có hướng này. Các cầu chính là các cạnh có hai đầu thuộc về hai thành phần liên thông mạnh khác nhau.</p>
 </li>
 </ul>
-<h2 id="classification-of-edges-of-a-graph">Classification of edges of a graph<a class="headerlink" href="#classification-of-edges-of-a-graph" title="Permanent link">&para;</a></h2>
-<p>We can classify the edges of a graph, <span class="arithmatex">$G$</span>, using the entry and exit time of the end nodes <span class="arithmatex">$u$</span> and <span class="arithmatex">$v$</span> of the edges <span class="arithmatex">$(u,v)$</span>.
-These classifications are often used for problems like <a href="bridge-searching.html">finding bridges</a> and <a href="cutpoints.html">finding articulation points</a>.</p>
-<p>We perform a DFS and classify the encountered edges using the following rules:</p>
-<p>If <span class="arithmatex">$v$</span> is not visited:</p>
+<h2 id="phan-loai-cac-canh-trong-o-thi">Phân loại các cạnh trong đồ thị<a class="headerlink" href="#phan-loai-cac-canh-trong-o-thi" title="Permanent link">&para;</a></h2>
+<p>Chúng ta có thể phân loại các cạnh của đồ thị <span class="arithmatex">$G$</span> dựa trên thời gian đi vào (entry) và đi ra (exit) của các đỉnh đầu mút <span class="arithmatex">$u$</span> và <span class="arithmatex">$v$</span> của cạnh <span class="arithmatex">$(u, v)$</span>.
+Việc phân loại này thường được sử dụng cho các bài toán như <a href="bridge-searching.html">tìm cầu</a> và <a href="cutpoints.html">tìm khớp (điểm khớp - articulation points)</a>.</p>
+<p>Chúng ta thực hiện duyệt DFS và phân loại các cạnh gặp phải theo các quy tắc sau:</p>
+<p>Nếu <span class="arithmatex">$v$</span> chưa được duyệt:</p>
 <ul>
-<li>Tree Edge - If <span class="arithmatex">$v$</span> is visited after <span class="arithmatex">$u$</span> then edge <span class="arithmatex">$(u,v)$</span> is called a tree edge. In other words, if <span class="arithmatex">$v$</span> is visited for the first time and <span class="arithmatex">$u$</span> is currently being visited then <span class="arithmatex">$(u,v)$</span> is called tree edge.
-These edges form a DFS tree and hence the name tree edges.</li>
+<li>Cạnh cây khung (Tree Edge) - Nếu <span class="arithmatex">$v$</span> được duyệt ngay sau <span class="arithmatex">$u$</span> thì cạnh <span class="arithmatex">$(u, v)$</span> được gọi là cạnh cây khung. Nói cách khác, nếu <span class="arithmatex">$v$</span> được thăm lần đầu tiên từ đỉnh <span class="arithmatex">$u$</span> đang duyệt thì <span class="arithmatex">$(u, v)$</span> là cạnh cây khung.
+Các cạnh này tạo thành cây khung DFS, do đó có tên gọi này.</li>
 </ul>
-<p>If <span class="arithmatex">$v$</span> is visited before <span class="arithmatex">$u$</span>:</p>
-<ul>
-<li>
-<p>Back edges - If <span class="arithmatex">$v$</span> is an ancestor of <span class="arithmatex">$u$</span>, then the edge <span class="arithmatex">$(u,v)$</span> is a back edge. <span class="arithmatex">$v$</span> is an ancestor exactly if we already entered <span class="arithmatex">$v$</span>, but not exited it yet. Back edges complete a cycle as there is a path from ancestor <span class="arithmatex">$v$</span> to descendant <span class="arithmatex">$u$</span> (in the recursion of DFS) and an edge from descendant <span class="arithmatex">$u$</span> to ancestor <span class="arithmatex">$v$</span> (back edge), thus a cycle is formed. Cycles can be detected using back edges.</p>
-</li>
-<li>
-<p>Forward Edges - If <span class="arithmatex">$v$</span> is a descendant of <span class="arithmatex">$u$</span>, then edge <span class="arithmatex">$(u, v)$</span> is a forward edge. In other words, if we already visited and exited <span class="arithmatex">$v$</span> and <span class="arithmatex">$\text{entry}[u] &lt; \text{entry}[v]$</span> then the edge <span class="arithmatex">$(u,v)$</span> forms a forward edge.</p>
-</li>
-<li>Cross Edges: if <span class="arithmatex">$v$</span> is neither an ancestor or descendant of <span class="arithmatex">$u$</span>, then edge <span class="arithmatex">$(u, v)$</span> is a cross edge. In other words, if we already visited and exited <span class="arithmatex">$v$</span> and <span class="arithmatex">$\text{entry}[u] &gt; \text{entry}[v]$</span> then <span class="arithmatex">$(u,v)$</span> is a cross edge.</li>
-</ul>
-<p><strong>Theorem</strong>. Let <span class="arithmatex">$G$</span> be an undirected graph. Then, performing a DFS upon <span class="arithmatex">$G$</span> will classify every encountered edge as either a tree edge or back edge, i.e., forward and cross edges only exist in directed graphs.</p>
-<p>Suppose <span class="arithmatex">$(u,v)$</span> is an arbitrary edge of <span class="arithmatex">$G$</span> and without loss of generality, <span class="arithmatex">$u$</span> is visited before <span class="arithmatex">$v$</span>, i.e., <span class="arithmatex">$\text{entry}[u] &lt; \text{entry}[v]$</span>. Because the DFS only processes edges once, there are only two ways in which we can process the edge <span class="arithmatex">$(u,v)$</span> and thus classify it: </p>
+<p>Nếu <span class="arithmatex">$v$</span> đã được duyệt trước <span class="arithmatex">$u$</span>:</p>
 <ul>
 <li>
-<p>The first time we explore the edge <span class="arithmatex">$(u,v)$</span> is in the direction from <span class="arithmatex">$u$</span> to <span class="arithmatex">$v$</span>. Because <span class="arithmatex">$\text{entry}[u] &lt; \text{entry}[v]$</span>, the recursive nature of the DFS means that node <span class="arithmatex">$v$</span> will be fully explored and thus exited before we can "move back up the call stack" to exit node <span class="arithmatex">$u$</span>. Thus, node <span class="arithmatex">$v$</span> must be unvisited when the DFS first explores the edge <span class="arithmatex">$(u,v)$</span> from <span class="arithmatex">$u$</span> to <span class="arithmatex">$v$</span> because otherwise the search would have explored <span class="arithmatex">$(u,v)$</span> from <span class="arithmatex">$v$</span> to <span class="arithmatex">$u$</span> before exiting node <span class="arithmatex">$v$</span>, as nodes <span class="arithmatex">$u$</span> and <span class="arithmatex">$v$</span> are neighbors. Therefore, edge <span class="arithmatex">$(u,v)$</span> is a tree edge.</p>
+<p>Cạnh ngược (Back Edge) - Nếu <span class="arithmatex">$v$</span> là tổ tiên của <span class="arithmatex">$u$</span> thì cạnh <span class="arithmatex">$(u, v)$</span> là cạnh ngược. <span class="arithmatex">$v$</span> là tổ tiên khi và chỉ khi chúng ta đã đi vào <span class="arithmatex">$v$</span> nhưng chưa thoát ra khỏi nó. Cạnh ngược tạo thành một chu trình vì có một đường đi từ tổ tiên <span class="arithmatex">$v$</span> đến hậu duệ <span class="arithmatex">$u$</span> (trong cây DFS) và một cạnh ngược từ hậu duệ <span class="arithmatex">$u$</span> quay về tổ tiên <span class="arithmatex">$v$</span>. Các chu trình trong đồ thị có thể được phát hiện thông qua các cạnh ngược.</p>
 </li>
 <li>
-<p>The first time we explore the edge <span class="arithmatex">$(u,v)$</span> is in the direction from <span class="arithmatex">$v$</span> to <span class="arithmatex">$u$</span>. Because we discovered node <span class="arithmatex">$u$</span> before discovering node <span class="arithmatex">$v$</span>, and we only process edges once, the only way that we could explore the edge <span class="arithmatex">$(u,v)$</span> in the direction from <span class="arithmatex">$v$</span> to <span class="arithmatex">$u$</span> is if there's another path from <span class="arithmatex">$u$</span> to <span class="arithmatex">$v$</span> that does not involve the edge <span class="arithmatex">$(u,v)$</span>, thus making <span class="arithmatex">$u$</span> an ancestor of <span class="arithmatex">$v$</span>. The edge <span class="arithmatex">$(u,v)$</span> thus completes a cycle as it is going from the descendant, <span class="arithmatex">$v$</span>, to the ancestor, <span class="arithmatex">$u$</span>, which we have not exited yet. Therefore, edge <span class="arithmatex">$(u,v)$</span> is a back edge.</p>
+<p>Cạnh xuôi (Forward Edge) - Nếu <span class="arithmatex">$v$</span> là hậu duệ của <span class="arithmatex">$u$</span> thì cạnh <span class="arithmatex">$(u, v)$</span> là cạnh xuôi. Nói cách khác, nếu chúng ta đã duyệt và đi ra khỏi <span class="arithmatex">$v$</span>, đồng thời <span class="arithmatex">$\text{entry}[u] &lt; \text{entry}[v]$</span> thì cạnh <span class="arithmatex">$(u, v)$</span> tạo thành cạnh xuôi.</p>
+</li>
+<li>Cạnh chéo (Cross Edge) - Nếu <span class="arithmatex">$v$</span> không phải tổ tiên cũng không phải hậu duệ của <span class="arithmatex">$u$</span> thì cạnh <span class="arithmatex">$(u, v)$</span> là cạnh chéo. Nói cách khác, nếu chúng ta đã duyệt và đi ra khỏi <span class="arithmatex">$v$</span>, đồng thời <span class="arithmatex">$\text{entry}[u] &gt; \text{entry}[v]$</span> thì <span class="arithmatex">$(u, v)$</span> là cạnh chéo.</li>
+</ul>
+<p><strong>Định lý</strong>. Gọi <span class="arithmatex">$G$</span> là một đồ thị vô hướng. Khi đó, quá trình duyệt DFS trên <span class="arithmatex">$G$</span> sẽ phân loại mọi cạnh gặp phải thành cạnh cây khung hoặc cạnh ngược, tức là cạnh xuôi và cạnh chéo chỉ tồn tại trong đồ thị có hướng.</p>
+<p>Giả sử <span class="arithmatex">$(u, v)$</span> là một cạnh bất kỳ của <span class="arithmatex">$G$</span> và không mất tính tổng quát, <span class="arithmatex">$u$</span> được duyệt trước <span class="arithmatex">$v$</span>, tức là <span class="arithmatex">$\text{entry}[u] &lt; \text{entry}[v]$</span>. Vì DFS chỉ xử lý mỗi cạnh một lần, có hai cách duy nhất mà cạnh <span class="arithmatex">$(u, v)$</span> được xử lý và phân loại:</p>
+<ul>
+<li>
+<p>Lần đầu tiên chúng ta duyệt qua cạnh <span class="arithmatex">$(u, v)$</span> là theo chiều từ <span class="arithmatex">$u$</span> sang <span class="arithmatex">$v$</span>. Vì <span class="arithmatex">$\text{entry}[u] &lt; \text{entry}[v]$</span>, tính chất đệ quy của DFS đảm bảo rằng đỉnh <span class="arithmatex">$v$</span> sẽ được duyệt xong hoàn toàn và thoát ra trước khi chúng ta quay ngược lại ngăn xếp cuộc gọi để thoát khỏi <span class="arithmatex">$u$</span>. Do đó, đỉnh <span class="arithmatex">$v$</span> bắt buộc phải là đỉnh chưa được duyệt khi DFS lần đầu tiên khám phá cạnh <span class="arithmatex">$(u, v)$</span> từ <span class="arithmatex">$u$</span> sang <span class="arithmatex">$v$</span>, vì nếu ngược lại thì tìm kiếm đã đi theo cạnh <span class="arithmatex">$(u, v)$</span> từ <span class="arithmatex">$v$</span> sang <span class="arithmatex">$u$</span> trước khi thoát khỏi <span class="arithmatex">$v$</span> (do <span class="arithmatex">$u$</span> và <span class="arithmatex">$v$</span> là kề nhau). Vì vậy, cạnh <span class="arithmatex">$(u, v)$</span> là cạnh cây khung.</p>
+</li>
+<li>
+<p>Lần đầu tiên chúng ta duyệt qua cạnh <span class="arithmatex">$(u, v)$</span> là theo chiều từ <span class="arithmatex">$v$</span> sang <span class="arithmatex">$u$</span>. Vì chúng ta phát hiện ra <span class="arithmatex">$u$</span> trước <span class="arithmatex">$v$</span>, và mỗi cạnh chỉ được xử lý một lần, cách duy nhất để duyệt qua cạnh <span class="arithmatex">$(u, v)$</span> từ <span class="arithmatex">$v$</span> sang <span class="arithmatex">$u$</span> là tồn tại một đường đi khác từ <span class="arithmatex">$u$</span> tới <span class="arithmatex">$v$</span> không chứa cạnh <span class="arithmatex">$(u, v)$</span>, khiến <span class="arithmatex">$u$</span> trở thành tổ tiên của <span class="arithmatex">$v$</span>. Cạnh <span class="arithmatex">$(u, v)$</span> khi đó hoàn thành một chu trình nối từ hậu duệ <span class="arithmatex">$v$</span> quay về tổ tiên <span class="arithmatex">$u$</span> chưa được thoát ra. Vì vậy, cạnh <span class="arithmatex">$(u, v)$</span> là cạnh ngược.</p>
 </li>
 </ul>
-<p>Since there are only two ways to process the edge <span class="arithmatex">$(u,v)$</span>, with the two cases and their resulting classifications outlined above, performing a DFS upon <span class="arithmatex">$G$</span> will therefore classify every encountered edge as either a tree edge or back edge, i.e., forward and cross edges only exist in directed graphs. This completes the proof.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<p>Vì chỉ có hai cách để xử lý cạnh <span class="arithmatex">$(u, v)$</span> như trên, việc thực hiện DFS trên đồ thị vô hướng <span class="arithmatex">$G$</span> sẽ luôn phân loại mọi cạnh thành cạnh cây khung hoặc cạnh ngược. Cạnh xuôi và cạnh chéo chỉ tồn tại trên đồ thị có hướng. Định lý được chứng minh hoàn toàn.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
 <p><div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="p">;</span><span class="w"> </span><span class="c1">// graph represented as an adjacency list</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="c1">// number of vertices</span>
 
@@ -8165,10 +8125,10 @@ These edges form a DFS tree and hence the name tree edges.</li>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-This is the most simple implementation of Depth First Search.
-As described in the applications it might be useful to also compute the entry and exit times and vertex color.
-We will color all vertices with the color 0, if we haven't visited them, with the color 1 if we visited them, and with the color 2, if we already exited the vertex.</p>
-<p>Here is a generic implementation that additionally computes those:</p>
+Đây là cài đặt đơn giản nhất của thuật toán DFS.
+Như đã mô tả trong phần ứng dụng, đôi khi việc lưu lại thời gian đi vào, đi ra và màu sắc của các đỉnh là rất hữu ích.
+Chúng ta tô màu các đỉnh chưa duyệt bằng màu 0, đỉnh đang duyệt bằng màu 1, và đỉnh đã duyệt xong hoàn toàn bằng màu 2.</p>
+<p>Dưới đây là cài đặt tổng quát hỗ trợ tính toán các thông tin trên:</p>
 <div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="p">;</span><span class="w"> </span><span class="c1">// graph represented as an adjacency list</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="c1">// number of vertices</span>
 
@@ -8187,14 +8147,14 @@ We will color all vertices with the color 0, if we haven't visited them, with th
 <span class="w">    </span><span class="n">time_out</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dfs_timer</span><span class="o">++</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap-ap-dung">Bài tập áp dụng<a class="headerlink" href="#bai-tap-ap-dung" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="http://www.spoj.com/problems/ABCPATH/">SPOJ: ABCPATH</a></li>
 <li><a href="http://www.spoj.com/problems/EAGLE1/">SPOJ: EAGLE1</a></li>
 <li><a href="http://codeforces.com/problemset/problem/580/C">Codeforces: Kefa and Park</a></li>
-<li><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1242">Timus:Werewolf</a></li>
-<li><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1709">Timus:Penguin Avia</a></li>
-<li><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1106">Timus:Two Teams</a></li>
+<li><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1242">Timus: Werewolf</a></li>
+<li><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1709">Timus: Penguin Avia</a></li>
+<li><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1106">Timus: Two Teams</a></li>
 <li><a href="http://www.spoj.com/problems/ADASEA/">SPOJ - Ada and Island</a></li>
 <li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=598">UVA 657 - The die is cast</a></li>
 <li><a href="http://www.spoj.com/problems/KOZE/">SPOJ - Sheep</a></li>
@@ -8232,7 +8192,7 @@ We will color all vertices with the color 0, if we haven't visited them, with th
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (27.81%)</li><li><a href="#" title="Param Singh" data-bi-name="contributorprofile" target="_blank">Param Singh</a> (20.12%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (17.75%)</li><li><a href="#" title="Madhur Chauhan" data-bi-name="contributorprofile" target="_blank">Madhur Chauhan</a> (13.61%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (6.51%)</li><li><a href="#" title="Elliot Ha" data-bi-name="contributorprofile" target="_blank">Elliot Ha</a> (5.92%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (3.55%)</li><li><a href="#" title="Bhuvnesh Jain" data-bi-name="contributorprofile" target="_blank">Bhuvnesh Jain</a> (2.37%)</li><li><a href="#" title="Mayank Pratap Singh" data-bi-name="contributorprofile" target="_blank">Mayank Pratap Singh</a> (1.18%)</li><li><a href="#" title="Vineet Kumar" data-bi-name="contributorprofile" target="_blank">Vineet Kumar</a> (0.59%)</li><li><a href="#" title="Zombiesalad1337" data-bi-name="contributorprofile" target="_blank">Zombiesalad1337</a> (0.59%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

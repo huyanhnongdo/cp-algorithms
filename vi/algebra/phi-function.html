@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eulers-totient-function" class="md-skip">
+        <a href="#ham-phi-euler" class="md-skip">
           Bỏ qua
         </a>
       
@@ -1069,10 +1069,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
+  <a href="#tinh-chat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Properties
+        Tính chất
       
     </span>
   </a>
@@ -1080,10 +1080,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -1103,7 +1103,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#finding-the-totient-from-l-to-r-using-the-segmented-sieve" class="md-nav__link">
+  <a href="#tim-ham-phi-tu-l-en-r-su-dung-sang-phan-oan" class="md-nav__link">
     <span class="md-ellipsis">
       
         Finding the totient from L to R using the segmented sieve
@@ -1122,16 +1122,16 @@
   <a href="#divsum" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Divisor sum property
+        Tính chất tổng ước số (Divisor sum property)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Divisor sum property">
+    <nav class="md-nav" aria-label="Tính chất tổng ước số (Divisor sum property)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#finding-the-totient-from-1-to-n-using-the-divisor-sum-property" class="md-nav__link">
+  <a href="#tim-ham-phi-tu-1-en-n-su-dung-tinh-chat-tong-uoc-so" class="md-nav__link">
     <span class="md-ellipsis">
       
         Finding the totient from 1 to n using the divisor sum property
@@ -1150,19 +1150,19 @@
   <a href="#application" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Application in Euler's theorem
+        Ứng dụng trong Định lý Euler
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Application in Euler&#39;s theorem">
+    <nav class="md-nav" aria-label="Ứng dụng trong Định lý Euler">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#group-theory" class="md-nav__link">
+  <a href="#ly-thuyet-nhom" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Group Theory
+        Lý thuyết Nhóm
       
     </span>
   </a>
@@ -1175,10 +1175,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generalization" class="md-nav__link">
+  <a href="#tong-quat-hoa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Generalization
+        Tổng quát hóa
       
     </span>
   </a>
@@ -1186,10 +1186,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-thuc-hanh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập thực hành
       
     </span>
   </a>
@@ -8055,13 +8055,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/phi-function.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/phi-function.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/phi-function.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/phi-function.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8072,90 +8072,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8191,47 +8107,47 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="eulers-totient-function">Euler's totient function<a class="headerlink" href="#eulers-totient-function" title="Permanent link">&para;</a></h1>
-<p>Euler's totient function, also known as <strong>phi-function</strong> <span class="arithmatex">$\phi (n)$</span>, counts the number of integers between 1 and <span class="arithmatex">$n$</span> inclusive, which are coprime to <span class="arithmatex">$n$</span>. Two numbers are coprime if their greatest common divisor equals <span class="arithmatex">$1$</span> (<span class="arithmatex">$1$</span> is considered to be coprime to any number).</p>
-<p>Here are values of <span class="arithmatex">$\phi(n)$</span> for the first few positive integers:</p>
+<h1 id="ham-phi-euler">Hàm phi Euler<a class="headerlink" href="#ham-phi-euler" title="Permanent link">&para;</a></h1>
+<p>Hàm phi Euler, hay còn gọi là <strong>hàm phi</strong> <span class="arithmatex">$\phi (n)$</span>, đếm số lượng số nguyên từ 1 đến <span class="arithmatex">$n$</span> nguyên tố cùng nhau với <span class="arithmatex">$n$</span>. Hai số được gọi là nguyên tố cùng nhau nếu ước chung lớn nhất (GCD) của chúng bằng <span class="arithmatex">$1$</span> (số <span class="arithmatex">$1$</span> được coi là nguyên tố cùng nhau với mọi số).</p>
+<p>Dưới đây là giá trị của <span class="arithmatex">$\phi(n)$</span> cho các số nguyên dương đầu tiên:</p>
 <div class="arithmatex">$$\begin{array}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 n &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 &amp; 11 &amp; 12 &amp; 13 &amp; 14 &amp; 15 &amp; 16 &amp; 17 &amp; 18 &amp; 19 &amp; 20 &amp; 21 \\\\ \hline
 \phi(n) &amp; 1 &amp; 1 &amp; 2 &amp; 2 &amp; 4 &amp; 2 &amp; 6 &amp; 4 &amp; 6 &amp; 4 &amp; 10 &amp; 4 &amp; 12 &amp; 6 &amp; 8 &amp; 8 &amp; 16 &amp; 6 &amp; 18 &amp; 8 &amp; 12 \\\\ \hline
 \end{array}$$</div>
-<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
-<p>The following properties of Euler totient function are sufficient to calculate it for any number:</p>
+<h2 id="tinh-chat">Tính chất<a class="headerlink" href="#tinh-chat" title="Permanent link">&para;</a></h2>
+<p>Các tính chất sau đây của hàm phi Euler là đủ để tính toán giá trị của nó cho bất kỳ số nào:</p>
 <ul>
-<li>If <span class="arithmatex">$p$</span> is a prime number, then <span class="arithmatex">$\gcd(p, q) = 1$</span> for all <span class="arithmatex">$1 \le q &lt; p$</span>. Therefore we have:</li>
+<li>Nếu <span class="arithmatex">$p$</span> là số nguyên tố, thì <span class="arithmatex">$\gcd(p, q) = 1$</span> với mọi <span class="arithmatex">$1 \le q &lt; p$</span>. Do đó chúng ta có:</li>
 </ul>
 <div class="arithmatex">$$\phi (p) = p - 1.$$</div>
 <ul>
-<li>If <span class="arithmatex">$p$</span> is a prime number and <span class="arithmatex">$k \ge 1$</span>, then there are exactly <span class="arithmatex">$p^k / p$</span> numbers between <span class="arithmatex">$1$</span> and <span class="arithmatex">$p^k$</span> that are divisible by <span class="arithmatex">$p$</span>.
-    Which gives us:</li>
+<li>Nếu <span class="arithmatex">$p$</span> là số nguyên tố và <span class="arithmatex">$k \ge 1$</span>, thì có đúng <span class="arithmatex">$p^k / p$</span> số nguyên nằm giữa <span class="arithmatex">$1$</span> và <span class="arithmatex">$p^k$</span> chia hết cho <span class="arithmatex">$p$</span>.
+    Từ đó ta có:</li>
 </ul>
 <div class="arithmatex">$$\phi(p^k) = p^k - p^{k-1}.$$</div>
 <ul>
 <li>
-<p>If <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span> are relatively prime, then:</p>
+<p>Nếu <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span> nguyên tố cùng nhau, thì:</p>
 <div class="arithmatex">$$\phi(a b) = \phi(a) \cdot \phi(b).$$</div>
-<p>This relation is not trivial to see. It follows from the <a href="chinese-remainder-theorem.html">Chinese remainder theorem</a>. The Chinese remainder theorem guarantees, that for each <span class="arithmatex">$0 \le x &lt; a$</span> and each <span class="arithmatex">$0 \le y &lt; b$</span>, there exists a unique <span class="arithmatex">$0 \le z &lt; a b$</span> with <span class="arithmatex">$z \equiv x \pmod{a}$</span> and <span class="arithmatex">$z \equiv y \pmod{b}$</span>. It's not hard to show that <span class="arithmatex">$z$</span> is coprime to <span class="arithmatex">$a b$</span> if and only if <span class="arithmatex">$x$</span> is coprime to <span class="arithmatex">$a$</span> and <span class="arithmatex">$y$</span> is coprime to <span class="arithmatex">$b$</span>. Therefore the amount of integers coprime to <span class="arithmatex">$a b$</span> is equal to product of the amounts of <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>.</p>
+<p>Mối quan hệ này không hiển nhiên. Nó được suy ra từ <a href="chinese-remainder-theorem.html">Định lý thặng dư Trung Hoa</a>. Định lý thặng dư Trung Hoa đảm bảo rằng với mỗi <span class="arithmatex">$0 \le x &lt; a$</span> và mỗi <span class="arithmatex">$0 \le y &lt; b$</span>, tồn tại duy nhất một số <span class="arithmatex">$0 \le z &lt; a b$</span> thỏa mãn <span class="arithmatex">$z \equiv x \pmod{a}$</span> và <span class="arithmatex">$z \equiv y \pmod{b}$</span>. Không khó để chứng minh rằng <span class="arithmatex">$z$</span> nguyên tố cùng nhau với <span class="arithmatex">$a b$</span> khi và chỉ khi <span class="arithmatex">$x$</span> nguyên tố cùng nhau với <span class="arithmatex">$a$</span> và <span class="arithmatex">$y$</span> nguyên tố cùng nhau với <span class="arithmatex">$b$</span>. Do đó, số lượng số nguyên nguyên tố cùng nhau với <span class="arithmatex">$a b$</span> bằng tích số lượng của chúng đối với <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span>.</p>
 </li>
 <li>
-<p>In general, for not coprime <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>, the equation</p>
+<p>Tổng quát hơn, với <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span> không nhất thiết nguyên tố cùng nhau, ta có phương trình:</p>
 <div class="arithmatex">$$\phi(ab) = \phi(a) \cdot \phi(b) \cdot \dfrac{d}{\phi(d)}$$</div>
-<p>with <span class="arithmatex">$d = \gcd(a, b)$</span> holds.</p>
+<p>với <span class="arithmatex">$d = \gcd(a, b)$</span>.</p>
 </li>
 </ul>
-<p>Thus, using the first three properties, we can compute <span class="arithmatex">$\phi(n)$</span> through the factorization of <span class="arithmatex">$n$</span> (decomposition of <span class="arithmatex">$n$</span> into a product of its prime factors).
-If <span class="arithmatex">$n = {p_1}^{a_1} \cdot {p_2}^{a_2} \cdots {p_k}^{a_k}$</span>, where <span class="arithmatex">$p_i$</span> are prime factors of <span class="arithmatex">$n$</span>,</p>
+<p>Như vậy, bằng cách sử dụng ba tính chất đầu tiên, chúng ta có thể tính <span class="arithmatex">$\phi(n)$</span> thông qua việc phân tích thừa số nguyên tố của <span class="arithmatex">$n$</span> (phân tích <span class="arithmatex">$n$</span> thành tích các thừa số nguyên tố của nó).
+Nếu <span class="arithmatex">$n = {p_1}^{a_1} \cdot {p_2}^{a_2} \cdots {p_k}^{a_k}$</span>, trong đó <span class="arithmatex">$p_i$</span> là các ước nguyên tố của <span class="arithmatex">$n$</span>:</p>
 <div class="arithmatex">$$\begin{align}
 \phi (n) &amp;= \phi ({p_1}^{a_1}) \cdot \phi ({p_2}^{a_2}) \cdots  \phi ({p_k}^{a_k}) \\\\
 &amp;= \left({p_1}^{a_1} - {p_1}^{a_1 - 1}\right) \cdot \left({p_2}^{a_2} - {p_2}^{a_2 - 1}\right) \cdots \left({p_k}^{a_k} - {p_k}^{a_k - 1}\right) \\\\
 &amp;= p_1^{a_1} \cdot \left(1 - \frac{1}{p_1}\right) \cdot p_2^{a_2} \cdot \left(1 - \frac{1}{p_2}\right) \cdots p_k^{a_k} \cdot \left(1 - \frac{1}{p_k}\right) \\\\
 &amp;= n \cdot \left(1 - \frac{1}{p_1}\right) \cdot \left(1 - \frac{1}{p_2}\right) \cdots \left(1 - \frac{1}{p_k}\right)
 \end{align}$$</div>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>Here is an implementation using factorization in <span class="arithmatex">$O(\sqrt{n})$</span>:</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Dưới đây là một cài đặt sử dụng phân tích thừa số nguyên tố trong thời gian <span class="arithmatex">$O(\sqrt{n})$</span>:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">phi</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8246,11 +8162,11 @@ If <span class="arithmatex">$n = {p_1}^{a_1} \cdot {p_2}^{a_2} \cdots {p_k}^{a_k
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="etf_1_to_n">Euler totient function from <span class="arithmatex">$1$</span> to <span class="arithmatex">$n$</span> in <span class="arithmatex">$O(n \log\log{n})$</span><a class="headerlink" href="#etf_1_to_n" title="Permanent link">&para;</a></h2>
-<p>If we need the totient of all numbers between <span class="arithmatex">$1$</span> and <span class="arithmatex">$n$</span>, then factorizing all <span class="arithmatex">$n$</span> numbers is not efficient.
-We can use the same idea as the <a href="sieve-of-eratosthenes.html">Sieve of Eratosthenes</a>.
-It is still based on the property shown above, but instead of updating the temporary result for each prime factor for each number, we find all prime numbers and for each one update the temporary results of all numbers that are divisible by that prime number.</p>
-<p>Since this approach is basically identical to the Sieve of Eratosthenes, the complexity will also be the same: <span class="arithmatex">$O(n \log \log n)$</span></p>
+<h2 id="etf_1_to_n">Tính hàm phi Euler từ <span class="arithmatex">$1$</span> đến <span class="arithmatex">$n$</span> trong <span class="arithmatex">$O(n \log\log{n})$</span><a class="headerlink" href="#etf_1_to_n" title="Permanent link">&para;</a></h2>
+<p>Nếu chúng ta cần tính hàm phi cho tất cả các số từ <span class="arithmatex">$1$</span> đến <span class="arithmatex">$n$</span>, việc phân tích thừa số nguyên tố cho từng số trong số <span class="arithmatex">$n$</span> số đó sẽ không hiệu quả.
+Chúng ta có thể sử dụng ý tưởng tương tự như <a href="sieve-of-eratosthenes.html">Sàng Eratosthenes</a>.
+Ý tưởng vẫn dựa trên tính chất đã nêu ở trên, nhưng thay vì cập nhật kết quả tạm thời cho mỗi ước nguyên tố của từng số, chúng ta tìm tất cả các số nguyên tố và với mỗi số nguyên tố đó, ta cập nhật kết quả tạm thời của tất cả các số chia hết cho số nguyên tố đó.</p>
+<p>Vì cách tiếp cận này về cơ bản giống hệt Sàng Eratosthenes, nên độ phức tạp cũng tương tự: <span class="arithmatex">$O(n \log \log n)$</span>.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">phi_1_to_n</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">phi</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
@@ -8264,9 +8180,9 @@ It is still based on the property shown above, but instead of updating the tempo
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="finding-the-totient-from-l-to-r-using-the-segmented-sieve">Finding the totient from <span class="arithmatex">$L$</span> to <span class="arithmatex">$R$</span> using the <a href="sieve-of-eratosthenes.html#segmented-sieve">segmented sieve</a><a class="headerlink" href="#finding-the-totient-from-l-to-r-using-the-segmented-sieve" title="Permanent link">&para;</a></h3>
-<p>If we need the totient of all numbers between <span class="arithmatex">$L$</span> and <span class="arithmatex">$R$</span>, we can use the <a href="sieve-of-eratosthenes.html#segmented-sieve">segmented sieve</a> approach.</p>
-<p>The algorithm first precomputes all primes up to <span class="arithmatex">$\sqrt{R}$</span> using a <a href="prime-sieve-linear.html">linear sieve</a> in <span class="arithmatex">$O(\sqrt{R})$</span> time and space. For each number in the range <span class="arithmatex">$[L, R]$</span>, it then applies the factorization-based <span class="arithmatex">$\phi$</span> formula by iterating over these primes. We maintain a remainder array to track the unfactored part of each number. If a remainder is still greater than 1 after processing all small primes, it indicates a large prime factor greater than <span class="arithmatex">$\sqrt{R}$</span>, which is handled in a final pass. The overall complexity for the range computation is <span class="arithmatex">$O((R - L + 1) \log \log R) + \sqrt{R}$</span>.</p>
+<h3 id="tim-ham-phi-tu-l-en-r-su-dung-sang-phan-oan">Tìm hàm phi từ <span class="arithmatex">$L$</span> đến <span class="arithmatex">$R$</span> sử dụng <a href="sieve-of-eratosthenes.html#segmented-sieve">sàng phân đoạn</a><a class="headerlink" href="#tim-ham-phi-tu-l-en-r-su-dung-sang-phan-oan" title="Permanent link">&para;</a></h3>
+<p>Nếu chúng ta cần tính hàm phi cho tất cả các số từ <span class="arithmatex">$L$</span> đến <span class="arithmatex">$R$</span>, chúng ta có thể sử dụng cách tiếp cận <a href="sieve-of-eratosthenes.html#segmented-sieve">sàng phân đoạn (segmented sieve)</a>.</p>
+<p>Thuật toán đầu tiên sẽ tính trước tất cả các số nguyên tố lên tới <span class="arithmatex">$\sqrt{R}$</span> bằng một <a href="prime-sieve-linear.html">sàng tuyến tính</a> trong thời gian và không gian bộ nhớ <span class="arithmatex">$O(\sqrt{R})$</span>. Đối với mỗi số trong phạm vi <span class="arithmatex">$[L, R]$</span>, thuật toán sau đó áp dụng công thức tính <span class="arithmatex">$\phi$</span> dựa trên phân tích thừa số bằng cách duyệt qua các số nguyên tố này. Chúng ta duy trì một mảng phần dư để theo dõi phần chưa được phân tích của mỗi số. Nếu phần dư vẫn lớn hơn 1 sau khi xử lý tất cả các số nguyên tố nhỏ, điều đó cho thấy có một ước nguyên tố lớn lớn hơn <span class="arithmatex">$\sqrt{R}$</span>, phần này sẽ được xử lý ở lượt duyệt cuối cùng. Độ phức tạp tổng thể cho tính toán trên đoạn là <span class="arithmatex">$O((R - L + 1) \log \log R) + \sqrt{R}$</span>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">MAX_RANGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e6</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="o">&gt;</span><span class="w"> </span><span class="n">primes</span><span class="p">;</span>
 <span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">phi</span><span class="p">[</span><span class="n">MAX_RANGE</span><span class="p">],</span><span class="w"> </span><span class="n">rem</span><span class="p">[</span><span class="n">MAX_RANGE</span><span class="p">];</span>
@@ -8307,15 +8223,15 @@ It is still based on the property shown above, but instead of updating the tempo
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="divsum">Divisor sum property<a class="headerlink" href="#divsum" title="Permanent link">&para;</a></h2>
-<p>This interesting property was established by Gauss:</p>
+<h2 id="divsum">Tính chất tổng ước số (Divisor sum property)<a class="headerlink" href="#divsum" title="Permanent link">&para;</a></h2>
+<p>Tính chất thú vị này được tìm ra bởi Gauss:</p>
 <div class="arithmatex">$$ \sum_{d|n} \phi{(d)} = n$$</div>
-<p>Here the sum is over all positive divisors <span class="arithmatex">$d$</span> of <span class="arithmatex">$n$</span>.</p>
-<p>For instance the divisors of 10 are 1, 2, 5 and 10.
-Hence <span class="arithmatex">$\phi{(1)} + \phi{(2)} + \phi{(5)} + \phi{(10)} = 1 + 1 + 4 + 4 = 10$</span>.</p>
-<h3 id="finding-the-totient-from-1-to-n-using-the-divisor-sum-property">Finding the totient from 1 to <span class="arithmatex">$n$</span> using the divisor sum property<a class="headerlink" href="#finding-the-totient-from-1-to-n-using-the-divisor-sum-property" title="Permanent link">&para;</a></h3>
-<p>The divisor sum property also allows us to compute the totient of all numbers between 1 and <span class="arithmatex">$n$</span>.
-This implementation is a little simpler than the previous implementation based on the Sieve of Eratosthenes, however also has a slightly worse complexity: <span class="arithmatex">$O(n \log n)$</span></p>
+<p>Ở đây phép tổng được thực hiện trên tất cả các ước nguyên dương <span class="arithmatex">$d$</span> của <span class="arithmatex">$n$</span>.</p>
+<p>Ví dụ, các ước của 10 là 1, 2, 5 và 10.
+Do đó <span class="arithmatex">$\phi{(1)} + \phi{(2)} + \phi{(5)} + \phi{(10)} = 1 + 1 + 4 + 4 = 10$</span>.</p>
+<h3 id="tim-ham-phi-tu-1-en-n-su-dung-tinh-chat-tong-uoc-so">Tìm hàm phi từ 1 đến <span class="arithmatex">$n$</span> sử dụng tính chất tổng ước số<a class="headerlink" href="#tim-ham-phi-tu-1-en-n-su-dung-tinh-chat-tong-uoc-so" title="Permanent link">&para;</a></h3>
+<p>Tính chất tổng ước số cũng cho phép chúng ta tính toán hàm phi cho tất cả các số giữa 1 và <span class="arithmatex">$n$</span>.
+Cài đặt này đơn giản hơn một chút so với cài đặt trước đó dựa trên Sàng Eratosthenes, tuy nhiên nó có độ phức tạp kém hơn một chút: <span class="arithmatex">$O(n \log n)$</span>.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">phi_1_to_n</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">phi</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 <span class="w">    </span><span class="n">phi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
@@ -8328,42 +8244,42 @@ This implementation is a little simpler than the previous implementation based o
 <span class="w">              </span><span class="n">phi</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">phi</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="application">Application in Euler's theorem<a class="headerlink" href="#application" title="Permanent link">&para;</a></h2>
-<p>The most famous and important property of Euler's totient function is expressed in <strong>Euler's theorem</strong>: </p>
-<div class="arithmatex">$$a^{\phi(m)} \equiv 1 \pmod m \quad \text{if } a \text{ and } m \text{ are relatively prime.}$$</div>
-<p>In the particular case when <span class="arithmatex">$m$</span> is prime, Euler's theorem turns into <strong>Fermat's little theorem</strong>:</p>
+<h2 id="application">Ứng dụng trong Định lý Euler<a class="headerlink" href="#application" title="Permanent link">&para;</a></h2>
+<p>Tính chất nổi tiếng và quan trọng nhất của hàm phi Euler được thể hiện trong <strong>Định lý Euler (Euler's theorem)</strong>:</p>
+<div class="arithmatex">$$a^{\phi(m)} \equiv 1 \pmod m \quad \text{nếu } a \text{ và } m \text{ nguyên tố cùng nhau.}$$</div>
+<p>Trong trường hợp đặc biệt khi <span class="arithmatex">$m$</span> là số nguyên tố, Định lý Euler chuyển thành <strong>Định lý nhỏ Fermat (Fermat's little theorem)</strong>:</p>
 <div class="arithmatex">$$a^{m - 1} \equiv 1 \pmod m$$</div>
-<p>Euler's theorem and Euler's totient function occur quite often in practical applications, for example both are used to compute the <a href="module-inverse.html">modular multiplicative inverse</a>.</p>
-<p>As immediate consequence we also get the equivalence:</p>
+<p>Định lý Euler và hàm phi Euler xuất hiện khá thường xuyên trong các ứng dụng thực tế, ví dụ cả hai đều được sử dụng để tính <a href="module-inverse.html">nghịch đảo modular (modular multiplicative inverse)</a>.</p>
+<p>Hệ quả trực tiếp là chúng ta có sự tương đương sau:</p>
 <div class="arithmatex">$$a^n \equiv a^{n \bmod \phi(m)} \pmod m$$</div>
-<p>This allows computing <span class="arithmatex">$x^n \bmod m$</span> for very big <span class="arithmatex">$n$</span>, especially if <span class="arithmatex">$n$</span> is the result of another computation, as it allows to compute <span class="arithmatex">$n$</span> under a modulo.</p>
-<h3 id="group-theory">Group Theory<a class="headerlink" href="#group-theory" title="Permanent link">&para;</a></h3>
-<p><span class="arithmatex">$\phi(n)$</span> is the <a href="https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n">order of the multiplicative group mod n</a> <span class="arithmatex">$(\mathbb Z / n\mathbb Z)^\times$</span>, that is the group of units (elements with multiplicative inverses). The elements with multiplicative inverses are precisely those coprime to <span class="arithmatex">$n$</span>.</p>
-<p>The <a href="https://en.wikipedia.org/wiki/Multiplicative_order">multiplicative order</a> of an element <span class="arithmatex">$a$</span> mod <span class="arithmatex">$n$</span>, denoted <span class="arithmatex">$\operatorname{ord}_n(a)$</span>, is the smallest <span class="arithmatex">$k&gt;0$</span> such that <span class="arithmatex">$a^k \equiv 1 \pmod n$</span>. <span class="arithmatex">$\operatorname{ord}_n(a)$</span> is the size of the subgroup generated by <span class="arithmatex">$a$</span>, so by Lagrange's Theorem, the multiplicative order of any <span class="arithmatex">$a$</span> must divide <span class="arithmatex">$\phi(n)$</span>. If the multiplicative order of <span class="arithmatex">$a$</span> is <span class="arithmatex">$\phi(n)$</span>, the largest possible, then <span class="arithmatex">$a$</span> is a <a href="primitive-root.html">primitive root</a> and the group is cyclic by definition. </p>
-<h2 id="generalization">Generalization<a class="headerlink" href="#generalization" title="Permanent link">&para;</a></h2>
-<p>There is a less known version of the last equivalence, that allows computing <span class="arithmatex">$x^n \bmod m$</span> efficiently for not coprime <span class="arithmatex">$x$</span> and <span class="arithmatex">$m$</span>.
-For arbitrary <span class="arithmatex">$x, m$</span> and <span class="arithmatex">$n \geq \log_2 m$</span>:</p>
+<p>Điều này cho phép tính toán <span class="arithmatex">$x^n \bmod m$</span> với số mũ <span class="arithmatex">$n$</span> rất lớn, đặc biệt nếu <span class="arithmatex">$n$</span> là kết quả của một phép tính khác, vì nó cho phép tính toán số mũ <span class="arithmatex">$n$</span> dưới một modulo.</p>
+<h3 id="ly-thuyet-nhom">Lý thuyết Nhóm<a class="headerlink" href="#ly-thuyet-nhom" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">$\phi(n)$</span> chính là <a href="https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n">cấp của nhóm nhân mod n (order of the multiplicative group mod n)</a> <span class="arithmatex">$(\mathbb Z / n\mathbb Z)^\times$</span>, tức là nhóm các phần tử đơn vị (các phần tử có nghịch đảo modular). Các phần tử có nghịch đảo modular chính là các phần tử nguyên tố cùng nhau với <span class="arithmatex">$n$</span>.</p>
+<p><a href="https://en.wikipedia.org/wiki/Multiplicative_order">Cấp nhân (multiplicative order)</a> của một phần tử <span class="arithmatex">$a$</span> mod <span class="arithmatex">$n$</span>, ký hiệu là <span class="arithmatex">$\operatorname{ord}_n(a)$</span>, là số nguyên <span class="arithmatex">$k&gt;0$</span> nhỏ nhất sao cho <span class="arithmatex">$a^k \equiv 1 \pmod n$</span>. <span class="arithmatex">$\operatorname{ord}_n(a)$</span> là kích thước của nhóm con sinh bởi <span class="arithmatex">$a$</span>, vì vậy theo Định lý Lagrange, cấp nhân của bất kỳ số <span class="arithmatex">$a$</span> nào đều phải chia hết cho <span class="arithmatex">$\phi(n)$</span>. Nếu cấp nhân của <span class="arithmatex">$a$</span> bằng <span class="arithmatex">$\phi(n)$</span>, tức là cấp lớn nhất có thể, thì <span class="arithmatex">$a$</span> được gọi là một <a href="primitive-root.html">căn nguyên thủy (primitive root)</a> và nhóm đó là một nhóm cyclic theo định nghĩa.</p>
+<h2 id="tong-quat-hoa">Tổng quát hóa<a class="headerlink" href="#tong-quat-hoa" title="Permanent link">&para;</a></h2>
+<p>Tồn tại một phiên bản ít được biết đến hơn của sự tương đương cuối cùng, cho phép tính <span class="arithmatex">$x^n \bmod m$</span> một cách hiệu quả đối với <span class="arithmatex">$x$</span> và <span class="arithmatex">$m$</span> không nguyên tố cùng nhau.
+Với mọi <span class="arithmatex">$x, m$</span> bất kỳ và <span class="arithmatex">$n \geq \log_2 m$</span>:</p>
 <div class="arithmatex">$$x^{n}\equiv x^{\phi(m)+[n \bmod \phi(m)]} \mod m$$</div>
-<p>Proof:</p>
-<p>Let <span class="arithmatex">$p_1, \dots, p_t$</span> be common prime divisors of <span class="arithmatex">$x$</span> and <span class="arithmatex">$m$</span>, and <span class="arithmatex">$k_i$</span> their exponents in <span class="arithmatex">$m$</span>.
-With those we define <span class="arithmatex">$a = p_1^{k_1} \dots p_t^{k_t}$</span>, which makes <span class="arithmatex">$\frac{m}{a}$</span> coprime to <span class="arithmatex">$x$</span>.
-And let <span class="arithmatex">$k$</span> be the smallest number such that <span class="arithmatex">$a$</span> divides <span class="arithmatex">$x^k$</span>.
-Assuming <span class="arithmatex">$n \ge k$</span>, we can write:</p>
+<p>Chứng minh:</p>
+<p>Gọi <span class="arithmatex">$p_1, \dots, p_t$</span> là các ước nguyên tố chung của <span class="arithmatex">$x$</span> và <span class="arithmatex">$m$</span>, và <span class="arithmatex">$k_i$</span> là số mũ của chúng trong <span class="arithmatex">$m$</span>.
+Từ đó chúng ta định nghĩa <span class="arithmatex">$a = p_1^{k_1} \dots p_t^{k_t}$</span>, khiến cho <span class="arithmatex">$\frac{m}{a}$</span> nguyên tố cùng nhau với <span class="arithmatex">$x$</span>.
+Và gọi <span class="arithmatex">$k$</span> là số nhỏ nhất sao cho <span class="arithmatex">$a$</span> chia hết cho <span class="arithmatex">$x^k$</span>.
+Giả định <span class="arithmatex">$n \ge k$</span>, ta có thể viết:</p>
 <div class="arithmatex">$$\begin{align}x^n \bmod m &amp;= \frac{x^k}{a}ax^{n-k}\bmod m \\
 &amp;= \frac{x^k}{a}\left(ax^{n-k}\bmod m\right) \bmod m \\
 &amp;= \frac{x^k}{a}\left(ax^{n-k}\bmod a \frac{m}{a}\right) \bmod m \\
-&amp;=\frac{x^k}{a} a \left(x^{n-k} \bmod \frac{m}{a}\right)\bmod m \\
+&amp;= \frac{x^k}{a} a \left(x^{n-k} \bmod \frac{m}{a}\right)\bmod m \\
 &amp;= x^k\left(x^{n-k} \bmod \frac{m}{a}\right)\bmod m
 \end{align}$$</div>
-<p>The equivalence between the third and forth line follows from the fact that <span class="arithmatex">$ab \bmod ac = a(b \bmod c)$</span>.
-Indeed if <span class="arithmatex">$b = cd + r$</span> with <span class="arithmatex">$r &lt; c$</span>, then <span class="arithmatex">$ab = acd + ar$</span> with <span class="arithmatex">$ar &lt; ac$</span>.</p>
-<p>Since <span class="arithmatex">$x$</span> and <span class="arithmatex">$\frac{m}{a}$</span> are coprime, we can apply Euler's theorem and get the efficient (since <span class="arithmatex">$k$</span> is very small; in fact <span class="arithmatex">$k \le \log_2 m$</span>) formula:</p>
+<p>Sự tương đương giữa dòng thứ ba và dòng thứ tư suy ra từ thực tế là <span class="arithmatex">$ab \bmod ac = a(b \bmod c)$</span>.
+Thật vậy, nếu <span class="arithmatex">$b = cd + r$</span> với <span class="arithmatex">$r &lt; c$</span>, thì <span class="arithmatex">$ab = acd + ar$</span> với <span class="arithmatex">$ar &lt; ac$</span>.</p>
+<p>Vì <span class="arithmatex">$x$</span> và <span class="arithmatex">$\frac{m}{a}$</span> nguyên tố cùng nhau, chúng ta có thể áp dụng định lý Euler và thu được công thức hiệu quả (vì <span class="arithmatex">$k$</span> rất nhỏ; thực tế là <span class="arithmatex">$k \le \log_2 m$</span>):</p>
 <div class="arithmatex">$$x^n \bmod m = x^k\left(x^{n-k \bmod \phi(\frac{m}{a})} \bmod \frac{m}{a}\right)\bmod m.$$</div>
-<p>This formula is difficult to apply, but we can use it to analyze the behavior of <span class="arithmatex">$x^n \bmod m$</span>. We can see that the sequence of powers <span class="arithmatex">$(x^1 \bmod m, x^2 \bmod m, x^3 \bmod m, \dots)$</span> enters a cycle of length <span class="arithmatex">$\phi\left(\frac{m}{a}\right)$</span> after the first <span class="arithmatex">$k$</span> (or less) elements. 
-<span class="arithmatex">$\phi\left(\frac{m}{a}\right)$</span> divides <span class="arithmatex">$\phi(m)$</span> (because <span class="arithmatex">$a$</span> and <span class="arithmatex">$\frac{m}{a}$</span> are coprime we have <span class="arithmatex">$\phi(a) \cdot \phi\left(\frac{m}{a}\right) = \phi(m)$</span>), therefore we can also say that the period has length <span class="arithmatex">$\phi(m)$</span>.
-And since <span class="arithmatex">$\phi(m) \ge \log_2 m \ge k$</span>, we can conclude the desired, much simpler, formula:</p>
+<p>Công thức này khó áp dụng trực tiếp, nhưng chúng ta có thể sử dụng nó để phân tích hành vi của <span class="arithmatex">$x^n \bmod m$</span>. Ta thấy rằng dãy lũy thừa <span class="arithmatex">$(x^1 \bmod m, x^2 \bmod m, x^3 \bmod m, \dots)$</span> sẽ đi vào một chu kỳ có độ dài <span class="arithmatex">$\phi\left(\frac{m}{a}\right)$</span> sau <span class="arithmatex">$k$</span> phần tử đầu tiên (hoặc ít hơn).
+<span class="arithmatex">$\phi\left(\frac{m}{a}\right)$</span> chia hết cho <span class="arithmatex">$\phi(m)$</span> (vì <span class="arithmatex">$a$</span> và <span class="arithmatex">$\frac{m}{a}$</span> nguyên tố cùng nhau nên ta có <span class="arithmatex">$\phi(a) \cdot \phi\left(\frac{m}{a}\right) = \phi(m)$</span>), do đó ta cũng có thể nói chu kỳ có độ dài <span class="arithmatex">$\phi(m)$</span>.
+Và vì <span class="arithmatex">$\phi(m) \ge \log_2 m \ge k$</span>, chúng ta có thể rút ra công thức đơn giản hơn nhiều mong muốn:</p>
 <div class="arithmatex">$$ x^n \equiv x^{\phi(m)} x^{(n - \phi(m)) \bmod \phi(m)} \bmod m \equiv x^{\phi(m)+[n \bmod \phi(m)]} \mod m.$$</div>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap-thuc-hanh">Bài tập thực hành<a class="headerlink" href="#bai-tap-thuc-hanh" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="http://www.spoj.com/problems/ETF/">SPOJ #4141 "Euler Totient Function" [Difficulty: CakeWalk]</a></li>
 <li><a href="http://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1120">UVA #10179 "Irreducible Basic Fractions" [Difficulty: Easy]</a></li>
@@ -8392,7 +8308,7 @@ And since <span class="arithmatex">$\phi(m) \ge \log_2 m \ge k$</span>, we can c
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (30.74%)</li><li><a href="#" title="Ebrahim Elghrbawy" data-bi-name="contributorprofile" target="_blank">Ebrahim Elghrbawy</a> (28.4%)</li><li><a href="#" title="samsidx" data-bi-name="contributorprofile" target="_blank">samsidx</a> (9.34%)</li><li><a href="#" title="Tanmay Sinha" data-bi-name="contributorprofile" target="_blank">Tanmay Sinha</a> (7.39%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (4.67%)</li><li><a href="#" title="Alexander Kulkov" data-bi-name="contributorprofile" target="_blank">Alexander Kulkov</a> (3.5%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (2.72%)</li><li><a href="#" title="Ibrahim Alghrbawy" data-bi-name="contributorprofile" target="_blank">Ibrahim Alghrbawy</a> (2.33%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (2.33%)</li><li><a href="#" title="Rodion Gorkovenko" data-bi-name="contributorprofile" target="_blank">Rodion Gorkovenko</a> (1.95%)</li><li><a href="#" title="jxu" data-bi-name="contributorprofile" target="_blank">jxu</a> (1.56%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (0.78%)</li><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (0.78%)</li><li><a href="#" title="Angkur Mondal" data-bi-name="contributorprofile" target="_blank">Angkur Mondal</a> (0.39%)</li><li><a href="#" title="Aniket Manoj Mahabole" data-bi-name="contributorprofile" target="_blank">Aniket Manoj Mahabole</a> (0.39%)</li><li><a href="#" title="Bhuvnesh Jain" data-bi-name="contributorprofile" target="_blank">Bhuvnesh Jain</a> (0.39%)</li><li><a href="#" title="Harpreet Singh" data-bi-name="contributorprofile" target="_blank">Harpreet Singh</a> (0.39%)</li><li><a href="#" title="Harsh Kumar Bhartiya" data-bi-name="contributorprofile" target="_blank">Harsh Kumar Bhartiya</a> (0.39%)</li><li><a href="#" title="Luke Videckis" data-bi-name="contributorprofile" target="_blank">Luke Videckis</a> (0.39%)</li><li><a href="#" title="Rayen Besbes" data-bi-name="contributorprofile" target="_blank">Rayen Besbes</a> (0.39%)</li><li><a href="#" title="Rohit Kharsan" data-bi-name="contributorprofile" target="_blank">Rohit Kharsan</a> (0.39%)</li><li><a href="#" title="SiddharthEEE" data-bi-name="contributorprofile" target="_blank">SiddharthEEE</a> (0.39%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

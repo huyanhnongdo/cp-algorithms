@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#submask-enumeration" class="md-skip">
+        <a href="#duyet-qua-cac-mat-na-con" class="md-skip">
           Bỏ qua
         </a>
       
@@ -1626,10 +1626,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#enumerating-all-submasks-of-a-given-mask" class="md-nav__link">
+  <a href="#duyet-qua-tat-ca-cac-mat-na-con-cua-mot-mat-na-cho-truoc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Enumerating all submasks of a given mask
+        Duyệt qua tất cả các mặt nạ con của một mặt nạ cho trước
       
     </span>
   </a>
@@ -1637,10 +1637,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iterating-through-all-masks-with-their-submasks-complexity-o3n" class="md-nav__link">
+  <a href="#duyet-qua-tat-ca-cac-mat-na-cung-cac-mat-na-con-cua-chung-o-phuc-tap-o3n" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Iterating through all masks with their submasks. Complexity $O(3^n)$
+        Duyệt qua tất cả các mặt nạ cùng các mặt nạ con của chúng. Độ phức tạp $O(3^n)$
       
     </span>
   </a>
@@ -1648,10 +1648,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-luyen-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập luyện tập
       
     </span>
   </a>
@@ -7960,13 +7960,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/all-submasks.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/all-submasks.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/all-submasks.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/all-submasks.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7977,30 +7977,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8036,48 +8012,48 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="submask-enumeration">Submask Enumeration<a class="headerlink" href="#submask-enumeration" title="Permanent link">&para;</a></h1>
-<h2 id="enumerating-all-submasks-of-a-given-mask">Enumerating all submasks of a given mask<a class="headerlink" href="#enumerating-all-submasks-of-a-given-mask" title="Permanent link">&para;</a></h2>
-<p>Given a bitmask <span class="arithmatex">$m$</span>, you want to efficiently iterate through all of its submasks, that is, masks <span class="arithmatex">$s$</span> in which only bits that were included in mask <span class="arithmatex">$m$</span> are set.</p>
-<p>Consider the implementation of this algorithm, based on tricks with bit operations:</p>
+<h1 id="duyet-qua-cac-mat-na-con">Duyệt qua các mặt nạ con<a class="headerlink" href="#duyet-qua-cac-mat-na-con" title="Permanent link">&para;</a></h1>
+<h2 id="duyet-qua-tat-ca-cac-mat-na-con-cua-mot-mat-na-cho-truoc">Duyệt qua tất cả các mặt nạ con của một mặt nạ cho trước<a class="headerlink" href="#duyet-qua-tat-ca-cac-mat-na-con-cua-mot-mat-na-cho-truoc" title="Permanent link">&para;</a></h2>
+<p>Cho một mặt nạ bit (bitmask) <span class="arithmatex">$m$</span>, bạn muốn duyệt qua tất cả các mặt nạ con (submask) của nó một cách hiệu quả, tức là các mặt nạ <span class="arithmatex">$s$</span> mà chỉ các bit được bật trong mặt nạ <span class="arithmatex">$m$</span> mới có thể được bật.</p>
+<p>Hãy xem xét cài đặt của thuật toán này, dựa trên một số mẹo liên quan đến các phép toán bit:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
 <span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">...</span>
 <span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>or, using a more compact <code>for</code> statement:</p>
+<p>hoặc sử dụng vòng lặp <code>for</code> gọn gàng hơn:</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="o">=</span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="n">s</span><span class="o">=</span><span class="p">(</span><span class="n">s</span><span class="mi">-1</span><span class="p">)</span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
 <span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">...</span>
 </code></pre></div>
-<p>In both variants of the code, the submask equal to zero will not be processed. We can either process it outside the loop, or use a less elegant design, for example:</p>
+<p>Trong cả hai biến thể của đoạn mã trên, mặt nạ con bằng không sẽ không được xử lý. Chúng ta có thể xử lý nó bên ngoài vòng lặp, hoặc sử dụng một cấu trúc ít thanh lịch hơn, ví dụ:</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="o">=</span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">s</span><span class="o">=</span><span class="p">(</span><span class="n">s</span><span class="mi">-1</span><span class="p">)</span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">use</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">...</span>
 <span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="w">  </span><span class="k">break</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Let us examine why the above code visits all submasks of <span class="arithmatex">$m$</span>, without repetition, and in descending order.</p>
-<p>Suppose we have a current bitmask <span class="arithmatex">$s$</span>, and we want to move on to the next bitmask. By subtracting from the mask <span class="arithmatex">$s$</span> one unit, we will remove the rightmost set bit and all bits to the right of it will become 1. Then we remove all the "extra" one bits that are not included in the mask <span class="arithmatex">$m$</span> and therefore can't be a part of a submask. We do this removal by using the bitwise operation <code>(s-1) &amp; m</code>. As a result, we "cut" mask <span class="arithmatex">$s-1$</span> to determine the highest value that it can take, that is, the next submask after <span class="arithmatex">$s$</span> in descending order.</p>
-<p>Thus, this algorithm generates all submasks of this mask in descending order, performing only two operations per iteration.</p>
-<p>A special case is when <span class="arithmatex">$s = 0$</span>. After executing <span class="arithmatex">$s-1$</span> we get a mask where all bits are set (bit representation of -1), and after <code>(s-1) &amp; m</code> we will have that <span class="arithmatex">$s$</span> will be equal to <span class="arithmatex">$m$</span>. Therefore, with the mask <span class="arithmatex">$s = 0$</span> be careful — if the loop does not end at zero, the algorithm may enter an infinite loop.</p>
-<h2 id="iterating-through-all-masks-with-their-submasks-complexity-o3n">Iterating through all masks with their submasks. Complexity <span class="arithmatex">$O(3^n)$</span><a class="headerlink" href="#iterating-through-all-masks-with-their-submasks-complexity-o3n" title="Permanent link">&para;</a></h2>
-<p>In many problems, especially those that use bitmask dynamic programming, you want to iterate through all bitmasks and for each mask, iterate through all of its submasks:</p>
+<p>Hãy cùng phân tích tại sao đoạn mã trên lại duyệt qua tất cả các mặt nạ con của <span class="arithmatex">$m$</span> theo thứ tự giảm dần mà không bị trùng lặp.</p>
+<p>Giả sử chúng ta đang có mặt nạ bit hiện tại là <span class="arithmatex">$s$</span>, và chúng ta muốn chuyển sang mặt nạ bit tiếp theo. Bằng cách trừ mặt nạ <span class="arithmatex">$s$</span> đi 1 đơn vị, chúng ta sẽ loại bỏ bit được bật ở vị trí ngoài cùng bên phải, và tất cả các bit bên phải nó sẽ trở thành 1. Sau đó, chúng ta loại bỏ tất cả các bit 1 "dư thừa" mà không nằm trong mặt nạ <span class="arithmatex">$m$</span>, vì chúng không thể là một phần của mặt nạ con. Việc loại bỏ này được thực hiện thông qua phép toán logic bitwise AND: <code>(s-1) &amp; m</code>. Kết quả thu được là chúng ta đã "cắt" mặt nạ <span class="arithmatex">$s-1$</span> để tìm giá trị lớn nhất mà nó có thể nhận, tức là mặt nạ con tiếp theo ngay sau <span class="arithmatex">$s$</span> theo thứ tự giảm dần.</p>
+<p>Vì vậy, thuật toán này tạo ra tất cả các mặt nạ con của mặt nạ đã cho theo thứ tự giảm dần, chỉ thực hiện hai phép toán trong mỗi lần lặp.</p>
+<p>Trường hợp đặc biệt là khi <span class="arithmatex">$s = 0$</span>. Sau khi thực hiện phép tính <span class="arithmatex">$s-1$</span>, ta nhận được một mặt nạ mà tất cả các bit đều được bật (biểu diễn bit của số -1), và sau phép toán <code>(s-1) &amp; m</code>, ta sẽ có <span class="arithmatex">$s$</span> bằng <span class="arithmatex">$m$</span>. Do đó, bạn cần cẩn thận với mặt nạ <span class="arithmatex">$s = 0$</span> — nếu vòng lặp không kết thúc tại số không, thuật toán có thể rơi vào vòng lặp vô hạn.</p>
+<h2 id="duyet-qua-tat-ca-cac-mat-na-cung-cac-mat-na-con-cua-chung-o-phuc-tap-o3n">Duyệt qua tất cả các mặt nạ cùng các mặt nạ con của chúng. Độ phức tạp <span class="arithmatex">$O(3^n)$</span><a class="headerlink" href="#duyet-qua-tat-ca-cac-mat-na-cung-cac-mat-na-con-cua-chung-o-phuc-tap-o3n" title="Permanent link">&para;</a></h2>
+<p>Trong nhiều bài toán, đặc biệt là các bài toán quy hoạch động trạng thái dùng mặt nạ bit (bitmask dynamic programming), bạn muốn duyệt qua tất cả các mặt nạ bit và với mỗi mặt nạ đó, duyệt qua tất cả các mặt nạ con của nó:</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">m</span><span class="o">&lt;</span><span class="p">(</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="o">++</span><span class="n">m</span><span class="p">)</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="o">=</span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="n">s</span><span class="o">=</span><span class="p">(</span><span class="n">s</span><span class="mi">-1</span><span class="p">)</span><span class="o">&amp;</span><span class="n">m</span><span class="p">)</span>
 <span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="p">...</span>
 </code></pre></div>
-<p>Let's prove that the inner loop will execute a total of <span class="arithmatex">$O(3^n)$</span> iterations.</p>
-<p><strong>First proof</strong>: Consider the <span class="arithmatex">$i$</span>-th bit. There are exactly three options for it:</p>
+<p>Hãy chứng minh rằng vòng lặp bên trong sẽ thực hiện tổng cộng <span class="arithmatex">$O(3^n)$</span> lần lặp.</p>
+<p><strong>Chứng minh thứ nhất</strong>: Xét bit thứ <span class="arithmatex">$i$</span>. Có chính xác ba khả năng xảy ra đối với bit này:</p>
 <ol>
-<li>it is not included in the mask <span class="arithmatex">$m$</span> (and therefore not included in submask <span class="arithmatex">$s$</span>),</li>
-<li>it is included in <span class="arithmatex">$m$</span>, but not included in <span class="arithmatex">$s$</span>, or</li>
-<li>it is included in both <span class="arithmatex">$m$</span> and <span class="arithmatex">$s$</span>.</li>
+<li>nó không nằm trong mặt nạ <span class="arithmatex">$m$</span> (và do đó cũng không nằm trong mặt nạ con <span class="arithmatex">$s$</span>),</li>
+<li>nó nằm trong <span class="arithmatex">$m$</span> nhưng không nằm trong <span class="arithmatex">$s$</span>, hoặc</li>
+<li>nó nằm trong cả <span class="arithmatex">$m$</span> và <span class="arithmatex">$s$</span>.</li>
 </ol>
-<p>As there are a total of <span class="arithmatex">$n$</span> bits, there will be <span class="arithmatex">$3^n$</span> different combinations.</p>
-<p><strong>Second proof</strong>: Note that if mask <span class="arithmatex">$m$</span> has <span class="arithmatex">$k$</span> enabled bits, then it will have <span class="arithmatex">$2^k$</span> submasks. As we have a total of <span class="arithmatex">$\binom{n}{k}$</span> masks with <span class="arithmatex">$k$</span> enabled bits (see <a href="../combinatorics/binomial-coefficients.html">binomial coefficients</a>), then the total number of combinations for all masks will be:</p>
+<p>Vì có tổng cộng <span class="arithmatex">$n$</span> bit, nên sẽ có <span class="arithmatex">$3^n$</span> tổ hợp khác nhau.</p>
+<p><strong>Chứng minh thứ hai</strong>: Lưu ý rằng nếu mặt nạ <span class="arithmatex">$m$</span> có <span class="arithmatex">$k$</span> bit được bật, nó sẽ có <span class="arithmatex">$2^k$</span> mặt nạ con. Vì chúng ta có tổng cộng <span class="arithmatex">$\binom{n}{k}$</span> mặt nạ có <span class="arithmatex">$k$</span> bit được bật (xem thêm bài viết về <a href="../combinatorics/binomial-coefficients.html">Hệ số nhị thức</a>), nên tổng số tổ hợp của tất cả các mặt nạ sẽ là:</p>
 <div class="arithmatex">$$\sum_{k=0}^n \binom{n}{k} \cdot 2^k$$</div>
-<p>To calculate this number, note that the sum above is equal to the expansion of <span class="arithmatex">$(1+2)^n$</span> using the binomial theorem. Therefore, we have <span class="arithmatex">$3^n$</span> combinations, as we wanted to prove.</p>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<p>Để tính tổng này, hãy chú ý rằng tổng trên chính là khai triển của <span class="arithmatex">$(1+2)^n$</span> theo định lý nhị thức. Do đó, chúng ta có <span class="arithmatex">$3^n$</span> tổ hợp, đúng như điều cần chứng minh.</p>
+<h2 id="bai-tap-luyen-tap">Bài tập luyện tập<a class="headerlink" href="#bai-tap-luyen-tap" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://atcoder.jp/contests/abc187/tasks/abc187_f">Atcoder - Close Group</a></li>
 <li><a href="http://codeforces.com/problemset/problem/71/E">Codeforces - Nuclear Fusion</a></li>
@@ -8088,7 +8064,7 @@ Describe the issue of this article in detail.
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="ffao" data-bi-name="contributorprofile" target="_blank">ffao</a> (67.09%)</li><li><a href="#" title="Abhijeet Krishnan" data-bi-name="contributorprofile" target="_blank">Abhijeet Krishnan</a> (12.66%)</li><li><a href="#" title="prpr" data-bi-name="contributorprofile" target="_blank">prpr</a> (8.86%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (7.59%)</li><li><a href="#" title="Abhishek kumar" data-bi-name="contributorprofile" target="_blank">Abhishek kumar</a> (1.27%)</li><li><a href="#" title="Gabriel Silva Simões" data-bi-name="contributorprofile" target="_blank">Gabriel Silva Simões</a> (1.27%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (1.27%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

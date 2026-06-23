@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#floyd-warshall-algorithm" class="md-skip">
+        <a href="#thuat-toan-floyd-warshall" class="md-skip">
           Bỏ qua
         </a>
       
@@ -5982,10 +5982,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description-of-the-algorithm" class="md-nav__link">
+  <a href="#mo-ta-thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Description of the algorithm
+        Mô tả thuật toán
       
     </span>
   </a>
@@ -5993,10 +5993,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -6004,10 +6004,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#retrieving-the-sequence-of-vertices-in-the-shortest-path" class="md-nav__link">
+  <a href="#tim-lai-chuoi-cac-inh-cua-uong-i-ngan-nhat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Retrieving the sequence of vertices in the shortest path
+        Tìm lại chuỗi các đỉnh của đường đi ngắn nhất
       
     </span>
   </a>
@@ -6015,10 +6015,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-case-of-real-weights" class="md-nav__link">
+  <a href="#truong-hop-trong-so-so-thuc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The case of real weights
+        Trường hợp trọng số số thực
       
     </span>
   </a>
@@ -6026,10 +6026,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-case-of-negative-cycles" class="md-nav__link">
+  <a href="#truong-hop-o-thi-chua-chu-trinh-am" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The case of negative cycles
+        Trường hợp đồ thị chứa chu trình âm
       
     </span>
   </a>
@@ -6037,10 +6037,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-ap-dung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập áp dụng
       
     </span>
   </a>
@@ -7993,13 +7993,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/all-pair-shortest-path-floyd-warshall.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/all-pair-shortest-path-floyd-warshall.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/all-pair-shortest-path-floyd-warshall.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/all-pair-shortest-path-floyd-warshall.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8010,58 +8010,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8097,54 +8045,54 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="floyd-warshall-algorithm">Floyd-Warshall Algorithm<a class="headerlink" href="#floyd-warshall-algorithm" title="Permanent link">&para;</a></h1>
-<p>Given a directed or an undirected weighted graph <span class="arithmatex">$G$</span> with <span class="arithmatex">$n$</span> vertices.
-The task is to find the length of the shortest path <span class="arithmatex">$d_{ij}$</span> between each pair of vertices <span class="arithmatex">$i$</span> and <span class="arithmatex">$j$</span>.</p>
-<p>The graph may have negative weight edges, but no negative weight cycles.</p>
-<p>If there is such a negative cycle, you can just traverse this cycle over and over, in each iteration making the cost of the path smaller.
-So you can make certain paths arbitrarily small, or in other words that shortest path is undefined.
-That automatically means that an undirected graph cannot have any negative weight edges, as such an edge forms already a negative cycle as you can move back and forth along that edge as long as you like.</p>
-<p>This algorithm can also be used to detect the presence of negative cycles.
-The graph has a negative cycle if at the end of the algorithm, the distance from a vertex <span class="arithmatex">$v$</span> to itself is negative.</p>
-<p>This algorithm has been simultaneously published in articles by Robert Floyd and Stephen Warshall in 1962.
-However, in 1959, Bernard Roy published essentially the same algorithm, but its publication went unnoticed.</p>
-<h2 id="description-of-the-algorithm">Description of the algorithm<a class="headerlink" href="#description-of-the-algorithm" title="Permanent link">&para;</a></h2>
-<p>The key idea of the algorithm is to partition the process of finding the shortest path between any two vertices to several incremental phases.</p>
-<p>Let us number the vertices starting from 1 to <span class="arithmatex">$n$</span>.
-The matrix of distances is <span class="arithmatex">$d[ ][ ]$</span>.</p>
-<p>Before <span class="arithmatex">$k$</span>-th phase (<span class="arithmatex">$k = 1 \dots n$</span>), <span class="arithmatex">$d[i][j]$</span> for any vertices <span class="arithmatex">$i$</span> and <span class="arithmatex">$j$</span> stores the length of the shortest path between the vertex <span class="arithmatex">$i$</span> and vertex <span class="arithmatex">$j$</span>, which contains only the vertices <span class="arithmatex">$\{1, 2, ..., k-1\}$</span> as internal vertices in the path.</p>
-<p>In other words, before <span class="arithmatex">$k$</span>-th phase the value of <span class="arithmatex">$d[i][j]$</span> is equal to the length of the shortest path from vertex <span class="arithmatex">$i$</span> to the vertex <span class="arithmatex">$j$</span>, if this path is allowed to enter only the vertex with numbers smaller than <span class="arithmatex">$k$</span> (the beginning and end of the path are not restricted by this property).</p>
-<p>It is easy to make sure that this property holds for the first phase. For <span class="arithmatex">$k = 0$</span>, we can fill matrix with <span class="arithmatex">$d[i][j] = w_{i j}$</span> if there exists an edge between <span class="arithmatex">$i$</span> and <span class="arithmatex">$j$</span> with weight <span class="arithmatex">$w_{i j}$</span> and <span class="arithmatex">$d[i][j] = \infty$</span> if there doesn't exist an edge.
-In practice <span class="arithmatex">$\infty$</span> will be some high value.
-As we shall see later, this is a requirement for the algorithm.</p>
-<p>Suppose now that we are in the <span class="arithmatex">$k$</span>-th phase, and we want to compute the matrix <span class="arithmatex">$d[ ][ ]$</span> so that it meets the requirements for the <span class="arithmatex">$(k + 1)$</span>-th phase.
-We have to fix the distances for some vertices pairs <span class="arithmatex">$(i, j)$</span>.
-There are two fundamentally different cases:</p>
+<h1 id="thuat-toan-floyd-warshall">Thuật toán Floyd-Warshall<a class="headerlink" href="#thuat-toan-floyd-warshall" title="Permanent link">&para;</a></h1>
+<p>Cho một đồ thị vô hướng hoặc có hướng có trọng số <span class="arithmatex">$G$</span> gồm <span class="arithmatex">$n$</span> đỉnh.
+Nhiệm vụ là tìm độ dài đường đi ngắn nhất <span class="arithmatex">$d_{ij}$</span> giữa mọi cặp đỉnh <span class="arithmatex">$i$</span> và <span class="arithmatex">$j$</span>.</p>
+<p>Đồ thị có thể chứa các cạnh có trọng số âm, nhưng không được chứa các chu trình có tổng trọng số âm (chu trình âm).</p>
+<p>Nếu tồn tại chu trình âm như vậy, bạn có thể đi quanh chu trình này lặp đi lặp lại nhiều lần, làm cho chi phí đường đi giảm đi sau mỗi lượt.
+Do đó bạn có thể làm cho đường đi ngắn nhất nhỏ tùy ý, nói cách khác đường đi ngắn nhất không được xác định.
+Điều này cũng đồng nghĩa với việc đồ thị vô hướng không thể chứa các cạnh có trọng số âm, vì một cạnh âm sẽ lập tức tạo thành một chu trình âm do bạn có thể đi qua đi lại dọc theo cạnh đó bao nhiêu lần tùy thích.</p>
+<p>Thuật toán này cũng có thể được sử dụng để phát hiện sự tồn tại của các chu trình âm.
+Đồ thị có chu trình âm khi và chỉ khi kết thúc thuật toán, khoảng cách từ một đỉnh <span class="arithmatex">$v$</span> đến chính nó là một số âm.</p>
+<p>Thuật toán này được công bố đồng thời trong các bài viết của Robert Floyd và Stephen Warshall vào năm 1962.
+Tuy nhiên, vào năm 1959, Bernard Roy cũng đã công bố một thuật toán về bản chất là giống hệt, nhưng công bố này không được chú ý đến rộng rãi.</p>
+<h2 id="mo-ta-thuat-toan">Mô tả thuật toán<a class="headerlink" href="#mo-ta-thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Ý tưởng cốt lõi của thuật toán là chia nhỏ quá trình tìm đường đi ngắn nhất giữa hai đỉnh bất kỳ thành nhiều giai đoạn tăng dần.</p>
+<p>Chúng ta đánh số các đỉnh từ 1 đến <span class="arithmatex">$n$</span>.
+Ma trận khoảng cách là <span class="arithmatex">$d[ ][ ]$</span>.</p>
+<p>Trước giai đoạn thứ <span class="arithmatex">$k$</span> (<span class="arithmatex">$k = 1 \dots n$</span>), giá trị <span class="arithmatex">$d[i][j]$</span> với hai đỉnh <span class="arithmatex">$i$</span> và <span class="arithmatex">$j$</span> bất kỳ sẽ lưu trữ độ dài của đường đi ngắn nhất giữa đỉnh <span class="arithmatex">$i$</span> và đỉnh <span class="arithmatex">$j$</span>, sao cho đường đi này chỉ chứa các đỉnh trong tập <span class="arithmatex">$\{1, 2, ..., k-1\}$</span> làm các đỉnh trung gian.</p>
+<p>Nói cách khác, trước giai đoạn thứ <span class="arithmatex">$k$</span>, giá trị của <span class="arithmatex">$d[i][j]$</span> bằng độ dài của đường đi ngắn nhất từ đỉnh <span class="arithmatex">$i$</span> đến đỉnh <span class="arithmatex">$j$</span>, nếu đường đi này chỉ được phép đi qua các đỉnh có chỉ số nhỏ hơn <span class="arithmatex">$k$</span> (điểm bắt đầu và kết thúc của đường đi không bị giới hạn bởi tính chất này).</p>
+<p>Dễ thấy tính chất này được thỏa mãn ở giai đoạn đầu tiên. Với <span class="arithmatex">$k = 0$</span>, chúng ta điền vào ma trận giá trị <span class="arithmatex">$d[i][j] = w_{i j}$</span> nếu tồn tại cạnh nối giữa <span class="arithmatex">$i$</span> và <span class="arithmatex">$j$</span> có trọng số <span class="arithmatex">$w_{i j}$</span>, và điền <span class="arithmatex">$d[i][j] = \infty$</span> nếu không tồn tại cạnh nối.
+Trong thực tế, <span class="arithmatex">$\infty$</span> sẽ là một giá trị đủ lớn.
+Như chúng ta sẽ thấy ở phần sau, đây là một yêu cầu bắt buộc đối với thuật toán.</p>
+<p>Giả sử chúng ta đang ở giai đoạn thứ <span class="arithmatex">$k$</span>, và chúng ta muốn cập nhật ma trận <span class="arithmatex">$d[ ][ ]$</span> để nó đáp ứng yêu cầu cho giai đoạn thứ <span class="arithmatex">$(k + 1)$</span>.
+Chúng ta cần xác định khoảng cách cho các cặp đỉnh <span class="arithmatex">$(i, j)$</span>.
+Có hai trường hợp hoàn toàn khác nhau:</p>
 <ul>
 <li>
-<p>The shortest way from the vertex <span class="arithmatex">$i$</span> to the vertex <span class="arithmatex">$j$</span> with internal vertices from the set <span class="arithmatex">$\{1, 2, \dots, k\}$</span> coincides with the shortest path with internal vertices from the set <span class="arithmatex">$\{1, 2, \dots, k-1\}$</span>.</p>
-<p>In this case, <span class="arithmatex">$d[i][j]$</span> will not change during the transition.</p>
+<p>Đường đi ngắn nhất từ đỉnh <span class="arithmatex">$i$</span> đến đỉnh <span class="arithmatex">$j$</span> chỉ sử dụng các đỉnh trung gian trong tập <span class="arithmatex">$\{1, 2, \dots, k\}$</span> trùng khớp với đường đi ngắn nhất chỉ sử dụng các đỉnh trung gian trong tập <span class="arithmatex">$\{1, 2, \dots, k-1\}$</span>.</p>
+<p>Trong trường hợp này, giá trị <span class="arithmatex">$d[i][j]$</span> sẽ không thay đổi trong bước chuyển tiếp.</p>
 </li>
 <li>
-<p>The shortest path with internal vertices from <span class="arithmatex">$\{1, 2, \dots, k\}$</span> is shorter.</p>
-<p>This means that the new, shorter path passes through the vertex <span class="arithmatex">$k$</span>.
-This means that we can split the shortest path between <span class="arithmatex">$i$</span> and <span class="arithmatex">$j$</span> into two paths:
-the path between <span class="arithmatex">$i$</span> and <span class="arithmatex">$k$</span>, and the path between <span class="arithmatex">$k$</span> and <span class="arithmatex">$j$</span>.
-It is clear that both this paths only use internal vertices of <span class="arithmatex">$\{1, 2, \dots, k-1\}$</span> and are the shortest such paths in that respect.
-Therefore we already have computed the lengths of those paths before, and we can compute the length of the shortest path between <span class="arithmatex">$i$</span> and <span class="arithmatex">$j$</span> as <span class="arithmatex">$d[i][k] + d[k][j]$</span>.</p>
+<p>Đường đi ngắn nhất sử dụng các đỉnh trung gian trong <span class="arithmatex">$\{1, 2, \dots, k\}$</span> ngắn hơn.</p>
+<p>Điều này có nghĩa là đường đi mới, ngắn hơn này phải đi qua đỉnh <span class="arithmatex">$k$</span>.
+Nghĩa là chúng ta có thể chia đường đi ngắn nhất giữa <span class="arithmatex">$i$</span> và <span class="arithmatex">$j$</span> thành hai đường đi:
+đường đi giữa <span class="arithmatex">$i$</span> và <span class="arithmatex">$k$</span>, và đường đi giữa <span class="arithmatex">$k$</span> và <span class="arithmatex">$j$</span>.
+Rõ ràng cả hai đường đi con này chỉ sử dụng các đỉnh trung gian trong tập <span class="arithmatex">$\{1, 2, \dots, k-1\}$</span> và là các đường đi ngắn nhất tương ứng.
+Do đó chúng ta đã tính sẵn độ dài của các đường đi con này trước đó, và chúng ta có thể tính độ dài đường đi ngắn nhất giữa <span class="arithmatex">$i$</span> và <span class="arithmatex">$j$</span> bằng công thức <span class="arithmatex">$d[i][k] + d[k][j]$</span>.</p>
 </li>
 </ul>
-<p>Combining these two cases we find that we can recalculate the length of all pairs <span class="arithmatex">$(i, j)$</span> in the <span class="arithmatex">$k$</span>-th phase in the following way:</p>
+<p>Kết hợp hai trường hợp trên, chúng ta có thể tính lại khoảng cách của mọi cặp <span class="arithmatex">$(i, j)$</span> ở giai đoạn thứ <span class="arithmatex">$k$</span> như sau:</p>
 <div class="arithmatex">$$d_{\text{new}}[i][j] = min(d[i][j], d[i][k] + d[k][j])$$</div>
-<p>Thus, all the work that is required in the <span class="arithmatex">$k$</span>-th phase is to iterate over all pairs of vertices and recalculate the length of the shortest path between them.
-As a result, after the <span class="arithmatex">$n$</span>-th phase, the value <span class="arithmatex">$d[i][j]$</span> in the distance matrix is the length of the shortest path between <span class="arithmatex">$i$</span> and <span class="arithmatex">$j$</span>, or is <span class="arithmatex">$\infty$</span> if the path between the vertices <span class="arithmatex">$i$</span> and <span class="arithmatex">$j$</span> does not exist.</p>
-<p>A last remark - we don't need to create a separate distance matrix <span class="arithmatex">$d_{\text{new}}[ ][ ]$</span> for temporarily storing the shortest paths of the <span class="arithmatex">$k$</span>-th phase, i.e. all changes can be made directly in the matrix <span class="arithmatex">$d[ ][ ]$</span> at any phase.
-In fact at any <span class="arithmatex">$k$</span>-th phase we are at most improving the distance of any path in the distance matrix, hence we cannot worsen the length of the shortest path for any pair of the vertices that are to be processed in the <span class="arithmatex">$(k+1)$</span>-th phase or later.</p>
-<p>The time complexity of this algorithm is obviously <span class="arithmatex">$O(n^3)$</span>.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>Let <span class="arithmatex">$d[][]$</span> is a 2D array of size <span class="arithmatex">$n \times n$</span>, which is filled according to the <span class="arithmatex">$0$</span>-th phase as explained earlier.
-Also we will set <span class="arithmatex">$d[i][i] = 0$</span> for any <span class="arithmatex">$i$</span> at the <span class="arithmatex">$0$</span>-th phase.</p>
-<p>Then the algorithm is implemented as follows:</p>
+<p>Vì vậy, toàn bộ công việc cần làm ở giai đoạn thứ <span class="arithmatex">$k$</span> chỉ là duyệt qua tất cả các cặp đỉnh và tính toán lại độ dài đường đi ngắn nhất giữa chúng.
+Kết quả là sau giai đoạn thứ <span class="arithmatex">$n$</span>, giá trị <span class="arithmatex">$d[i][j]$</span> trong ma trận khoảng cách chính là độ dài của đường đi ngắn nhất giữa <span class="arithmatex">$i$</span> và <span class="arithmatex">$j$</span>, hoặc bằng <span class="arithmatex">$\infty$</span> nếu không tồn tại đường đi giữa hai đỉnh <span class="arithmatex">$i$</span> và <span class="arithmatex">$j$</span>.</p>
+<p>Lưu ý cuối cùng - chúng ta không cần tạo một ma trận khoảng cách tạm thời <span class="arithmatex">$d_{\text{new}}[ ][ ]$</span> để lưu trữ kết quả của giai đoạn <span class="arithmatex">$k$</span>, tức là mọi thay đổi có thể thực hiện trực tiếp trên ma trận <span class="arithmatex">$d[ ][ ]$</span> tại bất kỳ giai đoạn nào.
+Thật vậy, ở bất kỳ giai đoạn <span class="arithmatex">$k$</span> nào, chúng ta chỉ tối ưu hóa (làm ngắn đi) khoảng cách trong ma trận, do đó không làm ảnh hưởng đến tính đúng đắn của độ dài đường đi ngắn nhất cho các cặp đỉnh được xử lý ở giai đoạn <span class="arithmatex">$(k+1)$</span> hoặc muộn hơn.</p>
+<p>Độ phức tạp thời gian của thuật toán này hiển nhiên là <span class="arithmatex">$O(n^3)$</span>.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Gọi <code>d[][]</code> là một mảng 2 chiều kích thước <span class="arithmatex">$n \times n$</span>, được điền giá trị theo giai đoạn <span class="arithmatex">$0$</span> như giải thích ở trên.
+Đồng thời chúng ta cũng gán <span class="arithmatex">$d[i][i] = 0$</span> với mọi <span class="arithmatex">$i$</span> ở giai đoạn <span class="arithmatex">$0$</span>.</p>
+<p>Thuật toán được cài đặt đơn giản như sau:</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8153,11 +8101,11 @@ Also we will set <span class="arithmatex">$d[i][i] = 0$</span> for any <span cla
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>It is assumed that if there is no edge between any two vertices <span class="arithmatex">$i$</span> and <span class="arithmatex">$j$</span>, then the matrix at <span class="arithmatex">$d[i][j]$</span> contains a large number (large enough so that it is greater than the length of any path in this graph).
-Then this edge will always be unprofitable to take, and the algorithm will work correctly.</p>
-<p>However if there are negative weight edges in the graph, special measures have to be taken.
-Otherwise the resulting values in matrix may be of the form <span class="arithmatex">$\infty - 1$</span>,  <span class="arithmatex">$\infty - 2$</span>, etc., which, of course, still indicates that between the respective vertices doesn't exist a path.
-Therefore, if the graph has negative weight edges, it is better to write the Floyd-Warshall algorithm in the following way, so that it does not perform transitions using paths that don't exist.</p>
+<p>Chúng ta giả định rằng nếu không có cạnh nối giữa hai đỉnh <span class="arithmatex">$i$</span> và <span class="arithmatex">$j$</span>, thì ma trận tại vị trí <code>d[i][j]</code> sẽ chứa một số đủ lớn (đủ lớn để lớn hơn tổng độ dài của bất kỳ đường đi nào trên đồ thị).
+Khi đó cạnh ảo này sẽ không bao giờ được chọn để tối ưu đường đi, và thuật toán hoạt động chính xác.</p>
+<p>Tuy nhiên, nếu đồ thị chứa các cạnh có trọng số âm, chúng ta cần bổ sung thêm kiểm tra.
+Nếu không, các giá trị trong ma trận có thể xuất hiện dạng <span class="arithmatex">$\infty - 1$</span>, <span class="arithmatex">$\infty - 2$</span>, v.v., mặc dù chúng vẫn chỉ ra rằng không có đường đi thực sự giữa các đỉnh tương ứng.
+Do đó, nếu đồ thị có cạnh âm, tốt nhất nên viết thuật toán Floyd-Warshall theo cách sau để tránh thực hiện chuyển tiếp sử dụng các đường đi không tồn tại:</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8167,39 +8115,39 @@ Therefore, if the graph has negative weight edges, it is better to write the Flo
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="retrieving-the-sequence-of-vertices-in-the-shortest-path">Retrieving the sequence of vertices in the shortest path<a class="headerlink" href="#retrieving-the-sequence-of-vertices-in-the-shortest-path" title="Permanent link">&para;</a></h2>
-<p>It is easy to maintain additional information with which it will be possible to retrieve the shortest path between any two given vertices in the form of a sequence of vertices.</p>
-<p>For this, in addition to the distance matrix <span class="arithmatex">$d[ ][ ]$</span>, a matrix of ancestors <span class="arithmatex">$p[ ][ ]$</span> must be maintained, which will contain the number of the phase where the shortest distance between two vertices was last modified.
-It is clear that the number of the phase is nothing more than a vertex in the middle of the desired shortest path.
-Now we just need to find the shortest path between vertices <span class="arithmatex">$i$</span> and <span class="arithmatex">$p[i][j]$</span>, and between <span class="arithmatex">$p[i][j]$</span> and <span class="arithmatex">$j$</span>.
-This leads to a simple recursive reconstruction algorithm of the shortest path.</p>
-<h2 id="the-case-of-real-weights">The case of real weights<a class="headerlink" href="#the-case-of-real-weights" title="Permanent link">&para;</a></h2>
-<p>If the weights of the edges are not integer but real, it is necessary to take the errors, which occur when working with float types, into account.</p>
-<p>The Floyd-Warshall algorithm has the unpleasant effect, that the errors accumulate very quickly.
-In fact if there is an error in the first phase of <span class="arithmatex">$\delta$</span>, this error may propagate to the second iteration as <span class="arithmatex">$2 \delta$</span>, to the third iteration as <span class="arithmatex">$4 \delta$</span>, and so on.</p>
-<p>To avoid this the algorithm can be modified to take the error (EPS = <span class="arithmatex">$\delta$</span>) into account by using following comparison:</p>
+<h2 id="tim-lai-chuoi-cac-inh-cua-uong-i-ngan-nhat">Tìm lại chuỗi các đỉnh của đường đi ngắn nhất<a class="headerlink" href="#tim-lai-chuoi-cac-inh-cua-uong-i-ngan-nhat" title="Permanent link">&para;</a></h2>
+<p>Rất dễ dàng để lưu thêm thông tin giúp khôi phục đường đi ngắn nhất giữa hai đỉnh bất kỳ dưới dạng một chuỗi các đỉnh.</p>
+<p>Để làm điều này, ngoài ma trận khoảng cách <span class="arithmatex">$d[ ][ ]$</span>, chúng ta duy trì một ma trận tổ tiên <span class="arithmatex">$p[ ][ ]$</span>, lưu trữ chỉ số của giai đoạn mà tại đó khoảng cách ngắn nhất giữa hai đỉnh được cập nhật lần cuối cùng.
+Rõ ràng chỉ số giai đoạn đó chính là một đỉnh trung gian nằm giữa đường đi ngắn nhất cần tìm.
+Bây giờ chúng ta chỉ cần tìm tiếp đường đi ngắn nhất giữa đỉnh <span class="arithmatex">$i$</span> và <span class="arithmatex">$p[i][j]$</span>, và giữa <span class="arithmatex">$p[i][j]$</span> và <span class="arithmatex">$j$</span>.
+Điều này dẫn đến thuật toán đệ quy đơn giản để khôi phục đường đi ngắn nhất.</p>
+<h2 id="truong-hop-trong-so-so-thuc">Trường hợp trọng số số thực<a class="headerlink" href="#truong-hop-trong-so-so-thuc" title="Permanent link">&para;</a></h2>
+<p>Nếu trọng số của các cạnh không phải số nguyên mà là số thực, chúng ta cần lưu ý đến sai số làm tròn khi làm việc với kiểu số thực dấu phẩy động.</p>
+<p>Thuật toán Floyd-Warshall có một nhược điểm là sai số làm tròn tích lũy rất nhanh.
+Thực tế là nếu có sai số <span class="arithmatex">$\delta$</span> ở giai đoạn đầu tiên, sai số này có thể tăng lên <span class="arithmatex">$2\delta$</span> ở giai đoạn thứ hai, <span class="arithmatex">$4\delta$</span> ở giai đoạn thứ ba, và cứ tiếp tục như vậy.</p>
+<p>Để tránh điều này, thuật toán có thể sửa đổi để tính đến sai số làm tròn (EPS = <span class="arithmatex">$\delta$</span>) bằng cách sử dụng phép so sánh sau:</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">EPS</span><span class="p">)</span>
 <span class="w">    </span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">];</span><span class="w"> </span>
 </code></pre></div>
-<h2 id="the-case-of-negative-cycles">The case of negative cycles<a class="headerlink" href="#the-case-of-negative-cycles" title="Permanent link">&para;</a></h2>
-<p>Formally the Floyd-Warshall algorithm does not apply to graphs containing negative weight cycle(s).
-But for all pairs of vertices <span class="arithmatex">$i$</span> and <span class="arithmatex">$j$</span> for which there doesn't exist a path starting at <span class="arithmatex">$i$</span>, visiting a negative cycle, and end at <span class="arithmatex">$j$</span>,  the algorithm will still work correctly.</p>
-<p>For the pair of vertices for which the answer does not exist (due to the presence of a negative cycle in the path between them), the Floyd algorithm will store any number (perhaps highly negative, but not necessarily) in the distance matrix.
-However it is possible to improve the Floyd-Warshall algorithm, so that it carefully treats such pairs of vertices, and outputs them, for example as <span class="arithmatex">$-\text{INF}$</span>.</p>
-<p>This can be done in the following way:
-let us run the usual Floyd-Warshall algorithm for a given graph.
-Then a shortest path between vertices <span class="arithmatex">$i$</span> and <span class="arithmatex">$j$</span> does not exist, if and only if, there is a vertex <span class="arithmatex">$t$</span> such that, <span class="arithmatex">$t$</span> is reachable from <span class="arithmatex">$i$</span> and <span class="arithmatex">$j$</span> is reachable from <span class="arithmatex">$t$</span>, for which <span class="arithmatex">$d[t][t] &lt; 0$</span>.</p>
-<p>In addition, when using the Floyd-Warshall algorithm for graphs with negative cycles, we should keep in mind that situations may arise in which distances can get exponentially fast into the negative.
-Therefore integer overflow must be handled by limiting the minimal distance by some value (e.g. <span class="arithmatex">$-\text{INF}$</span>).</p>
-<p>To learn more about finding negative cycles in a graph, see the separate article <a href="finding-negative-cycle-in-graph.html">Finding a negative cycle in the graph</a>.</p>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="truong-hop-o-thi-chua-chu-trinh-am">Trường hợp đồ thị chứa chu trình âm<a class="headerlink" href="#truong-hop-o-thi-chua-chu-trinh-am" title="Permanent link">&para;</a></h2>
+<p>Về mặt lý thuyết, thuật toán Floyd-Warshall không áp dụng cho đồ thị chứa các chu trình âm.
+Nhưng đối với mọi cặp đỉnh <span class="arithmatex">$i$</span> và <span class="arithmatex">$j$</span> mà không tồn tại đường đi xuất phát từ <span class="arithmatex">$i$</span>, đi qua chu trình âm, và kết thúc tại <span class="arithmatex">$j$</span>, thuật toán vẫn hoạt động chính xác.</p>
+<p>Đối với các cặp đỉnh không có câu trả lời (do sự hiện diện của chu trình âm trên đường đi giữa chúng), thuật toán Floyd sẽ lưu trữ một giá trị bất kỳ (có thể là một số rất âm, nhưng không nhất thiết) trong ma trận khoảng cách.
+Tuy nhiên, chúng ta có thể cải tiến thuật toán Floyd-Warshall để nó nhận diện các cặp đỉnh như vậy và gán giá trị của chúng bằng <span class="arithmatex">$-\text{INF}$</span>.</p>
+<p>Cách thực hiện như sau:
+chạy thuật toán Floyd-Warshall thông thường cho đồ thị đã cho.
+Khi đó, đường đi ngắn nhất giữa hai đỉnh <span class="arithmatex">$i$</span> và <span class="arithmatex">$j$</span> không tồn tại khi và chỉ khi tồn tại một đỉnh <span class="arithmatex">$t$</span> sao cho từ <span class="arithmatex">$i$</span> đi tới được <span class="arithmatex">$t$</span> và từ <span class="arithmatex">$t$</span> đi tới được <span class="arithmatex">$j$</span>, đồng thời thỏa mãn <span class="arithmatex">$d[t][t] &lt; 0$</span>.</p>
+<p>Ngoài ra, khi áp dụng thuật toán Floyd-Warshall cho đồ thị chứa chu trình âm, chúng ta nên lưu ý rằng khoảng cách có thể giảm xuống âm cực nhanh theo hàm mũ.
+Do đó cần xử lý tràn số nguyên bằng cách giới hạn khoảng cách tối thiểu bởi một giá trị cụ thể (ví dụ <span class="arithmatex">$-\text{INF}$</span>).</p>
+<p>Để tìm hiểu chi tiết hơn về cách tìm chu trình âm trong đồ thị, xem bài viết riêng <a href="finding-negative-cycle-in-graph.html">Tìm chu trình âm trong đồ thị</a>.</p>
+<h2 id="bai-tap-ap-dung">Bài tập áp dụng<a class="headerlink" href="#bai-tap-ap-dung" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=762">UVA: Page Hopping</a></li>
 <li><a href="http://www.spoj.com/problems/SOCIALNE/">SPOJ: Possible Friends</a></li>
 <li><a href="http://codeforces.com/problemset/problem/295/B">CODEFORCES: Greg and Graph</a></li>
 <li><a href="http://www.spoj.com/problems/CHICAGO/">SPOJ: CHICAGO - 106 miles to Chicago</a></li>
 <li><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1665">UVA 10724 - Road Construction</a></li>
-<li><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=53">UVA  117 - The Postal Worker Rings Once</a></li>
+<li><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=53">UVA 117 - The Postal Worker Rings Once</a></li>
 <li><a href="http://codeforces.com/problemset/problem/21/D">Codeforces - Traveling Graph</a></li>
 <li><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3639">UVA - 1198 - The Geodetic Set Problem</a></li>
 <li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=989">UVA - 10048 - Audiophobia</a></li>
@@ -8225,7 +8173,7 @@ Therefore integer overflow must be handled by limiting the minimal distance by s
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (40.24%)</li><li><a href="#" title="code_master5" data-bi-name="contributorprofile" target="_blank">code_master5</a> (30.18%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (12.43%)</li><li><a href="#" title="Bhuvnesh Jain" data-bi-name="contributorprofile" target="_blank">Bhuvnesh Jain</a> (3.55%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (3.55%)</li><li><a href="#" title="Sunil Sangwan" data-bi-name="contributorprofile" target="_blank">Sunil Sangwan</a> (2.96%)</li><li><a href="#" title="Bergur Snorrason" data-bi-name="contributorprofile" target="_blank">Bergur Snorrason</a> (2.37%)</li><li><a href="#" title="RodionGork" data-bi-name="contributorprofile" target="_blank">RodionGork</a> (1.18%)</li><li><a href="#" title="Aryaman" data-bi-name="contributorprofile" target="_blank">Aryaman</a> (0.59%)</li><li><a href="#" title="Kartikay singh" data-bi-name="contributorprofile" target="_blank">Kartikay singh</a> (0.59%)</li><li><a href="#" title="LUTLJS" data-bi-name="contributorprofile" target="_blank">LUTLJS</a> (0.59%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (0.59%)</li><li><a href="#" title="Nafis" data-bi-name="contributorprofile" target="_blank">Nafis</a> (0.59%)</li><li><a href="#" title="ondrahb" data-bi-name="contributorprofile" target="_blank">ondrahb</a> (0.59%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

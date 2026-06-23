@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#extended-euclidean-algorithm" class="md-skip">
+        <a href="#thuat-toan-euclid-mo-rong" class="md-skip">
           Bỏ qua
         </a>
       
@@ -763,10 +763,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -774,10 +774,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -785,10 +785,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iterative-version" class="md-nav__link">
+  <a href="#phien-ban-vong-lap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Iterative version
+        Phiên bản vòng lặp
       
     </span>
   </a>
@@ -796,10 +796,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-thuc-hanh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập thực hành
       
     </span>
   </a>
@@ -7971,13 +7971,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/extended-euclid-algorithm.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/extended-euclid-algorithm.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/extended-euclid-algorithm.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/extended-euclid-algorithm.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7988,50 +7988,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8067,35 +8023,34 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="extended-euclidean-algorithm">Extended Euclidean Algorithm<a class="headerlink" href="#extended-euclidean-algorithm" title="Permanent link">&para;</a></h1>
-<p>While the <a href="euclid-algorithm.html">Euclidean algorithm</a> calculates only the greatest common divisor (GCD) of two non-negative integers <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>, the extended version also finds a way to represent GCD in terms of <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>, i.e. coefficients <span class="arithmatex">$x$</span> and <span class="arithmatex">$y$</span> for which:</p>
+<h1 id="thuat-toan-euclid-mo-rong">Thuật toán Euclid mở rộng<a class="headerlink" href="#thuat-toan-euclid-mo-rong" title="Permanent link">&para;</a></h1>
+<p>Trong khi <a href="euclid-algorithm.html">Thuật toán Euclid</a> chỉ tính toán ước chung lớn nhất (GCD) của hai số nguyên không âm <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span>, phiên bản mở rộng của thuật toán này còn tìm cách biểu diễn GCD thông qua <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span>, tức là tìm các hệ số <span class="arithmatex">$x$</span> và <span class="arithmatex">$y$</span> thỏa mãn:</p>
 <div class="arithmatex">$$a \cdot x + b \cdot y = \gcd(a, b)$$</div>
-<p>It's important to note that by <a href="https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity">Bézout's identity</a> we can always find such a representation. For instance, <span class="arithmatex">$\gcd(55, 80) = 5$</span>, therefore we can represent <span class="arithmatex">$5$</span> as a linear combination with the terms <span class="arithmatex">$55$</span> and <span class="arithmatex">$80$</span>: <span class="arithmatex">$55 \cdot 3 + 80 \cdot (-2) = 5$</span> </p>
-<p>A more general form of that problem is discussed in the article about <a href="linear-diophantine-equation.html">Linear Diophantine Equations</a>.
-It will build upon this algorithm.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>We will denote the GCD of <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span> with <span class="arithmatex">$g$</span> in this section.</p>
-<p>The changes to the original algorithm are very simple.
-If we recall the algorithm, we can see that the algorithm ends with <span class="arithmatex">$b = 0$</span> and <span class="arithmatex">$a = g$</span>.
-For these parameters we can easily find coefficients, namely <span class="arithmatex">$g \cdot 1 + 0 \cdot 0 = g$</span>.</p>
-<p>Starting from these coefficients <span class="arithmatex">$(x, y) = (1, 0)$</span>, we can go backwards up the recursive calls.
-All we need to do is to figure out how the coefficients <span class="arithmatex">$x$</span> and <span class="arithmatex">$y$</span> change during the transition from <span class="arithmatex">$(a, b)$</span> to <span class="arithmatex">$(b, a \bmod b)$</span>.</p>
-<p>Let us assume we found the coefficients <span class="arithmatex">$(x_1, y_1)$</span> for <span class="arithmatex">$(b, a \bmod b)$</span>:</p>
+<p>Cần lưu ý rằng theo <a href="https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity">Đồng nhất thức Bézout</a>, chúng ta luôn có thể tìm thấy một biểu diễn như vậy. Ví dụ, <span class="arithmatex">$\gcd(55, 80) = 5$</span>, vì vậy chúng ta có thể biểu diễn <span class="arithmatex">$5$</span> dưới dạng một tổ hợp tuyến tính của <span class="arithmatex">$55$</span> và <span class="arithmatex">$80$</span>: <span class="arithmatex">$55 \cdot 3 + 80 \cdot (-2) = 5$</span>.</p>
+<p>Dạng tổng quát hơn của bài toán này được thảo luận trong bài viết về <a href="linear-diophantine-equation.html">Phương trình Diophantine tuyến tính</a>. Bài viết đó sẽ được xây dựng dựa trên thuật toán này.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Chúng ta sẽ ký hiệu ước chung lớn nhất (GCD) của <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span> là <span class="arithmatex">$g$</span> trong phần này.</p>
+<p>Những thay đổi đối với thuật toán gốc là rất đơn giản.
+Nếu nhớ lại thuật toán gốc, ta thấy nó kết thúc khi <span class="arithmatex">$b = 0$</span> và <span class="arithmatex">$a = g$</span>.
+Với các tham số này, ta có thể dễ dàng tìm thấy các hệ số thỏa mãn, cụ thể là <span class="arithmatex">$g \cdot 1 + 0 \cdot 0 = g$</span>.</p>
+<p>Bắt đầu từ các hệ số này <span class="arithmatex">$(x, y) = (1, 0)$</span>, chúng ta có thể đi ngược lại các lời gọi đệ quy.
+Tất cả những gì chúng ta cần làm là xác định xem các hệ số <span class="arithmatex">$x$</span> và <span class="arithmatex">$y$</span> thay đổi như thế nào trong quá trình chuyển đổi từ <span class="arithmatex">$(a, b)$</span> sang <span class="arithmatex">$(b, a \bmod b)$</span>.</p>
+<p>Giả sử chúng ta đã tìm thấy các hệ số <span class="arithmatex">$(x_1, y_1)$</span> cho <span class="arithmatex">$(b, a \bmod b)$</span>:</p>
 <div class="arithmatex">$$b \cdot x_1 + (a \bmod b) \cdot y_1 = g$$</div>
-<p>and we want to find the pair <span class="arithmatex">$(x, y)$</span> for <span class="arithmatex">$(a, b)$</span>:</p>
+<p>và chúng ta muốn tìm cặp hệ số <span class="arithmatex">$(x, y)$</span> cho <span class="arithmatex">$(a, b)$</span>:</p>
 <div class="arithmatex">$$ a \cdot x + b \cdot y = g$$</div>
-<p>We can represent <span class="arithmatex">$a \bmod b$</span> as:</p>
+<p>Chúng ta có thể biểu diễn <span class="arithmatex">$a \bmod b$</span> dưới dạng:</p>
 <div class="arithmatex">$$ a \bmod b = a - \left\lfloor \frac{a}{b} \right\rfloor \cdot b$$</div>
-<p>Substituting this expression in the coefficient equation of <span class="arithmatex">$(x_1, y_1)$</span> gives:</p>
+<p>Thay biểu thức này vào phương trình hệ số của <span class="arithmatex">$(x_1, y_1)$</span>, ta được:</p>
 <div class="arithmatex">$$ g = b \cdot x_1 + (a \bmod b) \cdot y_1 = b \cdot x_1 + \left(a - \left\lfloor \frac{a}{b} \right\rfloor \cdot b \right) \cdot y_1$$</div>
-<p>and after rearranging the terms:</p>
+<p>và sau khi sắp xếp lại các hạng tử:</p>
 <div class="arithmatex">$$g = a \cdot y_1 + b \cdot \left( x_1 - y_1 \cdot \left\lfloor \frac{a}{b} \right\rfloor \right)$$</div>
-<p>We found the values of <span class="arithmatex">$x$</span> and <span class="arithmatex">$y$</span>:</p>
+<p>Từ đó, ta tìm được các giá trị của <span class="arithmatex">$x$</span> và <span class="arithmatex">$y$</span>:</p>
 <div class="arithmatex">$$\begin{cases}
 x = y_1 \\
 y = x_1 - y_1 \cdot \left\lfloor \frac{a}{b} \right\rfloor
 \end{cases} $$</div>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
@@ -8109,11 +8064,11 @@ y = x_1 - y_1 \cdot \left\lfloor \frac{a}{b} \right\rfloor
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>The recursive function above returns the GCD and the values of coefficients to <code>x</code> and <code>y</code> (which are passed by reference to the function).</p>
-<p>This implementation of extended Euclidean algorithm produces correct results for negative integers as well.</p>
-<h2 id="iterative-version">Iterative version<a class="headerlink" href="#iterative-version" title="Permanent link">&para;</a></h2>
-<p>It's also possible to write the Extended Euclidean algorithm in an iterative way.
-Because it avoids recursion, the code will run a little bit faster than the recursive one.</p>
+<p>Hàm đệ quy trên trả về GCD và gán giá trị của các hệ số vào <code>x</code> và <code>y</code> (được truyền bằng tham chiếu vào hàm).</p>
+<p>Cài đặt này của thuật toán Euclid mở rộng cũng hoạt động chính xác với cả các số nguyên âm.</p>
+<h2 id="phien-ban-vong-lap">Phiên bản vòng lặp<a class="headerlink" href="#phien-ban-vong-lap" title="Permanent link">&para;</a></h2>
+<p>Chúng ta cũng có thể viết thuật toán Euclid mở rộng dưới dạng vòng lặp (iterative).
+Do tránh được đệ quy, phiên bản này sẽ chạy nhanh hơn một chút so với phiên bản đệ quy.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
@@ -8126,25 +8081,23 @@ Because it avoids recursion, the code will run a little bit faster than the recu
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a1</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>If you look closely at the variables <code>a1</code> and <code>b1</code>, you can notice that they take exactly the same values as in the iterative version of the normal <a href="euclid-algorithm.html#implementation">Euclidean algorithm</a>. So the algorithm will at least compute the correct GCD.</p>
-<p>To see why the algorithm computes the correct coefficients, consider that the following invariants hold at any given time (before the while loop begins and at the end of each iteration):</p>
+<p>Nếu quan sát kỹ các biến <code>a1</code> và <code>b1</code>, bạn sẽ nhận thấy chúng nhận các giá trị hoàn toàn giống như trong phiên bản vòng lặp của <a href="euclid-algorithm.html#implementation">Thuật toán Euclid</a> thông thường. Vì vậy, thuật toán chắc chắn sẽ tính ra GCD chính xác.</p>
+<p>Để hiểu tại sao thuật toán tính ra các hệ số chính xác, hãy xem xét các bất biến (invariants) sau đây luôn được duy trì tại mọi thời điểm (trước khi bắt đầu vòng lặp while và tại cuối mỗi vòng lặp):</p>
 <div class="arithmatex">$$x \cdot a + y \cdot b = a_1$$</div>
 <div class="arithmatex">$$x_1 \cdot a + y_1 \cdot b = b_1$$</div>
-<p>Let the values at the end of an iteration be denoted by a prime (<span class="arithmatex">$'$</span>), and assume <span class="arithmatex">$q = \frac{a_1}{b_1}$</span>. From the <a href="euclid-algorithm.html">Euclidean algorithm</a>, we have:</p>
+<p>Ký hiệu các giá trị ở cuối một vòng lặp bằng dấu phẩy (<span class="arithmatex">$'$</span>), và giả sử <span class="arithmatex">$q = \frac{a_1}{b_1}$</span>. Từ <a href="euclid-algorithm.html">Thuật toán Euclid</a>, ta có:</p>
 <div class="arithmatex">$$a_1' = b_1$$</div>
 <div class="arithmatex">$$b_1' = a_1 - q \cdot b_1$$</div>
-<p>For the first invariant to hold, the following should be true:</p>
+<p>Để bất biến đầu tiên tiếp tục được duy trì, điều sau đây phải đúng:</p>
 <div class="arithmatex">$$x' \cdot a + y' \cdot b = a_1' = b_1$$</div>
 <div class="arithmatex">$$x' \cdot a + y' \cdot b = x_1 \cdot a + y_1 \cdot b$$</div>
-<p>Similarly for the second invariant, the following should hold:</p>
+<p>Tương tự đối với bất biến thứ hai, điều sau đây phải được duy trì:</p>
 <div class="arithmatex">$$x_1' \cdot a + y_1' \cdot b = a_1 - q \cdot b_1$$</div>
 <div class="arithmatex">$$x_1' \cdot a + y_1' \cdot b = (x - q \cdot x_1) \cdot a + (y - q \cdot y_1) \cdot b$$</div>
-<p>By comparing the coefficients of <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>, the update equations for each variable can be derived, ensuring that the invariants are maintained throughout the algorithm.</p>
-<p>At the end we know that <span class="arithmatex">$a_1$</span> contains the GCD, so <span class="arithmatex">$x \cdot a + y \cdot b = g$</span>.
-Which means that we have found the required coefficients.</p>
-<p>You can even optimize the code more, and remove the variable <span class="arithmatex">$a_1$</span> and <span class="arithmatex">$b_1$</span> from the code, and just reuse <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>.
-However if you do so, you lose the ability to argue about the invariants.</p>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<p>Bằng cách so sánh các hệ số của <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span>, chúng ta có thể rút ra các phương trình cập nhật cho từng biến, đảm bảo các bất biến luôn được duy trì trong suốt thuật toán.</p>
+<p>Khi kết thúc vòng lặp, ta biết <span class="arithmatex">$a_1$</span> chứa GCD, do đó <span class="arithmatex">$x \cdot a + y \cdot b = g$</span>. Điều này có nghĩa là chúng ta đã tìm thấy các hệ số cần thiết.</p>
+<p>Bạn có thể tối ưu hóa mã nguồn hơn nữa bằng cách loại bỏ các biến <span class="arithmatex">$a_1$</span> và <span class="arithmatex">$b_1$</span>, và chỉ sử dụng lại <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span>. Tuy nhiên, nếu làm vậy, bạn sẽ mất đi khả năng lập luận dựa trên các bất biến.</p>
+<h2 id="bai-tap-thuc-hanh">Bài tập thực hành<a class="headerlink" href="#bai-tap-thuc-hanh" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1045">UVA - 10104 - Euclid Problem</a></li>
 <li><a href="http://codeforces.com/gym/100963">GYM - (J) Once Upon A Time</a></li>
@@ -8153,7 +8106,7 @@ However if you do so, you lose the ability to argue about the invariants.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (42.96%)</li><li><a href="#" title="Silap Aliyev" data-bi-name="contributorprofile" target="_blank">Silap Aliyev</a> (23.7%)</li><li><a href="#" title="Kshitij Sharma" data-bi-name="contributorprofile" target="_blank">Kshitij Sharma</a> (19.26%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (4.44%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (2.96%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (1.48%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (1.48%)</li><li><a href="#" title="100daysummer" data-bi-name="contributorprofile" target="_blank">100daysummer</a> (0.74%)</li><li><a href="#" title="Rohit Choudhary" data-bi-name="contributorprofile" target="_blank">Rohit Choudhary</a> (0.74%)</li><li><a href="#" title="boxlesscat" data-bi-name="contributorprofile" target="_blank">boxlesscat</a> (0.74%)</li><li><a href="#" title="jxu" data-bi-name="contributorprofile" target="_blank">jxu</a> (0.74%)</li><li><a href="#" title="yousef fadli" data-bi-name="contributorprofile" target="_blank">yousef fadli</a> (0.74%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

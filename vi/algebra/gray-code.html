@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gray-code" class="md-skip">
+        <a href="#ma-gray-gray-code" class="md-skip">
           Bỏ qua
         </a>
       
@@ -1515,10 +1515,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#finding-gray-code" class="md-nav__link">
+  <a href="#tim-ma-gray-cua-mot-so" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Finding Gray code
+        Tìm mã Gray của một số
       
     </span>
   </a>
@@ -1526,10 +1526,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#finding-inverse-gray-code" class="md-nav__link">
+  <a href="#chuyen-oi-nguoc-ma-gray" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Finding inverse Gray code
+        Chuyển đổi ngược mã Gray
       
     </span>
   </a>
@@ -1537,10 +1537,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practical-applications" class="md-nav__link">
+  <a href="#ung-dung-thuc-te" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practical applications
+        Ứng dụng thực tế
       
     </span>
   </a>
@@ -1548,10 +1548,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-ap-dung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập áp dụng
       
     </span>
   </a>
@@ -7971,13 +7971,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/gray-code.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/gray-code.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/gray-code.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/gray-code.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7988,34 +7988,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8051,20 +8023,20 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="gray-code">Gray code<a class="headerlink" href="#gray-code" title="Permanent link">&para;</a></h1>
-<p>Gray code is a binary numeral system where two successive values differ in only one bit. </p>
-<p>Denote by <span class="arithmatex">$G(n)$</span> the representation of the number <span class="arithmatex">$n$</span> using the Gray code. The sequence of Gray codes for 3-bit numbers is: 000, 001, 011, 010, 110, 111, 101, 100, so <span class="arithmatex">$G(4) = (110)_2 = 6$</span>. 
-For example, <span class="arithmatex">$G(3) = (010)_2$</span> and <span class="arithmatex">$G(4) = (110)_2$</span> differ at exactly one bit, the leftmost bit. Similarly, <span class="arithmatex">$G(4) = 110$</span> and <span class="arithmatex">$G(5) = (111)_2$</span> differ at exactly one bit, the rightmost one. This is true for all successive numbers. </p>
-<p>This code was invented by Frank Gray in 1953.</p>
-<h2 id="finding-gray-code">Finding Gray code<a class="headerlink" href="#finding-gray-code" title="Permanent link">&para;</a></h2>
-<p>Let's look at the bits of number <span class="arithmatex">$n$</span> and the bits of number <span class="arithmatex">$G(n)$</span>. Notice that <span class="arithmatex">$i$</span>-th bit of <span class="arithmatex">$G(n)$</span> equals 1 only when <span class="arithmatex">$i$</span>-th bit of <span class="arithmatex">$n$</span> equals 1 and <span class="arithmatex">$i + 1$</span>-th bit equals 0 or the other way around (<span class="arithmatex">$i$</span>-th bit equals 0 and <span class="arithmatex">$i + 1$</span>-th bit equals 1). Thus, <span class="arithmatex">$G(n) = n \oplus (n &gt;&gt; 1)$</span>:  </p>
+<h1 id="ma-gray-gray-code">Mã Gray (Gray code)<a class="headerlink" href="#ma-gray-gray-code" title="Permanent link">&para;</a></h1>
+<p>Mã Gray là một hệ đếm nhị phân trong đó hai giá trị liên tiếp chỉ khác nhau ở đúng một bit.</p>
+<p>Ký hiệu <span class="arithmatex">$G(n)$</span> là biểu diễn của số <span class="arithmatex">$n$</span> bằng mã Gray. Dãy mã Gray cho các số 3-bit là: 000, 001, 011, 010, 110, 111, 101, 100, do đó ta có <span class="arithmatex">$G(4) = (110)_2 = 6$</span>.
+Ví dụ, <span class="arithmatex">$G(3) = (010)_2$</span> và <span class="arithmatex">$G(4) = (110)_2$</span> chỉ khác nhau ở đúng một bit (bit bên trái nhất). Tương tự, <span class="arithmatex">$G(4) = 110$</span> và <span class="arithmatex">$G(5) = (111)_2$</span> chỉ khác nhau ở đúng một bit (bit bên phải nhất). Điều này luôn đúng với mọi cặp số liên tiếp.</p>
+<p>Mã này được phát minh bởi Frank Gray vào năm 1953.</p>
+<h2 id="tim-ma-gray-cua-mot-so">Tìm mã Gray của một số<a class="headerlink" href="#tim-ma-gray-cua-mot-so" title="Permanent link">&para;</a></h2>
+<p>Chúng ta hãy xem xét các bit của số <span class="arithmatex">$n$</span> và các bit của số <span class="arithmatex">$G(n)$</span>. Nhận thấy rằng bit thứ <span class="arithmatex">$i$</span> của <span class="arithmatex">$G(n)$</span> bằng 1 khi và chỉ khi bit thứ <span class="arithmatex">$i$</span> của <span class="arithmatex">$n$</span> bằng 1 và bit thứ <span class="arithmatex">$i + 1$</span> bằng 0, hoặc ngược lại (bit thứ <span class="arithmatex">$i$</span> bằng 0 và bit thứ <span class="arithmatex">$i + 1$</span> bằng 1). Do đó, ta có công thức chuyển đổi <span class="arithmatex">$G(n) = n \oplus (n &gt;&gt; 1)$</span>:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">g</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="finding-inverse-gray-code">Finding inverse Gray code<a class="headerlink" href="#finding-inverse-gray-code" title="Permanent link">&para;</a></h2>
-<p>Given Gray code <span class="arithmatex">$g$</span>, restore the original number <span class="arithmatex">$n$</span>.</p>
-<p>We will move from the most significant bits to the least significant ones (the least significant bit has index 1 and the most significant bit has index <span class="arithmatex">$k$</span>). The relation between the bits <span class="arithmatex">$n_i$</span> of number <span class="arithmatex">$n$</span> and the bits <span class="arithmatex">$g_i$</span> of number <span class="arithmatex">$g$</span>:</p>
+<h2 id="chuyen-oi-nguoc-ma-gray">Chuyển đổi ngược mã Gray<a class="headerlink" href="#chuyen-oi-nguoc-ma-gray" title="Permanent link">&para;</a></h2>
+<p>Cho trước mã Gray <span class="arithmatex">$g$</span>, khôi phục lại số ban đầu <span class="arithmatex">$n$</span>.</p>
+<p>Chúng ta sẽ duyệt từ các bit có ý nghĩa lớn nhất đến các bit có ý nghĩa nhỏ nhất (bit nhỏ nhất có chỉ số 1 và bit lớn nhất có chỉ số <span class="arithmatex">$k$</span>). Mối liên hệ giữa các bit <span class="arithmatex">$n_i$</span> của số <span class="arithmatex">$n$</span> và các bit <span class="arithmatex">$g_i$</span> của số <span class="arithmatex">$g$</span> như sau:</p>
 <div class="arithmatex">$$\begin{align}
   n_k &amp;= g_k, \\
   n_{k-1} &amp;= g_{k-1} \oplus n_k = g_k \oplus g_{k-1}, \\
@@ -8072,7 +8044,7 @@ For example, <span class="arithmatex">$G(3) = (010)_2$</span> and <span class="a
   n_{k-3} &amp;= g_{k-3} \oplus n_{k-2} = g_k \oplus g_{k-1} \oplus g_{k-2} \oplus g_{k-3},
   \vdots
 \end{align}$$</div>
-<p>The easiest way to write it in code is:</p>
+<p>Cách đơn giản nhất để biểu diễn thuật toán này bằng mã nguồn là:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">rev_g</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">g</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">g</span><span class="p">;</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
@@ -8080,41 +8052,40 @@ For example, <span class="arithmatex">$G(3) = (010)_2$</span> and <span class="a
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="practical-applications">Practical applications<a class="headerlink" href="#practical-applications" title="Permanent link">&para;</a></h2>
-<p>Gray codes have some useful applications, sometimes quite unexpected:</p>
+<h2 id="ung-dung-thuc-te">Ứng dụng thực tế<a class="headerlink" href="#ung-dung-thuc-te" title="Permanent link">&para;</a></h2>
+<p>Mã Gray có một số ứng dụng rất hữu ích, đôi khi khá bất ngờ:</p>
 <ul>
 <li>
-<p>Gray code of <span class="arithmatex">$n$</span> bits forms a Hamiltonian cycle on a hypercube, where each bit corresponds to one dimension. </p>
+<p>Mã Gray của <span class="arithmatex">$n$</span> bit tạo thành một chu trình Hamilton trên một khối lập phương đa chiều (hypercube) <span class="arithmatex">$n$</span> chiều, trong đó mỗi bit tương ứng với một chiều không gian.</p>
 </li>
 <li>
-<p>Gray codes are used to minimize the errors in digital-to-analog signals conversion (for example, in sensors). </p>
+<p>Mã Gray được sử dụng để giảm thiểu sai số trong quá trình chuyển đổi tín hiệu số sang tương tự (DAC) (ví dụ trong các cảm biến vị trí dạng quay).</p>
 </li>
 <li>
-<p>Gray code can be used to solve the Towers of Hanoi problem.
-    Let <span class="arithmatex">$n$</span> denote number of disks. Start with Gray code of length <span class="arithmatex">$n$</span> which
-    consists of all zeroes (<span class="arithmatex">$G(0)$</span>) and move between consecutive Gray codes (from <span class="arithmatex">$G(i)$</span> to <span class="arithmatex">$G(i+1)$</span>).
-    Let <span class="arithmatex">$i$</span>-th bit of current Gray code represent <span class="arithmatex">$n$</span>-th disk 
-    (the least significant bit corresponds to the smallest disk and the most significant bit to the biggest disk). 
-    Since exactly one bit changes on each step, we can treat changing <span class="arithmatex">$i$</span>-th bit as moving <span class="arithmatex">$i$</span>-th disk.
-    Notice that there is exactly one move option for each disk (except the smallest one) on each step (except start and finish positions).
-    There are always two move options for the smallest disk but there is a strategy which will always lead to answer:
-    if <span class="arithmatex">$n$</span> is odd then sequence of the smallest disk moves looks like <span class="arithmatex">$f \to t \to r \to f \to t \to r \to ...$</span>
-    where <span class="arithmatex">$f$</span> is the initial rod, <span class="arithmatex">$t$</span> is the terminal rod and <span class="arithmatex">$r$</span> is the remaining rod), and 
-    if <span class="arithmatex">$n$</span> is even: <span class="arithmatex">$f \to r \to t \to f \to r \to t \to ...$</span>.</p>
+<p>Mã Gray có thể được sử dụng để giải bài toán Tháp Hà Nội.
+    Gọi <span class="arithmatex">$n$</span> là số đĩa. Bắt đầu với mã Gray độ dài <span class="arithmatex">$n$</span> gồm toàn số 0 (<span class="arithmatex">$G(0)$</span>) và chuyển đổi liên tiếp giữa các mã Gray (từ <span class="arithmatex">$G(i)$</span> sang <span class="arithmatex">$G(i+1)$</span>).
+    Coi bit thứ <span class="arithmatex">$i$</span> của mã Gray hiện tại đại diện cho đĩa thứ <span class="arithmatex">$n$</span>
+    (bit có ý nghĩa nhỏ nhất tương ứng với đĩa nhỏ nhất và bit có ý nghĩa lớn nhất tương ứng với đĩa lớn nhất).
+    Vì chỉ có đúng một bit thay đổi ở mỗi bước, chúng ta coi việc thay đổi bit thứ <span class="arithmatex">$i$</span> tương đương với việc di chuyển đĩa thứ <span class="arithmatex">$i$</span>.
+    Chú ý rằng có đúng một phương án di chuyển đĩa hợp lệ cho mỗi đĩa (ngoại trừ đĩa nhỏ nhất) tại mỗi bước (ngoại trừ vị trí xuất phát và đích).
+    Luôn có hai phương án di chuyển cho đĩa nhỏ nhất, nhưng ta có một chiến thuật di chuyển luôn dẫn đến đáp án đúng:
+    nếu <span class="arithmatex">$n$</span> là số lẻ, chuỗi di chuyển của đĩa nhỏ nhất sẽ tuân theo quy luật <span class="arithmatex">$f \to t \to r \to f \to t \to r \to ...$</span>
+    (với <span class="arithmatex">$f$</span> là cọc xuất phát, <span class="arithmatex">$t$</span> là cọc đích và <span class="arithmatex">$r$</span> là cọc trung gian còn lại), và
+    nếu <span class="arithmatex">$n$</span> là số chẵn: <span class="arithmatex">$f \to r \to t \to f \to r \to t \to ...$</span>.</p>
 </li>
 <li>
-<p>Gray codes are also used in genetic algorithms theory.</p>
+<p>Mã Gray cũng được sử dụng trong lý thuyết của các thuật toán di truyền (genetic algorithms).</p>
 </li>
 </ul>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap-ap-dung">Bài tập áp dụng<a class="headerlink" href="#bai-tap-ap-dung" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://cses.fi/problemset/task/2205">Gray Code &nbsp;&nbsp;&nbsp;&nbsp; [Difficulty: easy]</a></li>
-<li><a href="http://codeforces.com/problemsets/acmsguru/problem/99999/249">SGU #249 <b>"Matrix"</b> &nbsp;&nbsp;&nbsp;&nbsp; [Difficulty: medium]</a></li>
+<li><a href="https://cses.fi/problemset/task/2205">Gray Code &nbsp;&nbsp;&nbsp;&nbsp; [Độ khó: dễ]</a></li>
+<li><a href="http://codeforces.com/problemsets/acmsguru/problem/99999/249">SGU #249 <b>"Matrix"</b> &nbsp;&nbsp;&nbsp;&nbsp; [Độ khó: trung bình]</a></li>
 </ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Taras Panychok" data-bi-name="contributorprofile" target="_blank">Taras Panychok</a> (34.67%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (26.67%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (20.0%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (8.0%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (5.33%)</li><li><a href="#" title="frordo" data-bi-name="contributorprofile" target="_blank">frordo</a> (2.67%)</li><li><a href="#" title="Zarif Muhtasim" data-bi-name="contributorprofile" target="_blank">Zarif Muhtasim</a> (1.33%)</li><li><a href="#" title="traxex2" data-bi-name="contributorprofile" target="_blank">traxex2</a> (1.33%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

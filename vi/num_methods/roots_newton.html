@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#newtons-method-for-finding-roots" class="md-skip">
+        <a href="#phuong-phap-newton-e-tim-nghiem" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4093,10 +4093,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -4104,10 +4104,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#application-for-calculating-the-square-root" class="md-nav__link">
+  <a href="#ung-dung-tinh-can-bac-hai" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Application for calculating the square root
+        Ứng dụng tính căn bậc hai
       
     </span>
   </a>
@@ -4115,10 +4115,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-thuc-hanh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập thực hành
       
     </span>
   </a>
@@ -7960,13 +7960,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/num_methods/roots_newton.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/num_methods/roots_newton.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/num_methods/roots_newton.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/num_methods/roots_newton.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7977,26 +7977,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8032,32 +8012,33 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="newtons-method-for-finding-roots">Newton's method for finding roots<a class="headerlink" href="#newtons-method-for-finding-roots" title="Permanent link">&para;</a></h1>
-<p>This is an iterative method invented by Isaac Newton around 1664. However, this method is also sometimes called the Raphson method, since Raphson invented the same algorithm a few years after Newton, but his article was published much earlier.</p>
-<p>The task is as follows. Given the following equation:</p>
+<h1 id="phuong-phap-newton-e-tim-nghiem">Phương pháp Newton để tìm nghiệm<a class="headerlink" href="#phuong-phap-newton-e-tim-nghiem" title="Permanent link">&para;</a></h1>
+<p>Đây là một phương pháp lặp được Isaac Newton phát minh vào khoảng năm 1664. Tuy nhiên, phương pháp này đôi khi còn được gọi là phương pháp Raphson, vì Raphson đã phát minh ra thuật toán tương tự vài năm sau Newton, nhưng bài viết của ông được xuất bản sớm hơn nhiều.</p>
+<p>Bài toán đặt ra như sau. Cho phương trình:</p>
 <div class="arithmatex">$$f(x) = 0$$</div>
-<p>We want to solve the equation. More precisely, we want to find one of its roots (it is assumed that the root exists). It is assumed that <span class="arithmatex">$f(x)$</span> is continuous and differentiable on an interval <span class="arithmatex">$[a, b]$</span>.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>The input parameters of the algorithm consist of not only the function <span class="arithmatex">$f(x)$</span> but also the initial approximation - some <span class="arithmatex">$x_0$</span>, with which the algorithm starts.</p>
+<p>Chúng ta muốn giải phương trình này. Chính xác hơn là muốn tìm một nghiệm của nó (giả định rằng nghiệm đó tồn tại). Ta giả định rằng hàm số <span class="arithmatex">$f(x)$</span> liên tục và khả vi (differentiable) trên đoạn <span class="arithmatex">$[a, b]$</span>.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Các tham số đầu vào của thuật toán không chỉ bao gồm hàm số <span class="arithmatex">$f(x)$</span> mà còn cả giá trị xấp xỉ ban đầu - một giá trị <span class="arithmatex">$x_0$</span> nào đó mà thuật toán sẽ bắt đầu.</p>
 <p align="center">
-    <img src="./roots_newton.png" alt="plot_f(x)">
-</p>
 
-<p>Suppose we have already calculated <span class="arithmatex">$x_i$</span>, calculate <span class="arithmatex">$x_{i+1}$</span> as follows. Draw the tangent to the graph of the function <span class="arithmatex">$f(x)$</span> at the point <span class="arithmatex">$x = x_i$</span>, and find the point of intersection of this tangent with the <span class="arithmatex">$x$</span>-axis. <span class="arithmatex">$x_{i+1}$</span> is set equal to the <span class="arithmatex">$x$</span>-coordinate of the point found, and we repeat the whole process from the beginning.</p>
-<p>It is not difficult to obtain the following formula,</p>
+<img alt="plot_f(x)" src="../../num_methods/roots_newton.png" />
+
+</p>
+<p>Giả sử chúng ta đã tính được <span class="arithmatex">$x_i$</span>, ta tính <span class="arithmatex">$x_{i+1}$</span> như sau. Vẽ tiếp tuyến với đồ thị hàm số <span class="arithmatex">$f(x)$</span> tại điểm <span class="arithmatex">$x = x_i$</span>, và tìm giao điểm của tiếp tuyến này với trục hoành (trục <span class="arithmatex">$x$</span>). Giá trị <span class="arithmatex">$x_{i+1}$</span> được gán bằng hoành độ của giao điểm tìm được, và chúng ta lặp lại toàn bộ quá trình từ đầu.</p>
+<p>Không khó để rút ra công thức sau:</p>
 <div class="arithmatex">$$ x_{i+1} = x_i - \frac{f(x_i)}{f^\prime(x_i)} $$</div>
-<p>First, we calculate the slope <span class="arithmatex">$f'(x)$</span>, derivative of <span class="arithmatex">$f(x)$</span>, and then determine the equation of the tangent which is,</p>
+<p>Đầu tiên, chúng ta tính hệ số góc <span class="arithmatex">$f'(x)$</span>, đạo hàm của <span class="arithmatex">$f(x)$</span>, rồi sau đó xác định phương trình tiếp tuyến:</p>
 <div class="arithmatex">$$ y - f(x_i) = f'(x_i)(x - x_i) $$</div>
-<p>The tangent intersects with the x-axis at coordinate, <span class="arithmatex">$y = 0$</span> and <span class="arithmatex">$x = x_{i+1}$</span>,</p>
+<p>Tiếp tuyến cắt trục hoành tại tọa độ <span class="arithmatex">$y = 0$</span> và <span class="arithmatex">$x = x_{i+1}$</span>:</p>
 <div class="arithmatex">$$ - f(x_i) = f'(x_i)(x_{i+1} - x_i) $$</div>
-<p>Now, solving the equation we get the value of <span class="arithmatex">$x_{i+1}$</span>.</p>
-<p>It is intuitively clear that if the function <span class="arithmatex">$f(x)$</span> is "good" (smooth), and <span class="arithmatex">$x_i$</span> is close enough to the root, then <span class="arithmatex">$x_{i+1}$</span> will be even closer to the desired root.</p>
-<p>The rate of convergence is quadratic, which, conditionally speaking, means that the number of exact digits in the approximate value <span class="arithmatex">$x_i$</span> doubles with each iteration.</p>
-<h2 id="application-for-calculating-the-square-root">Application for calculating the square root<a class="headerlink" href="#application-for-calculating-the-square-root" title="Permanent link">&para;</a></h2>
-<p>Let's use the calculation of square root as an example of Newton's method.</p>
-<p>If we substitute <span class="arithmatex">$f(x) = x^2 - n$</span>, then after simplifying the expression, we get:</p>
+<p>Giải phương trình trên, chúng ta thu được giá trị của <span class="arithmatex">$x_{i+1}$</span>.</p>
+<p>Trực giác cho thấy nếu hàm số <span class="arithmatex">$f(x)$</span> "tốt" (trơn), và <span class="arithmatex">$x_i$</span> đủ gần nghiệm, thì <span class="arithmatex">$x_{i+1}$</span> sẽ còn gần nghiệm cần tìm hơn nữa.</p>
+<p>Tốc độ hội tụ của thuật toán là bậc hai (quadratic), có nghĩa là số chữ số chính xác trong giá trị xấp xỉ <span class="arithmatex">$x_i$</span> sẽ tăng gấp đôi sau mỗi vòng lặp.</p>
+<h2 id="ung-dung-tinh-can-bac-hai">Ứng dụng tính căn bậc hai<a class="headerlink" href="#ung-dung-tinh-can-bac-hai" title="Permanent link">&para;</a></h2>
+<p>Chúng ta hãy lấy việc tính căn bậc hai làm ví dụ cho phương pháp Newton.</p>
+<p>Nếu thay <span class="arithmatex">$f(x) = x^2 - n$</span>, sau khi rút gọn biểu thức, ta thu được:</p>
 <div class="arithmatex">$$ x_{i+1} = \frac{x_i + \frac{n}{x_i}}{2} $$</div>
-<p>The first typical variant of the problem is when a rational number <span class="arithmatex">$n$</span> is given, and its root must be calculated with some accuracy <code>eps</code>:</p>
+<p>Biến thể điển hình đầu tiên của bài toán là cho trước một số hữu tỉ <span class="arithmatex">$n$</span>, và cần tính căn bậc hai của nó với một độ chính xác <code>eps</code> cho trước:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="nf">sqrt_newton</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">eps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1E-15</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
@@ -8070,7 +8051,7 @@ Describe the issue of this article in detail.
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Another common variant of the problem is when we need to calculate the integer root (for the given <span class="arithmatex">$n$</span> find the largest <span class="arithmatex">$x$</span> such that <span class="arithmatex">$x^2 \le n$</span>). Here it is necessary to slightly change the termination condition of the algorithm, since it may happen that <span class="arithmatex">$x$</span> will start to "jump" near the answer. Therefore, we add a condition that if the value <span class="arithmatex">$x$</span> has decreased in the previous step, and it tries to increase at the current step, then the algorithm must be stopped.</p>
+<p>Một biến thể phổ biến khác của bài toán là khi chúng ta cần tính căn nguyên (cho số nguyên <span class="arithmatex">$n$</span>, tìm số nguyên <span class="arithmatex">$x$</span> lớn nhất sao cho <span class="arithmatex">$x^2 \le n$</span>). Ở đây chúng ta cần thay đổi một chút điều kiện dừng của thuật toán, vì có khả năng giá trị <span class="arithmatex">$x$</span> sẽ bắt đầu "dao động" quanh đáp án. Do đó, chúng ta thêm điều kiện là nếu giá trị <span class="arithmatex">$x$</span> đã giảm ở bước trước đó, và lại cố gắng tăng lên ở bước hiện tại, thì thuật toán phải dừng lại.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">isqrt_newton</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">decreased</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
@@ -8084,7 +8065,7 @@ Describe the issue of this article in detail.
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Finally, we are given the third variant - for the case of bignum arithmetic. Since the number <span class="arithmatex">$n$</span> can be large enough, it makes sense to pay attention to the initial approximation. Obviously, the closer it is to the root, the faster the result will be achieved. It is simple enough and effective to take the initial approximation as the number <span class="arithmatex">$2^{\textrm{bits}/2}$</span>, where <span class="arithmatex">$\textrm{bits}$</span> is the number of bits in the number <span class="arithmatex">$n$</span>. Here is the Java code that demonstrates this variant:</p>
+<p>Cuối cùng là biến thể thứ ba - dành cho trường hợp số lớn (bignum arithmetic). Vì số <span class="arithmatex">$n$</span> có thể rất lớn, việc chú ý đến giá trị xấp xỉ ban đầu là vô cùng hợp lý. Rõ ràng, giá trị này càng gần nghiệm thì kết quả đạt được càng nhanh. Một cách đơn giản và hiệu quả là chọn xấp xỉ ban đầu bằng số <span class="arithmatex">$2^{\textrm{bits}/2}$</span>, trong đó <span class="arithmatex">$\textrm{bits}$</span> là số lượng bit của số <span class="arithmatex">$n$</span>. Dưới đây là mã Java minh họa cho biến thể này:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">BigInteger</span><span class="w"> </span><span class="nf">isqrtNewton</span><span class="p">(</span><span class="n">BigInteger</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">BigInteger</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BigInteger</span><span class="p">.</span><span class="na">ONE</span><span class="p">.</span><span class="na">shiftLeft</span><span class="p">(</span><span class="n">n</span><span class="p">.</span><span class="na">bitLength</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
 <span class="w">    </span><span class="kt">boolean</span><span class="w"> </span><span class="n">p_dec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
@@ -8098,15 +8079,15 @@ Describe the issue of this article in detail.
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>For example, this code is executed in <span class="arithmatex">$60$</span> milliseconds for <span class="arithmatex">$n = 10^{1000}$</span>, and if we remove the improved selection of the initial approximation (just starting with <span class="arithmatex">$1$</span>), then it will be executed in about <span class="arithmatex">$120$</span> milliseconds.</p>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<p>Ví dụ, đoạn mã này thực thi trong khoảng <span class="arithmatex">$60$</span> mili-giây với <span class="arithmatex">$n = 10^{1000}$</span>. Nếu bỏ qua việc tối ưu chọn xấp xỉ ban đầu (chỉ bắt đầu từ <span class="arithmatex">$1$</span>), thời gian thực thi sẽ tăng lên khoảng <span class="arithmatex">$120$</span> mili-giây.</p>
+<h2 id="bai-tap-thuc-hanh">Bài tập thực hành<a class="headerlink" href="#bai-tap-thuc-hanh" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=16&amp;page=show_problem&amp;problem=1369">UVa 10428 - The Roots</a></li>
 </ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="prpr" data-bi-name="contributorprofile" target="_blank">prpr</a> (77.36%)</li><li><a href="#" title="Toufiq Shishir" data-bi-name="contributorprofile" target="_blank">Toufiq Shishir</a> (13.21%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (5.66%)</li><li><a href="#" title="Abhijeet Krishnan" data-bi-name="contributorprofile" target="_blank">Abhijeet Krishnan</a> (1.89%)</li><li><a href="#" title="Chuan Liu" data-bi-name="contributorprofile" target="_blank">Chuan Liu</a> (0.94%)</li><li><a href="#" title="Vineet Kumar" data-bi-name="contributorprofile" target="_blank">Vineet Kumar</a> (0.94%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

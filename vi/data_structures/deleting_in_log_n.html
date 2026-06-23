@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deleting-from-a-data-structure-in-otnlog-n" class="md-skip">
+        <a href="#xoa-khoi-cau-truc-du-lieu-trong-otnlog-n" class="md-skip">
           Bỏ qua
         </a>
       
@@ -2265,10 +2265,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -2276,10 +2276,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
+  <a href="#luu-y" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Notes
+        Lưu ý
       
     </span>
   </a>
@@ -2287,10 +2287,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -2298,10 +2298,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#problems" class="md-nav__link">
+  <a href="#bai-tap-ap-dung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problems
+        Bài tập áp dụng
       
     </span>
   </a>
@@ -7971,13 +7971,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/data_structures/deleting_in_log_n.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/data_structures/deleting_in_log_n.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/data_structures/deleting_in_log_n.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/data_structures/deleting_in_log_n.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7993,14 +7993,6 @@ Describe the issue of this article in detail.
   
   
 
-  
-  
-  
-
-  
-  
-  
-
 
 
 
@@ -8011,34 +8003,34 @@ Describe the issue of this article in detail.
 
 
   
-    <a href="../tags.html#tag:original" class="md-tag">
-      Original
+    <a href="../tags.html#tag:translated" class="md-tag">
+      Translated
     </a>
   
 
 </ul>
 
 
-<h1 id="deleting-from-a-data-structure-in-otnlog-n">Deleting from a data structure in <span class="arithmatex">$O(T(n)\log n)$</span><a class="headerlink" href="#deleting-from-a-data-structure-in-otnlog-n" title="Permanent link">&para;</a></h1>
-<p>Suppose you have a data structure which allows adding elements in <strong>true</strong> <span class="arithmatex">$O(T(n))$</span>.
-This article will describe a technique that allows deletion in <span class="arithmatex">$O(T(n)\log n)$</span> offline.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>Each element lives in the data structure for some segments of time between additions and deletions.
-Let's build a segment tree over the queries.
-Each segment when some element is alive splits into <span class="arithmatex">$O(\log n)$</span> nodes of the tree.
-Let's put each query when we want to know something about the structure into the corresponding leaf.
-Now to process all queries we will run a DFS on the segment tree.
-When entering the node we will add all the elements that are inside this node.
-Then we will go further to the children of this node or answer the queries (if the node is a leaf).
-When leaving the node, we must undo the additions.
-Note that if we change the structure in <span class="arithmatex">$O(T(n))$</span> we can roll back the changes in <span class="arithmatex">$O(T(n))$</span> by keeping a stack of changes.
-Note that rollbacks break amortized complexity.</p>
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
-<p>The idea of creating a segment tree over segments when something is alive may be used not only for data structure problems.
-See some problems below.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>This implementation is for the <a href="https://en.wikipedia.org/wiki/Dynamic_connectivity">dynamic connectivity</a> problem.
-It can add edges, remove edges and count the number of connected components.</p>
+<h1 id="xoa-khoi-cau-truc-du-lieu-trong-otnlog-n">Xóa khỏi cấu trúc dữ liệu trong <span class="arithmatex">$O(T(n)\log n)$</span><a class="headerlink" href="#xoa-khoi-cau-truc-du-lieu-trong-otnlog-n" title="Permanent link">&para;</a></h1>
+<p>Giả sử bạn có một cấu trúc dữ liệu cho phép thêm phần tử trong thời gian <span class="arithmatex">$O(T(n))$</span> <strong>thực tế</strong> (true <span class="arithmatex">$O(T(n))$</span>).
+Bài viết này sẽ mô tả một kỹ thuật cho phép thực hiện thao tác xóa ngoại tuyến (offline) trong <span class="arithmatex">$O(T(n)\log n)$</span>.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Mỗi phần tử tồn tại trong cấu trúc dữ liệu tại một số khoảng thời gian nhất định giữa các thao tác thêm và xóa.
+Chúng ta sẽ dựng một cây phân đoạn (segment tree) trên các truy vấn.
+Mỗi khoảng thời gian tồn tại của một phần tử sẽ được phân rã thành <span class="arithmatex">$O(\log n)$</span> nút trên cây.
+Chúng ta đặt mỗi truy vấn cần hỏi thông tin về cấu trúc dữ liệu vào lá tương ứng.
+Bây giờ, để xử lý tất cả các truy vấn, chúng ta sẽ thực hiện duyệt DFS trên cây phân đoạn này.
+Khi đi vào một nút, chúng ta sẽ thêm tất cả các phần tử thuộc về nút này vào cấu trúc dữ liệu.
+Sau đó, chúng ta sẽ đi tiếp xuống các con của nút này hoặc trả lời các truy vấn (nếu nút hiện tại là lá).
+Khi đi ra khỏi nút (quay lui), chúng ta phải hoàn tác (undo) các thao tác thêm đã thực hiện ở nút đó.
+Lưu ý rằng nếu chúng ta thay đổi cấu trúc dữ liệu trong <span class="arithmatex">$O(T(n))$</span>, chúng ta có thể khôi phục lại các thay đổi trong <span class="arithmatex">$O(T(n))$</span> bằng cách lưu trữ một ngăn xếp chứa các thay đổi.
+Lưu ý thêm rằng việc hoàn tác (rollbacks) sẽ làm phá vỡ độ phức tạp phân tích khấu hao (amortized complexity).</p>
+<h2 id="luu-y">Lưu ý<a class="headerlink" href="#luu-y" title="Permanent link">&para;</a></h2>
+<p>Ý tưởng dựng cây phân đoạn trên các khoảng thời gian tồn tại không chỉ áp dụng cho các bài toán về cấu trúc dữ liệu.
+Bạn có thể tham khảo một số bài toán ở phần dưới.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Cài đặt dưới đây giải quyết bài toán <a href="https://en.wikipedia.org/wiki/Dynamic_connectivity">dynamic connectivity</a> (liên thông động).
+Nó có thể thêm cạnh, xóa cạnh và đếm số lượng thành phần liên thông.</p>
 <div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">dsu_save</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">rnkv</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">rnku</span><span class="p">;</span>
 
@@ -8156,7 +8148,7 @@ It can add edges, remove edges and count the number of connected components.</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div>
-<h2 id="problems">Problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap-ap-dung">Bài tập áp dụng<a class="headerlink" href="#bai-tap-ap-dung" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://codeforces.com/gym/100551/problem/A">Codeforces - Connect and Disconnect</a></li>
 <li><a href="https://codeforces.com/contest/981/problem/E">Codeforces - Addition on Segments</a></li>
@@ -8165,7 +8157,7 @@ It can add edges, remove edges and count the number of connected components.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Yury Semenov" data-bi-name="contributorprofile" target="_blank">Yury Semenov</a> (95.54%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (3.18%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (1.27%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#primitive-root" class="md-skip">
+        <a href="#can-nguyen-thuy" class="md-skip">
           Bỏ qua
         </a>
       
@@ -1348,10 +1348,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#definition" class="md-nav__link">
+  <a href="#inh-nghia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Definition
+        Định nghĩa
       
     </span>
   </a>
@@ -1359,10 +1359,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#existence" class="md-nav__link">
+  <a href="#su-ton-tai" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Existence
+        Sự tồn tại
       
     </span>
   </a>
@@ -1370,10 +1370,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#relation-with-the-euler-function" class="md-nav__link">
+  <a href="#moi-lien-he-voi-ham-euler" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Relation with the Euler function
+        Mối liên hệ với hàm Euler
       
     </span>
   </a>
@@ -1381,10 +1381,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#algorithm-for-finding-a-primitive-root" class="md-nav__link">
+  <a href="#thuat-toan-tim-can-nguyen-thuy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm for finding a primitive root
+        Thuật toán tìm căn nguyên thủy
       
     </span>
   </a>
@@ -1392,10 +1392,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -7982,13 +7982,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/primitive-root.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/primitive-root.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/primitive-root.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/primitive-root.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7999,18 +7999,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8046,45 +8034,45 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="primitive-root">Primitive Root<a class="headerlink" href="#primitive-root" title="Permanent link">&para;</a></h1>
-<h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h2>
-<p>In modular arithmetic, a number <span class="arithmatex">$g$</span> is called a <code>primitive root modulo n</code> if every number coprime to <span class="arithmatex">$n$</span> is congruent to a power of <span class="arithmatex">$g$</span> modulo <span class="arithmatex">$n$</span>. Mathematically, <span class="arithmatex">$g$</span> is a <code>primitive root modulo n</code> if and only if for any integer <span class="arithmatex">$a$</span> such that <span class="arithmatex">$\gcd(a, n) = 1$</span>, there exists an integer <span class="arithmatex">$k$</span> such that:</p>
+<h1 id="can-nguyen-thuy">Căn nguyên thủy<a class="headerlink" href="#can-nguyen-thuy" title="Permanent link">&para;</a></h1>
+<h2 id="inh-nghia">Định nghĩa<a class="headerlink" href="#inh-nghia" title="Permanent link">&para;</a></h2>
+<p>Trong số học mô-đun, một số <span class="arithmatex">$g$</span> được gọi là <code>căn nguyên thủy mô-đun n</code> (primitive root modulo n) nếu mọi số nguyên tố cùng nhau với <span class="arithmatex">$n$</span> đều đồng dư với một lũy thừa của <span class="arithmatex">$g$</span> theo mô-đun <span class="arithmatex">$n$</span>. Dưới góc độ toán học, <span class="arithmatex">$g$</span> là một <code>căn nguyên thủy mô-đun n</code> khi và chỉ khi với mọi số nguyên <span class="arithmatex">$a$</span> thỏa mãn <span class="arithmatex">$\gcd(a, n) = 1$</span>, tồn tại một số nguyên <span class="arithmatex">$k$</span> sao cho:</p>
 <p><span class="arithmatex">$g^k \equiv a \pmod n$</span>.</p>
-<p><span class="arithmatex">$k$</span> is then called the <code>index</code> or <code>discrete logarithm</code> of <span class="arithmatex">$a$</span> to the base <span class="arithmatex">$g$</span> modulo <span class="arithmatex">$n$</span>. <span class="arithmatex">$g$</span> is also called the <code>generator</code> of the multiplicative group of integers modulo <span class="arithmatex">$n$</span>.</p>
-<p>In particular, for the case where <span class="arithmatex">$n$</span> is a prime, the powers of primitive root runs through all numbers from <span class="arithmatex">$1$</span> to <span class="arithmatex">$n-1$</span>.</p>
-<h2 id="existence">Existence<a class="headerlink" href="#existence" title="Permanent link">&para;</a></h2>
-<p>Primitive root modulo <span class="arithmatex">$n$</span> exists if and only if:</p>
+<p>Khi đó <span class="arithmatex">$k$</span> được gọi là <code>chỉ số</code> (index) hoặc <code>logarit rời rạc</code> (discrete logarithm) của <span class="arithmatex">$a$</span> cơ số <span class="arithmatex">$g$</span> theo mô-đun <span class="arithmatex">$n$</span>. <span class="arithmatex">$g$</span> cũng được gọi là <code>phần tử sinh</code> (generator) của nhóm nhân các số nguyên modulo <span class="arithmatex">$n$</span>.</p>
+<p>Đặc biệt, trong trường hợp <span class="arithmatex">$n$</span> là một số nguyên tố, các lũy thừa của căn nguyên thủy sẽ quét qua tất cả các số từ <span class="arithmatex">$1$</span> đến <span class="arithmatex">$n-1$</span>.</p>
+<h2 id="su-ton-tai">Sự tồn tại<a class="headerlink" href="#su-ton-tai" title="Permanent link">&para;</a></h2>
+<p>Căn nguyên thủy mô-đun <span class="arithmatex">$n$</span> tồn tại khi và chỉ khi:</p>
 <ul>
-<li><span class="arithmatex">$n$</span> is 1, 2, 4, or</li>
-<li><span class="arithmatex">$n$</span> is power of an odd prime number <span class="arithmatex">$(n = p^k)$</span>, or</li>
-<li><span class="arithmatex">$n$</span> is twice power of an odd prime number <span class="arithmatex">$(n = 2 \cdot p^k)$</span>.</li>
+<li><span class="arithmatex">$n$</span> là 1, 2, 4, hoặc</li>
+<li><span class="arithmatex">$n$</span> là lũy thừa của một số nguyên tố lẻ <span class="arithmatex">$(n = p^k)$</span>, hoặc</li>
+<li><span class="arithmatex">$n$</span> là hai lần lũy thừa của một số nguyên tố lẻ <span class="arithmatex">$(n = 2 \cdot p^k)$</span>.</li>
 </ul>
-<p>This theorem was proved by Gauss in 1801.</p>
-<h2 id="relation-with-the-euler-function">Relation with the Euler function<a class="headerlink" href="#relation-with-the-euler-function" title="Permanent link">&para;</a></h2>
-<p>Let <span class="arithmatex">$g$</span> be a primitive root modulo <span class="arithmatex">$n$</span>. Then we can show that the smallest number <span class="arithmatex">$k$</span> for which <span class="arithmatex">$g^k \equiv 1 \pmod n$</span> is equal <span class="arithmatex">$\phi (n)$</span>. Moreover, the reverse is also true, and this fact will be used in this article to find a primitive root.</p>
-<p>Furthermore, the number of primitive roots modulo <span class="arithmatex">$n$</span>, if there are any, is equal to <span class="arithmatex">$\phi (\phi (n) )$</span>.</p>
-<h2 id="algorithm-for-finding-a-primitive-root">Algorithm for finding a primitive root<a class="headerlink" href="#algorithm-for-finding-a-primitive-root" title="Permanent link">&para;</a></h2>
-<p>A naive algorithm is to consider all numbers in range <span class="arithmatex">$[1, n-1]$</span>. And then check if each one is a primitive root, by calculating all its power to see if they are all different. This algorithm has complexity <span class="arithmatex">$O(g \cdot n)$</span>, which would be too slow. In this section, we propose a faster algorithm using several well-known theorems.</p>
-<p>From previous section, we know that if the smallest number <span class="arithmatex">$k$</span> for which <span class="arithmatex">$g^k \equiv 1 \pmod n$</span> is <span class="arithmatex">$\phi (n)$</span>, then <span class="arithmatex">$g$</span> is a primitive root. Since for any number <span class="arithmatex">$a$</span> relative prime to <span class="arithmatex">$n$</span>, we know from Euler's theorem that <span class="arithmatex">$a ^ { \phi (n) } \equiv 1 \pmod n$</span>, then to check if <span class="arithmatex">$g$</span> is primitive root, it is enough to check that for all <span class="arithmatex">$d$</span> less than <span class="arithmatex">$\phi (n)$</span>, <span class="arithmatex">$g^d \not \equiv 1 \pmod n$</span>. However, this algorithm is still too slow.</p>
-<p>From Lagrange's theorem, we know that the index of 1 of any number modulo <span class="arithmatex">$n$</span> must be a divisor of <span class="arithmatex">$\phi (n)$</span>. Thus, it is sufficient to verify for all proper divisor <span class="arithmatex">$d \mid \phi (n)$</span> that <span class="arithmatex">$g^d \not \equiv 1 \pmod n$</span>. This is already a much faster algorithm, but we can still do better.</p>
-<p>Factorize <span class="arithmatex">$\phi (n) = p_1 ^ {a_1} \cdots p_s ^ {a_s}$</span>. We prove that in the previous algorithm, it is sufficient to consider only the values of <span class="arithmatex">$d$</span> which have the form <span class="arithmatex">$\frac { \phi (n) } {p_j}$</span>. Indeed, let <span class="arithmatex">$d$</span> be any proper divisor of <span class="arithmatex">$\phi (n)$</span>. Then, obviously, there exists such <span class="arithmatex">$j$</span> that <span class="arithmatex">$d \mid \frac { \phi (n) } {p_j}$</span>, i.e. <span class="arithmatex">$d \cdot k = \frac { \phi (n) } {p_j}$</span>. However, if <span class="arithmatex">$g^d \equiv 1 \pmod n$</span>, we would get:</p>
+<p>Định lý này đã được chứng minh bởi Gauss vào năm 1801.</p>
+<h2 id="moi-lien-he-voi-ham-euler">Mối liên hệ với hàm Euler<a class="headerlink" href="#moi-lien-he-voi-ham-euler" title="Permanent link">&para;</a></h2>
+<p>Gọi <span class="arithmatex">$g$</span> là một căn nguyên thủy mô-đun <span class="arithmatex">$n$</span>. Khi đó chúng ta có thể chứng minh rằng số <span class="arithmatex">$k$</span> nhỏ nhất thỏa mãn <span class="arithmatex">$g^k \equiv 1 \pmod n$</span> là bằng <span class="arithmatex">$\phi (n)$</span>. Hơn nữa, điều ngược lại cũng đúng, và tính chất này sẽ được sử dụng trong bài viết này để tìm một căn nguyên thủy.</p>
+<p>Ngoài ra, số lượng các căn nguyên thủy mô-đun <span class="arithmatex">$n$</span> (nếu có) bằng <span class="arithmatex">$\phi (\phi (n) )$</span>.</p>
+<h2 id="thuat-toan-tim-can-nguyen-thuy">Thuật toán tìm căn nguyên thủy<a class="headerlink" href="#thuat-toan-tim-can-nguyen-thuy" title="Permanent link">&para;</a></h2>
+<p>Một thuật toán thô sơ là duyệt qua tất cả các số trong khoảng <span class="arithmatex">$[1, n-1]$</span>. Và kiểm tra xem mỗi số có phải là một căn nguyên thủy hay không bằng cách tính tất cả các lũy thừa của nó để xem chúng có khác nhau đôi một hay không. Thuật toán này có độ phức tạp là <span class="arithmatex">$O(g \cdot n)$</span>, quá chậm để áp dụng trong thực tế. Trong phần này, chúng tôi đề xuất một thuật toán nhanh hơn sử dụng một số định lý nổi tiếng.</p>
+<p>Từ phần trước, chúng ta biết rằng nếu số <span class="arithmatex">$k$</span> nhỏ nhất thỏa mãn <span class="arithmatex">$g^k \equiv 1 \pmod n$</span> là <span class="arithmatex">$\phi (n)$</span>, thì <span class="arithmatex">$g$</span> là một căn nguyên thủy. Vì với bất kỳ số <span class="arithmatex">$a$</span> nào nguyên tố cùng nhau với <span class="arithmatex">$n$</span>, chúng ta biết từ định lý Euler rằng <span class="arithmatex">$a ^ { \phi (n) } \equiv 1 \pmod n$</span>, nên để kiểm tra xem <span class="arithmatex">$g$</span> có phải là căn nguyên thủy hay không, ta chỉ cần kiểm tra xem với mọi <span class="arithmatex">$d$</span> nhỏ hơn <span class="arithmatex">$\phi (n)$</span>, <span class="arithmatex">$g^d \not \equiv 1 \pmod n$</span>. Tuy nhiên, thuật toán này vẫn còn quá chậm.</p>
+<p>Từ định lý Lagrange, chúng ta biết rằng bậc của 1 của bất kỳ số nào theo mô-đun <span class="arithmatex">$n$</span> phải là một ước của <span class="arithmatex">$\phi (n)$</span>. Do đó, chỉ cần kiểm tra với mọi ước thực sự <span class="arithmatex">$d \mid \phi (n)$</span> sao cho <span class="arithmatex">$g^d \not \equiv 1 \pmod n$</span>. Đây đã là một thuật toán nhanh hơn nhiều, nhưng chúng ta vẫn có thể cải tiến tốt hơn nữa.</p>
+<p>Phân tích thừa số nguyên tố <span class="arithmatex">$\phi (n) = p_1 ^ {a_1} \cdots p_s ^ {a_s}$</span>. Chúng ta chứng minh rằng trong thuật toán trước đó, chỉ cần xem xét các giá trị của <span class="arithmatex">$d$</span> có dạng <span class="arithmatex">$\frac { \phi (n) } {p_j}$</span>. Thật vậy, gọi <span class="arithmatex">$d$</span> là một ước thực sự bất kỳ của <span class="arithmatex">$\phi (n)$</span>. Khi đó, rõ ràng tồn tại chỉ số <span class="arithmatex">$j$</span> sao cho <span class="arithmatex">$d \mid \frac { \phi (n) } {p_j}$</span>, tức là <span class="arithmatex">$d \cdot k = \frac { \phi (n) } {p_j}$</span>. Tuy nhiên, nếu <span class="arithmatex">$g^d \equiv 1 \pmod n$</span>, chúng ta sẽ thu được:</p>
 <p><span class="arithmatex">$g ^ { \frac { \phi (n)} {p_j} } \equiv g ^ {d \cdot k} \equiv (g^d) ^k \equiv 1^k \equiv 1 \pmod n$</span>.</p>
-<p>i.e. among the numbers of the form <span class="arithmatex">$\frac {\phi (n)} {p_i}$</span>, there would be at least one such that the conditions were not met.</p>
-<p>Now we have a complete algorithm for finding the primitive root:</p>
+<p>tức là trong số các số có dạng <span class="arithmatex">$\frac {\phi (n)} {p_i}$</span>, sẽ có ít nhất một số mà tại đó điều kiện không được thỏa mãn.</p>
+<p>Bây giờ chúng ta có thuật toán hoàn chỉnh để tìm căn nguyên thủy:</p>
 <ul>
-<li>First, find <span class="arithmatex">$\phi (n)$</span> and factorize it.</li>
+<li>Đầu tiên, tìm <span class="arithmatex">$\phi (n)$</span> và phân tích thừa số nguyên tố của nó.</li>
 <li>
-<p>Then iterate through all numbers <span class="arithmatex">$g \in [1, n]$</span>, and for each number, to check if it is primitive root, we do the following:</p>
+<p>Sau đó duyệt qua tất cả các số <span class="arithmatex">$g \in [1, n]$</span>, và với mỗi số, để kiểm tra xem nó có phải là căn nguyên thủy hay không, chúng ta thực hiện như sau:</p>
 <ul>
-<li>Calculate all <span class="arithmatex">$g ^ { \frac {\phi (n)} {p_i}} \pmod n$</span>.</li>
-<li>If all the calculated values are different from <span class="arithmatex">$1$</span>, then <span class="arithmatex">$g$</span> is a primitive root.</li>
+<li>Tính tất cả các giá trị <span class="arithmatex">$g ^ { \frac {\phi (n)} {p_i}} \pmod n$</span>.</li>
+<li>Nếu tất cả các giá trị tính được đều khác <span class="arithmatex">$1$</span>, thì <span class="arithmatex">$g$</span> là một căn nguyên thủy.</li>
 </ul>
-<p>Running time of this algorithm is <span class="arithmatex">$O(Ans \cdot \log \phi (n) \cdot \log n)$</span> (assume that <span class="arithmatex">$\phi (n)$</span> has <span class="arithmatex">$\log \phi (n)$</span> divisors).</p>
+<p>Thời gian chạy của thuật toán này là <span class="arithmatex">$O(Ans \cdot \log \phi (n) \cdot \log n)$</span> (giả định rằng <span class="arithmatex">$\phi (n)$</span> có <span class="arithmatex">$\log \phi (n)$</span> ước số).</p>
 </li>
 </ul>
-<p>Shoup (1990, 1992) proved, assuming the <a href="http://en.wikipedia.org/wiki/Generalized_Riemann_hypothesis">generalized Riemann hypothesis</a>, that <span class="arithmatex">$g$</span> is <span class="arithmatex">$O(\log^6 p)$</span>.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>The following code assumes that the modulo <code>p</code> is a prime number. To make it works for any value of <code>p</code>, we must add calculation of <span class="arithmatex">$\phi (p)$</span>. </p>
+<p>Shoup (1990, 1992) đã chứng minh rằng, với giả thiết Riemann tổng quát (generalized Riemann hypothesis) được thỏa mãn, thì <span class="arithmatex">$g$</span> có độ lớn <span class="arithmatex">$O(\log^6 p)$</span>.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Đoạn mã sau giả định rằng mô-đun <code>p</code> là một số nguyên tố. Để đoạn mã hoạt động với mọi giá trị của <code>p</code>, chúng ta phải bổ sung thêm phần tính <span class="arithmatex">$\phi (p)$</span>.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">powmod</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
@@ -8119,7 +8107,7 @@ Describe the issue of this article in detail.
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="thanhtnguyen" data-bi-name="contributorprofile" target="_blank">thanhtnguyen</a> (83.33%)</li><li><a href="#" title="Tanner Hoke" data-bi-name="contributorprofile" target="_blank">Tanner Hoke</a> (9.38%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (6.25%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (1.04%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

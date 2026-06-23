@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#topological-sorting" class="md-skip">
+        <a href="#sap-xep-topo-topological-sorting" class="md-skip">
           Bỏ qua
         </a>
       
@@ -7096,10 +7096,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -7107,10 +7107,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -7118,10 +7118,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-ap-dung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập áp dụng
       
     </span>
   </a>
@@ -7960,13 +7960,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/topological-sort.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/topological-sort.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/topological-sort.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/topological-sort.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7977,58 +7977,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8064,43 +8012,41 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="topological-sorting">Topological Sorting<a class="headerlink" href="#topological-sorting" title="Permanent link">&para;</a></h1>
-<p>You are given a directed graph with <span class="arithmatex">$n$</span> vertices and <span class="arithmatex">$m$</span> edges.
-You have to find an <strong>order of the vertices</strong>, so that every edge leads from the vertex with a smaller index to a vertex with a larger one.</p>
-<p>In other words, you want to find a permutation of the vertices (<strong>topological order</strong>) which corresponds to the order defined by all edges of the graph.</p>
-<p>Here is one given graph together with its topological order:</p>
+<h1 id="sap-xep-topo-topological-sorting">Sắp xếp topo (Topological Sorting)<a class="headerlink" href="#sap-xep-topo-topological-sorting" title="Permanent link">&para;</a></h1>
+<p>Cho một đồ thị có hướng với <span class="arithmatex">$n$</span> đỉnh và <span class="arithmatex">$m$</span> cạnh.
+Chúng ta cần tìm một <strong>thứ tự sắp xếp các đỉnh</strong> sao cho mỗi cạnh đều đi từ đỉnh có chỉ số nhỏ hơn đến đỉnh có chỉ số lớn hơn.</p>
+<p>Nói cách khác, chúng ta muốn tìm một hoán vị của các đỉnh (<strong>thứ tự topo</strong>) tương thích với hướng của tất cả các cạnh trong đồ thị.</p>
+<p>Dưới đây là một đồ thị minh họa cùng với thứ tự topo của nó:</p>
 <div style="text-align: center;">
-  <img src="topological_1.png" alt="example directed graph">
-  <img src="topological_2.png" alt="one topological order">
+<p><img alt="đồ thị có hướng ví dụ" src="../../graph/topological_1.png" />
+<img alt="một thứ tự topo" src="../../graph/topological_2.png" /></p>
 </div>
-
-<p>Topological order can be <strong>non-unique</strong> (for example, if there exist three vertices <span class="arithmatex">$a$</span>, <span class="arithmatex">$b$</span>, <span class="arithmatex">$c$</span> for which there exist paths from <span class="arithmatex">$a$</span> to <span class="arithmatex">$b$</span> and from <span class="arithmatex">$a$</span> to <span class="arithmatex">$c$</span> but not paths from <span class="arithmatex">$b$</span> to <span class="arithmatex">$c$</span> or from <span class="arithmatex">$c$</span> to <span class="arithmatex">$b$</span>).
-The example graph also has multiple topological orders, a second topological order is the following:</p>
+<p>Thứ tự topo có thể <strong>không duy nhất</strong> (ví dụ, nếu tồn tại ba đỉnh <span class="arithmatex">$a$</span>, <span class="arithmatex">$b$</span>, <span class="arithmatex">$c$</span> sao cho có đường đi từ <span class="arithmatex">$a$</span> đến <span class="arithmatex">$b$</span> và từ <span class="arithmatex">$a$</span> đến <span class="arithmatex">$c$</span> nhưng không có đường đi giữa <span class="arithmatex">$b$</span> và <span class="arithmatex">$c$</span>).
+Đồ thị ví dụ trên cũng có nhiều thứ tự topo, một thứ tự topo thứ hai như sau:</p>
 <div style="text-align: center;">
-  <img src="topological_3.png" alt="second topological order">
+<p><img alt="thứ tự topo thứ hai" src="../../graph/topological_3.png" /></p>
 </div>
-
-<p>A Topological order may <strong>not exist</strong> at all.
-It only exists, if the directed graph contains no cycles.
-Otherwise, there is a contradiction: if there is a cycle containing the vertices <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>, then <span class="arithmatex">$a$</span> needs to have a smaller index than <span class="arithmatex">$b$</span> (since you can reach <span class="arithmatex">$b$</span> from <span class="arithmatex">$a$</span>) and also a bigger one (as you can reach <span class="arithmatex">$a$</span> from <span class="arithmatex">$b$</span>).
-The algorithm described in this article also shows by construction, that every acyclic directed graph contains at least one topological order.</p>
-<p>A common problem in which topological sorting occurs is the following. There are <span class="arithmatex">$n$</span> variables with unknown values. For some variables, we know that one of them is less than the other. You have to check whether these constraints are contradictory, and if not, output the variables in ascending order (if several answers are possible, output any of them). It is easy to notice that this is exactly the problem of finding the topological order of a graph with <span class="arithmatex">$n$</span> vertices.</p>
-<h2 id="the-algorithm">The Algorithm<a class="headerlink" href="#the-algorithm" title="Permanent link">&para;</a></h2>
-<p>To solve this problem, we will use <a href="depth-first-search.html">depth-first search</a>.</p>
-<p>Let's assume that the graph is acyclic. What does the depth-first search do?</p>
-<p>When starting from some vertex <span class="arithmatex">$v$</span>, DFS tries to traverse along all edges outgoing from <span class="arithmatex">$v$</span>.
-It stops at the edges for which the ends have been already been visited previously, and traverses along the rest of the edges and continues recursively at their ends.</p>
-<p>Thus, by the time of the function call <span class="arithmatex">$\text{dfs}(v)$</span> has finished, all vertices that are reachable from <span class="arithmatex">$v$</span> have been either directly (via one edge) or indirectly visited by the search.</p>
-<p>Let's append the vertex <span class="arithmatex">$v$</span> to a list, when we finish <span class="arithmatex">$\text{dfs}(v)$</span>. Since all reachable vertices have already been visited, they will already be in the list when we append <span class="arithmatex">$v$</span>.
-Let's do this for every vertex in the graph, with one or multiple depth-first search runs.
-For every directed edge <span class="arithmatex">$v \rightarrow u$</span> in the graph, <span class="arithmatex">$u$</span> will appear earlier in this list than <span class="arithmatex">$v$</span>, because <span class="arithmatex">$u$</span> is reachable from <span class="arithmatex">$v$</span>.
-So if we just label the vertices in this list with <span class="arithmatex">$n-1, n-2, \dots, 1, 0$</span>, we have found a topological order of the graph.
-In other words, the list represents the reversed topological order.</p>
-<p>These explanations can also be presented in terms of exit times of the DFS algorithm.
-The exit time for vertex <span class="arithmatex">$v$</span> is the time at which the function call <span class="arithmatex">$\text{dfs}(v)$</span> finished (the times can be numbered from <span class="arithmatex">$0$</span> to <span class="arithmatex">$n-1$</span>).
-It is easy to understand that exit time of any vertex <span class="arithmatex">$v$</span> is always greater than the exit time of any vertex reachable from it (since they were visited either before the call <span class="arithmatex">$\text{dfs}(v)$</span> or during it). Thus, the desired topological ordering are the vertices in descending order of their exit times.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>Here is an implementation which assumes that the graph is acyclic, i.e. the desired topological ordering exists. If necessary, you can easily check that the graph is acyclic, as described in the article on <a href="depth-first-search.html">depth-first search</a>.</p>
+<p>Thứ tự topo có thể <strong>không tồn tại</strong>.
+Nó chỉ tồn tại nếu đồ thị có hướng không chứa chu trình.
+Ngược lại, sẽ xảy ra mâu thuẫn: nếu có chu trình chứa các đỉnh <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span>, thì <span class="arithmatex">$a$</span> vừa phải đứng trước <span class="arithmatex">$b$</span> (vì có đường đi từ <span class="arithmatex">$a$</span> đến <span class="arithmatex">$b$</span>) lại vừa phải đứng sau <span class="arithmatex">$b$</span> (vì có đường đi từ <span class="arithmatex">$b$</span> đến <span class="arithmatex">$a$</span>).
+Thuật toán được mô tả trong bài viết này cũng đồng thời chứng minh bằng cách xây dựng rằng mọi đồ thị có hướng không chu trình (DAG - Directed Acyclic Graph) đều có ít nhất một thứ tự topo.</p>
+<p>Một bài toán thực tế thường gặp sử dụng sắp xếp topo là: Có <span class="arithmatex">$n$</span> biến chưa biết giá trị. Với một số cặp biến, chúng ta biết biến này nhỏ hơn biến kia. Chúng ta phải kiểm tra xem các ràng buộc này có mâu thuẫn hay không, và nếu không mâu thuẫn, hãy in các biến theo thứ tự tăng dần (nếu có nhiều kết quả hợp lệ, chỉ cần in một trong số đó). Dễ thấy đây chính xác là bài toán tìm thứ tự topo của đồ thị có <span class="arithmatex">$n$</span> đỉnh.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Để giải quyết bài toán này, chúng ta sẽ sử dụng <a href="depth-first-search.html">thuật toán tìm kiếm theo chiều sâu (depth-first search - DFS)</a>.</p>
+<p>Giả thiết đồ thị không có chu trình. Hãy xem thuật toán DFS hoạt động như thế nào?</p>
+<p>Khi bắt đầu từ một đỉnh <span class="arithmatex">$v$</span>, DFS cố gắng đi theo tất cả các cạnh đi ra từ <span class="arithmatex">$v$</span>.
+Nó sẽ bỏ qua các cạnh có đỉnh đích đã được duyệt trước đó, và đi tiếp theo các cạnh còn lại để gọi đệ quy tại các đỉnh đích.</p>
+<p>Do đó, tại thời điểm cuộc gọi hàm <span class="arithmatex">$\text{dfs}(v)$</span> hoàn thành, tất cả các đỉnh có thể đi tới từ <span class="arithmatex">$v$</span> (trực tiếp hoặc gián tiếp) đều đã được duyệt qua bởi thuật toán tìm kiếm.</p>
+<p>Vì vậy, nếu chúng ta thêm đỉnh <span class="arithmatex">$v$</span> vào một danh sách khi kết thúc cuộc gọi <span class="arithmatex">$\text{dfs}(v)$</span>, thì tất cả các đỉnh đi tới được từ <span class="arithmatex">$v$</span> đều đã nằm trong danh sách trước khi <span class="arithmatex">$v$</span> được thêm vào.
+Chúng ta lặp lại điều này cho mỗi đỉnh của đồ thị, chạy qua một hoặc nhiều lượt DFS.
+Với mỗi cạnh có hướng <span class="arithmatex">$v \rightarrow u$</span> trong đồ thị, đỉnh <span class="arithmatex">$u$</span> sẽ luôn xuất hiện trước đỉnh <span class="arithmatex">$v$</span> trong danh sách này, vì <span class="arithmatex">$u$</span> đi tới được từ <span class="arithmatex">$v$</span>.
+Do đó, nếu chúng ta đánh số các đỉnh trong danh sách này theo thứ tự từ cuối lên <span class="arithmatex">$n-1, n-2, \dots, 1, 0$</span>, chúng ta sẽ thu được một thứ tự topo của đồ thị.
+Nói cách khác, danh sách thu được chính là thứ tự topo đảo ngược.</p>
+<p>Những giải thích này cũng có thể trình bày thông qua thời điểm hoàn thành (exit times) của thuật toán DFS.
+Thời điểm hoàn thành của đỉnh <span class="arithmatex">$v$</span> là thời điểm cuộc gọi hàm <span class="arithmatex">$\text{dfs}(v)$</span> kết thúc (các thời điểm này có thể đánh số từ <span class="arithmatex">$0$</span> đến <span class="arithmatex">$n-1$</span>).
+Dễ hiểu là thời điểm hoàn thành của bất kỳ đỉnh <span class="arithmatex">$v$</span> nào cũng luôn lớn hơn thời điểm hoàn thành của bất kỳ đỉnh nào đi tới được từ nó (vì chúng được duyệt trước hoặc trong quá trình gọi <span class="arithmatex">$\text{dfs}(v)$</span>). Do đó, thứ tự topo cần tìm chính là thứ tự các đỉnh xếp theo chiều giảm dần của thời điểm hoàn thành.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Dưới đây là mã nguồn cài đặt giả định đồ thị không có chu trình, tức là thứ tự topo luôn tồn tại. Nếu cần thiết, bạn có thể dễ dàng kiểm tra xem đồ thị có chu trình hay không như mô tả trong bài viết về <a href="depth-first-search.html">thuật toán tìm kiếm theo chiều sâu (DFS)</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="c1">// number of vertices</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="p">;</span><span class="w"> </span><span class="c1">// adjacency list of graph</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">visited</span><span class="p">;</span>
@@ -8127,14 +8073,14 @@ It is easy to understand that exit time of any vertex <span class="arithmatex">$
 <span class="w">    </span><span class="n">reverse</span><span class="p">(</span><span class="n">ans</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">ans</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>The main function of the solution is <code>topological_sort</code>, which initializes DFS variables, launches DFS and receives the answer in the vector <code>ans</code>. It is worth noting that when the graph is not acyclic, <code>topological_sort</code> result would still be somewhat meaningful in a sense that if a vertex <span class="arithmatex">$u$</span> is reachable from vertex <span class="arithmatex">$v$</span>, but not vice versa, the vertex <span class="arithmatex">$v$</span> will always come first in the resulting array. This property of the provided implementation is used in <a href="strongly-connected-components.html">Kosaraju's algorithm</a> to extract strongly connected components and their topological sorting in a directed graph with cycles.</p>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<p>Hàm chính của giải pháp là <code>topological_sort</code>, thực hiện khởi tạo các biến duyệt DFS, chạy DFS và nhận kết quả lưu tại vector <code>ans</code>. Cần lưu ý rằng khi đồ thị chứa chu trình, kết quả của <code>topological_sort</code> vẫn có ý nghĩa nhất định: nếu đỉnh <span class="arithmatex">$u$</span> đi tới được từ đỉnh <span class="arithmatex">$v$</span>, nhưng không có chiều ngược lại, thì đỉnh <span class="arithmatex">$v$</span> sẽ luôn xuất hiện trước trong mảng kết quả. Tính chất này của bản cài đặt được ứng dụng trong <a href="strongly-connected-components.html">thuật toán Kosaraju</a> để tìm các thành phần liên thông mạnh và sắp xếp topo của chúng trong đồ thị có hướng chứa chu trình.</p>
+<h2 id="bai-tap-ap-dung">Bài tập áp dụng<a class="headerlink" href="#bai-tap-ap-dung" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="http://www.spoj.com/problems/TOPOSORT/">SPOJ TOPOSORT - Topological Sorting [difficulty: easy]</a></li>
-<li><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1246">UVA 10305 - Ordering Tasks [difficulty: easy]</a></li>
-<li><a href="https://onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=60">UVA 124 - Following Orders [difficulty: easy]</a></li>
-<li><a href="https://onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=136">UVA 200 - Rare Order [difficulty: easy]</a></li>
-<li><a href="http://codeforces.com/problemset/problem/510/C">Codeforces 510C - Fox and Names [difficulty: easy]</a></li>
+<li><a href="http://www.spoj.com/problems/TOPOSORT/">SPOJ TOPOSORT - Topological Sorting [độ khó: dễ]</a></li>
+<li><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1246">UVA 10305 - Ordering Tasks [độ khó: dễ]</a></li>
+<li><a href="https://onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=60">UVA 124 - Following Orders [độ khó: dễ]</a></li>
+<li><a href="https://onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=136">UVA 200 - Rare Order [độ khó: dễ]</a></li>
+<li><a href="http://codeforces.com/problemset/problem/510/C">Codeforces 510C - Fox and Names [độ khó: dễ]</a></li>
 <li><a href="https://www.spoj.com/problems/RPLA/">SPOJ RPLA - Answer the boss!</a></li>
 <li><a href="https://cses.fi/problemset/task/1679">CSES - Course Schedule</a></li>
 <li><a href="https://cses.fi/problemset/task/1680">CSES - Longest Flight Route</a></li>
@@ -8143,7 +8089,7 @@ It is easy to understand that exit time of any vertex <span class="arithmatex">$
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (33.33%)</li><li><a href="#" title="Vikesh Tiwari" data-bi-name="contributorprofile" target="_blank">Vikesh Tiwari</a> (32.32%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (7.07%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (7.07%)</li><li><a href="#" title="Auler" data-bi-name="contributorprofile" target="_blank">Auler</a> (5.05%)</li><li><a href="#" title="Bhuvnesh Jain" data-bi-name="contributorprofile" target="_blank">Bhuvnesh Jain</a> (3.03%)</li><li><a href="#" title="Dequan Kong" data-bi-name="contributorprofile" target="_blank">Dequan Kong</a> (3.03%)</li><li><a href="#" title="Angkur Mondal" data-bi-name="contributorprofile" target="_blank">Angkur Mondal</a> (2.02%)</li><li><a href="#" title="Aryaman" data-bi-name="contributorprofile" target="_blank">Aryaman</a> (2.02%)</li><li><a href="#" title="Franklin" data-bi-name="contributorprofile" target="_blank">Franklin</a> (2.02%)</li><li><a href="#" title="Animesh Kumar" data-bi-name="contributorprofile" target="_blank">Animesh Kumar</a> (1.01%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (1.01%)</li><li><a href="#" title="Pratik Devlekar" data-bi-name="contributorprofile" target="_blank">Pratik Devlekar</a> (1.01%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

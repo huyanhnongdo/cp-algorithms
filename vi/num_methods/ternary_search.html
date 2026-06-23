@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ternary-search" class="md-skip">
+        <a href="#tim-kiem-tam-phan-ternary-search" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4065,22 +4065,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Algorithm">
+    <nav class="md-nav" aria-label="Thuật toán">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#run-time-analysis" class="md-nav__link">
+  <a href="#phan-tich-thoi-gian-chay" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Run time analysis
+        Phân tích thời gian chạy
       
     </span>
   </a>
@@ -4088,10 +4088,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-case-of-the-integer-arguments" class="md-nav__link">
+  <a href="#truong-hop-oi-so-nguyen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The case of the integer arguments
+        Trường hợp đối số nguyên
       
     </span>
   </a>
@@ -4099,10 +4099,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#golden-section-search" class="md-nav__link">
+  <a href="#tim-kiem-ty-le-vang-golden-section-search" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Golden section search
+        Tìm kiếm tỷ lệ vàng (Golden section search)
       
     </span>
   </a>
@@ -4115,10 +4115,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -4126,10 +4126,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-thuc-hanh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập thực hành
       
     </span>
   </a>
@@ -7999,13 +7999,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/num_methods/ternary_search.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/num_methods/ternary_search.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/num_methods/ternary_search.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/num_methods/ternary_search.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8016,50 +8016,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8095,55 +8051,54 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="ternary-search">Ternary Search<a class="headerlink" href="#ternary-search" title="Permanent link">&para;</a></h1>
-<p>We are given a function <span class="arithmatex">$f(x)$</span> which is unimodal on an interval <span class="arithmatex">$[l, r]$</span>. By unimodal function, we mean one of two behaviors of the function: </p>
+<h1 id="tim-kiem-tam-phan-ternary-search">Tìm kiếm tam phân (Ternary Search)<a class="headerlink" href="#tim-kiem-tam-phan-ternary-search" title="Permanent link">&para;</a></h1>
+<p>Cho một hàm số <span class="arithmatex">$f(x)$</span> đơn đỉnh (unimodal) trên đoạn <span class="arithmatex">$[l, r]$</span>. Hàm đơn đỉnh là hàm số có một trong hai tính chất sau: </p>
 <ol>
 <li>
-<p>The function strictly increases first, reaches a maximum (at a single point or over an interval), and then strictly decreases.</p>
+<p>Hàm số tăng ngặt trước tiên, đạt giá trị cực đại (tại một điểm duy nhất hoặc trên một khoảng), sau đó giảm ngặt.</p>
 </li>
 <li>
-<p>The function strictly decreases first, reaches a minimum, and then strictly increases.</p>
+<p>Hàm số giảm ngặt trước tiên, đạt giá trị cực tiểu, sau đó tăng ngặt.</p>
 </li>
 </ol>
-<p>In this article, we will assume the first scenario.
-The second scenario is completely symmetrical to the first.</p>
-<p>The task is to find the maximum of function <span class="arithmatex">$f(x)$</span> on the interval <span class="arithmatex">$[l, r]$</span>.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>Consider any 2 points <span class="arithmatex">$m_1$</span>, and <span class="arithmatex">$m_2$</span> in this interval: <span class="arithmatex">$l &lt; m_1 &lt; m_2 &lt; r$</span>. We evaluate the function at <span class="arithmatex">$m_1$</span> and <span class="arithmatex">$m_2$</span>, i.e. find the values of <span class="arithmatex">$f(m_1)$</span> and <span class="arithmatex">$f(m_2)$</span>. Now, we get one of three options:</p>
+<p>Trong bài viết này, chúng ta sẽ giả định trường hợp đầu tiên. Trường hợp thứ hai hoàn toàn đối xứng với trường hợp thứ nhất.</p>
+<p>Nhiệm vụ là tìm giá trị cực đại của hàm số <span class="arithmatex">$f(x)$</span> trên đoạn <span class="arithmatex">$[l, r]$</span>.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Xét 2 điểm bất kỳ <span class="arithmatex">$m_1$</span> và <span class="arithmatex">$m_2$</span> trong đoạn này: <span class="arithmatex">$l &lt; m_1 &lt; m_2 &lt; r$</span>. Chúng ta tính giá trị hàm số tại <span class="arithmatex">$m_1$</span> và <span class="arithmatex">$m_2$</span>, tức là tìm các giá trị <span class="arithmatex">$f(m_1)$</span> và <span class="arithmatex">$f(m_2)$</span>. Khi đó, có một trong ba trường hợp xảy ra:</p>
 <ul>
 <li>
 <p><span class="arithmatex">$f(m_1) &lt; f(m_2)$</span></p>
-<p>The desired maximum can not be located on the left side of <span class="arithmatex">$m_1$</span>, i.e. on the interval <span class="arithmatex">$[l, m_1]$</span>, since either both points <span class="arithmatex">$m_1$</span> and <span class="arithmatex">$m_2$</span> or just <span class="arithmatex">$m_1$</span> belong to the area where the function increases. In either case, this means that we have to search for the maximum in the segment <span class="arithmatex">$[m_1, r]$</span>.</p>
+<p>Cực đại cần tìm không thể nằm ở phía bên trái của <span class="arithmatex">$m_1$</span>, tức là trên đoạn <span class="arithmatex">$[l, m_1]$</span>, vì cả hai điểm <span class="arithmatex">$m_1$</span> và <span class="arithmatex">$m_2$</span> hoặc chỉ riêng <span class="arithmatex">$m_1$</span> thuộc vùng hàm số đồng biến. Trong cả hai trường hợp, điều này có nghĩa là chúng ta phải tìm kiếm cực đại trong đoạn <span class="arithmatex">$[m_1, r]$</span>.</p>
 </li>
 <li>
 <p><span class="arithmatex">$f(m_1) &gt; f(m_2)$</span></p>
-<p>This situation is symmetrical to the previous one: the maximum can not be located on the right side of <span class="arithmatex">$m_2$</span>, i.e. on the interval <span class="arithmatex">$[m_2, r]$</span>, and the search space is reduced to the segment <span class="arithmatex">$[l, m_2]$</span>.</p>
+<p>Trường hợp này đối xứng với trường hợp trước: cực đại không thể nằm ở phía bên phải của <span class="arithmatex">$m_2$</span>, tức là trên đoạn <span class="arithmatex">$[m_2, r]$</span>, và không gian tìm kiếm được thu hẹp lại thành đoạn <span class="arithmatex">$[l, m_2]$</span>.</p>
 </li>
 <li>
 <p><span class="arithmatex">$f(m_1) = f(m_2)$</span></p>
-<p>We can see that either both of these points belong to the area where the value of the function is maximized, or <span class="arithmatex">$m_1$</span> is in the area of increasing values and <span class="arithmatex">$m_2$</span> is in the area of descending values (here we used the strictness of function increasing/decreasing). Thus, the search space is reduced to <span class="arithmatex">$[m_1, m_2]$</span>. To simplify the code, this case can be combined with any of the previous cases.</p>
+<p>Ta có thể thấy rằng cả hai điểm này đều thuộc vùng hàm số đạt giá trị cực đại, hoặc <span class="arithmatex">$m_1$</span> thuộc vùng đồng biến và <span class="arithmatex">$m_2$</span> thuộc vùng nghịch biến (ở đây chúng ta sử dụng tính chất tăng/giảm ngặt của hàm số). Do đó, không gian tìm kiếm được thu hẹp về <span class="arithmatex">$[m_1, m_2]$</span>. Để đơn giản hóa mã nguồn, trường hợp này có thể được kết hợp với bất kỳ trường hợp nào trong hai trường hợp trên.</p>
 </li>
 </ul>
-<p>Thus, based on the comparison of the values in the two inner points, we can replace the current interval <span class="arithmatex">$[l, r]$</span> with a new, shorter interval <span class="arithmatex">$[l^\prime, r^\prime]$</span>. Repeatedly applying the described procedure to the interval, we can get an arbitrarily short interval. Eventually, its length will be less than a certain pre-defined constant (accuracy), and the process can be stopped. This is a numerical method, so we can assume that after that the function reaches its maximum at all points of the last interval <span class="arithmatex">$[l, r]$</span>. Without loss of generality, we can take <span class="arithmatex">$f(l)$</span> as the return value.</p>
-<p>We didn't impose any restrictions on the choice of points <span class="arithmatex">$m_1$</span> and <span class="arithmatex">$m_2$</span>. This choice will define the convergence rate and the accuracy of the implementation. The most common way is to choose the points so that they divide the interval <span class="arithmatex">$[l, r]$</span> into three equal parts. Thus, we have</p>
+<p>Do đó, dựa trên việc so sánh giá trị tại hai điểm nằm trong đoạn, chúng ta có thể thay thế đoạn hiện tại <span class="arithmatex">$[l, r]$</span> bằng một đoạn mới ngắn hơn <span class="arithmatex">$[l^\prime, r^\prime]$</span>. Áp dụng lặp đi lặp lại quy trình trên, chúng ta có thể thu được một đoạn ngắn tùy ý. Cuối cùng, độ dài của nó sẽ nhỏ hơn một hằng số định sẵn (độ chính xác), và quá trình có thể dừng lại. Đây là một phương pháp số (numerical method), vì vậy chúng ta có thể coi như hàm số đạt cực đại tại mọi điểm của đoạn cuối cùng <span class="arithmatex">$[l, r]$</span>. Không mất tính tổng quát, chúng ta có thể lấy <span class="arithmatex">$f(l)$</span> làm giá trị trả về.</p>
+<p>Chúng ta không áp dụng bất kỳ ràng buộc nào lên việc chọn các điểm <span class="arithmatex">$m_1$</span> và <span class="arithmatex">$m_2$</span>. Sự lựa chọn này sẽ quyết định tốc độ hội tụ và độ chính xác của cài đặt. Cách phổ biến nhất là chọn các điểm sao cho chúng chia đoạn <span class="arithmatex">$[l, r]$</span> thành ba phần bằng nhau. Do đó, ta có:</p>
 <div class="arithmatex">$$m_1 = l + \frac{(r - l)}{3}$$</div>
 <div class="arithmatex">$$m_2 = r - \frac{(r - l)}{3}$$</div>
-<p>If <span class="arithmatex">$m_1$</span> and <span class="arithmatex">$m_2$</span> are chosen to be closer to each other, the convergence rate will increase slightly.</p>
-<h3 id="run-time-analysis">Run time analysis<a class="headerlink" href="#run-time-analysis" title="Permanent link">&para;</a></h3>
+<p>Nếu <span class="arithmatex">$m_1$</span> và <span class="arithmatex">$m_2$</span> được chọn gần nhau hơn, tốc độ hội tụ sẽ tăng lên một chút.</p>
+<h3 id="phan-tich-thoi-gian-chay">Phân tích thời gian chạy<a class="headerlink" href="#phan-tich-thoi-gian-chay" title="Permanent link">&para;</a></h3>
 <div class="arithmatex">$$T(n) = T({2n}/{3}) + O(1) = \Theta(\log n)$$</div>
-<p>It can be visualized as follows: every time after evaluating the function at points <span class="arithmatex">$m_1$</span> and <span class="arithmatex">$m_2$</span>, we are essentially ignoring about one third of the interval, either the left or right one. Thus the size of the search space is <span class="arithmatex">${2n}/{3}$</span> of the original one. </p>
-<p>Applying <a href="https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)">Master's Theorem</a>, we get the desired complexity estimate.</p>
-<h3 id="the-case-of-the-integer-arguments">The case of the integer arguments<a class="headerlink" href="#the-case-of-the-integer-arguments" title="Permanent link">&para;</a></h3>
-<p>If <span class="arithmatex">$f(x)$</span> takes integer parameter, the interval <span class="arithmatex">$[l, r]$</span> becomes discrete. Since we did not impose any restrictions on the choice of points <span class="arithmatex">$m_1$</span> and <span class="arithmatex">$m_2$</span>, the correctness of the algorithm is not affected. <span class="arithmatex">$m_1$</span> and <span class="arithmatex">$m_2$</span> can still be chosen to divide <span class="arithmatex">$[l, r]$</span> into 3 approximately equal parts.</p>
-<p>The difference occurs in the stopping criterion of the algorithm. Ternary search will have to stop when <span class="arithmatex">$(r - l) &lt; 3$</span>, because in that case we can no longer select <span class="arithmatex">$m_1$</span> and <span class="arithmatex">$m_2$</span> to be different from each other as well as from <span class="arithmatex">$l$</span> and <span class="arithmatex">$r$</span>, and this can cause an infinite loop. Once <span class="arithmatex">$(r - l) &lt; 3$</span>, the remaining pool of candidate points <span class="arithmatex">$(l, l + 1, \ldots, r)$</span> needs to be checked to find the point which produces the maximum value <span class="arithmatex">$f(x)$</span>.</p>
-<h3 id="golden-section-search">Golden section search<a class="headerlink" href="#golden-section-search" title="Permanent link">&para;</a></h3>
-<p>In some cases computing <span class="arithmatex">$f(x)$</span> may be quite slow, but reducing the number of iterations is infeasible due to precision issues. Fortunately, it is possible to compute <span class="arithmatex">$f(x)$</span> only once at each iteration (except the first one).</p>
-<p>To see how to do this, let's revisit the selection method for <span class="arithmatex">$m_1$</span> and <span class="arithmatex">$m_2$</span>. Suppose that we select <span class="arithmatex">$m_1$</span> and <span class="arithmatex">$m_2$</span> on <span class="arithmatex">$[l, r]$</span> in such a way that <span class="arithmatex">$\frac{r - l}{r - m_1} = \frac{r - l}{m_2 - l} = \varphi$</span> where <span class="arithmatex">$\varphi$</span> is some constant. In order to reduce the amount of computations, we want to select such <span class="arithmatex">$\varphi$</span> that on the next iteration one of the new evaluation points <span class="arithmatex">$m_1'$</span>, <span class="arithmatex">$m_2'$</span> will coincide with either <span class="arithmatex">$m_1$</span> or <span class="arithmatex">$m_2$</span>, so that we can reuse the already computed function value.</p>
-<p>Now suppose that after the current iteration we set <span class="arithmatex">$l = m_1$</span>. Then the point <span class="arithmatex">$m_1'$</span> will satisfy <span class="arithmatex">$\frac{r - m_1}{r - m_1'} = \varphi$</span>. We want this point to coincide with <span class="arithmatex">$m_2$</span>, meaning that <span class="arithmatex">$\frac{r - m_1}{r - m_2} = \varphi$</span>.</p>
-<p>Multiplying both sides of <span class="arithmatex">$\frac{r - m_1}{r - m_2} = \varphi$</span> by <span class="arithmatex">$\frac{r - m_2}{r - l}$</span> we obtain <span class="arithmatex">$\frac{r - m_1}{r - l} = \varphi\frac{r - m_2}{r - l}$</span>. Note that <span class="arithmatex">$\frac{r - m_1}{r - l} = \frac{1}{\varphi}$</span> and <span class="arithmatex">$\frac{r - m_2}{r - l} = \frac{r - l + l - m_2}{r - l} = 1 - \frac{1}{\varphi}$</span>. Substituting that and multiplying by <span class="arithmatex">$\varphi$</span>, we obtain the following equation:</p>
+<p>Chúng ta có thể hình dung như sau: mỗi lần sau khi tính giá trị hàm số tại các điểm <span class="arithmatex">$m_1$</span> và <span class="arithmatex">$m_2$</span>, về cơ bản chúng ta sẽ bỏ đi khoảng một phần ba đoạn tìm kiếm (ở bên trái hoặc bên phải). Do đó kích thước của không gian tìm kiếm chỉ còn bằng <span class="arithmatex">${2n}/{3}$</span> so với ban đầu.</p>
+<p>Áp dụng <a href="https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)">Định lý Thợ (Master's Theorem)</a>, ta thu được ước lượng độ phức tạp mong muốn.</p>
+<h3 id="truong-hop-oi-so-nguyen">Trường hợp đối số nguyên<a class="headerlink" href="#truong-hop-oi-so-nguyen" title="Permanent link">&para;</a></h3>
+<p>Nếu <span class="arithmatex">$f(x)$</span> nhận tham số nguyên, đoạn <span class="arithmatex">$[l, r]$</span> trở nên rời rạc. Vì chúng ta không đưa ra bất kỳ ràng buộc nào đối với việc lựa chọn các điểm <span class="arithmatex">$m_1$</span> và <span class="arithmatex">$m_2$</span>, tính đúng đắn của thuật toán không bị ảnh hưởng. <span class="arithmatex">$m_1$</span> và <span class="arithmatex">$m_2$</span> vẫn có thể được chọn để chia đoạn <span class="arithmatex">$[l, r]$</span> thành 3 phần xấp xỉ bằng nhau.</p>
+<p>Sự khác biệt xảy ra ở điều kiện dừng của thuật toán. Tìm kiếm tam phân sẽ phải dừng lại khi <span class="arithmatex">$(r - l) &lt; 3$</span>, bởi vì trong trường hợp đó chúng ta không thể chọn <span class="arithmatex">$m_1$</span> và <span class="arithmatex">$m_2$</span> khác biệt với nhau cũng như khác biệt với <span class="arithmatex">$l$</span> và <span class="arithmatex">$r$</span>, điều này có thể dẫn đến vòng lặp vô hạn. Khi <span class="arithmatex">$(r - l) &lt; 3$</span>, ta chỉ cần duyệt qua các điểm ứng viên còn lại <span class="arithmatex">$(l, l + 1, \dots, r)$</span> để tìm điểm mang lại giá trị lớn nhất cho hàm số <span class="arithmatex">$f(x)$</span>.</p>
+<h3 id="tim-kiem-ty-le-vang-golden-section-search">Tìm kiếm tỷ lệ vàng (Golden section search)<a class="headerlink" href="#tim-kiem-ty-le-vang-golden-section-search" title="Permanent link">&para;</a></h3>
+<p>Trong một số trường hợp, việc tính giá trị <span class="arithmatex">$f(x)$</span> có thể khá chậm, nhưng việc giảm số lượng vòng lặp là không khả thi do vấn đề về độ chính xác. May mắn thay, chúng ta có thể chỉ cần tính <span class="arithmatex">$f(x)$</span> một lần duy nhất ở mỗi vòng lặp (ngoại trừ vòng lặp đầu tiên).</p>
+<p>Để thấy cách thực hiện, chúng ta hãy xem lại phương pháp chọn <span class="arithmatex">$m_1$</span> và <span class="arithmatex">$m_2$</span>. Giả sử ta chọn <span class="arithmatex">$m_1$</span> và <span class="arithmatex">$m_2$</span> trên đoạn <span class="arithmatex">$[l, r]$</span> sao cho <span class="arithmatex">$\frac{r - l}{r - m_1} = \frac{r - l}{m_2 - l} = \varphi$</span>, với <span class="arithmatex">$\varphi$</span> là một hằng số nào đó. Để giảm thiểu khối lượng tính toán, ta muốn chọn <span class="arithmatex">$\varphi$</span> sao cho ở vòng lặp tiếp theo, một trong các điểm đánh giá mới <span class="arithmatex">$m_1'$</span>, <span class="arithmatex">$m_2'$</span> sẽ trùng với <span class="arithmatex">$m_1$</span> hoặc <span class="arithmatex">$m_2$</span>, nhờ đó ta có thể tái sử dụng giá trị hàm số đã tính.</p>
+<p>Bây giờ giả sử sau vòng lặp hiện tại, chúng ta gán <span class="arithmatex">$l = m_1$</span>. Khi đó điểm <span class="arithmatex">$m_1'$</span> sẽ thỏa mãn <span class="arithmatex">$\frac{r - m_1}{r - m_1'} = \varphi$</span>. Chúng ta muốn điểm này trùng với <span class="arithmatex">$m_2$</span>, tức là <span class="arithmatex">$\frac{r - m_1}{r - m_2} = \varphi$</span>.</p>
+<p>Nhân cả hai vế của phương trình <span class="arithmatex">$\frac{r - m_1}{r - m_2} = \varphi$</span> với <span class="arithmatex">$\frac{r - m_2}{r - l}$</span>, ta thu được <span class="arithmatex">$\frac{r - m_1}{r - l} = \varphi\frac{r - m_2}{r - l}$</span>. Lưu ý rằng <span class="arithmatex">$\frac{r - m_1}{r - l} = \frac{1}{\varphi}$</span> và <span class="arithmatex">$\frac{r - m_2}{r - l} = \frac{r - l + l - m_2}{r - l} = 1 - \frac{1}{\varphi}$</span>. Thay vào phương trình và nhân với <span class="arithmatex">$\varphi$</span>, ta thu được phương trình sau:</p>
 <p><span class="arithmatex">$\varphi^2 - \varphi - 1 = 0$</span></p>
-<p>This is a well-known golden section equation. Solving it yields <span class="arithmatex">$\frac{1 \pm \sqrt{5}}{2}$</span>. Since <span class="arithmatex">$\varphi$</span> must be positive, we obtain <span class="arithmatex">$\varphi = \frac{1 + \sqrt{5}}{2}$</span>. By applying the same logic to the case when we set <span class="arithmatex">$r = m_2$</span> and want <span class="arithmatex">$m_2'$</span> to coincide with <span class="arithmatex">$m_1$</span>, we obtain the same value of <span class="arithmatex">$\varphi$</span> as well. So, if we choose <span class="arithmatex">$m_1 = l + \frac{r - l}{1 + \varphi}$</span> and <span class="arithmatex">$m_2 = r - \frac{r - l}{1 + \varphi}$</span>, on each iteration we can re-use one of the values <span class="arithmatex">$f(x)$</span> computed on the previous iteration.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<p>Đây chính là phương trình tỷ lệ vàng quen thuộc. Giải phương trình này ta được <span class="arithmatex">$\frac{1 \pm \sqrt{5}}{2}$</span>. Vì <span class="arithmatex">$\varphi$</span> phải là số dương, ta chọn <span class="arithmatex">$\varphi = \frac{1 + \sqrt{5}}{2}$</span>. Áp dụng suy luận tương tự cho trường hợp ta gán <span class="arithmatex">$r = m_2$</span> và muốn <span class="arithmatex">$m_2'$</span> trùng với <span class="arithmatex">$m_1$</span>, ta cũng thu được giá trị <span class="arithmatex">$\varphi$</span> tương tự. Như vậy, nếu ta chọn <span class="arithmatex">$m_1 = l + \frac{r - l}{1 + \varphi}$</span> và <span class="arithmatex">$m_2 = r - \frac{r - l}{1 + \varphi}$</span>, ở mỗi vòng lặp ta có thể tái sử dụng một trong các giá trị <span class="arithmatex">$f(x)$</span> đã được tính ở vòng lặp trước.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="nf">ternary_search</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">eps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-9</span><span class="p">;</span><span class="w">              </span><span class="c1">//set the error limit here</span>
 <span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">eps</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8159,9 +8114,9 @@ The second scenario is completely symmetrical to the first.</p>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="n">l</span><span class="p">);</span><span class="w">                    </span><span class="c1">//return the maximum of f(x) in [l, r]</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Here <code>eps</code> is in fact the absolute error (not taking into account errors due to the inaccurate calculation of the function).</p>
-<p>Instead of the criterion <code>r - l &gt; eps</code>, we can select a constant number of iterations as a stopping criterion. The number of iterations should be chosen to ensure the required accuracy. Typically, in most programming challenges the error limit is <span class="arithmatex">${10}^{-6}$</span> and thus 200 - 300 iterations are sufficient. Also, the number of iterations doesn't depend on the values of <span class="arithmatex">$l$</span> and <span class="arithmatex">$r$</span>, so the number of iterations corresponds to the required relative error.</p>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<p>Ở đây <code>eps</code> chính là sai số tuyệt đối (chưa tính đến các sai số do việc tính toán không chính xác của hàm số).</p>
+<p>Thay vì sử dụng điều kiện <code>r - l &gt; eps</code>, chúng ta có thể chọn số lượng vòng lặp cố định làm điều kiện dừng. Số lượng vòng lặp nên được lựa chọn để đảm bảo độ chính xác yêu cầu. Thông thường, trong hầu hết các bài toán lập trình thi đấu, giới hạn sai số là <span class="arithmatex">${10}^{-6}$</span>, do đó khoảng 200 - 300 vòng lặp là đủ. Hơn nữa, số lượng vòng lặp này không phụ thuộc vào giá trị của <span class="arithmatex">$l$</span> và <span class="arithmatex">$r$</span>, vì vậy số lượng vòng lặp tương ứng trực tiếp với sai số tương đối mong muốn.</p>
+<h2 id="bai-tap-thuc-hanh">Bài tập thực hành<a class="headerlink" href="#bai-tap-thuc-hanh" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://codeforces.com/problemset/problem/1978/B">Codeforces - New Bakery</a></li>
 <li><a href="https://www.codechef.com/problems/AMCS03">Codechef - Race time</a></li>
@@ -8186,7 +8141,7 @@ The second scenario is completely symmetrical to the first.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="likecs" data-bi-name="contributorprofile" target="_blank">likecs</a> (39.32%)</li><li><a href="#" title="Yury Semenov" data-bi-name="contributorprofile" target="_blank">Yury Semenov</a> (17.09%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (16.24%)</li><li><a href="#" title="Abhijeet Krishnan" data-bi-name="contributorprofile" target="_blank">Abhijeet Krishnan</a> (11.11%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (5.98%)</li><li><a href="#" title="Morass" data-bi-name="contributorprofile" target="_blank">Morass</a> (5.13%)</li><li><a href="#" title="Joaquin Garmendia Cabrera" data-bi-name="contributorprofile" target="_blank">Joaquin Garmendia Cabrera</a> (1.71%)</li><li><a href="#" title="Ahmed Marouf" data-bi-name="contributorprofile" target="_blank">Ahmed Marouf</a> (0.85%)</li><li><a href="#" title="Lovish Madhu" data-bi-name="contributorprofile" target="_blank">Lovish Madhu</a> (0.85%)</li><li><a href="#" title="Puneet Kumar" data-bi-name="contributorprofile" target="_blank">Puneet Kumar</a> (0.85%)</li><li><a href="#" title="jxu" data-bi-name="contributorprofile" target="_blank">jxu</a> (0.85%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

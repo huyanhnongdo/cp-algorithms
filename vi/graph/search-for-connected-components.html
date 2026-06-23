@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#search-for-connected-components-in-a-graph" class="md-skip">
+        <a href="#tim-cac-thanh-phan-lien-thong-trong-o-thi" class="md-skip">
           Bỏ qua
         </a>
       
@@ -5564,10 +5564,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#an-algorithm-for-solving-the-problem" class="md-nav__link">
+  <a href="#thuat-toan-giai-quyet-bai-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        An algorithm for solving the problem
+        Thuật toán giải quyết bài toán
       
     </span>
   </a>
@@ -5575,10 +5575,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -5586,10 +5586,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iterative-implementation-of-the-code" class="md-nav__link">
+  <a href="#cai-at-khu-e-quy-iterative" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Iterative implementation of the code
+        Cài đặt khử đệ quy (Iterative)
       
     </span>
   </a>
@@ -5597,10 +5597,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-ap-dung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập áp dụng
       
     </span>
   </a>
@@ -7971,13 +7971,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/search-for-connected-components.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/search-for-connected-components.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/search-for-connected-components.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/search-for-connected-components.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7988,46 +7988,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8063,21 +8023,21 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="search-for-connected-components-in-a-graph">Search for connected components in a graph<a class="headerlink" href="#search-for-connected-components-in-a-graph" title="Permanent link">&para;</a></h1>
-<p>Given an undirected graph <span class="arithmatex">$G$</span> with <span class="arithmatex">$n$</span> nodes and <span class="arithmatex">$m$</span> edges. We are required to find in it all the connected components, i.e, several groups of vertices such that within a group each vertex can be reached from another and no path exists between different groups.</p>
-<h2 id="an-algorithm-for-solving-the-problem">An algorithm for solving the problem<a class="headerlink" href="#an-algorithm-for-solving-the-problem" title="Permanent link">&para;</a></h2>
+<h1 id="tim-cac-thanh-phan-lien-thong-trong-o-thi">Tìm các thành phần liên thông trong đồ thị<a class="headerlink" href="#tim-cac-thanh-phan-lien-thong-trong-o-thi" title="Permanent link">&para;</a></h1>
+<p>Cho một đồ thị vô hướng <span class="arithmatex">$G$</span> với <span class="arithmatex">$n$</span> đỉnh và <span class="arithmatex">$m$</span> cạnh. Chúng ta cần tìm tất cả các thành phần liên thông của nó, tức là các nhóm đỉnh sao cho trong mỗi nhóm, bất kỳ đỉnh nào cũng có thể đi tới đỉnh khác và không tồn tại đường đi giữa các nhóm khác nhau.</p>
+<h2 id="thuat-toan-giai-quyet-bai-toan">Thuật toán giải quyết bài toán<a class="headerlink" href="#thuat-toan-giai-quyet-bai-toan" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>To solve the problem, we can use Depth First Search or Breadth First Search.</p>
+<p>Để giải quyết bài toán này, chúng ta có thể sử dụng Thuật toán tìm kiếm theo chiều sâu (Depth First Search - DFS) hoặc Thuật toán tìm kiếm theo chiều rộng (Breadth First Search - BFS).</p>
 </li>
 <li>
-<p>In fact, we will be doing a series of rounds of DFS: The first round will start from first node and all the nodes in the first connected component will be traversed (found). Then we find the first unvisited node of the remaining nodes, and run Depth First Search on it, thus finding a second connected component. And so on, until all the nodes are visited.</p>
+<p>Trên thực tế, chúng ta sẽ thực hiện một loạt các lượt chạy DFS: Lượt chạy đầu tiên sẽ bắt đầu từ đỉnh đầu tiên và tất cả các đỉnh trong thành phần liên thông thứ nhất sẽ được duyệt qua (tìm thấy). Sau đó, chúng ta tìm đỉnh chưa được duyệt đầu tiên trong số các đỉnh còn lại, chạy DFS xuất phát từ đỉnh này để tìm thành phần liên thông thứ hai. Quá trình tiếp diễn cho đến khi tất cả các đỉnh đều đã được duyệt.</p>
 </li>
 <li>
-<p>The total asymptotic running time of this algorithm is <span class="arithmatex">$O(n + m)$</span> : In fact, this algorithm will not run on the same vertex twice, which means that each edge will be seen exactly two times (at one end and at the other end).</p>
+<p>Tổng thời gian chạy tiệm cận của thuật toán này là <span class="arithmatex">$O(n + m)$</span>: Trong thực tế, thuật toán sẽ không duyệt lại cùng một đỉnh hai lần, nghĩa là mỗi cạnh sẽ được xem xét đúng hai lần (tại hai đầu của cạnh).</p>
 </li>
 </ul>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">used</span><span class="p">;</span>
@@ -8108,21 +8068,21 @@ Describe the issue of this article in detail.
 </code></pre></div>
 <ul>
 <li>
-<p>The most important function that is used is <code>find_comps()</code> which finds and displays connected components of the graph.</p>
+<p>Hàm quan trọng nhất được sử dụng là <code>find_comps()</code>, có nhiệm vụ tìm và in ra các thành phần liên thông của đồ thị.</p>
 </li>
 <li>
-<p>The graph is stored in adjacency list representation, i.e <code>adj[v]</code> contains a list of vertices that have edges from the vertex <code>v</code>.</p>
+<p>Đồ thị được lưu trữ dưới dạng danh sách kề, tức là <code>adj[v]</code> chứa danh sách các đỉnh có cạnh nối từ đỉnh <code>v</code>.</p>
 </li>
 <li>
-<p>Vector <code>comp</code> contains a list of nodes in the current connected component.</p>
+<p>Vector <code>comp</code> chứa danh sách các đỉnh trong thành phần liên thông hiện tại.</p>
 </li>
 </ul>
-<h2 id="iterative-implementation-of-the-code">Iterative implementation of the code<a class="headerlink" href="#iterative-implementation-of-the-code" title="Permanent link">&para;</a></h2>
-<p>Deeply recursive functions are in general bad.
-Every single recursive call will require a little bit of memory in the stack, and per default programs only have a limited amount of stack space.
-So when you do a recursive DFS over a connected graph with millions of nodes, you might run into stack overflows.</p>
-<p>It is always possible to translate a recursive program into an iterative program, by manually maintaining a stack data structure.
-Since this data structure is allocated on the heap, no stack overflow will occur.</p>
+<h2 id="cai-at-khu-e-quy-iterative">Cài đặt khử đệ quy (Iterative)<a class="headerlink" href="#cai-at-khu-e-quy-iterative" title="Permanent link">&para;</a></h2>
+<p>Các hàm đệ quy sâu nhìn chung là không tốt.
+Mỗi lời gọi đệ quy sẽ yêu cầu một lượng nhỏ bộ nhớ trong stack, và mặc định các chương trình chỉ có một lượng không gian bộ nhớ stack hạn chế.
+Vì thế, khi bạn thực hiện một thuật toán DFS đệ quy trên một đồ thị liên thông với hàng triệu đỉnh, bạn có thể gặp lỗi tràn bộ nhớ stack (stack overflow).</p>
+<p>Chúng ta luôn có thể chuyển đổi một chương trình đệ quy sang chương trình khử đệ quy (iterative) bằng cách tự quản lý một cấu trúc dữ liệu ngăn xếp (stack).
+Vì cấu trúc dữ liệu này được cấp phát trên bộ nhớ heap, lỗi tràn stack sẽ không xảy ra.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">used</span><span class="p">;</span>
@@ -8159,7 +8119,7 @@ Since this data structure is allocated on the heap, no stack overflow will occur
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap-ap-dung">Bài tập áp dụng<a class="headerlink" href="#bai-tap-ap-dung" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="http://www.spoj.com/problems/CT23E/">SPOJ: CT23E</a></li>
 <li><a href="https://www.codechef.com/MARCH14/problems/GERALD07">CODECHEF: GERALD07</a></li>
@@ -8168,7 +8128,7 @@ Since this data structure is allocated on the heap, no stack overflow will occur
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (29.91%)</li><li><a href="#" title="Pratik Rai" data-bi-name="contributorprofile" target="_blank">Pratik Rai</a> (26.17%)</li><li><a href="#" title="saurabh0402" data-bi-name="contributorprofile" target="_blank">saurabh0402</a> (25.23%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (5.61%)</li><li><a href="#" title="Gabriel Silva Simões" data-bi-name="contributorprofile" target="_blank">Gabriel Silva Simões</a> (3.74%)</li><li><a href="#" title="Sunil Sangwan" data-bi-name="contributorprofile" target="_blank">Sunil Sangwan</a> (2.8%)</li><li><a href="#" title="Het Tarkhala" data-bi-name="contributorprofile" target="_blank">Het Tarkhala</a> (1.87%)</li><li><a href="#" title="Hoang Ho" data-bi-name="contributorprofile" target="_blank">Hoang Ho</a> (1.87%)</li><li><a href="#" title="Aryaman" data-bi-name="contributorprofile" target="_blank">Aryaman</a> (0.93%)</li><li><a href="#" title="Rodion Gorkovenko" data-bi-name="contributorprofile" target="_blank">Rodion Gorkovenko</a> (0.93%)</li><li><a href="#" title="Vedant Borkar" data-bi-name="contributorprofile" target="_blank">Vedant Borkar</a> (0.93%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

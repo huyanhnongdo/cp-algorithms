@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#0-1-bfs" class="md-skip">
+        <a href="#thuat-toan-0-1-bfs" class="md-skip">
           Bỏ qua
         </a>
       
@@ -5871,10 +5871,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -5882,10 +5882,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dials-algorithm" class="md-nav__link">
+  <a href="#thuat-toan-dial-dials-algorithm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dial's algorithm
+        Thuật toán Dial (Dial's algorithm)
       
     </span>
   </a>
@@ -5893,10 +5893,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-ap-dung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice problems
+        Bài tập áp dụng
       
     </span>
   </a>
@@ -7960,13 +7960,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/01_bfs.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/01_bfs.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/01_bfs.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/01_bfs.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7982,34 +7982,6 @@ Describe the issue of this article in detail.
   
   
 
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
 
 
 
@@ -8020,23 +7992,23 @@ Describe the issue of this article in detail.
 
 
   
-    <a href="../tags.html#tag:original" class="md-tag">
-      Original
+    <a href="../tags.html#tag:translated" class="md-tag">
+      Translated
     </a>
   
 
 </ul>
 
 
-<h1 id="0-1-bfs">0-1 BFS<a class="headerlink" href="#0-1-bfs" title="Permanent link">&para;</a></h1>
-<p>It is well-known, that you can find the shortest paths between a single source and all other vertices in <span class="arithmatex">$O(|E|)$</span> using <a href="breadth-first-search.html">Breadth First Search</a> in an <strong>unweighted graph</strong>, i.e. the distance is the minimal number of edges that you need to traverse from the source to another vertex.
-We can interpret such a graph also as a weighted graph, where every edge has the weight <span class="arithmatex">$1$</span>.
-If not all edges in graph have the same weight, then we need a more general algorithm, like <a href="dijkstra.html">Dijkstra</a> which runs in <span class="arithmatex">$O(|V|^2 + |E|)$</span> or <span class="arithmatex">$O(|E| \log |V|)$</span> time.</p>
-<p>However if the weights are more constrained, we can often do better.
-In this article we demonstrate how we can use BFS to solve the SSSP (single-source shortest path) problem in <span class="arithmatex">$O(|E|)$</span>, if the weight of each edge is either <span class="arithmatex">$0$</span> or <span class="arithmatex">$1$</span>.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>We can develop the algorithm by closely studying Dijkstra's algorithm and thinking about the consequences that our special graph implies.
-The general form of Dijkstra's algorithm is (here a <code>set</code> is used for the priority queue):</p>
+<h1 id="thuat-toan-0-1-bfs">Thuật toán 0-1 BFS<a class="headerlink" href="#thuat-toan-0-1-bfs" title="Permanent link">&para;</a></h1>
+<p>Như chúng ta đã biết, việc tìm đường đi ngắn nhất giữa một đỉnh nguồn duy nhất và tất cả các đỉnh khác trên một <strong>đồ thị không trọng số</strong> có thể thực hiện trong <span class="arithmatex">$O(|E|)$</span> bằng cách sử dụng thuật toán <a href="breadth-first-search.html">Tìm kiếm theo chiều rộng (Breadth First Search - BFS)</a>. Khi đó, khoảng cách được hiểu là số lượng cạnh tối thiểu cần đi qua để đến được đỉnh đích.
+Chúng ta cũng có thể coi đồ thị này là một đồ thị có trọng số, trong đó mọi cạnh đều có trọng số bằng <span class="arithmatex">$1$</span>.
+Nếu các cạnh trong đồ thị không có cùng một trọng số, chúng ta phải sử dụng một thuật toán tổng quát hơn, chẳng hạn như thuật toán <a href="dijkstra.html">Dijkstra</a> hoạt động trong thời gian <span class="arithmatex">$O(|V|^2 + |E|)$</span> hoặc <span class="arithmatex">$O(|E| \log |V|)$</span>.</p>
+<p>Tuy nhiên, nếu trọng số của các cạnh bị giới hạn hơn, chúng ta thường có thể làm tốt hơn.
+Trong bài viết này, chúng tôi sẽ trình bày cách sử dụng BFS để giải quyết bài toán đường đi ngắn nhất từ một nguồn (SSSP - Single-Source Shortest Path) trong thời gian <span class="arithmatex">$O(|E|)$</span>, nếu trọng số của mỗi cạnh chỉ có thể là <span class="arithmatex">$0$</span> hoặc <span class="arithmatex">$1$</span>.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Chúng ta có thể phát triển thuật toán này bằng cách nghiên cứu kỹ thuật toán Dijkstra và suy nghĩ về các hệ quả từ đồ thị đặc biệt này mang lại.
+Dạng tổng quát của thuật toán Dijkstra là (ở đây cấu trúc <code>set</code> được dùng làm hàng đợi ưu tiên):</p>
 <div class="highlight"><pre><span></span><code><span class="n">d</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">INF</span><span class="p">);</span>
 <span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="n">set</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
@@ -8057,16 +8029,16 @@ The general form of Dijkstra's algorithm is (here a <code>set</code> is used for
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>We can notice that the difference between the distances between the source <code>s</code> and two other vertices in the queue differs by at most one.
-Especially, we know that <span class="arithmatex">$d[v] \le d[u] \le d[v] + 1$</span> for each <span class="arithmatex">$u \in Q$</span>.
-The reason for this is, that we only add vertices with equal distance or with distance plus one to the queue during each iteration.
-Assuming there exists a <span class="arithmatex">$u$</span> in the queue with <span class="arithmatex">$d[u] - d[v] &gt; 1$</span>, then <span class="arithmatex">$u$</span> must have been inserted into the queue via a different vertex <span class="arithmatex">$t$</span> with <span class="arithmatex">$d[t] \ge d[u] - 1 &gt; d[v]$</span>.
-However this is impossible, since Dijkstra's algorithm iterates over the vertices in increasing order.</p>
-<p>This means, that the order of the queue looks like this:</p>
+<p>Chúng ta nhận thấy rằng hiệu khoảng cách từ đỉnh nguồn <code>s</code> tới hai đỉnh bất kỳ nằm trong hàng đợi chênh lệch nhau tối đa là <span class="arithmatex">$1$</span>.
+Đặc biệt, ta biết rằng <span class="arithmatex">$d[v] \le d[u] \le d[v] + 1$</span> với mọi <span class="arithmatex">$u \in Q$</span>.
+Nguyên nhân là do trong mỗi bước lặp, chúng ta chỉ thêm các đỉnh mới có khoảng cách bằng khoảng cách hiện tại hoặc bằng khoảng cách hiện tại cộng một vào hàng đợi.
+Giả sử tồn tại một đỉnh <span class="arithmatex">$u$</span> trong hàng đợi có <span class="arithmatex">$d[u] - d[v] &gt; 1$</span>, thì <span class="arithmatex">$u$</span> phải được đưa vào hàng đợi thông qua một đỉnh trung gian <span class="arithmatex">$t$</span> khác thỏa mãn <span class="arithmatex">$d[t] \ge d[u] - 1 &gt; d[v]$</span>.
+Tuy nhiên điều này là bất khả thi, vì thuật toán Dijkstra luôn duyệt qua các đỉnh theo thứ tự khoảng cách tăng dần.</p>
+<p>Điều này có nghĩa là, thứ tự các phần tử trong hàng đợi có dạng:</p>
 <div class="arithmatex">$$Q = \underbrace{v}_{d[v]}, \dots, \underbrace{u}_{d[v]}, \underbrace{m}_{d[v]+1} \dots \underbrace{n}_{d[v]+1}$$</div>
-<p>This structure is so simple, that we don't need an actual priority queue, i.e. using a balanced binary tree would be an overkill.
-We can simply use a normal queue, and append new vertices at the beginning if the corresponding edge has weight <span class="arithmatex">$0$</span>, i.e. if <span class="arithmatex">$d[u] = d[v]$</span>, or at the end if the edge has weight <span class="arithmatex">$1$</span>, i.e. if <span class="arithmatex">$d[u] = d[v] + 1$</span>.
-This way the queue still remains sorted at all time.</p>
+<p>Cấu trúc này cực kỳ đơn giản, đến mức chúng ta không cần đến một hàng đợi ưu tiên thực sự (sử dụng cây nhị phân cân bằng như <code>set</code> là dư thừa).
+Chúng ta chỉ cần sử dụng một hàng đợi hai đầu thông thường (<code>std::deque</code>), và thêm đỉnh mới vào đầu hàng đợi nếu cạnh tương ứng có trọng số <span class="arithmatex">$0$</span> (tức là <span class="arithmatex">$d[u] = d[v]$</span>), hoặc thêm vào cuối hàng đợi nếu cạnh có trọng số <span class="arithmatex">$1$</span> (tức là <span class="arithmatex">$d[u] = d[v] + 1$</span>).
+Bằng cách này, hàng đợi luôn được đảm bảo duy trì trạng thái đã sắp xếp tại mọi thời điểm.</p>
 <div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">d</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">INF</span><span class="p">);</span>
 <span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="n">deque</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
@@ -8087,12 +8059,12 @@ This way the queue still remains sorted at all time.</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="dials-algorithm">Dial's algorithm<a class="headerlink" href="#dials-algorithm" title="Permanent link">&para;</a></h2>
-<p>We can extend this even further if we allow the weights of the edges to be even bigger.
-If every edge in the graph has a weight <span class="arithmatex">$\le k$</span>, then the distances of vertices in the queue will differ by at most <span class="arithmatex">$k$</span> from the distance of <span class="arithmatex">$v$</span> to the source.
-So we can keep <span class="arithmatex">$k + 1$</span> buckets for the vertices in the queue, and whenever the bucket corresponding to the smallest distance gets empty, we make a cyclic shift to get the bucket with the next higher distance.
-This extension is called <strong>Dial's algorithm</strong>.</p>
-<h2 id="practice-problems">Practice problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="thuat-toan-dial-dials-algorithm">Thuật toán Dial (Dial's algorithm)<a class="headerlink" href="#thuat-toan-dial-dials-algorithm" title="Permanent link">&para;</a></h2>
+<p>Chúng ta có thể mở rộng thuật toán này xa hơn nữa nếu chúng ta cho phép trọng số các cạnh lớn hơn.
+Nếu mọi cạnh trên đồ thị có trọng số <span class="arithmatex">$\le k$</span>, thì khoảng cách của các đỉnh trong hàng đợi sẽ chênh lệch tối đa là <span class="arithmatex">$k$</span> so với khoảng cách từ <span class="arithmatex">$v$</span> đến đỉnh nguồn.
+Do đó, chúng ta có thể duy trì <span class="arithmatex">$k + 1$</span> ngăn chứa (buckets) cho các đỉnh trong hàng đợi. Bất cứ khi nào ngăn chứa ứng với khoảng cách nhỏ nhất trống, chúng ta thực hiện dịch chuyển vòng tròn để lấy ngăn chứa có khoảng cách lớn hơn tiếp theo.
+Sự mở rộng này được gọi là <strong>Thuật toán Dial</strong>.</p>
+<h2 id="bai-tap-ap-dung">Bài tập áp dụng<a class="headerlink" href="#bai-tap-ap-dung" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://codeforces.com/contest/1063/problem/B">Labyrinth</a></li>
 <li><a href="http://www.spoj.com/problems/KATHTHI/">KATHTHI</a></li>
@@ -8108,7 +8080,7 @@ This extension is called <strong>Dial's algorithm</strong>.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (75.0%)</li><li><a href="#" title="Salil Gokhale" data-bi-name="contributorprofile" target="_blank">Salil Gokhale</a> (9.38%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (5.21%)</li><li><a href="#" title="P4R7H0 K2" data-bi-name="contributorprofile" target="_blank">P4R7H0 K2</a> (4.17%)</li><li><a href="#" title="Tarun Khullar" data-bi-name="contributorprofile" target="_blank">Tarun Khullar</a> (3.12%)</li><li><a href="#" title="Aleksandr Mishukhin" data-bi-name="contributorprofile" target="_blank">Aleksandr Mishukhin</a> (1.04%)</li><li><a href="#" title="DIVYANSH DIXIT" data-bi-name="contributorprofile" target="_blank">DIVYANSH DIXIT</a> (1.04%)</li><li><a href="#" title="knotri" data-bi-name="contributorprofile" target="_blank">knotri</a> (1.04%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

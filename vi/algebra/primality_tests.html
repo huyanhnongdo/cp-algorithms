@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#primality-tests" class="md-skip">
+        <a href="#kiem-tra-tinh-nguyen-to-primality-tests" class="md-skip">
           Bỏ qua
         </a>
       
@@ -958,10 +958,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#trial-division" class="md-nav__link">
+  <a href="#phep-chia-thu-trial-division" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Trial division
+        Phép chia thử (Trial division)
       
     </span>
   </a>
@@ -969,10 +969,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fermat-primality-test" class="md-nav__link">
+  <a href="#phep-kiem-tra-tinh-nguyen-to-fermat-fermat-primality-test" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fermat primality test
+        Phép kiểm tra tính nguyên tố Fermat (Fermat primality test)
       
     </span>
   </a>
@@ -980,22 +980,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#miller-rabin-primality-test" class="md-nav__link">
+  <a href="#phep-kiem-tra-tinh-nguyen-to-miller-rabin-miller-rabin-primality-test" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Miller-Rabin primality test
+        Phép kiểm tra tính nguyên tố Miller-Rabin (Miller-Rabin primality test)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Miller-Rabin primality test">
+    <nav class="md-nav" aria-label="Phép kiểm tra tính nguyên tố Miller-Rabin (Miller-Rabin primality test)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#deterministic-version" class="md-nav__link">
+  <a href="#phien-ban-tat-inh-deterministic-version" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deterministic version
+        Phiên bản tất định (Deterministic version)
       
     </span>
   </a>
@@ -1008,10 +1008,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-ap-dung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập áp dụng
       
     </span>
   </a>
@@ -7988,13 +7988,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/primality_tests.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/primality_tests.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/primality_tests.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/primality_tests.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8010,34 +8010,6 @@ Describe the issue of this article in detail.
   
   
 
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
 
 
 
@@ -8048,24 +8020,24 @@ Describe the issue of this article in detail.
 
 
   
-    <a href="../tags.html#tag:original" class="md-tag">
-      Original
+    <a href="../tags.html#tag:translated" class="md-tag">
+      Translated
     </a>
   
 
 </ul>
 
 
-<h1 id="primality-tests">Primality tests<a class="headerlink" href="#primality-tests" title="Permanent link">&para;</a></h1>
-<p>This article describes multiple algorithms to determine if a number is prime or not.</p>
-<h2 id="trial-division">Trial division<a class="headerlink" href="#trial-division" title="Permanent link">&para;</a></h2>
-<p>By definition a prime number doesn't have any divisors other than <span class="arithmatex">$1$</span> and itself.
-A composite number has at least one additional divisor, let's call it <span class="arithmatex">$d$</span>.
-Naturally <span class="arithmatex">$\frac{n}{d}$</span> is also a divisor of <span class="arithmatex">$n$</span>.
-It's easy to see, that either <span class="arithmatex">$d \le \sqrt{n}$</span> or <span class="arithmatex">$\frac{n}{d} \le \sqrt{n}$</span>, therefore one of the divisors <span class="arithmatex">$d$</span> and <span class="arithmatex">$\frac{n}{d}$</span> is <span class="arithmatex">$\le \sqrt{n}$</span>.
-We can use this information to check for primality.</p>
-<p>We try to find a non-trivial divisor, by checking if any of the numbers between <span class="arithmatex">$2$</span> and <span class="arithmatex">$\sqrt{n}$</span> is a divisor of <span class="arithmatex">$n$</span>.
-If it is a divisor, then <span class="arithmatex">$n$</span> is definitely not prime, otherwise it is.</p>
+<h1 id="kiem-tra-tinh-nguyen-to-primality-tests">Kiểm tra tính nguyên tố (Primality tests)<a class="headerlink" href="#kiem-tra-tinh-nguyen-to-primality-tests" title="Permanent link">&para;</a></h1>
+<p>Bài viết này mô tả nhiều thuật toán khác nhau nhằm xác định xem một số có phải là số nguyên tố hay không.</p>
+<h2 id="phep-chia-thu-trial-division">Phép chia thử (Trial division)<a class="headerlink" href="#phep-chia-thu-trial-division" title="Permanent link">&para;</a></h2>
+<p>Theo định nghĩa, một số nguyên tố không có bất kỳ ước số nào ngoài <span class="arithmatex">$1$</span> và chính nó.
+Một hợp số có ít nhất một ước số khác, gọi ước số này là <span class="arithmatex">$d$</span>.
+Rõ ràng <span class="arithmatex">$\frac{n}{d}$</span> cũng là một ước của <span class="arithmatex">$n$</span>.
+Dễ thấy rằng, hoặc <span class="arithmatex">$d \le \sqrt{n}$</span> hoặc <span class="arithmatex">$\frac{n}{d} \le \sqrt{n}$</span>, do đó một trong hai ước <span class="arithmatex">$d$</span> và <span class="arithmatex">$\frac{n}{d}$</span> phải <span class="arithmatex">$\le \sqrt{n}$</span>.
+Chúng ta có thể tận dụng thông tin này để kiểm tra tính nguyên tố.</p>
+<p>Chúng ta cố gắng tìm một ước số thực sự (khác 1 và n) bằng cách kiểm tra xem có bất kỳ số nào trong khoảng từ <span class="arithmatex">$2$</span> đến <span class="arithmatex">$\sqrt{n}$</span> là ước của <span class="arithmatex">$n$</span> hay không.
+Nếu tìm được ước số, n chắc chắn là hợp số, ngược lại <span class="arithmatex">$n$</span> là số nguyên tố.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">isPrime</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="n">d</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
@@ -8074,26 +8046,26 @@ If it is a divisor, then <span class="arithmatex">$n$</span> is definitely not p
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>This is the simplest form of a prime check.
-You can optimize this function quite a bit, for instance by only checking all odd numbers in the loop, since the only even prime number is 2.
-Multiple such optimizations are described in the article about <a href="factorization.html">integer factorization</a>.</p>
-<h2 id="fermat-primality-test">Fermat primality test<a class="headerlink" href="#fermat-primality-test" title="Permanent link">&para;</a></h2>
-<p>This is a probabilistic test.</p>
-<p>Fermat's little theorem (see also <a href="phi-function.html">Euler's totient function</a>) states, that for a prime number <span class="arithmatex">$p$</span> and a coprime integer <span class="arithmatex">$a$</span> the following equation holds:</p>
+<p>Đây là dạng đơn giản nhất của phép kiểm tra số nguyên tố.
+Bạn có thể tối ưu hóa hàm này thêm khá nhiều, ví dụ chỉ cần kiểm tra các số lẻ trong vòng lặp vì số nguyên tố chẵn duy nhất là 2.
+Nhiều tối ưu hóa tương tự được mô tả chi tiết trong bài viết về <a href="factorization.html">phân tích thừa số nguyên tố</a>.</p>
+<h2 id="phep-kiem-tra-tinh-nguyen-to-fermat-fermat-primality-test">Phép kiểm tra tính nguyên tố Fermat (Fermat primality test)<a class="headerlink" href="#phep-kiem-tra-tinh-nguyen-to-fermat-fermat-primality-test" title="Permanent link">&para;</a></h2>
+<p>Đây là một phép kiểm tra xác suất.</p>
+<p>Định lý nhỏ Fermat (xem thêm tại bài viết <a href="phi-function.html">Phi hàm Euler</a>) phát biểu rằng, với mọi số nguyên tố <span class="arithmatex">$p$</span> và số nguyên <span class="arithmatex">$a$</span> nguyên tố cùng nhau với p, phương trình sau luôn đúng:</p>
 <div class="arithmatex">$$a^{p-1} \equiv 1 \bmod p$$</div>
-<p>In general this theorem doesn't hold for composite numbers.</p>
-<p>This can be used to create a primality test.
-We pick an integer <span class="arithmatex">$2 \le a \le p - 2$</span>, and check if the equation holds or not.
-If it doesn't hold, e.g. <span class="arithmatex">$a^{p-1} \not\equiv 1 \bmod p$</span>, we know that <span class="arithmatex">$p$</span> cannot be a prime number.
-In this case we call the base <span class="arithmatex">$a$</span> a <em>Fermat witness</em> for the compositeness of <span class="arithmatex">$p$</span>.</p>
-<p>However it is also possible, that the equation holds for a composite number.
-So if the equation holds, we don't have a proof for primality.
-We only can say that <span class="arithmatex">$p$</span> is <em>probably prime</em>.
-If it turns out that the number is actually composite, we call the base <span class="arithmatex">$a$</span> a <em>Fermat liar</em>.</p>
-<p>By running the test for all possible bases <span class="arithmatex">$a$</span>, we can actually prove that a number is prime.
-However this is not done in practice, since this is a lot more effort that just doing <em>trial division</em>.
-Instead the test will be repeated multiple times with random choices for <span class="arithmatex">$a$</span>.
-If we find no witness for the compositeness, it is very likely that the number is in fact prime.</p>
+<p>Nhìn chung, định lý này không đúng đối với hợp số.</p>
+<p>Tính chất này có thể được dùng để xây dựng thuật toán kiểm tra số nguyên tố.
+Chúng ta chọn một số nguyên <span class="arithmatex">$2 \le a \le p - 2$</span>, và kiểm tra xem phương trình trên có thỏa mãn hay không.
+Nếu phương trình không thỏa mãn, tức là <span class="arithmatex">$a^{p-1} \not\equiv 1 \bmod p$</span>, chúng ta biết chắc chắn rằng <span class="arithmatex">$p$</span> không thể là số nguyên tố.
+Trong trường hợp này, cơ số <span class="arithmatex">$a$</span> được gọi là một <em>chứng nhân Fermat (Fermat witness)</em> cho việc p là hợp số.</p>
+<p>Tuy nhiên, phương trình trên cũng có thể thỏa mãn đối với một hợp số.
+Do đó, nếu phương trình thỏa mãn, chúng ta vẫn chưa có bằng chứng chắc chắn về tính nguyên tố của <span class="arithmatex">$p$</span>.
+Chúng ta chỉ có thể kết luận rằng <span class="arithmatex">$p$</span> <em>có khả năng là số nguyên tố (probably prime)</em>.
+Nếu sau đó xác định được số này thực tế là hợp số, cơ số <span class="arithmatex">$a$</span> được gọi là một <em>kẻ nói dối Fermat (Fermat liar)</em>.</p>
+<p>Bằng cách chạy kiểm tra cho tất cả các cơ số <span class="arithmatex">$a$</span> khả dĩ, chúng ta thực sự có thể chứng minh một số là số nguyên tố.
+Tuy nhiên, điều này không được thực hiện trong thực tế vì nó đòi hỏi nhiều công sức hơn cả <em>phép chia thử</em>.
+Thay vào đó, phép kiểm tra sẽ được lặp lại nhiều lần với các cơ số <span class="arithmatex">$a$</span> được chọn ngẫu nhiên.
+Nếu không tìm thấy chứng nhân hợp số nào sau nhiều lượt thử, khả năng cực kỳ cao là số đó là số nguyên tố.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">probablyPrimeFermat</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">iter</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
@@ -8106,19 +8078,19 @@ If we find no witness for the compositeness, it is very likely that the number i
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>We use <a href="binary-exp.html">Binary Exponentiation</a> to efficiently compute the power <span class="arithmatex">$a^{p-1}$</span>.</p>
-<p>There is one bad news though:
-there exist some composite numbers where <span class="arithmatex">$a^{n-1} \equiv 1 \bmod n$</span> holds for all <span class="arithmatex">$a$</span> coprime to <span class="arithmatex">$n$</span>, for instance for the number <span class="arithmatex">$561 = 3 \cdot 11 \cdot 17$</span>.
-Such numbers are called <em>Carmichael numbers</em>.
-The Fermat primality test can identify these numbers only, if we have immense luck and choose a base <span class="arithmatex">$a$</span> with <span class="arithmatex">$\gcd(a, n) \ne 1$</span>.</p>
-<p>The Fermat test is still being used in practice, as it is very fast and Carmichael numbers are very rare.
-E.g. there only exist 646 such numbers below <span class="arithmatex">$10^9$</span>.</p>
-<h2 id="miller-rabin-primality-test">Miller-Rabin primality test<a class="headerlink" href="#miller-rabin-primality-test" title="Permanent link">&para;</a></h2>
-<p>The Miller-Rabin test extends the ideas from the Fermat test.</p>
-<p>For an odd number <span class="arithmatex">$n$</span>, <span class="arithmatex">$n-1$</span> is even and we can factor out all powers of 2.
-We can write:</p>
-<div class="arithmatex">$$n - 1 = 2^s \cdot d,~\text{with}~d~\text{odd}.$$</div>
-<p>This allows us to factorize the equation of Fermat's little theorem:</p>
+<p>Chúng ta sử dụng thuật toán <a href="binary-exp.html">Lũy thừa nhị phân</a> để tính toán lũy thừa <span class="arithmatex">$a^{p-1}$</span> một cách hiệu quả.</p>
+<p>Tuy nhiên, có một tin xấu:
+Tồn tại một số hợp số mà phương trình <span class="arithmatex">$a^{n-1} \equiv 1 \bmod n$</span> thỏa mãn với mọi <span class="arithmatex">$a$</span> nguyên tố cùng nhau với <span class="arithmatex">$n$</span>, ví dụ như số <span class="arithmatex">$561 = 3 \cdot 11 \cdot 17$</span>.
+Những số như vậy được gọi là <em>số Carmichael</em>.
+Phép kiểm tra tính nguyên tố Fermat chỉ có thể phát hiện các số này nếu chúng ta cực kỳ may mắn chọn được cơ số <span class="arithmatex">$a$</span> mà <span class="arithmatex">$\gcd(a, n) \ne 1$</span>.</p>
+<p>Mặc dù vậy, phép kiểm tra Fermat vẫn được sử dụng trong thực tế vì tốc độ rất nhanh và số Carmichael cực kỳ hiếm.
+Ví dụ, chỉ có 646 số Carmichael nhỏ hơn <span class="arithmatex">$10^9$</span>.</p>
+<h2 id="phep-kiem-tra-tinh-nguyen-to-miller-rabin-miller-rabin-primality-test">Phép kiểm tra tính nguyên tố Miller-Rabin (Miller-Rabin primality test)<a class="headerlink" href="#phep-kiem-tra-tinh-nguyen-to-miller-rabin-miller-rabin-primality-test" title="Permanent link">&para;</a></h2>
+<p>Phép kiểm tra Miller-Rabin mở rộng ý tưởng của phép kiểm tra Fermat.</p>
+<p>Với một số lẻ <span class="arithmatex">$n$</span>, số <span class="arithmatex">$n-1$</span> là số chẵn nên chúng ta có thể tách tất cả các lũy thừa của 2 ra ngoài.
+Chúng ta có thể viết:</p>
+<div class="arithmatex">$$n - 1 = 2^s \cdot d,~\text{với}~d~\text{là số lẻ}.$$</div>
+<p>Điều này cho phép chúng ta phân tích phương trình của định lý nhỏ Fermat thành các nhân tử:</p>
 <div class="arithmatex">$$\begin{array}{rl}
 a^{n-1} \equiv 1 \bmod n &amp;\Longleftrightarrow a^{2^s d} - 1 \equiv 0 \bmod n \\\\
 &amp;\Longleftrightarrow (a^{2^{s-1} d} + 1) (a^{2^{s-1} d} - 1) \equiv 0 \bmod n \\\\
@@ -8126,23 +8098,23 @@ a^{n-1} \equiv 1 \bmod n &amp;\Longleftrightarrow a^{2^s d} - 1 \equiv 0 \bmod n
 &amp;\quad\vdots \\\\
 &amp;\Longleftrightarrow (a^{2^{s-1} d} + 1) (a^{2^{s-2} d} + 1) \cdots (a^{d} + 1) (a^{d} - 1) \equiv 0 \bmod n \\\\
 \end{array}$$</div>
-<p>If <span class="arithmatex">$n$</span> is prime, then <span class="arithmatex">$n$</span> has to divide one of these factors.
-And in the Miller-Rabin primality test we check exactly that statement, which is a more stricter version of the statement of the Fermat test.
-For a base <span class="arithmatex">$2 \le a \le n-2$</span> we check if either</p>
+<p>Nếu <span class="arithmatex">$n$</span> là số nguyên tố, thì <span class="arithmatex">$n$</span> phải chia hết một trong các nhân tử này.
+Trong phép kiểm tra tính nguyên tố Miller-Rabin, chúng ta kiểm tra chính xác mệnh đề đó, đây là một phiên bản chặt chẽ hơn nhiều so với phép kiểm tra Fermat.
+Với một cơ số <span class="arithmatex">$2 \le a \le n-2$</span>, chúng ta kiểm tra xem có phải:</p>
 <div class="arithmatex">$$a^d \equiv 1 \bmod n$$</div>
-<p>holds or</p>
+<p>thỏa mãn hoặc</p>
 <div class="arithmatex">$$a^{2^r d} \equiv -1 \bmod n$$</div>
-<p>holds for some <span class="arithmatex">$0 \le r \le s - 1$</span>.</p>
-<p>If we found a base <span class="arithmatex">$a$</span> which doesn't satisfy any of the above equalities, then we found a <em>witness</em> for the compositeness of <span class="arithmatex">$n$</span>.
-In this case we have proven that <span class="arithmatex">$n$</span> is not a prime number.</p>
-<p>Similar to the Fermat test, it is also possible that the set of equations is satisfied for a composite number.
-In that case the base <span class="arithmatex">$a$</span> is called a <em>strong liar</em>.
-If a base <span class="arithmatex">$a$</span> satisfies the equations (one of them), <span class="arithmatex">$n$</span> is only <em>strong probable prime</em>.
-However, there are no numbers like the Carmichael numbers, where all non-trivial bases lie.
-In fact it is possible to show, that at most <span class="arithmatex">$\frac{1}{4}$</span> of the bases can be strong liars.
-If <span class="arithmatex">$n$</span> is composite, we have a probability of <span class="arithmatex">$\ge 75\%$</span> that a random base will tell us that it is composite.
-By doing multiple iterations, choosing different random bases, we can tell with very high probability if the number is truly prime or if it is composite.</p>
-<p>Here is an implementation for 64 bit integer.</p>
+<p>thỏa mãn với một giá trị <span class="arithmatex">$0 \le r \le s - 1$</span> nào đó.</p>
+<p>Nếu tìm được một cơ số <span class="arithmatex">$a$</span> không thỏa mãn bất kỳ đẳng thức nào ở trên, chúng ta đã tìm thấy một <em>chứng nhân (witness)</em> chứng tỏ <span class="arithmatex">$n$</span> là hợp số.
+Trong trường hợp này, chúng ta đã chứng minh được <span class="arithmatex">$n$</span> không phải là số nguyên tố.</p>
+<p>Tương tự như phép kiểm tra Fermat, hệ phương trình trên cũng có thể thỏa mãn đối với một hợp số.
+Khi đó, cơ số <span class="arithmatex">$a$</span> được gọi là một <em>kẻ nói dối mạnh (strong liar)</em>.
+Nếu một cơ số <span class="arithmatex">$a$</span> thỏa mãn một trong các phương trình, <span class="arithmatex">$n$</span> chỉ được gọi là <em>số nguyên tố xác suất mạnh (strong probable prime)</em>.
+Tuy nhiên, không có các số đặc biệt giống như số Carmichael khiến tất cả các cơ số phi hữu tỉ đều bị lừa.
+Thực tế, người ta đã chứng minh được rằng có tối đa <span class="arithmatex">$\frac{1}{4}$</span> số cơ số có thể là kẻ nói dối mạnh.
+Nếu <span class="arithmatex">$n$</span> là hợp số, xác suất để một cơ số ngẫu nhiên chỉ ra nó là hợp số là <span class="arithmatex">$\ge 75\%$</span>.
+Bằng cách lặp lại nhiều lần với các cơ số ngẫu nhiên khác nhau, chúng ta có thể kết luận với xác suất cực kỳ cao liệu số đó là số nguyên tố thực sự hay là hợp số.</p>
+<p>Dưới đây là một bản cài đặt cho số nguyên 64-bit.</p>
 <div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">u64</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">uint64_t</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="n">u128</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">__uint128_t</span><span class="p">;</span>
 
@@ -8189,18 +8161,18 @@ By doing multiple iterations, choosing different random bases, we can tell with 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Before the Miller-Rabin test you can test additionally if one of the first few prime numbers is a divisor.
-This can speed up the test by a lot, since most composite numbers have very small prime divisors.
-E.g. <span class="arithmatex">$88\%$</span> of all numbers have a prime factor smaller than <span class="arithmatex">$100$</span>.</p>
-<h3 id="deterministic-version">Deterministic version<a class="headerlink" href="#deterministic-version" title="Permanent link">&para;</a></h3>
-<p>Miller showed that it is possible to make the algorithm deterministic by only checking all bases <span class="arithmatex">$\le O((\ln n)^2)$</span>.
-Bach later gave a concrete bound, it is only necessary to test all bases <span class="arithmatex">$a \le 2 \ln(n)^2$</span>.</p>
-<p>This is still a pretty large number of bases.
-So people have invested quite a lot of computation power into finding lower bounds.
-It turns out, for testing a 32 bit integer it is only necessary to check the first 4 prime bases: 2, 3, 5 and 7.
-The smallest composite number that fails this test is <span class="arithmatex">$3,215,031,751 = 151 \cdot 751 \cdot 28351$</span>.
-And for testing 64 bit integer it is enough to check the first 12 prime bases: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, and 37.</p>
-<p>This results in the following deterministic implementation:</p>
+<p>Trước khi thực hiện kiểm tra Miller-Rabin, bạn có thể kiểm tra xem số đó có chia hết cho một vài số nguyên tố nhỏ đầu tiên hay không.
+Việc này có thể giúp tăng tốc thuật toán đáng kể, vì hầu hết các hợp số đều có các ước nguyên tố rất nhỏ.
+Ví dụ: <span class="arithmatex">$88\%$</span> các số đều có một ước nguyên tố nhỏ hơn <span class="arithmatex">$100$</span>.</p>
+<h3 id="phien-ban-tat-inh-deterministic-version">Phiên bản tất định (Deterministic version)<a class="headerlink" href="#phien-ban-tat-inh-deterministic-version" title="Permanent link">&para;</a></h3>
+<p>Miller đã chỉ ra rằng có thể biến đổi thuật toán này thành thuật toán tất định bằng cách chỉ kiểm tra tất cả các cơ số <span class="arithmatex">$\le O((\ln n)^2)$</span>.
+Sau đó, Bach đã đưa ra một giới hạn cụ thể, theo đó chỉ cần kiểm tra tất cả các cơ số <span class="arithmatex">$a \le 2 \ln(n)^2$</span>.</p>
+<p>Tuy nhiên số lượng cơ số cần kiểm tra này vẫn khá lớn.
+Do đó, nhiều người đã đầu tư năng lực tính toán để tìm ra các giới hạn thấp hơn.
+Kết quả cho thấy, để kiểm tra một số nguyên 32-bit, chúng ta chỉ cần kiểm tra 4 cơ số nguyên tố đầu tiên: 2, 3, 5 và 7.
+Hợp số nhỏ nhất không vượt qua được phép thử này là <span class="arithmatex">$3,215,031,751 = 151 \cdot 751 \cdot 28351$</span>.
+Đối với số nguyên 64-bit, chỉ cần kiểm tra 12 cơ số nguyên tố đầu tiên: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, và 37.</p>
+<p>Điều này dẫn đến bản cài đặt tất định sau:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">MillerRabin</span><span class="p">(</span><span class="n">u64</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// returns true if n is prime, else returns false.</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
@@ -8221,17 +8193,17 @@ And for testing 64 bit integer it is enough to check the first 12 prime bases: 2
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>It's also possible to do the check with only 7 bases: 2, 325, 9375, 28178, 450775, 9780504 and 1795265022.
-However, since these numbers (except 2) are not prime, you need to check additionally if the number you are checking is equal to any prime divisor of those bases: 2, 3, 5, 13, 19, 73, 193, 407521, 299210837.</p>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<p>Chúng ta cũng có thể thực hiện kiểm tra chỉ với 7 cơ số: 2, 325, 9375, 28178, 450775, 9780504 và 1795265022.
+Tuy nhiên, vì các số này (trừ 2) không phải là số nguyên tố, bạn cần kiểm tra thêm xem số cần thử có bằng bất kỳ ước nguyên tố nào của các cơ số đó hay không: 2, 3, 5, 13, 19, 73, 193, 407521, 299210837.</p>
+<h2 id="bai-tap-ap-dung">Bài tập áp dụng<a class="headerlink" href="#bai-tap-ap-dung" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.spoj.com/problems/PON/">SPOJ - Prime or Not</a></li>
-<li><a href="https://projecteuler.net/problem=146">Project euler - Investigating a Prime Pattern</a></li>
+<li><a href="https://projecteuler.net/problem=146">Project Euler - Investigating a Prime Pattern</a></li>
 </ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (91.41%)</li><li><a href="#" title="gampu" data-bi-name="contributorprofile" target="_blank">gampu</a> (3.17%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (2.71%)</li><li><a href="#" title="boxlesscat" data-bi-name="contributorprofile" target="_blank">boxlesscat</a> (1.36%)</li><li><a href="#" title="HKalbasi" data-bi-name="contributorprofile" target="_blank">HKalbasi</a> (0.45%)</li><li><a href="#" title="Jan Pokorný" data-bi-name="contributorprofile" target="_blank">Jan Pokorný</a> (0.45%)</li><li><a href="#" title="Siddharth" data-bi-name="contributorprofile" target="_blank">Siddharth</a> (0.45%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

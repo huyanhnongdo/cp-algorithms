@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#number-of-divisors-sum-of-divisors" class="md-skip">
+        <a href="#so-luong-uoc-so-tong-cac-uoc-so" class="md-skip">
           Bỏ qua
         </a>
       
@@ -1097,10 +1097,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#number-of-divisors" class="md-nav__link">
+  <a href="#so-luong-uoc-so" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Number of divisors
+        Số lượng ước số
       
     </span>
   </a>
@@ -1108,10 +1108,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sum-of-divisors" class="md-nav__link">
+  <a href="#tong-cac-uoc-so" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sum of divisors
+        Tổng các ước số
       
     </span>
   </a>
@@ -1119,10 +1119,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multiplicative-functions" class="md-nav__link">
+  <a href="#ham-nhan-tinh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Multiplicative functions
+        Hàm nhân tính
       
     </span>
   </a>
@@ -1130,10 +1130,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-luyen-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập luyện tập
       
     </span>
   </a>
@@ -7971,13 +7971,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/divisors.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/divisors.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/divisors.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/divisors.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7993,22 +7993,6 @@ Describe the issue of this article in detail.
   
   
 
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
 
 
 
@@ -8019,32 +8003,32 @@ Describe the issue of this article in detail.
 
 
   
-    <a href="../tags.html#tag:original" class="md-tag">
-      Original
+    <a href="../tags.html#tag:translated" class="md-tag">
+      Translated
     </a>
   
 
 </ul>
 
 
-<h1 id="number-of-divisors-sum-of-divisors">Number of divisors / sum of divisors<a class="headerlink" href="#number-of-divisors-sum-of-divisors" title="Permanent link">&para;</a></h1>
-<p>In this article we discuss how to compute the number of divisors <span class="arithmatex">$d(n)$</span> and the sum of divisors <span class="arithmatex">$\sigma(n)$</span> of a given number <span class="arithmatex">$n$</span>.</p>
-<h2 id="number-of-divisors">Number of divisors<a class="headerlink" href="#number-of-divisors" title="Permanent link">&para;</a></h2>
-<p>It should be obvious that the prime factorization of a divisor <span class="arithmatex">$d$</span> has to be a subset of the prime factorization of <span class="arithmatex">$n$</span>, e.g. <span class="arithmatex">$6 = 2 \cdot 3$</span> is a divisor of <span class="arithmatex">$60 = 2^2 \cdot 3 \cdot 5$</span>.
-So we only need to find all different subsets of the prime factorization of <span class="arithmatex">$n$</span>.</p>
-<p>Usually the number of subsets is <span class="arithmatex">$2^x$</span> for a set with <span class="arithmatex">$x$</span> elements.
-However this is no longer true, if there are repeated elements in the set. In our case some prime factors may appear multiple times in the prime factorization of <span class="arithmatex">$n$</span>.</p>
-<p>If a prime factor <span class="arithmatex">$p$</span> appears <span class="arithmatex">$e$</span> times in the prime factorization of <span class="arithmatex">$n$</span>, then we can use the factor <span class="arithmatex">$p$</span> up to <span class="arithmatex">$e$</span> times in the subset.
-Which means we have <span class="arithmatex">$e+1$</span> choices.</p>
-<p>Therefore if the prime factorization of <span class="arithmatex">$n$</span> is <span class="arithmatex">$p_1^{e_1} \cdot p_2^{e_2} \cdots p_k^{e_k}$</span>, where <span class="arithmatex">$p_i$</span> are distinct prime numbers, then the number of divisors is:</p>
+<h1 id="so-luong-uoc-so-tong-cac-uoc-so">Số lượng ước số / Tổng các ước số<a class="headerlink" href="#so-luong-uoc-so-tong-cac-uoc-so" title="Permanent link">&para;</a></h1>
+<p>Trong bài viết này, chúng ta sẽ thảo luận cách tính số lượng các ước số <span class="arithmatex">$d(n)$</span> và tổng các ước số <span class="arithmatex">$\sigma(n)$</span> của một số nguyên dương <span class="arithmatex">$n$</span> cho trước.</p>
+<h2 id="so-luong-uoc-so">Số lượng ước số<a class="headerlink" href="#so-luong-uoc-so" title="Permanent link">&para;</a></h2>
+<p>Rõ ràng là phân tích thừa số nguyên tố của một ước số <span class="arithmatex">$d$</span> phải là một tập con của phân tích thừa số nguyên tố của <span class="arithmatex">$n$</span>, ví dụ: <span class="arithmatex">$6 = 2 \cdot 3$</span> là một ước của <span class="arithmatex">$60 = 2^2 \cdot 3 \cdot 5$</span>.
+Vì vậy, chúng ta chỉ cần tìm tất cả các tập con khác nhau từ phân tích thừa số nguyên tố của <span class="arithmatex">$n$</span>.</p>
+<p>Thông thường, số lượng tập con của một tập hợp có <span class="arithmatex">$x$</span> phần tử là <span class="arithmatex">$2^x$</span>.
+Tuy nhiên, điều này không còn đúng nếu có các phần tử trùng lặp trong tập hợp. Trong trường hợp của chúng ta, một số thừa số nguyên tố có thể xuất hiện nhiều lần trong phân tích thừa số nguyên tố của <span class="arithmatex">$n$</span>.</p>
+<p>Nếu thừa số nguyên tố <span class="arithmatex">$p$</span> xuất hiện <span class="arithmatex">$e$</span> lần trong phân tích thừa số nguyên tố của <span class="arithmatex">$n$</span>, thì chúng ta có thể sử dụng thừa số <span class="arithmatex">$p$</span> tối đa <span class="arithmatex">$e$</span> lần trong tập con.
+Điều này có nghĩa là chúng ta có <span class="arithmatex">$e+1$</span> lựa chọn.</p>
+<p>Do đó, nếu phân tích thừa số nguyên tố của <span class="arithmatex">$n$</span> là <span class="arithmatex">$p_1^{e_1} \cdot p_2^{e_2} \cdots p_k^{e_k}$</span>, trong đó <span class="arithmatex">$p_i$</span> là các số nguyên tố phân biệt, thì số lượng ước số là:</p>
 <div class="arithmatex">$$d(n) = (e_1 + 1) \cdot (e_2 + 1) \cdots (e_k + 1)$$</div>
-<p>A way of thinking about it is the following:</p>
+<p>Một cách để suy nghĩ về điều này như sau:</p>
 <ul>
 <li>
-<p>If there is only one distinct prime divisor <span class="arithmatex">$n = p_1^{e_1}$</span>, then there are obviously <span class="arithmatex">$e_1 + 1$</span> divisors (<span class="arithmatex">$1, p_1, p_1^2, \dots, p_1^{e_1}$</span>).</p>
+<p>Nếu chỉ có một ước nguyên tố duy nhất <span class="arithmatex">$n = p_1^{e_1}$</span>, thì rõ ràng có <span class="arithmatex">$e_1 + 1$</span> ước số (<span class="arithmatex">$1, p_1, p_1^2, \dots, p_1^{e_1}$</span>).</p>
 </li>
 <li>
-<p>If there are two distinct prime divisors <span class="arithmatex">$n = p_1^{e_1} \cdot p_2^{e_2}$</span>, then you can arrange all divisors in form of a tabular.</p>
+<p>Nếu có hai ước nguyên tố phân biệt <span class="arithmatex">$n = p_1^{e_1} \cdot p_2^{e_2}$</span>, thì bạn có thể sắp xếp tất cả các ước số dưới dạng một bảng:</p>
 </li>
 </ul>
 <div class="arithmatex">$$\begin{array}{c|ccccc}
@@ -8055,9 +8039,9 @@ p_1^2 &amp; p_1^2 &amp; p_1^2 \cdot p_2 &amp; p_1^2 \cdot p_2^2 &amp; \dots &amp
 \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\\\
 p_1^{e_1} &amp; p_1^{e_1} &amp; p_1^{e_1} \cdot p_2 &amp; p_1^{e_1} \cdot p_2^2 &amp; \dots &amp; p_1^{e_1} \cdot p_2^{e_2} \\\\
 \end{array}$$</div>
-<p>So the number of divisors is trivially <span class="arithmatex">$(e_1 + 1) \cdot (e_2 + 1)$</span>.</p>
+<p>Vì vậy, số lượng ước số rõ ràng là <span class="arithmatex">$(e_1 + 1) \cdot (e_2 + 1)$</span>.</p>
 <ul>
-<li>A similar argument can be made if there are more then two distinct prime factors.</li>
+<li>Một lập luận tương tự cũng có thể được đưa ra nếu có nhiều hơn hai thừa số nguyên tố phân biệt.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">numberOfDivisors</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
@@ -8077,21 +8061,21 @@ p_1^{e_1} &amp; p_1^{e_1} &amp; p_1^{e_1} \cdot p_2 &amp; p_1^{e_1} \cdot p_2^2 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">total</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="sum-of-divisors">Sum of divisors<a class="headerlink" href="#sum-of-divisors" title="Permanent link">&para;</a></h2>
-<p>We can use the same argument of the previous section.</p>
+<h2 id="tong-cac-uoc-so">Tổng các ước số<a class="headerlink" href="#tong-cac-uoc-so" title="Permanent link">&para;</a></h2>
+<p>Chúng ta có thể sử dụng cùng một lập luận ở phần trước.</p>
 <ul>
-<li>If there is only one distinct prime divisor <span class="arithmatex">$n = p_1^{e_1}$</span>, then the sum is:</li>
+<li>Nếu chỉ có một ước nguyên tố duy nhất <span class="arithmatex">$n = p_1^{e_1}$</span>, thì tổng các ước số là:</li>
 </ul>
 <div class="arithmatex">$$1 + p_1 + p_1^2 + \dots + p_1^{e_1} = \frac{p_1^{e_1 + 1} - 1}{p_1 - 1}$$</div>
 <ul>
-<li>If there are two distinct prime divisors <span class="arithmatex">$n = p_1^{e_1} \cdot p_2^{e_2}$</span>, then we can make the same table as before.
-  The only difference is that now we now want to compute the sum instead of counting the elements.
-  It is easy to see, that the sum of each combination can be expressed as:</li>
+<li>Nếu có hai ước nguyên tố phân biệt <span class="arithmatex">$n = p_1^{e_1} \cdot p_2^{e_2}$</span>, thì chúng ta có thể lập bảng tương tự như trước.
+  Điểm khác biệt duy nhất là bây giờ chúng ta muốn tính tổng thay vì đếm số phần tử.
+  Dễ dàng nhận thấy rằng tổng của mỗi sự kết hợp có thể được biểu diễn dưới dạng:</li>
 </ul>
 <div class="arithmatex">$$\left(1 + p_1 + p_1^2 + \dots + p_1^{e_1}\right) \cdot \left(1 + p_2 + p_2^2 + \dots + p_2^{e_2}\right)$$</div>
 <div class="arithmatex">$$ = \frac{p_1^{e_1 + 1} - 1}{p_1 - 1} \cdot \frac{p_2^{e_2 + 1} - 1}{p_2 - 1}$$</div>
 <ul>
-<li>In general, for <span class="arithmatex">$n = p_1^{e_1} \cdot p_2^{e_2} \cdots p_k^{e_k}$</span> we receive the formula:</li>
+<li>Tổng quát hơn, đối với <span class="arithmatex">$n = p_1^{e_1} \cdot p_2^{e_2} \cdots p_k^{e_k}$</span>, chúng ta thu được công thức:</li>
 </ul>
 <div class="arithmatex">$$\sigma(n) = \frac{p_1^{e_1 + 1} - 1}{p_1 - 1} \cdot \frac{p_2^{e_2 + 1} - 1}{p_2 - 1} \cdots \frac{p_k^{e_k + 1} - 1}{p_k - 1}$$</div>
 <div class="highlight"><pre><span></span><code><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">SumOfDivisors</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8119,14 +8103,14 @@ p_1^{e_1} &amp; p_1^{e_1} &amp; p_1^{e_1} \cdot p_2 &amp; p_1^{e_1} \cdot p_2^2 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">total</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="multiplicative-functions">Multiplicative functions<a class="headerlink" href="#multiplicative-functions" title="Permanent link">&para;</a></h2>
-<p>A multiplicative function is a function <span class="arithmatex">$f(x)$</span> which satisfies</p>
+<h2 id="ham-nhan-tinh">Hàm nhân tính<a class="headerlink" href="#ham-nhan-tinh" title="Permanent link">&para;</a></h2>
+<p>Một hàm nhân tính (multiplicative function) là một hàm số <span class="arithmatex">$f(x)$</span> thỏa mãn:</p>
 <div class="arithmatex">$$f(a \cdot b) = f(a) \cdot f(b)$$</div>
-<p>if <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span> are coprime.</p>
-<p>Both <span class="arithmatex">$d(n)$</span> and <span class="arithmatex">$\sigma(n)$</span> are multiplicative functions.</p>
-<p>Multiplicative functions have a huge variety of interesting properties, which can be very useful in number theory problems.
-For instance the Dirichlet convolution of two multiplicative functions is also multiplicative.</p>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<p>nếu <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span> nguyên tố cùng nhau.</p>
+<p>Cả <span class="arithmatex">$d(n)$</span> và <span class="arithmatex">$\sigma(n)$</span> đều là các hàm nhân tính.</p>
+<p>Các hàm nhân tính có rất nhiều tính chất thú vị, rất hữu ích trong các bài toán lý thuyết số.
+Ví dụ, tích chập Dirichlet (Dirichlet convolution) của hai hàm nhân tính cũng là một hàm nhân tính.</p>
+<h2 id="bai-tap-luyen-tap">Bài tập luyện tập<a class="headerlink" href="#bai-tap-luyen-tap" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.spoj.com/problems/COMDIV/">SPOJ - COMDIV</a></li>
 <li><a href="https://www.spoj.com/problems/DIVSUM/">SPOJ - DIVSUM</a></li>
@@ -8135,7 +8119,7 @@ For instance the Dirichlet convolution of two multiplicative functions is also m
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (55.81%)</li><li><a href="#" title="Md Shamim Ahmmed" data-bi-name="contributorprofile" target="_blank">Md Shamim Ahmmed</a> (20.16%)</li><li><a href="#" title="Md Shamim Ahmad" data-bi-name="contributorprofile" target="_blank">Md Shamim Ahmad</a> (17.83%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (5.43%)</li><li><a href="#" title="Siddharth S" data-bi-name="contributorprofile" target="_blank">Siddharth S</a> (0.78%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

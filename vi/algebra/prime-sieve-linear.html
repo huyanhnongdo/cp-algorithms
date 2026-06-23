@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linear-sieve" class="md-skip">
+        <a href="#sang-tuyen-tinh-linear-sieve" class="md-skip">
           Bỏ qua
         </a>
       
@@ -930,10 +930,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -941,10 +941,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -952,10 +952,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#correctness-proof" class="md-nav__link">
+  <a href="#chung-minh-tinh-ung-an" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Correctness Proof
+        Chứng minh tính đúng đắn
       
     </span>
   </a>
@@ -963,10 +963,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#runtime-and-memory" class="md-nav__link">
+  <a href="#thoi-gian-chay-va-bo-nho" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Runtime and Memory
+        Thời gian chạy và Bộ nhớ
       
     </span>
   </a>
@@ -974,10 +974,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#tai-lieu-tham-khao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        References
+        Tài liệu tham khảo
       
     </span>
   </a>
@@ -7982,13 +7982,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/prime-sieve-linear.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/prime-sieve-linear.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/prime-sieve-linear.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/prime-sieve-linear.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7999,26 +7999,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8054,33 +8034,33 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="linear-sieve">Linear Sieve<a class="headerlink" href="#linear-sieve" title="Permanent link">&para;</a></h1>
-<p>Given a number <span class="arithmatex">$n$</span>, find all prime numbers in a segment <span class="arithmatex">$[2;n]$</span>.</p>
-<p>The standard way of solving a task is to use <a href="sieve-of-eratosthenes.html">the sieve of Eratosthenes</a>. This algorithm is very simple, but it has runtime <span class="arithmatex">$O(n \log \log n)$</span>.</p>
-<p>Although there are a lot of known algorithms with sublinear runtime (i.e. <span class="arithmatex">$o(n)$</span>), the algorithm described below is interesting by its simplicity: it isn't any more complex than the classic sieve of Eratosthenes.</p>
-<p>Besides, the algorithm given here calculates <strong>factorizations of all numbers</strong> in the segment <span class="arithmatex">$[2; n]$</span> as a side effect, and that can be helpful in many practical applications.</p>
-<p>The weakness of the given algorithm is in using more memory than the classic sieve of Eratosthenes': it requires an array of <span class="arithmatex">$n$</span> numbers, while for the classic sieve of Eratosthenes it is enough to have <span class="arithmatex">$n$</span> bits of memory (which is 32 times less).</p>
-<p>Thus, it makes sense to use the described algorithm only until for numbers of order <span class="arithmatex">$10^7$</span> and not greater.</p>
-<p>The algorithm is due to Paul Pritchard. It is a variant of Algorithm 3.3 in (Pritchard, 1987: see references in the end of the article).</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>Our goal is to calculate <strong>minimum prime factor</strong> <span class="arithmatex">$lp [i]$</span> for every number <span class="arithmatex">$i$</span> in the segment <span class="arithmatex">$[2; n]$</span>.</p>
-<p>Besides, we need to store the list of all the found prime numbers - let's call it <span class="arithmatex">$pr []$</span>.</p>
-<p>We'll initialize the values <span class="arithmatex">$lp [i]$</span> with zeros, which means that we assume all numbers are prime. During the algorithm execution this array will be filled gradually.</p>
-<p>Now we'll go through the numbers from 2 to <span class="arithmatex">$n$</span>. We have two cases for the current number <span class="arithmatex">$i$</span>:</p>
+<h1 id="sang-tuyen-tinh-linear-sieve">Sàng tuyến tính (Linear Sieve)<a class="headerlink" href="#sang-tuyen-tinh-linear-sieve" title="Permanent link">&para;</a></h1>
+<p>Cho số tự nhiên <span class="arithmatex">$n$</span>, tìm tất cả các số nguyên tố trong đoạn <span class="arithmatex">$[2;n]$</span>.</p>
+<p>Cách thông thường để giải quyết bài toán này là sử dụng <a href="sieve-of-eratosthenes.html">sàng Eratosthenes</a>. Thuật toán này rất đơn giản nhưng có độ phức tạp thời gian chạy là <span class="arithmatex">$O(n \log \log n)$</span>.</p>
+<p>Mặc dù có nhiều thuật toán đã biết với thời gian chạy dưới tuyến tính (tức là <span class="arithmatex">$o(n)$</span>), thuật toán được mô tả dưới đây vẫn rất thú vị bởi sự đơn giản của nó: nó không phức tạp hơn sàng Eratosthenes cổ điển là bao.</p>
+<p>Bên cạnh đó, như một tác dụng phụ hữu ích, thuật toán này còn tính toán được <strong>phân tích thừa số nguyên tố của mọi số</strong> trong đoạn <span class="arithmatex">$[2; n]$</span>, điều này có thể rất hữu ích trong nhiều ứng dụng thực tế.</p>
+<p>Điểm yếu của thuật toán này là sử dụng nhiều bộ nhớ hơn sàng Eratosthenes cổ điển: nó yêu cầu một mảng gồm <span class="arithmatex">$n$</span> số nguyên, trong khi sàng Eratosthenes cổ điển chỉ cần tối đa <span class="arithmatex">$n$</span> bit bộ nhớ (ít hơn khoảng 32 lần).</p>
+<p>Do đó, thuật toán này chỉ nên được sử dụng cho các số có phạm vi cỡ <span class="arithmatex">$10^7$</span> trở xuống.</p>
+<p>Thuật toán này do Paul Pritchard phát triển. Đây là một biến thể của Thuật toán 3.3 trong tài liệu (Pritchard, 1987: xem tài liệu tham khảo ở cuối bài viết).</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Mục tiêu của chúng ta là tính toán <strong>ước nguyên tố nhỏ nhất</strong> <span class="arithmatex">$lp [i]$</span> cho mỗi số <span class="arithmatex">$i$</span> trong đoạn <span class="arithmatex">$[2; n]$</span>.</p>
+<p>Ngoài ra, chúng ta cần lưu trữ danh sách tất cả các số nguyên tố được tìm thấy - gọi danh sách này là <span class="arithmatex">$pr []$</span>.</p>
+<p>Chúng ta sẽ khởi tạo các giá trị <span class="arithmatex">$lp [i]$</span> bằng số 0, điều này có nghĩa là ban đầu giả định tất cả các số đều là số nguyên tố. Trong quá trình thực thi thuật toán, mảng này sẽ dần được lấp đầy.</p>
+<p>Bây giờ chúng ta sẽ duyệt qua các số từ 2 đến <span class="arithmatex">$n$</span>. Có hai trường hợp xảy ra đối với số <span class="arithmatex">$i$</span> hiện tại:</p>
 <ul>
 <li>
-<p><span class="arithmatex">$lp[i] = 0$</span> - that means that <span class="arithmatex">$i$</span> is prime, i.e. we haven't found any smaller factors for it.<br />
-  Hence, we assign <span class="arithmatex">$lp [i] = i$</span> and add <span class="arithmatex">$i$</span> to the end of the list <span class="arithmatex">$pr[]$</span>.</p>
+<p><span class="arithmatex">$lp[i] = 0$</span>: nghĩa là <span class="arithmatex">$i$</span> là số nguyên tố, vì chúng ta chưa tìm thấy bất kỳ ước số nào nhỏ hơn nó.<br />
+  Do đó, chúng ta gán <span class="arithmatex">$lp [i] = i$</span> và thêm <span class="arithmatex">$i$</span> vào cuối danh sách số nguyên tố <span class="arithmatex">$pr[]$</span>.</p>
 </li>
 <li>
-<p><span class="arithmatex">$lp[i] \neq 0$</span> - that means that <span class="arithmatex">$i$</span> is composite, and its minimum prime factor is <span class="arithmatex">$lp [i]$</span>.</p>
+<p><span class="arithmatex">$lp[i] \neq 0$</span>: nghĩa là <span class="arithmatex">$i$</span> là hợp số, và ước nguyên tố nhỏ nhất của nó là <span class="arithmatex">$lp [i]$</span>.</p>
 </li>
 </ul>
-<p>In both cases we update values of <span class="arithmatex">$lp []$</span> for the numbers that are divisible by <span class="arithmatex">$i$</span>. However, our goal is to learn to do so as to set a value <span class="arithmatex">$lp []$</span> at most once for every number. We can do it as follows:</p>
-<p>Let's consider numbers <span class="arithmatex">$x_j = i \cdot p_j$</span>, where <span class="arithmatex">$p_j$</span> are all prime numbers less than or equal to <span class="arithmatex">$lp [i]$</span> (this is why we need to store the list of all prime numbers).</p>
-<p>We'll set a new value <span class="arithmatex">$lp [x_j] = p_j$</span> for all numbers of this form.</p>
-<p>The proof of correctness of this algorithm and its runtime can be found after the implementation.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<p>Trong cả hai trường hợp, chúng ta cập nhật giá trị của <span class="arithmatex">$lp []$</span> cho các số chia hết cho <span class="arithmatex">$i$</span>. Tuy nhiên, mục tiêu của chúng ta là làm sao chỉ gán giá trị <span class="arithmatex">$lp []$</span> tối đa một lần cho mỗi số. Chúng ta có thể thực hiện như sau:</p>
+<p>Xét các số <span class="arithmatex">$x_j = i \cdot p_j$</span>, trong đó <span class="arithmatex">$p_j$</span> là tất cả các số nguyên tố nhỏ hơn hoặc bằng <span class="arithmatex">$lp [i]$</span> (đây là lý do tại sao chúng ta cần lưu trữ danh sách các số nguyên tố đã tìm thấy).</p>
+<p>Chúng ta sẽ gán giá trị mới <span class="arithmatex">$lp [x_j] = p_j$</span> cho tất cả các số có dạng này.</p>
+<p>Chứng minh tính đúng đắn của thuật toán và thời gian chạy của nó được trình bày ở phần sau cài đặt.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10000000</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lp</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pr</span><span class="p">;</span>
@@ -8098,29 +8078,29 @@ Describe the issue of this article in detail.
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="correctness-proof">Correctness Proof<a class="headerlink" href="#correctness-proof" title="Permanent link">&para;</a></h2>
-<p>We need to prove that the algorithm sets all values <span class="arithmatex">$lp []$</span> correctly, and that every value will be set exactly once. Hence, the algorithm will have linear runtime, since all the remaining actions of the algorithm, obviously, work for <span class="arithmatex">$O (n)$</span>.</p>
-<p>Notice that every number <span class="arithmatex">$i$</span> has exactly one representation in form:</p>
+<h2 id="chung-minh-tinh-ung-an">Chứng minh tính đúng đắn<a class="headerlink" href="#chung-minh-tinh-ung-an" title="Permanent link">&para;</a></h2>
+<p>Chúng ta cần chứng minh rằng thuật toán gán tất cả các giá trị <span class="arithmatex">$lp []$</span> một cách chính xác, và mỗi giá trị được gán chính xác một lần. Do đó, thuật toán sẽ có độ phức tạp thời gian tuyến tính, vì tất cả các thao tác còn lại rõ ràng chạy trong thời gian <span class="arithmatex">$O (n)$</span>.</p>
+<p>Lưu ý rằng mỗi số <span class="arithmatex">$i$</span> có duy nhất một cách biểu diễn dưới dạng:</p>
 <div class="arithmatex">$$i = lp [i] \cdot x,$$</div>
-<p>where <span class="arithmatex">$lp [i]$</span> is the minimal prime factor of <span class="arithmatex">$i$</span>, and the number <span class="arithmatex">$x$</span> doesn't have any prime factors less than <span class="arithmatex">$lp [i]$</span>, i.e.</p>
+<p>trong đó <span class="arithmatex">$lp [i]$</span> là ước nguyên tố nhỏ nhất của <span class="arithmatex">$i$</span>, và số <span class="arithmatex">$x$</span> không có bất kỳ ước nguyên tố nào nhỏ hơn <span class="arithmatex">$lp [i]$</span>, tức là:</p>
 <div class="arithmatex">$$lp [i] \le lp [x].$$</div>
-<p>Now, let's compare this with the actions of our algorithm: in fact, for every <span class="arithmatex">$x$</span> it goes through all prime numbers it could be multiplied by, i.e. all prime numbers up to <span class="arithmatex">$lp [x]$</span> inclusive, in order to get the numbers in the form given above.</p>
-<p>Hence, the algorithm will go through every composite number exactly once, setting the correct values <span class="arithmatex">$lp []$</span> there. Q.E.D.</p>
-<h2 id="runtime-and-memory">Runtime and Memory<a class="headerlink" href="#runtime-and-memory" title="Permanent link">&para;</a></h2>
-<p>Although the running time of <span class="arithmatex">$O(n)$</span> is better than <span class="arithmatex">$O(n \log \log n)$</span> of the classic sieve of Eratosthenes, the difference between them is not so big.
-In practice the linear sieve runs about as fast as a typical implementation of the sieve of Eratosthenes.</p>
-<p>In comparison to optimized versions of the sieve of Erathosthenes, e.g. the segmented sieve, it is much slower.</p>
-<p>Considering the memory requirements of this algorithm - an array <span class="arithmatex">$lp []$</span> of length <span class="arithmatex">$n$</span>, and an array of <span class="arithmatex">$pr []$</span> of length  <span class="arithmatex">$\frac n {\ln n}$</span>, this algorithm seems to be worse than the classic sieve in every way.</p>
-<p>However, its redeeming quality is that this algorithm calculates an array <span class="arithmatex">$lp []$</span>, which allows us to find factorization of any number in the segment <span class="arithmatex">$[2; n]$</span> in the time of the size order of this factorization. Moreover, using just one extra array will allow us to avoid divisions when looking for factorization.</p>
-<p>Knowing the factorizations of all numbers is very useful for some tasks, and this algorithm is one of the few which allow to find them in linear time.</p>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>Bây giờ, hãy so sánh điều này với các bước của thuật toán: thực tế, với mỗi số <span class="arithmatex">$x$</span>, thuật toán duyệt qua tất cả các số nguyên tố có thể nhân với nó, tức là tất cả các số nguyên tố từ nhỏ đến lớn cho tới khi gặp <span class="arithmatex">$lp [x]$</span> (bao gồm cả <span class="arithmatex">$lp [x]$</span>), nhằm tạo ra các số có dạng nêu trên.</p>
+<p>Do đó, thuật toán sẽ duyệt qua mỗi hợp số đúng một lần, và gán giá trị chính xác cho <span class="arithmatex">$lp []$</span> tại đó. (đpcm)</p>
+<h2 id="thoi-gian-chay-va-bo-nho">Thời gian chạy và Bộ nhớ<a class="headerlink" href="#thoi-gian-chay-va-bo-nho" title="Permanent link">&para;</a></h2>
+<p>Mặc dù thời gian chạy <span class="arithmatex">$O(n)$</span> tốt hơn so với độ phức tạp <span class="arithmatex">$O(n \log \log n)$</span> của sàng Eratosthenes cổ điển, sự khác biệt thực tế giữa chúng không quá lớn.
+Trong thực tế, sàng tuyến tính chạy nhanh tương đương với một bản cài đặt thông thường của sàng Eratosthenes.</p>
+<p>So với các phiên bản cải tiến của sàng Eratosthenes, ví dụ như sàng phân đoạn (segmented sieve), sàng tuyến tính chạy chậm hơn nhiều.</p>
+<p>Xét về mặt bộ nhớ yêu cầu — gồm một mảng <span class="arithmatex">$lp []$</span> có độ dài <span class="arithmatex">$n$</span> và mảng <span class="arithmatex">$pr []$</span> có độ dài <span class="arithmatex">$\frac n {\ln n}$</span> — thuật toán này có vẻ kém tối ưu hơn sàng cổ điển về mọi mặt.</p>
+<p>Tuy nhiên, giá trị lớn nhất của thuật toán này là nó tính toán mảng <span class="arithmatex">$lp []$</span>, cho phép chúng ta tìm phân tích thừa số nguyên tố của bất kỳ số nào trong đoạn <span class="arithmatex">$[2; n]$</span> trong thời gian tỷ lệ thuận với số lượng thừa số nguyên tố của số đó. Hơn nữa, bằng cách sử dụng thêm một mảng phụ, chúng ta có thể tránh được các phép chia khi thực hiện phân tích thừa số nguyên tố.</p>
+<p>Biết được phân tích thừa số nguyên tố của mọi số rất hữu ích cho một số bài toán, và thuật toán này là một trong số ít thuật toán cho phép tìm chúng trong thời gian tuyến tính.</p>
+<h2 id="tai-lieu-tham-khao">Tài liệu tham khảo<a class="headerlink" href="#tai-lieu-tham-khao" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Paul Pritchard, <strong>Linear Prime-Number Sieves: a Family Tree</strong>, Science of Computer Programming, vol. 9 (1987), pp.17-35.</li>
 </ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="ellen-interpret" data-bi-name="contributorprofile" target="_blank">ellen-interpret</a> (47.96%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (28.57%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (10.2%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (10.2%)</li><li><a href="#" title="paulpritchard" data-bi-name="contributorprofile" target="_blank">paulpritchard</a> (2.04%)</li><li><a href="#" title="boxlesscat" data-bi-name="contributorprofile" target="_blank">boxlesscat</a> (1.02%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

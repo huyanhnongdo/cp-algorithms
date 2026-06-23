@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linear-congruence-equation" class="md-skip">
+        <a href="#phuong-trinh-ong-du-tuyen-tinh-linear-congruence-equation" class="md-skip">
           Bỏ qua
         </a>
       
@@ -1208,10 +1208,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#solution-by-finding-the-inverse-element" class="md-nav__link">
+  <a href="#giai-bang-cach-tim-phan-tu-nghich-ao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Solution by finding the inverse element
+        Giải bằng cách tìm phần tử nghịch đảo
       
     </span>
   </a>
@@ -1219,10 +1219,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#solution-with-the-extended-euclidean-algorithm" class="md-nav__link">
+  <a href="#giai-bang-thuat-toan-euclid-mo-rong" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Solution with the Extended Euclidean Algorithm
+        Giải bằng Thuật toán Euclid mở rộng
       
     </span>
   </a>
@@ -7949,13 +7949,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/linear_congruence_equation.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/linear_congruence_equation.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/linear_congruence_equation.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/linear_congruence_equation.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7966,22 +7966,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8017,38 +8001,38 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="linear-congruence-equation">Linear Congruence Equation<a class="headerlink" href="#linear-congruence-equation" title="Permanent link">&para;</a></h1>
-<p>This equation is of the form:</p>
+<h1 id="phuong-trinh-ong-du-tuyen-tinh-linear-congruence-equation">Phương trình đồng dư tuyến tính (Linear Congruence Equation)<a class="headerlink" href="#phuong-trinh-ong-du-tuyen-tinh-linear-congruence-equation" title="Permanent link">&para;</a></h1>
+<p>Phương trình này có dạng như sau:</p>
 <div class="arithmatex">$$a \cdot x \equiv b \pmod n,$$</div>
-<p>where <span class="arithmatex">$a$</span>, <span class="arithmatex">$b$</span> and <span class="arithmatex">$n$</span> are given integers and <span class="arithmatex">$x$</span> is an unknown integer.</p>
-<p>It is required to find the value <span class="arithmatex">$x$</span> from the interval <span class="arithmatex">$[0, n-1]$</span> (clearly, on the entire number line there can be infinitely many solutions that will differ from each other in <span class="arithmatex">$n \cdot k$</span> , where <span class="arithmatex">$k$</span> is any integer). If the solution is not unique, then we will consider how to get all the solutions.</p>
-<h2 id="solution-by-finding-the-inverse-element">Solution by finding the inverse element<a class="headerlink" href="#solution-by-finding-the-inverse-element" title="Permanent link">&para;</a></h2>
-<p>Let us first consider a simpler case where <span class="arithmatex">$a$</span> and <span class="arithmatex">$n$</span> are <strong>coprime</strong> (<span class="arithmatex">$\gcd(a, n) = 1$</span>).
-Then one can find the <a href="module-inverse.html">inverse</a> of <span class="arithmatex">$a$</span>, and multiplying both sides of the equation with the inverse, and we can get a <strong>unique</strong> solution.</p>
+<p>trong đó <span class="arithmatex">$a$</span>, <span class="arithmatex">$b$</span> và <span class="arithmatex">$n$</span> là các số nguyên cho trước và <span class="arithmatex">$x$</span> là số nguyên chưa biết.</p>
+<p>Nhiệm vụ của chúng ta là tìm giá trị <span class="arithmatex">$x$</span> nằm trong đoạn <span class="arithmatex">$[0, n-1]$</span> (rõ ràng, trên toàn bộ trục số có thể có vô số nghiệm và chúng khác nhau một lượng là bội của <span class="arithmatex">$n$</span>, tức là <span class="arithmatex">$n \cdot k$</span> với <span class="arithmatex">$k$</span> là số nguyên bất kỳ). Nếu nghiệm của phương trình không phải là duy nhất, chúng ta cũng sẽ xem xét cách tìm tất cả các nghiệm đó.</p>
+<h2 id="giai-bang-cach-tim-phan-tu-nghich-ao">Giải bằng cách tìm phần tử nghịch đảo<a class="headerlink" href="#giai-bang-cach-tim-phan-tu-nghich-ao" title="Permanent link">&para;</a></h2>
+<p>Trước tiên, hãy xét trường hợp đơn giản khi <span class="arithmatex">$a$</span> và <span class="arithmatex">$n$</span> <strong>nguyên tố cùng nhau</strong> (<span class="arithmatex">$\gcd(a, n) = 1$</span>).
+Khi đó ta có thể tìm <a href="module-inverse.html">phần tử nghịch đảo mô-đun</a> của <span class="arithmatex">$a$</span>. Nhân cả hai vế của phương trình với nghịch đảo đó, ta sẽ nhận được một nghiệm <strong>duy nhất</strong>:</p>
 <div class="arithmatex">$$x \equiv b \cdot a ^ {- 1} \pmod n$$</div>
-<p>Now consider the case where <span class="arithmatex">$a$</span> and <span class="arithmatex">$n$</span> are <strong>not coprime</strong> (<span class="arithmatex">$\gcd(a, n) \ne 1$</span>).
-Then the solution will not always exist (for example <span class="arithmatex">$2 \cdot x \equiv 1 \pmod 4$</span> has no solution).</p>
-<p>Let <span class="arithmatex">$g = \gcd(a, n)$</span>, i.e. the <a href="euclid-algorithm.html">greatest common divisor</a> of <span class="arithmatex">$a$</span> and <span class="arithmatex">$n$</span> (which in this case is greater than one).</p>
-<p>Then, if <span class="arithmatex">$b$</span> is not divisible by <span class="arithmatex">$g$</span>, there is no solution. In fact, for any <span class="arithmatex">$x$</span> the left side of the equation <span class="arithmatex">$a \cdot x \pmod n$</span> , is always divisible by <span class="arithmatex">$g$</span>, while the right-hand side is not divisible by it, hence it follows that there are no solutions.</p>
-<p>If <span class="arithmatex">$g$</span> divides <span class="arithmatex">$b$</span>, then by dividing both sides of the equation by <span class="arithmatex">$g$</span> (i.e. dividing <span class="arithmatex">$a$</span>, <span class="arithmatex">$b$</span> and <span class="arithmatex">$n$</span> by <span class="arithmatex">$g$</span>), we receive a new equation:</p>
+<p>Bây giờ hãy xét trường hợp <span class="arithmatex">$a$</span> và <span class="arithmatex">$n$</span> <strong>không nguyên tố cùng nhau</strong> (<span class="arithmatex">$\gcd(a, n) \ne 1$</span>).
+Khi đó phương trình không phải lúc nào cũng có nghiệm (ví dụ <span class="arithmatex">$2 \cdot x \equiv 1 \pmod 4$</span> vô nghiệm).</p>
+<p>Gọi <span class="arithmatex">$g = \gcd(a, n)$</span>, tức là <a href="euclid-algorithm.html">ước chung lớn nhất</a> của <span class="arithmatex">$a$</span> và <span class="arithmatex">$n$</span> (trong trường hợp này lớn hơn 1).</p>
+<p>Nếu <span class="arithmatex">$b$</span> không chia hết cho <span class="arithmatex">$g$</span>, phương trình sẽ vô nghiệm. Thực chất, với mọi <span class="arithmatex">$x$</span>, vế trái của phương trình <span class="arithmatex">$a \cdot x \pmod n$</span> luôn chia hết cho <span class="arithmatex">$g$</span>, trong khi vế phải không chia hết cho <span class="arithmatex">$g$</span>, do đó suy ra phương trình không có nghiệm.</p>
+<p>Nếu <span class="arithmatex">$g$</span> chia hết cho <span class="arithmatex">$b$</span>, thì bằng cách chia cả hai vế của phương trình (tức là chia cả <span class="arithmatex">$a$</span>, <span class="arithmatex">$b$</span> và <span class="arithmatex">$n$</span>) cho <span class="arithmatex">$g$</span>, ta thu được một phương trình mới:</p>
 <div class="arithmatex">$$a^\prime \cdot x \equiv b^\prime \pmod{n^\prime}$$</div>
-<p>in which <span class="arithmatex">$a^\prime$</span> and <span class="arithmatex">$n^\prime$</span> are already relatively prime, and we have already learned how to handle such an equation.
-We get <span class="arithmatex">$x^\prime$</span> as solution for <span class="arithmatex">$x$</span>.</p>
-<p>It is clear that this <span class="arithmatex">$x^\prime$</span> will also be a solution of the original equation.
-However it will <strong>not be the only solution</strong>.
-It can be shown that the original equation has exactly <span class="arithmatex">$g$</span> solutions, and they will look like this:</p>
-<div class="arithmatex">$$x_i \equiv (x^\prime + i\cdot n^\prime) \pmod n \quad \text{for } i = 0 \ldots g-1$$</div>
-<p>Summarizing, we can say that the <strong>number of solutions</strong> of the linear congruence equation is equal to either <span class="arithmatex">$g = \gcd(a, n)$</span> or to zero.</p>
-<h2 id="solution-with-the-extended-euclidean-algorithm">Solution with the Extended Euclidean Algorithm<a class="headerlink" href="#solution-with-the-extended-euclidean-algorithm" title="Permanent link">&para;</a></h2>
-<p>We can rewrite the linear congruence to the following Diophantine equation:</p>
+<p>trong đó <span class="arithmatex">$a^\prime$</span> và <span class="arithmatex">$n^\prime$</span> đã nguyên tố cùng nhau, và chúng ta đã biết cách giải phương trình dạng này.
+Gọi nghiệm tìm được của phương trình mới là <span class="arithmatex">$x^\prime$</span>.</p>
+<p>Rõ ràng <span class="arithmatex">$x^\prime$</span> này cũng sẽ là một nghiệm của phương trình ban đầu.
+Tuy nhiên, đây <strong>không phải là nghiệm duy nhất</strong>.
+Người ta chứng minh được rằng phương trình ban đầu có chính xác <span class="arithmatex">$g$</span> nghiệm, và các nghiệm đó có dạng như sau:</p>
+<div class="arithmatex">$$x_i \equiv (x^\prime + i\cdot n^\prime) \pmod n \quad \text{với } i = 0 \ldots g-1$$</div>
+<p>Tóm lại, <strong>số lượng nghiệm</strong> của phương trình đồng dư tuyến tính bằng <span class="arithmatex">$g = \gcd(a, n)$</span> hoặc bằng 0.</p>
+<h2 id="giai-bang-thuat-toan-euclid-mo-rong">Giải bằng Thuật toán Euclid mở rộng<a class="headerlink" href="#giai-bang-thuat-toan-euclid-mo-rong" title="Permanent link">&para;</a></h2>
+<p>Chúng ta có thể viết lại phương trình đồng dư tuyến tính dưới dạng phương trình Diophantine sau:</p>
 <div class="arithmatex">$$a \cdot x + n \cdot k = b,$$</div>
-<p>where <span class="arithmatex">$x$</span> and <span class="arithmatex">$k$</span> are unknown integers.</p>
-<p>The method of solving this equation is described in the corresponding article <a href="linear-diophantine-equation.html">Linear Diophantine equations</a> and it consists of applying the <a href="extended-euclid-algorithm.html">Extended Euclidean Algorithm</a>.</p>
-<p>It also describes the method of obtaining all solutions of this equation from one found solution, and incidentally this method, when carefully considered, is absolutely equivalent to the method described in the previous section.</p>
+<p>trong đó <span class="arithmatex">$x$</span> và <span class="arithmatex">$k$</span> là các số nguyên chưa biết.</p>
+<p>Phương pháp giải phương trình này đã được mô tả chi tiết trong bài viết tương ứng <a href="linear-diophantine-equation.html">Phương trình Diophantine tuyến tính</a> và nó sử dụng <a href="extended-euclid-algorithm.html">Thuật toán Euclid mở rộng</a>.</p>
+<p>Bài viết đó cũng mô tả cách tìm tất cả các nghiệm của phương trình từ một nghiệm tìm được trước đó. Trên thực tế, nếu xem xét kỹ, phương pháp đó hoàn toàn tương đương với phương pháp được mô tả ở phần trước.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jaideep Pyne" data-bi-name="contributorprofile" target="_blank">Jaideep Pyne</a> (64.29%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (19.64%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (7.14%)</li><li><a href="#" title="sundaram123krishnan" data-bi-name="contributorprofile" target="_blank">sundaram123krishnan</a> (7.14%)</li><li><a href="#" title="Abhijeet Krishnan" data-bi-name="contributorprofile" target="_blank">Abhijeet Krishnan</a> (1.79%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

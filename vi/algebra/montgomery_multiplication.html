@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#montgomery-multiplication" class="md-skip">
+        <a href="#phep-nhan-montgomery" class="md-skip">
           Bỏ qua
         </a>
       
@@ -1404,10 +1404,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#montgomery-representation" class="md-nav__link">
+  <a href="#bieu-dien-montgomery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Montgomery representation
+        Biểu diễn Montgomery
       
     </span>
   </a>
@@ -1415,10 +1415,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#montgomery-reduction" class="md-nav__link">
+  <a href="#phep-khu-montgomery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Montgomery reduction
+        Phép khử Montgomery
       
     </span>
   </a>
@@ -1426,10 +1426,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fast-inverse-trick" class="md-nav__link">
+  <a href="#meo-tinh-nghich-ao-nhanh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fast inverse trick
+        Mẹo tính nghịch đảo nhanh
       
     </span>
   </a>
@@ -1437,10 +1437,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -1448,10 +1448,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fast-transformation" class="md-nav__link">
+  <a href="#bien-oi-nhanh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fast transformation
+        Biến đổi nhanh
       
     </span>
   </a>
@@ -7982,13 +7982,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/montgomery_multiplication.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/montgomery_multiplication.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/montgomery_multiplication.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/montgomery_multiplication.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8004,22 +8004,6 @@ Describe the issue of this article in detail.
   
   
 
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
 
 
 
@@ -8030,61 +8014,61 @@ Describe the issue of this article in detail.
 
 
   
-    <a href="../tags.html#tag:original" class="md-tag">
-      Original
+    <a href="../tags.html#tag:translated" class="md-tag">
+      Translated
     </a>
   
 
 </ul>
 
 
-<h1 id="montgomery-multiplication">Montgomery Multiplication<a class="headerlink" href="#montgomery-multiplication" title="Permanent link">&para;</a></h1>
-<p>Many algorithms in number theory, like <a href="primality_tests.html">prime testing</a> or <a href="factorization.html">integer factorization</a>, and in cryptography, like RSA, require lots of operations modulo a large number.
-A multiplications like <span class="arithmatex">$x y \bmod{n}$</span> is quite slow to compute with the typical algorithms, since it requires a division to know how many times <span class="arithmatex">$n$</span> has to be subtracted from the product.
-And division is a really expensive operation, especially with big numbers.</p>
-<p>The <strong>Montgomery (modular) multiplication</strong> is a method that allows computing such multiplications faster.
-Instead of dividing the product and subtracting <span class="arithmatex">$n$</span> multiple times, it adds multiples of <span class="arithmatex">$n$</span> to cancel out the lower bits and then just discards the lower bits.</p>
-<h2 id="montgomery-representation">Montgomery representation<a class="headerlink" href="#montgomery-representation" title="Permanent link">&para;</a></h2>
-<p>However the Montgomery multiplication doesn't come for free.
-The algorithm works only in the <strong>Montgomery space</strong>.
-And we need to transform our numbers into that space, before we can start multiplying.</p>
-<p>For the space we need a positive integer <span class="arithmatex">$r \ge n$</span> coprime to <span class="arithmatex">$n$</span>, i.e. <span class="arithmatex">$\gcd(n, r) = 1$</span>.
-In practice we always choose <span class="arithmatex">$r$</span> to be <span class="arithmatex">$2^m$</span> for a positive integer <span class="arithmatex">$m$</span>, since multiplications, divisions and modulo <span class="arithmatex">$r$</span> operations can then be efficiently implemented using shifts and other bit operations.
-<span class="arithmatex">$n$</span> will be an odd number in pretty much all applications, since it is not hard to factorize an even number.
-So every power of <span class="arithmatex">$2$</span> will be coprime to <span class="arithmatex">$n$</span>.</p>
-<p>The representative <span class="arithmatex">$\bar{x}$</span> of a number <span class="arithmatex">$x$</span> in the Montgomery space is defined as: </p>
+<h1 id="phep-nhan-montgomery">Phép nhân Montgomery<a class="headerlink" href="#phep-nhan-montgomery" title="Permanent link">&para;</a></h1>
+<p>Nhiều thuật toán trong lý thuyết số, như <a href="primality_tests.html">kiểm tra số nguyên tố</a> hoặc <a href="factorization.html">phân tích thừa số nguyên tố</a>, và trong mật mã học, như RSA, yêu cầu rất nhiều phép toán mô-đun với một số lớn.
+Phép nhân như <span class="arithmatex">$x y \bmod{n}$</span> khá chậm để tính toán bằng các thuật toán thông thường, vì nó yêu cầu phép chia để biết được số lần <span class="arithmatex">$n$</span> cần phải trừ đi từ tích.
+Và phép chia là một phép toán rất tốn kém, đặc biệt là với các số lớn.</p>
+<p><strong>Phép nhân (mô-đun) Montgomery</strong> là một phương pháp cho phép tính toán các phép nhân như vậy nhanh hơn.
+Thay vì chia tích và trừ <span class="arithmatex">$n$</span> nhiều lần, nó cộng thêm các bội số của <span class="arithmatex">$n$</span> để triệt tiêu các bit thấp hơn và sau đó chỉ cần loại bỏ các bit thấp này đi.</p>
+<h2 id="bieu-dien-montgomery">Biểu diễn Montgomery<a class="headerlink" href="#bieu-dien-montgomery" title="Permanent link">&para;</a></h2>
+<p>Tuy nhiên, phép nhân Montgomery không phải là không có chi phí.
+Thuật toán này chỉ hoạt động trong <strong>không gian Montgomery (Montgomery space)</strong>.
+Và chúng ta cần chuyển các số của mình vào không gian đó trước khi bắt đầu thực hiện phép nhân.</p>
+<p>Đối với không gian này, chúng ta cần một số nguyên dương <span class="arithmatex">$r \ge n$</span> nguyên tố cùng nhau với <span class="arithmatex">$n$</span>, tức là <span class="arithmatex">$\gcd(n, r) = 1$</span>.
+Trong thực tế, chúng ta luôn chọn <span class="arithmatex">$r$</span> là <span class="arithmatex">$2^m$</span> với <span class="arithmatex">$m$</span> là số nguyên dương, vì khi đó phép nhân, phép chia và phép toán mô-đun <span class="arithmatex">$r$</span> có thể được thực hiện hiệu quả bằng các phép dịch bit và các phép toán bit khác.
+Trong hầu hết mọi ứng dụng, <span class="arithmatex">$n$</span> sẽ là một số lẻ, vì việc phân tích một số chẵn thành thừa số là không khó.
+Do đó, mọi lũy thừa của <span class="arithmatex">$2$</span> đều nguyên tố cùng nhau với <span class="arithmatex">$n$</span>.</p>
+<p>Số đại diện <span class="arithmatex">$\bar{x}$</span> của một số <span class="arithmatex">$x$</span> trong không gian Montgomery được định nghĩa là:</p>
 <div class="arithmatex">$$\bar{x} := x \cdot r \bmod n$$</div>
-<p>Notice, the transformation is actually such a multiplication that we want to optimize.
-So this is still an expensive operation.
-However you only need to transform a number once into the space.
-As soon as you are in the Montgomery space, you can perform as many operations as you want efficiently.
-And at the end you transform the final result back.
-So as long as you are doing lots of operations modulo <span class="arithmatex">$n$</span>, this will be no problem.</p>
-<p>Inside the Montgomery space you can still perform most operations as usual.
-You can add two elements (<span class="arithmatex">$x \cdot r + y \cdot r \equiv (x + y) \cdot r \bmod n$</span>), subtract, check for equality, and even compute the greatest common divisor of a number with <span class="arithmatex">$n$</span> (since <span class="arithmatex">$\gcd(n, r) = 1$</span>).
-All with the usual algorithms.</p>
-<p>However this is not the case for multiplication.</p>
-<p>We expect the result to be:</p>
+<p>Lưu ý rằng bản thân phép biến đổi này chính là phép nhân mà chúng ta muốn tối ưu hóa.
+Vì vậy, đây vẫn là một phép toán tốn kém.
+Tuy nhiên, bạn chỉ cần chuyển đổi một số vào không gian này một lần duy nhất.
+Ngay sau khi bạn ở trong không gian Montgomery, bạn có thể thực hiện bao nhiêu phép toán tùy ý một cách hiệu quả.
+Và cuối cùng, bạn biến đổi kết quả cuối cùng trở lại không gian thường.
+Vì vậy, miễn là bạn thực hiện nhiều phép toán theo mô-đun <span class="arithmatex">$n$</span>, việc chuyển đổi này sẽ không phải là vấn đề lớn.</p>
+<p>Trong không gian Montgomery, bạn vẫn có thể thực hiện hầu hết các phép toán như bình thường.
+Bạn có thể cộng hai phần tử (<span class="arithmatex">$x \cdot r + y \cdot r \equiv (x + y) \cdot r \bmod n$</span>), trừ, kiểm tra tính bằng nhau, và thậm chí tính ước chung lớn nhất của một số với <span class="arithmatex">$n$</span> (vì <span class="arithmatex">$\gcd(n, r) = 1$</span>).
+Tất cả đều sử dụng các thuật toán thông thường.</p>
+<p>Tuy nhiên, điều này không đúng đối với phép nhân.</p>
+<p>Chúng ta mong muốn kết quả sẽ là:</p>
 <div class="arithmatex">$$\bar{x} * \bar{y} = \overline{x \cdot y} = (x \cdot y) \cdot r \bmod n.$$</div>
-<p>But the normal multiplication will give us:</p>
+<p>Nhưng phép nhân thông thường sẽ cho chúng ta:</p>
 <div class="arithmatex">$$\bar{x} \cdot \bar{y} = (x \cdot y) \cdot r \cdot r \bmod n.$$</div>
-<p>Therefore the multiplication in the Montgomery space is defined as:</p>
+<p>Do đó, phép nhân trong không gian Montgomery được định nghĩa là:</p>
 <div class="arithmatex">$$\bar{x} * \bar{y} := \bar{x} \cdot \bar{y} \cdot r^{-1} \bmod n.$$</div>
-<h2 id="montgomery-reduction">Montgomery reduction<a class="headerlink" href="#montgomery-reduction" title="Permanent link">&para;</a></h2>
-<p>The multiplication of two numbers in the Montgomery space requires an efficient computation of <span class="arithmatex">$x \cdot r^{-1} \bmod n$</span>.
-This operation is called the <strong>Montgomery reduction</strong>, and is also known as the algorithm <strong>REDC</strong>.</p>
-<p>Because <span class="arithmatex">$\gcd(n, r) = 1$</span>, we know that there are two numbers <span class="arithmatex">$r^{-1}$</span> and <span class="arithmatex">$n^{\prime}$</span> with <span class="arithmatex">$0 &lt; r^{-1}, n^{\prime} &lt; n$</span> with</p>
+<h2 id="phep-khu-montgomery">Phép khử Montgomery<a class="headerlink" href="#phep-khu-montgomery" title="Permanent link">&para;</a></h2>
+<p>Phép nhân hai số trong không gian Montgomery yêu cầu tính toán hiệu quả <span class="arithmatex">$x \cdot r^{-1} \bmod n$</span>.
+Phép toán này được gọi là <strong>phép khử Montgomery (Montgomery reduction)</strong>, và còn được gọi là thuật toán <strong>REDC</strong>.</p>
+<p>Vì <span class="arithmatex">$\gcd(n, r) = 1$</span>, chúng ta biết rằng có hai số <span class="arithmatex">$r^{-1}$</span> và <span class="arithmatex">$n^{\prime}$</span> với <span class="arithmatex">$0 &lt; r^{-1}, n^{\prime} &lt; n$</span> thỏa mãn</p>
 <div class="arithmatex">$$r \cdot r^{-1} + n \cdot n^{\prime} = 1.$$</div>
-<p>Both <span class="arithmatex">$r^{-1}$</span> and <span class="arithmatex">$n^{\prime}$</span> can be computed using the <a href="extended-euclid-algorithm.html">Extended Euclidean algorithm</a>.</p>
-<p>Using this identity we can write <span class="arithmatex">$x \cdot r^{-1}$</span> as:</p>
+<p>Cả <span class="arithmatex">$r^{-1}$</span> và <span class="arithmatex">$n^{\prime}$</span> đều có thể được tính bằng <a href="extended-euclid-algorithm.html">Thuật toán Euclid mở rộng (Extended Euclidean algorithm)</a>.</p>
+<p>Sử dụng đồng nhất thức này, chúng ta có thể viết <span class="arithmatex">$x \cdot r^{-1}$</span> dưới dạng:</p>
 <div class="arithmatex">$$\begin{aligned}
 x \cdot r^{-1} &amp;= x \cdot r \cdot r^{-1} / r = x \cdot (-n \cdot n^{\prime} + 1) / r \\
 &amp;= (-x \cdot n \cdot n^{\prime} + x) / r \equiv (-x \cdot n \cdot n^{\prime} + l \cdot r \cdot n + x) / r \bmod n\\
 &amp;\equiv ((-x \cdot n^{\prime} + l \cdot r) \cdot n + x) / r \bmod n
 \end{aligned}$$</div>
-<p>The equivalences hold for any arbitrary integer <span class="arithmatex">$l$</span>.
-This means, that we can add or subtract an arbitrary multiple of <span class="arithmatex">$r$</span> to <span class="arithmatex">$x \cdot n^{\prime}$</span>, or in other words, we can compute <span class="arithmatex">$q := x \cdot n^{\prime}$</span> modulo <span class="arithmatex">$r$</span>.</p>
-<p>This gives us the following algorithm to compute <span class="arithmatex">$x \cdot r^{-1} \bmod n$</span>:</p>
+<p>Các phép đồng dư trên giữ nguyên với số nguyên <span class="arithmatex">$l$</span> bất kỳ.
+Điều này có nghĩa là chúng ta có thể cộng hoặc trừ một bội số bất kỳ của <span class="arithmatex">$r$</span> vào <span class="arithmatex">$x \cdot n^{\prime}$</span>, hay nói cách khác, chúng ta có thể tính <span class="arithmatex">$q := x \cdot n^{\prime}$</span> theo mô-đun <span class="arithmatex">$r$</span>.</p>
+<p>Điều này cho chúng ta thuật toán sau để tính <span class="arithmatex">$x \cdot r^{-1} \bmod n$</span>:</p>
 <div class="highlight"><pre><span></span><code>function reduce(x):
     q = (x mod r) * n&#39; mod r
     a = (x - q * n) / r
@@ -8092,16 +8076,16 @@ This means, that we can add or subtract an arbitrary multiple of <span class="ar
         a += n
     return a
 </code></pre></div>
-<p>Since <span class="arithmatex">$x &lt; n \cdot n &lt; r \cdot n$</span> (even if <span class="arithmatex">$x$</span> is the product of a multiplication) and <span class="arithmatex">$q \cdot n &lt; r \cdot n$</span> we know that <span class="arithmatex">$-n &lt; (x - q \cdot n) / r &lt; n$</span>.
-Therefore the final modulo operation is implemented using a single check and one addition.</p>
-<p>As we see, we can perform the Montgomery reduction without any heavy modulo operations.
-If we choose <span class="arithmatex">$r$</span> as a power of <span class="arithmatex">$2$</span>, the modulo operations and divisions in the algorithm can be computed using bitmasking and shifting.</p>
-<p>A second application of the Montgomery reduction is to transfer a number back from the Montgomery space into the normal space.</p>
-<h2 id="fast-inverse-trick">Fast inverse trick<a class="headerlink" href="#fast-inverse-trick" title="Permanent link">&para;</a></h2>
-<p>For computing the inverse <span class="arithmatex">$n^{\prime} := n^{-1} \bmod r$</span> efficiently, we can use the following trick (which is inspired from the Newton's method):</p>
+<p>Vì <span class="arithmatex">$x &lt; n \cdot n &lt; r \cdot n$</span> (ngay cả khi <span class="arithmatex">$x$</span> là tích của một phép nhân) và <span class="arithmatex">$q \cdot n &lt; r \cdot n$</span>, chúng ta biết rằng <span class="arithmatex">$-n &lt; (x - q \cdot n) / r &lt; n$</span>.
+Do đó, phép toán lấy mô-đun cuối cùng được cài đặt chỉ bằng một phép kiểm tra đơn giản và một phép cộng.</p>
+<p>Như có thể thấy, chúng ta có thể thực hiện phép khử Montgomery mà không cần bất kỳ phép toán lấy mô-đun phức tạp nào.
+Nếu chọn <span class="arithmatex">$r$</span> là một lũy thừa của <span class="arithmatex">$2$</span>, các phép toán lấy mô-đun và phép chia trong thuật toán có thể được tính toán bằng cách sử dụng phép toán thao tác bit và phép dịch bit.</p>
+<p>Ứng dụng thứ hai của phép khử Montgomery là chuyển một số từ không gian Montgomery ngược trở lại không gian thông thường.</p>
+<h2 id="meo-tinh-nghich-ao-nhanh">Mẹo tính nghịch đảo nhanh<a class="headerlink" href="#meo-tinh-nghich-ao-nhanh" title="Permanent link">&para;</a></h2>
+<p>Để tính nghịch đảo <span class="arithmatex">$n^{\prime} := n^{-1} \bmod r$</span> một cách hiệu quả, chúng ta có thể sử dụng mẹo sau (lấy cảm hứng từ phương pháp Newton):</p>
 <div class="arithmatex">$$a \cdot x \equiv 1 \bmod 2^k \Longrightarrow a \cdot x \cdot (2 - a \cdot x) \equiv 1 \bmod 2^{2k}$$</div>
-<p>This can easily be proven.
-If we have <span class="arithmatex">$a \cdot x = 1 + m \cdot 2^k$</span>, then we have:</p>
+<p>Điều này có thể được chứng minh dễ dàng.
+Nếu ta có <span class="arithmatex">$a \cdot x = 1 + m \cdot 2^k$</span>, thì ta có:</p>
 <div class="arithmatex">$$\begin{aligned}
 a \cdot x \cdot (2 - a \cdot x) &amp;= 2 \cdot a \cdot x - (a \cdot x)^2 \\
 &amp;= 2 \cdot (1 + m \cdot 2^k) - (1 + m \cdot 2^k)^2 \\
@@ -8109,13 +8093,13 @@ a \cdot x \cdot (2 - a \cdot x) &amp;= 2 \cdot a \cdot x - (a \cdot x)^2 \\
 &amp;= 1 - m^2 \cdot 2^{2k} \\
 &amp;\equiv 1 \bmod 2^{2k}.
 \end{aligned}$$</div>
-<p>This means we can start with <span class="arithmatex">$x = 1$</span> as the inverse of <span class="arithmatex">$a$</span> modulo <span class="arithmatex">$2^1$</span>, apply the trick a few times and in each iteration we double the number of correct bits of <span class="arithmatex">$x$</span>.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>Using the GCC compiler we can compute <span class="arithmatex">$x \cdot y \bmod n$</span> still efficiently, when all three numbers are 64 bit integer, since the compiler supports 128 bit integer with the types <code>__int128</code> and <code>__uint128</code>.</p>
+<p>Điều này có nghĩa là chúng ta có thể bắt đầu với <span class="arithmatex">$x = 1$</span> là nghịch đảo của <span class="arithmatex">$a$</span> theo mô-đun <span class="arithmatex">$2^1$</span>, áp dụng mẹo này một vài lần và sau mỗi lần lặp, chúng ta sẽ nhân đôi số lượng bit chính xác của <span class="arithmatex">$x$</span>.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Sử dụng trình biên dịch GCC, chúng ta vẫn có thể tính <span class="arithmatex">$x \cdot y \bmod n$</span> một cách hiệu quả khi cả ba số đều là số nguyên 64-bit, vì trình biên dịch hỗ trợ số nguyên 128-bit với các kiểu dữ liệu <code>__int128</code> và <code>__uint128</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">__int128</span><span class="p">)</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 </code></pre></div>
-<p>However there is no type for 256 bit integer.
-Therefore we will here show an implementation for a 128 bit multiplication.</p>
+<p>Tuy nhiên, không có kiểu dữ liệu nào cho số nguyên 256-bit.
+Do đó, dưới đây chúng tôi sẽ trình bày một cài đặt cho phép nhân 128-bit.</p>
 <div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">u64</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">uint64_t</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="n">u128</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">__uint128_t</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="n">i128</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">__int128_t</span><span class="p">;</span>
@@ -8170,16 +8154,16 @@ Therefore we will here show an implementation for a 128 bit multiplication.</p>
 <span class="w">    </span><span class="n">u128</span><span class="w"> </span><span class="n">mod</span><span class="p">,</span><span class="w"> </span><span class="n">inv</span><span class="p">;</span>
 <span class="p">};</span>
 </code></pre></div>
-<h2 id="fast-transformation">Fast transformation<a class="headerlink" href="#fast-transformation" title="Permanent link">&para;</a></h2>
-<p>The current method of transforming a number into Montgomery space is pretty slow.
-There are faster ways.</p>
-<p>You can notice the following relation:</p>
+<h2 id="bien-oi-nhanh">Biến đổi nhanh<a class="headerlink" href="#bien-oi-nhanh" title="Permanent link">&para;</a></h2>
+<p>Phương pháp hiện tại để chuyển đổi một số vào không gian Montgomery khá chậm.
+Có những cách nhanh hơn.</p>
+<p>Bạn có thể nhận thấy mối liên hệ sau:</p>
 <div class="arithmatex">$$\bar{x} := x \cdot r \bmod n = x \cdot r^2 / r = x * r^2$$</div>
-<p>Transforming a number into the space is just a multiplication inside the space of the number with <span class="arithmatex">$r^2$</span>.
-Therefore we can precompute <span class="arithmatex">$r^2 \bmod n$</span> and just perform a multiplication instead of shifting the number 128 times.</p>
-<p>In the following code we initialize <code>r2</code> with <code>-n % n</code>, which is equivalent to <span class="arithmatex">$r - n \equiv r \bmod n$</span>, shift it 4 times to get <span class="arithmatex">$r \cdot 2^4 \bmod n$</span>.
-This number can be interpreted as <span class="arithmatex">$2^4$</span> in Montgomery space.
-If we square it <span class="arithmatex">$5$</span> times, we get <span class="arithmatex">$(2^4)^{2^5} = (2^4)^{32} = 2^{128} = r$</span> in Montgomery space, which is exactly <span class="arithmatex">$r^2 \bmod n$</span>.</p>
+<p>Việc chuyển đổi một số vào không gian này thực chất chỉ là một phép nhân bên trong không gian của số đó với <span class="arithmatex">$r^2$</span>.
+Do đó, chúng ta có thể tính trước <span class="arithmatex">$r^2 \bmod n$</span> và chỉ cần thực hiện một phép nhân thay vì dịch số đó 128 lần.</p>
+<p>Trong đoạn mã dưới đây, chúng ta khởi tạo <code>r2</code> với <code>-n % n</code> (tương đương với <span class="arithmatex">$r - n \equiv r \bmod n$</span>), dịch nó 4 lần để được <span class="arithmatex">$r \cdot 2^4 \bmod n$</span>.
+Số này có thể được hiểu là <span class="arithmatex">$2^4$</span> trong không gian Montgomery.
+Nếu bình phương nó lên <span class="arithmatex">$5$</span> lần, chúng ta sẽ nhận được <span class="arithmatex">$(2^4)^{2^5} = (2^4)^{32} = 2^{128} = r$</span> trong không gian Montgomery, chính xác là <span class="arithmatex">$r^2 \bmod n$</span>.</p>
 <div class="highlight"><pre><span></span><code>struct Montgomery {
     Montgomery(u128 n) : mod(n), inv(1), r2(-n % n) {
         for (int i = 0; i &lt; 7; i++)
@@ -8204,7 +8188,7 @@ If we square it <span class="arithmatex">$5$</span> times, we get <span class="a
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (96.81%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (2.28%)</li><li><a href="#" title="Prakash Jha" data-bi-name="contributorprofile" target="_blank">Prakash Jha</a> (0.46%)</li><li><a href="#" title="kyomukyomupurin" data-bi-name="contributorprofile" target="_blank">kyomukyomupurin</a> (0.46%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

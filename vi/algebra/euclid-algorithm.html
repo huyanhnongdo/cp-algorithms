@@ -746,7 +746,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cai-at" class="md-nav__link">
+  <a href="#implementation" class="md-nav__link">
     <span class="md-ellipsis">
       
         Cài đặt
@@ -8057,7 +8057,7 @@ Thông thường nó được ký hiệu là <span class="arithmatex">$\gcd(a, b
 <p>Ban đầu, thuật toán Euclid được phát biểu như sau: trừ số nhỏ hơn từ số lớn hơn cho đến khi một trong hai số bằng không. Thực vậy, nếu <span class="arithmatex">$g$</span> chia hết cả <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span>, thì nó cũng chia hết <span class="arithmatex">$a-b$</span>. Ngược lại, nếu <span class="arithmatex">$g$</span> chia hết <span class="arithmatex">$a-b$</span> và <span class="arithmatex">$b$</span>, thì nó cũng chia hết <span class="arithmatex">$a = b + (a-b)$</span>, điều này có nghĩa là tập hợp các ước chung của <span class="arithmatex">$\{a, b\}$</span> và <span class="arithmatex">$\{b, a-b\}$</span> là trùng nhau.</p>
 <p>Lưu ý rằng số <span class="arithmatex">$a$</span> vẫn là số lớn hơn cho đến khi ta trừ <span class="arithmatex">$b$</span> khỏi nó ít nhất <span class="arithmatex">$\left\lfloor\frac{a}{b}\right\rfloor$</span> lần. Do đó, để tăng tốc thuật toán, ta thay thế phép trừ liên tiếp <span class="arithmatex">$a-b$</span> bằng phép chia lấy dư <span class="arithmatex">$a-\left\lfloor\frac{a}{b}\right\rfloor b = a \bmod b$</span>. Khi đó, thuật toán được phát biểu một cách cực kỳ đơn giản:</p>
 <div class="arithmatex">$$\gcd(a, b) = \begin{cases}a,&amp;\text{if }b = 0 \\ \gcd(b, a \bmod b),&amp;\text{otherwise.}\end{cases}$$</div>
-<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<h2 id="implementation">Cài đặt<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>

@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#finding-power-of-factorial-divisor" class="md-skip">
+        <a href="#tim-so-mu-cua-uoc-so-giai-thua" class="md-skip">
           Bỏ qua
         </a>
       
@@ -3538,22 +3538,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prime-k" class="md-nav__link">
+  <a href="#truong-hop-k-la-so-nguyen-to" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prime k
+        k là số nguyên tố
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Prime k">
+    <nav class="md-nav" aria-label="k là số nguyên tố">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -3566,10 +3566,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#composite-k" class="md-nav__link">
+  <a href="#truong-hop-k-la-hop-so" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Composite k
+        k là hợp số
       
     </span>
   </a>
@@ -7966,13 +7966,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/factorial-divisors.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/algebra/factorial-divisors.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/factorial-divisors.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/algebra/factorial-divisors.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7983,22 +7983,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8034,19 +8018,19 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="finding-power-of-factorial-divisor">Finding Power of Factorial Divisor<a class="headerlink" href="#finding-power-of-factorial-divisor" title="Permanent link">&para;</a></h1>
-<p>You are given two numbers <span class="arithmatex">$n$</span> and <span class="arithmatex">$k$</span>. Find the largest integer <span class="arithmatex">$x$</span> such that <span class="arithmatex">$k^x$</span> divides <span class="arithmatex">$n!$</span>.</p>
-<h2 id="prime-k">Prime <span class="arithmatex">$k$</span><a class="headerlink" href="#prime-k" title="Permanent link">&para;</a></h2>
-<p>Let's first consider the case of prime <span class="arithmatex">$k$</span>. The explicit expression for factorial</p>
+<h1 id="tim-so-mu-cua-uoc-so-giai-thua">Tìm số mũ của ước số giai thừa<a class="headerlink" href="#tim-so-mu-cua-uoc-so-giai-thua" title="Permanent link">&para;</a></h1>
+<p>Cho hai số nguyên <span class="arithmatex">$n$</span> và <span class="arithmatex">$k$</span>. Tìm số nguyên <span class="arithmatex">$x$</span> lớn nhất sao cho <span class="arithmatex">$k^x$</span> chia hết cho <span class="arithmatex">$n!$</span>.</p>
+<h2 id="truong-hop-k-la-so-nguyen-to">Trường hợp <span class="arithmatex">$k$</span> là số nguyên tố<a class="headerlink" href="#truong-hop-k-la-so-nguyen-to" title="Permanent link">&para;</a></h2>
+<p>Trước tiên, hãy xem xét trường hợp <span class="arithmatex">$k$</span> là số nguyên tố. Khai triển tường minh của giai thừa:</p>
 <div class="arithmatex">$$n! = 1 \cdot 2 \cdot 3 \ldots (n-1) \cdot n$$</div>
-<p>Note that every <span class="arithmatex">$k$</span>-th element of the product is divisible by <span class="arithmatex">$k$</span>, i.e. adds <span class="arithmatex">$+1$</span> to the answer; the number of such elements is <span class="arithmatex">$\Bigl\lfloor\dfrac{n}{k}\Bigr\rfloor$</span>.</p>
-<p>Next, every <span class="arithmatex">$k^2$</span>-th element is divisible by <span class="arithmatex">$k^2$</span>, i.e. adds another <span class="arithmatex">$+1$</span> to the answer (the first power of <span class="arithmatex">$k$</span> has already been counted in the previous paragraph). The number of such elements is <span class="arithmatex">$\Bigl\lfloor\dfrac{n}{k^2}\Bigr\rfloor$</span>.</p>
-<p>And so on, for every <span class="arithmatex">$i$</span> each <span class="arithmatex">$k^i$</span>-th element adds another <span class="arithmatex">$+1$</span> to the answer, and there are <span class="arithmatex">$\Bigl\lfloor\dfrac{n}{k^i}\Bigr\rfloor$</span> such elements.</p>
-<p>The final answer is</p>
+<p>Lưu ý rằng mỗi phần tử thứ <span class="arithmatex">$k$</span> của tích này chia hết cho <span class="arithmatex">$k$</span>, nghĩa là nó đóng góp <span class="arithmatex">$+1$</span> vào câu trả lời; số lượng các phần tử như vậy là <span class="arithmatex">$\Bigl\lfloor\dfrac{n}{k}\Bigr\rfloor$</span>.</p>
+<p>Tiếp theo, mỗi phần tử thứ <span class="arithmatex">$k^2$</span> chia hết cho <span class="arithmatex">$k^2$</span>, đóng góp thêm <span class="arithmatex">$+1$</span> vào câu trả lời (lũy thừa đầu tiên của <span class="arithmatex">$k$</span> đã được đếm ở bước trên). Số lượng các phần tử như vậy là <span class="arithmatex">$\Bigl\lfloor\dfrac{n}{k^2}\Bigr\rfloor$</span>.</p>
+<p>Tương tự, với mỗi <span class="arithmatex">$i$</span>, mỗi phần tử thứ <span class="arithmatex">$k^i$</span> đóng góp thêm <span class="arithmatex">$+1$</span> vào câu trả lời, và có <span class="arithmatex">$\Bigl\lfloor\dfrac{n}{k^i}\Bigr\rfloor$</span> phần tử như vậy.</p>
+<p>Kết quả cuối cùng là:</p>
 <div class="arithmatex">$$\Bigl\lfloor\dfrac{n}{k}\Bigr\rfloor + \Bigl\lfloor\dfrac{n}{k^2}\Bigr\rfloor + \ldots + \Bigl\lfloor\dfrac{n}{k^i}\Bigr\rfloor + \ldots$$</div>
-<p>This result is also known as <a href="https://en.wikipedia.org/wiki/Legendre%27s_formula">Legendre's formula</a>.
-The sum is of course finite, since only approximately the first <span class="arithmatex">$\log_k n$</span> elements are not zeros. Thus, the runtime of this algorithm is <span class="arithmatex">$O(\log_k n)$</span>.</p>
-<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h3>
+<p>Kết quả này còn được gọi là <a href="https://en.wikipedia.org/wiki/Legendre%27s_formula">Công thức Legendre (Legendre's formula)</a>.
+Tổng này là hữu hạn, vì chỉ có khoảng <span class="arithmatex">$\log_k n$</span> phần tử đầu tiên là khác không. Do đó, thời gian chạy của thuật toán này là <span class="arithmatex">$O(\log_k n)$</span>.</p>
+<h3 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">fact_pow</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8056,13 +8040,13 @@ The sum is of course finite, since only approximately the first <span class="ari
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="composite-k">Composite <span class="arithmatex">$k$</span><a class="headerlink" href="#composite-k" title="Permanent link">&para;</a></h2>
-<p>The same idea can't be applied directly. Instead we can factor <span class="arithmatex">$k$</span>, representing it as <span class="arithmatex">$k = k_1^{p_1} \cdot \ldots \cdot k_m^{p_m}$</span>. For each <span class="arithmatex">$k_i$</span>, we find the number of times it is present in <span class="arithmatex">$n!$</span> using the algorithm described above - let's call this value <span class="arithmatex">$a_i$</span>. The answer for composite <span class="arithmatex">$k$</span> will be</p>
+<h2 id="truong-hop-k-la-hop-so">Trường hợp <span class="arithmatex">$k$</span> là hợp số<a class="headerlink" href="#truong-hop-k-la-hop-so" title="Permanent link">&para;</a></h2>
+<p>Chúng ta không thể áp dụng trực tiếp ý tưởng trên. Thay vào đó, chúng ta có thể phân tích <span class="arithmatex">$k$</span> thành thừa số nguyên tố: <span class="arithmatex">$k = k_1^{p_1} \cdot \ldots \cdot k_m^{p_m}$</span>. Với mỗi <span class="arithmatex">$k_i$</span>, chúng ta tìm số lần nó xuất hiện trong <span class="arithmatex">$n!$</span> bằng thuật toán được mô tả ở trên — gọi giá trị này là <span class="arithmatex">$a_i$</span>. Kết quả cho trường hợp <span class="arithmatex">$k$</span> là hợp số sẽ là:</p>
 <div class="arithmatex">$$\min_ {i=1 \ldots m} \dfrac{a_i}{p_i}$$</div>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (63.27%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (28.57%)</li><li><a href="#" title="Kunal Singh" data-bi-name="contributorprofile" target="_blank">Kunal Singh</a> (4.08%)</li><li><a href="#" title="Jerry Chen" data-bi-name="contributorprofile" target="_blank">Jerry Chen</a> (2.04%)</li><li><a href="#" title="jxu" data-bi-name="contributorprofile" target="_blank">jxu</a> (2.04%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>
