@@ -66,28 +66,28 @@ Dịch 40 bài viết nền tảng — bao phủ các chủ đề cốt lõi tro
 
 | # | Task | Số bài | Thời gian | Trạng thái |
 |---|---|---|---|---|
-| 2.1 | **Data Structures** | 10 bài | 8h | ⏳ |
+| 2.1 | **Data Structures** | 10 bài | 8h | ✅ |
 | | ├── `stack_queue_modification.vi.md` | | | ✅ |
 | | ├── `sparse-table.vi.md` | | | ✅ |
 | | ├── `disjoint_set_union.vi.md` | | | ✅ |
 | | ├── `fenwick.vi.md` | | | ✅ |
 | | ├── `sqrt_decomposition.vi.md` | | | ✅ |
-| | ├── `segment_tree.vi.md` ⭐ | | | ⬜ |
-| | ├── `treap.vi.md` | | | ⬜ |
-| | ├── `sqrt-tree.vi.md` | | | ⬜ |
-| | ├── `randomized_heap.vi.md` | | | ⬜ |
-| | └── `deleting_in_log_n.vi.md` | | | ⬜ |
-| 2.2 | **Graph Traversal & Shortest Paths** | 10 bài | 6h | ⏳ |
+| | ├── `segment_tree.vi.md` ⭐ | | | ✅ |
+| | ├── `treap.vi.md` | | | ✅ |
+| | ├── `sqrt-tree.vi.md` | | | ✅ |
+| | ├── `randomized_heap.vi.md` | | | ✅ |
+| | └── `deleting_in_log_n.vi.md` | | | ✅ |
+| 2.2 | **Graph Traversal & Shortest Paths** | 10 bài | 6h | ✅ |
 | | ├── `breadth-first-search.vi.md` | | | ✅ |
-| | ├── `depth-first-search.vi.md` | | | ⬜ |
-| | ├── `search-for-connected-components.vi.md` | | | ⬜ |
-| | ├── `dijkstra.vi.md` | | | ⬜ |
-| | ├── `dijkstra_sparse.vi.md` | | | ⬜ |
-| | ├── `bellman_ford.vi.md` | | | ⬜ |
-| | ├── `01_bfs.vi.md` | | | ⬜ |
-| | ├── `all-pair-shortest-path-floyd-warshall.vi.md` | | | ⬜ |
-| | ├── `mst_kruskal.vi.md` | | | ⬜ |
-| | └── `topological-sort.vi.md` | | | ⬜ |
+| | ├── `depth-first-search.vi.md` | | | ✅ |
+| | ├── `search-for-connected-components.vi.md` | | | ✅ |
+| | ├── `dijkstra.vi.md` | | | ✅ |
+| | ├── `dijkstra_sparse.vi.md` | | | ✅ |
+| | ├── `bellman_ford.vi.md` | | | ✅ |
+| | ├── `01_bfs.vi.md` | | | ✅ |
+| | ├── `all-pair-shortest-path-floyd-warshall.vi.md` | | | ✅ |
+| | ├── `mst_kruskal.vi.md` | | | ✅ |
+| | └── `topological-sort.vi.md` | | | ✅ |
 | 2.3 | **Algebra Fundamentals** | 7 bài | 4h | ✅ |
 | | ├── `binary-exp.vi.md` | | | ✅ |
 | | ├── `euclid-algorithm.vi.md` | | | ✅ |
@@ -96,29 +96,29 @@ Dịch 40 bài viết nền tảng — bao phủ các chủ đề cốt lõi tro
 | | ├── `phi-function.vi.md` | | | ✅ |
 | | ├── `module-inverse.vi.md` | | | ✅ |
 | | └── `fibonacci-numbers.vi.md` | | | ✅ |
-| 2.4 | **Dynamic Programming** | 4 bài | 3h | ⏳ |
+| 2.4 | **Dynamic Programming** | 4 bài | 3h | ✅ |
 | | ├── `intro-to-dp.vi.md` | | | ✅ |
-| | ├── `knapsack.vi.md` | | | ⬜ |
-| | ├── `longest_increasing_subsequence.vi.md` | | | ⬜ |
-| | └── `divide-and-conquer-dp.vi.md` | | | ⬜ |
-| 2.5 | **String Fundamentals** | 4 bài | 3h | ⏳ |
+| | ├── `knapsack.vi.md` | | | ✅ |
+| | ├── `longest_increasing_subsequence.vi.md` | | | ✅ |
+| | └── `divide-and-conquer-dp.vi.md` | | | ✅ |
+| 2.5 | **String Fundamentals** | 4 bài | 3h | ✅ |
 | | ├── `string-hashing.vi.md` | | | ✅ |
 | | ├── `prefix-function.vi.md` | | | ✅ |
-| | ├── `z-function.vi.md` | | | ⬜ |
-| | └── `suffix-array.vi.md` | | | ⬜ |
+| | ├── `z-function.vi.md` | | | ✅ |
+| | └── `suffix-array.vi.md` | | | ✅ |
 | 2.6 | **Numerical Methods** | 3 bài | 2h | ✅ |
 | | ├── `binary_search.vi.md` | | | ✅ |
 | | ├── `ternary_search.vi.md` | | | ✅ |
 | | └── `roots_newton.vi.md` | | | ✅ |
-| 2.7 | **Combinatorics** | 2 bài | 1h | ⬜ |
-| | ├── `binomial-coefficients.vi.md` | | | ⬜ |
-| | └── `catalan-numbers.vi.md` | | | ⬜ |
-| 2.8 | **Review & QA** | 40 bài | 5h | ⬜ |
+| 2.7 | **Combinatorics** | 2 bài | 1h | ✅ |
+| | ├── `binomial-coefficients.vi.md` | | | ✅ |
+| | └── `catalan-numbers.vi.md` | | | ✅ |
+| 2.8 | **Review & QA** | 40 bài | 5h | ✅ |
 
 ### Deliverables Phase 2
-- [ ] 40 file `.vi.md` được tạo và pass QA
-- [ ] Navigation VI cập nhật cho 40 bài
-- [ ] Glossary được cập nhật nếu có thuật ngữ mới
+- [x] 40 file `.vi.md` được tạo và pass QA
+- [x] Navigation VI cập nhật cho 40 bài
+- [x] Glossary được cập nhật nếu có thuật ngữ mới
 
 ### Criteria hoàn thành
 - Tất cả 40 bài build thành công
