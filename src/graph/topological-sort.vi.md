@@ -14,15 +14,19 @@ Nói cách khác, chúng ta muốn tìm một hoán vị của các đỉnh (**t
 
 Dưới đây là một đồ thị minh họa cùng với thứ tự topo của nó:
 
-<div style="text-align: center;">
-  <img src="topological_1.png" alt="đồ thị có hướng ví dụ">
-  <img src="topological_2.png" alt="một thứ tự topo">
+<div style="text-align: center;" markdown="1">
+
+![đồ thị có hướng ví dụ](topological_1.png)
+![một thứ tự topo](topological_2.png)
+
 </div>
 
 Thứ tự topo có thể **không duy nhất** (ví dụ, nếu tồn tại ba đỉnh $a$, $b$, $c$ sao cho có đường đi từ $a$ đến $b$ và từ $a$ đến $c$ nhưng không có đường đi giữa $b$ và $c$).
 Đồ thị ví dụ trên cũng có nhiều thứ tự topo, một thứ tự topo thứ hai như sau:
-<div style="text-align: center;">
-  <img src="topological_3.png" alt="thứ tự topo thứ hai">
+<div style="text-align: center;" markdown="1">
+
+![thứ tự topo thứ hai](topological_3.png)
+
 </div>
 
 Thứ tự topo có thể **không tồn tại**.

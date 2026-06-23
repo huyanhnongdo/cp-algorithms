@@ -128,8 +128,10 @@ where $|$ is the bitwise OR operator.
 The following image shows a possible interpretation of the Fenwick tree as tree.
 The nodes of the tree show the ranges they cover.
 
-<div style="text-align: center;">
-  <img src="binary_indexed_tree.png" alt="Binary Indexed Tree">
+<div style="text-align: center;" markdown="1">
+
+![Binary Indexed Tree](binary_indexed_tree.png)
+
 </div>
 
 ## Implementation

@@ -19,8 +19,10 @@ And we continue this procedure until we have processed all numbers in the row.
 
 In the following image you can see a visualization of the algorithm for computing all prime numbers in the range $[1; 16]$. It can be seen, that quite often we mark numbers as composite multiple times.
 
-<div style="text-align: center;">
-  <img src="sieve_eratosthenes.png" alt="Sieve of Eratosthenes">
+<div style="text-align: center;" markdown="1">
+
+![Sieve of Eratosthenes](sieve_eratosthenes.png)
+
 </div>
 
 The idea behind is this:

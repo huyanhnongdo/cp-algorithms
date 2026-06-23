@@ -128,8 +128,10 @@ trong đó $|$ là toán tử OR bitwise.
 Hình ảnh sau đây cho thấy một cách diễn giải có thể của cây Fenwick dưới dạng cây.
 Các đỉnh của cây hiển thị các đoạn mà chúng bao phủ.
 
-<div style="text-align: center;">
-  <img src="binary_indexed_tree.png" alt="Cây chỉ mục nhị phân">
+<div style="text-align: center;" markdown="1">
+
+![Cây chỉ mục nhị phân](binary_indexed_tree.png)
+
 </div>
 
 ## Cài đặt

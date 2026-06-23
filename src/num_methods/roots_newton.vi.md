@@ -19,8 +19,10 @@ Chúng ta muốn giải phương trình này. Chính xác hơn là muốn tìm m
 
 Các tham số đầu vào của thuật toán không chỉ bao gồm hàm số $f(x)$ mà còn cả giá trị xấp xỉ ban đầu - một giá trị $x_0$ nào đó mà thuật toán sẽ bắt đầu.
 
-<p align="center">
-	<img src="./roots_newton.png" alt="plot_f(x)">
+<p align="center" markdown="1">
+
+![plot_f(x)](roots_newton.png)
+
 </p>
 
 Giả sử chúng ta đã tính được $x_i$, ta tính $x_{i+1}$ như sau. Vẽ tiếp tuyến với đồ thị hàm số $f(x)$ tại điểm $x = x_i$, và tìm giao điểm của tiếp tuyến này với trục hoành (trục $x$). Giá trị $x_{i+1}$ được gán bằng hoành độ của giao điểm tìm được, và chúng ta lặp lại toàn bộ quá trình từ đầu.

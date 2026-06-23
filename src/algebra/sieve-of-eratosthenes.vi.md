@@ -20,8 +20,10 @@ Và chúng ta tiếp tục quy trình này cho đến khi xử lý hết tất c
 
 Trong hình ảnh dưới đây, bạn có thể thấy minh họa của thuật toán để tính tất cả các số nguyên tố trong phạm vi $[1; 16]$. Có thể thấy rằng khá thường xuyên chúng ta đánh dấu một số là hợp số nhiều lần.
 
-<div style="text-align: center;">
-  <img src="sieve_eratosthenes.png" alt="Sàng Eratosthenes">
+<div style="text-align: center;" markdown="1">
+
+![Sàng Eratosthenes](sieve_eratosthenes.png)
+
 </div>
 
 Ý tưởng cốt lõi là:

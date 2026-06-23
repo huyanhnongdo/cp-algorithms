@@ -243,8 +243,10 @@ Nếu $p$ nhỏ hơn $\sqrt{n}$, chu trình sẽ bắt đầu sau khoảng $O(\s
 Dưới đây là hình ảnh minh họa cho dãy $\{x_i \bmod p\}$ với $n = 2206637$, $p = 317$, $x_0 = 2$ và $f(x) = x^2 + 1$.
 Từ hình dáng của dãy, bạn có thể thấy rõ tại sao thuật toán này được gọi là thuật toán $\rho$ (rho) của Pollard.
 
-<div style="text-align: center;">
-  <img src="pollard_rho.png" alt="Pollard's rho visualization">
+<div style="text-align: center;" markdown="1">
+
+![Pollard's rho visualization](pollard_rho.png)
+
 </div>
 
 Câu hỏi đặt ra là làm thế nào chúng ta tận dụng tính chất của dãy $\{x_i \bmod p\}$ khi không biết trước giá trị $p$?
