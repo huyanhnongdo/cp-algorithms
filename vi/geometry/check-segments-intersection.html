@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#check-if-two-segments-intersect" class="md-skip">
+        <a href="#kiem-tra-xem-hai-oan-thang-co-giao-nhau-khong" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4425,10 +4425,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -4436,10 +4436,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -7949,13 +7949,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/check-segments-intersection.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/check-segments-intersection.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/check-segments-intersection.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/check-segments-intersection.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7966,18 +7966,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8009,18 +7997,18 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="check-if-two-segments-intersect">Check if two segments intersect<a class="headerlink" href="#check-if-two-segments-intersect" title="Permanent link">&para;</a></h1>
-<p>You are given two segments <span class="arithmatex">$(a, b)$</span> and <span class="arithmatex">$(c, d)$</span>.
-You have to check if they intersect.
-Of course, you may find their intersection and check if it isn't empty, but this can't be done in integers for segments with integer coordinates.
-The approach described here can work in integers.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>Firstly, consider the case when the segments are part of the same line.
-In this case it is sufficient to check if their projections on <span class="arithmatex">$Ox$</span> and <span class="arithmatex">$Oy$</span> intersect.
-In the other case <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span> must not lie on the same side of line <span class="arithmatex">$(c, d)$</span>, and <span class="arithmatex">$c$</span> and <span class="arithmatex">$d$</span> must not lie on the same side of line <span class="arithmatex">$(a, b)$</span>.
-It can be checked with a couple of cross products.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>The given algorithm is implemented for integer points. Of course, it can be easily modified to work with doubles.</p>
+<h1 id="kiem-tra-xem-hai-oan-thang-co-giao-nhau-khong">Kiểm tra xem hai đoạn thẳng có giao nhau không<a class="headerlink" href="#kiem-tra-xem-hai-oan-thang-co-giao-nhau-khong" title="Permanent link">&para;</a></h1>
+<p>Bạn được cho hai đoạn thẳng <span class="arithmatex">$(a, b)$</span> và <span class="arithmatex">$(c, d)$</span>.
+Bạn phải kiểm tra xem chúng có giao nhau không.
+Tất nhiên, bạn có thể tìm giao điểm của chúng và kiểm tra xem nó có rỗng không, nhưng điều này không thể thực hiện được với số nguyên cho các đoạn thẳng có tọa độ nguyên.
+Phương pháp được mô tả ở đây có thể hoạt động với số nguyên.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Đầu tiên, hãy xem xét trường hợp khi các đoạn thẳng nằm trên cùng một đường thẳng.
+Trong trường hợp này, chỉ cần kiểm tra xem hình chiếu của chúng trên <span class="arithmatex">$Ox$</span> và <span class="arithmatex">$Oy$</span> có giao nhau không.
+Trong trường hợp khác, <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span> không được nằm cùng một phía của đường thẳng <span class="arithmatex">$(c, d)$</span>, và <span class="arithmatex">$c$</span> và <span class="arithmatex">$d$</span> không được nằm cùng một phía của đường thẳng <span class="arithmatex">$(a, b)$</span>.
+Điều này có thể được kiểm tra bằng một vài phép tính tích có hướng (Cross Product).</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Thuật toán (Algorithm) đã cho được cài đặt (Implementation) cho các điểm có tọa độ nguyên. Tất nhiên, nó có thể dễ dàng được sửa đổi để làm việc với số thực (double).</p>
 <div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">pt</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
 <span class="w">    </span><span class="n">pt</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
@@ -8050,7 +8038,7 @@ It can be checked with a couple of cross products.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Yury Semenov" data-bi-name="contributorprofile" target="_blank">Yury Semenov</a> (86.27%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (11.76%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (1.96%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>

@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#intersection-point-of-lines" class="md-skip">
+        <a href="#giao-iem-cua-cac-uong-thang" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4397,10 +4397,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#solution" class="md-nav__link">
+  <a href="#loi-giai" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Solution
+        Lời giải
       
     </span>
   </a>
@@ -4408,10 +4408,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -7949,13 +7949,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/lines-intersection.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/lines-intersection.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/lines-intersection.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/lines-intersection.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7966,22 +7966,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8013,26 +7997,26 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="intersection-point-of-lines">Intersection Point of Lines<a class="headerlink" href="#intersection-point-of-lines" title="Permanent link">&para;</a></h1>
-<p>You are given two lines, described via the equations <span class="arithmatex">$a_1 x + b_1 y + c_1 = 0$</span> and  <span class="arithmatex">$a_2 x + b_2 y + c_2 = 0$</span>.
-We have to find the intersection point of the lines, or determine that the lines are parallel.</p>
-<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
-<p>If two lines are not parallel, they intersect.
-To find their intersection point, we need to solve the following system of linear equations:</p>
+<h1 id="giao-iem-cua-cac-uong-thang">Giao điểm của các đường thẳng<a class="headerlink" href="#giao-iem-cua-cac-uong-thang" title="Permanent link">&para;</a></h1>
+<p>Bạn được cho hai đường thẳng, được mô tả bằng các phương trình <span class="arithmatex">$a_1 x + b_1 y + c_1 = 0$</span> và <span class="arithmatex">$a_2 x + b_2 y + c_2 = 0$</span>.
+Chúng ta cần tìm giao điểm (Intersection Point) của các đường thẳng, hoặc xác định rằng các đường thẳng đó song song.</p>
+<h2 id="loi-giai">Lời giải<a class="headerlink" href="#loi-giai" title="Permanent link">&para;</a></h2>
+<p>Nếu hai đường thẳng không song song, chúng sẽ cắt nhau.
+Để tìm giao điểm của chúng, chúng ta cần giải hệ phương trình tuyến tính (System of Linear Equations) sau:</p>
 <div class="arithmatex">$$\begin{cases} a_1 x + b_1 y + c_1 = 0 \\
 a_2 x + b_2 y + c_2 = 0
 \end{cases}$$</div>
-<p>Using Cramer's rule, we can immediately write down the solution for the system, which will give us the required intersection point of the lines:</p>
+<p>Sử dụng quy tắc Cramer, chúng ta có thể viết ngay nghiệm của hệ phương trình, để tìm giao điểm cần thiết của các đường thẳng:</p>
 <div class="arithmatex">$$x = - \frac{\begin{vmatrix}c_1 &amp; b_1 \cr c_2 &amp; b_2\end{vmatrix}}{\begin{vmatrix}a_1 &amp; b_1 \cr a_2 &amp; b_2\end{vmatrix} } = - \frac{c_1 b_2 - c_2 b_1}{a_1 b_2 - a_2 b_1},$$</div>
 <div class="arithmatex">$$y = - \frac{\begin{vmatrix}a_1 &amp; c_1 \cr a_2 &amp; c_2\end{vmatrix}}{\begin{vmatrix}a_1 &amp; b_1 \cr a_2 &amp; b_2\end{vmatrix}} = - \frac{a_1 c_2 - a_2 c_1}{a_1 b_2 - a_2 b_1}.$$</div>
-<p>If the denominator equals <span class="arithmatex">$0$</span>, i.e.</p>
+<p>Nếu mẫu số bằng <span class="arithmatex">$0$</span>, tức là</p>
 <div class="arithmatex">$$\begin{vmatrix}a_1 &amp; b_1 \cr a_2 &amp; b_2\end{vmatrix} = a_1 b_2 - a_2 b_1 = 0 $$</div>
-<p>then either the system has no solutions (the lines are parallel and distinct) or there are infinitely many solutions (the lines overlap).
-If we need to distinguish these two cases, we have to check if coefficients <span class="arithmatex">$c$</span> are proportional with the same ratio as the coefficients <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>.
-To do that we only have calculate the following determinants, and if they both equal <span class="arithmatex">$0$</span>, the lines overlap:</p>
+<p>thì hoặc hệ phương trình vô nghiệm (các đường thẳng song song và phân biệt) hoặc có vô số nghiệm (các đường thẳng trùng nhau).
+Nếu chúng ta cần phân biệt hai trường hợp này, chúng ta phải kiểm tra xem các hệ số (coefficients) <span class="arithmatex">$c$</span> có tỷ lệ với cùng một tỷ số (ratio) như các hệ số <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span> hay không.
+Để làm điều đó, chúng ta chỉ cần tính các định thức (determinants) sau, và nếu cả hai đều bằng <span class="arithmatex">$0$</span>, thì các đường thẳng trùng nhau:</p>
 <div class="arithmatex">$$\begin{vmatrix}a_1 &amp; c_1 \cr a_2 &amp; c_2\end{vmatrix}, \begin{vmatrix}b_1 &amp; c_1 \cr b_2 &amp; c_2\end{vmatrix} $$</div>
-<p>Notice, a different approach for computing the intersection point is explained in the article <a href="basic-geometry.html">Basic Geometry</a>.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<p>Lưu ý, một phương pháp tiếp cận khác để tính giao điểm được giải thích trong bài viết <a href="basic-geometry.html">Hình học cơ bản</a>.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">pt</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
 <span class="p">};</span>
@@ -8069,7 +8053,7 @@ To do that we only have calculate the following determinants, and if they both e
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Silap Aliyev" data-bi-name="contributorprofile" target="_blank">Silap Aliyev</a> (64.86%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (25.68%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (8.11%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (1.35%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>

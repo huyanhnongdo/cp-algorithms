@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#convex-hull-trick-and-li-chao-tree" class="md-skip">
+        <a href="#ky-thuat-bao-loi-convex-hull-trick-va-cay-li-chao" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4899,10 +4899,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#convex-hull-trick" class="md-nav__link">
+  <a href="#ky-thuat-bao-loi-convex-hull-trick" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Convex hull trick
+        Kỹ thuật bao lồi (Convex Hull Trick)
       
     </span>
   </a>
@@ -4910,10 +4910,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#li-chao-tree" class="md-nav__link">
+  <a href="#cay-li-chao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Li Chao tree
+        Cây Li Chao
       
     </span>
   </a>
@@ -4921,10 +4921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#problems" class="md-nav__link">
+  <a href="#cac-bai-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problems
+        Các bài tập
       
     </span>
   </a>
@@ -7960,13 +7960,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/convex_hull_trick.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/convex_hull_trick.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/convex_hull_trick.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/convex_hull_trick.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7977,38 +7977,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8028,29 +7996,29 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="convex-hull-trick-and-li-chao-tree">Convex hull trick and Li Chao tree<a class="headerlink" href="#convex-hull-trick-and-li-chao-tree" title="Permanent link">&para;</a></h1>
-<p>Consider the following problem. There are <span class="arithmatex">$n$</span> cities. You want to travel from city <span class="arithmatex">$1$</span> to city <span class="arithmatex">$n$</span> by car. To do this you have to buy some gasoline. It is known that a liter of gasoline costs <span class="arithmatex">$cost_k$</span> in the <span class="arithmatex">$k^{th}$</span> city. Initially your fuel tank is empty and you spend one liter of gasoline per kilometer. Cities are located on the same line in ascending order with <span class="arithmatex">$k^{th}$</span> city having coordinate <span class="arithmatex">$x_k$</span>. Also you have to pay <span class="arithmatex">$toll_k$</span> to enter <span class="arithmatex">$k^{th}$</span> city. Your task is to make the trip with minimum possible cost. It's obvious that the solution can be calculated via dynamic programming:</p>
+<h1 id="ky-thuat-bao-loi-convex-hull-trick-va-cay-li-chao">Kỹ thuật bao lồi (Convex Hull Trick) và cây Li Chao<a class="headerlink" href="#ky-thuat-bao-loi-convex-hull-trick-va-cay-li-chao" title="Permanent link">&para;</a></h1>
+<p>Xét bài toán sau đây: Có <span class="arithmatex">$n$</span> thành phố. Bạn muốn đi từ thành phố <span class="arithmatex">$1$</span> đến thành phố <span class="arithmatex">$n$</span> bằng xe hơi. Để làm điều này, bạn cần mua xăng. Biết rằng một lít xăng có giá <span class="arithmatex">$cost_k$</span> tại thành phố <span class="arithmatex">$k^{th}$</span>. Ban đầu bình xăng của bạn rỗng và bạn tiêu thụ một lít xăng cho mỗi kilômét. Các thành phố nằm trên cùng một đường thẳng theo thứ tự tăng dần với thành phố <span class="arithmatex">$k^{th}$</span> có tọa độ <span class="arithmatex">$x_k$</span>. Ngoài ra, bạn phải trả <span class="arithmatex">$toll_k$</span> phí để vào thành phố <span class="arithmatex">$k^{th}$</span>. Nhiệm vụ của bạn là thực hiện chuyến đi với chi phí tối thiểu có thể. Rõ ràng là lời giải có thể được tính thông qua quy hoạch động (Dynamic Programming - DP):</p>
 <div class="arithmatex">$$dp_i = toll_i+\min\limits_{j&lt;i}(cost_j \cdot (x_i - x_j)+dp_j)$$</div>
-<p>Naive approach will give you <span class="arithmatex">$O(n^2)$</span> complexity which can be improved to <span class="arithmatex">$O(n \log n)$</span> or <span class="arithmatex">$O(n \log [C \varepsilon^{-1}])$</span> where <span class="arithmatex">$C$</span> is largest possible <span class="arithmatex">$|x_i|$</span> and <span class="arithmatex">$\varepsilon$</span> is precision with which <span class="arithmatex">$x_i$</span> is considered (<span class="arithmatex">$\varepsilon = 1$</span> for integers which is usually the case). To do this one should note that the problem can be reduced to adding linear functions <span class="arithmatex">$k \cdot x + b$</span> to the set and finding minimum value of the functions in some particular point <span class="arithmatex">$x$</span>. There are two main approaches one can use here.</p>
-<h2 id="convex-hull-trick">Convex hull trick<a class="headerlink" href="#convex-hull-trick" title="Permanent link">&para;</a></h2>
-<p>The idea of this approach is to maintain a lower convex hull of linear functions.
-Actually it would be a bit more convenient to consider them not as linear functions, but as points <span class="arithmatex">$(k;b)$</span> on the plane such that we will have to find the point which has the least dot product with a given point <span class="arithmatex">$(x;1)$</span>, that is, for this point <span class="arithmatex">$kx+b$</span> is minimized which is the same as initial problem.
-Such minimum will necessarily be on lower convex envelope of these points as can be seen below:</p>
-<p><div style="text-align: center;">
-  <img src="convex_hull_trick.png" alt="lower convex hull">
-</div></p>
-<p>One has to keep points on the convex hull and normal vectors of the hull's edges.
-When you have a <span class="arithmatex">$(x;1)$</span> query you'll have to find the normal vector closest to it in terms of angles between them, then the optimum linear function will correspond to one of its endpoints.
-To see that, one should note that points having a constant dot product with <span class="arithmatex">$(x;1)$</span> lie on a line which is orthogonal to <span class="arithmatex">$(x;1)$</span>, so the optimum linear function will be the one in which tangent to convex hull which is collinear with normal to <span class="arithmatex">$(x;1)$</span> touches the hull.
-This point is the one such that normals of edges lying to the left and to the right of it are headed in different sides of <span class="arithmatex">$(x;1)$</span>.</p>
-<p>This approach is useful when queries of adding linear functions are monotone in terms of <span class="arithmatex">$k$</span> or if we work offline, i.e. we may firstly add all linear functions and answer queries afterwards.
-So we cannot solve the cities/gasoline problems using this way.
-That would require handling online queries.
-When it comes to deal with online queries however, things will go tough and one will have to use some kind of set data structure to implement a proper convex hull.
-Online approach will however not be considered in this article due to its hardness and because second approach (which is Li Chao tree) allows to solve the problem way more simply.
-Worth mentioning that one can still use this approach online without complications by square-root-decomposition.
-That is, rebuild convex hull from scratch each <span class="arithmatex">$\sqrt n$</span> new lines. </p>
-<p>To implement this approach one should begin with some geometric utility functions, here we suggest to use the C++ complex number type.</p>
+<p>Cách tiếp cận ngây thơ (Brute Force) sẽ cho bạn độ phức tạp <span class="arithmatex">$O(n^2)$</span>, có thể cải thiện thành <span class="arithmatex">$O(n \log n)$</span> hoặc <span class="arithmatex">$O(n \log [C \varepsilon^{-1}])$</span> trong đó <span class="arithmatex">$C$</span> là giá trị <span class="arithmatex">$|x_i|$</span> lớn nhất có thể và <span class="arithmatex">$\varepsilon$</span> là độ chính xác mà <span class="arithmatex">$x_i$</span> được xem xét (<span class="arithmatex">$\varepsilon = 1$</span> cho số nguyên, trường hợp thường gặp). Để làm được điều này, ta cần lưu ý rằng bài toán có thể được quy về việc thêm các hàm tuyến tính <span class="arithmatex">$k \cdot x + b$</span> vào một tập hợp và tìm giá trị nhỏ nhất của các hàm tại một điểm <span class="arithmatex">$x$</span> cụ thể. Có hai phương pháp chính mà ta có thể sử dụng ở đây.</p>
+<h2 id="ky-thuat-bao-loi-convex-hull-trick">Kỹ thuật bao lồi (Convex Hull Trick)<a class="headerlink" href="#ky-thuat-bao-loi-convex-hull-trick" title="Permanent link">&para;</a></h2>
+<p>Ý tưởng của phương pháp này là duy trì bao lồi dưới (lower convex hull) của các hàm tuyến tính.
+Thực tế, sẽ thuận tiện hơn khi coi chúng không phải là các hàm tuyến tính, mà là các điểm <span class="arithmatex">$(k;b)$</span> trên mặt phẳng sao cho ta phải tìm điểm có tích vô hướng nhỏ nhất với một điểm cho trước <span class="arithmatex">$(x;1)$</span>, nghĩa là đối với điểm này, <span class="arithmatex">$kx+b$</span> được tối thiểu hóa, cũng chính là bài toán ban đầu.
+Giá trị tối thiểu này nhất thiết sẽ nằm trên bao lồi dưới của các điểm này, như có thể thấy bên dưới:</p>
+<div style="text-align: center;" markdown="1">
+<p><img alt="bao lồi dưới" src="../../geometry/convex_hull_trick.png" /></p>
+</div>
+<p>Ta cần giữ các điểm trên bao lồi và các vector pháp tuyến của các cạnh bao.
+Khi có một truy vấn <span class="arithmatex">$(x;1)$</span>, bạn cần tìm vector pháp tuyến gần nó nhất xét về góc giữa chúng, khi đó hàm tuyến tính tối ưu sẽ tương ứng với một trong các điểm đầu mút của cạnh đó.
+Để thấy điều này, cần lưu ý rằng các điểm có tích vô hướng không đổi với <span class="arithmatex">$(x;1)$</span> nằm trên một đường thẳng vuông góc với <span class="arithmatex">$(x;1)$</span>, vì vậy hàm tuyến tính tối ưu sẽ là hàm có tiếp tuyến với bao lồi cùng phương với pháp tuyến của <span class="arithmatex">$(x;1)$</span> chạm vào bao.
+Điểm này là điểm mà các pháp tuyến của các cạnh nằm bên trái và bên phải nó hướng về hai phía khác nhau của <span class="arithmatex">$(x;1)$</span>.</p>
+<p>Phương pháp này hữu ích khi các truy vấn thêm hàm tuyến tính có tính đơn điệu về <span class="arithmatex">$k$</span> hoặc nếu chúng ta xử lý ngoại tuyến (offline), tức là ta có thể thêm tất cả các hàm tuyến tính trước rồi mới trả lời các truy vấn sau.
+Vì vậy, chúng ta không thể giải bài toán thành phố/xăng dầu bằng cách này.
+Điều đó đòi hỏi phải xử lý các truy vấn trực tuyến (online).
+Tuy nhiên, khi xử lý các truy vấn trực tuyến, mọi thứ trở nên khó khăn và người ta sẽ phải sử dụng một cấu trúc dữ liệu kiểu tập hợp nào đó để cài đặt bao lồi đúng cách.
+Dẫu vậy, phương pháp trực tuyến sẽ không được đề cập trong bài viết này do độ khó của nó và vì phương pháp thứ hai (cây Li Chao) cho phép giải bài toán đơn giản hơn nhiều.
+Cũng cần lưu ý rằng ta vẫn có thể sử dụng phương pháp này cho bài toán trực tuyến mà không gặp khó khăn bằng kỹ thuật chia căn (Sqrt Decomposition).
+Nghĩa là, xây dựng lại bao lồi từ đầu sau mỗi <span class="arithmatex">$\sqrt n$</span> đường thẳng mới.</p>
+<p>Để cài đặt phương pháp này, ta nên bắt đầu với một số hàm hình học tiện ích; ở đây chúng tôi đề xuất sử dụng kiểu số phức (complex) của C++.</p>
 <div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ftype</span><span class="p">;</span>
 <span class="k">typedef</span><span class="w"> </span><span class="n">complex</span><span class="o">&lt;</span><span class="n">ftype</span><span class="o">&gt;</span><span class="w"> </span><span class="n">point</span><span class="p">;</span>
 <span class="cp">#define x real</span>
@@ -8064,11 +8032,11 @@ That is, rebuild convex hull from scratch each <span class="arithmatex">$\sqrt n
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">conj</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">).</span><span class="n">y</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Here we will assume that when linear functions are added, their <span class="arithmatex">$k$</span> only increases and we want to find minimum values.
-We will keep points in vector <span class="arithmatex">$hull$</span> and normal vectors in vector <span class="arithmatex">$vecs$</span>.
-When we add a new point, we have to look at the angle formed between last edge in convex hull and vector from last point in convex hull to new point.
-This angle has to be directed counter-clockwise, that is the dot product of the last normal vector in the hull (directed inside hull) and the vector from the last point to the new one has to be non-negative.
-As long as this isn't true, we should erase the last point in the convex hull alongside with the corresponding edge.</p>
+<p>Ở đây chúng ta giả định rằng khi các hàm tuyến tính được thêm vào, <span class="arithmatex">$k$</span> của chúng chỉ tăng dần và ta muốn tìm giá trị nhỏ nhất.
+Ta sẽ lưu các điểm vào vector <span class="arithmatex">$hull$</span> và các vector pháp tuyến vào vector <span class="arithmatex">$vecs$</span>.
+Khi thêm một điểm mới, ta phải nhìn vào góc tạo bởi cạnh cuối cùng trong bao lồi và vector từ điểm cuối cùng trong bao lồi đến điểm mới.
+Góc này phải được định hướng ngược chiều kim đồng hồ, nghĩa là tích vô hướng của vector pháp tuyến cuối cùng trong bao (hướng vào trong bao) và vector từ điểm cuối đến điểm mới phải không âm.
+Chừng nào điều này không đúng, ta nên xóa điểm cuối cùng trong bao lồi cùng với cạnh tương ứng.</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="n">point</span><span class="o">&gt;</span><span class="w"> </span><span class="n">hull</span><span class="p">,</span><span class="w"> </span><span class="n">vecs</span><span class="p">;</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">add_line</span><span class="p">(</span><span class="n">ftype</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">ftype</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8083,7 +8051,7 @@ As long as this isn't true, we should erase the last point in the convex hull al
 <span class="w">    </span><span class="n">hull</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">nw</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-Now to get the minimum value in some point we will find the first normal vector in the convex hull that is directed counter-clockwise from <span class="arithmatex">$(x;1)$</span>. The left endpoint of such edge will be the answer. To check if vector <span class="arithmatex">$a$</span> is not directed counter-clockwise of vector <span class="arithmatex">$b$</span>, we should check if their cross product <span class="arithmatex">$[a,b]$</span> is positive.
+Bây giờ, để lấy giá trị nhỏ nhất tại một điểm, ta sẽ tìm vector pháp tuyến đầu tiên trong bao lồi hướng ngược chiều kim đồng hồ so với <span class="arithmatex">$(x;1)$</span>. Điểm đầu mút bên trái của cạnh đó sẽ là câu trả lời. Để kiểm tra xem vector <span class="arithmatex">$a$</span> có không hướng ngược chiều kim đồng hồ so với vector <span class="arithmatex">$b$</span> hay không, ta nên kiểm tra xem tích chéo (cross product) <span class="arithmatex">$[a,b]$</span> của chúng có dương hay không.
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="n">ftype</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">point</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">};</span>
 <span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lower_bound</span><span class="p">(</span><span class="n">vecs</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">vecs</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">query</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">point</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8092,15 +8060,14 @@ Now to get the minimum value in some point we will find the first normal vector 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">dot</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="w"> </span><span class="n">hull</span><span class="p">[</span><span class="n">it</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">vecs</span><span class="p">.</span><span class="n">begin</span><span class="p">()]);</span>
 <span class="p">}</span>
 </code></pre></div></p>
-<h2 id="li-chao-tree">Li Chao tree<a class="headerlink" href="#li-chao-tree" title="Permanent link">&para;</a></h2>
-<p>Assume you're given a set of functions such that each two can intersect at most once. Let's keep in each vertex of a segment tree some function in such way, that if we go from root to the leaf it will be guaranteed that one of the functions we met on the path will be the one giving the minimum value in that leaf. Let's see how to construct it.</p>
-<p>Assume we're in some vertex corresponding to half-segment <span class="arithmatex">$[l,r)$</span> and the function <span class="arithmatex">$f_{old}$</span> is kept there and we add the function <span class="arithmatex">$f_{new}$</span>. Then the intersection point will be either in <span class="arithmatex">$[l;m)$</span> or in <span class="arithmatex">$[m;r)$</span> where <span class="arithmatex">$m=\left\lfloor\tfrac{l+r}{2}\right\rfloor$</span>. We can efficiently find that out by comparing the values of the functions in points <span class="arithmatex">$l$</span> and <span class="arithmatex">$m$</span>. If the dominating function changes, then it is in <span class="arithmatex">$[l;m)$</span> otherwise it is in <span class="arithmatex">$[m;r)$</span>. Now for the half of the segment with no intersection we will pick the lower function and write it in the current vertex. You can see that it will always be the one which is lower in point <span class="arithmatex">$m$</span>. After that we recursively go to the other half of the segment with the function which was the upper one. As you can see this will keep correctness on the first half of segment and in the other one correctness will be maintained during the recursive call. Thus we can add functions and check the minimum value in the point in <span class="arithmatex">$O(\log [C\varepsilon^{-1}])$</span>.</p>
-<p>Here is the illustration of what is going on in the vertex when we add new function:</p>
+<h2 id="cay-li-chao">Cây Li Chao<a class="headerlink" href="#cay-li-chao" title="Permanent link">&para;</a></h2>
+<p>Giả sử bạn có một tập hợp các hàm sao cho mỗi hai hàm có thể cắt nhau tối đa một lần. Hãy giữ trong mỗi đỉnh của một cây phân đoạn (Segment Tree) một hàm theo cách mà nếu ta đi từ gốc đến lá, đảm bảo rằng một trong các hàm ta gặp trên đường đi sẽ là hàm cho giá trị nhỏ nhất tại lá đó. Hãy xem cách xây dựng nó.</p>
+<p>Giả sử ta đang ở một đỉnh tương ứng với đoạn <span class="arithmatex">$[l,r)$</span> và hàm <span class="arithmatex">$f_{old}$</span> đang được giữ ở đó, và ta thêm hàm <span class="arithmatex">$f_{new}$</span>. Khi đó điểm giao nhau sẽ nằm ở <span class="arithmatex">$[l;m)$</span> hoặc <span class="arithmatex">$[m;r)$</span> với <span class="arithmatex">$m=\left\lfloor\tfrac{l+r}{2}\right\rfloor$</span>. Ta có thể tìm ra điều đó một cách hiệu quả bằng cách so sánh giá trị của các hàm tại điểm <span class="arithmatex">$l$</span> và <span class="arithmatex">$m$</span>. Nếu hàm chiếm ưu thế thay đổi, thì giao điểm nằm ở <span class="arithmatex">$[l;m)$</span>, ngược lại nó nằm ở <span class="arithmatex">$[m;r)$</span>. Bây giờ, đối với nửa đoạn không có giao điểm, ta sẽ chọn hàm có giá trị nhỏ hơn và ghi nó vào đỉnh hiện tại. Bạn có thể thấy rằng đó luôn là hàm nhỏ hơn tại điểm <span class="arithmatex">$m$</span>. Sau đó, ta đệ quy sang nửa còn lại của đoạn với hàm là hàm lớn hơn. Như bạn thấy, điều này sẽ giữ tính đúng đắn trên nửa đầu của đoạn và ở nửa còn lại, tính đúng đắn sẽ được duy trì trong quá trình gọi đệ quy. Do đó, ta có thể thêm các hàm và kiểm tra giá trị nhỏ nhất tại điểm trong <span class="arithmatex">$O(\log [C\varepsilon^{-1}])$</span>.</p>
+<p>Dưới đây là minh họa những gì xảy ra trong đỉnh khi ta thêm hàm mới:</p>
 <div style="text-align: center;">
-  <img src="li_chao_vertex.png" alt="Li Chao Tree vertex">
+<p><img alt="Đỉnh cây Li Chao" src="../../geometry/li_chao_vertex.png" /></p>
 </div>
-
-<p>Let's go to implementation now. Once again we will use complex numbers to keep linear functions.</p>
+<p>Hãy chuyển sang phần cài đặt. Một lần nữa, ta sẽ sử dụng số phức để lưu các hàm tuyến tính.</p>
 <p><div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">ftype</span><span class="p">;</span>
 <span class="k">typedef</span><span class="w"> </span><span class="n">complex</span><span class="o">&lt;</span><span class="n">ftype</span><span class="o">&gt;</span><span class="w"> </span><span class="n">point</span><span class="p">;</span>
 <span class="cp">#define x real</span>
@@ -8114,8 +8081,8 @@ Now to get the minimum value in some point we will find the first normal vector 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">});</span>
 <span class="p">}</span>
 </code></pre></div>
-We will keep functions in the array <span class="arithmatex">$line$</span> and use binary indexing of the segment tree. If you want to use it on large numbers or doubles, you should use a dynamic segment tree. 
-The segment tree should be initialized with default values, e.g. with lines <span class="arithmatex">$0x + \infty$</span>.</p>
+Ta sẽ lưu các hàm trong mảng <span class="arithmatex">$line$</span> và sử dụng chỉ số nhị phân của cây phân đoạn. Nếu bạn muốn sử dụng nó với số lớn hoặc kiểu <code>double</code>, bạn nên sử dụng cây phân đoạn động (dynamic segment tree). 
+Cây phân đoạn nên được khởi tạo với các giá trị mặc định, ví dụ như các đường thẳng <span class="arithmatex">$0x + \infty$</span>.</p>
 <p><div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">maxn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2e5</span><span class="p">;</span>
 
 <span class="n">point</span><span class="w"> </span><span class="n">line</span><span class="p">[</span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">maxn</span><span class="p">];</span>
@@ -8136,7 +8103,7 @@ The segment tree should be initialized with default values, e.g. with lines <spa
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-Now to get the minimum in some point <span class="arithmatex">$x$</span> we simply choose the minimum value along the path to the point.
+Bây giờ để lấy giá trị nhỏ nhất tại một điểm <span class="arithmatex">$x$</span>, ta chỉ cần chọn giá trị nhỏ nhất dọc theo đường đi đến điểm đó.
 <div class="highlight"><pre><span></span><code><span class="n">ftype</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">maxn</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8148,9 +8115,9 @@ Now to get the minimum in some point <span class="arithmatex">$x$</span> we simp
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></p>
-<h2 id="problems">Problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h2>
+<h2 id="cac-bai-tap">Các bài tập<a class="headerlink" href="#cac-bai-tap" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://codeforces.com/gym/103536/problem/B">Codebreaker - TROUBLES</a> (simple application of Convex Hull Trick after a couple of observations)</li>
+<li><a href="https://codeforces.com/gym/103536/problem/B">Codebreaker - TROUBLES</a> (ứng dụng đơn giản của Kỹ thuật bao lồi sau một vài quan sát)</li>
 <li><a href="https://csacademy.com/contest/archive/task/squared-ends">CS Academy - Squared Ends</a></li>
 <li><a href="http://codeforces.com/contest/932/problem/F">Codeforces - Escape Through Leaf</a></li>
 <li><a href="https://www.codechef.com/NOV17/problems/POLY">CodeChef - Polynomials</a></li>
@@ -8162,7 +8129,7 @@ Now to get the minimum in some point <span class="arithmatex">$x$</span> we simp
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Alexander Kulkov" data-bi-name="contributorprofile" target="_blank">Alexander Kulkov</a> (67.9%)</li><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (12.35%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (8.02%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (4.32%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (3.7%)</li><li><a href="#" title="Max" data-bi-name="contributorprofile" target="_blank">Max</a> (1.85%)</li><li><a href="#" title="Sabit Zahin" data-bi-name="contributorprofile" target="_blank">Sabit Zahin</a> (1.23%)</li><li><a href="#" title="Tanmay Sinha" data-bi-name="contributorprofile" target="_blank">Tanmay Sinha</a> (0.62%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>

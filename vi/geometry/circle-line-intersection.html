@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#circle-line-intersection" class="md-skip">
+        <a href="#giao-iem-giua-uong-tron-va-uong-thang" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4481,10 +4481,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#solution" class="md-nav__link">
+  <a href="#loi-giai" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Solution
+        Lời giải
       
     </span>
   </a>
@@ -4492,10 +4492,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -4503,10 +4503,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-toan-thuc-hanh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài toán thực hành
       
     </span>
   </a>
@@ -7960,13 +7960,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/circle-line-intersection.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/circle-line-intersection.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/circle-line-intersection.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/circle-line-intersection.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7977,38 +7977,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8040,32 +8008,32 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="circle-line-intersection">Circle-Line Intersection<a class="headerlink" href="#circle-line-intersection" title="Permanent link">&para;</a></h1>
-<p>Given the coordinates of the center of a circle and its radius, and the equation of a line, you're required to find the points of intersection.</p>
-<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
-<p>Instead of solving the system of two equations, we will approach the problem geometrically. This way we get a more accurate solution from the point of view of numerical stability.</p>
-<p>We assume without loss of generality that the circle is centered at the origin. If it's not, we translate it there and correct the <span class="arithmatex">$C$</span> constant in the line equation. So we have a circle centered at <span class="arithmatex">$(0,0)$</span> of radius <span class="arithmatex">$r$</span> and a line with equation <span class="arithmatex">$Ax+By+C=0$</span>.</p>
-<p>Let's start by find the point on the line which is closest to the origin <span class="arithmatex">$(x_0, y_0)$</span>. First, it has to be at a distance</p>
+<h1 id="giao-iem-giua-uong-tron-va-uong-thang">Giao điểm giữa đường tròn và đường thẳng<a class="headerlink" href="#giao-iem-giua-uong-tron-va-uong-thang" title="Permanent link">&para;</a></h1>
+<p>Cho tọa độ tâm của một đường tròn (Circle) và bán kính của nó, cùng với phương trình của một đường thẳng (Line), bạn được yêu cầu tìm các điểm giao (Intersection).</p>
+<h2 id="loi-giai">Lời giải<a class="headerlink" href="#loi-giai" title="Permanent link">&para;</a></h2>
+<p>Thay vì giải hệ hai phương trình, chúng ta sẽ tiếp cận bài toán theo hình học. Bằng cách này, chúng ta sẽ có được một lời giải chính xác hơn về mặt độ ổn định số học (numerical stability).</p>
+<p>Chúng ta giả sử không mất tính tổng quát rằng đường tròn có tâm tại gốc tọa độ. Nếu không, chúng ta tịnh tiến nó đến đó và điều chỉnh hằng số <span class="arithmatex">$C$</span> trong phương trình đường thẳng. Như vậy, chúng ta có một đường tròn tâm tại <span class="arithmatex">$(0,0)$</span> với bán kính <span class="arithmatex">$r$</span> và một đường thẳng có phương trình <span class="arithmatex">$Ax+By+C=0$</span>.</p>
+<p>Hãy bắt đầu bằng cách tìm điểm trên đường thẳng gần gốc tọa độ nhất <span class="arithmatex">$(x_0, y_0)$</span>. Thứ nhất, nó phải nằm ở một khoảng cách</p>
 <div class="arithmatex">$$ d_0 = \frac{|C|}{\sqrt{A^2+B^2}} $$</div>
-<p>Second, since the vector <span class="arithmatex">$(A, B)$</span> is perpendicular to the line, the coordinates of the point must be proportional to the coordinates of this vector. Since we know the distance of the point to the origin, we just need to scale the vector <span class="arithmatex">$(A, B)$</span> to this length, and we'll get:</p>
+<p>Thứ hai, vì vector <span class="arithmatex">$(A, B)$</span> vuông góc với đường thẳng, tọa độ của điểm phải tỉ lệ với tọa độ của vector này. Vì chúng ta biết khoảng cách từ điểm đến gốc tọa độ, chúng ta chỉ cần tỉ lệ (scale) vector <span class="arithmatex">$(A, B)$</span> đến độ dài này, và chúng ta sẽ có:</p>
 <div class="arithmatex">$$\begin{align}
 x_0 &amp;= - \frac{AC}{A^2 + B^2} \\
 y_0 &amp;= - \frac{BC}{A^2 + B^2} 
 \end{align}$$</div>
-<p>The minus signs are not obvious, but they can be easily verified by substituting <span class="arithmatex">$x_0$</span> and <span class="arithmatex">$y_0$</span> in the equation of the line.</p>
-<p>At this stage we can determine the number of intersection points, and even find the solution when there is one or zero points. Indeed, if the distance from <span class="arithmatex">$(x_0, y_0)$</span> to the origin <span class="arithmatex">$d_0$</span> is greater than the radius <span class="arithmatex">$r$</span>, the answer is <strong>zero points</strong>. If <span class="arithmatex">$d_0=r$</span>, the answer is <strong>one point</strong> <span class="arithmatex">$(x_0, y_0)$</span>. If <span class="arithmatex">$d_0&lt;r$</span>, there are two points of intersection, and now we have to find their coordinates.</p>
-<p>So, we know that the point <span class="arithmatex">$(x_0, y_0)$</span> is inside the circle. The two points of intersection, <span class="arithmatex">$(a_x, a_y)$</span> and <span class="arithmatex">$(b_x, b_y)$</span>, must belong to the line <span class="arithmatex">$Ax+By+C=0$</span> and must be at the same distance <span class="arithmatex">$d$</span> from <span class="arithmatex">$(x_0, y_0)$</span>, and this distance is easy to find:</p>
+<p>Các dấu trừ không hiển nhiên, nhưng chúng có thể dễ dàng kiểm chứng bằng cách thay thế <span class="arithmatex">$x_0$</span> và <span class="arithmatex">$y_0$</span> vào phương trình của đường thẳng.</p>
+<p>Ở giai đoạn này, chúng ta có thể xác định số điểm giao, và thậm chí tìm lời giải khi có một hoặc không có điểm nào. Thật vậy, nếu khoảng cách từ <span class="arithmatex">$(x_0, y_0)$</span> đến gốc tọa độ <span class="arithmatex">$d_0$</span> lớn hơn bán kính <span class="arithmatex">$r$</span>, kết quả là <strong>không điểm</strong>. Nếu <span class="arithmatex">$d_0=r$</span>, kết quả là <strong>một điểm</strong> <span class="arithmatex">$(x_0, y_0)$</span>. Nếu <span class="arithmatex">$d_0&lt;r$</span>, có hai điểm giao, và bây giờ chúng ta phải tìm tọa độ của chúng.</p>
+<p>Vậy, chúng ta biết rằng điểm <span class="arithmatex">$(x_0, y_0)$</span> nằm bên trong đường tròn. Hai điểm giao, <span class="arithmatex">$(a_x, a_y)$</span> và <span class="arithmatex">$(b_x, b_y)$</span>, phải thuộc đường thẳng <span class="arithmatex">$Ax+By+C=0$</span> và phải cách <span class="arithmatex">$(x_0, y_0)$</span> cùng một khoảng cách <span class="arithmatex">$d$</span>, và khoảng cách này rất dễ tìm:</p>
 <div class="arithmatex">$$ d = \sqrt{r^2 - \frac{C^2}{A^2 + B^2}} $$</div>
-<p>Note that the vector <span class="arithmatex">$(-B, A)$</span> is collinear to the line, and thus we can find the points in question by adding and subtracting  vector <span class="arithmatex">$(-B,A)$</span>, scaled to the length <span class="arithmatex">$d$</span>, to the point <span class="arithmatex">$(x_0, y_0)$</span>. </p>
-<p>Finally, the equations of the two points of intersection are:</p>
+<p>Lưu ý rằng vector <span class="arithmatex">$(-B, A)$</span> cùng phương với đường thẳng, và do đó chúng ta có thể tìm các điểm được đề cập bằng cách cộng và trừ vector <span class="arithmatex">$(-B,A)$</span>, đã được tỉ lệ đến độ dài <span class="arithmatex">$d$</span>, vào điểm <span class="arithmatex">$(x_0, y_0)$</span>.</p>
+<p>Cuối cùng, tọa độ của hai điểm giao là:</p>
 <div class="arithmatex">$$\begin{align}
 m &amp;= \sqrt{\frac{d^2}{A^2 + B^2}} \\
 a_x &amp;= x_0 + B \cdot m, a_y = y_0 - A \cdot m \\
 b_x &amp;= x_0 - B \cdot m, b_y = y_0 + A \cdot m
 \end{align}$$</div>
-<p>Had we solved the original system of equations using algebraic methods, we would likely get an answer in a different form with a larger error. The geometric method described here is more graphic and more accurate.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>As indicated at the outset, we assume that the circle is centered at the origin, and therefore the input to the program is the radius <span class="arithmatex">$r$</span> of the circle and the parameters <span class="arithmatex">$A$</span>, <span class="arithmatex">$B$</span> and <span class="arithmatex">$C$</span> of the equation of the line.</p>
+<p>Nếu chúng ta giải hệ phương trình ban đầu bằng các phương pháp đại số, chúng ta có khả năng nhận được kết quả dưới dạng khác với sai số lớn hơn. Phương pháp hình học được mô tả ở đây trực quan và chính xác hơn.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Như đã chỉ ra lúc đầu, chúng ta giả sử rằng đường tròn có tâm tại gốc tọa độ, và do đó đầu vào (Input) của chương trình là bán kính <code>r</code> <span class="arithmatex">$r$</span> của đường tròn và các tham số <code>a</code>, <code>b</code> <span class="arithmatex">$A$</span>, <span class="arithmatex">$B$</span> và <code>c</code> <span class="arithmatex">$C$</span> của phương trình đường thẳng.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="c1">// given as input</span>
 <span class="kt">double</span><span class="w"> </span><span class="n">x0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="p">),</span><span class="w"> </span><span class="n">y0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="p">);</span>
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">c</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">r</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="o">+</span><span class="n">EPS</span><span class="p">)</span>
@@ -8086,14 +8054,14 @@ b_x &amp;= x_0 - B \cdot m, b_y = y_0 + A \cdot m
 <span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ax</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ay</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bx</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-toan-thuc-hanh">Bài toán thực hành<a class="headerlink" href="#bai-toan-thuc-hanh" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.codechef.com/problems/ANDOOR">CODECHEF: ANDOOR</a></li>
 </ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Edward Lemur" data-bi-name="contributorprofile" target="_blank">Edward Lemur</a> (40.79%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (28.95%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (11.84%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (7.89%)</li><li><a href="#" title="shark_s" data-bi-name="contributorprofile" target="_blank">shark_s</a> (3.95%)</li><li><a href="#" title="Bhuvnesh Jain" data-bi-name="contributorprofile" target="_blank">Bhuvnesh Jain</a> (2.63%)</li><li><a href="#" title="Rodion Gorkovenko" data-bi-name="contributorprofile" target="_blank">Rodion Gorkovenko</a> (2.63%)</li><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (1.32%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>

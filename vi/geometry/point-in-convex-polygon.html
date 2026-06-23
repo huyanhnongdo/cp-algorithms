@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#check-if-point-belongs-to-the-convex-polygon-in-olog-n" class="md-skip">
+        <a href="#kiem-tra-iem-nam-trong-a-giac-loi-trong-olog-n" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4704,10 +4704,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -4715,10 +4715,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -4726,10 +4726,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#problems" class="md-nav__link">
+  <a href="#cac-bai-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problems
+        Các bài tập
       
     </span>
   </a>
@@ -7960,13 +7960,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/point-in-convex-polygon.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/point-in-convex-polygon.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/point-in-convex-polygon.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/point-in-convex-polygon.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7977,30 +7977,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8032,40 +8008,40 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="check-if-point-belongs-to-the-convex-polygon-in-olog-n">Check if point belongs to the convex polygon in <span class="arithmatex">$O(\log N)$</span><a class="headerlink" href="#check-if-point-belongs-to-the-convex-polygon-in-olog-n" title="Permanent link">&para;</a></h1>
-<p>Consider the following problem: you are given a convex polygon with integer vertices and a lot of queries.
-Each query is a point, for which we should determine whether it lies inside or on the boundary of the polygon or not.
-Suppose the polygon is ordered counter-clockwise. We will answer each query in <span class="arithmatex">$O(\log n)$</span> online.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>Let's pick the point with the smallest x-coordinate. If there are several of them, we pick the one with the smallest y-coordinate. Let's denote it as <span class="arithmatex">$p_0$</span>.
-Now all other points <span class="arithmatex">$p_1,\dots,p_n$</span> of the polygon are ordered by their polar angle from the chosen point (because the polygon is ordered counter-clockwise).</p>
-<p>If the point belongs to the polygon, it belongs to some triangle <span class="arithmatex">$p_0, p_i, p_{i + 1}$</span> (maybe more than one if it lies on the boundary of triangles).
-Consider the triangle <span class="arithmatex">$p_0, p_i, p_{i + 1}$</span> such that <span class="arithmatex">$p$</span> belongs to this triangle and <span class="arithmatex">$i$</span> is maximum among all such triangles.</p>
-<p>There is one special case. <span class="arithmatex">$p$</span> lies on the segment <span class="arithmatex">$(p_0, p_n)$</span>. This case we will check separately.
-Otherwise all points <span class="arithmatex">$p_j$</span> with <span class="arithmatex">$j \le i$</span> are counter-clockwise from <span class="arithmatex">$p$</span> with respect to <span class="arithmatex">$p_0$</span>, and all other points are not counter-clockwise from <span class="arithmatex">$p$</span>.
-This means that we can apply binary search for the point <span class="arithmatex">$p_i$</span>, such that <span class="arithmatex">$p_i$</span> is not counter-clockwise from <span class="arithmatex">$p$</span> with respect to <span class="arithmatex">$p_0$</span>, and <span class="arithmatex">$i$</span> is maximum among all such points.
-And afterwards we check if the points is actually in the determined triangle.</p>
-<p>The sign of <span class="arithmatex">$(a - c) \times (b - c)$</span> will tell us, if the point <span class="arithmatex">$a$</span> is clockwise or counter-clockwise from the point <span class="arithmatex">$b$</span> with respect to the point <span class="arithmatex">$c$</span>.
-If <span class="arithmatex">$(a - c) \times (b - c) &gt; 0$</span>, then the point <span class="arithmatex">$a$</span> is to the right of the vector going from <span class="arithmatex">$c$</span> to <span class="arithmatex">$b$</span>, which means clockwise from <span class="arithmatex">$b$</span> with respect to <span class="arithmatex">$c$</span>.
-And if <span class="arithmatex">$(a - c) \times (b - c) &lt; 0$</span>, then the point is to the left, or counter clockwise.
-And it is exactly on the line between the points <span class="arithmatex">$b$</span> and <span class="arithmatex">$c$</span>.</p>
-<p>Back to the algorithm:
-Consider a query point <span class="arithmatex">$p$</span>.
-Firstly, we must check if the point lies between <span class="arithmatex">$p_1$</span> and <span class="arithmatex">$p_n$</span>.
-Otherwise we already know that it cannot be part of the polygon.
-This can be done by checking if the cross product <span class="arithmatex">$(p_1 - p_0)\times(p - p_0)$</span> is zero or has the same sign with <span class="arithmatex">$(p_1 - p_0)\times(p_n - p_0)$</span>, and <span class="arithmatex">$(p_n - p_0)\times(p - p_0)$</span> is zero or has the same sign with <span class="arithmatex">$(p_n - p_0)\times(p_1 - p_0)$</span>.
-Then we handle the special case in which <span class="arithmatex">$p$</span> is part of the line <span class="arithmatex">$(p_0, p_1)$</span>.
-And then we can binary search the last point from <span class="arithmatex">$p_1,\dots p_n$</span> which is not counter-clockwise from <span class="arithmatex">$p$</span> with respect to <span class="arithmatex">$p_0$</span>.
-For a single point <span class="arithmatex">$p_i$</span> this condition can be checked by checking that <span class="arithmatex">$(p_i - p_0)\times(p - p_0) \le 0$</span>. After we found such a point <span class="arithmatex">$p_i$</span>, we must test if <span class="arithmatex">$p$</span> lies inside the triangle <span class="arithmatex">$p_0, p_i, p_{i + 1}$</span>.
-To test if it belongs to the triangle, we may simply check that <span class="arithmatex">$|(p_i - p_0)\times(p_{i + 1} - p_0)| = |(p_0 - p)\times(p_i - p)| + |(p_i - p)\times(p_{i + 1} - p)| + |(p_{i + 1} - p)\times(p_0 - p)|$</span>.
-This checks if the area of the triangle <span class="arithmatex">$p_0, p_i, p_{i+1}$</span> has to exact same size as the sum of the sizes of the triangle <span class="arithmatex">$p_0, p_i, p$</span>, the triangle <span class="arithmatex">$p_0, p, p_{i+1}$</span> and the triangle <span class="arithmatex">$p_i, p_{i+1}, p$</span>.
-If <span class="arithmatex">$p$</span> is outside, then the sum of those three triangle will be bigger than the size of the triangle.
-If it is inside, then it will be equal.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>The function <code>prepare</code> will make sure that the lexicographical smallest point (smallest x value, and in ties smallest y value) will be <span class="arithmatex">$p_0$</span>, and computes the vectors <span class="arithmatex">$p_i - p_0$</span>.
-Afterwards the function <code>pointInConvexPolygon</code> computes the result of a query.
-We additionally remember the point <span class="arithmatex">$p_0$</span> and translate all queried points with it in order compute the correct distance, as vectors don't have an initial point.
-By translating the query points we can assume that all vectors start at the origin <span class="arithmatex">$(0, 0)$</span>, and simplify the computations for distances and lengths.</p>
+<h1 id="kiem-tra-iem-nam-trong-a-giac-loi-trong-olog-n">Kiểm tra điểm nằm trong đa giác lồi trong <span class="arithmatex">$O(\log N)$</span><a class="headerlink" href="#kiem-tra-iem-nam-trong-a-giac-loi-trong-olog-n" title="Permanent link">&para;</a></h1>
+<p>Xét bài toán sau: bạn được cho một đa giác lồi (convex polygon) với các đỉnh là tọa độ nguyên và rất nhiều truy vấn (query).
+Mỗi truy vấn là một điểm, chúng ta cần xác định xem điểm đó có nằm bên trong hoặc nằm trên biên của đa giác hay không.
+Giả sử đa giác được sắp xếp theo chiều ngược chiều kim đồng hồ. Chúng ta sẽ trả lời mỗi truy vấn trong <span class="arithmatex">$O(\log n)$</span> theo hình thức trực tuyến (online).</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Hãy chọn điểm có tọa độ x nhỏ nhất. Nếu có nhiều điểm như vậy, chúng ta chọn điểm có tọa độ y nhỏ nhất. Hãy gọi điểm này là <span class="arithmatex">$p_0$</span>.
+Bây giờ, tất cả các điểm còn lại <span class="arithmatex">$p_1,\dots,p_n$</span> của đa giác được sắp xếp theo góc cực (polar angle) từ điểm đã chọn (vì đa giác được sắp xếp ngược chiều kim đồng hồ).</p>
+<p>Nếu điểm cần xét nằm trong đa giác, nó sẽ nằm trong một tam giác <span class="arithmatex">$p_0, p_i, p_{i + 1}$</span> nào đó (có thể nhiều hơn một nếu nó nằm trên cạnh của các tam giác).
+Xét tam giác <span class="arithmatex">$p_0, p_i, p_{i + 1}$</span> sao cho <span class="arithmatex">$p$</span> thuộc tam giác này và <span class="arithmatex">$i$</span> là giá trị lớn nhất trong tất cả các tam giác thỏa mãn điều kiện đó.</p>
+<p>Có một trường hợp đặc biệt: <span class="arithmatex">$p$</span> nằm trên đoạn thẳng <span class="arithmatex">$(p_0, p_n)$</span>. Trường hợp này chúng ta sẽ kiểm tra riêng.
+Nếu không, tất cả các điểm <span class="arithmatex">$p_j$</span> với <span class="arithmatex">$j \le i$</span> sẽ nằm theo chiều ngược chiều kim đồng hồ so với <span class="arithmatex">$p$</span> với gốc là <span class="arithmatex">$p_0$</span>, và tất cả các điểm còn lại thì không.
+Điều này có nghĩa là chúng ta có thể áp dụng tìm kiếm nhị phân (Binary Search) để tìm điểm <span class="arithmatex">$p_i$</span>, sao cho <span class="arithmatex">$p_i$</span> không nằm ngược chiều kim đồng hồ so với <span class="arithmatex">$p$</span> với gốc là <span class="arithmatex">$p_0$</span>, và <span class="arithmatex">$i$</span> là lớn nhất trong tất cả các điểm như vậy.
+Sau đó, chúng ta kiểm tra xem điểm này thực sự có nằm trong tam giác đã xác định hay không.</p>
+<p>Dấu của <span class="arithmatex">$(a - c) \times (b - c)$</span> sẽ cho chúng ta biết liệu điểm <span class="arithmatex">$a$</span> nằm theo chiều kim đồng hồ hay ngược chiều kim đồng hồ so với điểm <span class="arithmatex">$b$</span> với gốc là điểm <span class="arithmatex">$c$</span>.
+Nếu <span class="arithmatex">$(a - c) \times (b - c) &gt; 0$</span>, thì điểm <span class="arithmatex">$a$</span> nằm bên phải vector đi từ <span class="arithmatex">$c$</span> đến <span class="arithmatex">$b$</span>, nghĩa là nằm theo chiều kim đồng hồ so với <span class="arithmatex">$b$</span> với gốc là <span class="arithmatex">$c$</span>.
+Và nếu <span class="arithmatex">$(a - c) \times (b - c) &lt; 0$</span>, thì điểm đó nằm bên trái, hoặc ngược chiều kim đồng hồ.
+Nếu bằng 0, điểm đó nằm chính xác trên đường thẳng giữa hai điểm <span class="arithmatex">$b$</span> và <span class="arithmatex">$c$</span>.</p>
+<p>Quay lại thuật toán:
+Xét một điểm truy vấn <span class="arithmatex">$p$</span>.
+Trước tiên, chúng ta phải kiểm tra xem điểm đó có nằm giữa <span class="arithmatex">$p_1$</span> và <span class="arithmatex">$p_n$</span> hay không.
+Nếu không, ta đã biết ngay nó không thể là một phần của đa giác.
+Việc này có thể thực hiện bằng cách kiểm tra xem tích chéo (cross product) <span class="arithmatex">$(p_1 - p_0)\times(p - p_0)$</span> có bằng 0 hoặc cùng dấu với <span class="arithmatex">$(p_1 - p_0)\times(p_n - p_0)$</span>, và <span class="arithmatex">$(p_n - p_0)\times(p - p_0)$</span> có bằng 0 hoặc cùng dấu với <span class="arithmatex">$(p_n - p_0)\times(p_1 - p_0)$</span> hay không.
+Sau đó, chúng ta xử lý trường hợp đặc biệt mà <span class="arithmatex">$p$</span> nằm trên đường thẳng <span class="arithmatex">$(p_0, p_1)$</span>.
+Tiếp theo, ta thực hiện tìm kiếm nhị phân để tìm điểm cuối cùng từ <span class="arithmatex">$p_1,\dots p_n$</span> không nằm ngược chiều kim đồng hồ so với <span class="arithmatex">$p$</span> với gốc là <span class="arithmatex">$p_0$</span>.
+Với một điểm <span class="arithmatex">$p_i$</span> đơn lẻ, điều kiện này có thể được kiểm tra bằng <span class="arithmatex">$(p_i - p_0)\times(p - p_0) \le 0$</span>. Sau khi tìm thấy điểm <span class="arithmatex">$p_i$</span>, chúng ta phải kiểm tra xem <span class="arithmatex">$p$</span> có nằm trong tam giác <span class="arithmatex">$p_0, p_i, p_{i + 1}$</span> hay không.
+Để kiểm tra xem nó có thuộc tam giác hay không, ta chỉ cần kiểm tra xem <span class="arithmatex">$|(p_i - p_0)\times(p_{i + 1} - p_0)| = |(p_0 - p)\times(p_i - p)| + |(p_i - p)\times(p_{i + 1} - p)| + |(p_{i + 1} - p)\times(p_0 - p)|$</span>.
+Cách này kiểm tra xem diện tích của tam giác <span class="arithmatex">$p_0, p_i, p_{i+1}$</span> có bằng chính xác tổng diện tích của tam giác <span class="arithmatex">$p_0, p_i, p$</span>, tam giác <span class="arithmatex">$p_0, p, p_{i+1}$</span> và tam giác <span class="arithmatex">$p_i, p_{i+1}, p$</span> hay không.
+Nếu <span class="arithmatex">$p$</span> nằm ngoài, thì tổng diện tích của ba tam giác đó sẽ lớn hơn diện tích tam giác ban đầu.
+Nếu nó nằm trong, thì hai giá trị đó sẽ bằng nhau.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Hàm <code>prepare</code> sẽ đảm bảo điểm có thứ tự từ điển nhỏ nhất (giá trị x nhỏ nhất, nếu bằng nhau thì y nhỏ nhất) sẽ là <span class="arithmatex">$p_0$</span>, và tính toán các vector <span class="arithmatex">$p_i - p_0$</span>.
+Sau đó, hàm <code>pointInConvexPolygon</code> tính toán kết quả của một truy vấn.
+Chúng ta lưu lại điểm <span class="arithmatex">$p_0$</span> và tịnh tiến tất cả các điểm truy vấn theo nó để tính khoảng cách chính xác, vì các vector không có điểm gốc cố định.
+Bằng cách tịnh tiến các điểm truy vấn, ta có thể giả định rằng tất cả các vector đều bắt đầu tại gốc tọa độ <span class="arithmatex">$(0, 0)$</span>, từ đó đơn giản hóa việc tính toán khoảng cách và độ dài.</p>
 <div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">pt</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
 <span class="w">    </span><span class="n">pt</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
@@ -8136,7 +8112,7 @@ By translating the query points we can assume that all vectors start at the orig
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">pointInTriangle</span><span class="p">(</span><span class="n">seq</span><span class="p">[</span><span class="n">pos</span><span class="p">],</span><span class="w"> </span><span class="n">seq</span><span class="p">[</span><span class="n">pos</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">pt</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">point</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="problems">Problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h2>
+<h2 id="cac-bai-tap">Các bài tập<a class="headerlink" href="#cac-bai-tap" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://codeforces.com/problemsets/acmsguru/problem/99999/253">SGU253 Theodore Roosevelt</a></li>
 <li><a href="https://codeforces.com/contest/55/problem/E">Codeforces 55E Very simple problem</a></li>
@@ -8145,7 +8121,7 @@ By translating the query points we can assume that all vectors start at the orig
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Yury Semenov" data-bi-name="contributorprofile" target="_blank">Yury Semenov</a> (79.2%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (11.2%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (4.8%)</li><li><a href="#" title="AYUSH KUMAR TIWARI" data-bi-name="contributorprofile" target="_blank">AYUSH KUMAR TIWARI</a> (2.4%)</li><li><a href="#" title="dallasyan" data-bi-name="contributorprofile" target="_blank">dallasyan</a> (1.6%)</li><li><a href="#" title="Felipe Noronha" data-bi-name="contributorprofile" target="_blank">Felipe Noronha</a> (0.8%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>

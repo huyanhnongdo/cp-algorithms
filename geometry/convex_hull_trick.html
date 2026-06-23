@@ -8010,6 +8010,10 @@ Describe the issue of this article in detail.
   
   
 
+  
+  
+  
+
 
 
 
@@ -8036,9 +8040,9 @@ Describe the issue of this article in detail.
 <p>The idea of this approach is to maintain a lower convex hull of linear functions.
 Actually it would be a bit more convenient to consider them not as linear functions, but as points <span class="arithmatex">$(k;b)$</span> on the plane such that we will have to find the point which has the least dot product with a given point <span class="arithmatex">$(x;1)$</span>, that is, for this point <span class="arithmatex">$kx+b$</span> is minimized which is the same as initial problem.
 Such minimum will necessarily be on lower convex envelope of these points as can be seen below:</p>
-<p><div style="text-align: center;">
-  <img src="convex_hull_trick.png" alt="lower convex hull">
-</div></p>
+<div style="text-align: center;" markdown="1">
+<p><img alt="lower convex hull" src="convex_hull_trick.png" /></p>
+</div>
 <p>One has to keep points on the convex hull and normal vectors of the hull's edges.
 When you have a <span class="arithmatex">$(x;1)$</span> query you'll have to find the normal vector closest to it in terms of angles between them, then the optimum linear function will correspond to one of its endpoints.
 To see that, one should note that points having a constant dot product with <span class="arithmatex">$(x;1)$</span> lie on a line which is orthogonal to <span class="arithmatex">$(x;1)$</span>, so the optimum linear function will be the one in which tangent to convex hull which is collinear with normal to <span class="arithmatex">$(x;1)$</span> touches the hull.
@@ -8097,9 +8101,8 @@ Now to get the minimum value in some point we will find the first normal vector 
 <p>Assume we're in some vertex corresponding to half-segment <span class="arithmatex">$[l,r)$</span> and the function <span class="arithmatex">$f_{old}$</span> is kept there and we add the function <span class="arithmatex">$f_{new}$</span>. Then the intersection point will be either in <span class="arithmatex">$[l;m)$</span> or in <span class="arithmatex">$[m;r)$</span> where <span class="arithmatex">$m=\left\lfloor\tfrac{l+r}{2}\right\rfloor$</span>. We can efficiently find that out by comparing the values of the functions in points <span class="arithmatex">$l$</span> and <span class="arithmatex">$m$</span>. If the dominating function changes, then it is in <span class="arithmatex">$[l;m)$</span> otherwise it is in <span class="arithmatex">$[m;r)$</span>. Now for the half of the segment with no intersection we will pick the lower function and write it in the current vertex. You can see that it will always be the one which is lower in point <span class="arithmatex">$m$</span>. After that we recursively go to the other half of the segment with the function which was the upper one. As you can see this will keep correctness on the first half of segment and in the other one correctness will be maintained during the recursive call. Thus we can add functions and check the minimum value in the point in <span class="arithmatex">$O(\log [C\varepsilon^{-1}])$</span>.</p>
 <p>Here is the illustration of what is going on in the vertex when we add new function:</p>
 <div style="text-align: center;">
-  <img src="li_chao_vertex.png" alt="Li Chao Tree vertex">
+<p><img alt="Li Chao Tree vertex" src="li_chao_vertex.png" /></p>
 </div>
-
 <p>Let's go to implementation now. Once again we will use complex numbers to keep linear functions.</p>
 <p><div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">ftype</span><span class="p">;</span>
 <span class="k">typedef</span><span class="w"> </span><span class="n">complex</span><span class="o">&lt;</span><span class="n">ftype</span><span class="o">&gt;</span><span class="w"> </span><span class="n">point</span><span class="p">;</span>
@@ -8162,7 +8165,7 @@ Now to get the minimum in some point <span class="arithmatex">$x$</span> we simp
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Alexander Kulkov" data-bi-name="contributorprofile" target="_blank">Alexander Kulkov</a> (67.9%)</li><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (12.35%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (8.02%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (4.32%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (3.7%)</li><li><a href="#" title="Max" data-bi-name="contributorprofile" target="_blank">Max</a> (1.85%)</li><li><a href="#" title="Sabit Zahin" data-bi-name="contributorprofile" target="_blank">Sabit Zahin</a> (1.23%)</li><li><a href="#" title="Tanmay Sinha" data-bi-name="contributorprofile" target="_blank">Tanmay Sinha</a> (0.62%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Alexander Kulkov" data-bi-name="contributorprofile" target="_blank">Alexander Kulkov</a> (66.27%)</li><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (12.05%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (7.83%)</li><li><a href="#" title="Not Committed Yet" data-bi-name="contributorprofile" target="_blank">Not Committed Yet</a> (4.82%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (4.22%)</li><li><a href="#" title="Max" data-bi-name="contributorprofile" target="_blank">Max</a> (1.81%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (1.2%)</li><li><a href="#" title="Sabit Zahin" data-bi-name="contributorprofile" target="_blank">Sabit Zahin</a> (1.2%)</li><li><a href="#" title="Tanmay Sinha" data-bi-name="contributorprofile" target="_blank">Tanmay Sinha</a> (0.6%)</li></ul>
 </ul>
                 
               </article>

@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#finding-the-equation-of-a-line-for-a-segment" class="md-skip">
+        <a href="#tim-phuong-trinh-uong-thang-cho-mot-oan-thang" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4369,10 +4369,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#two-dimensional-case" class="md-nav__link">
+  <a href="#truong-hop-hai-chieu" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Two-dimensional case
+        Trường hợp hai chiều
       
     </span>
   </a>
@@ -4380,10 +4380,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#integer-case" class="md-nav__link">
+  <a href="#truong-hop-so-nguyen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Integer case
+        Trường hợp số nguyên
       
     </span>
   </a>
@@ -4391,10 +4391,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#real-case" class="md-nav__link">
+  <a href="#truong-hop-so-thuc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Real case
+        Trường hợp số thực
       
     </span>
   </a>
@@ -4402,10 +4402,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#three-dimensional-and-multidimensional-case" class="md-nav__link">
+  <a href="#truong-hop-ba-chieu-va-a-chieu" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Three-dimensional and multidimensional case
+        Trường hợp ba chiều và đa chiều
       
     </span>
   </a>
@@ -7971,13 +7971,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/segment-to-line.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/segment-to-line.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/segment-to-line.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/segment-to-line.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7988,18 +7988,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8031,46 +8019,41 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="finding-the-equation-of-a-line-for-a-segment">Finding the equation of a line for a segment<a class="headerlink" href="#finding-the-equation-of-a-line-for-a-segment" title="Permanent link">&para;</a></h1>
-<p>The task is: given the coordinates of the ends of a segment, construct a line passing through it.</p>
-<p>We assume that the segment is non-degenerate, i.e. has a length greater than zero (otherwise, of course, infinitely many different lines pass through it).</p>
-<h3 id="two-dimensional-case">Two-dimensional case<a class="headerlink" href="#two-dimensional-case" title="Permanent link">&para;</a></h3>
-<p>Let the given segment be <span class="arithmatex">$PQ$</span> i.e. the known coordinates of its ends <span class="arithmatex">$P_x , P_y , Q_x , Q_y$</span> .</p>
-<p>It is necessary to construct <strong>the equation of a line in the plane</strong> passing through this segment, i.e. find the coefficients <span class="arithmatex">$A , B , C$</span> in the equation of a line:</p>
+<h1 id="tim-phuong-trinh-uong-thang-cho-mot-oan-thang">Tìm phương trình đường thẳng cho một đoạn thẳng<a class="headerlink" href="#tim-phuong-trinh-uong-thang-cho-mot-oan-thang" title="Permanent link">&para;</a></h1>
+<p>Nhiệm vụ là: cho trước tọa độ các điểm mút của một đoạn thẳng, xây dựng một đường thẳng đi qua đoạn thẳng đó.</p>
+<p>Chúng ta giả sử rằng đoạn thẳng là không suy biến, tức là có độ dài lớn hơn không (nếu không, tất nhiên là có vô số đường thẳng khác nhau đi qua nó).</p>
+<h3 id="truong-hop-hai-chieu">Trường hợp hai chiều<a class="headerlink" href="#truong-hop-hai-chieu" title="Permanent link">&para;</a></h3>
+<p>Cho đoạn thẳng đã cho là <span class="arithmatex">$PQ$</span> tức là tọa độ đã biết của các điểm mút của nó <span class="arithmatex">$P_x , P_y , Q_x , Q_y$</span> .</p>
+<p>Cần phải xây dựng <strong>phương trình của một đường thẳng trong mặt phẳng</strong> đi qua đoạn thẳng này, tức là tìm các hệ số <span class="arithmatex">$A , B , C$</span> trong phương trình của đường thẳng:</p>
 <div class="arithmatex">$$A x + B y + C = 0.$$</div>
-<p>Note that for the required triples <span class="arithmatex">$(A, B, C)$</span> there are <strong>infinitely many</strong> solutions which describe the given segment:
-you can multiply all three coefficients by an arbitrary non-zero number and get the same straight line.
-Therefore, our task is to find one of these triples.</p>
-<p>It is easy to verify (by substitution of these expressions and the coordinates of the points <span class="arithmatex">$P$</span> and <span class="arithmatex">$Q$</span> into the equation of a straight line) that the following set of coefficients fits:</p>
+<p>Lưu ý rằng đối với các bộ ba cần thiết <span class="arithmatex">$(A, B, C)$</span> có <strong>vô số</strong> nghiệm mô tả đoạn thẳng đã cho: bạn có thể nhân cả ba hệ số với một số khác không tùy ý và nhận được cùng một đường thẳng. Do đó, nhiệm vụ của chúng ta là tìm một trong các bộ ba này.</p>
+<p>Dễ dàng kiểm chứng (bằng cách thay thế các biểu thức này và tọa độ các điểm <span class="arithmatex">$P$</span> và <span class="arithmatex">$Q$</span> vào phương trình của đường thẳng) rằng bộ hệ số sau đây là phù hợp:</p>
 <div class="arithmatex">$$\begin{align}
 A &amp;= P_y - Q_y, \\
 B &amp;= Q_x - P_x, \\
 C &amp;= - A P_x - B P_y.
 \end{align}$$</div>
-<h3 id="integer-case">Integer case<a class="headerlink" href="#integer-case" title="Permanent link">&para;</a></h3>
-<p>An important advantage of this method of constructing a straight line is that if the coordinates of the ends were integer, then the coefficients obtained will also be <strong>integer</strong> . In some cases, this allows one to perform geometric operations without resorting to real numbers at all.</p>
-<p>However, there is a small drawback: for the same straight line different triples of coefficients can be obtained.
-To avoid this, but do not go away from the integer coefficients, you can apply the following technique, often called <strong>rationing</strong>. Find the <a href="../algebra/euclid-algorithm.html">greatest common divisor</a> of numbers <span class="arithmatex">$| A | , | B | , | C |$</span> , we divide all three coefficients by it, and then we make the normalization of the sign: if <span class="arithmatex">$A &lt;0$</span> or <span class="arithmatex">$A = 0, B &lt;0$</span> then multiply all three coefficients by <span class="arithmatex">$-1$</span> .
-As a result, we will come to the conclusion that for identical straight lines, identical triples of coefficients will be obtained, which makes it easy to check straight lines for equality.</p>
-<h3 id="real-case">Real case<a class="headerlink" href="#real-case" title="Permanent link">&para;</a></h3>
-<p>When working with real numbers, you should always be aware of errors.</p>
-<p>The coefficients <span class="arithmatex">$A$</span> and <span class="arithmatex">$B$</span> will have the order of the original coordinates, the coefficient <span class="arithmatex">$C$</span> is of the order of the square of them. This may already be quite large numbers, and, for example, when we <a href="lines-intersection.html">intersect straight lines</a>, they will become even larger, which can lead to large rounding errors already when the coordinates of the end points are of order <span class="arithmatex">$10^3$</span>.</p>
-<p>Therefore, when working with real numbers, it is desirable to produce the so-called <strong>normalization</strong>, this is straightforward: namely, to make the coefficients such that <span class="arithmatex">$A ^ 2 + B ^ 2 = 1$</span> . To do this, calculate the number <span class="arithmatex">$Z$</span> :</p>
+<h3 id="truong-hop-so-nguyen">Trường hợp số nguyên<a class="headerlink" href="#truong-hop-so-nguyen" title="Permanent link">&para;</a></h3>
+<p>Một ưu điểm quan trọng của phương pháp xây dựng đường thẳng này là nếu tọa độ các điểm mút là số nguyên, thì các hệ số thu được cũng sẽ là <strong>số nguyên</strong>. Trong một số trường hợp, điều này cho phép thực hiện các phép toán hình học mà không cần dùng đến số thực.</p>
+<p>Tuy nhiên, có một nhược điểm nhỏ: đối với cùng một đường thẳng, có thể thu được các bộ ba hệ số khác nhau. Để tránh điều này, nhưng vẫn giữ các hệ số nguyên, bạn có thể áp dụng kỹ thuật sau, thường được gọi là <strong>chuẩn hóa</strong> (rationing). Tìm <a href="../algebra/euclid-algorithm.html">GCD (Ước chung lớn nhất)</a> của các số <span class="arithmatex">$| A | , | B | , | C |$</span> , chúng ta chia cả ba hệ số cho nó, và sau đó chúng ta thực hiện chuẩn hóa dấu: nếu <span class="arithmatex">$A &lt;0$</span> hoặc <span class="arithmatex">$A = 0, B &lt;0$</span> thì nhân cả ba hệ số với <span class="arithmatex">$-1$</span> . Kết quả là, chúng ta sẽ đi đến kết luận rằng đối với các đường thẳng trùng nhau, sẽ thu được các bộ ba hệ số giống hệt nhau, điều này giúp dễ dàng kiểm tra sự bằng nhau của các đường thẳng.</p>
+<h3 id="truong-hop-so-thuc">Trường hợp số thực<a class="headerlink" href="#truong-hop-so-thuc" title="Permanent link">&para;</a></h3>
+<p>Khi làm việc với số thực, bạn nên luôn nhận thức về các sai số.</p>
+<p>Các hệ số <span class="arithmatex">$A$</span> và <span class="arithmatex">$B$</span> sẽ có cùng bậc với tọa độ gốc, hệ số <span class="arithmatex">$C$</span> có bậc là bình phương của chúng. Điều này có thể tạo ra các số khá lớn, và, ví dụ, khi chúng ta <a href="lines-intersection.html">giao cắt các đường thẳng</a>, chúng sẽ trở nên lớn hơn nữa, điều này có thể dẫn đến sai số làm tròn lớn ngay cả khi tọa độ các điểm mút có bậc <span class="arithmatex">$10^3$</span>.</p>
+<p>Do đó, khi làm việc với số thực, nên thực hiện cái gọi là <strong>chuẩn hóa</strong> (normalization), điều này rất đơn giản: đó là làm cho các hệ số sao cho <span class="arithmatex">$A ^ 2 + B ^ 2 = 1$</span> . Để làm điều này, tính toán số <span class="arithmatex">$Z$</span> :</p>
 <div class="arithmatex">$$Z = \sqrt{A ^ 2 + B ^ 2},$$</div>
-<p>and divide all three coefficients <span class="arithmatex">$A , B , C$</span> by it.</p>
-<p>Thus, the order of the coefficients <span class="arithmatex">$A$</span> and <span class="arithmatex">$B$</span> will not depend on the order of the input coordinates, and the coefficient <span class="arithmatex">$C$</span> will be of the same order as the input coordinates. In practice, this leads to a significant improvement in the accuracy of calculations.</p>
-<p>Finally, we mention the <strong>comparison</strong> of straight lines - in fact, after such a normalization, for the same straight line, only two triples of coefficients can be obtained: up to multiplication by <span class="arithmatex">$-1$</span>.
-Accordingly, if we make an additional normalization taking into account the sign (if <span class="arithmatex">$A &lt; -\varepsilon$</span>  or <span class="arithmatex">$| A | &lt; \varepsilon$</span>, <span class="arithmatex">$B &lt;- \varepsilon$</span> then multiply by <span class="arithmatex">$-1$</span> ), the resulting coefficients will be unique.</p>
-<h3 id="three-dimensional-and-multidimensional-case">Three-dimensional and multidimensional case<a class="headerlink" href="#three-dimensional-and-multidimensional-case" title="Permanent link">&para;</a></h3>
-<p>Already in the three-dimensional case there is <strong>no simple equation</strong> describing a straight line (it can be defined as the intersection of two planes, that is, a system of two equations, but this is an inconvenient method).</p>
-<p>Consequently, in the three-dimensional and multidimensional cases we must use the <strong>parametric method of defining a straight line</strong> , i.e. as a point <span class="arithmatex">$p$</span> and a vector <span class="arithmatex">$v$</span> :</p>
+<p>và chia cả ba hệ số <span class="arithmatex">$A , B , C$</span> cho nó.</p>
+<p>Như vậy, bậc của các hệ số <span class="arithmatex">$A$</span> và <span class="arithmatex">$B$</span> sẽ không phụ thuộc vào bậc của các tọa độ đầu vào, và hệ số <span class="arithmatex">$C$</span> sẽ có cùng bậc với tọa độ đầu vào. Trong thực tế, điều này dẫn đến cải thiện đáng kể độ chính xác của các phép tính.</p>
+<p>Cuối cùng, chúng ta đề cập đến việc <strong>so sánh</strong> các đường thẳng - trên thực tế, sau khi chuẩn hóa như vậy, đối với cùng một đường thẳng, chỉ có thể thu được hai bộ ba hệ số: sai khác một phép nhân với <span class="arithmatex">$-1$</span>. Theo đó, nếu chúng ta thực hiện chuẩn hóa bổ sung có tính đến dấu (nếu <span class="arithmatex">$A &lt; -\varepsilon$</span> hoặc <span class="arithmatex">$| A | &lt; \varepsilon$</span>, <span class="arithmatex">$B &lt;- \varepsilon$</span> thì nhân với <span class="arithmatex">$-1$</span> ), các hệ số thu được sẽ là duy nhất.</p>
+<h3 id="truong-hop-ba-chieu-va-a-chieu">Trường hợp ba chiều và đa chiều<a class="headerlink" href="#truong-hop-ba-chieu-va-a-chieu" title="Permanent link">&para;</a></h3>
+<p>Ngay cả trong trường hợp ba chiều cũng không có <strong>phương trình đơn giản</strong> nào mô tả một đường thẳng (nó có thể được định nghĩa là giao của hai mặt phẳng, tức là một hệ hai phương trình, nhưng đây là một phương pháp bất tiện).</p>
+<p>Do đó, trong các trường hợp ba chiều và đa chiều, chúng ta phải sử dụng <strong>phương pháp tham số để định nghĩa một đường thẳng</strong> (parametric method of defining a straight line), tức là dưới dạng một điểm <span class="arithmatex">$p$</span> và một vector <span class="arithmatex">$v$</span> :</p>
 <div class="arithmatex">$$p + v t, ~~~ t \in \mathbb{R}.$$</div>
-<p>Those. a straight line is all points that can be obtained from a point <span class="arithmatex">$p$</span> adding a vector <span class="arithmatex">$v$</span> with an arbitrary coefficient.</p>
-<p>The <strong>construction</strong> of a straight line in a parametric form along the coordinates of the ends of a segment is trivial, we just take one end of the segment for the point <span class="arithmatex">$p$</span>, and the vector from the first to the second end — for the vector <span class="arithmatex">$v$</span>.</p>
+<p>Tức là một đường thẳng là tất cả các điểm có thể thu được từ một điểm <span class="arithmatex">$p$</span> bằng cách cộng một vector <span class="arithmatex">$v$</span> với một hệ số tùy ý.</p>
+<p>Việc <strong>xây dựng</strong> một đường thẳng dưới dạng tham số theo tọa độ các điểm mút của một đoạn thẳng là đơn giản, chúng ta chỉ cần lấy một điểm mút của đoạn thẳng làm điểm <span class="arithmatex">$p$</span>, và vector từ điểm mút thứ nhất đến điểm mút thứ hai làm vector <span class="arithmatex">$v$</span>.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="David Castelblanco" data-bi-name="contributorprofile" target="_blank">David Castelblanco</a> (80.88%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (10.29%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (8.82%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>

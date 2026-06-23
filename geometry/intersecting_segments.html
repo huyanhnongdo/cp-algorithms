@@ -8006,6 +8006,10 @@ Describe the issue of this article in detail.
   
   
 
+  
+  
+  
+
 
 
 
@@ -8044,21 +8048,18 @@ If the answer is yes, then print this pair of intersecting segments; it is enoug
 <p>Let's draw a vertical line <span class="arithmatex">$x = -\infty$</span> mentally and start moving this line to the right.
 In the course of its movement, this line will meet with segments, and at each time a segment intersects with our line it intersects in exactly one point (we will assume that there are no vertical segments).</p>
 <div style="text-align: center;">
-  <img src="sweep_line_1.png" alt="sweep line and line segment intersection">
+<p><img alt="sweep line and line segment intersection" src="sweep_line_1.png" /></p>
 </div>
-
 <p>Thus, for each segment, at some point in time, its point will appear on the sweep line, then with the movement of the line, this point will move, and finally, at some point, the segment will disappear from the line.</p>
 <p>We are interested in the <strong>relative order of the segments</strong> along the vertical.
 Namely, we will store a list of segments crossing the sweep line at a given time, where the segments will be sorted by their <span class="arithmatex">$y$</span>-coordinate on the sweep line.</p>
 <div style="text-align: center;">
-  <img src="sweep_line_2.png" alt="relative order of the segments across sweep line">
+<p><img alt="relative order of the segments across sweep line" src="sweep_line_2.png" /></p>
 </div>
-
 <p>This order is interesting because intersecting segments will have the same <span class="arithmatex">$y$</span>-coordinate at least at one time:</p>
 <div style="text-align: center;">
-  <img src="sweep_line_3.png" alt="intersection point having same y-coordinate">
+<p><img alt="intersection point having same y-coordinate" src="sweep_line_3.png" /></p>
 </div>
-
 <p>We formulate key statements:</p>
 <ul>
 <li>To find an intersecting pair, it is sufficient to consider <strong>only adjacent segments</strong> at each fixed position of the sweep line.</li>
@@ -8198,7 +8199,7 @@ Namely, we will store a list of segments crossing the sweep line at a given time
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Amandeep Singh" data-bi-name="contributorprofile" target="_blank">Amandeep Singh</a> (88.46%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (4.95%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (3.3%)</li><li><a href="#" title="Yury Semenov" data-bi-name="contributorprofile" target="_blank">Yury Semenov</a> (1.65%)</li><li><a href="#" title="Aleksandr Mishukhin" data-bi-name="contributorprofile" target="_blank">Aleksandr Mishukhin</a> (0.55%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (0.55%)</li><li><a href="#" title="Juan Camilo Salazar" data-bi-name="contributorprofile" target="_blank">Juan Camilo Salazar</a> (0.55%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Amandeep Singh" data-bi-name="contributorprofile" target="_blank">Amandeep Singh</a> (85.64%)</li><li><a href="#" title="Not Committed Yet" data-bi-name="contributorprofile" target="_blank">Not Committed Yet</a> (6.38%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (3.19%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (1.6%)</li><li><a href="#" title="Yury Semenov" data-bi-name="contributorprofile" target="_blank">Yury Semenov</a> (1.6%)</li><li><a href="#" title="Aleksandr Mishukhin" data-bi-name="contributorprofile" target="_blank">Aleksandr Mishukhin</a> (0.53%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (0.53%)</li><li><a href="#" title="Juan Camilo Salazar" data-bi-name="contributorprofile" target="_blank">Juan Camilo Salazar</a> (0.53%)</li></ul>
 </ul>
                 
               </article>

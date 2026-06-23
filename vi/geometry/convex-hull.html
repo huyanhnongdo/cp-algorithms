@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#convex-hull-construction" class="md-skip">
+        <a href="#xay-dung-bao-loi-convex-hull" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4871,22 +4871,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#grahams-scan-algorithm" class="md-nav__link">
+  <a href="#thuat-toan-grahams-scan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Graham's scan Algorithm
+        Thuật toán Graham's scan
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Graham&#39;s scan Algorithm">
+    <nav class="md-nav" aria-label="Thuật toán Graham&#39;s scan">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -4899,22 +4899,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#monotone-chain-algorithm" class="md-nav__link">
+  <a href="#thuat-toan-monotone-chain" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Monotone chain Algorithm
+        Thuật toán Monotone chain
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Monotone chain Algorithm">
+    <nav class="md-nav" aria-label="Thuật toán Monotone chain">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#implementation_1" class="md-nav__link">
+  <a href="#cai-at_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -4927,10 +4927,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-thuc-hanh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập thực hành
       
     </span>
   </a>
@@ -7994,13 +7994,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/convex-hull.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/convex-hull.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/convex-hull.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/convex-hull.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8011,50 +8011,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8086,36 +8042,17 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="convex-hull-construction">Convex Hull construction<a class="headerlink" href="#convex-hull-construction" title="Permanent link">&para;</a></h1>
-<p>In this article we will discuss the problem of constructing a convex hull from a set of points.</p>
-<p>Consider <span class="arithmatex">$N$</span> points given on a plane, and the objective is to generate a convex hull, i.e. the smallest
-convex polygon that contains all the given points.</p>
-<p>We will see the <strong>Graham's scan</strong> algorithm published in 1972 by Graham, and
-also the <strong>Monotone chain</strong> algorithm published in 1979 by Andrew. Both
-are <span class="arithmatex">$\mathcal{O}(N \log N)$</span>, and are asymptotically optimal (as it is proven that there
-is no algorithm asymptotically better), with the exception of a few problems where
-parallel or online processing is involved.</p>
-<h2 id="grahams-scan-algorithm">Graham's scan Algorithm<a class="headerlink" href="#grahams-scan-algorithm" title="Permanent link">&para;</a></h2>
-<p>The algorithm first finds the bottom-most point <span class="arithmatex">$P_0$</span>. If there are multiple points
-with the same Y coordinate, the one with the smaller X coordinate is considered. This
-step takes <span class="arithmatex">$\mathcal{O}(N)$</span> time.</p>
-<p>Next, all the other points are sorted by polar angle in clockwise order.
-If the polar angle between two or more points is the same, the tie should be broken by distance from <span class="arithmatex">$P_0$</span>, in increasing order.</p>
-<p>Then we iterate through each point one by one, and make sure that the current
-point and the two before it make a clockwise turn, otherwise the previous
-point is discarded, since it would make a non-convex shape. Checking for clockwise or anticlockwise
-nature can be done by checking the <a href="oriented-triangle-area.html">orientation</a>.</p>
-<p>We use a stack to store the points, and once we reach the original point <span class="arithmatex">$P_0$</span>,
-the algorithm is done and we return the stack containing all the points of the
-convex hull in clockwise order.</p>
-<p>If you need to include the collinear points while doing a Graham scan, you need
-another step after sorting. You need to get the points that have the biggest
-polar distance from <span class="arithmatex">$P_0$</span> (these should be at the end of the sorted vector) and are collinear.
-The points in this line should be reversed so that we can output all the
-collinear points, otherwise the algorithm would get the nearest point in this
-line and bail. This step shouldn't be included in the non-collinear version
-of the algorithm, otherwise you wouldn't get the smallest convex hull.</p>
-<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h3>
+<h1 id="xay-dung-bao-loi-convex-hull">Xây dựng Bao lồi (Convex Hull)<a class="headerlink" href="#xay-dung-bao-loi-convex-hull" title="Permanent link">&para;</a></h1>
+<p>Trong bài viết này, chúng ta sẽ thảo luận về bài toán xây dựng bao lồi (Convex Hull) từ một tập hợp các điểm.</p>
+<p>Xét <span class="arithmatex">$N$</span> điểm cho trước trên một mặt phẳng, mục tiêu là tạo ra một bao lồi, nghĩa là đa giác lồi nhỏ nhất chứa tất cả các điểm đã cho.</p>
+<p>Chúng ta sẽ tìm hiểu thuật toán <strong>Graham's scan</strong> được Graham công bố năm 1972 và thuật toán <strong>Monotone chain</strong> được Andrew công bố năm 1979. Cả hai đều có độ phức tạp thời gian <span class="arithmatex">$\mathcal{O}(N \log N)$</span> và đạt tối ưu tiệm cận (vì đã được chứng minh là không có thuật toán nào tốt hơn về mặt tiệm cận), ngoại trừ một vài trường hợp đặc biệt liên quan đến xử lý song song hoặc trực tuyến (online).</p>
+<h2 id="thuat-toan-grahams-scan">Thuật toán Graham's scan<a class="headerlink" href="#thuat-toan-grahams-scan" title="Permanent link">&para;</a></h2>
+<p>Thuật toán trước tiên tìm điểm thấp nhất <span class="arithmatex">$P_0$</span>. Nếu có nhiều điểm cùng tọa độ Y, điểm có tọa độ X nhỏ hơn sẽ được chọn. Bước này tốn <span class="arithmatex">$\mathcal{O}(N)$</span> thời gian.</p>
+<p>Tiếp theo, tất cả các điểm còn lại được sắp xếp theo góc cực (polar angle) theo chiều kim đồng hồ. Nếu hai hoặc nhiều điểm có cùng góc cực, thứ tự ưu tiên được quyết định bởi khoảng cách đến <span class="arithmatex">$P_0$</span> theo thứ tự tăng dần.</p>
+<p>Sau đó, chúng ta duyệt qua từng điểm một và đảm bảo rằng điểm hiện tại cùng với hai điểm trước đó tạo thành một lượt rẽ theo chiều kim đồng hồ; nếu không, điểm trước đó sẽ bị loại bỏ vì nó sẽ tạo thành hình dạng không lồi. Việc kiểm tra tính chất cùng chiều hay ngược chiều kim đồng hồ có thể được thực hiện bằng cách kiểm tra <a href="oriented-triangle-area.html">định hướng</a>.</p>
+<p>Chúng ta sử dụng một ngăn xếp (stack) để lưu trữ các điểm, và khi đã quay lại điểm ban đầu <span class="arithmatex">$P_0$</span>, thuật toán hoàn tất và chúng ta trả về ngăn xếp chứa tất cả các điểm của bao lồi theo thứ tự chiều kim đồng hồ.</p>
+<p>Nếu bạn cần bao gồm các điểm thẳng hàng khi thực hiện Graham scan, bạn cần thêm một bước sau khi sắp xếp. Bạn cần lấy các điểm có khoảng cách cực đại từ <span class="arithmatex">$P_0$</span> (các điểm này nên nằm ở cuối vector đã sắp xếp) và thẳng hàng với nhau. Các điểm trên đoạn này nên được đảo ngược thứ tự để có thể xuất ra tất cả các điểm thẳng hàng, nếu không thuật toán sẽ chỉ lấy điểm gần nhất trên đoạn đó và dừng lại. Bước này không nên bao gồm trong phiên bản không lấy các điểm thẳng hàng, nếu không bạn sẽ không thu được bao lồi nhỏ nhất.</p>
+<h3 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">pt</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="n">pt</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
@@ -8166,34 +8103,16 @@ of the algorithm, otherwise you wouldn't get the smallest convex hull.</p>
 <span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">st</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="monotone-chain-algorithm">Monotone chain Algorithm<a class="headerlink" href="#monotone-chain-algorithm" title="Permanent link">&para;</a></h2>
-<p>The algorithm first finds the leftmost and rightmost points A and B. In the event multiple such points exist,
-the lowest among the left (lowest Y-coordinate) is taken as A, and the highest among the right (highest Y-coordinate)
-is taken as B. Clearly, A and B must both belong to the convex hull as they are the farthest away and they cannot be contained
-by any line formed by a pair among the given points.</p>
-<p>Now, draw a line through AB. This divides all the other points into two sets, S1 and S2, where S1 contains all the points
-above the line connecting A and B, and S2 contains all the points below the line joining A and B. The points that lie on
-the line joining A and B may belong to either set. The points A and B belong to both sets. Now the algorithm
-constructs the upper set S1 and the lower set S2 and then combines them to obtain the answer. </p>
-<p>To get the upper set, we sort all points by the x-coordinate. For each point we check if either - the current point is the last point,
-(which we defined as B), or if the orientation between the line between A and the current point and the line between the current point and B is clockwise. In those cases the 
-current point belongs to the upper set S1. Checking for clockwise or anticlockwise nature can be done by checking the <a href="oriented-triangle-area.html">orientation</a>.</p>
-<p>If the given point belongs to the upper set, we check the angle made by the line connecting the second last point and the last point in the upper convex hull,
-with the line connecting the last point in the upper convex hull and the current point. If the angle is not clockwise, we remove the most recent point added
-to the upper convex hull as the current point will be able to contain the previous point once it is added to the convex
-hull.</p>
-<p>The same logic applies for the lower set S2. If either - the current point is B, or the orientation of the lines, formed by A and the 
-current point and the current point and B, is counterclockwise - then it belongs to S2.</p>
-<p>If the given point belongs to the lower set, we act similarly as for a point on the upper set except we check for a counterclockwise
-orientation instead of a clockwise orientation. Thus, if the angle made by the line connecting the second last point and the last point in the lower convex hull,
-with the line connecting the last point in the lower convex hull and the current point is not counterclockwise, we remove the most recent point added to the lower convex hull as the current point will be able to contain
-the previous point once added to the hull.</p>
-<p>The final convex hull is obtained from the union of the upper and lower convex hull, forming a clockwise hull, and the implementation is as follows.</p>
-<p>If you need collinear points, you just need to check for them in the clockwise/counterclockwise routines.
-However, this allows for a degenerate case where all the input points are collinear in a single line, and the algorithm would output repeated points.
-To solve this, we check whether the upper hull contains all the points, and if it does, we just return the points in reverse, as that
-is what Graham's implementation would return in this case.</p>
-<h3 id="implementation_1">Implementation<a class="headerlink" href="#implementation_1" title="Permanent link">&para;</a></h3>
+<h2 id="thuat-toan-monotone-chain">Thuật toán Monotone chain<a class="headerlink" href="#thuat-toan-monotone-chain" title="Permanent link">&para;</a></h2>
+<p>Thuật toán trước tiên tìm điểm xa nhất về bên trái (A) và bên phải (B). Trong trường hợp có nhiều điểm như vậy, điểm thấp nhất trong số các điểm bên trái (tọa độ Y nhỏ nhất) được chọn làm A, và điểm cao nhất trong số các điểm bên phải (tọa độ Y lớn nhất) được chọn làm B. Rõ ràng, cả A và B đều phải thuộc về bao lồi vì chúng là các điểm xa nhất và không thể bị chứa bởi bất kỳ đường thẳng nào được tạo bởi một cặp điểm trong số các điểm đã cho.</p>
+<p>Bây giờ, vẽ một đường thẳng đi qua AB. Đường thẳng này chia tất cả các điểm còn lại thành hai tập hợp, S1 và S2, trong đó S1 chứa tất cả các điểm nằm trên đường thẳng nối A và B, và S2 chứa tất cả các điểm nằm dưới đường thẳng nối A và B. Các điểm nằm trên đường thẳng nối A và B có thể thuộc về bất kỳ tập hợp nào. Điểm A và B thuộc về cả hai tập hợp. Bây giờ thuật toán xây dựng tập hợp phía trên S1 và tập hợp phía dưới S2, sau đó kết hợp chúng để thu được kết quả.</p>
+<p>Để thu được tập hợp phía trên, chúng ta sắp xếp tất cả các điểm theo tọa độ x. Với mỗi điểm, chúng ta kiểm tra xem: nếu điểm hiện tại là điểm cuối cùng (được định nghĩa là B), hoặc nếu hướng giữa đường thẳng nối A với điểm hiện tại và đường thẳng nối điểm hiện tại với B là cùng chiều kim đồng hồ. Trong những trường hợp đó, điểm hiện tại thuộc về tập hợp phía trên S1. Việc kiểm tra định hướng có thể thực hiện thông qua <a href="oriented-triangle-area.html">định hướng</a>.</p>
+<p>Nếu điểm đã cho thuộc về tập hợp phía trên, chúng ta kiểm tra góc tạo bởi đường thẳng nối điểm gần cuối và điểm cuối trong bao lồi phía trên với đường thẳng nối điểm cuối trong bao lồi phía trên và điểm hiện tại. Nếu góc đó không phải chiều kim đồng hồ, chúng ta loại bỏ điểm mới thêm vào gần nhất vì điểm hiện tại có thể bao chứa điểm trước đó sau khi được thêm vào bao lồi.</p>
+<p>Logic tương tự áp dụng cho tập hợp phía dưới S2. Nếu điểm hiện tại là B, hoặc định hướng của các đường thẳng được tạo bởi A và điểm hiện tại, cũng như giữa điểm hiện tại và B là ngược chiều kim đồng hồ, thì nó thuộc về S2.</p>
+<p>Nếu điểm đã cho thuộc về tập hợp phía dưới, chúng ta thực hiện tương tự như với tập hợp phía trên, ngoại trừ việc kiểm tra định hướng ngược chiều kim đồng hồ thay vì cùng chiều kim đồng hồ. Do đó, nếu góc tạo bởi đường thẳng nối điểm gần cuối và điểm cuối trong bao lồi phía dưới với đường thẳng nối điểm cuối trong bao lồi phía dưới và điểm hiện tại không phải ngược chiều kim đồng hồ, chúng ta loại bỏ điểm mới nhất đã thêm vào bao lồi phía dưới.</p>
+<p>Bao lồi cuối cùng thu được từ hợp của bao lồi phía trên và phía dưới, tạo thành một bao lồi theo chiều kim đồng hồ, và cài đặt như sau.</p>
+<p>Nếu bạn cần các điểm thẳng hàng, bạn chỉ cần kiểm tra chúng trong các quy trình kiểm tra chiều kim đồng hồ/ngược chiều kim đồng hồ. Tuy nhiên, điều này có thể dẫn đến trường hợp suy biến khi tất cả các điểm đầu vào thẳng hàng trên một đường thẳng, và thuật toán sẽ xuất ra các điểm bị lặp lại. Để giải quyết vấn đề này, chúng ta kiểm tra xem bao lồi phía trên có chứa tất cả các điểm hay không, nếu có, chúng ta chỉ cần trả về các điểm theo thứ tự ngược lại, vì đó là những gì cài đặt của Graham sẽ trả về trong trường hợp này.</p>
+<h3 id="cai-at_1">Cài đặt<a class="headerlink" href="#cai-at_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">pt</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
 <span class="p">};</span>
@@ -8249,7 +8168,7 @@ is what Graham's implementation would return in this case.</p>
 <span class="w">        </span><span class="n">a</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">down</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap-thuc-hanh">Bài tập thực hành<a class="headerlink" href="#bai-tap-thuc-hanh" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://open.kattis.com/problems/convexhull">Kattis - Convex Hull</a></li>
 <li><a href="https://open.kattis.com/problems/parade">Kattis - Keep the Parade Safe</a></li>
@@ -8261,7 +8180,7 @@ is what Graham's implementation would return in this case.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="fer22f" data-bi-name="contributorprofile" target="_blank">fer22f</a> (53.0%)</li><li><a href="#" title="Aditya Ramesh" data-bi-name="contributorprofile" target="_blank">Aditya Ramesh</a> (30.5%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (5.5%)</li><li><a href="#" title="Nguyen Xuan Tung" data-bi-name="contributorprofile" target="_blank">Nguyen Xuan Tung</a> (3.5%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (2.5%)</li><li><a href="#" title="Tarun Khullar" data-bi-name="contributorprofile" target="_blank">Tarun Khullar</a> (2.0%)</li><li><a href="#" title="Abd El-Twab M. Fakhry" data-bi-name="contributorprofile" target="_blank">Abd El-Twab M. Fakhry</a> (1.5%)</li><li><a href="#" title="Hostek" data-bi-name="contributorprofile" target="_blank">Hostek</a> (0.5%)</li><li><a href="#" title="Pedro Mesquita" data-bi-name="contributorprofile" target="_blank">Pedro Mesquita</a> (0.5%)</li><li><a href="#" title="Spheniscine" data-bi-name="contributorprofile" target="_blank">Spheniscine</a> (0.5%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>

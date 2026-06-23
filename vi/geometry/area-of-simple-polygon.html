@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#finding-area-of-simple-polygon-in-on" class="md-skip">
+        <a href="#tim-dien-tich-a-giac-on-trong-on" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4676,10 +4676,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#method-1" class="md-nav__link">
+  <a href="#phuong-phap-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Method 1
+        Phương pháp 1
       
     </span>
   </a>
@@ -4687,10 +4687,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#method-2" class="md-nav__link">
+  <a href="#phuong-phap-2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Method 2
+        Phương pháp 2
       
     </span>
   </a>
@@ -7949,13 +7949,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/area-of-simple-polygon.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/area-of-simple-polygon.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/area-of-simple-polygon.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/area-of-simple-polygon.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7966,22 +7966,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8013,12 +7997,12 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="finding-area-of-simple-polygon-in-on">Finding area of simple polygon in <span class="arithmatex">$O(N)$</span><a class="headerlink" href="#finding-area-of-simple-polygon-in-on" title="Permanent link">&para;</a></h1>
-<p>Let a simple polygon (i.e. without self intersection, not necessarily convex) be given. It is required to calculate its area given its vertices.</p>
-<h2 id="method-1">Method 1<a class="headerlink" href="#method-1" title="Permanent link">&para;</a></h2>
-<p>This is easy to do if we go through all edges and add trapezoid areas bounded by each edge and x-axis. The area needs to be taken with sign so that the extra area will be reduced. Hence, the formula is as follows:</p>
+<h1 id="tim-dien-tich-a-giac-on-trong-on">Tìm diện tích đa giác đơn trong <span class="arithmatex">$O(N)$</span><a class="headerlink" href="#tim-dien-tich-a-giac-on-trong-on" title="Permanent link">&para;</a></h1>
+<p>Cho một đa giác đơn (tức là không tự giao nhau, không nhất thiết phải lồi). Cần tính diện tích của nó khi biết các đỉnh.</p>
+<h2 id="phuong-phap-1">Phương pháp 1<a class="headerlink" href="#phuong-phap-1" title="Permanent link">&para;</a></h2>
+<p>Điều này dễ thực hiện nếu ta duyệt qua tất cả các cạnh và cộng các diện tích hình thang được giới hạn bởi mỗi cạnh và trục x. Diện tích cần được tính có dấu để phần diện tích thừa sẽ được trừ đi. Do đó, công thức như sau:</p>
 <div class="arithmatex">$$A = \sum_{(p,q)\in \text{edges}} \frac{(p_x - q_x) \cdot (p_y + q_y)}{2}$$</div>
-<p>Code:</p>
+<p>Mã nguồn:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="nf">area</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">point</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">fig</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">fig</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8029,13 +8013,13 @@ Describe the issue of this article in detail.
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">fabs</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="method-2">Method 2<a class="headerlink" href="#method-2" title="Permanent link">&para;</a></h2>
-<p>We can choose a point <span class="arithmatex">$O$</span> arbitrarily, iterate over all edges adding the oriented area of the triangle formed by the edge and point <span class="arithmatex">$O$</span>. Again, due to the sign of area, extra area will be reduced.</p>
-<p>This method is better as it can be generalized to more complex cases (such as when some sides are arcs instead of straight lines)</p>
+<h2 id="phuong-phap-2">Phương pháp 2<a class="headerlink" href="#phuong-phap-2" title="Permanent link">&para;</a></h2>
+<p>Ta có thể chọn một điểm <span class="arithmatex">$O$</span> tùy ý, duyệt qua tất cả các cạnh, cộng diện tích có hướng của tam giác được tạo bởi cạnh và điểm <span class="arithmatex">$O$</span>. Một lần nữa, nhờ dấu của diện tích, phần diện tích thừa sẽ được trừ đi.</p>
+<p>Phương pháp này tốt hơn vì nó có thể được tổng quát hóa cho các trường hợp phức tạp hơn (chẳng hạn như khi một số cạnh là cung tròn thay vì đường thẳng).</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Pranjal Jain" data-bi-name="contributorprofile" target="_blank">Pranjal Jain</a> (79.41%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (8.82%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (8.82%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (2.94%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>

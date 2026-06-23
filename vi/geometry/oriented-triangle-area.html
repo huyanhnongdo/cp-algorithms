@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#oriented-area-of-a-triangle" class="md-skip">
+        <a href="#dien-tich-co-huong-cua-mot-tam-giac" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4648,10 +4648,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#calculation" class="md-nav__link">
+  <a href="#tinh-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Calculation
+        Tính toán
       
     </span>
   </a>
@@ -4659,10 +4659,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -4670,10 +4670,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-luyen-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập luyện tập
       
     </span>
   </a>
@@ -7960,13 +7960,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/oriented-triangle-area.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/oriented-triangle-area.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/oriented-triangle-area.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/oriented-triangle-area.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7977,30 +7977,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8032,16 +8008,16 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="oriented-area-of-a-triangle">Oriented area of a triangle<a class="headerlink" href="#oriented-area-of-a-triangle" title="Permanent link">&para;</a></h1>
-<p>Given three points <span class="arithmatex">$p_1$</span>, <span class="arithmatex">$p_2$</span> and <span class="arithmatex">$p_3$</span>, calculate an oriented (signed) area of a triangle formed by them. The sign of the area is determined in the following way: imagine you are standing in the plane at point <span class="arithmatex">$p_1$</span> and are facing <span class="arithmatex">$p_2$</span>. You go to <span class="arithmatex">$p_2$</span> and if <span class="arithmatex">$p_3$</span> is to your right (then we say the three vectors turn "clockwise"), the sign of the area is negative, otherwise it is positive. If the three points are collinear, the area is zero.</p>
-<p>Using this signed area, we can both get the regular unsigned area (as the absolute value of the signed area) and determine if the points lie clockwise or counterclockwise in their specified order (which is useful, for example, in convex hull algorithms).</p>
-<h2 id="calculation">Calculation<a class="headerlink" href="#calculation" title="Permanent link">&para;</a></h2>
-<p>We can use the fact that a determinant of a <span class="arithmatex">$2\times 2$</span> matrix is equal to the signed area of a parallelogram spanned by column (or row) vectors of the matrix.
-This is analog to the definition of the cross product in 2D (see <a href="basic-geometry.html">Basic Geometry</a>).
-By dividing this area by two we get the area of a triangle that we are interested in.
-We will use <span class="arithmatex">$\vec{p_1p_2}$</span> and <span class="arithmatex">$\vec{p_2p_3}$</span> as the column vectors and calculate a <span class="arithmatex">$2\times 2$</span> determinant:</p>
+<h1 id="dien-tich-co-huong-cua-mot-tam-giac">Diện tích có hướng của một tam giác<a class="headerlink" href="#dien-tich-co-huong-cua-mot-tam-giac" title="Permanent link">&para;</a></h1>
+<p>Cho ba điểm <span class="arithmatex">$p_1$</span>, <span class="arithmatex">$p_2$</span> và <span class="arithmatex">$p_3$</span>, hãy tính diện tích có hướng (Oriented Area) (có dấu) của tam giác được tạo bởi chúng. Dấu của diện tích được xác định như sau: hãy tưởng tượng bạn đang đứng trong mặt phẳng tại điểm <span class="arithmatex">$p_1$</span> và hướng mặt về phía <span class="arithmatex">$p_2$</span>. Bạn đi đến <span class="arithmatex">$p_2$</span> và nếu <span class="arithmatex">$p_3$</span> nằm bên phải bạn (khi đó chúng ta nói ba vector quay "thuận chiều kim đồng hồ"), dấu của diện tích là âm; ngược lại thì là dương. Nếu ba điểm thẳng hàng, diện tích bằng không.</p>
+<p>Sử dụng diện tích có dấu này, chúng ta có thể vừa có được diện tích thông thường không dấu (bằng giá trị tuyệt đối của diện tích có dấu) vừa xác định xem các điểm có nằm theo chiều kim đồng hồ hay ngược chiều kim đồng hồ theo thứ tự đã chỉ định của chúng (điều này hữu ích, ví dụ, trong các thuật toán bao lồi (Convex Hull)).</p>
+<h2 id="tinh-toan">Tính toán<a class="headerlink" href="#tinh-toan" title="Permanent link">&para;</a></h2>
+<p>Chúng ta có thể sử dụng thực tế rằng định thức (Determinant) của một ma trận (Matrix) <span class="arithmatex">$2\times 2$</span> bằng với diện tích có dấu của một hình bình hành được tạo bởi các vector cột (hoặc hàng) của ma trận.
+Điều này tương tự như định nghĩa của tích có hướng (Cross Product) trong không gian 2D (xem <a href="basic-geometry.html">Hình học cơ bản</a>).
+Bằng cách chia diện tích này cho hai, chúng ta sẽ có được diện tích của tam giác mà chúng ta quan tâm.
+Chúng ta sẽ sử dụng <span class="arithmatex">$\vec{p_1p_2}$</span> và <span class="arithmatex">$\vec{p_2p_3}$</span> làm các vector cột và tính định thức <span class="arithmatex">$2\times 2$</span>:</p>
 <div class="arithmatex">$$2S=\left|\begin{matrix}x_2-x_1 &amp; x_3-x_2\\y_2-y_1 &amp; y_3-y_2\end{matrix}\right|=(x_2-x_1)(y_3-y_2)-(x_3-x_2)(y_2-y_1)$$</div>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">signed_area_parallelogram</span><span class="p">(</span><span class="n">point2d</span><span class="w"> </span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">point2d</span><span class="w"> </span><span class="n">p2</span><span class="p">,</span><span class="w"> </span><span class="n">point2d</span><span class="w"> </span><span class="n">p3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">cross</span><span class="p">(</span><span class="n">p2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">p3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p2</span><span class="p">);</span>
 <span class="p">}</span>
@@ -8058,14 +8034,14 @@ We will use <span class="arithmatex">$\vec{p_1p_2}$</span> and <span class="arit
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">signed_area_parallelogram</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">,</span><span class="w"> </span><span class="n">p3</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap-luyen-tap">Bài tập luyện tập<a class="headerlink" href="#bai-tap-luyen-tap" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.codechef.com/problems/CHEFPOLY">Codechef - Chef and Polygons</a></li>
+<li><a href="https://www.codechef.com/problems/CHEFPOLY">Codechef - Chef và Đa giác</a></li>
 </ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (37.21%)</li><li><a href="#" title="ondrahb" data-bi-name="contributorprofile" target="_blank">ondrahb</a> (27.91%)</li><li><a href="#" title="Bhuvnesh Jain" data-bi-name="contributorprofile" target="_blank">Bhuvnesh Jain</a> (13.95%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (13.95%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (4.65%)</li><li><a href="#" title="stemill" data-bi-name="contributorprofile" target="_blank">stemill</a> (2.33%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>

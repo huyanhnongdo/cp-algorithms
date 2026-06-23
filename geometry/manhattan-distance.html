@@ -8067,9 +8067,8 @@ Describe the issue of this article in detail.
 <div class="arithmatex">$$d(p,q) = |x_p - x_q| + |y_p - y_q|$$</div>
 <p>Defined this way, the distance corresponds to the so-called <a href="https://en.wikipedia.org/wiki/Taxicab_geometry">Manhattan (taxicab) geometry</a>, in which the points are considered intersections in a well designed city, like Manhattan, where you can only move on the streets horizontally or vertically, as shown in the image below:</p>
 <div style="text-align: center;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Manhattan_distance.svg" alt="Manhattan Distance">
+<p><img alt="Manhattan Distance" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Manhattan_distance.svg" /></p>
 </div>
-
 <p>This images show some of the smallest paths from one black point to the other, all of them with length <span class="arithmatex">$12$</span>.</p>
 <p>There are some interesting tricks and algorithms that can be done with this distance, and we will show some of them here.</p>
 <h2 id="farthest-pair-of-points-in-manhattan-distance">Farthest pair of points in Manhattan distance<a class="headerlink" href="#farthest-pair-of-points-in-manhattan-distance" title="Permanent link">&para;</a></h2>
@@ -8109,38 +8108,33 @@ Describe the issue of this article in detail.
 <p>Also, we may realize that <span class="arithmatex">$\alpha$</span> is a <a href="https://en.wikipedia.org/wiki/Spiral_similarity">spiral similarity</a> (rotation of the plane followed by a dilation about a center <span class="arithmatex">$O$</span>) with center <span class="arithmatex">$(0, 0)$</span>, rotation angle of <span class="arithmatex">$45^{\circ}$</span> in clockwise direction and dilation by <span class="arithmatex">$\sqrt{2}$</span>.</p>
 <p>Here's an image to help visualizing the transformation:</p>
 <div style="text-align: center;">
-  <img src="chebyshev-transformation.png" alt="Chebyshev transformation">
+<p><img alt="Chebyshev transformation" src="chebyshev-transformation.png" /></p>
 </div>
-
 <h2 id="manhattan-minimum-spanning-tree">Manhattan Minimum Spanning Tree<a class="headerlink" href="#manhattan-minimum-spanning-tree" title="Permanent link">&para;</a></h2>
 <p>The Manhattan MST problem consists of, given some points in the plane, find the edges that connect all the points and have a minimum total sum of weights. The weight of an edge that connects two points is their Manhattan distance. For simplicity, we assume that all points have different locations.
 Here we show a way of finding the MST in <span class="arithmatex">$O(n \log{n})$</span> by finding for each point its nearest neighbor in each octant, as represented by the image below. This will give us <span class="arithmatex">$O(n)$</span> candidate edges, which, as we show below, will guarantee that they contain the MST. The final step is then using some standard MST, for example, <a href="https://cp-algorithms.com/graph/mst_kruskal_with_dsu.html">Kruskal algorithm using disjoint set union</a>.</p>
 <div style="text-align: center;">
-  <img src="manhattan-mst-octants.png" alt="8 octants picture">
-  *The 8 octants relative to a point S*
+<p><img alt="8 octants picture" src="manhattan-mst-octants.png" />
+  <em>The 8 octants relative to a point S</em></p>
 </div>
-
 <p>The algorithm shown here was first presented in a paper from <a href="https://ieeexplore.ieee.org/document/913303">H. Zhou, N. Shenoy, and W. Nichollos (2002)</a>. There is also another know algorithm that uses a Divide and conquer approach by <a href="https://www.academia.edu/15667173/On_computing_all_north_east_nearest_neighbors_in_the_L1_metric">J. Stolfi</a>, which is also very interesting and only differ in the way they find the nearest neighbor in each octant. They both have the same complexity, but the one presented here is easier to implement and has a lower constant factor.</p>
 <p>First, let's understand why it is enough to consider only the nearest neighbor in each octant. The idea is to show that for a point <span class="arithmatex">$s$</span> and any two other points <span class="arithmatex">$p$</span> and <span class="arithmatex">$q$</span> in the same octant, <span class="arithmatex">$d(p, q) &lt; \max(d(s, p), d(s, q))$</span>. This is important, because it shows that if there was a MST where <span class="arithmatex">$s$</span> is connected to both <span class="arithmatex">$p$</span> and <span class="arithmatex">$q$</span>, we could erase one of these edges and add the edge <span class="arithmatex">$(p,q)$</span>, which would decrease the total cost. To prove this, we assume without loss of generality that <span class="arithmatex">$p$</span> and <span class="arithmatex">$q$</span> are in the octanct <span class="arithmatex">$R_1$</span>, which is defined by: <span class="arithmatex">$x_s \leq x$</span> and <span class="arithmatex">$x_s - y_s &gt; x -  y$</span>, and then do some casework. The image below give some intuition on why this is true.</p>
 <div style="text-align: center;">
-  <img src="manhattan-mst-uniqueness.png" alt="unique nearest neighbor">
-  *Intuitively, the limitation of the octant makes it impossible that $p$ and $q$ are both closer to $s$ than to each other*
+<p><img alt="unique nearest neighbor" src="manhattan-mst-uniqueness.png" />
+  <em>Intuitively, the limitation of the octant makes it impossible that <span class="arithmatex">$p$</span> and <span class="arithmatex">$q$</span> are both closer to <span class="arithmatex">$s$</span> than to each other</em></p>
 </div>
-
 <p>Therefore, the main question is how to find the nearest neighbor in each octant for every single of the <span class="arithmatex">$n$</span> points.</p>
 <h2 id="nearest-neighbor-in-each-octant-in-on-log-n">Nearest Neighbor in each Octant in O(n log n)<a class="headerlink" href="#nearest-neighbor-in-each-octant-in-on-log-n" title="Permanent link">&para;</a></h2>
 <p>For simplicity we focus on the NNE octant (<span class="arithmatex">$R_1$</span> in the image above). All other directions can be found with the same algorithm by rotating the input.</p>
 <p>We will use a sweep-line approach. We process the points from south-west to north-east, that is, by non-decreasing <span class="arithmatex">$x + y$</span>. We also keep a set of points which don't have their nearest neighbor yet, which we call "active set". We add the images below to help visualize the algorithm.</p>
 <div style="text-align: center;">
-  <img src="manhattan-mst-sweep-line-1.png" alt="manhattan-mst-sweep">
-  *In black with an arrow you can see the direction of the line-sweep. All the points below this lines are in the active set, and the points above are still not processed. In green we see the points which are in the octant of the processed point. In red the points that are not in the searched octant.*
+<p><img alt="manhattan-mst-sweep" src="manhattan-mst-sweep-line-1.png" />
+  <em>In black with an arrow you can see the direction of the line-sweep. All the points below this lines are in the active set, and the points above are still not processed. In green we see the points which are in the octant of the processed point. In red the points that are not in the searched octant.</em></p>
 </div>
-
 <div style="text-align: center;">
-  <img src="manhattan-mst-sweep-line-2.png" alt="manhattan-mst-sweep">
-  *In this image we see the active set after processing the point $p$. Note that the $2$ green points of the previous image had $p$ in its north-north-east octant and are not in the active set anymore, because they already found their nearest neighbor.*
+<p><img alt="manhattan-mst-sweep" src="manhattan-mst-sweep-line-2.png" />
+  <em>In this image we see the active set after processing the point <span class="arithmatex">$p$</span>. Note that the <span class="arithmatex">$2$</span> green points of the previous image had <span class="arithmatex">$p$</span> in its north-north-east octant and are not in the active set anymore, because they already found their nearest neighbor.</em></p>
 </div>
-
 <p>When we add a new point point <span class="arithmatex">$p$</span>, for every point <span class="arithmatex">$s$</span> that has it in its octant we can safely assign <span class="arithmatex">$p$</span> as the nearest neighbor. This is true because their distance is <span class="arithmatex">$d(p,s) = |x_p - x_s| + |y_p - y_s| = (x_p + y_p) - (x_s + y_s)$</span>, because <span class="arithmatex">$p$</span> is in the north-north-east octant. As all the next points will not have a smaller value of <span class="arithmatex">$x + y$</span> because of the sorting step, <span class="arithmatex">$p$</span> is guaranteed to have the smaller distance. We can then remove all such points from the active set, and finally add <span class="arithmatex">$p$</span> to the active set.</p>
 <p>The next question is how to efficiently find which points <span class="arithmatex">$s$</span> have <span class="arithmatex">$p$</span> in the north-north-east octant. That is, which points <span class="arithmatex">$s$</span> satisfy:</p>
 <ul>
@@ -8205,7 +8199,7 @@ Here we show a way of finding the MST in <span class="arithmatex">$O(n \log{n})$
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="NaimSS" data-bi-name="contributorprofile" target="_blank">NaimSS</a> (71.95%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (11.11%)</li><li><a href="#" title="Gabriel Ribeiro Paiva" data-bi-name="contributorprofile" target="_blank">Gabriel Ribeiro Paiva</a> (10.05%)</li><li><a href="#" title="Izan Beltran" data-bi-name="contributorprofile" target="_blank">Izan Beltran</a> (3.7%)</li><li><a href="#" title="Shoot" data-bi-name="contributorprofile" target="_blank">Shoot</a> (1.59%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (1.06%)</li><li><a href="#" title="DjukicAleksej" data-bi-name="contributorprofile" target="_blank">DjukicAleksej</a> (0.53%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="NaimSS" data-bi-name="contributorprofile" target="_blank">NaimSS</a> (67.67%)</li><li><a href="#" title="Not Committed Yet" data-bi-name="contributorprofile" target="_blank">Not Committed Yet</a> (11.94%)</li><li><a href="#" title="Gabriel Ribeiro Paiva" data-bi-name="contributorprofile" target="_blank">Gabriel Ribeiro Paiva</a> (9.45%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (4.98%)</li><li><a href="#" title="Izan Beltran" data-bi-name="contributorprofile" target="_blank">Izan Beltran</a> (3.48%)</li><li><a href="#" title="Shoot" data-bi-name="contributorprofile" target="_blank">Shoot</a> (1.49%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (1.0%)</li></ul>
 </ul>
                 
               </article>

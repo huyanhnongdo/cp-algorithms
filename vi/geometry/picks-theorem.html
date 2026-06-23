@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#picks-theorem" class="md-skip">
+        <a href="#inh-ly-pick-picks-theorem" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4760,10 +4760,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#formula" class="md-nav__link">
+  <a href="#cong-thuc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Formula
+        Công thức
       
     </span>
   </a>
@@ -4771,10 +4771,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proof" class="md-nav__link">
+  <a href="#chung-minh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Proof
+        Chứng minh
       
     </span>
   </a>
@@ -4782,10 +4782,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generalization-to-higher-dimensions" class="md-nav__link">
+  <a href="#tong-quat-hoa-cho-khong-gian-nhieu-chieu" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Generalization to higher dimensions
+        Tổng quát hóa cho không gian nhiều chiều
       
     </span>
   </a>
@@ -4793,10 +4793,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#extra-resources" class="md-nav__link">
+  <a href="#tai-lieu-bo-sung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Extra Resources
+        Tài liệu bổ sung
       
     </span>
   </a>
@@ -7971,13 +7971,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/picks-theorem.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/picks-theorem.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/picks-theorem.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/picks-theorem.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7988,22 +7988,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8035,49 +8019,49 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="picks-theorem">Pick's Theorem<a class="headerlink" href="#picks-theorem" title="Permanent link">&para;</a></h1>
-<p>A polygon without self-intersections is called lattice if all its vertices have integer coordinates in some 2D grid. Pick's theorem provides a way to compute the area of this polygon through the number of vertices that are lying on the boundary and the number of vertices that lie strictly inside the polygon.</p>
-<h2 id="formula">Formula<a class="headerlink" href="#formula" title="Permanent link">&para;</a></h2>
-<p>Given a certain lattice polygon with non-zero area.</p>
-<p>We denote its area by <span class="arithmatex">$S$</span>, the number of points with integer coordinates lying strictly inside the polygon by <span class="arithmatex">$I$</span> and the number of points lying on polygon sides by <span class="arithmatex">$B$</span>.</p>
-<p>Then, the <strong>Pick's formula</strong> states:</p>
+<h1 id="inh-ly-pick-picks-theorem">Định lý Pick (Pick's Theorem)<a class="headerlink" href="#inh-ly-pick-picks-theorem" title="Permanent link">&para;</a></h1>
+<p>Một đa giác không tự cắt được gọi là đa giác lưới (lattice polygon) nếu tất cả các đỉnh của nó đều có tọa độ nguyên trên hệ tọa độ 2D. Định lý Pick cung cấp một cách để tính diện tích của đa giác này thông qua số lượng các điểm lưới nằm trên biên và số lượng các điểm lưới nằm hoàn toàn bên trong đa giác.</p>
+<h2 id="cong-thuc">Công thức<a class="headerlink" href="#cong-thuc" title="Permanent link">&para;</a></h2>
+<p>Cho một đa giác lưới nhất định có diện tích khác không.</p>
+<p>Ta ký hiệu diện tích của nó là <span class="arithmatex">$S$</span>, số điểm có tọa độ nguyên nằm hoàn toàn bên trong đa giác là <span class="arithmatex">$I$</span> và số điểm nằm trên các cạnh của đa giác là <span class="arithmatex">$B$</span>.</p>
+<p>Khi đó, <strong>công thức Pick</strong> phát biểu rằng:</p>
 <div class="arithmatex">$$S=I+\frac{B}{2}-1$$</div>
-<p>In particular, if the values of <span class="arithmatex">$I$</span> and <span class="arithmatex">$B$</span> for a polygon are given, the area can be calculated in <span class="arithmatex">$O(1)$</span> without even knowing the vertices.</p>
-<p>This formula was discovered and proven by Austrian mathematician Georg Alexander Pick in 1899.</p>
-<h2 id="proof">Proof<a class="headerlink" href="#proof" title="Permanent link">&para;</a></h2>
-<p>The proof is carried out in many stages: from simple polygons to arbitrary ones:</p>
+<p>Đặc biệt, nếu đã biết các giá trị của <span class="arithmatex">$I$</span> và <span class="arithmatex">$B$</span> cho một đa giác, diện tích có thể được tính toán trong <span class="arithmatex">$O(1)$</span> mà không cần biết tọa độ các đỉnh.</p>
+<p>Công thức này được nhà toán học người Áo Georg Alexander Pick khám phá và chứng minh vào năm 1899.</p>
+<h2 id="chung-minh">Chứng minh<a class="headerlink" href="#chung-minh" title="Permanent link">&para;</a></h2>
+<p>Việc chứng minh được thực hiện qua nhiều giai đoạn: từ các đa giác đơn giản đến các đa giác bất kỳ:</p>
 <ul>
 <li>
-<p>A single square: <span class="arithmatex">$S=1, I=0, B=4$</span>, which satisfies the formula.</p>
+<p>Một hình vuông đơn vị: <span class="arithmatex">$S=1, I=0, B=4$</span>, thỏa mãn công thức.</p>
 </li>
 <li>
-<p>An arbitrary non-degenerate rectangle with sides parallel to coordinate axes: Assume <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span> be the length of the sides of rectangle. Then, <span class="arithmatex">$S=ab, I=(a-1)(b-1), B=2(a+b)$</span>. On substituting, we see that formula is true.</p>
+<p>Một hình chữ nhật không suy biến với các cạnh song song với các trục tọa độ: Giả sử <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span> là độ dài các cạnh của hình chữ nhật. Khi đó, <span class="arithmatex">$S=ab, I=(a-1)(b-1), B=2(a+b)$</span>. Khi thay thế vào, ta thấy công thức là đúng.</p>
 </li>
 <li>
-<p>A right angle with legs parallel to the axes: To prove this, note that any such triangle can be obtained by cutting off a rectangle by a diagonal. Denoting the number of integral points lying on diagonal by <span class="arithmatex">$c$</span>, it can be shown that Pick's formula holds for this triangle regardless of <span class="arithmatex">$c$</span>.</p>
+<p>Một tam giác vuông với các cạnh góc vuông song song với các trục tọa độ: Để chứng minh điều này, hãy lưu ý rằng bất kỳ tam giác nào như vậy cũng có thể thu được bằng cách cắt một hình chữ nhật bởi một đường chéo. Gọi <span class="arithmatex">$c$</span> là số điểm nguyên nằm trên đường chéo, có thể chứng minh rằng công thức Pick đúng với tam giác này bất kể <span class="arithmatex">$c$</span> là bao nhiêu.</p>
 </li>
 <li>
-<p>An arbitrary triangle: Note that any such triangle can be turned into a rectangle by attaching it to sides of right-angled triangles with legs parallel to the axes (you will not need more than 3 such triangles). From here, we can get correct formula for any triangle.</p>
+<p>Một tam giác bất kỳ: Lưu ý rằng bất kỳ tam giác nào cũng có thể được biến thành một hình chữ nhật bằng cách gắn thêm các tam giác vuông có các cạnh song song với trục tọa độ (bạn sẽ không cần nhiều hơn 3 tam giác như vậy). Từ đây, ta có thể thu được công thức chính xác cho bất kỳ tam giác nào.</p>
 </li>
 <li>
-<p>An arbitrary polygon: To prove this, triangulate it, ie, divide into triangles with integral coordinates. Further, it is possible to prove that Pick's theorem retains its validity when a polygon is added to a triangle. Thus, we have proven Pick's formula for arbitrary polygon.</p>
+<p>Một đa giác bất kỳ: Để chứng minh điều này, hãy thực hiện tam giác hóa nó, tức là chia nó thành các tam giác với các tọa độ nguyên. Hơn nữa, có thể chứng minh rằng định lý Pick vẫn giữ nguyên tính hợp lệ khi một đa giác được cộng thêm một tam giác. Do đó, chúng ta đã chứng minh được công thức Pick cho đa giác bất kỳ.</p>
 </li>
 </ul>
-<h2 id="generalization-to-higher-dimensions">Generalization to higher dimensions<a class="headerlink" href="#generalization-to-higher-dimensions" title="Permanent link">&para;</a></h2>
-<p>Unfortunately, this simple and beautiful formula cannot be generalized to higher dimensions.</p>
-<p>John Reeve demonstrated this by proposing a tetrahedron (<strong>Reeve tetrahedron</strong>) with following vertices in 1957:</p>
+<h2 id="tong-quat-hoa-cho-khong-gian-nhieu-chieu">Tổng quát hóa cho không gian nhiều chiều<a class="headerlink" href="#tong-quat-hoa-cho-khong-gian-nhieu-chieu" title="Permanent link">&para;</a></h2>
+<p>Thật không may, công thức đơn giản và đẹp đẽ này không thể được tổng quát hóa cho các không gian nhiều chiều hơn.</p>
+<p>John Reeve đã chứng minh điều này bằng cách đề xuất một hình tứ diện (<strong>tứ diện Reeve</strong>) với các đỉnh sau vào năm 1957:</p>
 <div class="arithmatex">$$A=(0,0,0),
 B=(1,0,0),
 C=(0,1,0),
 D=(1,1,k),$$</div>
-<p>where <span class="arithmatex">$k$</span> can be any natural number. Then for any <span class="arithmatex">$k$</span>, the tetrahedron <span class="arithmatex">$ABCD$</span> does not contain integer point inside it and has only <span class="arithmatex">$4$</span> points on its borders, <span class="arithmatex">$A, B, C, D$</span>. Thus, the volume and surface area may vary in spite of unchanged number of points within and on boundary. Therefore, Pick's theorem doesn't allow generalizations.</p>
-<p>However, higher dimensions still has a generalization using <strong>Ehrhart polynomials</strong> but they are quite complex and depends not only on points inside but also on the boundary of polytype.</p>
-<h2 id="extra-resources">Extra Resources<a class="headerlink" href="#extra-resources" title="Permanent link">&para;</a></h2>
-<p>A few simple examples and a simple proof of Pick's theorem can be found <a href="http://www.geometer.org/mathcircles/pick.pdf">here</a>.</p>
+<p>trong đó <span class="arithmatex">$k$</span> có thể là bất kỳ số tự nhiên nào. Khi đó với bất kỳ <span class="arithmatex">$k$</span>, hình tứ diện <span class="arithmatex">$ABCD$</span> không chứa điểm nguyên nào bên trong và chỉ có <span class="arithmatex">$4$</span> điểm trên các biên của nó, <span class="arithmatex">$A, B, C, D$</span>. Do đó, thể tích và diện tích bề mặt có thể thay đổi mặc dù số lượng điểm bên trong và trên biên không đổi. Vì vậy, định lý Pick không cho phép tổng quát hóa.</p>
+<p>Tuy nhiên, các chiều cao hơn vẫn có một sự tổng quát hóa bằng cách sử dụng <strong>đa thức Ehrhart</strong> (Ehrhart polynomials), nhưng chúng khá phức tạp và không chỉ phụ thuộc vào các điểm bên trong mà còn phụ thuộc vào biên của đa diện (polytype).</p>
+<h2 id="tai-lieu-bo-sung">Tài liệu bổ sung<a class="headerlink" href="#tai-lieu-bo-sung" title="Permanent link">&para;</a></h2>
+<p>Một vài ví dụ đơn giản và một chứng minh đơn giản của định lý Pick có thể được tìm thấy <a href="http://www.geometer.org/mathcircles/pick.pdf">tại đây</a>.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Pranjal Jain" data-bi-name="contributorprofile" target="_blank">Pranjal Jain</a> (81.82%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (10.91%)</li><li><a href="#" title="Arafat" data-bi-name="contributorprofile" target="_blank">Arafat</a> (5.45%)</li><li><a href="#" title="princezna" data-bi-name="contributorprofile" target="_blank">princezna</a> (1.82%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>

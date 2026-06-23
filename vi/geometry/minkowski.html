@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#minkowski-sum-of-convex-polygons" class="md-skip">
+        <a href="#tong-minkowski-cua-cac-a-giac-loi" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4732,10 +4732,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#definition" class="md-nav__link">
+  <a href="#inh-nghia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Definition
+        Định nghĩa
       
     </span>
   </a>
@@ -4743,10 +4743,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -4754,10 +4754,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#visualization" class="md-nav__link">
+  <a href="#minh-hoa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Visualization
+        Minh họa
       
     </span>
   </a>
@@ -4765,10 +4765,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#distance-between-two-polygons" class="md-nav__link">
+  <a href="#khoang-cach-giua-hai-a-giac" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Distance between two polygons
+        Khoảng cách giữa hai đa giác
       
     </span>
   </a>
@@ -4776,10 +4776,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -4787,10 +4787,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#problems" class="md-nav__link">
+  <a href="#bai-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problems
+        Bài tập
       
     </span>
   </a>
@@ -7993,13 +7993,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/minkowski.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/minkowski.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/minkowski.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/minkowski.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8010,34 +8010,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8057,57 +8029,43 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="minkowski-sum-of-convex-polygons">Minkowski sum of convex polygons<a class="headerlink" href="#minkowski-sum-of-convex-polygons" title="Permanent link">&para;</a></h1>
-<h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h2>
-<p>Consider two sets <span class="arithmatex">$A$</span> and <span class="arithmatex">$B$</span> of points on a plane. Minkowski sum <span class="arithmatex">$A + B$</span> is defined as <span class="arithmatex">$\{a + b| a \in A, b \in B\}$</span>.
-Here we will consider the case when <span class="arithmatex">$A$</span> and <span class="arithmatex">$B$</span> consist of convex polygons <span class="arithmatex">$P$</span> and <span class="arithmatex">$Q$</span> with their interiors.
-Throughout this article we will identify polygons with ordered sequences of their vertices, so that notation like <span class="arithmatex">$|P|$</span> or
-<span class="arithmatex">$P_i$</span> makes sense.
-It turns out that the sum of convex polygons <span class="arithmatex">$P$</span> and <span class="arithmatex">$Q$</span> is a convex polygon with at most <span class="arithmatex">$|P| + |Q|$</span> vertices.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>Here we consider the polygons to be cyclically enumerated, i. e. <span class="arithmatex">$P_{|P|} = P_0,\ Q_{|Q|} = Q_0$</span> and so on.</p>
-<p>Since the size of the sum is linear in terms of the sizes of initial polygons, we should aim at finding a linear-time algorithm.
-Suppose that both polygons are ordered counter-clockwise. Consider sequences of edges <span class="arithmatex">$\{\overrightarrow{P_iP_{i+1}}\}$</span>
-and <span class="arithmatex">$\{\overrightarrow{Q_jQ_{j+1}}\}$</span> ordered by polar angle. We claim that the sequence of edges of <span class="arithmatex">$P + Q$</span> can be obtained by merging
-these two sequences preserving polar angle order and replacing consecutive co-directed vectors with their sum. Straightforward usage of this idea results
-in a linear-time algorithm, however, restoring the vertices of <span class="arithmatex">$P + Q$</span> from the sequence of sides requires repeated addition of vectors,
-which may introduce unwanted precision issues if we're working with floating-point coordinates, so we will describe a slight
-modification of this idea.</p>
-<p>Firstly we should reorder the vertices in such a way that the first vertex
-of each polygon has the lowest y-coordinate (in case of several such vertices pick the one with the smallest x-coordinate). After that the sides of both polygons
-will become sorted by polar angle, so there is no need to sort them manually.
-Now we create two pointers <span class="arithmatex">$i$</span> (pointing to a vertex of <span class="arithmatex">$P$</span>) and <span class="arithmatex">$j$</span> (pointing to a vertex of <span class="arithmatex">$Q$</span>), both initially set to 0.
-We repeat the following steps while <span class="arithmatex">$i &lt; |P|$</span> or <span class="arithmatex">$j &lt; |Q|$</span>.</p>
+<h1 id="tong-minkowski-cua-cac-a-giac-loi">Tổng Minkowski của các đa giác lồi<a class="headerlink" href="#tong-minkowski-cua-cac-a-giac-loi" title="Permanent link">&para;</a></h1>
+<h2 id="inh-nghia">Định nghĩa<a class="headerlink" href="#inh-nghia" title="Permanent link">&para;</a></h2>
+<p>Xét hai tập hợp điểm <span class="arithmatex">$A$</span> và <span class="arithmatex">$B$</span> trên mặt phẳng. Tổng Minkowski <span class="arithmatex">$A + B$</span> được định nghĩa là <span class="arithmatex">$\{a + b| a \in A, b \in B\}$</span>.
+Ở đây chúng ta sẽ xem xét trường hợp <span class="arithmatex">$A$</span> và <span class="arithmatex">$B$</span> là các đa giác lồi (Convex Polygon) <span class="arithmatex">$P$</span> và <span class="arithmatex">$Q$</span> bao gồm cả phần biên và phần bên trong.
+Trong suốt bài viết này, chúng ta sẽ biểu diễn đa giác bằng các dãy đỉnh có thứ tự, để các ký hiệu như <span class="arithmatex">$|P|$</span> hoặc <span class="arithmatex">$P_i$</span> có ý nghĩa.
+Kết quả cho thấy tổng của các đa giác lồi <span class="arithmatex">$P$</span> và <span class="arithmatex">$Q$</span> là một đa giác lồi với tối đa <span class="arithmatex">$|P| + |Q|$</span> đỉnh.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Ở đây chúng ta xem xét các đa giác được đánh số theo chu kỳ, nghĩa là <span class="arithmatex">$P_{|P|} = P_0,\ Q_{|Q|} = Q_0$</span>, v.v.</p>
+<p>Vì kích thước của tổng là tuyến tính theo kích thước của các đa giác ban đầu, chúng ta nên hướng tới một thuật toán có độ phức tạp thời gian tuyến tính.
+Giả sử cả hai đa giác đều được sắp xếp theo ngược chiều kim đồng hồ. Xét các dãy cạnh <span class="arithmatex">$\{\overrightarrow{P_iP_{i+1}}\}$</span> và <span class="arithmatex">$\{\overrightarrow{Q_jQ_{j+1}}\}$</span> được sắp xếp theo góc cực (polar angle). Chúng ta khẳng định rằng dãy các cạnh của <span class="arithmatex">$P + Q$</span> có thể thu được bằng cách trộn (merge) hai dãy này trong khi vẫn giữ nguyên thứ tự góc cực và thay thế các vector cùng hướng liên tiếp bằng tổng của chúng. Việc sử dụng trực tiếp ý tưởng này dẫn đến một thuật toán thời gian tuyến tính, tuy nhiên, việc khôi phục các đỉnh của <span class="arithmatex">$P + Q$</span> từ dãy các cạnh đòi hỏi việc cộng vector nhiều lần, điều này có thể gây ra các vấn đề sai số nếu chúng ta làm việc với tọa độ số thực (floating-point), vì vậy chúng ta sẽ mô tả một sửa đổi nhỏ cho ý tưởng này.</p>
+<p>Đầu tiên, chúng ta nên sắp xếp lại các đỉnh sao cho đỉnh đầu tiên của mỗi đa giác có tọa độ y nhỏ nhất (trong trường hợp có nhiều đỉnh như vậy, chọn đỉnh có tọa độ x nhỏ nhất). Sau đó, các cạnh của cả hai đa giác sẽ tự động được sắp xếp theo góc cực, vì vậy không cần phải tự sắp xếp chúng.
+Bây giờ, chúng ta tạo hai con trỏ <span class="arithmatex">$i$</span> (trỏ đến một đỉnh của <span class="arithmatex">$P$</span>) và <span class="arithmatex">$j$</span> (trỏ đến một đỉnh của <span class="arithmatex">$Q$</span>), cả hai ban đầu đều bằng 0.
+Chúng ta lặp lại các bước sau khi <span class="arithmatex">$i &lt; |P|$</span> hoặc <span class="arithmatex">$j &lt; |Q|$</span> còn thỏa mãn:</p>
 <ol>
 <li>
-<p>Append <span class="arithmatex">$P_i + Q_j$</span> to <span class="arithmatex">$P + Q$</span>.</p>
+<p>Thêm <span class="arithmatex">$P_i + Q_j$</span> vào <span class="arithmatex">$P + Q$</span>.</p>
 </li>
 <li>
-<p>Compare polar angles of <span class="arithmatex">$\overrightarrow{P_iP_{i + 1}}$</span> and <span class="arithmatex">$\overrightarrow{Q_jQ_{j+1}}$</span>.</p>
+<p>So sánh góc cực của <span class="arithmatex">$\overrightarrow{P_iP_{i + 1}}$</span> và <span class="arithmatex">$\overrightarrow{Q_jQ_{j+1}}$</span>.</p>
 </li>
 <li>
-<p>Increment the pointer which corresponds to the smallest angle (if the angles are equal, increment both).</p>
+<p>Tăng con trỏ tương ứng với góc nhỏ hơn (nếu các góc bằng nhau, tăng cả hai).</p>
 </li>
 </ol>
-<h2 id="visualization">Visualization<a class="headerlink" href="#visualization" title="Permanent link">&para;</a></h2>
-<p>Here is a nice visualization, which may help you understand what is going on.</p>
+<h2 id="minh-hoa">Minh họa<a class="headerlink" href="#minh-hoa" title="Permanent link">&para;</a></h2>
+<p>Dưới đây là hình ảnh minh họa, có thể giúp bạn hiểu rõ quá trình này.</p>
 <div style="text-align: center;">
-  <img src="minkowski.gif" alt="Visual">
+<p><img alt="Minh họa" src="../../geometry/minkowski.gif" /></p>
 </div>
-
-<h2 id="distance-between-two-polygons">Distance between two polygons<a class="headerlink" href="#distance-between-two-polygons" title="Permanent link">&para;</a></h2>
-<p>One of the most common applications of Minkowski sum is computing the distance between two convex polygons (or simply checking whether they intersect).
-The distance between two convex polygons <span class="arithmatex">$P$</span> and <span class="arithmatex">$Q$</span> is defined as <span class="arithmatex">$\min\limits_{a \in P, b \in Q} ||a - b||$</span>. One can note that
-the distance is always attained between two vertices or a vertex and an edge, so we can easily find the distance in <span class="arithmatex">$O(|P||Q|)$</span>. However,
-with clever usage of Minkowski sum we can reduce the complexity to <span class="arithmatex">$O(|P| + |Q|)$</span>.</p>
-<p>If we reflect <span class="arithmatex">$Q$</span> through the point <span class="arithmatex">$(0, 0)$</span> obtaining polygon <span class="arithmatex">$-Q$</span>, the problem boils down to finding the smallest distance between a point in
-<span class="arithmatex">$P + (-Q)$</span> and <span class="arithmatex">$(0, 0)$</span>. We can find that distance in linear time using the following idea.
-If <span class="arithmatex">$(0, 0)$</span> is inside or on the boundary of polygon, the distance is <span class="arithmatex">$0$</span>, otherwise the distance is attained between <span class="arithmatex">$(0, 0)$</span> and some vertex or edge of the polygon.
-Since Minkowski sum can be computed
-in linear time, we obtain a linear-time algorithm for finding the distance between two convex polygons.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>Below is the implementation of Minkowski sum for polygons with integer points. Note that in this case all computations can be done in integers since
-instead of computing polar angles and directly comparing them we can look at the sign of cross product of two vectors.</p>
+<h2 id="khoang-cach-giua-hai-a-giac">Khoảng cách giữa hai đa giác<a class="headerlink" href="#khoang-cach-giua-hai-a-giac" title="Permanent link">&para;</a></h2>
+<p>Một trong những ứng dụng phổ biến nhất của tổng Minkowski là tính khoảng cách giữa hai đa giác lồi (hoặc đơn giản là kiểm tra xem chúng có giao nhau hay không).
+Khoảng cách giữa hai đa giác lồi <span class="arithmatex">$P$</span> và <span class="arithmatex">$Q$</span> được định nghĩa là <span class="arithmatex">$\min\limits_{a \in P, b \in Q} ||a - b||$</span>. Ta có thể thấy rằng khoảng cách luôn đạt được giữa hai đỉnh hoặc giữa một đỉnh và một cạnh, vì vậy chúng ta có thể dễ dàng tìm khoảng cách trong <span class="arithmatex">$O(|P||Q|)$</span>. Tuy nhiên, với việc sử dụng khéo léo tổng Minkowski, chúng ta có thể giảm độ phức tạp xuống còn <span class="arithmatex">$O(|P| + |Q|)$</span>.</p>
+<p>Nếu chúng ta lấy đối xứng <span class="arithmatex">$Q$</span> qua điểm <span class="arithmatex">$(0, 0)$</span> để thu được đa giác <span class="arithmatex">$-Q$</span>, bài toán quy về việc tìm khoảng cách nhỏ nhất giữa một điểm trong <span class="arithmatex">$P + (-Q)$</span> và <span class="arithmatex">$(0, 0)$</span>. Chúng ta có thể tìm khoảng cách đó trong thời gian tuyến tính bằng ý tưởng sau:
+Nếu <span class="arithmatex">$(0, 0)$</span> nằm bên trong hoặc trên biên của đa giác, khoảng cách là <span class="arithmatex">$0$</span>, ngược lại khoảng cách đạt được giữa <span class="arithmatex">$(0, 0)$</span> và một đỉnh hoặc một cạnh nào đó của đa giác.
+Vì tổng Minkowski có thể được tính trong thời gian tuyến tính, chúng ta có một thuật toán thời gian tuyến tính để tìm khoảng cách giữa hai đa giác lồi.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Dưới đây là phần cài đặt tổng Minkowski cho các đa giác có tọa độ nguyên. Lưu ý rằng trong trường hợp này, tất cả các tính toán có thể được thực hiện trên số nguyên vì thay vì tính toán các góc cực và so sánh trực tiếp chúng, chúng ta có thể xem xét dấu của tích có hướng (cross product) của hai vector.</p>
 <div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">pt</span><span class="p">{</span>
 <span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
 <span class="w">    </span><span class="n">pt</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">pt</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
@@ -8153,7 +8111,7 @@ instead of computing polar angles and directly comparing them we can look at the
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="problems">Problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap">Bài tập<a class="headerlink" href="#bai-tap" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://codeforces.com/problemset/problem/87/E">Codeforces 87E Mogohu-Rea Idol</a></li>
 <li><a href="https://codeforces.com/contest/1195/problem/F">Codeforces 1195F Geometers Anonymous Club</a></li>
@@ -8162,7 +8120,7 @@ instead of computing polar angles and directly comparing them we can look at the
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Yury Semenov" data-bi-name="contributorprofile" target="_blank">Yury Semenov</a> (86.96%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (4.35%)</li><li><a href="#" title="Bergur Snorrason" data-bi-name="contributorprofile" target="_blank">Bergur Snorrason</a> (2.61%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (2.61%)</li><li><a href="#" title="Mert Koksal" data-bi-name="contributorprofile" target="_blank">Mert Koksal</a> (1.74%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (0.87%)</li><li><a href="#" title="samanyu" data-bi-name="contributorprofile" target="_blank">samanyu</a> (0.87%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>

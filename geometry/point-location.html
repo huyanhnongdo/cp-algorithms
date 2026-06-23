@@ -8013,6 +8013,10 @@ Describe the issue of this article in detail.
   
   
 
+  
+  
+  
+
 
 
 
@@ -8040,9 +8044,8 @@ This problem may arise when you need to locate some points in a Voronoi diagram 
 <p>Firstly, for each query point <span class="arithmatex">$p\ (x_0, y_0)$</span> we want to find such an edge that if the point belongs to any edge, the point lies on the edge we found, otherwise this edge must intersect the line <span class="arithmatex">$x = x_0$</span> at some unique point <span class="arithmatex">$(x_0, y)$</span> where <span class="arithmatex">$y &lt; y_0$</span> and this <span class="arithmatex">$y$</span> is maximum among all such edges.
 The following image shows both cases.</p>
 <div style="text-align: center;">
-  <img src="point_location_goal.png" alt="Image of Goal">
+<p><img alt="Image of Goal" src="point_location_goal.png" /></p>
 </div>
-
 <p>We will solve this problem offline using the sweep line algorithm. Let's iterate over x-coordinates of query points and edges' endpoints in increasing order and keep a set of edges <span class="arithmatex">$s$</span>. For each x-coordinate we will add some events beforehand.</p>
 <p>The events will be of four types: <em>add</em>, <em>remove</em>, <em>vertical</em>, <em>get</em>.
 For each vertical edge (both endpoints have the same x-coordinate) we will add one <em>vertical</em> event for the corresponding x-coordinate.
@@ -8051,9 +8054,8 @@ Finally, for each query point we will add one <em>get</em> event for its x-coord
 <p>For each x-coordinate we will sort the events by their types in order (<em>vertical</em>, <em>get</em>, <em>remove</em>, <em>add</em>).
 The following image shows all events in sorted order for each x-coordinate.</p>
 <div style="text-align: center;">
-  <img src="point_location_events.png" alt="Image of Events">
+<p><img alt="Image of Events" src="point_location_events.png" /></p>
 </div>
-
 <p>We will keep two sets during the sweep-line process.
 A set <span class="arithmatex">$t$</span> for all non-vertical edges, and one set <span class="arithmatex">$vert$</span> especially for the vertical ones.
 We will clear the set <span class="arithmatex">$vert$</span> at the beginning of processing each x-coordinate.</p>
@@ -8314,7 +8316,7 @@ For each query a pair <span class="arithmatex">$(1, i)$</span> is returned if th
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Yury Semenov" data-bi-name="contributorprofile" target="_blank">Yury Semenov</a> (94.33%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (2.33%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (2.0%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (0.67%)</li><li><a href="#" title="JustAnAverageGuy" data-bi-name="contributorprofile" target="_blank">JustAnAverageGuy</a> (0.33%)</li><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (0.33%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Yury Semenov" data-bi-name="contributorprofile" target="_blank">Yury Semenov</a> (93.09%)</li><li><a href="#" title="Not Committed Yet" data-bi-name="contributorprofile" target="_blank">Not Committed Yet</a> (2.63%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (2.3%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (0.66%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (0.66%)</li><li><a href="#" title="JustAnAverageGuy" data-bi-name="contributorprofile" target="_blank">JustAnAverageGuy</a> (0.33%)</li><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (0.33%)</li></ul>
 </ul>
                 
               </article>

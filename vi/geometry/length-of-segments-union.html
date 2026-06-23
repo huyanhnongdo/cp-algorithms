@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#length-of-the-union-of-segments" class="md-skip">
+        <a href="#o-dai-hop-cua-cac-oan-thang" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4565,10 +4565,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#solution" class="md-nav__link">
+  <a href="#loi-giai" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Solution
+        Lời giải
       
     </span>
   </a>
@@ -4576,10 +4576,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -7949,13 +7949,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/length-of-segments-union.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/length-of-segments-union.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/length-of-segments-union.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/length-of-segments-union.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7966,30 +7966,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8021,18 +7997,18 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="length-of-the-union-of-segments">Length of the union of segments<a class="headerlink" href="#length-of-the-union-of-segments" title="Permanent link">&para;</a></h1>
-<p>Given <span class="arithmatex">$n$</span> segments on a line, each described by a pair of coordinates <span class="arithmatex">$(a_{i1}, a_{i2})$</span>.
-We have to find the length of their union.</p>
-<p>The following algorithm was proposed by Klee in 1977.
-It works in <span class="arithmatex">$O(n\log n)$</span> and has been proven to be the asymptotically optimal.</p>
-<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
-<p>We store in an array <span class="arithmatex">$x$</span> the endpoints of all the segments sorted by their values.
-And additionally we store whether it is a left end or a right end of a segment.
-Now we iterate over the array, keeping a counter <span class="arithmatex">$c$</span> of currently opened segments.
-Whenever the current element is a left end, we increase this counter, and otherwise we decrease it.
-To compute the answer, we take the length between the last two <span class="arithmatex">$x$</span> values <span class="arithmatex">$x_i - x_{i-1}$</span>, whenever we come to a new coordinate, and there is currently at least one segment is open.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<h1 id="o-dai-hop-cua-cac-oan-thang">Độ dài hợp của các đoạn thẳng<a class="headerlink" href="#o-dai-hop-cua-cac-oan-thang" title="Permanent link">&para;</a></h1>
+<p>Cho <span class="arithmatex">$n$</span> đoạn thẳng trên một đường thẳng, mỗi đoạn được mô tả bởi một cặp tọa độ <span class="arithmatex">$(a_{i1}, a_{i2})$</span>.
+Chúng ta cần tìm độ dài hợp của các đoạn thẳng đó.</p>
+<p>Thuật toán sau đây được đề xuất bởi Klee vào năm 1977.
+Nó hoạt động với độ phức tạp thời gian <span class="arithmatex">$O(n\log n)$</span> và đã được chứng minh là tối ưu về mặt tiệm cận.</p>
+<h2 id="loi-giai">Lời giải<a class="headerlink" href="#loi-giai" title="Permanent link">&para;</a></h2>
+<p>Chúng ta lưu trữ các điểm đầu mút của tất cả các đoạn thẳng vào một mảng <span class="arithmatex">$x$</span>, được sắp xếp theo giá trị tọa độ.
+Ngoài ra, chúng ta lưu trữ thêm thông tin cho biết đó là điểm đầu bên trái hay điểm đầu bên phải của một đoạn thẳng.
+Bây giờ, chúng ta duyệt qua mảng này, duy trì một biến đếm <span class="arithmatex">$c$</span> số lượng các đoạn thẳng đang mở.
+Mỗi khi phần tử hiện tại là một điểm đầu bên trái, chúng ta tăng biến đếm này lên, và ngược lại, chúng ta giảm nó đi.
+Để tính kết quả, mỗi khi đến một tọa độ mới, nếu hiện đang có ít nhất một đoạn thẳng được mở, chúng ta cộng vào kết quả khoảng cách giữa tọa độ hiện tại và giá trị <span class="arithmatex">$x$</span> trước đó <span class="arithmatex">$x_i - x_{i-1}$</span>.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">length_union</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
 <span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="mi">2</span><span class="p">);</span>
@@ -8059,7 +8035,7 @@ To compute the answer, we take the length between the last two <span class="arit
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (41.67%)</li><li><a href="#" title="Edward Lemur" data-bi-name="contributorprofile" target="_blank">Edward Lemur</a> (35.42%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (12.5%)</li><li><a href="#" title="Bhuvnesh Jain" data-bi-name="contributorprofile" target="_blank">Bhuvnesh Jain</a> (6.25%)</li><li><a href="#" title="Koustav Chowdhury" data-bi-name="contributorprofile" target="_blank">Koustav Chowdhury</a> (2.08%)</li><li><a href="#" title="Koustubh Rao" data-bi-name="contributorprofile" target="_blank">Koustubh Rao</a> (2.08%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>

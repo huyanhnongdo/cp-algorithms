@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#finding-intersection-of-two-segments" class="md-skip">
+        <a href="#tim-giao-iem-cua-hai-oan-thang" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4453,10 +4453,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#solution" class="md-nav__link">
+  <a href="#loi-giai" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Solution
+        Lời giải
       
     </span>
   </a>
@@ -4464,10 +4464,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -7949,13 +7949,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/segments-intersection.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/segments-intersection.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/segments-intersection.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/segments-intersection.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7966,18 +7966,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8009,28 +7997,28 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="finding-intersection-of-two-segments">Finding intersection of two segments<a class="headerlink" href="#finding-intersection-of-two-segments" title="Permanent link">&para;</a></h1>
-<p>You are given two segments AB and CD, described as pairs of their endpoints. Each segment can be a single point if its endpoints are the same. 
-You have to find the intersection of these segments, which can be empty (if the segments don't intersect), a single point or a segment (if the given segments overlap).</p>
-<h2 id="solution">Solution<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h2>
-<p>We can find the intersection point of segments in the same way as <a href="lines-intersection.html">the intersection of lines</a>: 
-reconstruct line equations from the segments' endpoints and check whether they are parallel. </p>
-<p>If the lines are not parallel, we need to find their point of intersection and check whether it belongs to both segments
-(to do this it's sufficient to verify that the intersection point belongs to each segment projected on X and Y axes). 
-In this case the answer will be either "no intersection" or the single point of lines' intersection.</p>
-<p>The case of parallel lines is slightly more complicated (the case of one or more segments being a single point also belongs here).
-In this case we need to check that both segments belong to the same line.
-If they don't, the answer is "no intersection".
-If they do, the answer is the intersection of the segments belonging to the same line, which is obtained by 
-ordering the endpoints of both segments in the increasing order of certain coordinate and taking the rightmost of left endpoints and the leftmost of right endpoints.</p>
-<p>If both segments are single points, these points have to be identical, and it makes sense to perform this check separately.</p>
-<p>In the beginning of the algorithm let's add a bounding box check - it is necessary for the case when the segments belong to the same line, 
-and (being a lightweight check) it allows the algorithm to work faster on average on random tests.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>Here is the implementation, including all helper functions for lines and segments processing.</p>
-<p>The main function <code>intersect</code> returns true if the segments have a non-empty intersection, 
-and stores endpoints of the intersection segment in arguments <code>left</code> and <code>right</code>. 
-If the answer is a single point, the values written to <code>left</code> and <code>right</code> will be the same.</p>
+<h1 id="tim-giao-iem-cua-hai-oan-thang">Tìm giao điểm của hai đoạn thẳng<a class="headerlink" href="#tim-giao-iem-cua-hai-oan-thang" title="Permanent link">&para;</a></h1>
+<p>Bạn được cho hai đoạn thẳng AB và CD, được mô tả bởi cặp điểm đầu mút của chúng. Mỗi đoạn thẳng có thể là một điểm duy nhất nếu hai đầu mút của nó trùng nhau.
+Bạn cần tìm giao điểm của hai đoạn thẳng này; kết quả có thể là rỗng (nếu các đoạn thẳng không giao nhau), một điểm duy nhất, hoặc một đoạn thẳng (nếu các đoạn thẳng chồng lấp lên nhau).</p>
+<h2 id="loi-giai">Lời giải<a class="headerlink" href="#loi-giai" title="Permanent link">&para;</a></h2>
+<p>Chúng ta có thể tìm giao điểm của các đoạn thẳng theo cách tương tự như <a href="lines-intersection.html">giao điểm của hai đường thẳng</a>:
+xây dựng phương trình đường thẳng từ các đầu mút của đoạn thẳng và kiểm tra xem chúng có song song hay không.</p>
+<p>Nếu các đường thẳng không song song, chúng ta cần tìm giao điểm của chúng và kiểm tra xem điểm đó có thuộc về cả hai đoạn thẳng hay không
+(để làm điều này, chỉ cần xác minh rằng giao điểm thuộc về mỗi đoạn thẳng khi chiếu lên trục X và trục Y).
+Trong trường hợp này, kết quả sẽ là "không giao nhau" hoặc là một điểm duy nhất tại giao điểm của hai đường thẳng.</p>
+<p>Trường hợp các đường thẳng song song thì phức tạp hơn một chút (trường hợp một hoặc cả hai đoạn thẳng là một điểm duy nhất cũng thuộc nhóm này).
+Trong trường hợp này, chúng ta cần kiểm tra xem cả hai đoạn thẳng có cùng nằm trên một đường thẳng hay không.
+Nếu không, kết quả là "không giao nhau".
+Nếu có, kết quả là phần giao của các đoạn thẳng cùng nằm trên một đường thẳng đó, thu được bằng cách
+sắp xếp các đầu mút của cả hai đoạn thẳng theo thứ tự tăng dần của một tọa độ nào đó, sau đó lấy giá trị lớn nhất trong các đầu mút bên trái và giá trị nhỏ nhất trong các đầu mút bên phải.</p>
+<p>Nếu cả hai đoạn thẳng đều là các điểm đơn lẻ, các điểm này phải trùng nhau, và việc thực hiện kiểm tra riêng cho trường hợp này là cần thiết.</p>
+<p>Ở phần đầu của thuật toán, hãy thêm bước kiểm tra hộp bao (bounding box) - điều này cần thiết cho trường hợp các đoạn thẳng cùng nằm trên một đường thẳng,
+và (là một bước kiểm tra nhẹ nhàng) nó cho phép thuật toán chạy nhanh hơn trung bình trên các bộ test ngẫu nhiên.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Dưới đây là phần cài đặt, bao gồm tất cả các hàm hỗ trợ để xử lý đường thẳng và đoạn thẳng.</p>
+<p>Hàm chính <code>intersect</code> trả về <code>true</code> nếu hai đoạn thẳng có giao điểm khác rỗng,
+và lưu các đầu mút của đoạn giao vào các tham số <code>left</code> và <code>right</code>.
+Nếu kết quả là một điểm duy nhất, các giá trị được ghi vào <code>left</code> và <code>right</code> sẽ giống nhau.</p>
 <div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">EPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1E-9</span><span class="p">;</span>
 
 <span class="k">struct</span><span class="w"> </span><span class="nc">pt</span><span class="w"> </span><span class="p">{</span>
@@ -8111,7 +8099,7 @@ If the answer is a single point, the values written to <code>left</code> and <co
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (92.37%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (5.08%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (2.54%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>

@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#search-for-a-pair-of-intersecting-segments" class="md-skip">
+        <a href="#tim-kiem-mot-cap-oan-thang-cat-nhau" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4982,10 +4982,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -4993,10 +4993,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -5004,10 +5004,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#problems" class="md-nav__link">
+  <a href="#bai-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problems
+        Bài tập
       
     </span>
   </a>
@@ -7960,13 +7960,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/intersecting_segments.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/geometry/intersecting_segments.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/intersecting_segments.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/geometry/intersecting_segments.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7977,34 +7977,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8036,56 +8008,53 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="search-for-a-pair-of-intersecting-segments">Search for a pair of intersecting segments<a class="headerlink" href="#search-for-a-pair-of-intersecting-segments" title="Permanent link">&para;</a></h1>
-<p>Given <span class="arithmatex">$n$</span> line segments on the plane. It is required to check whether at least two of them intersect with each other.
-If the answer is yes, then print this pair of intersecting segments; it is enough to choose any of them among several answers.</p>
-<p>The naive solution algorithm is to iterate over all pairs of segments in <span class="arithmatex">$O(n^2)$</span> and check for each pair whether they intersect or not. This article describes an algorithm with the runtime time <span class="arithmatex">$O(n \log n)$</span>, which is based on the <strong>sweep line algorithm</strong>.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>Let's draw a vertical line <span class="arithmatex">$x = -\infty$</span> mentally and start moving this line to the right.
-In the course of its movement, this line will meet with segments, and at each time a segment intersects with our line it intersects in exactly one point (we will assume that there are no vertical segments).</p>
+<h1 id="tim-kiem-mot-cap-oan-thang-cat-nhau">Tìm kiếm một cặp đoạn thẳng cắt nhau<a class="headerlink" href="#tim-kiem-mot-cap-oan-thang-cat-nhau" title="Permanent link">&para;</a></h1>
+<p>Cho <span class="arithmatex">$n$</span> đoạn thẳng trên mặt phẳng. Cần kiểm tra xem có ít nhất hai đoạn thẳng nào cắt nhau hay không.
+Nếu câu trả lời là có, hãy in ra cặp đoạn thẳng cắt nhau đó; chỉ cần chọn bất kỳ cặp nào trong số nhiều trường hợp có thể xảy ra.</p>
+<p>Thuật toán vét cạn (brute force) là lặp qua tất cả các cặp đoạn thẳng trong <span class="arithmatex">$O(n^2)$</span> và kiểm tra từng cặp xem chúng có cắt nhau hay không. Bài viết này mô tả một thuật toán với độ phức tạp thời gian <span class="arithmatex">$O(n \log n)$</span>, dựa trên <strong>thuật toán quét đường (sweep line algorithm)</strong>.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Hãy tưởng tượng một đường thẳng đứng <span class="arithmatex">$x = -\infty$</span> và bắt đầu di chuyển đường thẳng này sang bên phải.
+Trong quá trình di chuyển, đường thẳng này sẽ gặp các đoạn thẳng, và tại mỗi thời điểm một đoạn thẳng cắt đường thẳng của chúng ta, nó sẽ cắt tại đúng một điểm (chúng ta giả định rằng không có đoạn thẳng đứng nào).</p>
 <div style="text-align: center;">
-  <img src="sweep_line_1.png" alt="sweep line and line segment intersection">
+<p><img alt="sweep line và sự giao nhau của đoạn thẳng" src="../../geometry/sweep_line_1.png" /></p>
 </div>
-
-<p>Thus, for each segment, at some point in time, its point will appear on the sweep line, then with the movement of the line, this point will move, and finally, at some point, the segment will disappear from the line.</p>
-<p>We are interested in the <strong>relative order of the segments</strong> along the vertical.
-Namely, we will store a list of segments crossing the sweep line at a given time, where the segments will be sorted by their <span class="arithmatex">$y$</span>-coordinate on the sweep line.</p>
+<p>Như vậy, với mỗi đoạn thẳng, tại một thời điểm nào đó, điểm của nó sẽ xuất hiện trên đường quét, sau đó theo sự di chuyển của đường thẳng, điểm này sẽ di chuyển, và cuối cùng, tại một thời điểm nào đó, đoạn thẳng sẽ biến mất khỏi đường thẳng.</p>
+<p>Chúng ta quan tâm đến <strong>thứ tự tương đối của các đoạn thẳng</strong> dọc theo chiều thẳng đứng.
+Cụ thể, chúng ta sẽ lưu trữ một danh sách các đoạn thẳng cắt đường quét tại một thời điểm nhất định, trong đó các đoạn thẳng sẽ được sắp xếp theo tọa độ <span class="arithmatex">$y$</span> của chúng trên đường quét.</p>
 <div style="text-align: center;">
-  <img src="sweep_line_2.png" alt="relative order of the segments across sweep line">
+<p><img alt="thứ tự tương đối của các đoạn thẳng qua đường quét" src="../../geometry/sweep_line_2.png" /></p>
 </div>
-
-<p>This order is interesting because intersecting segments will have the same <span class="arithmatex">$y$</span>-coordinate at least at one time:</p>
+<p>Thứ tự này rất thú vị vì các đoạn thẳng cắt nhau sẽ có cùng tọa độ <span class="arithmatex">$y$</span> tại ít nhất một thời điểm:</p>
 <div style="text-align: center;">
-  <img src="sweep_line_3.png" alt="intersection point having same y-coordinate">
+<p><img alt="điểm giao nhau có cùng tọa độ y" src="../../geometry/sweep_line_3.png" /></p>
 </div>
-
-<p>We formulate key statements:</p>
+<p>Chúng ta phát biểu các khẳng định chính:</p>
 <ul>
-<li>To find an intersecting pair, it is sufficient to consider <strong>only adjacent segments</strong> at each fixed position of the sweep line.</li>
-<li>It is enough to consider the sweep line not in all possible real positions <span class="arithmatex">$(-\infty \ldots +\infty)$</span>, but <strong>only in those positions when new segments appear or old ones disappear</strong>. In other words, it is enough to limit yourself only to the positions equal to the abscissas of the end points of the segments.</li>
-<li>When a new line segment appears, it is enough to <strong>insert</strong> it to the desired location in the list obtained for the previous sweep line. We should only check for the intersection of the <strong>added segment with its immediate neighbors in the list above and below</strong>.</li>
-<li>If the segment disappears, it is enough to <strong>remove</strong> it from the current list. After that, it is necessary <strong>check for the intersection of the upper and lower neighbors in the list</strong>.</li>
-<li>Other changes in the sequence of segments in the list, except for those described, do not exist. No other intersection checks are required.</li>
+<li>Để tìm một cặp cắt nhau, chỉ cần xem xét <strong>các đoạn thẳng kề nhau</strong> tại mỗi vị trí cố định của đường quét là đủ.</li>
+<li>Chỉ cần xem xét đường quét không phải ở mọi vị trí thực <span class="arithmatex">$(-\infty \ldots +\infty)$</span>, mà <strong>chỉ tại những vị trí khi các đoạn thẳng mới xuất hiện hoặc các đoạn thẳng cũ biến mất</strong>. Nói cách khác, chỉ cần giới hạn ở các vị trí bằng hoành độ các điểm đầu mút của các đoạn thẳng.</li>
+<li>Khi một đoạn thẳng mới xuất hiện, chỉ cần <strong>chèn</strong> nó vào vị trí mong muốn trong danh sách thu được từ đường quét trước đó. Chúng ta chỉ cần kiểm tra sự giao nhau của <strong>đoạn thẳng được thêm vào với các đoạn thẳng lân cận ngay phía trên và phía dưới trong danh sách</strong>.</li>
+<li>Nếu đoạn thẳng biến mất, chỉ cần <strong>xóa</strong> nó khỏi danh sách hiện tại. Sau đó, cần <strong>kiểm tra sự giao nhau của các đoạn thẳng lân cận phía trên và phía dưới trong danh sách</strong>.</li>
+<li>Không tồn tại các thay đổi nào khác trong thứ tự các đoạn thẳng trong danh sách ngoài những thay đổi đã mô tả. Không cần kiểm tra giao nhau nào khác.</li>
 </ul>
-<p>To understand the truth of these statements, the following remarks are sufficient:</p>
+<p>Để hiểu tính đúng đắn của các khẳng định này, các ghi chú sau là đủ:</p>
 <ul>
-<li>Two disjoint segments never change their <strong>relative order</strong>.<br>
-    In fact, if one segment was first higher than the other, and then became lower, then between these two moments there was an intersection of these two segments.</li>
-<li>Two non-intersecting segments also cannot have the same <span class="arithmatex">$y$</span>-coordinates.</li>
-<li>From this it follows that at the moment of the segment appearance we can find the position for this segment in the queue, and we will not have to rearrange this segment in the queue any more: <strong>its order relative to other segments in the queue will not change</strong>.</li>
-<li>Two intersecting segments at the moment of their intersection point will be neighbors of each other in the queue.</li>
-<li>Therefore, for finding pairs of intersecting line segments is sufficient to check the intersection of all and only those pairs of segments that sometime during the movement of the sweep line at least once were neighbors to each other. <br>
-    It is easy to notice that it is enough only to check the added segment with its upper and lower neighbors, as well as when removing the segment — its upper and lower neighbors (which after removal will become neighbors of each other).<br></li>
-<li>It should be noted that at a fixed position of the sweep line, we must <strong>first add all the segments</strong> that start at this x-coordinate, and only <strong>then remove all the segments</strong> that end here.<br>
-    Thus, we do not miss the intersection of segments on the vertex: i.e. such cases when two segments have a common vertex.</li>
-<li>Note that <strong>vertical segments</strong> do not actually affect the correctness of the algorithm.<br>
-    These segments are distinguished by the fact that they appear and disappear at the same time. However, due to the previous comment, we know that all segments will be added to the queue first, and only then they will be deleted. Therefore, if the vertical segment intersects with some other segment opened at that moment (including the vertical one), it will be detected.<br>
-    <strong>In what place of the queue to place vertical segments?</strong> After all, a vertical segment does not have one specific <span class="arithmatex">$y$</span>-coordinate, it extends for an entire segment along the <span class="arithmatex">$y$</span>-coordinate. However, it is easy to understand that any coordinate from this segment can be taken as a <span class="arithmatex">$y$</span>-coordinate.</li>
+<li>Hai đoạn thẳng không giao nhau không bao giờ thay đổi <strong>thứ tự tương đối</strong> của chúng.<br>
+    Thực tế, nếu một đoạn thẳng ban đầu nằm cao hơn đoạn kia, rồi sau đó lại thấp hơn, thì giữa hai thời điểm đó đã có sự giao nhau của hai đoạn thẳng này.</li>
+<li>Hai đoạn thẳng không cắt nhau cũng không thể có cùng tọa độ <span class="arithmatex">$y$</span>.</li>
+<li>Từ đó suy ra tại thời điểm đoạn thẳng xuất hiện, chúng ta có thể tìm vị trí cho đoạn thẳng này trong hàng đợi, và chúng ta sẽ không phải sắp xếp lại đoạn thẳng này trong hàng đợi nữa: <strong>thứ tự của nó so với các đoạn thẳng khác trong hàng đợi sẽ không thay đổi</strong>.</li>
+<li>Hai đoạn thẳng cắt nhau tại thời điểm giao điểm của chúng sẽ là lân cận của nhau trong hàng đợi.</li>
+<li>Do đó, để tìm các cặp đoạn thẳng cắt nhau, chỉ cần kiểm tra sự giao nhau của tất cả và chỉ những cặp đoạn thẳng mà tại một thời điểm nào đó trong quá trình di chuyển của đường quét, ít nhất một lần là lân cận của nhau.<br>
+    Dễ thấy rằng chỉ cần kiểm tra đoạn thẳng được thêm vào với các lân cận trên và dưới của nó, cũng như khi xóa đoạn thẳng — các lân cận trên và dưới của nó (mà sau khi xóa sẽ trở thành lân cận của nhau).<br></li>
+<li>Cần lưu ý rằng tại một vị trí cố định của đường quét, chúng ta phải <strong>thêm tất cả các đoạn thẳng</strong> bắt đầu tại hoành độ này trước, và chỉ sau đó mới <strong>xóa tất cả các đoạn thẳng</strong> kết thúc tại đó.<br>
+    Nhờ vậy, chúng ta không bỏ lỡ sự giao nhau của các đoạn thẳng tại đỉnh: tức là các trường hợp khi hai đoạn thẳng có chung một đỉnh.</li>
+<li>Lưu ý rằng <strong>các đoạn thẳng đứng</strong> thực sự không ảnh hưởng đến tính đúng đắn của thuật toán.<br>
+    Các đoạn thẳng này được phân biệt bởi thực tế là chúng xuất hiện và biến mất cùng một lúc. Tuy nhiên, nhờ ghi chú trước, chúng ta biết rằng tất cả các đoạn thẳng sẽ được thêm vào hàng đợi trước, và chỉ sau đó chúng mới bị xóa. Do đó, nếu đoạn thẳng đứng cắt một đoạn thẳng khác được mở tại thời điểm đó (bao gồm cả chính nó), nó sẽ được phát hiện.<br>
+    <strong>Đặt các đoạn thẳng đứng ở đâu trong hàng đợi?</strong> Xét cho cùng, một đoạn thẳng đứng không có một tọa độ <span class="arithmatex">$y$</span> cụ thể, nó trải dài trên một đoạn dọc theo tọa độ <span class="arithmatex">$y$</span>. Tuy nhiên, dễ hiểu rằng bất kỳ tọa độ nào từ đoạn này đều có thể được coi là tọa độ <span class="arithmatex">$y$</span>.</li>
 </ul>
-<p>Thus, the entire algorithm will perform no more than <span class="arithmatex">$2n$</span> tests on the intersection of a pair of segments, and will perform <span class="arithmatex">$O(n)$</span> operations with a queue of segments (<span class="arithmatex">$O(1)$</span> operations at the time of appearance and disappearance of each segment).</p>
-<p>The final <strong>asymptotic behavior of the algorithm</strong> is thus <span class="arithmatex">$O(n \log n)$</span>.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>We present the full implementation of the described algorithm:</p>
+<p>Như vậy, toàn bộ thuật toán sẽ thực hiện không quá <span class="arithmatex">$2n$</span> lần kiểm tra sự giao nhau của một cặp đoạn thẳng, và thực hiện <span class="arithmatex">$O(n)$</span> thao tác với hàng đợi các đoạn thẳng (<span class="arithmatex">$O(1)$</span> thao tác tại thời điểm xuất hiện và biến mất của mỗi đoạn thẳng).</p>
+<p><strong>Hành vi tiệm cận của thuật toán</strong> do đó là <span class="arithmatex">$O(n \log n)$</span>.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Chúng tôi trình bày cài đặt đầy đủ của thuật toán đã mô tả:</p>
 <div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">EPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1E-9</span><span class="p">;</span>
 
 <span class="k">struct</span><span class="w"> </span><span class="nc">pt</span><span class="w"> </span><span class="p">{</span>
@@ -8186,19 +8155,19 @@ Namely, we will store a list of segments crossing the sweep line at a given time
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">make_pair</span><span class="p">(</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>The main function here is <code>solve()</code>, which returns the intersecting segments if exists, or <span class="arithmatex">$(-1, -1)$</span>, if there are no intersections.</p>
-<p>Checking for the intersection of two segments is carried out by the <code>intersect ()</code> function, using an <strong>algorithm based on the oriented area of the triangle</strong>.</p>
-<p>The queue of segments is the global variable <code>s</code>, a <code>set&lt;event&gt;</code>. Iterators that specify the position of each segment in the queue (for convenient removal of segments from the queue) are stored in the global array <code>where</code>.</p>
-<p>Two auxiliary functions <code>prev()</code> and <code>next()</code> are also introduced, which return iterators to the previous and next elements (or <code>end()</code>, if one does not exist).</p>
-<p>The constant <code>EPS</code> denotes the error of comparing two real numbers (it is mainly used when checking two segments for intersection).</p>
-<h2 id="problems">Problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h2>
+<p>Hàm chính ở đây là <code>solve()</code>, trả về các đoạn thẳng cắt nhau nếu tồn tại, hoặc <span class="arithmatex">$(-1, -1)$</span> nếu không có sự giao nhau nào.</p>
+<p>Việc kiểm tra sự giao nhau của hai đoạn thẳng được thực hiện bởi hàm <code>intersect()</code>, sử dụng <strong>thuật toán dựa trên diện tích có hướng của tam giác</strong>.</p>
+<p>Hàng đợi các đoạn thẳng là biến toàn cục <code>s</code>, một <code>set&lt;event&gt;</code>. Các bộ lặp (iterator) xác định vị trí của mỗi đoạn thẳng trong hàng đợi (để thuận tiện cho việc xóa đoạn thẳng khỏi hàng đợi) được lưu trữ trong mảng toàn cục <code>where</code>.</p>
+<p>Hai hàm bổ trợ <code>prev()</code> và <code>next()</code> cũng được giới thiệu, trả về các bộ lặp tới các phần tử trước và sau (hoặc <code>end()</code>, nếu không tồn tại).</p>
+<p>Hằng số <code>EPS</code> biểu thị sai số của việc so sánh hai số thực (nó chủ yếu được sử dụng khi kiểm tra hai đoạn thẳng có cắt nhau hay không).</p>
+<h2 id="bai-tap">Bài tập<a class="headerlink" href="#bai-tap" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://acm.timus.ru/problem.aspx?space=1&amp;num=1469">TIMUS 1469 No Smoking!</a></li>
 </ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Amandeep Singh" data-bi-name="contributorprofile" target="_blank">Amandeep Singh</a> (88.46%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (4.95%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (3.3%)</li><li><a href="#" title="Yury Semenov" data-bi-name="contributorprofile" target="_blank">Yury Semenov</a> (1.65%)</li><li><a href="#" title="Aleksandr Mishukhin" data-bi-name="contributorprofile" target="_blank">Aleksandr Mishukhin</a> (0.55%)</li><li><a href="#" title="Anton Älgmyr" data-bi-name="contributorprofile" target="_blank">Anton Älgmyr</a> (0.55%)</li><li><a href="#" title="Juan Camilo Salazar" data-bi-name="contributorprofile" target="_blank">Juan Camilo Salazar</a> (0.55%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>
