@@ -39,7 +39,7 @@ At the same time we also keep a track of the best state $s_{best}$ across all it
 
 
 <center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Hill_Climbing_with_Simulated_Annealing.gif" width="800px">
+![](https://upload.wikimedia.org/wikipedia/commons/d/d5/Hill_Climbing_with_Simulated_Annealing.gif)
 <br>
 <i>A visual representation of simulated annealing, searching for the maxima of this function with multiple local maxima.</i>
 <br>

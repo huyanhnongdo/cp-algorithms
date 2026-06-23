@@ -153,8 +153,8 @@ Dịch 124 bài viết còn lại, bao phủ 100% nội dung.
 | | Gauss (2), Kraut, Rank | | | |
 | 3.8 | **Game Theory** | 2 bài | 1h | ✅ (2/2) |
 | | Sprague-Grundy/Nim, Games on Graphs | | | |
-| 3.9 | **Miscellaneous** | 12 bài | 5h | ⬜ |
-| | Sequences (4), Schedules (3), Others (5) | | | |
+| 3.9 | **Miscellaneous** | 13 bài | 5h | ✅ (13/13) |
+| | Sequences (4), Schedules (3), Others (5), Num Methods (2) | | | |
 | 3.10 | **Review & QA toàn bộ** | 124 bài | 10h | ⬜ |
 | 3.11 | **Cập nhật navigation.vi.md** | Hoàn thiện | 2h | ⬜ |
 
