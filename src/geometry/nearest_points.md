@@ -168,8 +168,10 @@ rec(0, n);
 
 An alternative method, originally proposed by Rabin in 1976, arises from a very simple idea to heuristically improve the runtime: We can divide the plane into a grid of $d \times d$ squares, then it is only required to test distances between same-block or adjacent-block points (unless all squares are disconnected from each other, but we will avoid this by design), since any other pair has a larger distance than the two points in the same square.
 
-<div style="text-align: center;">
-    <img src="nearest_points_blocks_example.png" alt="Example of the squares strategy" width="350px">
+<div style="text-align: center;" markdown="1">
+
+![Example of the squares strategy](nearest_points_blocks_example.png)
+
 </div>
 
 

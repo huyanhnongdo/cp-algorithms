@@ -2,69 +2,69 @@
 tags:
   - Translated
 e_maxx_link: voronoi_diagram_2d_n4
+lang: vi
 ---
+# Tam giác hóa Delaunay và Biểu đồ Voronoi
 
-# Delaunay triangulation and Voronoi diagram
+Xét tập hợp $\{p_i\}$ các điểm trên mặt phẳng.
+**Biểu đồ Voronoi** (Voronoi diagram) $V(\{p_i\})$ của $\{p_i\}$ là một cách phân chia mặt phẳng thành $n$ vùng $V_i$, trong đó $V_i = \{p\in\mathbb{R}^2;\ \rho(p, p_i) = \min\ \rho(p, p_k)\}$.
+Các ô của biểu đồ Voronoi là các đa giác (có thể vô hạn).
+**Tam giác hóa Delaunay** (Delaunay triangulation) $D(\{p_i\})$ của $\{p_i\}$ là một cách tam giác hóa trong đó mọi điểm $p_i$ đều nằm ngoài hoặc trên biên đường tròn ngoại tiếp của mỗi tam giác $T \in D(\{p_i\})$.
 
-Consider a set $\{p_i\}$ of points on the plane.
-A **Voronoi diagram** $V(\{p_i\})$ of $\{p_i\}$ is a partition of the plane into $n$ regions $V_i$, where $V_i = \{p\in\mathbb{R}^2;\ \rho(p, p_i) = \min\ \rho(p, p_k)\}$.
-The cells of the Voronoi diagram are polygons (possibly infinite).
-A **Delaunay triangulation** $D(\{p_i\})$ of $\{p_i\}$ is a triangulation where every point $p_i$ is outside or on the boundary of the circumcircle of each triangle $T \in D(\{p_i\})$.
+Có một trường hợp suy biến khó chịu khi biểu đồ Voronoi không liên thông và tam giác hóa Delaunay không tồn tại. Trường hợp này xảy ra khi tất cả các điểm đều thẳng hàng.
 
-There is a nasty degenerated case when the Voronoi diagram isn't connected and Delaunay triangulation doesn't exist. This case is when all points are collinear.
+## Các tính chất
 
-## Properties
+Tam giác hóa Delaunay tối đa hóa góc nhỏ nhất trong số tất cả các cách tam giác hóa có thể.
 
-The Delaunay triangulation maximizes the minimum angle among all possible triangulations.
+Cây khung nhỏ nhất Euclid (Minimum Euclidean spanning tree) của một tập hợp điểm là một tập con các cạnh của tam giác hóa Delaunay tương ứng.
 
-The Minimum Euclidean spanning tree of a point set is a subset of edges of its' Delaunay triangulation.
+## Tính đối ngẫu
 
-## Duality
+Giả sử $\{p_i\}$ không thẳng hàng và trong số $\{p_i\}$ không có bốn điểm nào cùng nằm trên một đường tròn. Khi đó $V(\{p_i\})$ và $D(\{p_i\})$ là đối ngẫu của nhau, vì vậy nếu chúng ta thu được một trong hai, chúng ta có thể thu được cái còn lại trong $O(n)$. Làm thế nào nếu không thỏa mãn điều kiện này? Trường hợp thẳng hàng có thể được xử lý dễ dàng. Nếu không, $V$ và $D'$ là đối ngẫu của nhau, trong đó $D'$ thu được từ $D$ bằng cách loại bỏ tất cả các cạnh mà hai tam giác trên cạnh đó chia sẻ cùng một đường tròn ngoại tiếp.
 
-Suppose that $\{p_i\}$ is not collinear and among $\{p_i\}$ no four points lie on one circle. Then $V(\{p_i\})$ and $D(\{p_i\})$ are dual, so if we obtain one of them, we may obtain the other in $O(n)$. What to do if it's not the case? The collinear case may be processed easily. Otherwise, $V$ and $D'$ are dual, where $D'$ is obtained from $D$ by removing all the edges such that two triangles on this edge share the circumcircle.
+## Xây dựng Delaunay và Voronoi
 
-## Building Delaunay and Voronoi
+Do tính đối ngẫu, chúng ta chỉ cần một thuật toán nhanh để tính toán một trong hai cấu trúc $V$ và $D$. Chúng ta sẽ mô tả cách xây dựng $D(\{p_i\})$ trong $O(n\log n)$. Việc tam giác hóa sẽ được xây dựng thông qua thuật toán chia để trị (divide-and-conquer) theo Guibas và Stolfi.
 
-Because of the duality, we only need a fast algorithm to compute only one of $V$ and $D$. We will describe how to build $D(\{p_i\})$ in $O(n\log n)$. The triangulation will be built via divide-and-conquer algorithm due to Guibas and Stolfi.
+## Cấu trúc dữ liệu Quad-edge
 
-## Quad-edge data structure
-
-During the algorithm $D$ will be stored inside the quad-edge data structure. This structure is described in the picture:
+Trong thuật toán, $D$ sẽ được lưu trữ bên trong cấu trúc dữ liệu quad-edge. Cấu trúc này được mô tả trong hình dưới đây:
 <div style="text-align: center;" markdown="1">
 
 ![Quad-Edge](quad-edge.png)
 
 </div>
 
-In the algorithm we will use the following functions on edges:
+Trong thuật toán, chúng ta sẽ sử dụng các hàm sau trên các cạnh:
 
   1. `make_edge(a, b)`<br>
-    This function creates an isolated edge from point `a` to point `b` together with its' reverse edge and both dual edges.
+    Hàm này tạo ra một cạnh cô lập từ điểm `a` đến điểm `b` cùng với cạnh nghịch đảo của nó và cả hai cạnh đối ngẫu.
   2. `splice(a, b)`<br>
-    This is a key function of the algorithm. It swaps `a->Onext` with `b->Onext` and `a->Onext->Rot->Onext` with `b->Onext->Rot->Onext`.
+    Đây là hàm then chốt của thuật toán. Nó hoán đổi `a->Onext` với `b->Onext` và `a->Onext->Rot->Onext` với `b->Onext->Rot->Onext`.
   3. `delete_edge(e)`<br>
-    This function deletes e from the triangulation. To delete `e`, we may simply call `splice(e, e->Oprev)` and `splice(e->Rev, e->Rev->Oprev)`.
+    Hàm này xóa cạnh `e` khỏi quá trình tam giác hóa. Để xóa `e`, chúng ta chỉ cần gọi `splice(e, e->Oprev)` và `splice(e->Rev, e->Rev->Oprev)`.
   4. `connect(a, b)`<br>
-    This function creates a new edge `e` from `a->Dest` to `b->Org` in such a way that `a`, `b`, `e` all have the same left face. To do this, we call `e = make_edge(a->Dest, b->Org)`, `splice(e, a->Lnext)` and `splice(e->Rev, b)`.
+    Hàm này tạo ra một cạnh mới `e` từ `a->Dest` đến `b->Org` sao cho `a`, `b`, `e` đều có cùng một mặt trái. Để làm điều này, chúng ta gọi `e = make_edge(a->Dest, b->Org)`, `splice(e, a->Lnext)` và `splice(e->Rev, b)`.
 
-## Algorithm
+## Thuật toán
 
-The algorithm will compute the triangulation and return two quad-edges: the counterclockwise convex hull edge out of the leftmost vertex and the clockwise convex hull edge out of the rightmost vertex.
+Thuật toán sẽ thực hiện tam giác hóa và trả về hai quad-edge: cạnh bao lồi (convex hull) ngược chiều kim đồng hồ đi ra từ đỉnh ngoài cùng bên trái và cạnh bao lồi thuận chiều kim đồng hồ đi ra từ đỉnh ngoài cùng bên phải.
 
-Let's sort all points by x, and if $x_1 = x_2$ then by y. Let's solve the problem for some segment $(l, r)$ (initially $(l, r) = (0, n - 1)$). If $r - l + 1 = 2$, we will add an edge $(p[l], p[r])$ and return. If $r - l + 1 = 3$, we will firstly add the edges $(p[l], p[l + 1])$ and $(p[l + 1], p[r])$. We must also connect them using `splice(a->Rev, b)`. Now we must close the triangle. Our next action will depend on the orientation of $p[l], p[l + 1], p[r]$. If they are collinear, we can't make a triangle, so we simply return `(a, b->Rev)`. Otherwise, we create a new edge `c` by calling `connect(b, a)`. If the points are oriented counter-clockwise, we return `(a, b->Rev)`. Otherwise we return `(c->Rev, c)`.
+Hãy sắp xếp tất cả các điểm theo x, và nếu $x_1 = x_2$ thì sắp xếp theo y. Hãy giải bài toán cho một đoạn $(l, r)$ (ban đầu là $(l, r) = (0, n - 1)$). Nếu $r - l + 1 = 2$, chúng ta sẽ thêm cạnh $(p[l], p[r])$ và trả về. Nếu $r - l + 1 = 3$, trước tiên chúng ta sẽ thêm các cạnh $(p[l], p[l + 1])$ và $(p[l + 1], p[r])$. Chúng ta cũng phải kết nối chúng bằng cách sử dụng `splice(a->Rev, b)`. Bây giờ chúng ta phải đóng tam giác. Hành động tiếp theo phụ thuộc vào hướng của $p[l], p[l + 1], p[r]$. Nếu chúng thẳng hàng, chúng ta không thể tạo tam giác, vì vậy chúng ta chỉ cần trả về `(a, b->Rev)`. Nếu không, chúng ta tạo một cạnh mới `c` bằng cách gọi `connect(b, a)`. Nếu các điểm được định hướng ngược chiều kim đồng hồ, chúng ta trả về `(a, b->Rev)`. Ngược lại, chúng ta trả về `(c->Rev, c)`.
 
-Now suppose that $r - l + 1 \ge 4$. Firstly, let's solve $L = (l, \frac{l + r}{2})$ and $R = (\frac{l + r}{2} + 1, r)$ recursively. Now we have to merge these triangulations into one triangulation. Note that our points are sorted, so while merging we will add edges from L to R (so-called _cross_ edges) and remove some edges from L to L and from R to R.
-What is the structure of the cross edges? All these edges must cross a line parallel to the y-axis and placed at the splitting x value. This establishes a linear ordering of the cross edges, so we can talk about successive cross edges, the bottom-most cross edge, etc. The algorithm will add the cross edges in ascending order. Note that any two adjacent cross edges will have a common endpoint, and the third side of the triangle they define goes from L to L or from R to R. Let's call the current cross edge the base. The successor of the base will either go from the left endpoint of the base to one of the R-neighbors of the right endpoint or vice versa.
-Consider the circumcircle of base and the previous cross edge.
-Suppose this circle is transformed into other circles having base as a chord but lying further into the Oy direction.
-Our circle will go up for a while, but unless base is an upper tangent of L and R we will encounter a point belonging either to L or to R giving rise to a new triangle without any points in the circumcircle.
-The new L-R edge of this triangle is the next cross edge added.
-To do this efficiently, we compute two edges `lcand` and `rcand` so that `lcand` points to the first L point encountered in this process, and `rcand` points to the first R point.
-Then we choose the one that would be encountered first. Initially base points to the lower tangent of L and R.
+Bây giờ giả sử rằng $r - l + 1 \ge 4$. Trước tiên, hãy giải $L = (l, \frac{l + r}{2})$ và $R = (\frac{l + r}{2} + 1, r)$ bằng đệ quy. Bây giờ chúng ta phải hợp nhất các cách tam giác hóa này thành một. Lưu ý rằng các điểm của chúng ta đã được sắp xếp, vì vậy trong khi hợp nhất, chúng ta sẽ thêm các cạnh từ L sang R (gọi là cạnh _chéo_ - cross edges) và loại bỏ một số cạnh từ L sang L và từ R sang R.
+Cấu trúc của các cạnh chéo là gì? Tất cả các cạnh này phải cắt một đường thẳng song song với trục Oy đặt tại giá trị x chia cắt. Điều này thiết lập một thứ tự tuyến tính cho các cạnh chéo, vì vậy chúng ta có thể nói về các cạnh chéo kế tiếp, cạnh chéo dưới cùng, v.v. Thuật toán sẽ thêm các cạnh chéo theo thứ tự tăng dần. Lưu ý rằng bất kỳ hai cạnh chéo liền kề nào cũng sẽ có một điểm cuối chung, và cạnh thứ ba của tam giác mà chúng xác định sẽ đi từ L sang L hoặc từ R sang R. Hãy gọi cạnh chéo hiện tại là cạnh cơ sở (base). Cạnh kế tiếp của cạnh cơ sở sẽ đi từ điểm cuối bên trái của cạnh cơ sở đến một trong các nút lân cận bên phải của điểm cuối bên phải hoặc ngược lại.
+Xét đường tròn ngoại tiếp của cạnh cơ sở và cạnh chéo trước đó.
+Giả sử đường tròn này được biến đổi thành các đường tròn khác có cạnh cơ sở làm dây cung nhưng nằm xa hơn về phía Oy.
+Đường tròn của chúng ta sẽ di chuyển lên trên một lúc, nhưng trừ khi cạnh cơ sở là tiếp tuyến trên của L và R, chúng ta sẽ gặp một điểm thuộc về L hoặc R, tạo ra một tam giác mới mà không chứa bất kỳ điểm nào trong đường tròn ngoại tiếp.
+Cạnh L-R mới của tam giác này chính là cạnh chéo tiếp theo được thêm vào.
+Để thực hiện việc này hiệu quả, chúng ta tính toán hai cạnh `lcand` và `rcand` sao cho `lcand` trỏ đến điểm L đầu tiên gặp được trong quá trình này, và `rcand` trỏ đến điểm R đầu tiên.
+Sau đó, chúng ta chọn cạnh nào sẽ gặp trước. Ban đầu, cạnh cơ sở trỏ đến tiếp tuyến dưới của L và R.
 
-## Implementation
+## Cài đặt
 
-Note that the implementation of the in_circle function is GCC-specific.
+Lưu ý rằng việc cài đặt hàm `in_circle` là đặc thù đối với trình biên dịch GCC.
 
 ```{.cpp file=delaunay}
 typedef long long ll;
@@ -308,7 +308,7 @@ vector<tuple<pt, pt, pt>> delaunay(vector<pt> p) {
 }
 ```
 
-## Problems
+## Bài tập
  * [TIMUS 1504 Good Manners](http://acm.timus.ru/problem.aspx?space=1&num=1504)
  * [TIMUS 1520 Empire Strikes Back](http://acm.timus.ru/problem.aspx?space=1&num=1520)
  * [SGU 383 Caravans](https://codeforces.com/problemsets/acmsguru/problem/99999/383)

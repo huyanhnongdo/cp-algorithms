@@ -39,8 +39,10 @@ For simplicity we will show how to do this for an upper segment, the algorithm f
 
 Here is a graphic representation of the three cases.
 
-<div style="text-align: center;">
-  <img src="triangle_union.png" alt="Visual">
+<div style="text-align: center;" markdown="1">
+
+![Visual](triangle_union.png)
+
 </div>
 
 Finally we should remark on processing all the additions of $1$ or $-1$ on all stripes in $[x_1, x_2]$. For each addition of $w$ on $[x_1, x_2]$ we can create events $(x_1, w),\ (x_2, -w)$

@@ -41,8 +41,10 @@ We repeat the following steps while $i < |P|$ or $j < |Q|$.
 
 Here is a nice visualization, which may help you understand what is going on.
 
-<div style="text-align: center;">
-  <img src="minkowski.gif" alt="Visual">
+<div style="text-align: center;" markdown="1">
+
+![Visual](minkowski.gif)
+
 </div>
 
 ## Distance between two polygons

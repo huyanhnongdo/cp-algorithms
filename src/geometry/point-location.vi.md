@@ -2,56 +2,57 @@
 title: Point location in O(log n)
 tags:
   - Original
+lang: vi
 ---
-# Point location in $O(log n)$
+# Xác định vị trí điểm trong $O(log n)$
 
-Consider the following problem: you are given a [planar subdivision](https://en.wikipedia.org/wiki/Planar_straight-line_graph) without any vertices of degree one and zero, and a lot of queries.
-Each query is a point, for which we should determine the face of the subdivision it belongs to.
-We will answer each query in $O(\log n)$ offline.<br>
-This problem may arise when you need to locate some points in a Voronoi diagram or in some simple polygon.
+Xét bài toán sau: cho một [phân hoạch phẳng](https://en.wikipedia.org/wiki/Planar_straight-line_graph) không chứa bất kỳ đỉnh bậc một hay bậc không nào, cùng với rất nhiều truy vấn.
+Mỗi truy vấn là một điểm, chúng ta cần xác định mặt của phân hoạch mà điểm đó thuộc về.
+Chúng ta sẽ trả lời mỗi truy vấn trong $O(\log n)$ theo cách ngoại tuyến (offline).<br>
+Bài toán này có thể xuất hiện khi bạn cần định vị một số điểm trong biểu đồ Voronoi hoặc trong một đa giác đơn.
 
-## Algorithm
+## Thuật toán
 
-Firstly, for each query point $p\ (x_0, y_0)$ we want to find such an edge that if the point belongs to any edge, the point lies on the edge we found, otherwise this edge must intersect the line $x = x_0$ at some unique point $(x_0, y)$ where $y < y_0$ and this $y$ is maximum among all such edges.
-The following image shows both cases.
-
-<div style="text-align: center;" markdown="1">
-
-![Image of Goal](point_location_goal.png)
-
-</div>
-
-We will solve this problem offline using the sweep line algorithm. Let's iterate over x-coordinates of query points and edges' endpoints in increasing order and keep a set of edges $s$. For each x-coordinate we will add some events beforehand.
-
-The events will be of four types: _add_, _remove_, _vertical_, _get_.
-For each vertical edge (both endpoints have the same x-coordinate) we will add one _vertical_ event for the corresponding x-coordinate.
-For every other edge we will add one _add_ event for the minimum of x-coordinates of the endpoints and one _remove_ event for the maximum of x-coordinates of the endpoints.
-Finally, for each query point we will add one _get_ event for its x-coordinate.
-
-For each x-coordinate we will sort the events by their types in order (_vertical_, _get_, _remove_, _add_).
-The following image shows all events in sorted order for each x-coordinate.
+Trước tiên, với mỗi điểm truy vấn $p\ (x_0, y_0)$, chúng ta muốn tìm một cạnh sao cho nếu điểm đó nằm trên bất kỳ cạnh nào, thì điểm đó nằm trên cạnh chúng ta tìm thấy; nếu không, cạnh này phải cắt đường thẳng $x = x_0$ tại một điểm duy nhất $(x_0, y)$ sao cho $y < y_0$ và $y$ là giá trị lớn nhất trong tất cả các cạnh thỏa mãn điều kiện đó.
+Hình ảnh sau đây minh họa cả hai trường hợp.
 
 <div style="text-align: center;" markdown="1">
 
-![Image of Events](point_location_events.png)
+![Hình ảnh mục tiêu](point_location_goal.png)
 
 </div>
 
-We will keep two sets during the sweep-line process.
-A set $t$ for all non-vertical edges, and one set $vert$ especially for the vertical ones.
-We will clear the set $vert$ at the beginning of processing each x-coordinate.
+Chúng ta sẽ giải quyết bài toán này ngoại tuyến bằng thuật toán quét đường (sweep line). Hãy duyệt qua các tọa độ x của các điểm truy vấn và các đầu mút của cạnh theo thứ tự tăng dần, đồng thời duy trì một tập hợp các cạnh $s$. Với mỗi tọa độ x, chúng ta sẽ thêm trước một số sự kiện.
 
-Now let's process the events for a fixed x-coordinate.
+Các sự kiện sẽ có bốn loại: _thêm_ (_add_), _xóa_ (_remove_), _dọc_ (_vertical_), _lấy_ (_get_).
+Với mỗi cạnh dọc (cả hai đầu mút có cùng tọa độ x), chúng ta thêm một sự kiện _dọc_ cho tọa độ x tương ứng.
+Với mọi cạnh khác, chúng ta thêm một sự kiện _thêm_ tại tọa độ x nhỏ nhất của các đầu mút và một sự kiện _xóa_ tại tọa độ x lớn nhất của các đầu mút.
+Cuối cùng, với mỗi điểm truy vấn, chúng ta thêm một sự kiện _lấy_ tại tọa độ x của nó.
 
- - If we got a _vertical_ event, we will simply insert the minimum y-coordinate of the corresponding edge's endpoints to $vert$.
- - If we got a _remove_ or _add_ event, we will remove the corresponding edge from $t$ or add it to $t$.
- - Finally, for each _get_ event we must check if the point lies on some vertical edge by performing a binary search in $vert$.
-If the point doesn't lie on any vertical edge, we must find the answer for this query in $t$.
-To do this, we again make a binary search.
-In order to handle some degenerate cases (e.g. in case of the triangle $(0,~0)$, $(0,~2)$, $(1, 1)$ when we query the point $(0,~0)$), we must answer all _get_ events again after we processed all the events for this x-coordinate and choose the best of two answers.
+Với mỗi tọa độ x, chúng ta sẽ sắp xếp các sự kiện theo loại của chúng (theo thứ tự: _dọc_, _lấy_, _xóa_, _thêm_).
+Hình ảnh dưới đây hiển thị tất cả các sự kiện đã được sắp xếp cho từng tọa độ x.
 
-Now let's choose a comparator for the set $t$.
-This comparator should check if one edge doesn't lie above other for every x-coordinate they both cover. Suppose that we have two edges $(a, b)$ and $(c, d)$. Then the comparator is (in pseudocode):<br>
+<div style="text-align: center;" markdown="1">
+
+![Hình ảnh các sự kiện](point_location_events.png)
+
+</div>
+
+Chúng ta sẽ duy trì hai tập hợp trong quá trình quét đường.
+Một tập hợp $t$ cho tất cả các cạnh không dọc, và một tập hợp $vert$ dành riêng cho các cạnh dọc.
+Chúng ta sẽ xóa sạch tập hợp $vert$ khi bắt đầu xử lý mỗi tọa độ x.
+
+Bây giờ, hãy xử lý các sự kiện cho một tọa độ x cố định.
+
+ - Nếu nhận được sự kiện _dọc_, chúng ta chỉ cần chèn tọa độ y nhỏ nhất của đầu mút cạnh tương ứng vào $vert$.
+ - Nếu nhận được sự kiện _xóa_ hoặc _thêm_, chúng ta xóa cạnh tương ứng khỏi $t$ hoặc thêm nó vào $t$.
+ - Cuối cùng, với mỗi sự kiện _lấy_, chúng ta phải kiểm tra xem điểm đó có nằm trên cạnh dọc nào không bằng cách thực hiện tìm kiếm nhị phân (binary search) trong $vert$.
+Nếu điểm không nằm trên cạnh dọc nào, chúng ta cần tìm câu trả lời cho truy vấn này trong $t$.
+Để làm điều này, chúng ta lại thực hiện tìm kiếm nhị phân.
+Để xử lý một số trường hợp suy biến (ví dụ: trong trường hợp tam giác $(0,~0)$, $(0,~2)$, $(1, 1)$ khi ta truy vấn điểm $(0,~0)$), chúng ta phải trả lời lại tất cả các sự kiện _lấy_ sau khi đã xử lý tất cả các sự kiện cho tọa độ x này và chọn kết quả tốt nhất trong hai câu trả lời.
+
+Bây giờ hãy chọn một hàm so sánh cho tập hợp $t$.
+Hàm so sánh này nên kiểm tra xem một cạnh có nằm phía trên cạnh kia với mọi tọa độ x mà cả hai đều bao phủ hay không. Giả sử ta có hai cạnh $(a, b)$ và $(c, d)$. Khi đó hàm so sánh là (giả mã):<br>
 
 $val = sgn((b - a)\times(c - a)) + sgn((b - a)\times(d - a))$<br>
 <b>if</b> $val \neq 0$<br>
@@ -59,26 +60,26 @@ $val = sgn((b - a)\times(c - a)) + sgn((b - a)\times(d - a))$<br>
 $val = sgn((d - c)\times(a - c)) + sgn((d - c)\times(b - c))$<br>
 <b>return</b> $val < 0$<br>
 
-Now for every query we have the corresponding edge.
-How to find the face?
-If we couldn't find the edge it means that the point is in the outer face.
-If the point belongs to the edge we found, the face is not unique.
-Otherwise, there are two candidates - the faces that are bounded by this edge.
-How to check which one is the answer? Note that the edge is not vertical.
-Then the answer is the face that is above this edge.
-Let's find such a face for each non-vertical edge.
-Consider a counter-clockwise traversal of each face.
-If during this traversal we increased x-coordinate while passing through the edge, then this face is the face we need to find for this edge.
+Bây giờ, với mỗi truy vấn, chúng ta đã có cạnh tương ứng.
+Làm thế nào để tìm mặt?
+Nếu không tìm được cạnh, nghĩa là điểm nằm ở mặt ngoài.
+Nếu điểm thuộc cạnh vừa tìm được, mặt đó không duy nhất.
+Nếu không, có hai ứng viên - các mặt được giới hạn bởi cạnh này.
+Làm thế nào để kiểm tra mặt nào là câu trả lời? Lưu ý rằng cạnh đó không phải là cạnh dọc.
+Khi đó, câu trả lời là mặt nằm phía trên cạnh này.
+Hãy tìm mặt như vậy cho mỗi cạnh không dọc.
+Xét một lượt duyệt ngược chiều kim đồng hồ của mỗi mặt.
+Nếu trong quá trình duyệt này, tọa độ x tăng lên khi đi qua cạnh, thì mặt này chính là mặt cần tìm cho cạnh đó.
 
-## Notes
+## Ghi chú
 
-Actually, with persistent trees this approach can be used to answer the queries online.
+Trên thực tế, với các cây bền vững (persistent trees), cách tiếp cận này có thể được sử dụng để trả lời các truy vấn trực tuyến.
 
-## Implementation
+## Cài đặt
 
-The following code is implemented for integers, but it can be easily modified to work with doubles (by changing the compare methods and the point type).
-This implementation assumes that the subdivision is correctly stored inside a [DCEL](https://en.wikipedia.org/wiki/Doubly_connected_edge_list) and the outer face is numbered $-1$.<br>
-For each query a pair $(1, i)$ is returned if the point lies strictly inside the face number $i$, and a pair $(0, i)$ is returned if the point lies on the edge number $i$.
+Đoạn mã sau được cài đặt cho số nguyên, nhưng có thể dễ dàng sửa đổi để làm việc với số thực (bằng cách thay đổi các phương thức so sánh và kiểu điểm).
+Cài đặt này giả định rằng phân hoạch được lưu trữ chính xác bên trong một cấu trúc [DCEL](https://en.wikipedia.org/wiki/Doubly_connected_edge_list) và mặt ngoài được đánh số $-1$.<br>
+Với mỗi truy vấn, một cặp $(1, i)$ được trả về nếu điểm nằm hoàn toàn bên trong mặt số $i$, và một cặp $(0, i)$ được trả về nếu điểm nằm trên cạnh số $i$.
 
 ```{.cpp file=point-location}
 typedef long long ll;
@@ -299,6 +300,6 @@ vector<pair<int, int>> point_location(DCEL planar, vector<pt> queries)
 }
 ```
 
-## Problems
+## Bài tập
  * [TIMUS 1848 Fly Hunt](http://acm.timus.ru/problem.aspx?space=1&num=1848&locale=en)
  * [UVA 12310 Point Location](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=297&page=show_problem&problem=3732)

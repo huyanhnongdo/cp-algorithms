@@ -116,7 +116,7 @@ Without going in too much detail, we will note the most important property for t
 For $2$ points $a$ and $b$, their MEC is simply the circle centered at $\frac{a+b}{2}$ with the radius $\frac{|a-b|}{2}$, in other words the circle that has $ab$ as a diameter. To check if $z$ is inside this circle we simply need to check that the angle between $za$ and $zb$ is not acute.
 
 <center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Diameter_angles.svg">
+![](https://upload.wikimedia.org/wikipedia/commons/8/8e/Diameter_angles.svg)
 <br>
 <i>Inner angles are obtuse, external angles are acute and angles on the circumference are right</i>
 </center>
@@ -140,7 +140,7 @@ $$
 In a [cyclic quadrilateral](https://en.wikipedia.org/wiki/Cyclic_quadrilateral), if $c$ and $z$ are from the same side of $ab$, then the angles are equal, and will add up to $0^\circ$ when summed up signed (i.e. positive if counter-clockwise and negative if clockwise). Correspondingly, if $c$ and $z$ are on the opposite sides, the angles will add up to $180^\circ$.
 
 <center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Opposing_inscribed_angles.svg">
+![](https://upload.wikimedia.org/wikipedia/commons/3/30/Opposing_inscribed_angles.svg)
 <br>
 <i>Adjacent inscribed angles are same, opposing angles complement to 180 degrees</i>
 </center>

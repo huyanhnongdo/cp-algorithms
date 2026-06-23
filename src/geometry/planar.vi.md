@@ -3,67 +3,68 @@ title: Finding faces of a planar graph
 tags:
   - Translated
 e_maxx_link: facets
+lang: vi
 ---
-# Finding faces of a planar graph
+# Tìm các mặt của một đồ thị phẳng (Planar Graph)
 
-Consider a graph $G$ with $n$ vertices and $m$ edges, which can be drawn on a plane in such a way that two edges intersect only at a common vertex (if it exists).
-Such graphs are called **planar**. Now suppose that we are given a planar graph together with its straight-line embedding, which means that for each vertex $v$ we have a corresponding point $(x, y)$ and all edges are drawn as line segments between these points without intersection (such embedding always exists). These line segments split the plane into several regions, which are called faces. Exactly one of the faces is unbounded. This face is called **outer**, while the other faces are called **inner**.
+Xét một đồ thị $G$ với $n$ đỉnh và $m$ cạnh, có thể được vẽ trên một mặt phẳng sao cho hai cạnh chỉ cắt nhau tại một đỉnh chung (nếu có).
+Các đồ thị như vậy được gọi là **đồ thị phẳng** (planar graph). Giả sử chúng ta có một đồ thị phẳng cùng với cách nhúng đoạn thẳng của nó, nghĩa là với mỗi đỉnh $v$, ta có một điểm tương ứng $(x, y)$ và tất cả các cạnh được vẽ dưới dạng các đoạn thẳng nối giữa các điểm này mà không cắt nhau (cách nhúng như vậy luôn tồn tại). Các đoạn thẳng này chia mặt phẳng thành nhiều vùng, được gọi là các mặt (face). Có đúng một mặt là không bị chặn (unbounded). Mặt này được gọi là **mặt ngoài** (outer face), trong khi các mặt còn lại được gọi là **mặt trong** (inner face).
 
-In this article we will deal with finding both inner and outer faces of a planar graph. We will assume that the graph is connected.
+Trong bài viết này, chúng ta sẽ đề cập đến việc tìm cả mặt trong và mặt ngoài của một đồ thị phẳng. Chúng ta sẽ giả định rằng đồ thị là liên thông.
 
-## Some facts about planar graphs
+## Một vài sự thật về đồ thị phẳng
 
-In this section we present several facts about planar graphs without proof. Readers who are interested in proofs should refer to [Graph Theory by R. Diestel](https://www.math.uni-hamburg.de/home/diestel/books/graph.theory/preview/Ch4.pdf) (see also [video lectures on planarity](https://www.youtube.com/@DiestelGraphTheory) based on this book) or some other book.
+Trong phần này, chúng ta trình bày một số sự thật về đồ thị phẳng mà không có chứng minh. Những độc giả quan tâm đến chứng minh có thể tham khảo [Lý thuyết đồ thị của R. Diestel](https://www.math.uni-hamburg.de/home/diestel/books/graph.theory/preview/Ch4.pdf) (xem thêm [các bài giảng video về tính phẳng](https://www.youtube.com/@DiestelGraphTheory) dựa trên cuốn sách này) hoặc một số cuốn sách khác.
 
-### Euler's theorem
-Euler's theorem states that any correct embedding of a connected planar graph with $n$ vertices, $m$ edges and $f$ faces satisfies:
+### Định lý Euler
+Định lý Euler phát biểu rằng bất kỳ cách nhúng đúng đắn nào của một đồ thị phẳng liên thông với $n$ đỉnh, $m$ cạnh và $f$ mặt đều thỏa mãn:
 
 $$n - m + f = 2$$
 
-And more generally, every planar graph with $k$ connected components satisfies:
+Tổng quát hơn, mọi đồ thị phẳng với $k$ thành phần liên thông đều thỏa mãn:
 
 $$n - m + f = 1 + k$$
 
-### Number of edges of a planar graph.
-If $n \ge 3$ then the maximum number of edges of a planar graph with $n$ vertices is $3n - 6$. This number is achieved by any connected planar graph where each face is bounded by a triangle. In terms of complexity this fact means that $m = O(n)$ for any planar graph.
+### Số cạnh của đồ thị phẳng.
+Nếu $n \ge 3$ thì số cạnh tối đa của một đồ thị phẳng với $n$ đỉnh là $3n - 6$. Con số này đạt được bởi bất kỳ đồ thị phẳng liên thông nào mà mỗi mặt đều được bao quanh bởi một tam giác. Về mặt độ phức tạp, thực tế này có nghĩa là $m = O(n)$ cho bất kỳ đồ thị phẳng nào.
 
-### Number of faces of a planar graph.
-As a direct consequence of the above fact, if $n \ge 3$ then the maximum number of faces of a planar graph with $n$ vertices is $2n - 4$.
+### Số mặt của đồ thị phẳng.
+Là hệ quả trực tiếp từ thực tế trên, nếu $n \ge 3$ thì số mặt tối đa của một đồ thị phẳng với $n$ đỉnh là $2n - 4$.
 
-### Minimum vertex degree in a planar graph.
-Every planar graph has a vertex of degree 5 or less.
+### Bậc đỉnh nhỏ nhất trong đồ thị phẳng.
+Mỗi đồ thị phẳng đều có ít nhất một đỉnh với bậc bằng 5 hoặc nhỏ hơn.
 
-## The algorithm
+## Thuật toán
 
-Firstly, sort the adjacent edges for each vertex by polar angle.
-Now let's traverse the graph in the following way. Suppose that we entered vertex $u$ through the edge $(v, u)$ and $(u, w)$ is the next edge after $(v, u)$ in the sorted adjacency list of $u$. Then the next vertex will be $w$. It turns out that if we start this traversal at some edge $(v, u)$, we will traverse exactly one of the faces adjacent to $(v, u)$, the exact face depending on whether our first step is from $u$ to $v$ or from $v$ to $u$.
+Trước tiên, hãy sắp xếp các cạnh kề cho mỗi đỉnh theo góc cực (polar angle).
+Bây giờ, hãy duyệt đồ thị theo cách sau: Giả sử chúng ta đi vào đỉnh $u$ thông qua cạnh $(v, u)$ và $(u, w)$ là cạnh tiếp theo sau $(v, u)$ trong danh sách kề đã sắp xếp của $u$. Khi đó, đỉnh tiếp theo sẽ là $w$. Hóa ra nếu bắt đầu quá trình duyệt này tại một cạnh $(v, u)$, chúng ta sẽ duyệt đúng một trong các mặt kề với $(v, u)$, mặt cụ thể tùy thuộc vào việc bước đầu tiên của chúng ta là từ $u$ đến $v$ hay từ $v$ đến $u$.
 
-Now the algorithm is quite obvious. We must iterate over all edges of the graph and start the traversal for each edge that wasn't visited by one of the previous traversals. This way we will find each face exactly once, and each edge will be traversed twice (once in each direction).
+Thuật toán hiện tại đã khá rõ ràng. Chúng ta phải lặp qua tất cả các cạnh của đồ thị và bắt đầu duyệt cho mỗi cạnh chưa được ghé thăm bởi một trong các lần duyệt trước đó. Bằng cách này, chúng ta sẽ tìm thấy mỗi mặt đúng một lần, và mỗi cạnh sẽ được duyệt hai lần (mỗi lần theo một hướng).
 
-### Finding the next edge
-During the traversal we have to find the next edge in counter-clockwise order. The most obvious way to find the next edge is binary search by angle. However, given the counter-clockwise order of adjacent edges for each vertex, we can precompute the next edges and store them in a hash table. If the edges are already sorted by angle, the complexity of finding all faces in this case becomes linear.
+### Tìm cạnh tiếp theo
+Trong quá trình duyệt, chúng ta phải tìm cạnh tiếp theo theo thứ tự ngược chiều kim đồng hồ. Cách rõ ràng nhất để tìm cạnh tiếp theo là tìm kiếm nhị phân (binary search) theo góc. Tuy nhiên, với thứ tự ngược chiều kim đồng hồ của các cạnh kề cho mỗi đỉnh, chúng ta có thể tiền xử lý các cạnh tiếp theo và lưu chúng trong một bảng băm (hash table). Nếu các cạnh đã được sắp xếp theo góc, độ phức tạp của việc tìm tất cả các mặt trong trường hợp này sẽ trở thành tuyến tính.
 
-### Finding the outer face
-It's not hard to see that the algorithm traverses each inner face in a clockwise order and the outer face in the counter-clockwise order, so the outer face can be found by checking the order of each face.
+### Tìm mặt ngoài
+Không khó để nhận thấy rằng thuật toán duyệt mỗi mặt trong theo chiều kim đồng hồ và mặt ngoài theo chiều ngược chiều kim đồng hồ, vì vậy mặt ngoài có thể được tìm thấy bằng cách kiểm tra thứ tự của mỗi mặt.
 
-### Complexity
-It's quite clear that the complexity of the algorithm is $O(m \log m)$ because of sorting, and since $m = O(n)$, it's actually $O(n \log n)$. As mentioned before, without sorting the complexity becomes $O(n)$.
+### Độ phức tạp
+Rõ ràng là độ phức tạp của thuật toán là $O(m \log m)$ do việc sắp xếp, và vì $m = O(n)$, nên thực tế nó là $O(n \log n)$. Như đã đề cập trước đó, nếu không sắp xếp thì độ phức tạp sẽ trở thành $O(n)$.
 
-## What if the graph isn't connected?
+## Điều gì xảy ra nếu đồ thị không liên thông?
 
-At the first glance it may seem that finding faces of a disconnected graph is not much harder because we can run the same algorithm for each connected component. However, the components may be drawn in a nested way, forming **holes** (see the image below). In this case the inner face of some component becomes the outer face of some other components and has a complex disconnected border. Dealing with such cases is quite hard, one possible approach is to identify nested components with [point location](point-location.md) algorithms. 
+Thoạt nhìn, có vẻ như việc tìm các mặt của một đồ thị không liên thông không khó hơn bao nhiêu vì chúng ta có thể chạy cùng một thuật toán cho mỗi thành phần liên thông. Tuy nhiên, các thành phần có thể được vẽ lồng vào nhau, tạo thành các **lỗ hổng** (xem hình bên dưới). Trong trường hợp này, mặt trong của một thành phần trở thành mặt ngoài của một số thành phần khác và có biên giới phức tạp không liên thông. Việc xử lý các trường hợp như vậy khá khó khăn, một cách tiếp cận khả thi là xác định các thành phần lồng nhau bằng thuật toán [định vị điểm](point-location.md) (point location).
 
 <div style="text-align: center;" markdown="1">
 
-![Planar graph with holes](planar_hole.png)
+![Đồ thị phẳng có lỗ hổng](planar_hole.png)
 
 </div>
 
-## Implementation
-The following implementation returns a vector of vertices for each face, outer face goes first.
-Inner faces are returned in counter-clockwise orders and the outer face is returned in clockwise order.
+## Cài đặt
+Đoạn mã dưới đây trả về một vector chứa các đỉnh cho mỗi mặt, mặt ngoài được đưa ra đầu tiên.
+Các mặt trong được trả về theo thứ tự ngược chiều kim đồng hồ và mặt ngoài được trả về theo chiều kim đồng hồ.
 
-For simplicity we find the next edge by doing binary search by angle.
+Để đơn giản, chúng ta tìm cạnh tiếp theo bằng cách tìm kiếm nhị phân theo góc.
 ```{.cpp file=planar}
 struct Point {
     int64_t x, y;
@@ -147,17 +148,17 @@ std::vector<std::vector<size_t>> find_faces(std::vector<Point> vertices, std::ve
 }
 ```
 
-## Building planar graph from line segments
+## Xây dựng đồ thị phẳng từ các đoạn thẳng
 
-Sometimes you are not given a graph explicitly, but rather as a set of line segments on a plane, and the actual graph is formed by intersecting those segments, as shown in the picture below. In this case you have to build the graph manually. The easiest way to do so is as follows. Fix a segment and intersect it with all other segments. Then sort all intersection points together with the two endpoints of the segment lexicographically and add them to the graph as vertices. Also link each two adjacent vertices in lexicographical order by an edge. After doing this procedure for all edges we will obtain the graph. Of course, we should ensure that two equal intersection points will always correspond to the same vertex. The easiest way to do this is to store the points in a map by their coordinates, regarding points whose coordinates differ by a small number (say, less than $10^{-9}$) as equal. This algorithm works in $O(n^2 \log n)$.
+Đôi khi bạn không được cho một đồ thị một cách tường minh, mà thay vào đó là một tập hợp các đoạn thẳng trên mặt phẳng, và đồ thị thực tế được hình thành bởi các giao điểm của các đoạn thẳng đó, như trong hình dưới đây. Trong trường hợp này, bạn phải tự xây dựng đồ thị theo cách thủ công. Cách dễ nhất để làm điều đó như sau: Cố định một đoạn thẳng và cho nó cắt với tất cả các đoạn thẳng khác. Sau đó sắp xếp tất cả các điểm giao cắt cùng với hai điểm cuối của đoạn thẳng theo thứ tự từ điển và thêm chúng vào đồ thị dưới dạng các đỉnh. Ngoài ra, hãy nối mỗi hai đỉnh kề nhau theo thứ tự từ điển bằng một cạnh. Sau khi thực hiện quy trình này cho tất cả các cạnh, chúng ta sẽ thu được đồ thị. Tất nhiên, chúng ta nên đảm bảo rằng hai điểm giao cắt bằng nhau sẽ luôn tương ứng với cùng một đỉnh. Cách dễ nhất để làm điều này là lưu các điểm vào một map theo tọa độ của chúng, coi các điểm có tọa độ chênh lệch nhau một khoảng nhỏ (ví dụ: nhỏ hơn $10^{-9}$) là bằng nhau. Thuật toán này hoạt động trong $O(n^2 \log n)$.
 
 <div style="text-align: center;" markdown="1">
 
-![Implicitly defined graph](planar_implicit.png)
+![Đồ thị xác định ẩn](planar_implicit.png)
 
 </div>
 
-## Implementation
+## Cài đặt
 ```{.cpp file=planar_implicit}
 using dbl = long double;
 
@@ -348,6 +349,6 @@ std::pair<std::vector<Point>, std::vector<std::vector<size_t>>> build_graph(std:
 }
 ```
 
-## Problems
+## Các bài toán
  * [TIMUS 1664 Pipeline Transportation](https://acm.timus.ru/problem.aspx?space=1&num=1664)
  * [TIMUS 1681 Brother Bear's Garden](https://acm.timus.ru/problem.aspx?space=1&num=1681)

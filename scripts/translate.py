@@ -89,9 +89,6 @@ def reconstruct_content(frontmatter, translated_text, replacements):
 
 def translate_via_gemini(text, glossary, api_key):
     """Translates text using Google Generative AI (Gemini)."""
-    import google.generativeai as genai
-    genai.configure(api_key=api_key)
-    
     prompt = f"""
 You are an expert technical translator specializing in competitive programming and algorithms.
 Translate the following competitive programming article from English to Vietnamese.
@@ -111,10 +108,43 @@ GLOSSARY TERMS:
 TEXT TO TRANSLATE:
 {text}
 """
-    # Use gemini-2.5-flash or gemini-1.5-flash (safe default)
-    model = genai.GenerativeModel('gemini-2.5-flash')
-    response = model.generate_content(prompt)
-    return response.text
+    
+    # Try using the new google-genai SDK first
+    try:
+        from google import genai
+        client = genai.Client(api_key=api_key)
+        # List of models to try in preference order
+        models = ['gemini-2.5-flash', 'gemini-3.1-flash-lite', 'gemini-2.0-flash', 'gemini-3.5-flash']
+        for model_name in models:
+            print(f"Trying translation with google-genai model: {model_name}...")
+            try:
+                response = client.models.generate_content(
+                    model=model_name,
+                    contents=prompt
+                )
+                return response.text
+            except Exception as model_err:
+                print(f"Model {model_name} failed: {model_err}")
+                continue
+    except ImportError:
+        print("google-genai not installed. Falling back to google-generativeai...")
+        
+    # Fallback to the legacy google-generativeai SDK
+    import google.generativeai as genai
+    genai.configure(api_key=api_key)
+    # List of legacy models
+    legacy_models = ['gemini-2.5-flash', 'gemini-2.0-flash']
+    for model_name in legacy_models:
+        print(f"Trying translation with legacy google-generativeai model: {model_name}...")
+        try:
+            model = genai.GenerativeModel(model_name)
+            response = model.generate_content(prompt)
+            return response.text
+        except Exception as model_err:
+            print(f"Legacy model {model_name} failed: {model_err}")
+            continue
+            
+    raise Exception("All Gemini models and SDKs failed for translation.")
 
 def translate_via_openai(text, glossary, api_key):
     """Translates text using OpenAI GPT-4o."""

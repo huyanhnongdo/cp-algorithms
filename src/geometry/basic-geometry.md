@@ -112,8 +112,10 @@ The dot (or scalar) product $\mathbf a \cdot \mathbf b$ for vectors $\mathbf a$ 
 Geometrically it is product of the length of the first vector by the length of the projection of the second vector onto the first one.
 As you may see from the image below this projection is nothing but $|\mathbf a| \cos \theta$ where $\theta$ is the angle between $\mathbf a$ and $\mathbf b$. Thus $\mathbf a\cdot  \mathbf b = |\mathbf a| \cos \theta \cdot |\mathbf b|$.
 
-<div style="text-align: center;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Dot_Product.svg/300px-Dot_Product.svg.png" alt="">
+<div style="text-align: center;" markdown="1">
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Dot_Product.svg/300px-Dot_Product.svg.png)
+
 </div>
 
 The dot product holds some notable properties:
@@ -183,8 +185,10 @@ To see the next important property we should take a look at the set of points $\
 You can see that this set of points is exactly the set of points for which the projection onto $\mathbf a$ is the point $C \cdot \dfrac{\mathbf a}{|\mathbf a| ^ 2}$ and they form a hyperplane orthogonal to $\mathbf a$.
 You can see the vector $\mathbf a$ alongside with several such vectors having same dot product with it in 2D on the picture below:
 
-<div style="text-align: center;">
-  <img src="https://i.imgur.com/eyO7St4.png" alt="Vectors having same dot product with a">
+<div style="text-align: center;" markdown="1">
+
+![Vectors having same dot product with a](https://i.imgur.com/eyO7St4.png)
+
 </div>
 
 In 2D these vectors will form a line, in 3D they will form a plane.
@@ -196,8 +200,10 @@ In the same manner a plane can be defined in 3D.
 ### Definition
 
 Assume you have three vectors $\mathbf a$, $\mathbf b$ and $\mathbf c$ in 3D space joined in a parallelepiped as in the picture below:
-<div style="text-align: center;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Parallelepiped_volume.svg/250px-Parallelepiped_volume.svg.png" alt="Three vectors">
+<div style="text-align: center;" markdown="1">
+
+![Three vectors](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Parallelepiped_volume.svg/250px-Parallelepiped_volume.svg.png)
+
 </div>
 
 How would you calculate its volume?
@@ -205,8 +211,10 @@ From school we know that we should multiply the area of the base with the height
 That means that if we define $\mathbf b \times \mathbf c$ as the vector which is orthogonal to both $\mathbf b$ and $\mathbf c$ and which length is equal to the area of the parallelogram formed by $\mathbf b$ and $\mathbf c$ then $|\mathbf a\cdot (\mathbf b\times\mathbf c)|$ will be equal to the volume of the parallelepiped.
 For integrity we will say that $\mathbf b\times \mathbf c$ will be always directed in such way that the rotation from the vector $\mathbf b$ to the vector $\mathbf c$ from the point of $\mathbf b\times \mathbf c$ is always counter-clockwise (see the picture below).
 
-<div style="text-align: center;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Cross_product_vector.svg/250px-Cross_product_vector.svg.png" alt="cross product">
+<div style="text-align: center;" markdown="1">
+
+![cross product](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Cross_product_vector.svg/250px-Cross_product_vector.svg.png)
+
 </div>
 
 This defines the cross (or vector) product $\mathbf b\times \mathbf c$ of the vectors $\mathbf b$ and $\mathbf c$ and the triple product $\mathbf a\cdot(\mathbf b\times \mathbf c)$ of the vectors $\mathbf a$, $\mathbf b$ and $\mathbf c$.
