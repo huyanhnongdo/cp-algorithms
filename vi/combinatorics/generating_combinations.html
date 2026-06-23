@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#generating-all-k-combinations" class="md-skip">
+        <a href="#tao-tat-ca-k-to-hop" class="md-skip">
           Bỏ qua
         </a>
       
@@ -3761,7 +3761,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#generate-next-lexicographical-k-combination" class="md-nav__link">
+  <a href="#tao-to-hop-k-to-hop-tiep-theo-theo-thu-tu-tu-ien" class="md-nav__link">
     <span class="md-ellipsis">
       
         Generate next lexicographical K-combination
@@ -3772,7 +3772,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generate-all-k-combinations-such-that-adjacent-combinations-differ-by-one-element" class="md-nav__link">
+  <a href="#tao-tat-ca-k-to-hop-sao-cho-cac-to-hop-ke-nhau-khac-nhau-ung-mot-phan-tu" class="md-nav__link">
     <span class="md-ellipsis">
       
         Generate all K-combinations such that adjacent combinations differ by one element
@@ -7949,13 +7949,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/combinatorics/generating_combinations.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/combinatorics/generating_combinations.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/combinatorics/generating_combinations.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/combinatorics/generating_combinations.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7966,18 +7966,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
 
 
@@ -8009,17 +7997,14 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="generating-all-k-combinations">Generating all <span class="arithmatex">$K$</span>-combinations<a class="headerlink" href="#generating-all-k-combinations" title="Permanent link">&para;</a></h1>
-<p>In this article we will discuss the problem of generating all <span class="arithmatex">$K$</span>-combinations.
-Given the natural numbers <span class="arithmatex">$N$</span> and <span class="arithmatex">$K$</span>, and considering a set of numbers from <span class="arithmatex">$1$</span> to <span class="arithmatex">$N$</span>.
-The task is to derive all <strong>subsets of size <span class="arithmatex">$K$</span></strong>.</p>
-<h2 id="generate-next-lexicographical-k-combination">Generate next lexicographical <span class="arithmatex">$K$</span>-combination<a class="headerlink" href="#generate-next-lexicographical-k-combination" title="Permanent link">&para;</a></h2>
-<p>First we will generate them in lexicographical order.
-The algorithm for this is simple. The first combination will be <span class="arithmatex">${1, 2, ..., K}$</span>. Now let's see how
-to find the combination that immediately follows this, lexicographically. To do so, we consider our
-current combination, and find the rightmost element that has not yet reached its highest possible value. Once
-finding this element, we increment it by <span class="arithmatex">$1$</span>, and assign the lowest valid value to all subsequent
-elements.</p>
+<h1 id="tao-tat-ca-k-to-hop">Tạo tất cả <span class="arithmatex">$K$</span>-tổ hợp<a class="headerlink" href="#tao-tat-ca-k-to-hop" title="Permanent link">&para;</a></h1>
+<p>Trong bài viết này chúng ta sẽ thảo luận về bài toán tạo tất cả <code>$K$</code>-tổ hợp (Combination).
+Cho các số tự nhiên <code>$N$</code> và <code>$K$</code>, và xét một tập hợp các số từ <code>$1$</code> đến <code>$N$</code>.
+Nhiệm vụ là tìm tất cả <strong>tập con có kích thước <code>$K$</code></strong>.</p>
+<h2 id="tao-to-hop-k-to-hop-tiep-theo-theo-thu-tu-tu-ien">Tạo tổ hợp <code>$K$</code>-tổ hợp tiếp theo theo thứ tự từ điển<a class="headerlink" href="#tao-to-hop-k-to-hop-tiep-theo-theo-thu-tu-tu-ien" title="Permanent link">&para;</a></h2>
+<p>Trước tiên chúng ta sẽ tạo chúng theo thứ tự từ điển (lexicographical order).
+Thuật toán (Algorithm) cho việc này rất đơn giản. Tổ hợp đầu tiên sẽ là <code>${1, 2, ..., K}$</code>. Bây giờ chúng ta hãy xem cách
+tìm tổ hợp ngay sau tổ hợp này, theo thứ tự từ điển. Để làm điều đó, chúng ta xét tổ hợp hiện tại của mình, và tìm phần tử (Element) ngoài cùng bên phải mà chưa đạt đến giá trị cao nhất có thể. Khi tìm thấy phần tử này, chúng ta tăng nó lên <code>$1$</code> đơn vị, và gán giá trị hợp lệ thấp nhất cho tất cả các phần tử tiếp theo.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">next_combination</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8033,32 +8018,24 @@ elements.</p>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="generate-all-k-combinations-such-that-adjacent-combinations-differ-by-one-element">Generate all <span class="arithmatex">$K$</span>-combinations such that adjacent combinations differ by one element<a class="headerlink" href="#generate-all-k-combinations-such-that-adjacent-combinations-differ-by-one-element" title="Permanent link">&para;</a></h2>
-<p>This time we want to generate all <span class="arithmatex">$K$</span>-combinations in such
-an order, that adjacent combinations differ exactly by one element.</p>
-<p>This can be solved using the <a href="../algebra/gray-code.html">Gray Code</a>:
-If we assign a bitmask to each subset, then by generating and iterating over these bitmasks with Gray codes, we can obtain our answer.</p>
-<p>The task of generating <span class="arithmatex">$K$</span>-combinations can also be solved using Gray Codes in a different way:
-Generate Gray Codes for the numbers from <span class="arithmatex">$0$</span> to <span class="arithmatex">$2^N - 1$</span> and leave only those codes containing <span class="arithmatex">$K$</span> <span class="arithmatex">$1$</span>s.
-The surprising fact is that in the resulting sequence of <span class="arithmatex">$K$</span> set bits, any two neighboring masks (including the
-first and last mask - neighboring in a cyclic sense) - will differ exactly by two bits, which is our objective (remove
-a number, add a number).</p>
-<p>Let us prove this:</p>
-<p>For the proof, we recall the fact that the sequence <span class="arithmatex">$G(N)$</span> (representing the <span class="arithmatex">$N$</span><sup>th</sup> Gray Code) can 
-be obtained as follows:</p>
+<h2 id="tao-tat-ca-k-to-hop-sao-cho-cac-to-hop-ke-nhau-khac-nhau-ung-mot-phan-tu">Tạo tất cả <span class="arithmatex">$K$</span>-tổ hợp sao cho các tổ hợp kề nhau khác nhau đúng một phần tử<a class="headerlink" href="#tao-tat-ca-k-to-hop-sao-cho-cac-to-hop-ke-nhau-khac-nhau-ung-mot-phan-tu" title="Permanent link">&para;</a></h2>
+<p>Lần này chúng ta muốn tạo tất cả <code>$K$</code>-tổ hợp theo một thứ tự,
+sao cho các tổ hợp kề nhau khác nhau đúng một phần tử.</p>
+<p>Việc này có thể được giải quyết bằng cách sử dụng <a href="../algebra/gray-code.html">Mã Gray (Gray Code)</a>:
+Nếu chúng ta gán một bitmask (Bitmask) cho mỗi tập con, thì bằng cách tạo và lặp qua các bitmask này với mã Gray, chúng ta có thể nhận được câu trả lời.</p>
+<p>Bài toán tạo <code>$K$</code>-tổ hợp cũng có thể được giải quyết bằng cách sử dụng Mã Gray theo một cách khác:
+Tạo Mã Gray cho các số từ <code>$0$</code> đến <code>$2^N - 1$</code> và chỉ giữ lại những mã chứa <code>$K$</code> số <code>$1$</code>.
+Một sự thật đáng ngạc nhiên là trong dãy kết quả gồm <code>$K$</code> bit được đặt (set bits), bất kỳ hai mask kề nhau nào (bao gồm cả mask đầu tiên và cuối cùng - kề nhau theo nghĩa chu trình) - sẽ khác nhau đúng hai bit, đây chính là mục tiêu của chúng ta (loại bỏ một số, thêm một số).</p>
+<p>Chúng ta hãy chứng minh (Proof) điều này:</p>
+<p>Để chứng minh, chúng ta nhớ lại thực tế rằng dãy <code>$G(N)$</code> (đại diện cho Mã Gray thứ <code>$N$</code>) có thể thu được như sau:</p>
 <div class="arithmatex">$$G(N) = 0G(N-1) \cup 1G(N-1)^\text{R}$$</div>
-<p>That is, consider the Gray Code sequence for <span class="arithmatex">$N-1$</span>, and prefix <span class="arithmatex">$0$</span> before every term. And consider the 
-reversed Gray Code sequence for <span class="arithmatex">$N-1$</span> and prefix a <span class="arithmatex">$1$</span> before every mask, and
-concatenate these two sequences.</p>
-<p>Now we may produce our proof.</p>
-<p>First, we prove that the first and last masks differ exactly in two bits. To do this, it is sufficient to note
-that the first mask of the sequence <span class="arithmatex">$G(N)$</span>, will be of the form <span class="arithmatex">$N-K$</span> <span class="arithmatex">$0$</span>s, followed by <span class="arithmatex">$K$</span> <span class="arithmatex">$1$</span>s. As
-the first bit is set as <span class="arithmatex">$0$</span>, after which <span class="arithmatex">$(N-K-1)$</span> <span class="arithmatex">$0$</span>s follow, after which <span class="arithmatex">$K$</span> set bits follow and the last mask will be of the form <span class="arithmatex">$1$</span>, then <span class="arithmatex">$(N-K)$</span> <span class="arithmatex">$0$</span>s, then <span class="arithmatex">$K-1$</span> <span class="arithmatex">$1$</span>s.
-Applying the principle of mathematical induction, and using the formula for <span class="arithmatex">$G(N)$</span>, concludes the proof.</p>
-<p>Now our task is to show that any two adjacent codes also differ exactly in two bits, we can do this by considering our recursive equation for the generation of Gray Codes. Let us assume the content of the two halves formed by <span class="arithmatex">$G(N-1)$</span> is true. Now we need to prove that the new consecutive pair formed at the junction (by the concatenation of these two halves) is also valid, i.e. they differ by exactly two bits.</p>
-<p>This can be done, as we know the last mask of the first half and the first mask of the second half. The last mask of the first half would be <span class="arithmatex">$1$</span>, then <span class="arithmatex">$(N-K-1)$</span> <span class="arithmatex">$0$</span>s, then <span class="arithmatex">$K-1$</span> <span class="arithmatex">$1$</span>s. And the first mask of the second half would be <span class="arithmatex">$0$</span>, then <span class="arithmatex">$(N-K-2)$</span> <span class="arithmatex">$0$</span>s would follow, and then <span class="arithmatex">$K$</span> <span class="arithmatex">$1$</span>s. Thus, comparing the two masks, we find exactly two bits that differ.</p>
-<p>The following is a naive implementation working by generating all <span class="arithmatex">$2^{n}$</span> possible subsets, and finding subsets of size
-<span class="arithmatex">$K$</span>.</p>
+<p>Tức là, xét dãy Mã Gray cho <code>$N-1$</code>, và thêm tiền tố <code>$0$</code> vào trước mỗi phần tử. Và xét dãy Mã Gray đảo ngược cho <code>$N-1$</code> và thêm tiền tố <code>$1$</code> vào trước mỗi mask, và nối hai dãy này lại.</p>
+<p>Bây giờ chúng ta có thể trình bày chứng minh của mình.</p>
+<p>Đầu tiên, chúng ta chứng minh rằng mask đầu tiên và mask cuối cùng khác nhau đúng hai bit. Để làm điều này, chỉ cần lưu ý rằng mask đầu tiên của dãy <code>$G(N)$</code>, sẽ có dạng <code>$N-K$</code> <code>$0$</code>s, theo sau bởi <code>$K$</code> <code>$1$</code>s. Vì bit đầu tiên được đặt là <code>$0$</code>, sau đó <code>$(N-K-1)$</code> <code>$0$</code>s theo sau, sau đó <code>$K$</code> bit đã đặt theo sau và mask cuối cùng sẽ có dạng <code>$1$</code>, sau đó <code>$(N-K)$</code> <code>$0$</code>s, sau đó <code>$K-1$</code> <code>$1$</code>s.
+Áp dụng nguyên lý quy nạp toán học, và sử dụng công thức cho <code>$G(N)$</code>, kết thúc chứng minh.</p>
+<p>Bây giờ nhiệm vụ của chúng ta là chỉ ra rằng bất kỳ hai mã kề nhau nào cũng khác nhau đúng hai bit, chúng ta có thể làm điều này bằng cách xem xét phương trình đệ quy (Recursion) của chúng ta để tạo Mã Gray. Giả sử nội dung của hai nửa được tạo bởi <code>$G(N-1)$</code> là đúng. Bây giờ chúng ta cần chứng minh rằng cặp liên tiếp mới được hình thành tại điểm nối (bằng cách nối hai nửa này) cũng hợp lệ, tức là chúng khác nhau đúng hai bit.</p>
+<p>Điều này có thể được thực hiện, vì chúng ta biết mask cuối cùng của nửa đầu và mask đầu tiên của nửa sau. Mask cuối cùng của nửa đầu sẽ là <code>$1$</code>, sau đó <code>$(N-K-1)$</code> <code>$0$</code>s, sau đó <code>$K-1$</code> <code>$1$</code>s. Và mask đầu tiên của nửa sau sẽ là <code>$0$</code>, sau đó <code>$(N-K-2)$</code> <code>$0$</code>s sẽ theo sau, và sau đó <code>$K$</code> <code>$1$</code>s. Do đó, so sánh hai mask, chúng ta tìm thấy đúng hai bit khác nhau.</p>
+<p>Sau đây là một cài đặt (Implementation) thô sơ hoạt động bằng cách tạo tất cả <code>$2^{n}$</code> tập con có thể, và tìm các tập con có kích thước <code>$K$</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">gray_code</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 <span class="p">}</span>
@@ -8083,14 +8060,11 @@ Applying the principle of mathematical induction, and using the formula for <spa
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>It's worth mentioning that a more efficient implementation exists that only resorts to building valid combinations and thus
-works in <span class="arithmatex">$O\left(N \cdot \binom{N}{K}\right)$</span> however it is recursive in nature and for smaller values of <span class="arithmatex">$N$</span> it probably has a larger constant
-than the previous solution.</p>
-<p>The implementation is derived from the formula:</p>
+<p>Điều đáng nói là tồn tại một triển khai hiệu quả hơn chỉ dựa vào việc xây dựng các tổ hợp hợp lệ và do đó hoạt động trong <code>$O\left(N \cdot \binom{N}{K}\right)$</code> tuy nhiên nó có bản chất đệ quy và đối với các giá trị <code>$N$</code> nhỏ hơn nó có thể có hằng số lớn hơn so với giải pháp trước.</p>
+<p>Việc triển khai được suy ra từ công thức:</p>
 <div class="arithmatex">$$G(N, K) = 0G(N-1, K) \cup 1G(N-1, K-1)^\text{R}$$</div>
-<p>This formula is obtained by modifying the general equation to determine the Gray code, and works by selecting the
-subsequence from appropriate elements.</p>
-<p>Its implementation is as follows:</p>
+<p>Công thức này được thu thập bằng cách sửa đổi phương trình tổng quát để xác định mã Gray, và hoạt động bằng cách chọn dãy con (Subsequence) từ các phần tử thích hợp.</p>
+<p>Việc triển khai của nó như sau:</p>
 <div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">gen</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">idx</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">rev</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8120,7 +8094,7 @@ subsequence from appropriate elements.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Aditya Ramesh" data-bi-name="contributorprofile" target="_blank">Aditya Ramesh</a> (91.49%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (6.38%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (2.13%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"></ul>
 </ul>
                 
               </article>
