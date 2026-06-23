@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scheduling-jobs-on-one-machine" class="md-skip">
+        <a href="#lap-lich-cong-viec-tren-mot-may" class="md-skip">
           Bỏ qua
         </a>
       
@@ -7651,22 +7651,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#solutions-for-special-cases" class="md-nav__link">
+  <a href="#cac-loi-giai-cho-truong-hop-ac-biet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Solutions for special cases
+        Các lời giải cho trường hợp đặc biệt
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Solutions for special cases">
+    <nav class="md-nav" aria-label="Các lời giải cho trường hợp đặc biệt">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#linear-penalty-functions" class="md-nav__link">
+  <a href="#ham-phat-tuyen-tinh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Linear penalty functions
+        Hàm phạt tuyến tính
       
     </span>
   </a>
@@ -7674,10 +7674,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exponential-penalty-function" class="md-nav__link">
+  <a href="#ham-phat-mu" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exponential penalty function
+        Hàm phạt mũ
       
     </span>
   </a>
@@ -7685,10 +7685,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#identical-monotone-penalty-function" class="md-nav__link">
+  <a href="#ham-phat-on-ieu-ong-nhat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Identical monotone penalty function
+        Hàm phạt đơn điệu đồng nhất
       
     </span>
   </a>
@@ -7701,10 +7701,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-livshits-kladov-theorem" class="md-nav__link">
+  <a href="#inh-ly-livshits-kladov" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The Livshits-Kladov theorem
+        Định lý Livshits-Kladov
       
     </span>
   </a>
@@ -7988,13 +7988,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/schedules/schedule_one_machine.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/schedules/schedule_one_machine.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/schedules/schedule_one_machine.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/schedules/schedule_one_machine.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8005,18 +8005,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8052,56 +8040,56 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="scheduling-jobs-on-one-machine">Scheduling jobs on one machine<a class="headerlink" href="#scheduling-jobs-on-one-machine" title="Permanent link">&para;</a></h1>
-<p>This task is about finding an optimal schedule for <span class="arithmatex">$n$</span> jobs on a single machine, if the job <span class="arithmatex">$i$</span> can be processed in <span class="arithmatex">$t_i$</span> time, but for the <span class="arithmatex">$t$</span> seconds waiting before processing the job a penalty of <span class="arithmatex">$f_i(t)$</span> has to be paid.</p>
-<p>Thus the task asks to find such an permutation of the jobs, so that the total penalty is minimal.
-If we denote by <span class="arithmatex">$\pi$</span> the permutation of the jobs (<span class="arithmatex">$\pi_1$</span> is the first processed item, <span class="arithmatex">$\pi_2$</span> the second, etc.), then the total penalty is equal to:</p>
+<h1 id="lap-lich-cong-viec-tren-mot-may">Lập lịch công việc trên một máy<a class="headerlink" href="#lap-lich-cong-viec-tren-mot-may" title="Permanent link">&para;</a></h1>
+<p>Bài toán này nói về việc tìm một lịch trình tối ưu cho <span class="arithmatex">$n$</span> công việc trên một máy duy nhất, nếu công việc <span class="arithmatex">$i$</span> có thể được xử lý trong thời gian <span class="arithmatex">$t_i$</span>, nhưng với <span class="arithmatex">$t$</span> giây chờ đợi trước khi xử lý công việc đó, ta phải chịu một mức phạt là <span class="arithmatex">$f_i(t)$</span>.</p>
+<p>Do đó, bài toán yêu cầu tìm một hoán vị của các công việc sao cho tổng mức phạt là tối thiểu.
+Nếu ta ký hiệu <span class="arithmatex">$\pi$</span> là hoán vị của các công việc (<span class="arithmatex">$\pi_1$</span> là phần tử được xử lý đầu tiên, <span class="arithmatex">$\pi_2$</span> là phần tử thứ hai, v.v.), thì tổng mức phạt bằng:</p>
 <div class="arithmatex">$$F(\pi) = f_{\pi_1}(0) + f_{\pi_2}(t_{\pi_1}) + f_{\pi_3}(t_{\pi_1} + t_{\pi_2}) + \dots + f_{\pi_n}\left(\sum_{i=1}^{n-1} t_{\pi_i}\right)$$</div>
-<h2 id="solutions-for-special-cases">Solutions for special cases<a class="headerlink" href="#solutions-for-special-cases" title="Permanent link">&para;</a></h2>
-<h3 id="linear-penalty-functions">Linear penalty functions<a class="headerlink" href="#linear-penalty-functions" title="Permanent link">&para;</a></h3>
-<p>First we will solve the problem in the case that all penalty functions <span class="arithmatex">$f_i(t)$</span> are linear, i.e. they have the form <span class="arithmatex">$f_i(t) = c_i \cdot t$</span>, where <span class="arithmatex">$c_i$</span> is a non-negative number.
-Note that these functions don't have a constant term.
-Otherwise we can sum up all constant term, and resolve the problem without them.</p>
-<p>Let us fixate some permutation <span class="arithmatex">$\pi$</span>, and take an index <span class="arithmatex">$i = 1 \dots n-1$</span>.
-Let the permutation <span class="arithmatex">$\pi'$</span> be equal to the permutation <span class="arithmatex">$\pi$</span> with the elements <span class="arithmatex">$i$</span> and <span class="arithmatex">$i+1$</span> switched.
-Let's see how much the penalty changed.</p>
+<h2 id="cac-loi-giai-cho-truong-hop-ac-biet">Các lời giải cho trường hợp đặc biệt<a class="headerlink" href="#cac-loi-giai-cho-truong-hop-ac-biet" title="Permanent link">&para;</a></h2>
+<h3 id="ham-phat-tuyen-tinh">Hàm phạt tuyến tính<a class="headerlink" href="#ham-phat-tuyen-tinh" title="Permanent link">&para;</a></h3>
+<p>Đầu tiên, chúng ta sẽ giải bài toán trong trường hợp tất cả các hàm phạt <span class="arithmatex">$f_i(t)$</span> đều là tuyến tính, nghĩa là chúng có dạng <span class="arithmatex">$f_i(t) = c_i \cdot t$</span>, trong đó <span class="arithmatex">$c_i$</span> là một số không âm.
+Lưu ý rằng các hàm này không có hằng số cộng thêm.
+Nếu có, chúng ta có thể cộng tất cả các hằng số đó lại và giải quyết bài toán mà không cần xét đến chúng.</p>
+<p>Giả sử ta cố định một hoán vị <span class="arithmatex">$\pi$</span> và chọn một chỉ số <span class="arithmatex">$i = 1 \dots n-1$</span>.
+Gọi hoán vị <span class="arithmatex">$\pi'$</span> bằng với hoán vị <span class="arithmatex">$\pi$</span> nhưng đã hoán đổi hai phần tử <span class="arithmatex">$i$</span> và <span class="arithmatex">$i+1$</span>.
+Hãy xem mức phạt đã thay đổi như thế nào.</p>
 <div class="arithmatex">$$F(\pi') - F(\pi) =$$</div>
-<p>It is easy to see that the changes only occur in the <span class="arithmatex">$i$</span>-th and <span class="arithmatex">$(i+1)$</span>-th summands:</p>
+<p>Dễ thấy rằng các thay đổi chỉ xảy ra ở số hạng thứ <span class="arithmatex">$i$</span> và thứ <span class="arithmatex">$(i+1)$</span>:</p>
 <div class="arithmatex">$$\begin{align}
 &amp;= c_{\pi_i'} \cdot \sum_{k = 1}^{i-1} t_{\pi_k'} + c_{\pi_{i+1}'} \cdot \sum_{k = 1}^i t_{\pi_k'} - c_{\pi_i} \cdot \sum_{k = 1}^{i-1} t_{\pi_k} - c_{\pi_{i+1}} \cdot \sum_{k = 1}^i t_{\pi_k} \\
 &amp;= c_{\pi_{i+1}} \cdot \sum_{k = 1}^{i-1} t_{\pi_k'} + c_{\pi_i} \cdot \sum_{k = 1}^i t_{\pi_k'} - c_{\pi_i} \cdot \sum_{k = 1}^{i-1} t_{\pi_k} - c_{\pi_{i+1}} \cdot \sum_{k = 1}^i t_{\pi_k} \\
 &amp;= c_{\pi_i} \cdot t_{\pi_{i+1}} - c_{\pi_{i+1}} \cdot t_{\pi_i}
 \end{align}$$</div>
-<p>It is easy to see, that if the schedule <span class="arithmatex">$\pi$</span> is optimal, than any change in it leads to an increased penalty (or to the identical penalty), therefore for the optimal schedule we can write down the following condition:</p>
+<p>Dễ thấy rằng, nếu lịch trình <span class="arithmatex">$\pi$</span> là tối ưu, thì bất kỳ thay đổi nào trong đó cũng dẫn đến mức phạt tăng lên (hoặc mức phạt không đổi), do đó đối với lịch trình tối ưu, ta có thể viết ra điều kiện sau:</p>
 <div class="arithmatex">$$c_{\pi_{i}} \cdot t_{\pi_{i+1}} - c_{\pi_{i+1}} \cdot t_{\pi_i} \ge 0 \quad \forall i = 1 \dots n-1$$</div>
-<p>And after rearranging we get:</p>
+<p>Và sau khi sắp xếp lại, ta được:</p>
 <div class="arithmatex">$$\frac{c_{\pi_i}}{t_{\pi_i}} \ge \frac{c_{\pi_{i+1}}}{t_{\pi_{i+1}}} \quad \forall i = 1 \dots n-1$$</div>
-<p>Thus we obtain the <strong>optimal schedule</strong> by simply <strong>sorting</strong> the jobs by the fraction <span class="arithmatex">$\frac{c_i}{t_i}$</span> in non-ascending order.</p>
-<p>It should be noted, that we constructed this algorithm by the so-called <strong>permutation method</strong>:
-we tried to swap two adjacent elements, calculated how much the penalty changed, and then derived the algorithm for finding the optimal method.</p>
-<h3 id="exponential-penalty-function">Exponential penalty function<a class="headerlink" href="#exponential-penalty-function" title="Permanent link">&para;</a></h3>
-<p>Let the penalty function look like this:</p>
+<p>Như vậy, ta có được <strong>lịch trình tối ưu</strong> bằng cách đơn giản là <strong>sắp xếp</strong> các công việc theo phân số <span class="arithmatex">$\frac{c_i}{t_i}$</span> theo thứ tự không tăng.</p>
+<p>Cần lưu ý rằng chúng ta đã xây dựng thuật toán này bằng cái gọi là <strong>phương pháp hoán vị</strong>:
+chúng ta thử hoán đổi hai phần tử kề nhau, tính toán xem mức phạt thay đổi bao nhiêu, và sau đó suy ra thuật toán để tìm phương pháp tối ưu.</p>
+<h3 id="ham-phat-mu">Hàm phạt mũ<a class="headerlink" href="#ham-phat-mu" title="Permanent link">&para;</a></h3>
+<p>Giả sử hàm phạt có dạng:</p>
 <div class="arithmatex">$$f_i(t) = c_i \cdot e^{\alpha \cdot t},$$</div>
-<p>where all numbers <span class="arithmatex">$c_i$</span> are non-negative and the constant <span class="arithmatex">$\alpha$</span> is positive.</p>
-<p>By applying the permutation method, it is easy to determine that the jobs must be sorted in non-ascending order of the value:</p>
+<p>trong đó tất cả các số <span class="arithmatex">$c_i$</span> đều không âm và hằng số <span class="arithmatex">$\alpha$</span> là số dương.</p>
+<p>Bằng cách áp dụng phương pháp hoán vị, dễ dàng xác định được rằng các công việc phải được sắp xếp theo thứ tự không tăng của giá trị:</p>
 <div class="arithmatex">$$v_i = \frac{1 - e^{\alpha \cdot t_i}}{c_i}$$</div>
-<h3 id="identical-monotone-penalty-function">Identical monotone penalty function<a class="headerlink" href="#identical-monotone-penalty-function" title="Permanent link">&para;</a></h3>
-<p>In this case we consider the case that all <span class="arithmatex">$f_i(t)$</span> are equal, and this function is monotone increasing.</p>
-<p>It is obvious that in this case the optimal permutation is to arrange the jobs by non-descending processing time <span class="arithmatex">$t_i$</span>.</p>
-<h2 id="the-livshits-kladov-theorem">The Livshits-Kladov theorem<a class="headerlink" href="#the-livshits-kladov-theorem" title="Permanent link">&para;</a></h2>
-<p>The Livshits-Kladov theorem establishes that the permutation method is only applicable for the above mentioned three cases, i.e.:</p>
+<h3 id="ham-phat-on-ieu-ong-nhat">Hàm phạt đơn điệu đồng nhất<a class="headerlink" href="#ham-phat-on-ieu-ong-nhat" title="Permanent link">&para;</a></h3>
+<p>Trong trường hợp này, chúng ta xét trường hợp tất cả các <span class="arithmatex">$f_i(t)$</span> đều bằng nhau và hàm này là hàm đơn điệu tăng.</p>
+<p>Rõ ràng là trong trường hợp này, hoán vị tối ưu là sắp xếp các công việc theo thời gian xử lý <span class="arithmatex">$t_i$</span> không giảm.</p>
+<h2 id="inh-ly-livshits-kladov">Định lý Livshits-Kladov<a class="headerlink" href="#inh-ly-livshits-kladov" title="Permanent link">&para;</a></h2>
+<p>Định lý Livshits-Kladov xác lập rằng phương pháp hoán vị chỉ áp dụng được cho ba trường hợp nêu trên, cụ thể là:</p>
 <ul>
-<li>Linear case: <span class="arithmatex">$f_i(t) = c_i(t) + d_i$</span>, where <span class="arithmatex">$c_i$</span> are non-negative constants,</li>
-<li>Exponential case: <span class="arithmatex">$f_i(t) = c_i \cdot e_{\alpha \cdot t} + d_i$</span>, where <span class="arithmatex">$c_i$</span> and <span class="arithmatex">$\alpha$</span> are positive constants,</li>
-<li>Identical case: <span class="arithmatex">$f_i(t) = \phi(t)$</span>, where <span class="arithmatex">$\phi$</span> is a monotone increasing function.</li>
+<li>Trường hợp tuyến tính: <span class="arithmatex">$f_i(t) = c_i(t) + d_i$</span>, trong đó <span class="arithmatex">$c_i$</span> là các hằng số không âm,</li>
+<li>Trường hợp mũ: <span class="arithmatex">$f_i(t) = c_i \cdot e_{\alpha \cdot t} + d_i$</span>, trong đó <span class="arithmatex">$c_i$</span> và <span class="arithmatex">$\alpha$</span> là các hằng số dương,</li>
+<li>Trường hợp đồng nhất: <span class="arithmatex">$f_i(t) = \phi(t)$</span>, trong đó <span class="arithmatex">$\phi$</span> là một hàm đơn điệu tăng.</li>
 </ul>
-<p>In all other cases the method cannot be applied.</p>
-<p>The theorem is proven under the assumption that the penalty functions are sufficiently smooth (the third derivatives exists).</p>
-<p>In all three case we apply the permutation method, through which the desired optimal schedule can be found by sorting, hence in <span class="arithmatex">$O(n \log n)$</span> time.</p>
+<p>Trong tất cả các trường hợp khác, phương pháp này không thể áp dụng được.</p>
+<p>Định lý được chứng minh dựa trên giả định rằng các hàm phạt đủ trơn (tồn tại đạo hàm bậc ba).</p>
+<p>Trong cả ba trường hợp, chúng ta áp dụng phương pháp hoán vị, qua đó lịch trình tối ưu mong muốn có thể được tìm thấy bằng cách sắp xếp, do đó có độ phức tạp thời gian là <span class="arithmatex">$O(n \log n)$</span>.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (88.89%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (7.41%)</li><li><a href="#" title="vxw77" data-bi-name="contributorprofile" target="_blank">vxw77</a> (2.47%)</li><li><a href="#" title="P4R7H0 K2" data-bi-name="contributorprofile" target="_blank">P4R7H0 K2</a> (1.23%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

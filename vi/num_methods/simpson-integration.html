@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#integration-by-simpsons-formula" class="md-skip">
+        <a href="#tich-phan-bang-cong-thuc-simpson" class="md-skip">
           Bỏ qua
         </a>
       
@@ -4204,10 +4204,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#simpsons-formula" class="md-nav__link">
+  <a href="#cong-thuc-simpson" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Simpson's formula
+        Công thức Simpson
       
     </span>
   </a>
@@ -4215,10 +4215,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#error" class="md-nav__link">
+  <a href="#sai-so" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Error
+        Sai số
       
     </span>
   </a>
@@ -4226,10 +4226,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -4237,10 +4237,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#cac-bai-tap-thuc-hanh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Các bài tập thực hành
       
     </span>
   </a>
@@ -7971,13 +7971,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/num_methods/simpson-integration.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/num_methods/simpson-integration.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/num_methods/simpson-integration.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/num_methods/simpson-integration.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7988,30 +7988,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8047,29 +8023,29 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="integration-by-simpsons-formula">Integration by Simpson's formula<a class="headerlink" href="#integration-by-simpsons-formula" title="Permanent link">&para;</a></h1>
-<p>We are going to calculate the value of a definite integral</p>
+<h1 id="tich-phan-bang-cong-thuc-simpson">Tích phân bằng công thức Simpson<a class="headerlink" href="#tich-phan-bang-cong-thuc-simpson" title="Permanent link">&para;</a></h1>
+<p>Chúng ta sẽ tính giá trị của một tích phân xác định</p>
 <div class="arithmatex">$$\int_a ^ b f (x) dx$$</div>
-<p>The solution described here was published in one of the dissertations of <strong>Thomas Simpson</strong> in 1743.</p>
-<h2 id="simpsons-formula">Simpson's formula<a class="headerlink" href="#simpsons-formula" title="Permanent link">&para;</a></h2>
-<p>Let <span class="arithmatex">$n$</span> be some natural number. We divide the integration segment <span class="arithmatex">$[a, b]$</span> into <span class="arithmatex">$2n$</span> equal parts:</p>
+<p>Giải pháp được mô tả ở đây đã được xuất bản trong một trong những luận văn của <strong>Thomas Simpson</strong> vào năm 1743.</p>
+<h2 id="cong-thuc-simpson">Công thức Simpson<a class="headerlink" href="#cong-thuc-simpson" title="Permanent link">&para;</a></h2>
+<p>Giả sử <span class="arithmatex">$n$</span> là một số tự nhiên nào đó. Chúng ta chia đoạn tích phân <span class="arithmatex">$[a, b]$</span> thành <span class="arithmatex">$2n$</span> phần bằng nhau:</p>
 <div class="arithmatex">$$x_i = a + i h, ~~ i = 0 \ldots 2n,$$</div>
 <div class="arithmatex">$$h = \frac {b-a} {2n}.$$</div>
-<p>Now we calculate the integral separately on each of the segments <span class="arithmatex">$[x_ {2i-2}, x_ {2i}]$</span>, <span class="arithmatex">$i = 1 \ldots n$</span>, and then add all the values.</p>
-<p>So, suppose we consider the next segment <span class="arithmatex">$[x_ {2i-2}, x_ {2i}],  i = 1 \ldots n$</span>. Replace the function <span class="arithmatex">$f(x)$</span> on it with a parabola <span class="arithmatex">$P(x)$</span> passing through 3 points <span class="arithmatex">$(x_ {2i-2}, x_ {2i-1}, x_ {2i})$</span>. Such a parabola always exists and is unique; it can be found analytically.
-For instance we could construct it using the Lagrange polynomial interpolation.
-The only remaining thing left to do is to integrate this polynomial.
-If you do this for a general function <span class="arithmatex">$f$</span>, you receive a remarkably simple expression:</p>
+<p>Bây giờ chúng ta tính tích phân riêng biệt trên từng đoạn <span class="arithmatex">$[x_ {2i-2}, x_ {2i}]$</span>, <span class="arithmatex">$i = 1 \ldots n$</span>, và sau đó cộng tất cả các giá trị lại.</p>
+<p>Vì vậy, giả sử chúng ta xét đoạn tiếp theo <span class="arithmatex">$[x_ {2i-2}, x_ {2i}],  i = 1 \ldots n$</span>. Thay thế hàm <span class="arithmatex">$f(x)$</span> trên đó bằng một parabol <span class="arithmatex">$P(x)$</span> đi qua 3 điểm <span class="arithmatex">$(x_ {2i-2}, x_ {2i-1}, x_ {2i})$</span>. Một parabol như vậy luôn tồn tại và là duy nhất; nó có thể được tìm thấy bằng phương pháp giải tích.
+Ví dụ, chúng ta có thể xây dựng nó bằng cách sử dụng nội suy đa thức Lagrange.
+Việc còn lại cần làm là tích phân đa thức này.
+Nếu bạn thực hiện điều này cho một hàm tổng quát <span class="arithmatex">$f$</span>, bạn sẽ nhận được một biểu thức cực kỳ đơn giản:</p>
 <div class="arithmatex">$$\int_{x_ {2i-2}} ^ {x_ {2i}} f (x) ~dx \approx \int_{x_ {2i-2}} ^ {x_ {2i}} P (x) ~dx = \left(f(x_{2i-2}) + 4f(x_{2i-1})+(f(x_{2i})\right)\frac {h} {3} $$</div>
-<p>Adding these values over all segments, we obtain the final <strong>Simpson's formula</strong>:</p>
+<p>Cộng các giá trị này trên tất cả các đoạn, chúng ta có được <strong>công thức Simpson</strong> cuối cùng:</p>
 <div class="arithmatex">$$\int_a ^ b f (x) dx \approx \left(f (x_0) + 4 f (x_1) + 2 f (x_2) + 4f(x_3) + 2 f(x_4) + \ldots + 4 f(x_{2N-1}) + f(x_{2N}) \right)\frac {h} {3} $$</div>
-<h2 id="error">Error<a class="headerlink" href="#error" title="Permanent link">&para;</a></h2>
-<p>The error in approximating an integral by Simpson's formula is</p>
+<h2 id="sai-so">Sai số<a class="headerlink" href="#sai-so" title="Permanent link">&para;</a></h2>
+<p>Sai số trong việc xấp xỉ một tích phân bằng công thức Simpson là</p>
 <div class="arithmatex">$$ -\tfrac{1}{90} \left(\tfrac{b-a}{2}\right)^5 f^{(4)}(\xi)$$</div>
-<p>where <span class="arithmatex">$\xi$</span> is some number between <span class="arithmatex">$a$</span> and <span class="arithmatex">$b$</span>.</p>
-<p>The error is asymptotically proportional to <span class="arithmatex">$(b-a)^5$</span>. However, the above derivations suggest an error proportional to <span class="arithmatex">$(b-a)^4$</span>. Simpson's rule gains an extra order because the points at which the integrand is evaluated are distributed symmetrically in the interval <span class="arithmatex">$[a, b]$</span>.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>Here, <span class="arithmatex">$f(x)$</span> is some user-defined function.</p>
+<p>trong đó <span class="arithmatex">$\xi$</span> là một số nằm giữa <span class="arithmatex">$a$</span> và <span class="arithmatex">$b$</span>.</p>
+<p>Sai số tiệm cận tỉ lệ thuận với <span class="arithmatex">$(b-a)^5$</span>. Tuy nhiên, các dẫn xuất ở trên cho thấy sai số tỉ lệ thuận với <span class="arithmatex">$(b-a)^4$</span>. Quy tắc Simpson đạt được thêm một bậc chính xác nữa vì các điểm tại đó hàm số cần tích phân được đánh giá được phân bổ đối xứng trong khoảng <span class="arithmatex">$[a, b]$</span>.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Ở đây, <span class="arithmatex">$f(x)$</span> là một hàm số do người dùng định nghĩa.</p>
 <div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="c1">// number of steps (already multiplied by 2)</span>
 
 <span class="kt">double</span><span class="w"> </span><span class="nf">simpson_integration</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
@@ -8083,14 +8059,14 @@ If you do this for a general function <span class="arithmatex">$f$</span>, you r
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="cac-bai-tap-thuc-hanh">Các bài tập thực hành<a class="headerlink" href="#cac-bai-tap-thuc-hanh" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://matcomgrader.com/problem/9335/environment-protection/">Latin American Regionals 2012 - Environment Protection</a></li>
 </ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Daili01" data-bi-name="contributorprofile" target="_blank">Daili01</a> (73.13%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (8.96%)</li><li><a href="#" title="Abhijeet Krishnan" data-bi-name="contributorprofile" target="_blank">Abhijeet Krishnan</a> (4.48%)</li><li><a href="#" title="Manuel Pineda" data-bi-name="contributorprofile" target="_blank">Manuel Pineda</a> (4.48%)</li><li><a href="#" title="gampu" data-bi-name="contributorprofile" target="_blank">gampu</a> (4.48%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (2.99%)</li><li><a href="#" title="Pedro Mesquita" data-bi-name="contributorprofile" target="_blank">Pedro Mesquita</a> (1.49%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

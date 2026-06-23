@@ -8055,6 +8055,10 @@ Describe the issue of this article in detail.
   
   
 
+  
+  
+  
+
 
 
 
@@ -8076,9 +8080,8 @@ Describe the issue of this article in detail.
 <h1 id="floyds-linked-list-cycle-finding-algorithm">Floyd's Linked List Cycle Finding Algorithm<a class="headerlink" href="#floyds-linked-list-cycle-finding-algorithm" title="Permanent link">&para;</a></h1>
 <p>Given a linked list where the starting point of that linked list is denoted by <strong>head</strong>, and there may or may not be a cycle present. For instance:</p>
 <div style="text-align: center;">
-  <img src="tortoise_hare_algo.png" alt=""Linked list with cycle"">
+<p><img alt="" src="tortoise_hare_algo.png" /></p>
 </div>
-
 <p>Here we need to find out the point <strong>C</strong>, i.e the starting point of the cycle.</p>
 <h2 id="proposed-algorithm">Proposed algorithm<a class="headerlink" href="#proposed-algorithm" title="Permanent link">&para;</a></h2>
 <p>The algorithm is called <strong>Floyd’s Cycle Algorithm or Tortoise And Hare algorithm</strong>.
@@ -8097,9 +8100,8 @@ This involves two steps:
 <li>If we get null, it indicates that the linked list has no cycle.</li>
 </ol>
 <div style="text-align: center;">
-  <img src="tortoise_hare_cycle_found.png" alt=""Found cycle"">
+<p><img alt="" src="tortoise_hare_cycle_found.png" /></p>
 </div>
-
 <p>Now, that we have figured out if there is a cycle present in the linked list, for the next step we need to find out the starting point of cycle, i.e., <strong>C</strong>.</p>
 <h3 id="step-2-starting-point-of-the-cycle">Step 2: Starting point of the cycle<a class="headerlink" href="#step-2-starting-point-of-the-cycle" title="Permanent link">&para;</a></h3>
 <ol>
@@ -8145,9 +8147,8 @@ When the slow pointer has moved <span class="arithmatex">$k \cdot L$</span> step
 <h3 id="step-2-starting-point-of-the-cycle_1">Step 2: Starting point of the cycle<a class="headerlink" href="#step-2-starting-point-of-the-cycle_1" title="Permanent link">&para;</a></h3>
 <p>Let's try to calculate the distance covered by both of the pointers till the point they meet within the cycle.</p>
 <div style="text-align: center;">
-  <img src="tortoise_hare_proof.png" alt=""Proof"">
+<p><img alt="" src="tortoise_hare_proof.png" /></p>
 </div>
-
 <p><span class="arithmatex">$slowDist = a + xL + b$</span>            , <span class="arithmatex">$x\ge0$</span></p>
 <p><span class="arithmatex">$fastDist = a + yL + b$</span>            , <span class="arithmatex">$y\ge0$</span></p>
 <ul>
@@ -8176,7 +8177,7 @@ And since we let the slow pointer start at the start of the linked list, after <
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Sourav" data-bi-name="contributorprofile" target="_blank">Sourav</a> (82.79%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (7.38%)</li><li><a href="#" title="Arjun Patel" data-bi-name="contributorprofile" target="_blank">Arjun Patel</a> (4.1%)</li><li><a href="#" title="Kanwae Kan" data-bi-name="contributorprofile" target="_blank">Kanwae Kan</a> (2.46%)</li><li><a href="#" title="Isaac Bode" data-bi-name="contributorprofile" target="_blank">Isaac Bode</a> (0.82%)</li><li><a href="#" title="Sarvesh MD" data-bi-name="contributorprofile" target="_blank">Sarvesh MD</a> (0.82%)</li><li><a href="#" title="bitcore" data-bi-name="contributorprofile" target="_blank">bitcore</a> (0.82%)</li><li><a href="#" title="ericmiranda7" data-bi-name="contributorprofile" target="_blank">ericmiranda7</a> (0.82%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Sourav" data-bi-name="contributorprofile" target="_blank">Sourav</a> (78.91%)</li><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (9.38%)</li><li><a href="#" title="Arjun Patel" data-bi-name="contributorprofile" target="_blank">Arjun Patel</a> (3.91%)</li><li><a href="#" title="Kanwae Kan" data-bi-name="contributorprofile" target="_blank">Kanwae Kan</a> (2.34%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (2.34%)</li><li><a href="#" title="Isaac Bode" data-bi-name="contributorprofile" target="_blank">Isaac Bode</a> (0.78%)</li><li><a href="#" title="Sarvesh MD" data-bi-name="contributorprofile" target="_blank">Sarvesh MD</a> (0.78%)</li><li><a href="#" title="bitcore" data-bi-name="contributorprofile" target="_blank">bitcore</a> (0.78%)</li><li><a href="#" title="ericmiranda7" data-bi-name="contributorprofile" target="_blank">ericmiranda7</a> (0.78%)</li></ul>
 </ul>
                 
               </article>
