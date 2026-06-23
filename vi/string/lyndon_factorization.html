@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lyndon-factorization" class="md-skip">
+        <a href="#phan-tich-lyndon-lyndon-factorization" class="md-skip">
           Bỏ qua
         </a>
       
@@ -3041,10 +3041,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lyndon-factorization_1" class="md-nav__link">
+  <a href="#phan-tich-lyndon" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lyndon factorization
+        Phân tích Lyndon
       
     </span>
   </a>
@@ -3052,22 +3052,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#duval-algorithm" class="md-nav__link">
+  <a href="#thuat-toan-duval" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Duval algorithm
+        Thuật toán Duval
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Duval algorithm">
+    <nav class="md-nav" aria-label="Thuật toán Duval">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -3075,10 +3075,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#complexity" class="md-nav__link">
+  <a href="#o-phuc-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Complexity
+        Độ phức tạp
       
     </span>
   </a>
@@ -3091,10 +3091,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#finding-the-smallest-cyclic-shift" class="md-nav__link">
+  <a href="#tim-dich-chuyen-vong-quanh-nho-nhat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Finding the smallest cyclic shift
+        Tìm dịch chuyển vòng quanh nhỏ nhất
       
     </span>
   </a>
@@ -3102,10 +3102,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#problems" class="md-nav__link">
+  <a href="#cac-bai-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problems
+        Các bài toán
       
     </span>
   </a>
@@ -7999,13 +7999,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/string/lyndon_factorization.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/string/lyndon_factorization.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/string/lyndon_factorization.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/string/lyndon_factorization.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8016,14 +8016,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8059,42 +8051,37 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="lyndon-factorization">Lyndon factorization<a class="headerlink" href="#lyndon-factorization" title="Permanent link">&para;</a></h1>
-<h2 id="lyndon-factorization_1">Lyndon factorization<a class="headerlink" href="#lyndon-factorization_1" title="Permanent link">&para;</a></h2>
-<p>First let us define the notion of the Lyndon factorization.</p>
-<p>A string is called <strong>simple</strong> (or a Lyndon word), if it is strictly <strong>smaller than</strong> any of its own nontrivial <strong>suffixes</strong>.
-Examples of simple strings are: <span class="arithmatex">$a$</span>, <span class="arithmatex">$b$</span>, <span class="arithmatex">$ab$</span>, <span class="arithmatex">$aab$</span>, <span class="arithmatex">$abb$</span>, <span class="arithmatex">$ababb$</span>, <span class="arithmatex">$abcd$</span>.
-It can be shown that a string is simple, if and only if it is strictly <strong>smaller than</strong> all its nontrivial <strong>cyclic shifts</strong>.</p>
-<p>Next, let there be a given string <span class="arithmatex">$s$</span>.
-The <strong>Lyndon factorization</strong> of the string <span class="arithmatex">$s$</span> is a factorization <span class="arithmatex">$s = w_1 w_2 \dots w_k$</span>, where all strings <span class="arithmatex">$w_i$</span> are simple, and they are in non-increasing order <span class="arithmatex">$w_1 \ge w_2 \ge \dots \ge w_k$</span>.</p>
-<p>It can be shown, that for any string such a factorization exists and that it is unique.</p>
-<h2 id="duval-algorithm">Duval algorithm<a class="headerlink" href="#duval-algorithm" title="Permanent link">&para;</a></h2>
-<p>The Duval algorithm constructs the Lyndon factorization in <span class="arithmatex">$O(n)$</span> time using <span class="arithmatex">$O(1)$</span> additional memory.</p>
-<p>First let us introduce another notion:
-a string <span class="arithmatex">$t$</span> is called <strong>pre-simple</strong>, if it has the form <span class="arithmatex">$t = w w \dots w \overline{w}$</span>, where <span class="arithmatex">$w$</span> is a simple string and <span class="arithmatex">$\overline{w}$</span> is a prefix of <span class="arithmatex">$w$</span> (possibly empty).
-A simple string is also pre-simple.</p>
-<p>The Duval algorithm is greedy.
-At any point during its execution, the string <span class="arithmatex">$s$</span> will actually be divided into three strings <span class="arithmatex">$s = s_1 s_2 s_3$</span>, where the Lyndon factorization for <span class="arithmatex">$s_1$</span> is already found and finalized, the string <span class="arithmatex">$s_2$</span> is pre-simple (and we know the length of the simple string in it), and <span class="arithmatex">$s_3$</span> is completely untouched.
-In each iteration the Duval algorithm takes the first character of the string <span class="arithmatex">$s_3$</span> and tries to append it to the string <span class="arithmatex">$s_2$</span>.
-It <span class="arithmatex">$s_2$</span> is no longer pre-simple, then the Lyndon factorization for some part of <span class="arithmatex">$s_2$</span> becomes known, and this part goes to <span class="arithmatex">$s_1$</span>.</p>
-<p>Let's describe the algorithm in more detail.
-The pointer <span class="arithmatex">$i$</span> will always point to the beginning of the string <span class="arithmatex">$s_2$</span>.
-The outer loop will be executed as long as <span class="arithmatex">$i &lt; n$</span>.
-Inside the loop we use two additional pointers, <span class="arithmatex">$j$</span> which points to the beginning of <span class="arithmatex">$s_3$</span>, and <span class="arithmatex">$k$</span> which points to the current character that we are currently comparing to.
-We want to add the character <span class="arithmatex">$s[j]$</span> to the string <span class="arithmatex">$s_2$</span>, which requires a comparison with the character <span class="arithmatex">$s[k]$</span>.
-There can be three different cases:</p>
+<h1 id="phan-tich-lyndon-lyndon-factorization">Phân tích Lyndon (Lyndon factorization)<a class="headerlink" href="#phan-tich-lyndon-lyndon-factorization" title="Permanent link">&para;</a></h1>
+<h2 id="phan-tich-lyndon">Phân tích Lyndon<a class="headerlink" href="#phan-tich-lyndon" title="Permanent link">&para;</a></h2>
+<p>Trước hết, hãy định nghĩa khái niệm về phân tích Lyndon.</p>
+<p>Một xâu được gọi là <strong>đơn giản</strong> (hay từ Lyndon), nếu nó thực sự <strong>nhỏ hơn</strong> bất kỳ <strong>hậu tố</strong> không tầm thường nào của chính nó.
+Ví dụ về các xâu đơn giản là: <span class="arithmatex">$a$</span>, <span class="arithmatex">$b$</span>, <span class="arithmatex">$ab$</span>, <span class="arithmatex">$aab$</span>, <span class="arithmatex">$abb$</span>, <span class="arithmatex">$ababb$</span>, <span class="arithmatex">$abcd$</span>.
+Có thể chứng minh rằng một xâu là đơn giản khi và chỉ khi nó thực sự <strong>nhỏ hơn</strong> tất cả các <strong>dịch chuyển vòng quanh</strong> không tầm thường của nó.</p>
+<p>Tiếp theo, giả sử có một xâu <span class="arithmatex">$s$</span> cho trước.
+<strong>Phân tích Lyndon</strong> của xâu <span class="arithmatex">$s$</span> là một cách phân tích <span class="arithmatex">$s = w_1 w_2 \dots w_k$</span>, trong đó tất cả các xâu <span class="arithmatex">$w_i$</span> đều là các xâu đơn giản, và chúng được sắp xếp theo thứ tự không tăng <span class="arithmatex">$w_1 \ge w_2 \ge \dots \ge w_k$</span>.</p>
+<p>Có thể chứng minh rằng với bất kỳ xâu nào, cách phân tích như vậy luôn tồn tại và là duy nhất.</p>
+<h2 id="thuat-toan-duval">Thuật toán Duval<a class="headerlink" href="#thuat-toan-duval" title="Permanent link">&para;</a></h2>
+<p>Thuật toán Duval xây dựng phân tích Lyndon trong thời gian <span class="arithmatex">$O(n)$</span> với bộ nhớ bổ sung là <span class="arithmatex">$O(1)$</span>.</p>
+<p>Trước hết, hãy giới thiệu một khái niệm khác:
+một xâu <span class="arithmatex">$t$</span> được gọi là <strong>tiền đơn giản</strong> (pre-simple), nếu nó có dạng <span class="arithmatex">$t = w w \dots w \overline{w}$</span>, trong đó <span class="arithmatex">$w$</span> là một xâu đơn giản và <span class="arithmatex">$\overline{w}$</span> là một tiền tố của <span class="arithmatex">$w$</span> (có thể rỗng).
+Một xâu đơn giản cũng được coi là tiền đơn giản.</p>
+<p>Thuật toán Duval là một thuật toán tham lam (Greedy).
+Tại bất kỳ thời điểm nào trong quá trình thực thi, xâu <span class="arithmatex">$s$</span> sẽ được chia thành ba phần <span class="arithmatex">$s = s_1 s_2 s_3$</span>, trong đó phân tích Lyndon cho <span class="arithmatex">$s_1$</span> đã được tìm thấy và cố định, xâu <span class="arithmatex">$s_2$</span> là tiền đơn giản (và ta đã biết độ dài của xâu đơn giản bên trong nó), và <span class="arithmatex">$s_3$</span> là phần chưa được xử lý.
+Trong mỗi lần lặp, thuật toán Duval lấy ký tự đầu tiên của xâu <span class="arithmatex">$s_3$</span> và cố gắng thêm nó vào xâu <span class="arithmatex">$s_2$</span>.
+Nếu <span class="arithmatex">$s_2$</span> không còn là tiền đơn giản nữa, thì phân tích Lyndon cho một phần của <span class="arithmatex">$s_2$</span> đã được xác định, và phần này được chuyển sang <span class="arithmatex">$s_1$</span>.</p>
+<p>Hãy mô tả chi tiết thuật toán hơn.
+Con trỏ <span class="arithmatex">$i$</span> sẽ luôn chỉ vào đầu của xâu <span class="arithmatex">$s_2$</span>.
+Vòng lặp ngoài sẽ được thực thi chừng nào <span class="arithmatex">$i &lt; n$</span>.
+Bên trong vòng lặp, chúng ta sử dụng hai con trỏ bổ sung: <span class="arithmatex">$j$</span> chỉ vào phần bắt đầu của <span class="arithmatex">$s_3$</span>, và <span class="arithmatex">$k$</span> chỉ vào ký tự hiện tại mà chúng ta đang so sánh.
+Chúng ta muốn thêm ký tự <span class="arithmatex">$s[j]$</span> vào xâu <span class="arithmatex">$s_2$</span>, đòi hỏi phải so sánh với ký tự <span class="arithmatex">$s[k]$</span>.
+Có ba trường hợp xảy ra:</p>
 <ul>
-<li><span class="arithmatex">$s[j] = s[k]$</span>: if this is the case, then adding the symbol <span class="arithmatex">$s[j]$</span> to <span class="arithmatex">$s_2$</span> doesn't violate its pre-simplicity.
-  So we simply increment the pointers <span class="arithmatex">$j$</span> and <span class="arithmatex">$k$</span>.</li>
-<li><span class="arithmatex">$s[j] &gt; s[k]$</span>: here, the string <span class="arithmatex">$s_2 + s[j]$</span> becomes simple.
-  We can increment <span class="arithmatex">$j$</span> and reset <span class="arithmatex">$k$</span> back to the beginning of <span class="arithmatex">$s_2$</span>, so that the next character can be compared with the beginning of the simple word.</li>
-<li><span class="arithmatex">$s[j] &lt; s[k]$</span>: the string <span class="arithmatex">$s_2 + s[j]$</span> is no longer pre-simple.
-  Therefore we will split the pre-simple string <span class="arithmatex">$s_2$</span> into its simple strings and the remainder, possibly empty.
-  The simple string will have the length <span class="arithmatex">$j - k$</span>.
-  In the next iteration we start again with the remaining <span class="arithmatex">$s_2$</span>.</li>
+<li><span class="arithmatex">$s[j] = s[k]$</span>: Nếu trường hợp này xảy ra, việc thêm ký tự <span class="arithmatex">$s[j]$</span> vào <span class="arithmatex">$s_2$</span> không làm mất tính tiền đơn giản của nó. Vì vậy, chúng ta chỉ cần tăng các con trỏ <span class="arithmatex">$j$</span> và <span class="arithmatex">$k$</span>.</li>
+<li><span class="arithmatex">$s[j] &gt; s[k]$</span>: Ở đây, xâu <span class="arithmatex">$s_2 + s[j]$</span> trở thành xâu đơn giản. Chúng ta có thể tăng <span class="arithmatex">$j$</span> và đặt lại <span class="arithmatex">$k$</span> về đầu của <span class="arithmatex">$s_2$</span>, để ký tự tiếp theo có thể được so sánh với phần đầu của từ đơn giản.</li>
+<li><span class="arithmatex">$s[j] &lt; s[k]$</span>: Xâu <span class="arithmatex">$s_2 + s[j]$</span> không còn là tiền đơn giản nữa. Do đó, chúng ta sẽ tách xâu tiền đơn giản <span class="arithmatex">$s_2$</span> thành các xâu đơn giản và phần dư (có thể rỗng). Xâu đơn giản sẽ có độ dài <span class="arithmatex">$j - k$</span>. Trong lần lặp tiếp theo, chúng ta bắt đầu lại với phần còn lại <span class="arithmatex">$s_2$</span>.</li>
 </ul>
-<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h3>
-<p>Here we present the implementation of the Duval algorithm, which will return the desired Lyndon factorization of a given string <span class="arithmatex">$s$</span>.</p>
+<h3 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h3>
+<p>Dưới đây là cài đặt của thuật toán Duval, trả về phân tích Lyndon mong muốn cho xâu <span class="arithmatex">$s$</span> cho trước.</p>
 <div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">duval</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
@@ -8116,23 +8103,17 @@ There can be three different cases:</p>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">factorization</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="complexity">Complexity<a class="headerlink" href="#complexity" title="Permanent link">&para;</a></h3>
-<p>Let us estimate the running time of this algorithm.</p>
-<p>The <strong>outer while loop</strong> does not exceed <span class="arithmatex">$n$</span> iterations, since at the end of each iteration <span class="arithmatex">$i$</span> increases.
-Also the second inner while loop runs in <span class="arithmatex">$O(n)$</span>, since is only outputs the final factorization.</p>
-<p>So we are only interested in the <strong>first inner while loop</strong>.
-How many iterations does it perform in the worst case?
-It's easy to see that the simple words that we identify in each iteration of the outer loop are longer than the remainder that we additionally compared.
-Therefore also the sum of the remainders will be smaller than <span class="arithmatex">$n$</span>, which means that we only perform at most <span class="arithmatex">$O(n)$</span> iterations of the first inner while loop.
-In fact the total number of character comparisons will not exceed <span class="arithmatex">$4n - 3$</span>.</p>
-<h2 id="finding-the-smallest-cyclic-shift">Finding the smallest cyclic shift<a class="headerlink" href="#finding-the-smallest-cyclic-shift" title="Permanent link">&para;</a></h2>
-<p>Let there be a string <span class="arithmatex">$s$</span>.
-We construct the Lyndon factorization for the string <span class="arithmatex">$s + s$</span> (in <span class="arithmatex">$O(n)$</span> time).
-We will look for a simple string in the factorization, which starts at a position less than <span class="arithmatex">$n$</span> (i.e. it starts in the first instance of <span class="arithmatex">$s$</span>), and ends in a position greater than or equal to <span class="arithmatex">$n$</span> (i.e. in the second instance) of <span class="arithmatex">$s$</span>).
-It is stated, that the position of the start of this simple string will be the beginning of the desired smallest cyclic shift.
-This can be easily verified using the definition of the Lyndon decomposition.</p>
-<p>The beginning of the simple block can be found easily - just remember the pointer <span class="arithmatex">$i$</span> at the beginning of each iteration of the outer loop, which indicated the beginning of the current pre-simple string.</p>
-<p>So we get the following implementation:</p>
+<h3 id="o-phuc-tap">Độ phức tạp<a class="headerlink" href="#o-phuc-tap" title="Permanent link">&para;</a></h3>
+<p>Hãy ước tính thời gian chạy của thuật toán này.</p>
+<p><strong>Vòng lặp while ngoài</strong> không vượt quá <span class="arithmatex">$n$</span> lần lặp, vì sau mỗi lần lặp <span class="arithmatex">$i$</span> đều tăng lên. Ngoài ra, vòng lặp while thứ hai bên trong chạy trong <span class="arithmatex">$O(n)$</span>, vì nó chỉ đơn giản là xuất ra phân tích cuối cùng.</p>
+<p>Vì vậy, chúng ta chỉ quan tâm đến <strong>vòng lặp while thứ nhất bên trong</strong>. Nó thực hiện bao nhiêu lần lặp trong trường hợp xấu nhất? Dễ thấy rằng các từ đơn giản mà chúng ta xác định được trong mỗi lần lặp của vòng ngoài đều dài hơn phần dư mà chúng ta đã so sánh thêm. Do đó, tổng các phần dư sẽ nhỏ hơn <span class="arithmatex">$n$</span>, nghĩa là chúng ta chỉ thực hiện tối đa <span class="arithmatex">$O(n)$</span> lần lặp cho vòng while thứ nhất. Trên thực tế, tổng số lần so sánh ký tự sẽ không vượt quá <span class="arithmatex">$4n - 3$</span>.</p>
+<h2 id="tim-dich-chuyen-vong-quanh-nho-nhat">Tìm dịch chuyển vòng quanh nhỏ nhất<a class="headerlink" href="#tim-dich-chuyen-vong-quanh-nho-nhat" title="Permanent link">&para;</a></h2>
+<p>Giả sử có một xâu <span class="arithmatex">$s$</span>.
+Chúng ta xây dựng phân tích Lyndon cho xâu <span class="arithmatex">$s + s$</span> (trong thời gian <span class="arithmatex">$O(n)$</span>).
+Chúng ta sẽ tìm kiếm một xâu đơn giản trong phân tích này mà bắt đầu tại một vị trí nhỏ hơn <span class="arithmatex">$n$</span> (tức là nó bắt đầu trong lần xuất hiện thứ nhất của <span class="arithmatex">$s$</span>) và kết thúc ở một vị trí lớn hơn hoặc bằng <span class="arithmatex">$n$</span> (tức là trong lần xuất hiện thứ hai của <span class="arithmatex">$s$</span>).
+Người ta khẳng định rằng vị trí bắt đầu của xâu đơn giản này sẽ là điểm bắt đầu của dịch chuyển vòng quanh nhỏ nhất cần tìm. Điều này có thể dễ dàng kiểm chứng bằng định nghĩa của phân tích Lyndon.</p>
+<p>Điểm bắt đầu của khối đơn giản có thể được tìm thấy dễ dàng - chỉ cần ghi nhớ con trỏ <span class="arithmatex">$i$</span> tại đầu mỗi lần lặp của vòng lặp ngoài, nó biểu thị điểm bắt đầu của xâu tiền đơn giản hiện tại.</p>
+<p>Như vậy, ta có cài đặt sau:</p>
 <div class="highlight"><pre><span></span><code><span class="n">string</span><span class="w"> </span><span class="nf">min_cyclic_string</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
@@ -8153,14 +8134,14 @@ This can be easily verified using the definition of the Lyndon decomposition.</p
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="problems">Problems<a class="headerlink" href="#problems" title="Permanent link">&para;</a></h2>
+<h2 id="cac-bai-toan">Các bài toán<a class="headerlink" href="#cac-bai-toan" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=660">UVA #719 - Glass Beads</a></li>
 </ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (94.49%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (4.72%)</li><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (0.79%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>
