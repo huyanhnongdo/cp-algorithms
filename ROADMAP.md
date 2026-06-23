@@ -137,7 +137,7 @@ Dịch 124 bài viết còn lại, bao phủ 100% nội dung.
 
 | # | Task | Số bài | Thời gian | Trạng thái |
 |---|---|---|---|---|
-| 3.1 | **Algebra nâng cao** | 25 bài | 10h | ⬜ |
+| 3.1 | **Algebra nâng cao** | 23 bài | 10h | ✅ |
 | | Prime numbers (3), Modular arithmetic (6), Number systems (2), Misc (12) | | | |
 | 3.2 | **Graph nâng cao** | 42 bài | 16h | ⬜ |
 | | Bridges/Articulations (5), Spanning trees (6), Cycles (3), LCA (5), Flows (9), Matching (3), Misc (6) + bài còn lại | | | |
