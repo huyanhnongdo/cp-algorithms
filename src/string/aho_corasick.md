@@ -16,7 +16,7 @@ The algorithm was proposed by Alfred Aho and Margaret Corasick in 1975.
 ## Construction of the trie
 
 <center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Trie.svg" width="400px">
+![](https://upload.wikimedia.org/wikipedia/commons/e/e2/Trie.svg)
 <br>
 <i>A trie based on words "Java", "Rad", "Rand", "Rau", "Raum" and "Rose".</i>
 <br>
@@ -105,7 +105,7 @@ For example, let the trie be constructed by the strings $ab$ and $bc$, and we ar
 To transition with the letter $c$, we are forced to go to the state corresponding to the string $b$, and from there follow the edge with the letter $c$.
 
 <center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/90/A_diagram_of_the_Aho-Corasick_string_search_algorithm.svg" width="300px">
+![](https://upload.wikimedia.org/wikipedia/commons/9/90/A_diagram_of_the_Aho-Corasick_string_search_algorithm.svg)
 <br>
 <i>An Aho-Corasick automaton based on words "a", "ab", "bc", "bca", "c" and "caa".</i>
 <br>

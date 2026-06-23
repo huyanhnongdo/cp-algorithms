@@ -49,13 +49,13 @@ def extract_preservable_blocks(content):
         return key
     text = re.sub(r"```.*?```", replace_code, text, flags=re.DOTALL)
     
-    # 3. Extract Block LaTeX ($$...$$)
+    # 3. Extract Block LaTeX ($$...$$ or \[...\])
     def replace_latex_block(match):
         key = f"[LATEX_BLOCK_{counter['latex_block']}]"
         replacements[key] = match.group(0)
         counter['latex_block'] += 1
         return key
-    text = re.sub(r"\$\$.*?\$\$", replace_latex_block, text, flags=re.DOTALL)
+    text = re.sub(r"\$\$.*?\$\$|\\\[.*?\\\]", replace_latex_block, text, flags=re.DOTALL)
     
     # 4. Extract Inline LaTeX ($...$)
     def replace_latex_inline(match):

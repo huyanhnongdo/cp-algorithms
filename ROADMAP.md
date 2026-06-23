@@ -145,13 +145,13 @@ Dịch 124 bài viết còn lại, bao phủ 100% nội dung.
 | | Elementary (9), Polygons (6), Convex hull (2), Sweep-line (1), Planar (2), Misc (6) | | | |
 | 3.4 | **Combinatorics** | 7 bài còn lại | 4h | ✅ (7/7) |
 | | Inclusion-Exclusion, Burnside, Stars&Bars, Brackets, Bishops, Labeled graphs, Combinations | | | |
-| 3.5 | **String nâng cao** | 8 bài còn lại | 5h | ⬜ |
+| 3.5 | **String nâng cao** | 8 bài còn lại | 5h | ✅ (8/8) |
 | | Suffix Tree, Suffix Automaton, Aho-Corasick, Manacher, Lyndon, Rabin-Karp, Expression parsing, Repetitions | | | |
-| 3.6 | **DP còn lại** | 3 bài | 2h | ⬜ |
+| 3.6 | **DP còn lại** | 3 bài | 2h | ✅ (3/3) |
 | | Knuth Optimization, Profile DP, Zero Matrix | | | |
-| 3.7 | **Linear Algebra** | 4 bài | 2h | ⬜ |
+| 3.7 | **Linear Algebra** | 4 bài | 2h | ✅ (4/4) |
 | | Gauss (2), Kraut, Rank | | | |
-| 3.8 | **Game Theory** | 2 bài | 1h | ⬜ |
+| 3.8 | **Game Theory** | 2 bài | 1h | ✅ (2/2) |
 | | Sprague-Grundy/Nim, Games on Graphs | | | |
 | 3.9 | **Miscellaneous** | 12 bài | 5h | ⬜ |
 | | Sequences (4), Schedules (3), Others (5) | | | |
