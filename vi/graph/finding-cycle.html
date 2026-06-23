@@ -34,7 +34,7 @@
     
     
       
-        <title>Checking a graph for acyclicity and finding a cycle in O(M) - Algorithms for Competitive Programming</title>
+        <title>Kiểm tra tính không chu trình và tìm chu trình trên đồ thị trong O(M) - Algorithms for Competitive Programming</title>
       
     
     
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#checking-a-graph-for-acyclicity-and-finding-a-cycle-in-om" class="md-skip">
+        <a href="#kiem-tra-tinh-khong-chu-trinh-va-tim-chu-trinh-tren-o-thi-trong-om" class="md-skip">
           Bỏ qua
         </a>
       
@@ -145,7 +145,7 @@
           <span class="md-ellipsis">
             <a href="#" onclick="scrollToTop()">
               
-                Checking a graph for acyclicity and finding a cycle in O(M)
+                Kiểm tra tính không chu trình và tìm chu trình trên đồ thị trong O(M)
               
             </a>
           </span>
@@ -6316,10 +6316,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -6327,22 +6327,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Implementation">
+    <nav class="md-nav" aria-label="Cài đặt">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-luyen-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice problems:
+        Bài tập luyện tập:
       
     </span>
   </a>
@@ -7966,13 +7966,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/finding-cycle.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/finding-cycle.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/finding-cycle.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/finding-cycle.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7983,34 +7983,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8046,14 +8018,14 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="checking-a-graph-for-acyclicity-and-finding-a-cycle-in-om">Checking a graph for acyclicity and finding a cycle in <span class="arithmatex">$O(M)$</span><a class="headerlink" href="#checking-a-graph-for-acyclicity-and-finding-a-cycle-in-om" title="Permanent link">&para;</a></h1>
-<p>Consider a directed or undirected graph without loops and multiple edges. We have to check whether it is acyclic, and if it is not, then find any cycle.</p>
-<p>We can solve this problem by using <a href="depth-first-search.html">Depth First Search</a> in <span class="arithmatex">$O(M)$</span> where <span class="arithmatex">$M$</span> is number of edges.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>We will run a series of DFS in the graph. Initially all vertices are colored white (0). From each unvisited (white) vertex, start the DFS, mark it gray (1) while entering and mark it black (2) on exit. If DFS moves to a gray vertex, then we have found a cycle (if the graph is undirected, the edge to parent is not considered).
-The cycle itself can be reconstructed using parent array.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>Here is an implementation for directed graph.</p>
+<h1 id="kiem-tra-tinh-khong-chu-trinh-va-tim-chu-trinh-tren-o-thi-trong-om">Kiểm tra tính không chu trình và tìm chu trình trên đồ thị trong <span class="arithmatex">$O(M)$</span><a class="headerlink" href="#kiem-tra-tinh-khong-chu-trinh-va-tim-chu-trinh-tren-o-thi-trong-om" title="Permanent link">&para;</a></h1>
+<p>Xét một đồ thị có hướng hoặc vô hướng không có khuyên (loops) và đa cạnh (multiple edges). Chúng ta cần kiểm tra xem đồ thị đó có không chu trình (acyclic) hay không, và nếu có chu trình, hãy tìm ra một chu trình bất kỳ.</p>
+<p>Chúng ta có thể giải quyết bài toán này bằng cách sử dụng <a href="depth-first-search.html">Tìm kiếm theo chiều sâu</a> (DFS) với độ phức tạp <span class="arithmatex">$O(M)$</span>, trong đó <span class="arithmatex">$M$</span> là số cạnh của đồ thị.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Chúng ta sẽ chạy một chuỗi các DFS trong đồ thị. Ban đầu, tất cả các đỉnh đều được tô màu trắng (0). Từ mỗi đỉnh chưa được ghé thăm (màu trắng), bắt đầu chạy DFS, tô màu xám (1) khi đi vào đỉnh và tô màu đen (2) khi đi ra khỏi đỉnh. Nếu DFS đi đến một đỉnh màu xám, điều đó có nghĩa là chúng ta đã tìm thấy một chu trình (nếu là đồ thị vô hướng, cạnh dẫn đến đỉnh cha sẽ không được xem xét).</p>
+<p>Bản thân chu trình có thể được dựng lại bằng cách sử dụng mảng đỉnh cha (parent array).</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Dưới đây là bản cài đặt dành cho đồ thị có hướng.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
@@ -8104,12 +8076,12 @@ The cycle itself can be reconstructed using parent array.</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Here is an implementation for undirected graph.
-Note that in the undirected version, if a vertex <code>v</code> gets colored black, it will never be visited again by the DFS.
-This is because we already explored all connected edges of <code>v</code> when we first visited it.
-The connected component containing <code>v</code> (after removing the edge between <code>v</code> and its parent) must be a tree, if the DFS has completed processing <code>v</code> without finding a cycle.
-So we don't even need to distinguish between gray and black states.
-Thus we can turn the char vector <code>color</code> into a boolean vector <code>visited</code>.</p>
+<p>Dưới đây là bản cài đặt dành cho đồ thị vô hướng.
+Lưu ý rằng trong phiên bản vô hướng, nếu một đỉnh <code>v</code> được tô màu đen, nó sẽ không bao giờ được ghé thăm lại bởi DFS.
+Điều này là do chúng ta đã khám phá tất cả các cạnh kết nối của <code>v</code> khi ghé thăm nó lần đầu tiên.
+Thành phần liên thông chứa <code>v</code> (sau khi loại bỏ cạnh giữa <code>v</code> và cha của nó) phải là một cây, nếu DFS đã hoàn tất xử lý <code>v</code> mà không tìm thấy chu trình.
+Vì vậy, chúng ta thậm chí không cần phân biệt giữa trạng thái xám và đen.
+Do đó, chúng ta có thể chuyển vector kiểu char <code>color</code> thành vector kiểu boolean <code>visited</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="p">;</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">visited</span><span class="p">;</span>
@@ -8158,7 +8130,7 @@ Thus we can turn the char vector <code>color</code> into a boolean vector <code>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="practice-problems">Practice problems:<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h3>
+<h3 id="bai-tap-luyen-tap">Bài tập luyện tập:<a class="headerlink" href="#bai-tap-luyen-tap" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://atcoder.jp/contests/abc357/tasks/abc357_e">AtCoder : Reachability in Functional Graph</a></li>
 <li><a href="https://cses.fi/problemset/task/1669">CSES : Round Trip</a></li>
@@ -8167,7 +8139,7 @@ Thus we can turn the char vector <code>color</code> into a boolean vector <code>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Ankit Sangwan" data-bi-name="contributorprofile" target="_blank">Ankit Sangwan</a> (32.84%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (25.37%)</li><li><a href="#" title="Pranjal Jain" data-bi-name="contributorprofile" target="_blank">Pranjal Jain</a> (24.63%)</li><li><a href="#" title="Michael Tan" data-bi-name="contributorprofile" target="_blank">Michael Tan</a> (9.7%)</li><li><a href="#" title="Aryaman" data-bi-name="contributorprofile" target="_blank">Aryaman</a> (2.99%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (2.24%)</li><li><a href="#" title="Tarun Khullar" data-bi-name="contributorprofile" target="_blank">Tarun Khullar</a> (1.49%)</li><li><a href="#" title="Nadezhda R" data-bi-name="contributorprofile" target="_blank">Nadezhda R</a> (0.75%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

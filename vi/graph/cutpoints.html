@@ -34,7 +34,7 @@
     
     
       
-        <title>Finding articulation points in a graph in O(N+M) - Algorithms for Competitive Programming</title>
+        <title>Tìm khớp của đồ thị trong O(N+M) - Algorithms for Competitive Programming</title>
       
     
     
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#finding-articulation-points-in-a-graph-in-onm" class="md-skip">
+        <a href="#tim-khop-cua-o-thi-trong-onm" class="md-skip">
           Bỏ qua
         </a>
       
@@ -145,7 +145,7 @@
           <span class="md-ellipsis">
             <a href="#" onclick="scrollToTop()">
               
-                Finding articulation points in a graph in O(N+M)
+                Tìm khớp của đồ thị trong O(N+M)
               
             </a>
           </span>
@@ -5648,10 +5648,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
+  <a href="#thuat-toan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Algorithm
+        Thuật toán
       
     </span>
   </a>
@@ -5659,10 +5659,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -5670,10 +5670,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-luyen-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập luyện tập
       
     </span>
   </a>
@@ -7960,13 +7960,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/cutpoints.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/cutpoints.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/cutpoints.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/cutpoints.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7977,26 +7977,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8032,34 +8012,34 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="finding-articulation-points-in-a-graph-in-onm">Finding articulation points in a graph in <span class="arithmatex">$O(N+M)$</span><a class="headerlink" href="#finding-articulation-points-in-a-graph-in-onm" title="Permanent link">&para;</a></h1>
-<p>We are given an undirected graph. An articulation point (or cut vertex) is defined as a vertex which, when removed along with associated edges, makes the graph disconnected (or more precisely, increases the number of connected components in the graph). The task is to find all articulation points in the given graph.</p>
-<p>The algorithm described here is based on <a href="depth-first-search.html">depth first search</a> and has <span class="arithmatex">$O(N+M)$</span> complexity, where <span class="arithmatex">$N$</span> is the number of vertices and <span class="arithmatex">$M$</span> is the number of edges in the graph.</p>
-<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
-<p>Pick an arbitrary vertex of the graph <span class="arithmatex">$root$</span> and run <a href="depth-first-search.html">depth first search</a> from it. Note the following fact (which is easy to prove):</p>
+<h1 id="tim-khop-cua-o-thi-trong-onm">Tìm khớp của đồ thị trong <span class="arithmatex">$O(N+M)$</span><a class="headerlink" href="#tim-khop-cua-o-thi-trong-onm" title="Permanent link">&para;</a></h1>
+<p>Cho một đồ thị vô hướng. Một <strong>khớp</strong> (hay <strong>điểm cắt</strong> - articulation point / cut vertex) được định nghĩa là một đỉnh mà khi loại bỏ nó cùng với các cạnh liên kết, đồ thị sẽ mất tính liên thông (hay nói một cách chính xác hơn là số thành phần liên thông của đồ thị sẽ tăng lên). Nhiệm vụ là tìm tất cả các khớp trong đồ thị đã cho.</p>
+<p>Thuật toán được mô tả ở đây dựa trên <a href="depth-first-search.html">tìm kiếm theo chiều sâu</a> (DFS) và có độ phức tạp là <span class="arithmatex">$O(N+M)$</span>, trong đó <span class="arithmatex">$N$</span> là số đỉnh và <span class="arithmatex">$M$</span> là số cạnh của đồ thị.</p>
+<h2 id="thuat-toan">Thuật toán<a class="headerlink" href="#thuat-toan" title="Permanent link">&para;</a></h2>
+<p>Chọn một đỉnh bất kỳ làm <span class="arithmatex">$root$</span> và chạy <a href="depth-first-search.html">tìm kiếm theo chiều sâu</a> từ đỉnh đó. Hãy lưu ý thực tế sau đây (rất dễ chứng minh):</p>
 <ul>
 <li>
-<p>Let's say we are in the DFS, looking through the edges starting from vertex <span class="arithmatex">$v\ne root$</span>.
-If the current edge <span class="arithmatex">$(v, to)$</span> is such that none of the vertices <span class="arithmatex">$to$</span> or its descendants in the DFS traversal tree has a back-edge to any of ancestors of <span class="arithmatex">$v$</span>, then <span class="arithmatex">$v$</span> is an articulation point. Otherwise, <span class="arithmatex">$v$</span> is not an articulation point.</p>
+<p>Giả sử chúng ta đang ở trong DFS, xem xét các cạnh đi ra từ đỉnh <span class="arithmatex">$v \ne root$</span>.
+  Nếu cạnh hiện tại <span class="arithmatex">$(v, to)$</span> thỏa mãn không có đỉnh <span class="arithmatex">$to$</span> hay bất kỳ đỉnh con cháu nào của nó trong cây duyệt DFS có cạnh ngược đến bất kỳ tổ tiên nào của <span class="arithmatex">$v$</span>, thì <span class="arithmatex">$v$</span> là một khớp. Ngược lại, <span class="arithmatex">$v$</span> không phải là khớp.</p>
 </li>
 <li>
-<p>Let's consider the remaining case of <span class="arithmatex">$v=root$</span>.
-This vertex will be the point of articulation if and only if this vertex has more than one child in the DFS tree.</p>
+<p>Xét trường hợp còn lại khi <span class="arithmatex">$v = root$</span>.
+  Đỉnh này sẽ là một khớp khi và chỉ khi nó có nhiều hơn một con trong cây DFS.</p>
 </li>
 </ul>
-<p>Now we have to learn to check this fact for each vertex efficiently. We'll use "time of entry into node" computed by the depth first search.</p>
-<p>So, let <span class="arithmatex">$tin[v]$</span> denote entry time for node <span class="arithmatex">$v$</span>. We introduce an array <span class="arithmatex">$low[v]$</span> which will let us check the fact for each vertex <span class="arithmatex">$v$</span>. <span class="arithmatex">$low[v]$</span> is the minimum of <span class="arithmatex">$tin[v]$</span>, the entry times <span class="arithmatex">$tin[p]$</span> for each node <span class="arithmatex">$p$</span> that is connected to node <span class="arithmatex">$v$</span> via a back-edge <span class="arithmatex">$(v, p)$</span> and the values of <span class="arithmatex">$low[to]$</span> for each vertex <span class="arithmatex">$to$</span> which is a direct descendant of <span class="arithmatex">$v$</span> in the DFS tree:</p>
-<div class="arithmatex">$$low[v] = \min \begin{cases} tin[v] \\ tin[p] &amp;\text{ for all }p\text{ for which }(v, p)\text{ is a back edge} \\ low[to]&amp; \text{ for all }to\text{ for which }(v, to)\text{ is a tree edge} \end{cases}$$</div>
-<p>Now, there is a back edge from vertex <span class="arithmatex">$v$</span> or one of its descendants to one of its ancestors if and only if vertex <span class="arithmatex">$v$</span> has a child <span class="arithmatex">$to$</span> for which <span class="arithmatex">$low[to] &lt; tin[v]$</span>. If <span class="arithmatex">$low[to] = tin[v]$</span>, the back edge comes directly to <span class="arithmatex">$v$</span>, otherwise it comes to one of the ancestors of <span class="arithmatex">$v$</span>.</p>
-<p>Thus, the vertex <span class="arithmatex">$v$</span> in the DFS tree is an articulation point if and only if <span class="arithmatex">$low[to] \geq tin[v]$</span>.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>The implementation needs to distinguish three cases: when we go down the edge in DFS tree, when we find a back edge to an ancestor of the vertex and when we return to a parent of the vertex. These are the cases:</p>
+<p>Bây giờ chúng ta cần kiểm tra tính chất này cho mỗi đỉnh một cách hiệu quả. Chúng ta sẽ sử dụng "thời điểm bắt đầu thăm đỉnh" được tính toán bởi thuật toán tìm kiếm theo chiều sâu.</p>
+<p>Gọi <span class="arithmatex">$tin[v]$</span> là thời điểm bắt đầu thăm đỉnh <span class="arithmatex">$v$</span>. Chúng ta đưa vào một mảng <span class="arithmatex">$low[v]$</span> để kiểm tra tính chất này cho mỗi đỉnh <span class="arithmatex">$v$</span>. <span class="arithmatex">$low[v]$</span> là giá trị nhỏ nhất của <span class="arithmatex">$tin[v]$</span>, thời điểm bắt đầu thăm <span class="arithmatex">$tin[p]$</span> của các đỉnh <span class="arithmatex">$p$</span> kết nối trực tiếp với <span class="arithmatex">$v$</span> qua cạnh ngược <span class="arithmatex">$(v, p)$</span>, và các giá trị <span class="arithmatex">$low[to]$</span> của các đỉnh con trực tiếp <span class="arithmatex">$to$</span> của <span class="arithmatex">$v$</span> trong cây DFS:</p>
+<div class="arithmatex">$$low[v] = \min \begin{cases} tin[v] \\ tin[p] &amp;\text{ với mọi }p\text{ mà }(v, p)\text{ là cạnh ngược} \\ low[to]&amp; \text{ với mọi }to\text{ mà }(v, to)\text{ là cạnh cây DFS} \end{cases}$$</div>
+<p>Khi đó, tồn tại một cạnh ngược từ đỉnh <span class="arithmatex">$v$</span> hoặc một trong các con cháu của nó đến một trong các tổ tiên của nó khi và chỉ khi đỉnh <span class="arithmatex">$v$</span> có một con <span class="arithmatex">$to$</span> thỏa mãn <span class="arithmatex">$low[to] &lt; tin[v]$</span>. Nếu <span class="arithmatex">$low[to] = tin[v]$</span>, cạnh ngược đi trực tiếp đến <span class="arithmatex">$v$</span>, ngược lại nó đi đến một trong các tổ tiên của <span class="arithmatex">$v$</span>.</p>
+<p>Do đó, đỉnh <span class="arithmatex">$v$</span> trong cây DFS là một khớp khi và chỉ khi <span class="arithmatex">$low[to] \geq tin[v]$</span>.</p>
+<h2 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h2>
+<p>Bản cài đặt cần phân biệt ba trường hợp: khi đi xuống một cạnh trong cây DFS, khi phát hiện một cạnh ngược đến một tổ tiên của đỉnh và khi quay trở lại đỉnh cha của đỉnh hiện tại. Cụ thể:</p>
 <ul>
-<li><span class="arithmatex">$visited[to] = false$</span> - the edge is part of DFS tree;</li>
-<li><span class="arithmatex">$visited[to] = true$</span> &amp;&amp; <span class="arithmatex">$to \neq parent$</span> - the edge is back edge to one of the ancestors;</li>
-<li><span class="arithmatex">$to = parent$</span> - the edge leads back to parent in DFS tree.</li>
+<li><span class="arithmatex">$visited[to] = false$</span> - cạnh thuộc cây DFS;</li>
+<li><span class="arithmatex">$visited[to] = true$</span> &amp;&amp; <span class="arithmatex">$to \neq parent$</span> - cạnh ngược đến một trong các tổ tiên;</li>
+<li><span class="arithmatex">$to = parent$</span> - cạnh dẫn ngược về đỉnh cha trong cây DFS.</li>
 </ul>
-<p>To implement this, we need a depth first search function which accepts the parent vertex of the current node.</p>
+<p>Để cài đặt điều này, hàm tìm kiếm theo chiều sâu cần nhận thêm tham số là đỉnh cha của nút hiện tại.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="c1">// number of nodes</span>
 <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">adj</span><span class="p">;</span><span class="w"> </span><span class="c1">// adjacency list of graph</span>
 
@@ -8098,19 +8078,19 @@ This vertex will be the point of articulation if and only if this vertex has mor
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Main function is <code>find_cutpoints</code>; it performs necessary initialization and starts depth first search in each connected component of the graph.</p>
-<p>Function <code>IS_CUTPOINT(a)</code> is some function that will process the fact that vertex <span class="arithmatex">$a$</span> is an articulation point, for example, print it (Caution that this can be called multiple times for a vertex).</p>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<p>Hàm chính là <code>find_cutpoints</code>; hàm này thực hiện các khởi tạo cần thiết và bắt đầu tìm kiếm theo chiều sâu trong mỗi thành phần liên thông của đồ thị.</p>
+<p>Hàm <code>IS_CUTPOINT(a)</code> là hàm xử lý thông tin khi phát hiện đỉnh <span class="arithmatex">$a$</span> là một khớp, ví dụ như in nó ra màn hình. (Lưu ý rằng hàm này có thể được gọi nhiều lần cho cùng một đỉnh).</p>
+<h2 id="bai-tap-luyen-tap">Bài tập luyện tập<a class="headerlink" href="#bai-tap-luyen-tap" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=13&amp;page=show_problem&amp;problem=1140">UVA #10199 "Tourist Guide"</a> [difficulty: low]</li>
-<li><a href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=5&amp;page=show_problem&amp;problem=251">UVA #315 "Network"</a> [difficulty: low]</li>
+<li><a href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=13&amp;page=show_problem&amp;problem=1140">UVA #10199 "Tourist Guide"</a> [độ khó: thấp]</li>
+<li><a href="http://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=5&amp;page=show_problem&amp;problem=251">UVA #315 "Network"</a> [độ khó: thấp]</li>
 <li><a href="http://www.spoj.com/problems/SUBMERGE/">SPOJ - Submerging Islands</a></li>
 <li><a href="https://codeforces.com/problemset/problem/193/A">Codeforces - Cutting Figure</a></li>
 </ul>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Pranjal Jain" data-bi-name="contributorprofile" target="_blank">Pranjal Jain</a> (56.52%)</li><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (21.74%)</li><li><a href="#" title="wiktorkuchta" data-bi-name="contributorprofile" target="_blank">wiktorkuchta</a> (14.13%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (3.26%)</li><li><a href="#" title="Avinash Pandey" data-bi-name="contributorprofile" target="_blank">Avinash Pandey</a> (2.17%)</li><li><a href="#" title="Madhur Chauhan" data-bi-name="contributorprofile" target="_blank">Madhur Chauhan</a> (2.17%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>

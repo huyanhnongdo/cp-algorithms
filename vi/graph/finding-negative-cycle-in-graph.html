@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#finding-a-negative-cycle-in-the-graph" class="md-skip">
+        <a href="#tim-chu-trinh-am-trong-o-thi" class="md-skip">
           Bỏ qua
         </a>
       
@@ -6344,22 +6344,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#using-bellman-ford-algorithm" class="md-nav__link">
+  <a href="#su-dung-thuat-toan-bellman-ford" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using Bellman-Ford algorithm
+        Sử dụng thuật toán Bellman-Ford
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Using Bellman-Ford algorithm">
+    <nav class="md-nav" aria-label="Sử dụng thuật toán Bellman-Ford">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#cai-at" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -6372,22 +6372,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-floyd-warshall-algorithm" class="md-nav__link">
+  <a href="#su-dung-thuat-toan-floyd-warshall" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using Floyd-Warshall algorithm
+        Sử dụng thuật toán Floyd-Warshall
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Using Floyd-Warshall algorithm">
+    <nav class="md-nav" aria-label="Sử dụng thuật toán Floyd-Warshall">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#implementation_1" class="md-nav__link">
+  <a href="#cai-at_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Implementation
+        Cài đặt
       
     </span>
   </a>
@@ -6400,10 +6400,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
+  <a href="#bai-tap-luyen-tap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practice Problems
+        Bài tập luyện tập
       
     </span>
   </a>
@@ -7994,13 +7994,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/finding-negative-cycle-in-graph.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/graph/finding-negative-cycle-in-graph.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/finding-negative-cycle-in-graph.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/graph/finding-negative-cycle-in-graph.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -8011,46 +8011,6 @@ Describe the issue of this article in detail.
 
 
 
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -8086,18 +8046,18 @@ Describe the issue of this article in detail.
 </ul>
 
 
-<h1 id="finding-a-negative-cycle-in-the-graph">Finding a negative cycle in the graph<a class="headerlink" href="#finding-a-negative-cycle-in-the-graph" title="Permanent link">&para;</a></h1>
-<p>You are given a directed weighted graph <span class="arithmatex">$G$</span> with <span class="arithmatex">$N$</span> vertices and <span class="arithmatex">$M$</span> edges. Find any cycle of negative weight in it, if such a cycle exists.</p>
-<p>In another formulation of the problem you have to find all pairs of vertices which have a path of arbitrarily small weight between them.</p>
-<p>It is convenient to use different algorithms to solve these two variations of the problem, so we'll discuss both of them here.</p>
-<h2 id="using-bellman-ford-algorithm">Using Bellman-Ford algorithm<a class="headerlink" href="#using-bellman-ford-algorithm" title="Permanent link">&para;</a></h2>
-<p>Bellman-Ford algorithm allows you to check whether there exists a cycle of negative weight in the graph, and if it does, find one of these cycles.</p>
-<p>The details of the algorithm are described in the article on the <a href="bellman_ford.html">Bellman-Ford</a> algorithm.
-Here we'll describe only its application to this problem.</p>
-<p>The standard implementation of Bellman-Ford looks for a negative cycle reachable from some starting vertex <span class="arithmatex">$v$</span> ; however, the algorithm can be modified to just look for any negative cycle in the graph. 
-For this we need to put all the distance  <span class="arithmatex">$d[i]$</span>  to zero and not infinity — as if we are looking for the shortest path from all vertices simultaneously; the validity of the detection of a negative cycle is not affected.</p>
-<p>Do <span class="arithmatex">$N$</span> iterations of Bellman-Ford algorithm. If there were no changes on the last iteration, there is no cycle of negative weight in the graph. Otherwise take a vertex the distance to which has changed, and go from it via its ancestors until a cycle is found. This cycle will be the desired cycle of negative weight.</p>
-<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h3>
+<h1 id="tim-chu-trinh-am-trong-o-thi">Tìm chu trình âm trong đồ thị<a class="headerlink" href="#tim-chu-trinh-am-trong-o-thi" title="Permanent link">&para;</a></h1>
+<p>Cho một đồ thị có hướng có trọng số <span class="arithmatex">$G$</span> gồm <span class="arithmatex">$N$</span> đỉnh và <span class="arithmatex">$M$</span> cạnh. Hãy tìm một chu trình bất kỳ có tổng trọng số âm trong đồ thị đó, nếu tồn tại chu trình như vậy.</p>
+<p>Trong một cách phát biểu khác của bài toán, bạn cần tìm tất cả các cặp đỉnh mà giữa chúng có một đường đi với trọng số nhỏ tùy ý.</p>
+<p>Chúng ta nên sử dụng các thuật toán khác nhau để giải quyết hai biến thể này của bài toán, do đó chúng ta sẽ thảo luận cả hai thuật toán ở đây.</p>
+<h2 id="su-dung-thuat-toan-bellman-ford">Sử dụng thuật toán Bellman-Ford<a class="headerlink" href="#su-dung-thuat-toan-bellman-ford" title="Permanent link">&para;</a></h2>
+<p>Thuật toán Bellman-Ford cho phép bạn kiểm tra xem có tồn tại chu trình có trọng số âm trong đồ thị hay không, và nếu có, tìm một trong các chu trình đó.</p>
+<p>Các chi tiết của thuật toán được mô tả trong bài viết về thuật toán <a href="bellman_ford.html">Bellman-Ford</a>.
+Ở đây chúng ta chỉ mô tả cách áp dụng nó cho bài toán này.</p>
+<p>Bản cài đặt tiêu chuẩn của Bellman-Ford tìm kiếm chu trình âm có thể đi tới được từ một đỉnh bắt đầu <span class="arithmatex">$v$</span> nào đó; tuy nhiên, thuật toán có thể được sửa đổi để chỉ tìm một chu trình âm bất kỳ trong đồ thị.
+Để làm được điều này, chúng ta cần gán tất cả các khoảng cách <span class="arithmatex">$d[i]$</span> bằng 0 thay vị vô cùng — giống như việc chúng ta đang tìm kiếm đường đi ngắn nhất từ tất cả các đỉnh đồng thời; tính đúng đắn của việc phát hiện chu trình âm không bị ảnh hưởng.</p>
+<p>Thực hiện <span class="arithmatex">$N$</span> lần lặp của thuật toán Bellman-Ford. Nếu không có thay đổi nào ở lần lặp cuối cùng, thì đồ thị không có chu trình trọng số âm. Ngược lại, chọn một đỉnh có khoảng cách bị thay đổi, và đi ngược từ đỉnh đó qua các đỉnh cha cho đến khi tìm thấy một chu trình. Chu trình này chính là chu trình âm cần tìm.</p>
+<h3 id="cai-at">Cài đặt<a class="headerlink" href="#cai-at" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">Edge</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">cost</span><span class="p">;</span>
 <span class="p">};</span>
@@ -8143,19 +8103,19 @@ For this we need to put all the distance  <span class="arithmatex">$d[i]$</spa
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="using-floyd-warshall-algorithm">Using Floyd-Warshall algorithm<a class="headerlink" href="#using-floyd-warshall-algorithm" title="Permanent link">&para;</a></h2>
-<p>The Floyd-Warshall algorithm allows to solve the second variation of the problem - finding all pairs of vertices <span class="arithmatex">$(i, j)$</span> which don't have a shortest path between them (i.e. a path of arbitrarily small weight exists).</p>
-<p>Again, the details can be found in the <a href="all-pair-shortest-path-floyd-warshall.html">Floyd-Warshall</a> article, and here we describe only its application.</p>
-<p>Run Floyd-Warshall algorithm on the graph.
-Initially <span class="arithmatex">$d[v][v] = 0$</span> for each <span class="arithmatex">$v$</span>.
-But after running the algorithm <span class="arithmatex">$d[v][v]$</span> will be smaller than <span class="arithmatex">$0$</span> if there exists a negative length path from <span class="arithmatex">$v$</span> to <span class="arithmatex">$v$</span>.
-We can use this to also find all pairs of vertices that don't have a shortest path between them.
-We iterate over all pairs of vertices <span class="arithmatex">$(i, j)$</span> and for each pair we check whether they have a shortest path between them.
-To do this try all possibilities for an intermediate vertex <span class="arithmatex">$t$</span>.
-<span class="arithmatex">$(i, j)$</span> doesn't have a shortest path, if one of the intermediate vertices <span class="arithmatex">$t$</span> has <span class="arithmatex">$d[t][t] &lt; 0$</span> (i.e. <span class="arithmatex">$t$</span> is part of a cycle of negative weight), <span class="arithmatex">$t$</span> can be reached from <span class="arithmatex">$i$</span> and <span class="arithmatex">$j$</span> can be reached from <span class="arithmatex">$t$</span>.
-Then the path from <span class="arithmatex">$i$</span> to <span class="arithmatex">$j$</span> can have arbitrarily small weight.
-We will denote this with <code>-INF</code>.</p>
-<h3 id="implementation_1">Implementation<a class="headerlink" href="#implementation_1" title="Permanent link">&para;</a></h3>
+<h2 id="su-dung-thuat-toan-floyd-warshall">Sử dụng thuật toán Floyd-Warshall<a class="headerlink" href="#su-dung-thuat-toan-floyd-warshall" title="Permanent link">&para;</a></h2>
+<p>Thuật toán Floyd-Warshall cho phép giải quyết biến thể thứ hai của bài toán - tìm tất cả các cặp đỉnh <span class="arithmatex">$(i, j)$</span> không có đường đi ngắn nhất giữa chúng (tức là tồn tại đường đi có trọng số nhỏ tùy ý).</p>
+<p>Một lần nữa, chi tiết có thể được tìm thấy trong bài viết về <a href="all-pair-shortest-path-floyd-warshall.html">Floyd-Warshall</a>, và ở đây chúng ta chỉ mô tả ứng dụng của nó.</p>
+<p>Chạy thuật toán Floyd-Warshall trên đồ thị.
+Ban đầu <span class="arithmatex">$d[v][v] = 0$</span> với mỗi đỉnh <span class="arithmatex">$v$</span>.
+Nhưng sau khi chạy thuật toán, <span class="arithmatex">$d[v][v]$</span> sẽ nhỏ hơn <span class="arithmatex">$0$</span> nếu tồn tại một đường đi có độ dài âm từ <span class="arithmatex">$v$</span> đến <span class="arithmatex">$v$</span>.
+Chúng ta có thể sử dụng điều này để tìm tất cả các cặp đỉnh không có đường đi ngắn nhất giữa chúng.
+Chúng ta duyệt qua tất cả các cặp đỉnh <span class="arithmatex">$(i, j)$</span> và kiểm tra xem có đường đi ngắn nhất giữa chúng hay không.
+Để làm được điều này, hãy thử tất cả các khả năng của đỉnh trung gian <span class="arithmatex">$t$</span>.
+Cặp <span class="arithmatex">$(i, j)$</span> không có đường đi ngắn nhất nếu tồn tại một đỉnh trung gian <span class="arithmatex">$t$</span> thỏa mãn <span class="arithmatex">$d[t][t] &lt; 0$</span> (tức là <span class="arithmatex">$t$</span> thuộc một chu trình âm), đồng thời từ <span class="arithmatex">$i$</span> có thể đi tới <span class="arithmatex">$t$</span> và từ <span class="arithmatex">$t$</span> có thể đi tới <span class="arithmatex">$j$</span>.
+Khi đó, đường đi từ <span class="arithmatex">$i$</span> đến <span class="arithmatex">$j$</span> có thể có trọng số nhỏ tùy ý.
+Chúng sẽ ký hiệu điều này bằng <code>-INF</code>.</p>
+<h3 id="cai-at_1">Cài đặt<a class="headerlink" href="#cai-at_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -8165,7 +8125,7 @@ We will denote this with <code>-INF</code>.</p>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="practice-problems">Practice Problems<a class="headerlink" href="#practice-problems" title="Permanent link">&para;</a></h2>
+<h2 id="bai-tap-luyen-tap">Bài tập luyện tập<a class="headerlink" href="#bai-tap-luyen-tap" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=499">UVA: Wormholes</a></li>
 <li><a href="http://www.spoj.com/problems/UCV2013B/">SPOJ: Alice in Amsterdam, I mean Wonderland</a></li>
@@ -8174,7 +8134,7 @@ We will denote this with <code>-INF</code>.</p>
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (36.7%)</li><li><a href="#" title="=" data-bi-name="contributorprofile" target="_blank">=</a> (35.78%)</li><li><a href="#" title="Mariia Mykhailova" data-bi-name="contributorprofile" target="_blank">Mariia Mykhailova</a> (7.34%)</li><li><a href="#" title="Oleksandr Kulkov" data-bi-name="contributorprofile" target="_blank">Oleksandr Kulkov</a> (5.5%)</li><li><a href="#" title="Bhuvnesh Jain" data-bi-name="contributorprofile" target="_blank">Bhuvnesh Jain</a> (3.67%)</li><li><a href="#" title="Michael Hayter" data-bi-name="contributorprofile" target="_blank">Michael Hayter</a> (2.75%)</li><li><a href="#" title="Sunil Sangwan" data-bi-name="contributorprofile" target="_blank">Sunil Sangwan</a> (2.75%)</li><li><a href="#" title="Harsh Mathur" data-bi-name="contributorprofile" target="_blank">Harsh Mathur</a> (1.83%)</li><li><a href="#" title="Shyamal Vaderia" data-bi-name="contributorprofile" target="_blank">Shyamal Vaderia</a> (1.83%)</li><li><a href="#" title="Aleksandr Mishukhin" data-bi-name="contributorprofile" target="_blank">Aleksandr Mishukhin</a> (0.92%)</li><li><a href="#" title="Deepanshu Raj" data-bi-name="contributorprofile" target="_blank">Deepanshu Raj</a> (0.92%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>
