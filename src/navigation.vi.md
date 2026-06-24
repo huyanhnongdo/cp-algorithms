@@ -10,6 +10,7 @@ search:
     - [Hướng dẫn đóng góp](contrib.md)
     - [Quy tắc ứng xử](code_of_conduct.md)
     - [Xem trước](preview.md)
+    - [Tiến độ dịch thuật](translation_status.md)
 - Đại số
     - Cơ bản
         - [Lũy thừa nhị phân](algebra/binary-exp.md)

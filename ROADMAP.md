@@ -181,18 +181,18 @@ Dịch 124 bài viết còn lại, bao phủ 100% nội dung.
 
 | # | Task | Chi tiết | Thời gian | Trạng thái |
 |---|---|---|---|---|
-| 4.1 | **Script sync upstream** | Script tự động detect bài mới/sửa từ upstream | 3h | ⬜ |
-| 4.2 | **GitHub Actions CI** | Auto build, test, detect thay đổi upstream | 3h | ⬜ |
-| 4.3 | **Contribution guide VI** | `CONTRIBUTING.vi.md` — hướng dẫn đóng góp bản dịch | 2h | ⬜ |
-| 4.4 | **Deploy** | Firebase hosting cho phiên bản VI | 2h | ⬜ |
-| 4.5 | **Translation status dashboard** | Trang hiển thị % hoàn thành dịch | 2h | ⬜ |
-| 4.6 | **Community onboarding** | README tiếng Việt, hướng dẫn contributor | 2h | ⬜ |
+| 4.1 | **Script sync upstream** | Script tự động detect bài mới/sửa từ upstream | 3h | ✅ |
+| 4.2 | **GitHub Actions CI** | Auto build, test, detect thay đổi upstream | 3h | ✅ |
+| 4.3 | **Contribution guide VI** | `CONTRIBUTING.vi.md` — hướng dẫn đóng góp bản dịch | 2h | ✅ |
+| 4.4 | **Deploy** | Deploy lên GitHub Pages (không dùng subdomain) | 2h | ✅ |
+| 4.5 | **Translation status dashboard** | Trang hiển thị % hoàn thành dịch | 2h | ✅ |
+| 4.6 | **Community onboarding** | README tiếng Việt, hướng dẫn contributor | 2h | ✅ |
 
 ### Deliverables Phase 4
-- [ ] Sync script hoạt động
-- [ ] CI/CD pipeline hoàn chỉnh
-- [ ] Site được deploy và truy cập công khai
-- [ ] Có hướng dẫn cho người muốn đóng góp
+- [x] Sync script hoạt động ✅
+- [x] CI/CD pipeline hoàn chỉnh ✅
+- [x] Site được deploy và truy cập công khai ✅
+- [x] Có hướng dẫn cho người muốn đóng góp ✅
 
 ### Quy trình bảo trì thường xuyên
 

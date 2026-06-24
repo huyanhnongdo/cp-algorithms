@@ -563,7 +563,7 @@ def quality_check(source_path, vi_path):
 | 4.1 | Script sync upstream | Auto detect bài mới/sửa | TB | Phase 1 | 3 giờ |
 | 4.2 | GitHub Actions: auto detect changes | CI phát hiện thay đổi upstream | TB | 4.1 | 3 giờ |
 | 4.3 | Tạo contribution guide tiếng Việt | Hướng dẫn đóng góp bản dịch | Dễ | Phase 2 | 2 giờ |
-| 4.4 | Deploy Firebase (vi subdomain) | Hosting phiên bản VI | TB | Phase 3 | 2 giờ |
+| 4.4 | Deploy GitHub Pages (không subdomain) | Hosting phiên bản VI | TB | Phase 3 | 2 giờ |
 | 4.5 | Monitoring & maintenance | Theo dõi, cập nhật thường xuyên | Liên tục | 4.1-4.4 | Ongoing |
 
 ---
@@ -585,14 +585,14 @@ def quality_check(source_path, vi_path):
 
 Phiên bản tiếng Việt được coi là hoàn thành khi:
 
-- [ ] 100% bài viết (164 bài) có file `.vi.md`
-- [ ] Navigation tiếng Việt hoàn chỉnh
-- [ ] Language switcher hoạt động
-- [ ] QA pass 100% (code blocks, LaTeX, links)
-- [ ] Glossary chuẩn hóa được áp dụng nhất quán
-- [ ] Sync upstream script hoạt động
-- [ ] CI/CD build thành công
-- [ ] Deploy lên hosting
+- [x] 100% bài viết (164 bài) có file `.vi.md`
+- [x] Navigation tiếng Việt hoàn chỉnh
+- [x] Language switcher hoạt động
+- [x] QA pass 100% (code blocks, LaTeX, links)
+- [x] Glossary chuẩn hóa được áp dụng nhất quán
+- [x] Sync upstream script hoạt động
+- [x] CI/CD build thành công
+- [x] Deploy lên hosting
 
 ---
 

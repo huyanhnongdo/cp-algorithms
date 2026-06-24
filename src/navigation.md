@@ -10,6 +10,7 @@ search:
     - [How to Contribute](contrib.md)
     - [Code of conduct](code_of_conduct.md)
     - [Preview](preview.md)
+    - [Translation Status](translation_status.md)
 - Algebra
     - Fundamentals
         - [Binary Exponentiation](algebra/binary-exp.md)
