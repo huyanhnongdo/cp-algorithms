@@ -155,14 +155,14 @@ Dịch 124 bài viết còn lại, bao phủ 100% nội dung.
 | | Sprague-Grundy/Nim, Games on Graphs | | | |
 | 3.9 | **Miscellaneous** | 13 bài | 5h | ✅ (13/13) |
 | | Sequences (4), Schedules (3), Others (5), Num Methods (2) | | | |
-| 3.10 | **Review & QA toàn bộ** | 124 bài | 10h | ⬜ |
-| 3.11 | **Cập nhật navigation.vi.md** | Hoàn thiện | 2h | ⬜ |
+| 3.10 | **Review & QA toàn bộ** | 124 bài | 10h | ✅ |
+| 3.11 | **Cập nhật navigation.vi.md** | Hoàn thiện | 2h | ✅ |
 
 ### Deliverables Phase 3
-- [ ] 164/164 file `.vi.md` hoàn thành (100%)
-- [ ] Navigation VI hoàn chỉnh
-- [ ] QA pass toàn bộ
-- [ ] Site build thành công
+- [x] 164/164 file `.vi.md` hoàn thành (100%)
+- [x] Navigation VI hoàn chỉnh
+- [x] QA pass toàn bộ
+- [x] Site build thành công
 
 ### Criteria hoàn thành
 - 100% bài viết có bản tiếng Việt
