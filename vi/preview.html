@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#article-preview" class="md-skip">
+        <a href="#xem-truoc-bai-viet" class="md-skip">
           Bỏ qua
         </a>
       
@@ -7888,13 +7888,13 @@ Describe the issue of this article in detail.
 }
 </script>
 
-<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/preview.md" title="Chỉnh sửa" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/edit/main/src/preview.vi.md" title="Chỉnh sửa" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
 </a>
 <a id="report_issue_a" href="" title="Report a problem" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg>
 </a>
-<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/preview.md" title="Page authors" class="md-content__button md-icon">
+<a href="https://github.com/cp-algorithms/cp-algorithms/commits/main/src/preview.vi.md" title="Page authors" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><g><path d="M12,8.5c-0.91,0-2.75,0.46-2.75,1.38v4.62h1.5V19h2.5v-4.5h1.5V9.88C14.75,8.97,12.91,8.5,12,8.5z"/><path d="M12,2C6.47,2,2,6.47,2,12s4.47,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8 S16.42,20,12,20z"/><circle cx="12" cy="6.5" r="1.5"/></g></g></g></svg>
 </a>
 
@@ -7930,7 +7930,7 @@ Describe the issue of this article in detail.
       var URL = "https://us-central1-cp-algorithms.cloudfunctions.net/convert-markdown-mkdocs";
       var data = {"markdown": markdown};
       var refresh_script = `<scr` + `ipt>MathJax.typeset();</scr` + `ipt>`;
-      $("#previewBtn").html("Loading...");
+      $("#previewBtn").html("Đang tải...");
       $.ajax({
         url: URL,
         contentType: "application/json",
@@ -7938,9 +7938,9 @@ Describe the issue of this article in detail.
         data: JSON.stringify(data),
         success: function(data) {
           $("#previewArea").html(data + "\n" + refresh_script);
-          $("#previewBtn").html("Preview (Ctrl + Enter)");
+          $("#previewBtn").html("Xem trước (Ctrl + Enter)");
         },
-        error: function() {$("#previewArea").html("Internal error!")}
+        error: function() {$("#previewArea").html("Lỗi nội bộ!")}
       });
     });
 
@@ -7951,12 +7951,12 @@ Describe the issue of this article in detail.
     })
   });
 </script>
-<h1 id="article-preview">Article Preview<a class="headerlink" href="#article-preview" title="Permanent link">&para;</a></h1>
-<p><a href="contrib.html">Information for contributors</a></p>
+<h1 id="xem-truoc-bai-viet">Xem trước bài viết<a class="headerlink" href="#xem-truoc-bai-viet" title="Permanent link">&para;</a></h1>
+<p><a href="contrib.html">Thông tin cho cộng tác viên</a></p>
 <center>
 <form>
   <textarea style="width:100%;height:300px;" id="markdownInput">
-# Example article
+# Bài viết ví dụ
 
 $$a^2 + b^2 = c^2$$
 
@@ -7970,7 +7970,7 @@ int gcd (int a, int b) {
 ```</textarea>
   <br/>
   <br/>
-  <button type='button' class="md-button md-button--primary" id="previewBtn">Preview (Ctrl + Enter)</button>
+  <button type='button' class="md-button md-button--primary" id="previewBtn">Xem trước (Ctrl + Enter)</button>
 </form>
 </center>
 <hr/>
@@ -7981,7 +7981,7 @@ int gcd (int a, int b) {
 
 <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
   <span class="contributors-text">Contributors:</span>
-  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="Jakob Kogler" data-bi-name="contributorprofile" target="_blank">Jakob Kogler</a> (100.0%)</li></ul>
+  <ul class="contributors" data-bi-name="contributors"><li><a href="#" title="huyanhnongdo" data-bi-name="contributorprofile" target="_blank">huyanhnongdo</a> (100.0%)</li></ul>
 </ul>
                 
               </article>
